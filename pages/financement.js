@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import { CreditCard, Calculator, Users, FileText, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Briefcase, Search, UserCheck } from 'lucide-react'
+import { CreditCard, Calculator, Users, FileText, CheckCircle, ArrowRight, ExternalLink } from 'lucide-react'
 
 export default function Financement() {
   return (
@@ -45,15 +45,12 @@ export default function Financement() {
               {/* Navigation rapide vers les sections */}
               <div className="flex flex-col md:flex-row gap-4 justify-center mb-8">
                 <a href="#salaries" className="inline-flex px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition">
-                  <Briefcase className="w-5 h-5" />
                   Salariés
                 </a>
                 <a href="#demandeurs-emploi" className="inline-flex px-6 py-3 rounded-full bg-orange-500 hover:bg-orange-600 text-white font-semibold transition">
-                  <Search className="w-5 h-5" />
                   Chercheurs d'emploi
                 </a>
                 <a href="#independants" className="inline-flex px-6 py-3 rounded-full bg-purple-600 hover:bg-purple-700 text-white font-semibold transition">
-                  <UserCheck className="w-5 h-5" />
                   Travailleurs indépendants
                 </a>
               </div>
@@ -77,7 +74,6 @@ export default function Financement() {
               
               <div className="text-center mb-16">
                 <div className="inline-flex items-center gap-3 bg-blue-100 text-blue-800 px-6 py-3 rounded-full text-lg font-medium mb-6">
-                  <Briefcase className="w-6 h-6" />
                   Salariés
                 </div>
                 <h2 className="text-4xl lg:text-5xl font-bold text-[#013F63] mb-6">
@@ -198,7 +194,6 @@ export default function Financement() {
               
               <div className="text-center mb-16">
                 <div className="inline-flex items-center gap-3 bg-orange-100 text-orange-800 px-6 py-3 rounded-full text-lg font-medium mb-6">
-                  <Search className="w-6 h-6" />
                   Chercheurs d'emploi
                 </div>
                 <h2 className="text-4xl lg:text-5xl font-bold text-[#013F63] mb-6">
@@ -295,7 +290,6 @@ export default function Financement() {
               
               <div className="text-center mb-16">
                 <div className="inline-flex items-center gap-3 bg-purple-100 text-purple-800 px-6 py-3 rounded-full text-lg font-medium mb-6">
-                  <UserCheck className="w-6 h-6" />
                   Travailleurs indépendants
                 </div>
                 <h2 className="text-4xl lg:text-5xl font-bold text-[#013F63] mb-6">
@@ -401,7 +395,6 @@ export default function Financement() {
                     Conseil gratuit
                   </Link>
                   <a href="mailto:contact@atipikrh.fr" className="inline-flex px-8 py-4 rounded-full border-2 border-white text-white hover:bg-white hover:text-gray-900 font-semibold transition">
-                    <Mail className="w-6 h-6" />
                     Nous écrire
                   </a>
                 </div>
