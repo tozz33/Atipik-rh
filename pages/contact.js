@@ -34,8 +34,8 @@ export default function Contact() {
             
             {/* Titre principal */}
             <div className="text-center mb-16 max-w-4xl mx-auto">
-              <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight tracking-tight">
-                Parlons de votre <span className="text-orange-500 font-brittany text-5xl lg:text-7xl">projet</span>
+              <h1 className="text-4xl lg:text-6xl font-bold mb-8 leading-tight tracking-tight">
+                <span className="text-[#013F63]">Parlons de votre</span> <span className="text-orange-500 font-brittany text-5xl lg:text-7xl">projet</span>
               </h1>
               <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed font-light">
                 Un premier échange pour clarifier vos objectifs<br className="hidden lg:block"/>
@@ -50,7 +50,7 @@ export default function Contact() {
               <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 flex flex-col h-full">
                 <div className="flex items-center mb-6">
                   <MessageCircle className="w-8 h-8 text-accent-500 mr-3" />
-                  <h2 className="text-2xl font-bold text-gray-900">Envoyez-nous un message</h2>
+                  <h2 className="text-2xl font-bold text-[#013F63]">Envoyez-nous un message</h2>
                 </div>
                 
                 <form className="flex flex-col flex-grow">
@@ -162,7 +162,7 @@ export default function Contact() {
                 <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
                   <div className="flex items-center mb-6">
                     <MapPin className="w-8 h-8 text-accent-500 mr-3" />
-                    <h2 className="text-2xl font-bold text-gray-900">Nos coordonnées</h2>
+                    <h2 className="text-2xl font-bold text-[#013F63]">Nos coordonnées</h2>
                   </div>
                   
                   <div className="space-y-6">
@@ -204,7 +204,7 @@ export default function Contact() {
                 <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
                   <div className="flex items-center mb-6">
                     <Clock className="w-8 h-8 text-accent-500 mr-3" />
-                    <h2 className="text-2xl font-bold text-gray-900">Horaires d'ouverture</h2>
+                    <h2 className="text-2xl font-bold text-[#013F63]">Horaires d'ouverture</h2>
                   </div>
                   
                   <div className="space-y-3 text-gray-600">

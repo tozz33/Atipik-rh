@@ -33,7 +33,7 @@ export default function Financement() {
             
             {/* Titre principal */}
             <div className="text-center mb-16 max-w-5xl mx-auto">
-              <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight tracking-tight">
+              <h1 className="text-4xl lg:text-6xl font-bold text-[#013F63] mb-8 leading-tight tracking-tight">
                 Solutions de <span className="text-blue-600 font-brittany text-5xl lg:text-6xl">financement</span><br/>
                 selon votre <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">statut</span>
               </h1>
@@ -44,7 +44,7 @@ export default function Financement() {
               
               {/* Navigation rapide vers les sections */}
               <div className="flex flex-col md:flex-row gap-4 justify-center mb-8">
-                <a href="#salaries" className="inline-flex px-6 py-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold transition">
+                <a href="#salaries" className="inline-flex px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition">
                   <Briefcase className="w-5 h-5" />
                   Salariés
                 </a>
@@ -80,7 +80,7 @@ export default function Financement() {
                   <Briefcase className="w-6 h-6" />
                   Salariés
                 </div>
-                <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                <h2 className="text-4xl lg:text-5xl font-bold text-[#013F63] mb-6">
                   Vos solutions de <span className="text-blue-600 font-brittany text-5xl lg:text-6xl">financement</span>
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -97,7 +97,7 @@ export default function Financement() {
                     <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
                       <CreditCard className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900">CPF (Compte Personnel de Formation)</h3>
+                    <h3 className="text-xl font-bold text-[#013F63]">CPF (Compte Personnel de Formation)</h3>
                   </div>
                   <div className="space-y-3 mb-6 flex-grow">
                     <p className="text-gray-700 text-sm"><strong>Montant :</strong> 500€/an (800€ si moins qualifié), plafond 5000€</p>
@@ -110,7 +110,7 @@ export default function Financement() {
                       Solution recommandée - Prise en charge totale fréquente
                     </p>
                   </div>
-                  <a href="https://www.moncompteformation.gouv.fr" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-6 py-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold transition mt-auto">
+                  <a href="https://www.moncompteformation.gouv.fr" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
                     Vérifier mes droits CPF
                   </a>
                 </div>
@@ -121,7 +121,7 @@ export default function Financement() {
                     <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
                       <FileText className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900">Plan de développement des compétences</h3>
+                    <h3 className="text-xl font-bold text-[#013F63]">Plan de développement des compétences</h3>
                   </div>
                   <div className="space-y-3 mb-6 flex-grow">
                     <p className="text-gray-700 text-sm"><strong>Financement :</strong> 100% pris en charge par l'employeur</p>
@@ -134,7 +134,7 @@ export default function Financement() {
                       Idéal si la formation correspond aux besoins de l'entreprise
                     </p>
                   </div>
-                  <Link href="/contact" className="block w-full text-center px-6 py-3 rounded-full border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold transition mt-auto">
+                  <Link href="/contact" className="block w-full text-center px-6 py-3 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition mt-auto">
                     Nous contacter pour conseil
                   </Link>
                 </div>
@@ -145,7 +145,7 @@ export default function Financement() {
                     <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
                       <Users className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900">Congés de formation</h3>
+                    <h3 className="text-xl font-bold text-[#013F63]">Congés de formation</h3>
                   </div>
                   <div className="space-y-3 mb-6 flex-grow">
                     <p className="text-gray-700 text-sm"><strong>Principe :</strong> Congé sans solde pour se former</p>
@@ -158,7 +158,7 @@ export default function Financement() {
                       Nécessite une planification et accord employeur
                     </p>
                   </div>
-                  <Link href="/contact" className="block w-full text-center px-6 py-3 rounded-full border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold transition mt-auto">
+                  <Link href="/contact" className="block w-full text-center px-6 py-3 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition mt-auto">
                     Étudier cette option
                   </Link>
                 </div>
@@ -169,7 +169,7 @@ export default function Financement() {
                     <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
                       <Calculator className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900">Autres financements</h3>
+                    <h3 className="text-xl font-bold text-[#013F63]">Autres financements</h3>
                   </div>
                   <div className="space-y-3 mb-6 flex-grow">
                     <p className="text-gray-700 text-sm"><strong>Financement personnel :</strong> Facilités de paiement 3-4x</p>
@@ -182,7 +182,7 @@ export default function Financement() {
                       Solutions sur mesure selon votre situation
                     </p>
                   </div>
-                  <Link href="/contact" className="block w-full text-center px-6 py-3 rounded-full border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold transition mt-auto">
+                  <Link href="/contact" className="block w-full text-center px-6 py-3 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition mt-auto">
                     Conseil personnalisé
                   </Link>
                 </div>
@@ -201,7 +201,7 @@ export default function Financement() {
                   <Search className="w-6 h-6" />
                   Chercheurs d'emploi
                 </div>
-                <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                <h2 className="text-4xl lg:text-5xl font-bold text-[#013F63] mb-6">
                   Financements <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">prioritaires</span>
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -218,7 +218,7 @@ export default function Financement() {
                     <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
                       <Users className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900">AIF (Aide Individuelle à la Formation)</h3>
+                    <h3 className="text-xl font-bold text-[#013F63]">AIF (Aide Individuelle à la Formation)</h3>
                   </div>
                   <div className="space-y-3 mb-6 flex-grow">
                     <p className="text-gray-700 text-sm"><strong>Financement :</strong> Complète le CPF ou finance totalement</p>
@@ -242,7 +242,7 @@ export default function Financement() {
                     <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
                       <CreditCard className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900">CPF</h3>
+                    <h3 className="text-xl font-bold text-[#013F63]">CPF</h3>
                   </div>
                   <div className="space-y-3 mb-6 flex-grow">
                     <p className="text-gray-700 text-sm"><strong>Vos droits :</strong> Conservés pendant le chômage</p>
@@ -266,7 +266,7 @@ export default function Financement() {
                     <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
                       <Calculator className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900">Auto-financement</h3>
+                    <h3 className="text-xl font-bold text-[#013F63]">Auto-financement</h3>
                   </div>
                   <div className="space-y-3 mb-6 flex-grow">
                     <p className="text-gray-700 text-sm"><strong>Facilités :</strong> Paiement en 3-4 fois sans frais</p>
@@ -298,7 +298,7 @@ export default function Financement() {
                   <UserCheck className="w-6 h-6" />
                   Travailleurs indépendants
                 </div>
-                <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                <h2 className="text-4xl lg:text-5xl font-bold text-[#013F63] mb-6">
                   Financements <span className="text-purple-600 font-brittany text-5xl lg:text-6xl">spécialisés</span>
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -315,7 +315,7 @@ export default function Financement() {
                     <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
                       <FileText className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900">FAF (Fonds d'Assurance Formation)</h3>
+                    <h3 className="text-xl font-bold text-[#013F63]">FAF (Fonds d'Assurance Formation)</h3>
                   </div>
                   <div className="space-y-3 mb-6 flex-grow">
                     <p className="text-gray-700 text-sm"><strong>FIFPL :</strong> Professions libérales</p>
@@ -339,7 +339,7 @@ export default function Financement() {
                     <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
                       <CreditCard className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900">CPF</h3>
+                    <h3 className="text-xl font-bold text-[#013F63]">CPF</h3>
                   </div>
                   <div className="space-y-3 mb-6 flex-grow">
                     <p className="text-gray-700 text-sm"><strong>Alimentation :</strong> 500€/an si vous cotisez</p>
@@ -363,7 +363,7 @@ export default function Financement() {
                     <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
                       <Calculator className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900">Auto-financement</h3>
+                    <h3 className="text-xl font-bold text-[#013F63]">Auto-financement</h3>
                   </div>
                   <div className="space-y-3 mb-6 flex-grow">
                     <p className="text-gray-700 text-sm"><strong>Déduction fiscale :</strong> Charge déductible de votre activité</p>
@@ -391,7 +391,7 @@ export default function Financement() {
             <div className="max-w-4xl mx-auto">
               
               <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-3xl p-12 text-white text-center">
-                <h3 className="text-3xl font-bold mb-6">Besoin d'aide pour choisir ?</h3>
+                <h3 className="text-3xl font-bold text-white mb-6">Besoin d'aide pour choisir ?</h3>
                 <p className="text-xl mb-8 text-gray-300 max-w-3xl mx-auto">
                   Chaque situation est unique. Nos conseillers analysent votre profil 
                   et vous orientent vers la meilleure solution de financement selon votre statut.
@@ -419,7 +419,7 @@ export default function Financement() {
             <div className="max-w-4xl mx-auto">
               
               <div className="text-center mb-16">
-                <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                <h2 className="text-4xl lg:text-5xl font-bold text-[#013F63] mb-6">
                   Questions <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">fréquentes</span>
                 </h2>
               </div>
@@ -428,7 +428,7 @@ export default function Financement() {
               <div className="space-y-6">
                 
                 <details className="bg-blue-50 rounded-3xl p-8 group">
-                  <summary className="font-bold text-xl cursor-pointer text-gray-900 list-none flex items-center justify-between">
+                  <summary className="font-bold text-xl cursor-pointer text-[#013F63] list-none flex items-center justify-between">
                     [Salarié] Mon employeur sera-t-il informé si j'utilise mon CPF ?
                     <ArrowRight className="w-6 h-6 group-open:rotate-90 transition-transform duration-200" />
                   </summary>
@@ -438,7 +438,7 @@ export default function Financement() {
                 </details>
 
                 <details className="bg-orange-50 rounded-3xl p-8 group">
-                  <summary className="font-bold text-xl cursor-pointer text-gray-900 list-none flex items-center justify-between">
+                  <summary className="font-bold text-xl cursor-pointer text-[#013F63] list-none flex items-center justify-between">
                     [Demandeur d'emploi] Comment obtenir l'AIF de Pôle Emploi ?
                     <ArrowRight className="w-6 h-6 group-open:rotate-90 transition-transform duration-200" />
                   </summary>
@@ -448,7 +448,7 @@ export default function Financement() {
                 </details>
 
                 <details className="bg-purple-50 rounded-3xl p-8 group">
-                  <summary className="font-bold text-xl cursor-pointer text-gray-900 list-none flex items-center justify-between">
+                  <summary className="font-bold text-xl cursor-pointer text-[#013F63] list-none flex items-center justify-between">
                     [Indépendant] Comment connaître mon organisme de financement ?
                     <ArrowRight className="w-6 h-6 group-open:rotate-90 transition-transform duration-200" />
                   </summary>
@@ -458,7 +458,7 @@ export default function Financement() {
                 </details>
 
                 <details className="bg-gray-50 rounded-3xl p-8 group">
-                  <summary className="font-bold text-xl cursor-pointer text-gray-900 list-none flex items-center justify-between">
+                  <summary className="font-bold text-xl cursor-pointer text-[#013F63] list-none flex items-center justify-between">
                     Puis-je cumuler plusieurs financements ?
                     <ArrowRight className="w-6 h-6 group-open:rotate-90 transition-transform duration-200" />
                   </summary>

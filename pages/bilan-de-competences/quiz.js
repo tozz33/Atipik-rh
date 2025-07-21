@@ -209,8 +209,8 @@ export default function QuizBilanCompetences() {
                 <>
                   {/* Header du quiz */}
                   <div className="text-center mb-12">
-                    <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                      Avez-vous besoin d'un <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">bilan de compétences</span> ?
+                    <h1 className="text-3xl lg:text-4xl font-bold mb-4">
+                      <span className="text-[#013F63]">Avez-vous besoin d'un</span> <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">bilan de compétences</span> ?
                     </h1>
                     <p className="text-xl text-gray-600 mb-8">
                       Découvrez en 8 questions si un bilan peut vous aider dans votre évolution professionnelle
@@ -231,7 +231,7 @@ export default function QuizBilanCompetences() {
                   {/* Questions du quiz */}
                   {currentStep < questions.length && (
                     <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
-                      <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+                      <h2 className="text-2xl font-bold text-[#013F63] mb-8 text-center">
                         {questions[currentStep].question}
                       </h2>
                       
@@ -272,7 +272,7 @@ export default function QuizBilanCompetences() {
                     <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
                       <div className="text-center mb-8">
                         <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-                        <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                        <h2 className="text-2xl font-bold text-[#013F63] mb-4">
                           Quiz terminé ! 🎉
                         </h2>
                         <p className="text-lg text-gray-600 mb-6">
@@ -348,7 +348,7 @@ export default function QuizBilanCompetences() {
                   {/* Diagnostic personnel */}
                   <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
                     <div className="text-center mb-8">
-                      <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                      <h2 className="text-3xl font-bold text-[#013F63] mb-4">
                         Votre diagnostic, {userInfo.name} 👋
                       </h2>
                       
@@ -376,17 +376,17 @@ export default function QuizBilanCompetences() {
                     <div className="grid md:grid-cols-3 gap-6 mb-8">
                       <div className="text-center p-6 bg-orange-50 rounded-xl">
                         <Lightbulb className="w-10 h-10 text-orange-600 mx-auto mb-3" />
-                        <h4 className="font-bold text-gray-900 mb-2">Clarté sur vos compétences</h4>
+                        <h4 className="font-bold text-[#013F63] mb-2">Clarté sur vos compétences</h4>
                         <p className="text-sm text-gray-600">Identifiez précisément vos forces et talents cachés</p>
                       </div>
                       <div className="text-center p-6 bg-blue-50 rounded-xl">
                         <Target className="w-10 h-10 text-blue-600 mx-auto mb-3" />
-                        <h4 className="font-bold text-gray-900 mb-2">Projet professionnel concret</h4>
+                        <h4 className="font-bold text-[#013F63] mb-2">Projet professionnel concret</h4>
                         <p className="text-sm text-gray-600">Définissez un plan d'action réaliste et motivant</p>
                       </div>
                       <div className="text-center p-6 bg-green-50 rounded-xl">
                         <TrendingUp className="w-10 h-10 text-green-600 mx-auto mb-3" />
-                        <h4 className="font-bold text-gray-900 mb-2">Confiance retrouvée</h4>
+                        <h4 className="font-bold text-[#013F63] mb-2">Confiance retrouvée</h4>
                         <p className="text-sm text-gray-600">Reprenez le contrôle de votre avenir professionnel</p>
                       </div>
                     </div>
@@ -428,7 +428,7 @@ export default function QuizBilanCompetences() {
 
                   {/* Preuves sociales */}
                   <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
-                    <h3 className="text-2xl font-bold text-gray-900 text-center mb-6">
+                    <h3 className="text-2xl font-bold text-[#013F63] text-center mb-6">
                       Ils ont fait le même choix que vous
                     </h3>
                     

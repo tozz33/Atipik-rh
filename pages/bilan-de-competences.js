@@ -62,11 +62,11 @@ export default function BilanCompetences() {
         {/* Background animé */}
         <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
         <div className="absolute top-40 right-1/4 w-96 h-96 bg-orange-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-1000"></div>
-        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-purple-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-2000"></div>
+        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-2000"></div>
         
         <div className="relative z-10 container mx-auto px-4 pt-32 pb-24">
           <div className="text-center mb-16 max-w-5xl mx-auto">
-            <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight tracking-tight">
+            <h1 className="text-4xl lg:text-6xl font-bold text-[#013F63] mb-8 leading-tight tracking-tight">
               Bilan de <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">compétences</span><br/>
               à <span className="text-blue-600 font-brittany text-5xl lg:text-6xl">Bordeaux</span>
             </h1>
@@ -77,11 +77,11 @@ export default function BilanCompetences() {
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-              <Link href="/contact" className="inline-flex px-8 py-4 rounded-full bg-gray-900 hover:bg-gray-800 text-white font-semibold shadow-lg transition text-lg hover:scale-105">
+              <Link href="/contact" className="inline-flex px-8 py-4 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold shadow-lg transition text-lg hover:scale-105">
                 
                 RDV découverte gratuit
               </Link>
-              <Link href="/bilan-de-competences/quiz" className="inline-flex px-8 py-4 rounded-full border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white font-semibold transition">
+              <Link href="/bilan-de-competences/quiz" className="inline-flex px-8 py-4 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition">
                 Quiz d'éligibilité
                 
               </Link>
@@ -97,7 +97,7 @@ export default function BilanCompetences() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-20">
-              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+              <h2 className="text-4xl lg:text-5xl font-bold text-[#013F63] mb-6 leading-tight">
                 Qu'est-ce qu'un <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">bilan de compétences</span> ?
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
@@ -114,7 +114,7 @@ export default function BilanCompetences() {
                     <Clock className="w-10 h-10 text-blue-600" />
                   </div>
                 </div>
-                <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4">24 heures</h3>
+                <h3 className="text-xl lg:text-2xl font-bold text-[#013F63] mb-4">24 heures</h3>
                 <p className="text-gray-600 leading-relaxed">
                   d'accompagnement individuel réparties sur 2 à 3 mois, adaptées à votre rythme
                 </p>
@@ -127,7 +127,7 @@ export default function BilanCompetences() {
                     <Target className="w-10 h-10 text-orange-500" />
                   </div>
                 </div>
-                <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4">100% personnalisé</h3>
+                <h3 className="text-xl lg:text-2xl font-bold text-[#013F63] mb-4">100% personnalisé</h3>
                 <p className="text-gray-600 leading-relaxed">
                   Un parcours adapté à votre situation et vos objectifs professionnels
                 </p>
@@ -135,12 +135,12 @@ export default function BilanCompetences() {
 
               <div className="text-center group">
                 <div className="relative mb-8">
-                  <div className="absolute -inset-4 bg-gradient-to-r from-purple-200 to-purple-300 rounded-full blur-lg opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
-                  <div className="relative w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
-                    <Shield className="w-10 h-10 text-purple-600" />
+                  <div className="absolute -inset-4 bg-gradient-to-r from-blue-200 to-blue-300 rounded-full blur-lg opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+                  <div className="relative w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
+                    <Shield className="w-10 h-10 text-[#013F63]" />
                   </div>
                 </div>
-                <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4">Confidentiel</h3>
+                <h3 className="text-xl lg:text-2xl font-bold text-[#013F63] mb-4">Confidentiel</h3>
                 <p className="text-gray-600 leading-relaxed">
                   Vos échanges restent strictement confidentiels, sans obligation
                 </p>
@@ -155,7 +155,7 @@ export default function BilanCompetences() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-20">
-              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+              <h2 className="text-4xl lg:text-5xl font-bold text-[#013F63] mb-6 leading-tight">
                 Les <span className="text-blue-600 font-brittany text-5xl lg:text-6xl">3 phases</span> du bilan
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
@@ -173,7 +173,7 @@ export default function BilanCompetences() {
                       1
                     </div>
                     <div>
-                      <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4">
+                      <h3 className="text-xl lg:text-2xl font-bold text-[#013F63] mb-4">
                         Phase préliminaire (2-4h)
                       </h3>
                       <p className="text-base text-gray-700 leading-relaxed">
@@ -194,7 +194,7 @@ export default function BilanCompetences() {
                       2
                     </div>
                     <div>
-                      <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4">
+                      <h3 className="text-xl lg:text-2xl font-bold text-[#013F63] mb-4">
                         Phase d'investigation (16-18h)
                       </h3>
                       <p className="text-base text-gray-700 leading-relaxed">
@@ -208,14 +208,14 @@ export default function BilanCompetences() {
               </div>
 
               <div className="relative group">
-                <div className="absolute -inset-4 bg-gradient-to-r from-purple-200 to-purple-300 rounded-3xl blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
+                <div className="absolute -inset-4 bg-gradient-to-r from-blue-200 to-blue-300 rounded-3xl blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
                 <div className="relative bg-white rounded-3xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl transition-shadow duration-300">
                   <div className="flex items-start gap-6">
-                    <div className="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">
+                    <div className="w-12 h-12 bg-[#013F63] text-white rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">
                       3
                     </div>
                     <div>
-                      <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4">
+                      <h3 className="text-xl lg:text-2xl font-bold text-[#013F63] mb-4">
                         Phase de conclusion (4-6h)
                       </h3>
                       <p className="text-base text-gray-700 leading-relaxed">
@@ -241,7 +241,7 @@ export default function BilanCompetences() {
         <div className="relative z-10 container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-20">
-              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+              <h2 className="text-4xl lg:text-5xl font-bold text-[#013F63] mb-6 leading-tight">
                 Pour <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">qui</span> ?
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
@@ -255,7 +255,7 @@ export default function BilanCompetences() {
                 <div className="relative bg-white rounded-3xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl transition-shadow duration-300">
                   <div className="flex items-center mb-6">
                     <Users className="w-8 h-8 text-blue-600 mr-4" />
-                    <h3 className="text-xl lg:text-2xl font-bold text-gray-900">Vous êtes salarié(e)</h3>
+                    <h3 className="text-xl lg:text-2xl font-bold text-[#013F63]">Vous êtes salarié(e)</h3>
                   </div>
                   <ul className="space-y-3 text-gray-700">
                     <li className="flex items-start gap-3">
@@ -283,7 +283,7 @@ export default function BilanCompetences() {
                 <div className="relative bg-white rounded-3xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl transition-shadow duration-300">
                   <div className="flex items-center mb-6">
                     <Target className="w-8 h-8 text-orange-500 mr-4" />
-                    <h3 className="text-xl lg:text-2xl font-bold text-gray-900">Vous êtes demandeur d'emploi</h3>
+                    <h3 className="text-xl lg:text-2xl font-bold text-[#013F63]">Vous êtes demandeur d'emploi</h3>
                   </div>
                   <ul className="space-y-3 text-gray-700">
                     <li className="flex items-start gap-3">
@@ -308,16 +308,16 @@ export default function BilanCompetences() {
             </div>
 
             <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-purple-200 to-purple-300 rounded-3xl blur-lg opacity-30"></div>
+              <div className="absolute -inset-4 bg-gradient-to-r from-blue-200 to-blue-300 rounded-3xl blur-lg opacity-30"></div>
               <div className="relative bg-white rounded-3xl p-8 shadow-xl border border-gray-100 text-center">
-                <Trophy className="w-12 h-12 text-purple-600 mx-auto mb-4" />
-                <h4 className="text-2xl font-semibold text-gray-900 mb-4">
+                <Trophy className="w-12 h-12 text-[#013F63] mx-auto mb-4" />
+                <h4 className="text-2xl font-semibold text-[#013F63] mb-4">
                   98% de nos bénéficiaires recommandent notre accompagnement
                 </h4>
                 <p className="text-lg text-gray-600 mb-6">
                   Rejoignez les centaines de personnes qui ont donné un nouvel élan à leur carrière
                 </p>
-                <Link href="/bilan-de-competences/quiz" className="inline-flex px-6 py-3 rounded-full bg-purple-600 hover:bg-purple-700 text-white font-semibold transition">
+                <Link href="/bilan-de-competences/quiz" className="inline-flex px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition">
                   Faire le quiz d'éligibilité
                   
                 </Link>
@@ -332,7 +332,7 @@ export default function BilanCompetences() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-20">
-              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+              <h2 className="text-4xl lg:text-5xl font-bold text-[#013F63] mb-6 leading-tight">
                 Ils ont transformé leur <span className="text-blue-600 font-brittany text-5xl lg:text-6xl">vie professionnelle</span>
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
@@ -404,8 +404,8 @@ export default function BilanCompetences() {
         <div className="relative z-10 container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-20">
-              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                Des solutions de <span className="text-purple-600 font-brittany text-5xl lg:text-6xl">financement</span>
+              <h2 className="text-4xl lg:text-5xl font-bold text-[#013F63] mb-6 leading-tight">
+                Des solutions de <span className="text-[#013F63] font-brittany text-5xl lg:text-6xl">financement</span>
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
                 Plusieurs options s'offrent à vous pour financer votre bilan de compétences
@@ -414,13 +414,13 @@ export default function BilanCompetences() {
 
             <div className="mb-12">
               <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-r from-purple-200 to-purple-300 rounded-3xl blur-lg opacity-30"></div>
+                <div className="absolute -inset-4 bg-gradient-to-r from-blue-200 to-blue-300 rounded-3xl blur-lg opacity-30"></div>
                 <div className="relative bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
                   <div className="text-center">
-                    <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                      <Award className="w-10 h-10 text-purple-600" />
+                    <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Award className="w-10 h-10 text-[#013F63]" />
                     </div>
-                    <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                    <h3 className="text-3xl font-bold text-[#013F63] mb-4">
                       100% finançable par le CPF
                     </h3>
                     <p className="text-lg text-gray-700 mb-6 max-w-3xl mx-auto leading-relaxed">
@@ -428,7 +428,7 @@ export default function BilanCompetences() {
                       Vous pouvez utiliser vos droits CPF pour financer intégralement votre accompagnement, 
                       sans reste à charge.
                     </p>
-                    <Link href="/bilan-de-competences/cpf" className="inline-flex px-8 py-4 rounded-full bg-purple-600 hover:bg-purple-700 text-white font-semibold transition text-lg">
+                    <Link href="/bilan-de-competences/cpf" className="inline-flex px-8 py-4 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition text-lg">
                       Découvrir le financement CPF
                       
                     </Link>
@@ -441,7 +441,7 @@ export default function BilanCompetences() {
               <div className="relative group">
                 <div className="absolute -inset-4 bg-gradient-to-r from-blue-200 to-blue-300 rounded-3xl blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
                 <div className="relative bg-white rounded-3xl p-6 shadow-xl border border-gray-100 group-hover:shadow-2xl transition-shadow duration-300 text-center">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-3">Plan de développement</h4>
+                  <h4 className="text-xl font-semibold text-[#013F63] mb-3">Plan de développement</h4>
                   <p className="text-gray-600">
                     Pour les salariés, possibilité de prise en charge par l'employeur
                   </p>
@@ -450,16 +450,16 @@ export default function BilanCompetences() {
               <div className="relative group">
                 <div className="absolute -inset-4 bg-gradient-to-r from-orange-200 to-orange-300 rounded-3xl blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
                 <div className="relative bg-white rounded-3xl p-6 shadow-xl border border-gray-100 group-hover:shadow-2xl transition-shadow duration-300 text-center">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-3">Pôle Emploi</h4>
+                  <h4 className="text-xl font-semibold text-[#013F63] mb-3">Pôle Emploi</h4>
                   <p className="text-gray-600">
                     Financement possible pour les demandeurs d'emploi via l'AIF
                   </p>
                 </div>
               </div>
               <div className="relative group">
-                <div className="absolute -inset-4 bg-gradient-to-r from-purple-200 to-purple-300 rounded-3xl blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
+                <div className="absolute -inset-4 bg-gradient-to-r from-blue-200 to-blue-300 rounded-3xl blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
                 <div className="relative bg-white rounded-3xl p-6 shadow-xl border border-gray-100 group-hover:shadow-2xl transition-shadow duration-300 text-center">
-                  <h4 className="text-xl font-semibold text-gray-900 mb-3">Financement personnel</h4>
+                  <h4 className="text-xl font-semibold text-[#013F63] mb-3">Financement personnel</h4>
                   <p className="text-gray-600">
                     Facilités de paiement en 3 ou 4 fois sans frais
                   </p>
@@ -482,7 +482,7 @@ export default function BilanCompetences() {
           <div className="max-w-6xl mx-auto">
             
             <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              <h2 className="text-4xl lg:text-5xl font-bold text-[#013F63] mb-6">
                 Nos <span className="text-blue-600 font-brittany text-5xl lg:text-6xl">2 formules</span>
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -607,15 +607,15 @@ export default function BilanCompetences() {
             </div>
 
             {/* Info financement */}
-            <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-3xl p-8 border border-purple-200 text-center">
-              <p className="text-lg text-purple-800 font-medium mb-4">
+            <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-3xl p-8 border border-[#013F63] text-center">
+              <p className="text-lg text-[#013F63] font-medium mb-4">
                 Nos formules sont 100% finançables par le CPF
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/bilan-de-competences/cpf" className="inline-flex px-6 py-3 rounded-full bg-purple-600 hover:bg-purple-700 text-white font-semibold transition">
+                <Link href="/bilan-de-competences/cpf" className="inline-flex px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition">
                   Financement CPF
                 </Link>
-                <Link href="/contact" className="inline-flex px-6 py-3 rounded-full border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white font-semibold transition">
+                <Link href="/contact" className="inline-flex px-6 py-3 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition">
                   Premier RDV gratuit
                 </Link>
               </div>
@@ -628,7 +628,7 @@ export default function BilanCompetences() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-20">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+            <h2 className="text-4xl lg:text-5xl font-bold text-[#013F63] mb-6 leading-tight">
               Questions <span className="text-blue-600 font-brittany text-5xl lg:text-6xl">fréquentes</span>
             </h2>
             <p className="text-xl text-gray-600 leading-relaxed">
@@ -645,7 +645,7 @@ export default function BilanCompetences() {
                     className="w-full p-6 text-left flex justify-between items-center"
                     onClick={() => toggleFaq(index)}
                   >
-                    <span className="font-semibold text-lg text-gray-900 pr-4">
+                    <span className="font-semibold text-lg text-[#013F63] pr-4">
                       {faq.question}
                     </span>
                     <ChevronDown 
@@ -676,7 +676,7 @@ export default function BilanCompetences() {
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight tracking-tight">
+            <h2 className="text-4xl lg:text-6xl font-bold text-[#013F63] mb-8 leading-tight tracking-tight">
               Votre <span className="text-orange-500 font-brittany text-5xl lg:text-7xl">avenir professionnel</span><br/>
               commence maintenant
             </h2>
@@ -691,7 +691,7 @@ export default function BilanCompetences() {
                 <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Calendar className="w-8 h-8 text-orange-500" />
                 </div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+                <h3 className="text-2xl font-semibold text-[#013F63] mb-4">
                   Premier rendez-vous découverte offert
                 </h3>
                 <p className="text-lg text-gray-700 mb-8">
@@ -700,11 +700,11 @@ export default function BilanCompetences() {
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button className="inline-flex px-8 py-4 rounded-full bg-gray-900 hover:bg-gray-800 text-white font-semibold shadow-lg transition text-lg hover:scale-105">
+                  <button className="inline-flex px-8 py-4 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold shadow-lg transition text-lg hover:scale-105">
                     
                     Réserver maintenant
                   </button>
-                  <Link href="/bilan-de-competences/quiz" className="inline-flex px-8 py-4 rounded-full border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white font-semibold transition">
+                  <Link href="/bilan-de-competences/quiz" className="inline-flex px-8 py-4 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition">
                     Faire le quiz d'orientation
                     
                   </Link>

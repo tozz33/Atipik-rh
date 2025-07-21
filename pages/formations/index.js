@@ -47,7 +47,7 @@ export default function FormationsIndex() {
             
             {/* Titre principal */}
             <div className="text-center mb-16 max-w-5xl mx-auto">
-              <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight tracking-tight">
+              <h1 className="text-4xl lg:text-6xl font-bold text-[#013F63] mb-8 leading-tight tracking-tight">
                 Formations <span className="text-blue-600 font-brittany text-5xl lg:text-6xl">professionnelles</span><br/>
                 à <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">Bordeaux</span>
               </h1>
@@ -67,18 +67,18 @@ export default function FormationsIndex() {
                   <div className="text-gray-700 font-medium">Taux de réussite</div>
                 </div>
                 <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-100">
-                  <div className="text-3xl font-bold text-green-600 mb-2">500+</div>
+                  <div className="text-3xl font-bold text-purple-600 mb-2">500+</div>
                   <div className="text-gray-700 font-medium">Stagiaires formés</div>
                 </div>
               </div>
 
               {/* CTA */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="inline-flex px-8 py-4 rounded-full bg-gray-900 hover:bg-gray-800 text-white font-semibold shadow-lg transition text-lg hover:scale-105">
+                <Link href="/contact" className="inline-flex px-8 py-4 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold shadow-lg transition text-lg hover:scale-105">
                   
                   Conseil gratuit
                 </Link>
-                <a href="https://www.moncompteformation.gouv.fr" target="_blank" rel="noopener noreferrer" className="inline-flex px-8 py-4 rounded-full border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white font-semibold transition">
+                <a href="https://www.moncompteformation.gouv.fr" target="_blank" rel="noopener noreferrer" className="inline-flex px-8 py-4 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition">
                   Financement CPF
                   
                 </a>
@@ -93,7 +93,7 @@ export default function FormationsIndex() {
             <div className="max-w-6xl mx-auto">
               
               <div className="text-center mb-20">
-                <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                <h2 className="text-4xl lg:text-5xl font-bold text-[#013F63] mb-6 leading-tight">
                   Nos <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">formations</span>
                 </h2>
                 <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
@@ -112,7 +112,7 @@ export default function FormationsIndex() {
                       <GraduationCap className="w-8 h-8 text-blue-600" />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-gray-900">Formations Certifiantes</h3>
+                      <h3 className="text-2xl font-bold text-[#013F63]">Formations Certifiantes</h3>
                       <p className="text-gray-600">Titre professionnel reconnu</p>
                     </div>
                   </div>
@@ -124,15 +124,15 @@ export default function FormationsIndex() {
                   
                   <div className="space-y-3 mb-6">
                     <div className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-500" />
+                      <CheckCircle className="w-5 h-5 text-purple-500" />
                       <span className="text-gray-700">Conseiller en Insertion Professionnelle (CIP)</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-500" />
+                      <CheckCircle className="w-5 h-5 text-purple-500" />
                       <span className="text-gray-700">Formateur Professionnel d'Adultes (FPA)</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-500" />
+                      <CheckCircle className="w-5 h-5 text-purple-500" />
                       <span className="text-gray-700">Diplômes niveau 5 et 6</span>
                     </div>
                   </div>
@@ -160,7 +160,7 @@ export default function FormationsIndex() {
                       <Lightbulb className="w-8 h-8 text-orange-600" />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-gray-900">Formations Courtes</h3>
+                      <h3 className="text-2xl font-bold text-[#013F63]">Formations Courtes</h3>
                       <p className="text-gray-600">Montée en compétences</p>
                     </div>
                   </div>
@@ -172,15 +172,15 @@ export default function FormationsIndex() {
                   
                   <div className="space-y-3 mb-6">
                     <div className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-500" />
+                      <CheckCircle className="w-5 h-5 text-purple-500" />
                       <span className="text-gray-700">Outils digitaux et bureautique</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-500" />
+                      <CheckCircle className="w-5 h-5 text-purple-500" />
                       <span className="text-gray-700">Communication et management</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-500" />
+                      <CheckCircle className="w-5 h-5 text-purple-500" />
                       <span className="text-gray-700">Formations sur mesure</span>
                     </div>
                   </div>
@@ -203,19 +203,17 @@ export default function FormationsIndex() {
               </div>
 
               {/* Formation CIP mise en avant */}
-              <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-3xl p-8 text-white text-center">
-                <h3 className="text-2xl font-bold mb-4">⭐ Formation phare : CIP</h3>
-                <p className="text-lg text-blue-100 mb-6 max-w-3xl mx-auto">
+              <div className="bg-blue-50 rounded-2xl p-8 border border-[#013F63] text-center">
+                <h3 className="text-2xl font-bold text-[#013F63] mb-4">Formation phare : CIP</h3>
+                <p className="text-lg text-[#013F63] mb-6 max-w-3xl mx-auto">
                   Notre formation Conseiller en Insertion Professionnelle est l'une des plus demandées. 
                   Devenez expert de l'accompagnement vers l'emploi en 9 mois.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/formations/cip" className="inline-flex px-6 py-3 rounded-full bg-white text-blue-600 font-semibold hover:bg-gray-100 transition">
-                    <Target className="w-5 h-5" />
+                  <Link href="/formations/cip" className="inline-flex px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition">
                     Découvrir la formation CIP
                   </Link>
-                  <Link href="/financement" className="inline-flex px-6 py-3 rounded-full border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold transition">
-                    <CreditCard className="w-5 h-5" />
+                  <Link href="/financement" className="inline-flex px-6 py-3 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition">
                     Financement CPF
                   </Link>
                 </div>
@@ -230,7 +228,7 @@ export default function FormationsIndex() {
             <div className="max-w-6xl mx-auto">
               
               <div className="text-center mb-16">
-                <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                <h2 className="text-4xl lg:text-5xl font-bold text-[#013F63] mb-6">
                   Pourquoi choisir <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">Atipik RH</span> ?
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -238,13 +236,13 @@ export default function FormationsIndex() {
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-3 gap-8">
-                
+              {/* Première ligne - 3 éléments */}
+              <div className="grid md:grid-cols-3 gap-8 mb-8">
                 <div className="text-center p-6">
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
                     <Users className="w-8 h-8 text-blue-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Accompagnement personnalisé</h3>
+                  <h3 className="text-xl font-bold text-[#013F63] mb-4">Accompagnement personnalisé</h3>
                   <p className="text-gray-600 leading-relaxed">
                     Chaque stagiaire bénéficie d'un suivi individuel adapté à ses besoins et objectifs professionnels.
                   </p>
@@ -254,39 +252,32 @@ export default function FormationsIndex() {
                   <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
                     <Award className="w-8 h-8 text-orange-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Certifications reconnues</h3>
+                  <h3 className="text-xl font-bold text-[#013F63] mb-4">Certifications reconnues</h3>
                   <p className="text-gray-600 leading-relaxed">
                     Organisme certifié Qualiopi et référencé CPF. Tous nos titres sont inscrits au RNCP.
                   </p>
                 </div>
 
                 <div className="text-center p-6">
-                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <TrendingUp className="w-8 h-8 text-green-600" />
+                  <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <TrendingUp className="w-8 h-8 text-purple-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Taux de réussite élevé</h3>
+                  <h3 className="text-xl font-bold text-[#013F63] mb-4">Taux de réussite élevé</h3>
                   <p className="text-gray-600 leading-relaxed">
                     95% de taux de réussite grâce à notre pédagogie adaptée et notre accompagnement renforcé.
                   </p>
                 </div>
+              </div>
 
+              {/* Deuxième ligne - 2 éléments centrés */}
+              <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 <div className="text-center p-6">
                   <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
                     <BookOpen className="w-8 h-8 text-purple-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Pédagogie moderne</h3>
+                  <h3 className="text-xl font-bold text-[#013F63] mb-4">Pédagogie moderne</h3>
                   <p className="text-gray-600 leading-relaxed">
                     Méthodes pédagogiques innovantes alliant théorie et pratique, présentiel et distanciel.
-                  </p>
-                </div>
-
-                <div className="text-center p-6">
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Calendar className="w-8 h-8 text-blue-600" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Flexibilité horaires</h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Formations compatibles avec votre vie professionnelle et personnelle. Sessions en soirée possibles.
                   </p>
                 </div>
 
@@ -294,7 +285,7 @@ export default function FormationsIndex() {
                   <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
                     <CreditCard className="w-8 h-8 text-orange-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Financement facilité</h3>
+                  <h3 className="text-xl font-bold text-[#013F63] mb-4">Financement facilité</h3>
                   <p className="text-gray-600 leading-relaxed">
                     Aide au montage de votre dossier CPF et recherche de co-financements adaptés à votre situation.
                   </p>
@@ -309,7 +300,7 @@ export default function FormationsIndex() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               
-              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              <h2 className="text-4xl lg:text-5xl font-bold text-[#013F63] mb-6">
                 Financez votre <span className="text-blue-600 font-brittany text-5xl lg:text-6xl">formation</span>
               </h2>
               <p className="text-xl text-gray-600 mb-12">
@@ -318,14 +309,14 @@ export default function FormationsIndex() {
 
               <div className="grid md:grid-cols-2 gap-8 mb-12">
                 <div className="bg-white rounded-2xl p-8 shadow-lg">
-                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <CreditCard className="w-6 h-6 text-green-600" />
+                  <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <CreditCard className="w-6 h-6 text-purple-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">CPF (Compte Personnel de Formation)</h3>
+                  <h3 className="text-xl font-bold text-[#013F63] mb-4">CPF (Compte Personnel de Formation)</h3>
                   <p className="text-gray-600 mb-4">
                     Utilisez vos droits formation acquis. Jusqu'à 5000€ disponibles pour financer votre projet.
                   </p>
-                  <a href="https://www.moncompteformation.gouv.fr" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-700 font-medium">
+                  <a href="https://www.moncompteformation.gouv.fr" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:text-purple-700 font-medium">
                     Vérifier mes droits CPF →
                   </a>
                 </div>
@@ -334,7 +325,7 @@ export default function FormationsIndex() {
                   <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Users className="w-6 h-6 text-blue-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Autres financements</h3>
+                  <h3 className="text-xl font-bold text-[#013F63] mb-4">Autres financements</h3>
                   <p className="text-gray-600 mb-4">
                     Pôle Emploi (AIF), employeur, OPCO... Nous vous aidons à trouver la solution adaptée.
                   </p>
@@ -344,15 +335,15 @@ export default function FormationsIndex() {
                 </div>
               </div>
 
-              <div className="bg-green-50 rounded-2xl p-8 border border-green-200">
-                <h3 className="text-2xl font-bold text-green-900 mb-4">
-                  🎁 Conseil gratuit personnalisé
+              <div className="bg-blue-50 rounded-2xl p-8 border border-[#013F63]">
+                <h3 className="text-2xl font-bold text-[#013F63] mb-4">
+                  Conseil gratuit personnalisé
                 </h3>
-                <p className="text-green-800 mb-6">
+                <p className="text-[#013F63] mb-6">
                   Nos conseillers analysent votre situation et vous orientent vers 
                   la formation et le financement les plus adaptés.
                 </p>
-                <Link href="/contact" className="inline-flex px-6 py-3 rounded-full bg-green-600 hover:bg-green-700 text-white font-semibold transition">
+                <Link href="/contact" className="inline-flex px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition">
                   
                   Prendre RDV gratuitement
                 </Link>
@@ -367,7 +358,7 @@ export default function FormationsIndex() {
             <div className="max-w-6xl mx-auto">
               
               <div className="text-center mb-16">
-                <h2 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight tracking-tight">
+                <h2 className="text-4xl lg:text-6xl font-bold text-[#013F63] mb-8 leading-tight tracking-tight">
                   Prêt(e) à franchir le <span className="text-orange-500 font-brittany text-5xl lg:text-7xl">pas</span> ?
                 </h2>
                 <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
@@ -381,7 +372,7 @@ export default function FormationsIndex() {
                   <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
                     <Calendar className="w-8 h-8 text-orange-600" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Conseil personnalisé</h3>
+                  <h3 className="text-2xl font-bold text-[#013F63] mb-4 text-center">Conseil personnalisé</h3>
                   <p className="text-gray-600 leading-relaxed mb-6 text-center">
                     Échangez avec nos experts pour définir la formation parfaite selon votre profil et vos objectifs.
                   </p>
@@ -394,7 +385,7 @@ export default function FormationsIndex() {
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
                     <GraduationCap className="w-8 h-8 text-blue-600" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Formations certifiantes</h3>
+                  <h3 className="text-2xl font-bold text-[#013F63] mb-4 text-center">Formations certifiantes</h3>
                   <p className="text-gray-600 leading-relaxed mb-6 text-center">
                     Découvrez nos formations longues pour obtenir un titre professionnel reconnu et changer de métier.
                   </p>

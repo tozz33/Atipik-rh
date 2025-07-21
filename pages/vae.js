@@ -59,7 +59,7 @@ export default function VAE() {
         {/* Hero Section avec background animé */}
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">
           {/* Background animé */}
-          <div className="absolute top-20 left-1/4 w-96 h-96 bg-purple-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+          <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
           <div className="absolute top-40 right-1/4 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-1000"></div>
           <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-orange-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-2000"></div>
           
@@ -67,7 +67,7 @@ export default function VAE() {
             
             {/* Titre principal */}
             <div className="text-center mb-16 max-w-5xl mx-auto">
-              <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight tracking-tight">
+              <h1 className="text-4xl lg:text-6xl font-bold text-[#013F63] mb-8 leading-tight tracking-tight">
                 VAE à <span className="text-purple-600 font-brittany text-5xl lg:text-7xl">Bordeaux</span><br/>
                 Transformez votre <span className="text-orange-500 font-brittany text-5xl lg:text-7xl">expérience</span> en diplôme
               </h1>
@@ -94,11 +94,11 @@ export default function VAE() {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="inline-flex px-8 py-4 rounded-full bg-gray-900 hover:bg-gray-800 text-white font-semibold shadow-lg transition text-lg hover:scale-105">
+                <Link href="/contact" className="inline-flex px-8 py-4 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold shadow-lg transition text-lg hover:scale-105">
                   
                   RDV conseil gratuit
                 </Link>
-                <Link href="/vae/cpf" className="inline-flex px-8 py-4 rounded-full border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white font-semibold transition">
+                <Link href="/vae/cpf" className="inline-flex px-8 py-4 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition">
                   Financement CPF
                   
                 </Link>
@@ -113,7 +113,7 @@ export default function VAE() {
             <div className="max-w-6xl mx-auto">
               
               <div className="text-center mb-16">
-                <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                <h2 className="text-4xl lg:text-5xl font-bold text-[#013F63] mb-6">
                   Qu'est-ce que la <span className="text-purple-600 font-brittany text-5xl lg:text-6xl">VAE</span> ?
                 </h2>
                 <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
@@ -131,7 +131,7 @@ export default function VAE() {
                     <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
                       <Award className="w-8 h-8 text-purple-600" />
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">Diplôme reconnu</h3>
+                    <h3 className="text-2xl font-bold text-[#013F63] mb-4">Diplôme reconnu</h3>
                     <p className="text-gray-600 leading-relaxed">
                       Le diplôme obtenu par VAE a la même valeur qu'un diplôme obtenu 
                       par la formation traditionnelle
@@ -145,7 +145,7 @@ export default function VAE() {
                     <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
                       <Clock className="w-8 h-8 text-blue-600" />
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">Gain de temps</h3>
+                    <h3 className="text-2xl font-bold text-[#013F63] mb-4">Gain de temps</h3>
                     <p className="text-gray-600 leading-relaxed">
                       Obtenez votre diplôme sans reprendre des études longues. 
                       Votre expérience compte !
@@ -159,7 +159,7 @@ export default function VAE() {
                     <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
                       <Target className="w-8 h-8 text-orange-600" />
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">Évolution pro</h3>
+                    <h3 className="text-2xl font-bold text-[#013F63] mb-4">Évolution pro</h3>
                     <p className="text-gray-600 leading-relaxed">
                       Boostez votre carrière, négociez une promotion ou 
                       changez de secteur d'activité
@@ -171,7 +171,7 @@ export default function VAE() {
               {/* Expertise Atipik RH */}
               <div className="bg-gradient-to-r from-purple-50 to-white rounded-3xl p-12 shadow-xl border border-gray-100">
                 <div className="max-w-4xl mx-auto text-center">
-                  <h3 className="text-3xl font-bold text-gray-900 mb-6">
+                  <h3 className="text-3xl font-bold text-[#013F63] mb-6">
                     Atipik RH, votre expert VAE en Gironde
                   </h3>
                   <p className="text-lg text-gray-700 mb-8 leading-relaxed">
@@ -201,7 +201,7 @@ export default function VAE() {
             <div className="max-w-6xl mx-auto">
               
               <div className="text-center mb-16">
-                <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                <h2 className="text-4xl lg:text-5xl font-bold text-[#013F63] mb-6">
                   Le parcours VAE en <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">5 étapes</span>
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -219,7 +219,7 @@ export default function VAE() {
                     1
                   </div>
                   <div className="ml-16">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    <h3 className="text-2xl font-bold text-[#013F63] mb-4">
                       Information et conseil
                     </h3>
                     <p className="text-gray-700 mb-4 leading-relaxed">
@@ -246,7 +246,7 @@ export default function VAE() {
                     2
                   </div>
                   <div className="ml-16">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    <h3 className="text-2xl font-bold text-[#013F63] mb-4">
                       Recevabilité (Livret 1)
                     </h3>
                     <p className="text-gray-700 mb-4 leading-relaxed">
@@ -273,7 +273,7 @@ export default function VAE() {
                     3
                   </div>
                   <div className="ml-16">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    <h3 className="text-2xl font-bold text-[#013F63] mb-4">
                       Rédaction du dossier (Livret 2)
                     </h3>
                     <p className="text-gray-700 mb-4 leading-relaxed">
@@ -300,7 +300,7 @@ export default function VAE() {
                     4
                   </div>
                   <div className="ml-16">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    <h3 className="text-2xl font-bold text-[#013F63] mb-4">
                       Préparation à l'oral
                     </h3>
                     <p className="text-gray-700 mb-4 leading-relaxed">
@@ -326,7 +326,7 @@ export default function VAE() {
                     5
                   </div>
                   <div className="ml-16">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    <h3 className="text-2xl font-bold text-[#013F63] mb-4">
                       Passage devant le jury
                     </h3>
                     <p className="text-gray-700 mb-4 leading-relaxed">
@@ -357,7 +357,7 @@ export default function VAE() {
             <div className="max-w-6xl mx-auto">
               
               <div className="text-center mb-16">
-                <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                <h2 className="text-4xl lg:text-5xl font-bold text-[#013F63] mb-6">
                   Nos <span className="text-blue-600 font-brittany text-5xl lg:text-6xl">2 formules</span>
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -482,15 +482,15 @@ export default function VAE() {
               </div>
 
               {/* Info financement */}
-              <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-3xl p-8 border border-purple-200 text-center">
-                <p className="text-lg text-purple-800 font-medium mb-4">
+              <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-3xl p-8 border border-[#013F63] text-center">
+                <p className="text-lg text-[#013F63] font-medium mb-4">
                   💡 Nos formules sont 100% finançables par le CPF
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/vae/cpf" className="inline-flex px-6 py-3 rounded-full bg-purple-600 hover:bg-purple-700 text-white font-semibold transition">
+                  <Link href="/vae/cpf" className="inline-flex px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition">
                     Financement CPF
                   </Link>
-                  <Link href="/contact" className="inline-flex px-6 py-3 rounded-full border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white font-semibold transition">
+                  <Link href="/contact" className="inline-flex px-6 py-3 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition">
                     Premier RDV gratuit
                   </Link>
                 </div>
@@ -505,7 +505,7 @@ export default function VAE() {
             <div className="max-w-6xl mx-auto">
               
               <div className="text-center mb-16">
-                <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                <h2 className="text-4xl lg:text-5xl font-bold text-[#013F63] mb-6">
                   Diplômes les plus <span className="text-sky-600 font-brittany text-5xl lg:text-6xl">demandés</span>
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -521,7 +521,7 @@ export default function VAE() {
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
                     <Briefcase className="w-8 h-8 text-blue-600" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+                  <h3 className="text-2xl font-bold text-[#013F63] mb-6 text-center">
                     Commerce & Management
                   </h3>
                   <ul className="space-y-3 text-gray-700">
@@ -553,7 +553,7 @@ export default function VAE() {
                   <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
                     <Users className="w-8 h-8 text-purple-600" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+                  <h3 className="text-2xl font-bold text-[#013F63] mb-6 text-center">
                     RH & Formation
                   </h3>
                   <ul className="space-y-3 text-gray-700">
@@ -585,7 +585,7 @@ export default function VAE() {
                   <div className="w-16 h-16 bg-sky-100 rounded-full flex items-center justify-center mx-auto mb-6">
                     <Award className="w-8 h-8 text-sky-600" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+                  <h3 className="text-2xl font-bold text-[#013F63] mb-6 text-center">
                     Santé & Social
                   </h3>
                   <ul className="space-y-3 text-gray-700">
@@ -622,7 +622,7 @@ export default function VAE() {
             <div className="max-w-6xl mx-auto">
               
               <div className="text-center mb-16">
-                <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                <h2 className="text-4xl lg:text-5xl font-bold text-[#013F63] mb-6">
                   Ils ont réussi leur <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">VAE</span>
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -641,7 +641,7 @@ export default function VAE() {
                       MC
                     </div>
                     <div>
-                      <h4 className="text-xl font-bold text-gray-900">Marie C.</h4>
+                      <h4 className="text-xl font-bold text-[#013F63]">Marie C.</h4>
                       <p className="text-gray-600">BTS MCO obtenu par VAE</p>
                     </div>
                   </div>
@@ -664,7 +664,7 @@ export default function VAE() {
                       PL
                     </div>
                     <div>
-                      <h4 className="text-xl font-bold text-gray-900">Pierre L.</h4>
+                      <h4 className="text-xl font-bold text-[#013F63]">Pierre L.</h4>
                       <p className="text-gray-600">Titre FPA validé à 100%</p>
                     </div>
                   </div>
@@ -690,7 +690,7 @@ export default function VAE() {
             <div className="max-w-4xl mx-auto">
               
               <div className="text-center mb-16">
-                <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                <h2 className="text-4xl lg:text-5xl font-bold text-[#013F63] mb-6">
                   Questions <span className="text-blue-600 font-brittany text-5xl lg:text-6xl">fréquentes</span>
                 </h2>
                 <p className="text-xl text-gray-600">
@@ -705,7 +705,7 @@ export default function VAE() {
                    <div key={index} className="bg-white rounded-3xl shadow-lg overflow-hidden">
                      <button
                        onClick={() => toggleFaq(index)}
-                       className="w-full p-8 text-left font-bold text-xl cursor-pointer text-gray-900 flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
+                       className="w-full p-8 text-left font-bold text-xl cursor-pointer text-[#013F63] flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
                      >
                        <span className="pr-4">{item.question}</span>
                        <ChevronDown
@@ -731,7 +731,7 @@ export default function VAE() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               
-              <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-gray-900">
+              <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-[#013F63]">
                 Transformez votre expérience en reconnaissance officielle
               </h2>
               <p className="text-xl mb-12 leading-relaxed text-gray-600">
@@ -740,7 +740,7 @@ export default function VAE() {
               </p>
               
               <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 mb-12">
-                <h3 className="text-2xl font-bold text-purple-600 mb-4">
+                <h3 className="text-2xl font-bold text-[#013F63] mb-4">
                   Consultation gratuite et sans engagement
                 </h3>
                 <p className="text-lg mb-6 text-gray-700">
@@ -748,10 +748,10 @@ export default function VAE() {
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/contact" className="inline-flex px-8 py-4 rounded-full bg-gray-900 hover:bg-gray-800 text-white font-semibold shadow-lg transition text-lg">
+                  <Link href="/contact" className="inline-flex px-8 py-4 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold shadow-lg transition text-lg">
                     Prendre rendez-vous
                   </Link>
-                  <Link href="/vae/cpf" className="inline-flex px-8 py-4 rounded-full border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white font-semibold transition">
+                  <Link href="/vae/cpf" className="inline-flex px-8 py-4 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition">
                     Financement CPF
                   </Link>
                 </div>

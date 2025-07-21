@@ -222,59 +222,18 @@ export default function HomePage() {
             </div>
           </Link>
 
-          {/* VAE */}
-          <Link href="/vae" className="flex-1 hero-card relative overflow-hidden cursor-pointer transition-all duration-700 hover:flex-[1.1] hover:scale-105 group">
-            {/* Background image */}
-            <div className="absolute inset-0">
-              <Image 
-                src="/images/hero/vae.jpg" 
-                alt="VAE"
-                fill
-                className="object-cover transition-all duration-700"
-              />
-              {/* Overlay orange */}
-              <div className="absolute inset-0 bg-[#FE6400] opacity-60 group-hover:opacity-0 transition-all duration-700"></div>
-              {/* Overlay dégradé pour la lisibilité au hover */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-            </div>
-            
-            <div className="relative h-full flex flex-col justify-end items-center text-white p-8">
-              <div className="text-center">
-                <h2 className="text-xl lg:text-2xl font-bold tracking-tight mb-4">
-                  VAE
-                </h2>
-                
-                <div className="w-16 h-1 bg-accent-500 mx-auto mb-6 group-hover:w-24 transition-all duration-500"></div>
-                
-                {/* Sous-texte affiché seulement au hover */}
-                <div className="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                  <p className="text-base lg:text-lg leading-relaxed max-w-md mb-6">
-                    Transformez votre expérience en diplôme officiel reconnu
-                  </p>
-                  
-                  <div className="inline-flex text-orange-400 font-semibold">
-                    <span>Explorer</span>
-                    <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Link>
-
           {/* Formations */}
           <Link href="/formations" className="flex-1 hero-card relative overflow-hidden cursor-pointer transition-all duration-700 hover:flex-[1.1] hover:scale-105 group">
             {/* Background image */}
             <div className="absolute inset-0">
               <Image 
-                src="/images/hero/formations.jpg" 
+                src="/images/hero/vae.jpg" 
                 alt="Formations"
                 fill
                 className="object-cover transition-all duration-700"
               />
-              {/* Overlay bleu foncé */}
-              <div className="absolute inset-0 bg-[#013F63] opacity-60 group-hover:opacity-0 transition-all duration-700"></div>
+              {/* Overlay orange */}
+              <div className="absolute inset-0 bg-[#FE6400] opacity-60 group-hover:opacity-0 transition-all duration-700"></div>
               {/* Overlay dégradé pour la lisibilité au hover */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
             </div>
@@ -303,6 +262,47 @@ export default function HomePage() {
               </div>
             </div>
           </Link>
+
+          {/* VAE */}
+          <Link href="/vae" className="flex-1 hero-card relative overflow-hidden cursor-pointer transition-all duration-700 hover:flex-[1.1] hover:scale-105 group">
+            {/* Background image */}
+            <div className="absolute inset-0">
+              <Image 
+                src="/images/hero/formations.jpg" 
+                alt="VAE"
+                fill
+                className="object-cover transition-all duration-700"
+              />
+              {/* Overlay bleu foncé */}
+              <div className="absolute inset-0 bg-[#013F63] opacity-60 group-hover:opacity-0 transition-all duration-700"></div>
+              {/* Overlay dégradé pour la lisibilité au hover */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            </div>
+            
+            <div className="relative h-full flex flex-col justify-end items-center text-white p-8">
+              <div className="text-center">
+                <h2 className="text-xl lg:text-2xl font-bold tracking-tight mb-4">
+                  VAE
+                </h2>
+                
+                <div className="w-16 h-1 bg-accent-500 mx-auto mb-6 group-hover:w-24 transition-all duration-500"></div>
+                
+                {/* Sous-texte affiché seulement au hover */}
+                <div className="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                  <p className="text-base lg:text-lg leading-relaxed max-w-md mb-6">
+                    Transformez votre expérience en diplôme officiel reconnu
+                  </p>
+                  
+                  <div className="inline-flex text-orange-400 font-semibold">
+                    <span>Explorer</span>
+                    <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Link>
         </section>
 
         {/* Section Storytelling Moderne */}
@@ -316,7 +316,7 @@ export default function HomePage() {
             
             {/* Accroche - Hero Central */}
             <div className="text-center mb-32 max-w-4xl mx-auto">
-              <h1 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-8 leading-tight tracking-tight">
+              <h1 className="text-3xl lg:text-5xl font-bold text-[#013F63] mb-8 leading-tight tracking-tight">
                 Un jour, tout semble <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">flou</span>.<br/>
                 Le travail perd de son <span className="text-blue-600 font-brittany text-5xl lg:text-6xl">sens</span>.
               </h1>
@@ -337,7 +337,7 @@ export default function HomePage() {
                 <div className="relative">
                   <div className="absolute -inset-4 bg-gradient-to-r from-blue-200 to-blue-300 rounded-3xl blur-lg opacity-30"></div>
                   <div className="relative bg-white rounded-3xl p-12 shadow-xl border border-gray-100">
-                    <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Le vécu</h2>
+                    <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-6">Le vécu</h2>
                     <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
                       <p>
                         Des années d'expérience. Une routine bien installée. Et pourtant, une impression persistante : 
@@ -380,7 +380,7 @@ export default function HomePage() {
                 <div className="relative order-1 lg:order-2">
                   <div className="absolute -inset-4 bg-gradient-to-r from-orange-200 to-orange-300 rounded-3xl blur-lg opacity-50"></div>
                   <div className="relative bg-white rounded-3xl p-12 shadow-xl border border-gray-100">
-                    <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Le déclic</h2>
+                    <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-6">Le déclic</h2>
                     <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
                       <p>
                         Ce jour-là, en tombant sur un webinaire ou un simple article, une prise de conscience : 
@@ -402,7 +402,7 @@ export default function HomePage() {
                 <div className="relative">
                   <div className="absolute -inset-4 bg-gradient-to-r from-blue-200 to-blue-300 rounded-3xl blur-lg opacity-30"></div>
                   <div className="relative bg-white rounded-3xl p-12 shadow-xl border border-blue-100">
-                    <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">L'accompagnement</h2>
+                    <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-6">L'accompagnement</h2>
                     <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
                       <p>
                         C'est souvent là que commence le vrai tournant : un premier échange, un bilan de compétences, 
@@ -446,7 +446,7 @@ export default function HomePage() {
                   <div className="absolute -inset-4 bg-gradient-to-r from-orange-200 to-orange-300 rounded-3xl blur-lg opacity-50"></div>
                   <div className="relative bg-white rounded-3xl p-12 shadow-xl border border-gray-100">
 
-                    <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">La transformation</h2>
+                    <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-6">La transformation</h2>
                     <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
                       <p>
                         Au fil des semaines, les choses s'éclaircissent : un projet prend forme. 
@@ -465,7 +465,7 @@ export default function HomePage() {
 
             {/* Appel à l'action final - Style épuré */}
             <div className="text-center mt-32 mb-16 max-w-4xl mx-auto">
-              <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-8 leading-tight tracking-tight">
+              <h2 className="text-3xl lg:text-5xl font-bold text-[#013F63] mb-8 leading-tight tracking-tight">
                 Chaque parcours est <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">différent</span>.<br/>
                 Le vôtre commence peut-être <span className="text-blue-600 font-brittany text-5xl lg:text-6xl">aujourd'hui</span>.
               </h2>
@@ -476,7 +476,7 @@ export default function HomePage() {
               </p>
               
               <div className="space-y-6">
-                <button className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-4 rounded-full text-lg font-medium transition-all duration-200 hover:scale-105 shadow-lg">
+                <button className="bg-[#013F63] hover:bg-[#012a4a] text-white px-8 py-4 rounded-full text-lg font-medium transition-all duration-200 hover:scale-105 shadow-lg">
                   Premier entretien gratuit
                 </button>
                 
@@ -495,7 +495,7 @@ export default function HomePage() {
         <section className="pt-12 pb-24 bg-gray-50">
           <div className="container mx-auto px-4 mb-12">
             <div className="text-center max-w-3xl mx-auto">
-              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+              <h2 className="text-4xl lg:text-5xl font-bold text-[#013F63] mb-6 leading-tight">
                 Ils nous ont fait <span className="text-orange-500 font-brittany text-6xl lg:text-7xl">confiance</span>
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed">
