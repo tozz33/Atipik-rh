@@ -1,0 +1,327 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import des polices Google */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* Police Wonderful Branding - fallback vers cursive */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+/* Police Brittany personnalisée */
+@font-face {
+  font-family: 'Brittany';
+  src: url('/Fonts/BrittanySignature.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  /* Variables CSS pour cohérence avec le design system */
+  :root {
+    --color-primary-600: #013F63;
+    --color-accent-500: #FE6400;
+    --color-accent-300: #FFBC82;
+    --color-neutral-900: #2E2E2E;
+    --color-neutral-100: #FFDEC1;
+    --color-muted-blue-200: #9AB4BF;
+    --color-accent-600: #EAA93D;
+    --color-white: #FFFFFF;
+    
+    --space-section: 96px;
+    --space-grid-gutter: 32px;
+    --radius-card: 16px;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--color-neutral-900);
+  }
+
+  /* Fallback pour Wonderful Branding */
+  .font-brand {
+    font-family: 'Dancing Script', cursive;
+  }
+}
+
+@layer components {
+  /* Bouton primaire réutilisable */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-full bg-accent-500 hover:bg-accent-600 text-white font-semibold shadow-sm transition-all duration-200 cursor-pointer;
+  }
+  
+  /* Carte service réutilisable */
+  .card-service {
+    @apply rounded-xl border bg-white p-6 shadow-lg hover:shadow-xl transition-all duration-300;
+  }
+  
+  /* Titre de section */
+  .section-title {
+    @apply text-3xl lg:text-4xl font-semibold text-primary-600 mb-8;
+  }
+  
+  /* Container standard */
+  .container-custom {
+    @apply container mx-auto px-4;
+  }
+}
+
+@layer utilities {
+  /* Animations personnalisées */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Gradient personnalisé pour les backgrounds */
+  .bg-gradient-atipik {
+    background: linear-gradient(135deg, var(--color-neutral-100) 0%, var(--color-white) 100%);
+  }
+  
+  /* Utilitaire pour limiter le nombre de lignes */
+  .line-clamp-4 {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+/* Styles pour les éléments MDX */
+.mdx-content {
+  @apply max-w-none;
+}
+
+.mdx-content h1 {
+  @apply text-4xl lg:text-5xl font-brand text-primary-600 mb-6;
+}
+
+.mdx-content h2 {
+  @apply text-3xl lg:text-4xl font-semibold text-primary-600 mb-6 mt-12;
+}
+
+.mdx-content h3 {
+  @apply text-2xl lg:text-3xl font-semibold text-primary-600 mb-4 mt-8;
+}
+
+.mdx-content p {
+  @apply text-base lg:text-lg text-neutral-900 mb-4 leading-relaxed;
+}
+
+.mdx-content ul, .mdx-content ol {
+  @apply mb-6 pl-6;
+}
+
+.mdx-content li {
+  @apply mb-2 text-neutral-900;
+}
+
+.mdx-content a {
+  @apply text-accent-500 hover:text-accent-600 font-medium transition-colors;
+}
+
+/* Styles pour les détails/summary (FAQ) */
+details {
+  @apply border border-gray-200 rounded-lg mb-4;
+}
+
+summary {
+  @apply p-4 cursor-pointer hover:bg-gray-50 transition-colors;
+}
+
+details[open] summary {
+  @apply border-b border-gray-200;
+}
+
+details p {
+  @apply p-4 pt-0;
+}
+
+/* Styles pour la timeline */
+.timeline-item {
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.timeline-item.slide-left {
+  transform: translateX(-100px);
+}
+
+.timeline-item.slide-right {
+  transform: translateX(100px);
+}
+
+.timeline-item.animate-slide-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.timeline-item.position-normal {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.timeline-item.animate-slide-out-left {
+  opacity: 0;
+  transform: translateX(-100px);
+}
+
+.timeline-item.animate-slide-out-right {
+  opacity: 0;
+  transform: translateX(100px);
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #d1d5db;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 4px solid white;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.timeline-item.animate-slide-in .timeline-dot {
+  transform: translateX(-50%) scale(1.2);
+}
+
+.timeline-item.animate-slide-out-left .timeline-dot,
+.timeline-item.animate-slide-out-right .timeline-dot {
+  transform: translateX(-50%) scale(0.8);
+}
+
+  /* Styles pour les témoignages avec navigation manuelle */
+  .testimonials-container {
+    position: relative;
+    overflow: hidden;
+    padding: 0 2rem;
+    min-height: 350px;
+  }
+
+  .testimonials-scroll {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+    /* Variables CSS pour les calculs responsive */
+    --card-width: 320px;
+    --card-margin: 1.25rem;
+    gap: var(--card-margin);
+    padding-left: 1rem;
+  }
+
+  .testimonial-card {
+    min-width: var(--card-width);
+    max-width: var(--card-width);
+    min-height: 280px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Boutons de navigation */
+  .testimonials-nav-btn {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #e5e7eb;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+.testimonials-nav-btn:hover {
+  background: white;
+  border-color: #FE6400;
+  color: #FE6400;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.testimonials-nav-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.testimonials-nav-btn:disabled:hover {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: #e5e7eb;
+  color: inherit;
+}
+
+.testimonials-prev {
+  left: 1rem;
+}
+
+.testimonials-next {
+  right: 1rem;
+}
+
+  @media (max-width: 1024px) {
+    .testimonials-scroll {
+      --card-width: 300px;
+      --card-margin: 1rem;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .testimonials-container {
+      min-height: 330px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .testimonials-container {
+      padding: 0 1rem;
+      min-height: 320px;
+    }
+    
+    .testimonials-scroll {
+      --card-width: 280px;
+      --card-margin: 0.75rem;
+      padding-left: 0.5rem;
+    }
+    
+    .testimonials-nav-btn {
+      width: 40px;
+      height: 40px;
+    }
+    
+    .testimonial-card {
+      min-height: 260px;
+    }
+  } 
