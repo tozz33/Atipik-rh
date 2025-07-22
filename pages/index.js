@@ -306,16 +306,16 @@ export default function HomePage() {
         </section>
 
         {/* Section Storytelling Moderne */}
-        <section className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 relative overflow-hidden">
+        <section className="py-16 bg-gradient-to-br from-slate-50 via-white to-blue-50 relative overflow-hidden">
           {/* Éléments décoratifs en arrière-plan */}
           <div className="absolute top-20 left-10 w-72 h-72 bg-orange-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
           <div className="absolute top-40 right-10 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-1000"></div>
           <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-green-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-2000"></div>
           
-          <div className="relative z-10 container mx-auto px-4 pt-48 pb-24">
+          <div className="relative z-10 container mx-auto px-4 pt-16 pb-16">
             
             {/* Accroche - Hero Central */}
-            <div className="text-center mb-32 max-w-4xl mx-auto">
+            <div className="text-center mb-16 max-w-4xl mx-auto">
               <h1 className="text-3xl lg:text-5xl font-bold text-[#013F63] mb-8 leading-tight tracking-tight">
                 Un jour, tout semble <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">flou</span>.<br/>
                 Le travail perd de son <span className="text-blue-600 font-brittany text-5xl lg:text-6xl">sens</span>.
@@ -464,7 +464,7 @@ export default function HomePage() {
             </div>
 
             {/* Appel à l'action final - Style épuré */}
-            <div className="text-center mt-32 mb-16 max-w-4xl mx-auto">
+            <div className="text-center mt-16 mb-16 max-w-4xl mx-auto">
               <h2 className="text-3xl lg:text-5xl font-bold text-[#013F63] mb-8 leading-tight tracking-tight">
                 Chaque parcours est <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">différent</span>.<br/>
                 Le vôtre commence peut-être <span className="text-blue-600 font-brittany text-5xl lg:text-6xl">aujourd'hui</span>.
