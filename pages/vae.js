@@ -68,26 +68,26 @@ export default function VAE() {
             {/* Titre principal */}
             <div className="text-center mb-16 max-w-5xl mx-auto">
               <h1 className="text-4xl lg:text-6xl font-bold text-[#013F63] mb-8 leading-tight tracking-tight">
-                VAE à <span className="text-purple-600 font-brittany text-5xl lg:text-7xl">Bordeaux</span><br/>
+                VAE à <span className="text-[#013F63] font-brittany text-5xl lg:text-7xl">Bordeaux</span><br/>
                 Transformez votre <span className="text-orange-500 font-brittany text-5xl lg:text-7xl">expérience</span> en diplôme
               </h1>
               <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed font-light mb-8">
                 15 ans d'expertise, 85% de réussite<br className="hidden lg:block"/>
-                <span className="text-purple-600 font-medium">Faites reconnaître officiellement vos compétences</span>
+                <span className="text-[#013F63] font-medium">Faites reconnaître officiellement vos compétences</span>
               </p>
               
               {/* Statistiques hero */}
               <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
                 <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100">
-                  <div className="text-3xl font-bold text-purple-600 mb-2">85%</div>
+                  <div className="text-3xl font-bold text-[#013F63] mb-2">85%</div>
                   <p className="text-gray-700">de réussite avec notre accompagnement</p>
                 </div>
                 <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100">
-                  <div className="text-3xl font-bold text-purple-600 mb-2">1 an</div>
+                  <div className="text-3xl font-bold text-[#013F63] mb-2">1 an</div>
                   <p className="text-gray-700">d'expérience minimum requis</p>
                 </div>
                 <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100">
-                  <div className="text-3xl font-bold text-purple-600 mb-2">100%</div>
+                  <div className="text-3xl font-bold text-[#013F63] mb-2">100%</div>
                   <p className="text-gray-700">des diplômes accessibles par VAE</p>
                 </div>
               </div>
@@ -114,7 +114,7 @@ export default function VAE() {
               
               <div className="text-center mb-16">
                 <h2 className="text-4xl lg:text-5xl font-bold text-[#013F63] mb-6">
-                  Qu'est-ce que la <span className="text-purple-600 font-brittany text-5xl lg:text-6xl">VAE</span> ?
+                  Qu'est-ce que la <span className="text-[#013F63] font-brittany text-5xl lg:text-6xl">VAE</span> ?
                 </h2>
                 <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
                   La Validation des Acquis de l'Expérience permet d'obtenir tout ou partie d'un diplôme, 
@@ -181,11 +181,11 @@ export default function VAE() {
                   </p>
                   <div className="grid md:grid-cols-2 gap-8">
                     <div className="text-center">
-                      <div className="text-4xl font-bold text-purple-600 mb-2">15 ans</div>
+                      <div className="text-4xl font-bold text-[#013F63] mb-2">15 ans</div>
                       <p className="text-gray-700">d'expérience en accompagnement VAE</p>
                     </div>
                     <div className="text-center">
-                      <div className="text-4xl font-bold text-purple-600 mb-2">200+</div>
+                      <div className="text-4xl font-bold text-[#013F63] mb-2">200+</div>
                       <p className="text-gray-700">candidats accompagnés avec succès</p>
                     </div>
                   </div>
@@ -427,9 +427,9 @@ export default function VAE() {
                 {/* Niveau 5 */}
                 <div className="flex flex-col h-[550px]">
                   {/* Header avec niveau */}
-                  <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-t-3xl p-6 text-center">
+                  <div className="bg-gradient-to-r from-[#013F63] to-[#012a4a] text-white rounded-t-3xl p-6 text-center">
                     <h3 className="text-2xl lg:text-3xl font-bold mb-2">Niveau 5</h3>
-                    <p className="text-blue-100 font-medium">DEUG, BTS, DUT, DEUST, BUT, TITRE PROFESSIONNEL</p>
+                    <p className="text-slate-200 font-medium">DEUG, BTS, DUT, DEUST, BUT, TITRE PROFESSIONNEL</p>
                   </div>
                   
                   {/* Contenu de la carte */}
@@ -437,14 +437,14 @@ export default function VAE() {
                     
                     {/* Prix */}
                     <div className="text-center mb-8">
-                      <div className="text-4xl lg:text-5xl font-bold text-blue-600 mb-2">
+                      <div className="text-4xl lg:text-5xl font-bold text-[#013F63] mb-2">
                         1 900<span className="text-2xl">€</span>
                       </div>
                       <p className="text-gray-500 text-sm">(sans frais d'acte formatif et frais de jurys)</p>
                     </div>
                     
                     {/* Durée d'accompagnement */}
-                    <div className="flex items-center justify-center gap-3 mb-8 text-blue-600">
+                    <div className="flex items-center justify-center gap-3 mb-8 text-[#013F63]">
                       <Clock className="w-5 h-5" />
                       <span className="font-medium">Jusqu'à 24 heures de face à face</span>
                     </div>
@@ -452,29 +452,29 @@ export default function VAE() {
                     {/* Services inclus */}
                     <div className="space-y-3 mb-8 flex-grow">
                       <div className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-[#013F63] mt-0.5 flex-shrink-0" />
                         <span className="text-gray-700 text-sm">Accompagnement à la recevabilité (Livret 1)</span>
                       </div>
                       <div className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-[#013F63] mt-0.5 flex-shrink-0" />
                         <span className="text-gray-700 text-sm">Méthodologie de rédaction du livret 2</span>
                       </div>
                       <div className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-[#013F63] mt-0.5 flex-shrink-0" />
                         <span className="text-gray-700 text-sm">Accompagnement personnalisé à la rédaction</span>
                       </div>
                       <div className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-[#013F63] mt-0.5 flex-shrink-0" />
                         <span className="text-gray-700 text-sm">Préparation à l'oral devant le jury</span>
                       </div>
                       <div className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-[#013F63] mt-0.5 flex-shrink-0" />
                         <span className="text-gray-700 text-sm">Suivi jusqu'à validation complète</span>
                       </div>
                     </div>
                     
                     {/* Bouton */}
-                    <Link href="/contact" className="block w-full text-center px-6 py-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-semibold transition mt-auto">
+                    <Link href="/contact" className="block w-full text-center px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
                       Parlons-en
                     </Link>
                   </div>

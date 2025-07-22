@@ -16,8 +16,7 @@ import {
   ChevronDown,
   MapPin,
   Heart,
-  Lightbulb,
-  Trophy
+  Lightbulb
 } from 'lucide-react';
 
 export default function BilanCompetences() {
@@ -150,9 +149,13 @@ export default function BilanCompetences() {
         </div>
       </section>
 
-      {/* Les 3 phases - Style moderne */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4">
+      {/* Les 3 phases - Style moderne avec fonds colorés */}
+      <section className="py-24 bg-gradient-to-br from-slate-50 via-white to-blue-50 relative overflow-hidden">
+        {/* Éléments décoratifs de fond */}
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-orange-100 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-pulse animation-delay-1000"></div>
+        
+        <div className="relative z-10 container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-20">
               <h2 className="text-4xl lg:text-5xl font-bold text-[#013F63] mb-6 leading-tight">
@@ -165,65 +168,118 @@ export default function BilanCompetences() {
             </div>
 
             <div className="space-y-8">
+              {/* Phase 1 - Fond bleu clair */}
               <div className="relative group">
-                <div className="absolute -inset-4 bg-gradient-to-r from-blue-200 to-blue-300 rounded-3xl blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
-                <div className="relative bg-white rounded-3xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl transition-shadow duration-300">
+                <div className="absolute -inset-4 bg-gradient-to-r from-blue-200 to-blue-300 rounded-3xl blur-lg opacity-40 group-hover:opacity-60 transition-opacity duration-300"></div>
+                <div className="relative bg-gradient-to-r from-blue-50 to-blue-100 rounded-3xl p-8 shadow-xl border border-blue-200 group-hover:shadow-2xl transition-all duration-300">
                   <div className="flex items-start gap-6">
-                    <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">
+                    <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-2xl flex items-center justify-center font-bold text-2xl flex-shrink-0 shadow-lg">
                       1
                     </div>
-                    <div>
-                      <h3 className="text-xl lg:text-2xl font-bold text-[#013F63] mb-4">
-                        Phase préliminaire (2-4h)
+                    <div className="flex-1">
+                      <h3 className="text-2xl lg:text-3xl font-bold text-[#013F63] mb-4">
+                        Phase préliminaire
                       </h3>
-                      <p className="text-base text-gray-700 leading-relaxed">
+                      <div className="inline-flex items-center gap-2 bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm font-medium mb-4">
+                        <Clock className="w-4 h-4" />
+                        2-4 heures
+                      </div>
+                      <p className="text-lg text-gray-700 leading-relaxed">
                         Analyse de vos besoins, définition des objectifs et présentation de la méthodologie. 
                         C'est le moment de créer une relation de confiance avec votre consultant et de 
-                        personnaliser votre parcours.
+                        personnaliser votre parcours selon vos attentes spécifiques.
                       </p>
+                      <div className="mt-4 flex flex-wrap gap-2">
+                        <span className="bg-white text-blue-700 px-3 py-1 rounded-full text-sm border border-blue-200">Définition des objectifs</span>
+                        <span className="bg-white text-blue-700 px-3 py-1 rounded-full text-sm border border-blue-200">Relation de confiance</span>
+                        <span className="bg-white text-blue-700 px-3 py-1 rounded-full text-sm border border-blue-200">Méthodologie</span>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
 
+              {/* Phase 2 - Fond orange clair */}
               <div className="relative group">
-                <div className="absolute -inset-4 bg-gradient-to-r from-orange-200 to-orange-300 rounded-3xl blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
-                <div className="relative bg-white rounded-3xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl transition-shadow duration-300">
+                <div className="absolute -inset-4 bg-gradient-to-r from-orange-200 to-orange-300 rounded-3xl blur-lg opacity-40 group-hover:opacity-60 transition-opacity duration-300"></div>
+                <div className="relative bg-gradient-to-r from-orange-50 to-orange-100 rounded-3xl p-8 shadow-xl border border-orange-200 group-hover:shadow-2xl transition-all duration-300">
                   <div className="flex items-start gap-6">
-                    <div className="w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">
+                    <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-2xl flex items-center justify-center font-bold text-2xl flex-shrink-0 shadow-lg">
                       2
                     </div>
-                    <div>
-                      <h3 className="text-xl lg:text-2xl font-bold text-[#013F63] mb-4">
-                        Phase d'investigation (16-18h)
+                    <div className="flex-1">
+                      <h3 className="text-2xl lg:text-3xl font-bold text-[#013F63] mb-4">
+                        Phase d'investigation
                       </h3>
-                      <p className="text-base text-gray-700 leading-relaxed">
+                      <div className="inline-flex items-center gap-2 bg-orange-200 text-orange-800 px-3 py-1 rounded-full text-sm font-medium mb-4">
+                        <Clock className="w-4 h-4" />
+                        16-18 heures
+                      </div>
+                      <p className="text-lg text-gray-700 leading-relaxed">
                         Exploration approfondie de vos compétences, valeurs, intérêts et motivations. 
                         Tests psychométriques, analyse du parcours et identification des potentiels. 
-                        C'est le cœur du processus de découverte.
+                        C'est le cœur du processus de découverte et d'auto-connaissance.
                       </p>
+                      <div className="mt-4 flex flex-wrap gap-2">
+                        <span className="bg-white text-orange-700 px-3 py-1 rounded-full text-sm border border-orange-200">Tests psychométriques</span>
+                        <span className="bg-white text-orange-700 px-3 py-1 rounded-full text-sm border border-orange-200">Analyse des compétences</span>
+                        <span className="bg-white text-orange-700 px-3 py-1 rounded-full text-sm border border-orange-200">Identification potentiels</span>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
 
+              {/* Phase 3 - Fond bleu foncé */}
               <div className="relative group">
-                <div className="absolute -inset-4 bg-gradient-to-r from-blue-200 to-blue-300 rounded-3xl blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
-                <div className="relative bg-white rounded-3xl p-8 shadow-xl border border-gray-100 group-hover:shadow-2xl transition-shadow duration-300">
+                <div className="absolute -inset-4 bg-gradient-to-r from-slate-200 to-slate-300 rounded-3xl blur-lg opacity-40 group-hover:opacity-60 transition-opacity duration-300"></div>
+                <div className="relative bg-gradient-to-r from-slate-50 to-blue-50 rounded-3xl p-8 shadow-xl border border-slate-200 group-hover:shadow-2xl transition-all duration-300">
                   <div className="flex items-start gap-6">
-                    <div className="w-12 h-12 bg-[#013F63] text-white rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0">
+                    <div className="w-16 h-16 bg-gradient-to-r from-[#013F63] to-[#012a4a] text-white rounded-2xl flex items-center justify-center font-bold text-2xl flex-shrink-0 shadow-lg">
                       3
                     </div>
-                    <div>
-                      <h3 className="text-xl lg:text-2xl font-bold text-[#013F63] mb-4">
-                        Phase de conclusion (4-6h)
+                    <div className="flex-1">
+                      <h3 className="text-2xl lg:text-3xl font-bold text-[#013F63] mb-4">
+                        Phase de conclusion
                       </h3>
-                      <p className="text-base text-gray-700 leading-relaxed">
+                      <div className="inline-flex items-center gap-2 bg-slate-200 text-slate-800 px-3 py-1 rounded-full text-sm font-medium mb-4">
+                        <Clock className="w-4 h-4" />
+                        4-6 heures
+                      </div>
+                      <p className="text-lg text-gray-700 leading-relaxed">
                         Définition et validation de votre projet professionnel. Élaboration d'un plan d'action 
                         détaillé et remise d'un document de synthèse complet. Vous repartez avec une 
-                        feuille de route claire.
+                        feuille de route claire pour concrétiser vos objectifs.
                       </p>
+                      <div className="mt-4 flex flex-wrap gap-2">
+                        <span className="bg-white text-slate-700 px-3 py-1 rounded-full text-sm border border-slate-200">Projet professionnel</span>
+                        <span className="bg-white text-slate-700 px-3 py-1 rounded-full text-sm border border-slate-200">Plan d'action</span>
+                        <span className="bg-white text-slate-700 px-3 py-1 rounded-full text-sm border border-slate-200">Document synthèse</span>
+                      </div>
                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Call-to-action en bas de section */}
+            <div className="mt-16 text-center">
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-r from-blue-200 to-orange-200 rounded-3xl blur-lg opacity-30"></div>
+                <div className="relative bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
+                  <h4 className="text-2xl font-bold text-[#013F63] mb-4">
+                    Prêt(e) à commencer votre bilan de compétences ?
+                  </h4>
+                  <p className="text-lg text-gray-600 mb-6">
+                    Un accompagnement personnalisé vous attend pour construire votre projet professionnel
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <Link href="/contact" className="inline-flex px-8 py-4 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition text-lg hover:scale-105">
+                      RDV découverte gratuit
+                    </Link>
+                    <Link href="/bilan-de-competences/quiz" className="inline-flex px-8 py-4 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition">
+                      Quiz d'éligibilité
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -307,19 +363,17 @@ export default function BilanCompetences() {
               </div>
             </div>
 
-            <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-blue-200 to-blue-300 rounded-3xl blur-lg opacity-30"></div>
-              <div className="relative bg-white rounded-3xl p-8 shadow-xl border border-gray-100 text-center">
-                <Trophy className="w-12 h-12 text-[#013F63] mx-auto mb-4" />
-                <h4 className="text-2xl font-semibold text-[#013F63] mb-4">
-                  98% de nos bénéficiaires recommandent notre accompagnement
-                </h4>
-                <p className="text-lg text-gray-600 mb-6">
-                  Rejoignez les centaines de personnes qui ont donné un nouvel élan à leur carrière
-                </p>
+            {/* Info recommandation */}
+            <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-3xl p-8 border border-[#013F63] text-center">
+              <p className="text-lg text-[#013F63] font-medium mb-4">
+                98% de nos bénéficiaires recommandent notre accompagnement
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/bilan-de-competences/quiz" className="inline-flex px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition">
                   Faire le quiz d'éligibilité
-                  
+                </Link>
+                <Link href="/contact" className="inline-flex px-6 py-3 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition">
+                  Premier RDV gratuit
                 </Link>
               </div>
             </div>
