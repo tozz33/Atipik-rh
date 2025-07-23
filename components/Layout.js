@@ -22,7 +22,7 @@ export default function Layout({ children, title, description, canonical }) {
         <Header isFixed={true} />
         
         {/* Spacer for fixed header */}
-        <div className="h-16"></div>
+        <div className="h-20"></div>
 
         {/* Main content */}
         <main className="flex-1">

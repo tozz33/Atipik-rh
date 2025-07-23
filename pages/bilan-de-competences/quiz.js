@@ -158,7 +158,7 @@ export default function QuizBilanCompetences() {
         <Header isFixed={true} />
         
         {/* Spacer for fixed header */}
-        <div className="h-16"></div>
+        <div className="h-20"></div>
 
         <section className="py-12 bg-gradient-to-br from-blue-50 via-white to-orange-50 min-h-screen">
           <div className="container mx-auto px-4">

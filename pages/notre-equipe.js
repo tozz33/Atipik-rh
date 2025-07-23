@@ -20,7 +20,7 @@ export default function NotreEquipe() {
         <Header isFixed={true} />
 
         {/* Spacer for fixed header */}
-        <div className="h-16"></div>
+        <div className="h-20"></div>
 
         {/* Équipe d'Atipik RH */}
         <section className="py-24 bg-white">
@@ -76,22 +76,22 @@ export default function NotreEquipe() {
                   </p>
                 </div>
 
-                {/* Stéphanie - Coordinatrice */}
+                {/* Liliana - Coordinatrice */}
                 <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-3xl p-8 text-center group hover:shadow-xl transition-all duration-300">
                   <div className="w-32 h-32 mx-auto mb-6 relative">
                     <Image
-                      src="/images/equipe/stephanie.jpeg"
-                      alt="Stéphanie GARCIA"
+                      src="/images/equipe/liliana.jpeg"
+                      alt="Liliana DELMAS"
                       width={128}
                       height={128}
                       className="w-full h-full rounded-full object-cover"
                     />
                   </div>
-                  <h3 className="text-2xl font-bold text-[#013F63] mb-2">Stéphanie GARCIA</h3>
-                  <p className="text-purple-600 font-medium mb-4">Coordinatrice pédagogique</p>
+                  <h3 className="text-2xl font-bold text-[#013F63] mb-2">Liliana DELMAS</h3>
+                  <p className="text-purple-600 font-medium mb-4">Formatrice et consultante</p>
                   <p className="text-gray-600 text-sm leading-relaxed">
-                    Elle coordonne les programmes de formation et assure le lien entre apprenants, 
-                    formateurs et entreprises partenaires.
+                    Spécialisée dans l'accompagnement professionnel et les bilans de compétences,
+                    elle assure aussi la coordination des formations.
                   </p>
                 </div>
               </div>
@@ -115,21 +115,22 @@ export default function NotreEquipe() {
 
               <div className="grid md:grid-cols-4 gap-6">
                 
-                {/* Liliana */}
+                {/* Stéphanie */}
                 <div className="bg-white rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300">
                   <div className="w-24 h-24 mx-auto mb-6 relative">
                     <Image
-                      src="/images/equipe/liliana.jpeg"
-                      alt="Liliana DELMAS"
+                      src="/images/equipe/stephanie.jpeg"
+                      alt="Stéphanie GARCIA"
                       width={96}
                       height={96}
                       className="w-full h-full rounded-full object-cover"
                     />
                   </div>
-                  <h3 className="text-xl font-bold text-[#013F63] mb-1">Liliana DELMAS</h3>
-                  <p className="text-blue-600 font-medium text-sm mb-3">Formatrice et consultante</p>
+                  <h3 className="text-xl font-bold text-[#013F63] mb-1">Stéphanie GARCIA</h3>
+                  <p className="text-blue-600 font-medium text-sm mb-3">Coordinatrice pédagogique</p>
                   <p className="text-gray-600 text-sm leading-relaxed">
-                    Spécialisée dans l'accompagnement professionnel et les bilans de compétences.
+                    Elle coordonne les programmes de formation et assure le lien entre apprenants, 
+                    formateurs et entreprises partenaires.
                   </p>
                 </div>
 

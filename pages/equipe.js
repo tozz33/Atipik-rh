@@ -20,7 +20,7 @@ export default function Equipe() {
         <Header isFixed={true} />
 
         {/* Spacer for fixed header */}
-        <div className="h-16"></div>
+        <div className="h-20"></div>
 
         {/* Hero Section - Qui sommes-nous */}
         <section className="relative py-16 overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50">

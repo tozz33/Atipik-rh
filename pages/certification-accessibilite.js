@@ -5,14 +5,14 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { Shield, Award, CheckCircle, Star, Users } from 'lucide-react'
 
-export default function NosCertifications() {
+export default function CertificationAccessibilite() {
   return (
     <>
       <Head>
-        <title>Nos certifications | Atipik RH - Qualité et reconnaissance officielle</title>
-        <meta name="description" content="Découvrez les certifications d'Atipik RH : Qualiopi, Formation & Handicap, CPF. Des agréments qui garantissent la qualité de nos formations." />
-        <meta name="keywords" content="certifications Atipik RH, Qualiopi, CPF, Formation Handicap, organisme formation agréé" />
-        <link rel="canonical" href="https://atipikrh.fr/nos-certifications" />
+        <title>Certification & Accessibilité | Atipik RH - Qualité et inclusion</title>
+        <meta name="description" content="Découvrez nos certifications et notre engagement pour l'accessibilité : Qualiopi, Formation & Handicap, CPF. Une formation inclusive et de qualité." />
+        <meta name="keywords" content="certification accessibilité Atipik RH, Qualiopi, CPF, Formation Handicap, inclusion, organisme formation agréé" />
+        <link rel="canonical" href="https://atipikrh.fr/certification-accessibilite" />
       </Head>
 
       <div className="min-h-screen bg-white">
@@ -20,14 +20,14 @@ export default function NosCertifications() {
         <Header isFixed={true} />
 
         {/* Spacer for fixed header */}
-        <div className="h-16"></div>
+        <div className="h-20"></div>
 
         {/* Introduction */}
         <section className="py-24 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl lg:text-6xl font-bold text-[#013F63] mb-8 leading-tight tracking-tight">
-                Nos <span className="text-blue-600 font-brittany text-5xl lg:text-6xl">certifications</span>
+                Certification & Accessibilité
               </h1>
               <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed font-light mb-8">
                 La qualité et la reconnaissance officielle<br className="hidden lg:block"/>
@@ -237,78 +237,7 @@ export default function NosCertifications() {
           </div>
         </section>
 
-        {/* Processus qualité */}
-        <section className="py-24 bg-gradient-to-br from-slate-50 via-white to-blue-50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl lg:text-5xl font-bold text-[#013F63] mb-6">
-                  Notre processus <span className="text-blue-600 font-brittany text-5xl lg:text-6xl">qualité</span>
-                </h2>
-                <p className="text-xl text-gray-600 leading-relaxed">
-                  Comment nous garantissons l'excellence de nos formations
-                </p>
-              </div>
 
-              <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-xl border border-gray-100">
-                <div className="grid md:grid-cols-2 gap-12 items-center">
-                  <div className="space-y-6">
-                    <div className="flex items-start">
-                      <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
-                        <span className="text-blue-600 font-bold text-sm">1</span>
-                      </div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-[#013F63] mb-2">Analyse des besoins</h3>
-                        <p className="text-gray-600">Évaluation précise de vos objectifs et contraintes</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start">
-                      <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
-                        <span className="text-orange-600 font-bold text-sm">2</span>
-                      </div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-[#013F63] mb-2">Formation personnalisée</h3>
-                        <p className="text-gray-600">Contenu et méthodes adaptés à votre profil</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start">
-                      <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
-                        <span className="text-purple-600 font-bold text-sm">3</span>
-                      </div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-[#013F63] mb-2">Suivi continu</h3>
-                        <p className="text-gray-600">Accompagnement tout au long de votre parcours</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start">
-                      <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
-                        <span className="text-green-600 font-bold text-sm">4</span>
-                      </div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-[#013F63] mb-2">Évaluation et amélioration</h3>
-                        <p className="text-gray-600">Mesure des résultats et amélioration continue</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="text-center">
-                    <div className="w-48 h-48 mx-auto bg-gradient-to-br from-blue-100 to-orange-100 rounded-full flex items-center justify-center">
-                      <div className="w-32 h-32 bg-white rounded-full flex items-center justify-center shadow-lg">
-                        <Award className="w-16 h-16 text-[#013F63]" />
-                      </div>
-                    </div>
-                    <p className="mt-6 text-lg font-medium text-[#013F63]">
-                      Excellence<br />certifiée
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* CTA Section */}
         <section className="py-24 bg-white">

@@ -19,7 +19,7 @@ export default function FormationFPA() {
         <Header isFixed={true} />
 
         {/* Spacer for fixed header */}
-        <div className="h-16"></div>
+        <div className="h-20"></div>
 
         {/* Hero Section */}
         <section className="relative py-16 overflow-hidden bg-gradient-to-br from-blue-50 via-white to-blue-50">

@@ -112,7 +112,7 @@ export default function BilanCompetences() {
       <Header isFixed={true} />
       
       {/* Spacer for fixed header */}
-      <div className="h-16"></div>
+      <div className="h-20"></div>
 
       {/* Section Storytelling Moderne - Reprise de la page d'accueil */}
       <section className="py-24 bg-gradient-to-br from-slate-50 via-white to-blue-50 relative overflow-hidden">

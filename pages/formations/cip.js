@@ -19,7 +19,7 @@ export default function FormationCIP() {
         <Header isFixed={true} />
 
         {/* Spacer for fixed header */}
-        <div className="h-16"></div>
+        <div className="h-20"></div>
 
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-orange-50">

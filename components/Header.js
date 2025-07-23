@@ -40,7 +40,7 @@ export default function Header({ isFixed = false, isHomePage = false }) {
   return (
     <header id={isHomePage ? "main-header" : undefined} className={headerClasses}>
       <div className="max-w-7xl mx-auto px-6">
-        <nav className="flex items-center justify-between h-16">
+        <nav className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image 
@@ -55,10 +55,10 @@ export default function Header({ isFixed = false, isHomePage = false }) {
 
           {/* Navigation centrale */}
           <div className="hidden lg:flex items-center space-x-8 mt-1">
-            <Link href="/bilan-de-competences" className="text-[#013F63] hover:text-[#012a4a] font-medium text-sm transition-colors">
+            <Link href="/bilan-de-competences" className="text-[#013F63] hover:text-[#012a4a] font-medium text-base transition-colors">
               Bilan de compétences
             </Link>
-            <Link href="/vae" className="text-[#013F63] hover:text-[#012a4a] font-medium text-sm transition-colors">
+            <Link href="/vae" className="text-[#013F63] hover:text-[#012a4a] font-medium text-base transition-colors">
               VAE
             </Link>
             
@@ -68,7 +68,7 @@ export default function Header({ isFixed = false, isHomePage = false }) {
               onMouseEnter={() => setIsFormationsOpen(true)}
               onMouseLeave={() => setIsFormationsOpen(false)}
             >
-              <Link href="/formations" className="text-[#013F63] hover:text-[#012a4a] font-medium text-sm transition-colors flex items-center">
+              <Link href="/formations" className="text-[#013F63] hover:text-[#012a4a] font-medium text-base transition-colors flex items-center">
                 Formations
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -111,7 +111,7 @@ export default function Header({ isFixed = false, isHomePage = false }) {
               onMouseEnter={() => setIsQuiSommesNousOpen(true)}
               onMouseLeave={() => setIsQuiSommesNousOpen(false)}
             >
-              <button className="text-[#013F63] hover:text-[#012a4a] font-medium text-sm transition-colors flex items-center">
+              <button className="text-[#013F63] hover:text-[#012a4a] font-medium text-base transition-colors flex items-center">
                 Qui sommes-nous
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -138,24 +138,24 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                     <div className="text-xs text-blue-400">Les experts qui vous accompagnent</div>
                   </Link>
                   <Link 
-                    href="/nos-certifications" 
+                    href="/certification-accessibilite" 
                     className="block px-4 py-3 text-sm text-[#013F63] hover:bg-blue-50 hover:text-[#012a4a] transition-colors border-t border-gray-100"
                   >
-                    <div className="font-medium">Nos certifications</div>
-                    <div className="text-xs text-blue-400">Qualité et reconnaissance officielle</div>
+                    <div className="font-medium">Certification & Accessibilité</div>
+                    <div className="text-xs text-blue-400">Qualité et inclusion</div>
                   </Link>
                 </div>
               </div>
             </div>
             
-            <Link href="/financement" className="text-[#013F63] hover:text-[#012a4a] font-medium text-sm transition-colors">
+            <Link href="/financement" className="text-[#013F63] hover:text-[#012a4a] font-medium text-base transition-colors">
               Financement
             </Link>
           </div>
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center">
-            <Link href="/contact" className="bg-[#013F63] hover:bg-[#012a4a] text-white px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-200 hover:scale-105">
+            <Link href="/contact" className="bg-[#013F63] hover:bg-[#012a4a] text-white px-6 py-2.5 rounded-full text-base font-medium transition-all duration-200 hover:scale-105">
               Contact
             </Link>
           </div>
