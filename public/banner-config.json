@@ -1,0 +1,15 @@
+{
+  "active": true,
+  "title": "🎓 Prochaines sessions de formation",
+  "subtitle": "Inscriptions ouvertes - Places limitées",
+  "primaryButton": {
+    "text": "Voir les formations",
+    "link": "/formations"
+  },
+  "secondaryButton": {
+    "text": "Nous contacter",
+    "link": "/contact"
+  },
+  "backgroundColor": "from-blue-500 to-blue-600",
+  "icon": "clock"
+} 

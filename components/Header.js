@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 
 export default function Header({ isFixed = false, isHomePage = false }) {
   const [isFormationsOpen, setIsFormationsOpen] = useState(false)
+  const [isQuiSommesNousOpen, setIsQuiSommesNousOpen] = useState(false)
   
   useEffect(() => {
     if (!isHomePage) return
@@ -104,9 +105,49 @@ export default function Header({ isFixed = false, isHomePage = false }) {
               </div>
             </div>
             
-            <Link href="/equipe" className="text-[#013F63] hover:text-[#012a4a] font-medium text-sm transition-colors">
-              Qui sommes-nous
-            </Link>
+            {/* Menu déroulant Qui sommes-nous */}
+            <div 
+              className="relative group"
+              onMouseEnter={() => setIsQuiSommesNousOpen(true)}
+              onMouseLeave={() => setIsQuiSommesNousOpen(false)}
+            >
+              <button className="text-[#013F63] hover:text-[#012a4a] font-medium text-sm transition-colors flex items-center">
+                Qui sommes-nous
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              
+              {/* Menu déroulant */}
+              <div className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 transition-all duration-200 ${
+                isQuiSommesNousOpen ? 'opacity-100 visible transform translate-y-0' : 'opacity-0 invisible transform -translate-y-2'
+              }`}>
+                <div className="py-2">
+                  <Link 
+                    href="/notre-histoire" 
+                    className="block px-4 py-3 text-sm text-[#013F63] hover:bg-blue-50 hover:text-[#012a4a] transition-colors"
+                  >
+                    <div className="font-medium">Notre histoire</div>
+                    <div className="text-xs text-blue-400">15 ans d'expertise et de passion</div>
+                  </Link>
+                  <Link 
+                    href="/notre-equipe" 
+                    className="block px-4 py-3 text-sm text-[#013F63] hover:bg-blue-50 hover:text-[#012a4a] transition-colors border-t border-gray-100"
+                  >
+                    <div className="font-medium">Notre équipe</div>
+                    <div className="text-xs text-blue-400">Les experts qui vous accompagnent</div>
+                  </Link>
+                  <Link 
+                    href="/nos-certifications" 
+                    className="block px-4 py-3 text-sm text-[#013F63] hover:bg-blue-50 hover:text-[#012a4a] transition-colors border-t border-gray-100"
+                  >
+                    <div className="font-medium">Nos certifications</div>
+                    <div className="text-xs text-blue-400">Qualité et reconnaissance officielle</div>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            
             <Link href="/financement" className="text-[#013F63] hover:text-[#012a4a] font-medium text-sm transition-colors">
               Financement
             </Link>

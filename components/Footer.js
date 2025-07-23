@@ -92,8 +92,54 @@ export default function Footer() {
           
         </div>
         
+        {/* Certifications */}
+        <div className="mt-12 pt-8 border-t border-gray-700">
+          <div className="flex flex-wrap justify-center items-center gap-6">
+            <Image 
+              src="/images/certifications/qualiopi.png" 
+              alt="Certification Qualiopi" 
+              width={60} 
+              height={60}
+              className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity"
+            />
+            <Image 
+              src="/images/certifications/cpf.jpg" 
+              alt="CPF - Compte Personnel de Formation" 
+              width={60} 
+              height={60}
+              className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity"
+            />
+            <Image 
+              src="/images/certifications/datadock.png" 
+              alt="Datadock" 
+              width={60} 
+              height={60}
+              className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity bg-white rounded px-2 py-1"
+            />
+            <Image 
+              src="/images/certifications/formation-handicap.png" 
+              alt="Formation accessible aux personnes handicapées" 
+              width={60} 
+              height={60}
+              className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity"
+            />
+          </div>
+        </div>
+        
         {/* Ligne de séparation et copyright */}
-        <div className="border-t border-gray-700 mt-12 pt-8 text-center">
+        <div className="border-t border-gray-700 mt-8 pt-8 text-center">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-4">
+            <Link href="/rgpd" className="text-gray-400 hover:text-white transition-colors text-sm">
+              Politique de confidentialité
+            </Link>
+            <span className="hidden sm:inline text-gray-600">•</span>
+            <a 
+              href="mailto:contact@atipikrh.fr" 
+              className="text-gray-400 hover:text-white transition-colors text-sm"
+            >
+              Exercer vos droits RGPD
+            </a>
+          </div>
           <p className="text-gray-400">&copy; 2025 Atipik RH. Tous droits réservés.</p>
         </div>
       </div>

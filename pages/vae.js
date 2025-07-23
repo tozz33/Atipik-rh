@@ -58,7 +58,31 @@ export default function VAE() {
 
         {/* Hero Section avec background animé */}
         <section className="relative py-16 overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">
-          {/* Background animé */}
+          {/* Éléments graphiques décoratifs */}
+          <div className="absolute top-0 right-0 w-88 h-88 opacity-45">
+            <svg viewBox="0 0 352 352" className="w-full h-full">
+              <path d="M352,0 C352,0 284,68 216,68 C148,68 80,136 80,204 C80,272 148,340 216,340 L352,340 Z" fill="url(#vaeBlueGradient)" />
+              <defs>
+                <linearGradient id="vaeBlueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#dbeafe" stopOpacity="0.7"/>
+                  <stop offset="100%" stopColor="#1d4ed8" stopOpacity="0.3"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div className="absolute top-12 right-12 w-36 h-36 opacity-30">
+            <svg viewBox="0 0 144 144" className="w-full h-full">
+              <circle cx="72" cy="72" r="56" fill="url(#vaeOrangeGradient)" />
+              <defs>
+                <linearGradient id="vaeOrangeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#fed7aa" stopOpacity="0.5"/>
+                  <stop offset="100%" stopColor="#ea580c" stopOpacity="0.2"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          
+          {/* Background animé existant */}
           <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
           <div className="absolute top-40 right-1/4 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-1000"></div>
           <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-orange-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-2000"></div>

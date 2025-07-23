@@ -24,7 +24,31 @@ export default function Equipe() {
 
         {/* Hero Section - Qui sommes-nous */}
         <section className="relative py-16 overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50">
-          {/* Background animé */}
+          {/* Éléments graphiques décoratifs */}
+          <div className="absolute top-0 right-0 w-72 h-72 opacity-45">
+            <svg viewBox="0 0 288 288" className="w-full h-full">
+              <path d="M288,0 C288,0 230,58 172,58 C114,58 56,116 56,174 C56,232 114,290 172,290 L288,290 Z" fill="url(#equipeSlateGradient)" />
+              <defs>
+                <linearGradient id="equipeSlateGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#e2e8f0" stopOpacity="0.7"/>
+                  <stop offset="100%" stopColor="#475569" stopOpacity="0.3"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div className="absolute top-12 right-12 w-28 h-28 opacity-35">
+            <svg viewBox="0 0 112 112" className="w-full h-full">
+              <circle cx="56" cy="56" r="42" fill="url(#equipeBlueGradient)" />
+              <defs>
+                <linearGradient id="equipeBlueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#dbeafe" stopOpacity="0.6"/>
+                  <stop offset="100%" stopColor="#3b82f6" stopOpacity="0.2"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          
+          {/* Background animé existant */}
           <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
           <div className="absolute top-40 right-1/4 w-96 h-96 bg-orange-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-1000"></div>
           <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-purple-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-2000"></div>

@@ -3,14 +3,13 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
-import { CheckCircle, ArrowRight, ArrowLeft, Mail, Phone, Calendar, Target, Lightbulb, TrendingUp } from 'lucide-react'
+import { CheckCircle, ArrowRight, ArrowLeft, Mail, Phone } from 'lucide-react'
 
 export default function QuizBilanCompetences() {
   const [currentStep, setCurrentStep] = useState(0)
   const [answers, setAnswers] = useState({})
   const [userInfo, setUserInfo] = useState({ name: '', email: '', phone: '' })
   const [showResults, setShowResults] = useState(false)
-  const [quizResult, setQuizResult] = useState(null)
 
   const questions = [
     {
@@ -95,44 +94,7 @@ export default function QuizBilanCompetences() {
     }
   ]
 
-  const calculateResult = (finalAnswers) => {
-    const totalScore = Object.values(finalAnswers).reduce((sum, score) => sum + score, 0)
-    const averageScore = totalScore / questions.length
 
-    if (averageScore <= 1.5) {
-      return {
-        type: "equilibre",
-        title: "Vous êtes dans une phase d'équilibre",
-        description: "Votre situation professionnelle semble stable, mais un bilan peut vous aider à optimiser votre parcours et anticiper les évolutions futures.",
-        urgency: "low",
-        recommendation: "Un bilan préventif pour sécuriser votre avenir"
-      }
-    } else if (averageScore <= 2.5) {
-      return {
-        type: "questionnement",
-        title: "Vous êtes en phase de questionnement",
-        description: "Des interrogations émergent sur votre avenir professionnel. C'est le moment idéal pour faire le point et clarifier vos objectifs.",
-        urgency: "medium",
-        recommendation: "Un bilan pour clarifier votre vision et vos objectifs"
-      }
-    } else if (averageScore <= 3.5) {
-      return {
-        type: "transition",
-        title: "Vous êtes prêt(e) pour une transition",
-        description: "Vous ressentez un besoin fort de changement. Un bilan de compétences vous donnera les clés pour réussir votre transition professionnelle.",
-        urgency: "high",
-        recommendation: "Un bilan pour construire votre projet de transition"
-      }
-    } else {
-      return {
-        type: "urgence",
-        title: "Votre situation nécessite une action rapide",
-        description: "Vous vivez une période difficile professionnellement. Un bilan de compétences vous permettra de retrouver confiance et direction rapidement.",
-        urgency: "urgent",
-        recommendation: "Un bilan en urgence pour reprendre le contrôle"
-      }
-    }
-  }
 
   const handleAnswer = (questionId, score) => {
     const newAnswers = { ...answers, [questionId]: score }
@@ -141,10 +103,8 @@ export default function QuizBilanCompetences() {
     if (currentStep < questions.length - 1) {
       setCurrentStep(currentStep + 1)
     } else {
-      // Quiz terminé, calculer le résultat
-      const result = calculateResult(newAnswers)
-      setQuizResult(result)
-      setCurrentStep(currentStep + 1) // Passer à l'étape de collecte d'infos
+      // Quiz terminé, passer à l'étape de collecte d'infos
+      setCurrentStep(currentStep + 1)
     }
   }
 
@@ -160,7 +120,6 @@ export default function QuizBilanCompetences() {
         },
         body: JSON.stringify({
           userInfo,
-          quizResult,
           answers,
           questions
         }),
@@ -342,153 +301,51 @@ export default function QuizBilanCompetences() {
               )}
 
               {/* Résultats */}
-              {showResults && quizResult && (
-                <div className="space-y-8">
-                  
-                  {/* Diagnostic personnel */}
-                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
-                    <div className="text-center mb-8">
+              {showResults && (
+                <div className="max-w-2xl mx-auto">
+                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 text-center">
+                    
+                    {/* Confirmation */}
+                    <div className="mb-8">
+                      <CheckCircle className="w-16 h-16 text-green-600 mx-auto mb-4" />
                       <h2 className="text-3xl font-bold text-[#013F63] mb-4">
-                        Votre diagnostic, {userInfo.name} 👋
+                        Quiz envoyé avec succès !
                       </h2>
-                      
-                      <div className={`inline-block px-6 py-3 rounded-full text-white font-medium mb-6 ${
-                        quizResult.urgency === 'urgent' ? 'bg-red-500' :
-                        quizResult.urgency === 'high' ? 'bg-orange-500' :
-                        quizResult.urgency === 'medium' ? 'bg-yellow-500' :
-                        'bg-green-500'
-                      }`}>
-                        {quizResult.title}
-                      </div>
-                      
-                      <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto mb-6">
-                        {quizResult.description}
+                      <p className="text-lg text-gray-600">
+                        Merci {userInfo.name}, nous avons bien reçu vos réponses.
                       </p>
+                    </div>
+
+                    {/* Contact */}
+                    <div className="bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl p-6 mb-6">
+                      <h3 className="text-xl font-bold text-[#013F63] mb-4">
+                        Nous vous recontacterons rapidement
+                      </h3>
                       
-                      <div className="bg-blue-50 rounded-xl p-6 mb-8">
-                        <Target className="w-8 h-8 text-blue-600 mx-auto mb-3" />
-                        <h3 className="text-xl font-bold text-blue-900 mb-2">Notre recommandation</h3>
-                        <p className="text-blue-800 font-medium">{quizResult.recommendation}</p>
-                      </div>
-                    </div>
-
-                    {/* Benefits selon le profil */}
-                    <div className="grid md:grid-cols-3 gap-6 mb-8">
-                      <div className="text-center p-6 bg-orange-50 rounded-xl">
-                        <Lightbulb className="w-10 h-10 text-orange-600 mx-auto mb-3" />
-                        <h4 className="font-bold text-[#013F63] mb-2">Clarté sur vos compétences</h4>
-                        <p className="text-sm text-gray-600">Identifiez précisément vos forces et talents cachés</p>
-                      </div>
-                      <div className="text-center p-6 bg-blue-50 rounded-xl">
-                        <Target className="w-10 h-10 text-blue-600 mx-auto mb-3" />
-                        <h4 className="font-bold text-[#013F63] mb-2">Projet professionnel concret</h4>
-                        <p className="text-sm text-gray-600">Définissez un plan d'action réaliste et motivant</p>
-                      </div>
-                      <div className="text-center p-6 bg-green-50 rounded-xl">
-                        <TrendingUp className="w-10 h-10 text-green-600 mx-auto mb-3" />
-                        <h4 className="font-bold text-[#013F63] mb-2">Confiance retrouvée</h4>
-                        <p className="text-sm text-gray-600">Reprenez le contrôle de votre avenir professionnel</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* CTA final très fort */}
-                  <div className="bg-gradient-to-r from-orange-500 to-orange-600 rounded-3xl p-8 text-white text-center">
-                    <h3 className="text-2xl font-bold mb-4">
-                      Prêt(e) à passer à l'action, {userInfo.name} ?
-                    </h3>
-                    <p className="text-lg mb-6 text-orange-100">
-                      {quizResult.urgency === 'urgent' && "Votre situation mérite une attention immédiate. Nous pouvons vous accompagner dès cette semaine."}
-                      {quizResult.urgency === 'high' && "C'est le moment parfait pour franchir le pas. Ne laissez pas cette motivation retomber."}
-                      {quizResult.urgency === 'medium' && "Anticipez plutôt que de subir. Un bilan maintenant vous évitera des regrets plus tard."}
-                      {quizResult.urgency === 'low' && "Même en situation stable, un bilan vous donnera un avantage concurrentiel."}
-                    </p>
-                    
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                      <a 
-                        href="tel:0783019955"
-                        className="inline-flex px-8 py-4 rounded-full bg-white text-orange-600 font-bold shadow-lg hover:shadow-xl transition-all hover:scale-105"
-                      >
+                      <div className="space-y-3">
+                        <div className="flex items-center justify-center gap-3">
+                          <Phone className="w-5 h-5 text-blue-600" />
+                          <a href="tel:0783019955" className="text-lg font-medium text-blue-600 hover:text-blue-800 transition-colors">
+                            07 83 01 99 55
+                          </a>
+                        </div>
                         
-                        Appel immédiat : 07 83 01 99 55
-                      </a>
-                      <Link 
-                        href="/contact"
-                        className="inline-flex px-8 py-4 rounded-full border-2 border-white text-white hover:bg-white hover:text-orange-600 font-bold transition-all"
-                      >
-                        
-                        RDV découverte gratuit
-                      </Link>
-                    </div>
-                    
-                    <p className="text-sm text-orange-200 mt-4">
-                      🎁 Première consultation gratuite et sans engagement
-                    </p>
-                  </div>
-
-                  {/* Preuves sociales */}
-                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
-                    <h3 className="text-2xl font-bold text-[#013F63] text-center mb-6">
-                      Ils ont fait le même choix que vous
-                    </h3>
-                    
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div className="bg-gray-50 rounded-xl p-6">
-                        <div className="flex text-yellow-400 text-sm mb-3">★★★★★</div>
-                        <p className="text-gray-700 mb-4 italic">
-                          "Grâce au bilan, j'ai enfin trouvé ma voie. L'équipe d'Atipik RH m'a accompagnée avec bienveillance vers une reconversion réussie."
-                        </p>
-                        <div className="font-medium text-gray-900">Marie L.</div>
-                        <div className="text-sm text-gray-500">Reconversion réussie</div>
-                      </div>
-                      
-                      <div className="bg-gray-50 rounded-xl p-6">
-                        <div className="flex text-yellow-400 text-sm mb-3">★★★★★</div>
-                        <p className="text-gray-700 mb-4 italic">
-                          "À 45 ans, je pensais qu'il était trop tard. Le bilan m'a donné confiance et une direction claire."
-                        </p>
-                        <div className="font-medium text-gray-900">Antoine D.</div>
-                        <div className="text-sm text-gray-500">Nouvelle carrière à 45 ans</div>
+                        <div className="flex items-center justify-center gap-3">
+                          <Mail className="w-5 h-5 text-blue-600" />
+                          <a href="mailto:contact@atipikrh.fr" className="text-lg font-medium text-blue-600 hover:text-blue-800 transition-colors">
+                            contact@atipikrh.fr
+                          </a>
+                        </div>
                       </div>
                     </div>
-                    
-                    <div className="text-center mt-6">
-                      <Link href="/bilan-de-competences" className="text-orange-600 hover:text-orange-700 font-medium">
-                        Voir tous les témoignages →
-                      </Link>
-                    </div>
-                  </div>
 
-                  {/* Informations financement */}
-                  <div className="bg-green-50 rounded-3xl p-8 border border-green-200">
-                    <h3 className="text-2xl font-bold text-green-900 text-center mb-4">
-                      💰 Bonne nouvelle sur le financement !
-                    </h3>
-                    <p className="text-green-800 text-center mb-6">
-                      92% de nos clients ne paient rien grâce au CPF. Vérifiez vos droits en 2 minutes.
-                    </p>
-                    <div className="text-center">
-                      <a 
-                        href="https://www.moncompteformation.gouv.fr" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="inline-flex px-6 py-3 rounded-full bg-green-600 hover:bg-green-700 text-white font-semibold transition-colors"
-                      >
-                        Vérifier mon CPF
-                        
-                      </a>
-                    </div>
-                  </div>
-
-                  {/* Retour au quiz */}
-                  <div className="text-center">
+                    {/* Retour au quiz */}
                     <button
                       onClick={() => {
                         setCurrentStep(0)
                         setAnswers({})
                         setUserInfo({ name: '', email: '', phone: '' })
                         setShowResults(false)
-                        setQuizResult(null)
                       }}
                       className="text-gray-600 hover:text-gray-800 font-medium"
                     >

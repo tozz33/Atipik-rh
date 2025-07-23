@@ -23,6 +23,31 @@ export default function FormationFPA() {
 
         {/* Hero Section */}
         <section className="relative py-16 overflow-hidden bg-gradient-to-br from-blue-50 via-white to-blue-50">
+          {/* Éléments graphiques décoratifs */}
+          <div className="absolute top-0 right-0 w-80 h-80 opacity-50">
+            <svg viewBox="0 0 320 320" className="w-full h-full">
+              <path d="M320,0 C320,0 260,60 200,60 C140,60 80,120 80,180 C80,240 140,300 200,300 L320,300 Z" fill="url(#fpaBlueFradient)" />
+              <defs>
+                <linearGradient id="fpaBlueFradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#dbeafe" stopOpacity="0.7"/>
+                  <stop offset="100%" stopColor="#3b82f6" stopOpacity="0.3"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div className="absolute top-16 right-16 w-32 h-32 opacity-30">
+            <svg viewBox="0 0 128 128" className="w-full h-full">
+              <circle cx="64" cy="64" r="50" fill="url(#fpaOrangeGradient)" />
+              <defs>
+                <linearGradient id="fpaOrangeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#fed7aa" stopOpacity="0.5"/>
+                  <stop offset="100%" stopColor="#f97316" stopOpacity="0.2"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          
+          {/* Background animé existant */}
           <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
           <div className="absolute top-40 right-1/4 w-96 h-96 bg-orange-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-1000"></div>
           

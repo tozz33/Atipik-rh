@@ -8,6 +8,83 @@ import { CreditCard, Calculator, Users, FileText, CheckCircle, ArrowRight, Exter
 
 export default function Financement() {
   const [activeTab, setActiveTab] = useState('salaries');
+  const salariesCards = [
+    {
+      icon: CreditCard,
+      title: "CPF (Compte Personnel de Formation)",
+      details: [
+        { label: "Montant", value: "500€/an (800€ si moins qualifié), plafond 5000€" },
+        { label: "Avantages", value: "Utilisation libre et confidentielle" },
+        { label: "Démarches", value: "100% en ligne sur MonCompteFormation" },
+        { label: "Délai", value: "11 jours maximum" }
+      ],
+      badge: "Solution recommandée - Prise en charge totale fréquente",
+      badgeColor: "green",
+      buttonText: "Vérifier mes droits CPF",
+      buttonStyle: "primary",
+      buttonLink: "https://www.moncompteformation.gouv.fr",
+      external: true
+    },
+    {
+      icon: FileText,
+      title: "Plan de développement des compétences",
+      details: [
+        { label: "Financement", value: "100% pris en charge par l'employeur" },
+        { label: "Avantages", value: "Formation sur temps de travail possible" },
+        { label: "Conditions", value: "Accord de l'employeur nécessaire" },
+        { label: "Délai", value: "Variable selon l'entreprise" }
+      ],
+      badge: "Idéal si la formation correspond aux besoins de l'entreprise",
+      badgeColor: "blue",
+      buttonText: "Nous contacter pour conseil",
+      buttonStyle: "secondary",
+      buttonLink: "/contact",
+      external: false
+    },
+    {
+      icon: Users,
+      title: "Congés de formation",
+      details: [
+        { label: "Principe", value: "Congé sans solde pour se former" },
+        { label: "Durée", value: "Jusqu'à 1 an (3 ans si formation longue)" },
+        { label: "Conditions", value: "36 mois d'ancienneté, 12 mois dans l'entreprise" },
+        { label: "Financement", value: "CPF + financement personnel" }
+      ],
+      badge: "Nécessite une planification et accord employeur",
+      badgeColor: "orange",
+      buttonText: "Étudier cette option",
+      buttonStyle: "secondary",
+      buttonLink: "/contact",
+      external: false
+    },
+    {
+      icon: Calculator,
+      title: "Autres financements",
+      details: [
+        { label: "Financement personnel", value: "Facilités de paiement 3-4x" },
+        { label: "Abondement CPF", value: "Complément personnel ou employeur" },
+        { label: "Co-financement", value: "CPF + plan de formation" },
+        { label: "Avantage", value: "Démarrage immédiat" }
+      ],
+      badge: "Solutions sur mesure selon votre situation",
+      badgeColor: "gray",
+      buttonText: "Conseil personnalisé",
+      buttonStyle: "secondary",
+      buttonLink: "/contact",
+      external: false
+    }
+  ];
+
+  const getBadgeColorClasses = (color) => {
+    switch (color) {
+      case 'green': return 'bg-green-50 text-green-700';
+      case 'blue': return 'bg-blue-50 text-blue-700';
+      case 'orange': return 'bg-orange-50 text-orange-700';
+      case 'gray': return 'bg-gray-50 text-gray-700';
+      default: return 'bg-gray-50 text-gray-700';
+    }
+  };
+
   return (
     <>
       <Head>
@@ -50,7 +127,7 @@ export default function Financement() {
         </section>
 
         {/* Section principale avec onglets */}
-        <section className="py-24 bg-gradient-to-br from-blue-50 to-white">
+        <section className="py-24 bg-blue-50">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               
@@ -108,105 +185,61 @@ export default function Financement() {
               {/* Contenu conditionnel basé sur l'onglet actif */}
               {activeTab === 'salaries' && (
                 <>
-                  {/* Options de financement pour salariés */}
+                  {/* Options de financement pour salariés avec défilement horizontal */}
                   <div className="overflow-x-auto pb-4">
-                    <div className="flex gap-8 min-w-max">
-                      
-                      {/* CPF */}
-                      <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[550px] w-80 flex-shrink-0">
-                        <div className="flex items-center gap-4 mb-6">
-                          <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
-                            <CreditCard className="w-6 h-6 text-white" />
+                    <div className="flex gap-6 w-max">
+                      {salariesCards.map((card, index) => {
+                        const IconComponent = card.icon;
+                        return (
+                          <div key={index} className="flex-shrink-0 w-80">
+                            <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[550px]">
+                              <div className="flex items-center gap-4 mb-6">
+                                <div className="w-12 h-12 bg-[#013F63] rounded-full flex items-center justify-center flex-shrink-0">
+                                  <IconComponent className="w-6 h-6 text-white" />
+                                </div>
+                                <h3 className="text-xl font-bold text-[#013F63]">{card.title}</h3>
+                              </div>
+                              <div className="space-y-3 mb-6 flex-grow">
+                                {card.details.map((detail, detailIndex) => (
+                                  <p key={detailIndex} className="text-gray-700 text-sm">
+                                    <strong>{detail.label} :</strong> {detail.value}
+                                  </p>
+                                ))}
+                              </div>
+                              <div className={`${getBadgeColorClasses(card.badgeColor)} rounded-lg p-3 mb-6`}>
+                                <p className="text-xs font-medium text-center">
+                                  {card.badge}
+                                </p>
+                              </div>
+                              {card.external ? (
+                                <a 
+                                  href={card.buttonLink} 
+                                  target="_blank" 
+                                  rel="noopener noreferrer" 
+                                  className={`block w-full text-center px-6 py-3 rounded-full font-semibold transition mt-auto ${
+                                    card.buttonStyle === 'primary' 
+                                      ? 'bg-[#013F63] hover:bg-[#012a4a] text-white' 
+                                      : 'border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white'
+                                  }`}
+                                >
+                                  {card.buttonText}
+                                </a>
+                              ) : (
+                                <Link 
+                                  href={card.buttonLink} 
+                                  className={`block w-full text-center px-6 py-3 rounded-full font-semibold transition mt-auto ${
+                                    card.buttonStyle === 'primary' 
+                                      ? 'bg-[#013F63] hover:bg-[#012a4a] text-white' 
+                                      : 'border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white'
+                                  }`}
+                                >
+                                  {card.buttonText}
+                                </Link>
+                              )}
+                            </div>
                           </div>
-                          <h3 className="text-xl font-bold text-[#013F63]">CPF (Compte Personnel de Formation)</h3>
-                        </div>
-                        <div className="space-y-3 mb-6 flex-grow">
-                          <p className="text-gray-700 text-sm"><strong>Montant :</strong> 500€/an (800€ si moins qualifié), plafond 5000€</p>
-                          <p className="text-gray-700 text-sm"><strong>Avantages :</strong> Utilisation libre et confidentielle</p>
-                          <p className="text-gray-700 text-sm"><strong>Démarches :</strong> 100% en ligne sur MonCompteFormation</p>
-                          <p className="text-gray-700 text-sm"><strong>Délai :</strong> 11 jours maximum</p>
-                        </div>
-                        <div className="bg-green-50 rounded-lg p-3 mb-6">
-                          <p className="text-xs text-green-700 font-medium text-center">
-                            Solution recommandée - Prise en charge totale fréquente
-                          </p>
-                        </div>
-                        <a href="https://www.moncompteformation.gouv.fr" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
-                          Vérifier mes droits CPF
-                        </a>
-                      </div>
-
-                      {/* Plan de développement des compétences */}
-                      <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[550px] w-80 flex-shrink-0">
-                        <div className="flex items-center gap-4 mb-6">
-                          <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
-                            <FileText className="w-6 h-6 text-white" />
-                          </div>
-                          <h3 className="text-xl font-bold text-[#013F63]">Plan de développement des compétences</h3>
-                        </div>
-                        <div className="space-y-3 mb-6 flex-grow">
-                          <p className="text-gray-700 text-sm"><strong>Financement :</strong> 100% pris en charge par l'employeur</p>
-                          <p className="text-gray-700 text-sm"><strong>Avantages :</strong> Formation sur temps de travail possible</p>
-                          <p className="text-gray-700 text-sm"><strong>Conditions :</strong> Accord de l'employeur nécessaire</p>
-                          <p className="text-gray-700 text-sm"><strong>Délai :</strong> Variable selon l'entreprise</p>
-                        </div>
-                        <div className="bg-blue-50 rounded-lg p-3 mb-6">
-                          <p className="text-xs text-blue-700 font-medium text-center">
-                            Idéal si la formation correspond aux besoins de l'entreprise
-                          </p>
-                        </div>
-                        <Link href="/contact" className="block w-full text-center px-6 py-3 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition mt-auto">
-                          Nous contacter pour conseil
-                        </Link>
-                      </div>
-
-                      {/* Congés de formation */}
-                      <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[550px] w-80 flex-shrink-0">
-                        <div className="flex items-center gap-4 mb-6">
-                          <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
-                            <Users className="w-6 h-6 text-white" />
-                          </div>
-                          <h3 className="text-xl font-bold text-[#013F63]">Congés de formation</h3>
-                        </div>
-                        <div className="space-y-3 mb-6 flex-grow">
-                          <p className="text-gray-700 text-sm"><strong>Principe :</strong> Congé sans solde pour se former</p>
-                          <p className="text-gray-700 text-sm"><strong>Durée :</strong> Jusqu'à 1 an (3 ans si formation longue)</p>
-                          <p className="text-gray-700 text-sm"><strong>Conditions :</strong> 36 mois d'ancienneté, 12 mois dans l'entreprise</p>
-                          <p className="text-gray-700 text-sm"><strong>Financement :</strong> CPF + financement personnel</p>
-                        </div>
-                        <div className="bg-orange-50 rounded-lg p-3 mb-6">
-                          <p className="text-xs text-orange-700 font-medium text-center">
-                            Nécessite une planification et accord employeur
-                          </p>
-                        </div>
-                        <Link href="/contact" className="block w-full text-center px-6 py-3 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition mt-auto">
-                          Étudier cette option
-                        </Link>
-                      </div>
-
-                      {/* Autres financements */}
-                      <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[550px] w-80 flex-shrink-0">
-                        <div className="flex items-center gap-4 mb-6">
-                          <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
-                            <Calculator className="w-6 h-6 text-white" />
-                          </div>
-                          <h3 className="text-xl font-bold text-[#013F63]">Autres financements</h3>
-                        </div>
-                        <div className="space-y-3 mb-6 flex-grow">
-                          <p className="text-gray-700 text-sm"><strong>Financement personnel :</strong> Facilités de paiement 3-4x</p>
-                          <p className="text-gray-700 text-sm"><strong>Abondement CPF :</strong> Complément personnel ou employeur</p>
-                          <p className="text-gray-700 text-sm"><strong>Co-financement :</strong> CPF + plan de formation</p>
-                          <p className="text-gray-700 text-sm"><strong>Avantage :</strong> Démarrage immédiat</p>
-                        </div>
-                        <div className="bg-gray-50 rounded-lg p-3 mb-6">
-                          <p className="text-xs text-gray-700 font-medium text-center">
-                            Solutions sur mesure selon votre situation
-                          </p>
-                        </div>
-                        <Link href="/contact" className="block w-full text-center px-6 py-3 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition mt-auto">
-                          Conseil personnalisé
-                        </Link>
-                      </div>
+                        );
+                      })}
                     </div>
                   </div>
                 </>
