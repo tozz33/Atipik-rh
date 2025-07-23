@@ -202,25 +202,27 @@ export default function HomePage() {
 
         {/* Bandeau d'annonce dynamique */}
         {bannerConfig && bannerConfig.active && (
-          <section className={`bg-gradient-to-r ${bannerConfig.backgroundColor} text-white py-8`}>
+          <section className={`${bannerConfig.backgroundColor} py-8`}>
             <div className="container mx-auto px-4">
               <div className="flex flex-col lg:flex-row items-center justify-center text-center lg:text-left space-y-4 lg:space-y-0 lg:space-x-6">
                 <div className="flex items-center space-x-3">
-                  {getIcon(bannerConfig.icon)}
+                  <div className="text-orange-500">
+                    {getIcon(bannerConfig.icon)}
+                  </div>
                   <div>
-                    <h3 className="font-bold text-xl lg:text-2xl">
+                    <h3 className="font-bold text-xl lg:text-2xl text-gray-800">
                       {bannerConfig.title}
                     </h3>
-                    <p className="text-orange-100 text-lg">
+                    <p className="text-gray-600 text-lg">
                       {bannerConfig.subtitle}
                     </p>
                   </div>
                 </div>
                 <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3">
-                  <Link href={bannerConfig.primaryButton.link} className="bg-white text-orange-600 px-6 py-3 rounded-full text-base font-medium hover:bg-orange-50 transition-colors shadow-lg">
+                  <Link href={bannerConfig.primaryButton.link} className="bg-orange-500 text-white px-6 py-3 rounded-full text-base font-medium hover:bg-orange-600 transition-colors shadow-lg">
                     {bannerConfig.primaryButton.text}
                   </Link>
-                  <Link href={bannerConfig.secondaryButton.link} className="border-2 border-white text-white px-6 py-3 rounded-full text-base font-medium hover:bg-white hover:text-orange-600 transition-colors">
+                  <Link href={bannerConfig.secondaryButton.link} className="border-2 border-gray-300 text-gray-700 px-6 py-3 rounded-full text-base font-medium hover:bg-gray-50 transition-colors">
                     {bannerConfig.secondaryButton.text}
                   </Link>
                 </div>

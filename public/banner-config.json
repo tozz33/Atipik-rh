@@ -10,6 +10,6 @@
     "text": "Nous contacter",
     "link": "/contact"
   },
-  "backgroundColor": "from-blue-500 to-blue-600",
+  "backgroundColor": "bg-white border-y border-gray-200",
   "icon": "clock"
 } 
