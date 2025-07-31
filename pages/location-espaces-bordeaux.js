@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import Image from 'next/image'
 import { 
   Phone, 
@@ -719,9 +720,9 @@ export default function LocationEspacesBordeaux() {
               </div>
               
               <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-400 mb-4">
-                <a href="/mentions-legales" className="hover:text-white transition">Mentions légales</a>
-                <a href="/cgv" className="hover:text-white transition">CGV</a>
-                <a href="/rgpd" className="hover:text-white transition">Confidentialité</a>
+                <Link href="/mentions-legales" className="hover:text-white transition">Mentions légales</Link>
+                <Link href="/cgv" className="hover:text-white transition">CGV</Link>
+                <Link href="/rgpd" className="hover:text-white transition">Confidentialité</Link>
                 <a href="https://atipikrh.com" className="hover:text-white transition">Site principal</a>
               </div>
               

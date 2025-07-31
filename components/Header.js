@@ -29,7 +29,7 @@ export default function Header({ isFixed = false, isHomePage = false }) {
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [])
+  }, [isHomePage])
 
   const headerClasses = isFixed 
     ? "fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200/50 transition-all duration-500"

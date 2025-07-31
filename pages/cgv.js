@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { ShoppingCart, FileText, User, Lock, Building2 } from 'lucide-react'
@@ -173,7 +174,7 @@ export default function CGV() {
                   </p>
                   <p className="text-gray-700">
                     Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, de suppression et d'opposition sur vos données. 
-                    Plus d'informations sur notre <a href="/rgpd" className="text-blue-600 hover:text-blue-800 underline">Politique de confidentialité</a>.
+                    Plus d'informations sur notre <Link href="/rgpd" className="text-blue-600 hover:text-blue-800 underline">Politique de confidentialité</Link>.
                   </p>
                 </div>
 
