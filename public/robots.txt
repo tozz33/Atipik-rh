@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://atipikrh.fr/sitemap.xml
+
+# Disallow admin/private areas (if any)
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+# Allow blog and important pages
+Allow: /blog/
+Allow: /formations/
+Allow: /bilan-de-competences/
+Allow: /vae/
+Allow: /financement/
+Allow: /notre-equipe/
+Allow: /equipe/
+Allow: /contact/ 

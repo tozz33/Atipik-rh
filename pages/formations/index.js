@@ -23,9 +23,9 @@ export default function FormationsIndex() {
   return (
     <>
       <Head>
-        <title>Formations professionnelles à Bordeaux - Certifiantes & Courtes | Atipik RH</title>
-        <meta name="description" content="Formations certifiantes (CIP, FPA) et formations courtes à Bordeaux. Toutes nos formations sont éligibles au CPF. Centre de formation à Lormont." />
-        <meta name="keywords" content="formations Bordeaux, CIP, FPA, formations courtes, CPF, Lormont, formation professionnelle" />
+        <title>Formations professionnelles à Bordeaux - Certifiantes & Professionnalisantes | Atipik RH</title>
+        <meta name="description" content="Formations certifiantes (CIP, FPA) et formations professionnalisantes à Bordeaux. Toutes nos formations sont éligibles au CPF. Centre de formation à Lormont." />
+        <meta name="keywords" content="formations Bordeaux, CIP, FPA, formations professionnalisantes, CPF, Lormont, formation professionnelle" />
         <link rel="canonical" href="https://atipikrh.fr/formations" />
       </Head>
 
@@ -52,7 +52,7 @@ export default function FormationsIndex() {
                 à <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">Bordeaux</span>
               </h1>
               <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed font-light mb-8">
-                Développez vos compétences avec nos formations certifiantes et courtes<br className="hidden lg:block"/>
+                Développez vos compétences avec nos formations certifiantes et professionnalisantes<br className="hidden lg:block"/>
                 <span className="text-blue-600 font-medium">100% éligibles au CPF</span>
               </p>
               
@@ -153,20 +153,20 @@ export default function FormationsIndex() {
                   </Link>
                 </div>
 
-                {/* Formations courtes */}
+                {/* Formations professionnalisantes */}
                 <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center">
                       <Lightbulb className="w-8 h-8 text-orange-600" />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-[#013F63]">Formations Courtes</h3>
+                      <h3 className="text-2xl font-bold text-[#013F63]">Formations Professionnalisantes</h3>
                       <p className="text-gray-600">Montée en compétences</p>
                     </div>
                   </div>
                   
                   <p className="text-gray-700 leading-relaxed mb-6">
-                    Des formations courtes (1 à 5 jours) pour développer des compétences 
+                    Des formations professionnalisantes (1 à 5 jours) pour développer des compétences 
                     spécifiques et rester à jour dans votre domaine.
                   </p>
                   
@@ -197,7 +197,7 @@ export default function FormationsIndex() {
                   </div>
                   
                   <Link href="/formations/courtes" className="block w-full text-center px-6 py-3 rounded-full bg-orange-500 hover:bg-orange-600 text-white font-semibold transition">
-                    Voir les formations courtes
+                    Voir les formations professionnalisantes
                   </Link>
                 </div>
               </div>
@@ -403,6 +403,43 @@ export default function FormationsIndex() {
                   
                   07 83 01 99 55
                 </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Section Accessibilité Handicap */}
+        <section className="py-12 bg-gradient-to-br from-slate-100 to-blue-50 border-t border-gray-200">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                
+                <div className="flex items-center justify-center gap-6 mb-6">
+                  <Image
+                    src="/images/certifications/formation-handicap.png"
+                    alt="Logo Handiaccueillant - Atipik RH"
+                    width={80}
+                    height={80}
+                    className="object-contain"
+                  />
+                  <h3 className="text-2xl font-bold text-[#013F63]">
+                    Handiaccueillant
+                  </h3>
+                </div>
+                
+                <p className="text-gray-700 leading-relaxed mb-4 text-lg">
+                  <strong className="text-[#013F63]">Atipik RH</strong> s'engage à donner à tous les mêmes chances d'accéder à la formation professionnelle continue. 
+                  Nous mettons tout en œuvre dans la mesure du possible pour intégrer à nos programmes des personnes en situation de handicap 
+                  en adaptant les modalités de nos formations conformément à la Loi du 11/02/2005 pour l'égalité des droits et des chances, 
+                  la participation et la citoyenneté des personnes handicapées.
+                </p>
+                
+                <p className="text-gray-800 italic text-lg mb-2">
+                  Merci de <strong>contacter notre référente handicap</strong> pour étudier au mieux votre demande et sa faisabilité.
+                </p>
+                <p className="text-2xl font-bold text-[#013F63] italic">
+                  📞 <a href="tel:0769097445" className="hover:text-orange-500 transition-colors duration-300">07 69 09 74 45</a>
+                </p>
               </div>
             </div>
           </div>

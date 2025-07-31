@@ -91,7 +91,7 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                     href="/formations/courtes" 
                     className="block px-4 py-3 text-sm text-[#013F63] hover:bg-blue-50 hover:text-[#012a4a] transition-colors border-t border-gray-100"
                   >
-                    <div className="font-medium">Formations courtes</div>
+                    <div className="font-medium">Formations professionnalisantes</div>
                     <div className="text-xs text-blue-400">Montée en compétences rapide</div>
                   </Link>
                   <Link 

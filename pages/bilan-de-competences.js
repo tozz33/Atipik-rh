@@ -570,30 +570,38 @@ export default function BilanCompetences() {
         </div>
       </section>
 
-      {/* Section liens vers les sous-pages */}
-      <section className="py-12 bg-neutral-50 border-t border-neutral-200">
+      {/* Section Accessibilité Handicap */}
+      <section className="py-12 bg-gradient-to-br from-slate-100 to-blue-50 border-t border-gray-200">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h4 className="text-xl font-semibold text-primary-600 mb-6 text-center">
-              Explorer nos autres pages bilan de compétences
-            </h4>
-            <div className="grid md:grid-cols-2 gap-4 max-w-2xl mx-auto">
-              <Link href="/bilan-de-competences/cpf" className="flex items-center gap-2 p-4 rounded-lg border border-neutral-200 hover:border-accent-300 hover:bg-accent-50 transition">
-                <ArrowRight className="w-5 h-5 text-accent-500" />
-                <span className="text-neutral-700 hover:text-accent-600">Financer votre bilan avec le CPF</span>
-              </Link>
-              <Link href="/bilan-de-competences/en-ligne" className="flex items-center gap-2 p-4 rounded-lg border border-neutral-200 hover:border-accent-300 hover:bg-accent-50 transition">
-                <ArrowRight className="w-5 h-5 text-accent-500" />
-                <span className="text-neutral-700 hover:text-accent-600">Bilan de compétences 100% en ligne</span>
-              </Link>
-              <Link href="/bilan-de-competences/prix" className="flex items-center gap-2 p-4 rounded-lg border border-neutral-200 hover:border-accent-300 hover:bg-accent-50 transition">
-                <ArrowRight className="w-5 h-5 text-accent-500" />
-                <span className="text-neutral-700 hover:text-accent-600">Nos tarifs et formules</span>
-              </Link>
-              <Link href="/bilan-de-competences/quiz" className="flex items-center gap-2 p-4 rounded-lg border border-neutral-200 hover:border-accent-300 hover:bg-accent-50 transition">
-                <ArrowRight className="w-5 h-5 text-accent-500" />
-                <span className="text-neutral-700 hover:text-accent-600">Quiz d'éligibilité</span>
-              </Link>
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+              
+              <div className="flex items-center justify-center gap-6 mb-6">
+                <Image
+                  src="/images/certifications/formation-handicap.png"
+                  alt="Logo Handiaccueillant - Atipik RH"
+                  width={80}
+                  height={80}
+                  className="object-contain"
+                />
+                <h3 className="text-2xl font-bold text-[#013F63]">
+                  Handiaccueillant
+                </h3>
+              </div>
+              
+              <p className="text-gray-700 leading-relaxed mb-4 text-lg">
+                <strong className="text-[#013F63]">Atipik RH</strong> s'engage à donner à tous les mêmes chances d'accéder à la formation professionnelle continue. 
+                Nous mettons tout en œuvre dans la mesure du possible pour intégrer à nos programmes des personnes en situation de handicap 
+                en adaptant les modalités de nos formations conformément à la Loi du 11/02/2005 pour l'égalité des droits et des chances, 
+                la participation et la citoyenneté des personnes handicapées.
+              </p>
+              
+              <p className="text-gray-800 italic text-lg mb-2">
+                Merci de <strong>contacter notre référente handicap</strong> pour étudier au mieux votre demande et sa faisabilité.
+              </p>
+              <p className="text-2xl font-bold text-[#013F63] italic">
+                📞 <a href="tel:0769097445" className="hover:text-orange-500 transition-colors duration-300">07 69 09 74 45</a>
+              </p>
             </div>
           </div>
         </div>

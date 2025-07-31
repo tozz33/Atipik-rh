@@ -101,7 +101,7 @@ export default function Layout({ children, title, description, canonical }) {
                 <h4 className="font-semibold mb-4">Formations</h4>
                 <ul className="space-y-2 text-gray-300">
                   <li><Link href="/formations/certifiantes" className="hover:text-white transition-colors">Formations certifiantes</Link></li>
-                  <li><Link href="/formations/courtes" className="hover:text-white transition-colors">Formations courtes</Link></li>
+                  <li><Link href="/formations/courtes" className="hover:text-white transition-colors">Formations professionnalisantes</Link></li>
                   <li><Link href="/formations/certifiantes/cpf" className="hover:text-white transition-colors">Financement CPF</Link></li>
                 </ul>
               </div>

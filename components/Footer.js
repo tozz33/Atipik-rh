@@ -66,6 +66,8 @@ export default function Footer() {
               <li><Link href="/bilan-de-competences" className="hover:text-white transition-colors">Bilan de compétences</Link></li>
               <li><Link href="/formations" className="hover:text-white transition-colors">Formations</Link></li>
               <li><Link href="/financement" className="hover:text-white transition-colors">Financement</Link></li>
+              <li><Link href="/location-espaces-bordeaux" className="hover:text-white transition-colors">Location de salle</Link></li>
+              <li><Link href="/blog" className="hover:text-white transition-colors">Blog</Link></li>
             </ul>
           </div>
           
@@ -75,11 +77,15 @@ export default function Footer() {
             <div className="space-y-2 text-gray-300">
               <p className="flex items-center">
                 <Phone className="w-4 h-4 mr-2" />
-                07 83 01 99 55
+                <a href="tel:+33783019955" className="hover:text-white transition-colors">
+                  07 83 01 99 55
+                </a>
               </p>
               <p className="flex items-center">
                 <Mail className="w-4 h-4 mr-2" />
-                contact@atipikrh.fr
+                <a href="mailto:contact@atipikrh.fr" className="hover:text-white transition-colors">
+                  contact@atipikrh.fr
+                </a>
               </p>
               <p>8 Rue du Courant, 33310 Lormont</p>
               <div className="mt-3 pt-2 border-t border-gray-700">
@@ -94,34 +100,20 @@ export default function Footer() {
         
         {/* Certifications */}
         <div className="mt-12 pt-8 border-t border-gray-700">
-          <div className="flex flex-wrap justify-center items-center gap-6">
+          <div className="flex flex-wrap justify-center items-center gap-10">
             <Image 
               src="/images/certifications/qualiopi.png" 
               alt="Certification Qualiopi" 
-              width={60} 
-              height={60}
-              className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity"
-            />
-            <Image 
-              src="/images/certifications/cpf.jpg" 
-              alt="CPF - Compte Personnel de Formation" 
-              width={60} 
-              height={60}
-              className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity"
-            />
-            <Image 
-              src="/images/certifications/datadock.png" 
-              alt="Datadock" 
-              width={60} 
-              height={60}
-              className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity bg-white rounded px-2 py-1"
+              width={120} 
+              height={120}
+              className="h-20 w-auto opacity-70 hover:opacity-100 transition-opacity"
             />
             <Image 
               src="/images/certifications/formation-handicap.png" 
               alt="Formation accessible aux personnes handicapées" 
-              width={60} 
-              height={60}
-              className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity"
+              width={120} 
+              height={120}
+              className="h-20 w-auto opacity-70 hover:opacity-100 transition-opacity"
             />
           </div>
         </div>
@@ -129,16 +121,17 @@ export default function Footer() {
         {/* Ligne de séparation et copyright */}
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-4">
+            <Link href="/mentions-legales" className="text-gray-400 hover:text-white transition-colors text-sm">
+              Mentions légales
+            </Link>
+            <span className="hidden sm:inline text-gray-600">•</span>
+            <Link href="/cgv" className="text-gray-400 hover:text-white transition-colors text-sm">
+              CGV
+            </Link>
+            <span className="hidden sm:inline text-gray-600">•</span>
             <Link href="/rgpd" className="text-gray-400 hover:text-white transition-colors text-sm">
               Politique de confidentialité
             </Link>
-            <span className="hidden sm:inline text-gray-600">•</span>
-            <a 
-              href="mailto:contact@atipikrh.fr" 
-              className="text-gray-400 hover:text-white transition-colors text-sm"
-            >
-              Exercer vos droits RGPD
-            </a>
           </div>
           <p className="text-gray-400">&copy; 2025 Atipik RH. Tous droits réservés.</p>
         </div>

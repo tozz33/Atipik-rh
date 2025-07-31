@@ -786,6 +786,43 @@ export default function VAE() {
           </div>
         </section>
 
+        {/* Section Accessibilité Handicap */}
+        <section className="py-12 bg-gradient-to-br from-slate-100 to-blue-50 border-t border-gray-200">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                
+                <div className="flex items-center justify-center gap-6 mb-6">
+                  <Image
+                    src="/images/certifications/formation-handicap.png"
+                    alt="Logo Handiaccueillant - Atipik RH"
+                    width={80}
+                    height={80}
+                    className="object-contain"
+                  />
+                  <h3 className="text-2xl font-bold text-[#013F63]">
+                    Handiaccueillant
+                  </h3>
+                </div>
+                
+                <p className="text-gray-700 leading-relaxed mb-4 text-lg">
+                  <strong className="text-[#013F63]">Atipik RH</strong> s'engage à donner à tous les mêmes chances d'accéder à la formation professionnelle continue. 
+                  Nous mettons tout en œuvre dans la mesure du possible pour intégrer à nos programmes des personnes en situation de handicap 
+                  en adaptant les modalités de nos formations conformément à la Loi du 11/02/2005 pour l'égalité des droits et des chances, 
+                  la participation et la citoyenneté des personnes handicapées.
+                </p>
+                
+                <p className="text-gray-800 italic text-lg mb-2">
+                  Merci de <strong>contacter notre référente handicap</strong> pour étudier au mieux votre demande et sa faisabilité.
+                </p>
+                <p className="text-2xl font-bold text-[#013F63] italic">
+                  📞 <a href="tel:0769097445" className="hover:text-orange-500 transition-colors duration-300">07 69 09 74 45</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <Footer />
 
       </div>

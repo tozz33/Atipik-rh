@@ -1,49 +1,10 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
-import { useState, useEffect } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 export default function HomePage() {
-  const [bannerConfig, setBannerConfig] = useState(null)
-
-  useEffect(() => {
-    // Charger la configuration du bandeau
-    fetch('/banner-config.json')
-      .then(response => response.json())
-      .then(data => setBannerConfig(data))
-      .catch(error => console.log('Configuration du bandeau non disponible'))
-  }, [])
-
-  const getIcon = (iconType) => {
-    switch(iconType) {
-      case 'clock':
-        return (
-          <svg className="w-8 h-8 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-        )
-      case 'star':
-        return (
-          <svg className="w-8 h-8 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.196-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
-          </svg>
-        )
-      case 'megaphone':
-        return (
-          <svg className="w-8 h-8 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
-          </svg>
-        )
-      default:
-        return (
-          <svg className="w-8 h-8 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-        )
-    }
-  }
 
   return (
     <>
@@ -57,8 +18,8 @@ export default function HomePage() {
       <div className="min-h-screen bg-white">
         <Header isHomePage={true} />
 
-        {/* Hero Section - Reduced Height Three Column Layout */}
-        <section className="h-[85vh] flex relative">
+        {/* Hero Section - Full Height Three Column Layout */}
+        <section className="h-screen flex relative">
           {/* Logo central en haut */}
           <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-10">
             <Link href="/" className="block">
@@ -71,9 +32,6 @@ export default function HomePage() {
                 priority
               />
             </Link>
-            <p className="text-white text-center mt-2 text-sm font-light tracking-wide">
-              Votre guide au quotidien
-            </p>
           </div>
 
           {/* Bilan de compétences */}
@@ -200,36 +158,32 @@ export default function HomePage() {
           </Link>
         </section>
 
-        {/* Bandeau d'annonce dynamique */}
-        {bannerConfig && bannerConfig.active && (
-          <section className={`${bannerConfig.backgroundColor} py-8`}>
-            <div className="container mx-auto px-4">
-              <div className="flex flex-col lg:flex-row items-center justify-center text-center lg:text-left space-y-4 lg:space-y-0 lg:space-x-6">
-                <div className="flex items-center space-x-3">
-                  <div className="text-orange-500">
-                    {getIcon(bannerConfig.icon)}
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-xl lg:text-2xl text-gray-800">
-                      {bannerConfig.title}
-                    </h3>
-                    <p className="text-gray-600 text-lg">
-                      {bannerConfig.subtitle}
-                    </p>
-                  </div>
-                </div>
-                <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3">
-                  <Link href={bannerConfig.primaryButton.link} className="bg-orange-500 text-white px-6 py-3 rounded-full text-base font-medium hover:bg-orange-600 transition-colors shadow-lg">
-                    {bannerConfig.primaryButton.text}
-                  </Link>
-                  <Link href={bannerConfig.secondaryButton.link} className="border-2 border-gray-300 text-gray-700 px-6 py-3 rounded-full text-base font-medium hover:bg-gray-50 transition-colors">
-                    {bannerConfig.secondaryButton.text}
-                  </Link>
-                </div>
-              </div>
+        {/* Section Présentation de l'entreprise */}
+        <section className="py-24 bg-gradient-to-br from-slate-50 to-blue-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl lg:text-5xl font-bold text-[#013F63] mb-6 leading-tight tracking-tight">
+                À propos d'<span className="text-orange-500 font-brittany">Atipik RH</span>
+              </h2>
+              
+              <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed font-light mb-8 max-w-3xl mx-auto">
+                Depuis plus de 5 ans, Atipik RH accompagne les particuliers et les entreprises 
+                dans leur développement professionnel. Notre équipe d'experts certifiés vous guide 
+                avec <span className="text-orange-500 font-medium">bienveillance et professionnalisme</span> vers la réussite de vos projets.
+              </p>
+              
+              <Link 
+                href="/notre-histoire" 
+                className="inline-flex items-center px-8 py-4 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold shadow-lg transition-all duration-300 transform hover:scale-105 text-lg"
+              >
+                En savoir plus sur notre histoire
+                <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
             </div>
-          </section>
-        )}
+          </div>
+        </section>
 
         <Footer />
       </div>

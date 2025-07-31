@@ -1,11 +1,14 @@
-import Head from 'next/head'
+
+import Image from 'next/image';
+import Head from 'next/head';
+import Layout from '../components/Layout';
 import Link from 'next/link'
-import Image from 'next/image'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { Users, Mail, Phone, MapPin } from 'lucide-react'
 
 export default function NotreEquipe() {
+
   return (
     <>
       <Head>
@@ -25,226 +28,260 @@ export default function NotreEquipe() {
         {/* Équipe d'Atipik RH */}
         <section className="py-24 bg-white">
           <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
+            <div className="max-w-7xl mx-auto">
               
-              <div className="text-center mb-16">
-                <h1 className="text-4xl lg:text-6xl font-bold text-[#013F63] mb-6">
-                  L'équipe d'<span className="text-blue-600 font-brittany text-5xl lg:text-6xl">Atipik RH</span>
+              <div className="text-center mb-20">
+                <h1 className="text-3xl lg:text-4xl font-medium text-[#013F63] mb-12">
+                  <div className="relative inline-block">
+                    Découvrez le portrait
+                    <Image 
+                      src="/images/decorations/3 lignes orange.svg" 
+                      alt="Élément décoratif"
+                      width={35}
+                      height={25}
+                      className="absolute -bottom-12 -right-8"
+                    />
+                  </div>
+                  <br/>
+                  <span className="bg-[#013F63] text-white px-4 py-1 rounded-full">de nos experts</span>
                 </h1>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                  Des professionnelles passionnées, expertes dans l'accompagnement humain
-                </p>
               </div>
 
-              <div className="grid md:grid-cols-3 gap-8">
+              {/* Grille équipe direction */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8 mb-14 max-w-5xl mx-auto">
                 
                 {/* Vanessa - Directrice */}
-                <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-3xl p-8 text-center group hover:shadow-xl transition-all duration-300">
-                  <div className="w-32 h-32 mx-auto mb-6 relative">
+                <div className="text-center">
+                  <div className="w-40 h-40 mx-auto mb-5">
                     <Image
                       src="/images/equipe/Vanessa.jpeg"
                       alt="Vanessa NOAH EWODO"
-                      width={128}
-                      height={128}
+                      width={160}
+                      height={160}
                       className="w-full h-full rounded-full object-cover"
                     />
                   </div>
-                  <h3 className="text-2xl font-bold text-[#013F63] mb-2">Vanessa NOAH EWODO</h3>
-                  <p className="text-orange-600 font-medium mb-4">Directrice et formatrice</p>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    Fondatrice d'Atipik RH, elle pilote l'équipe et assure le développement stratégique 
-                    tout en restant proche du terrain formatif.
-                  </p>
+                  <h3 className="text-lg text-[#013F63] mb-3">
+                    <span className="font-semibold">Vanessa</span> <span className="font-brittany">NOAH EWODO</span>
+                  </h3>
+                  <Link 
+                    href="/equipe/vanessa-noah-ewodo"
+                    className="text-orange-400 hover:text-orange-500 underline text-sm transition-colors"
+                  >
+                    Plus d'infos sur l'expert
+                  </Link>
                 </div>
 
                 {/* Brunilda - Chargée de Formation */}
-                <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl p-8 text-center group hover:shadow-xl transition-all duration-300">
-                  <div className="w-32 h-32 mx-auto mb-6 relative">
+                <div className="text-center">
+                  <div className="w-40 h-40 mx-auto mb-5">
                     <Image
                       src="/images/equipe/brunilda.jpeg"
-                      alt="Brunilda BUZI"
-                      width={128}
-                      height={128}
+                      alt="Brunilda RAFAEL"
+                      width={160}
+                      height={160}
                       className="w-full h-full rounded-full object-cover"
                     />
                   </div>
-                  <h3 className="text-2xl font-bold text-[#013F63] mb-2">Brunilda BUZI</h3>
-                  <p className="text-blue-600 font-medium mb-4">Chargée de Formation</p>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    Responsable de l'organisation et du suivi des formations, elle veille à la qualité 
-                    de l'accompagnement pédagogique.
-                  </p>
+                  <h3 className="text-lg text-[#013F63] mb-3">
+                    <span className="font-semibold">Brunilda</span> <span className="font-brittany">RAFAEL</span>
+                  </h3>
+                  <Link 
+                    href="/equipe/brunilda-rafael"
+                    className="text-orange-400 hover:text-orange-500 underline text-sm transition-colors"
+                  >
+                    Plus d'infos sur l'expert
+                  </Link>
                 </div>
 
                 {/* Liliana - Coordinatrice */}
-                <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-3xl p-8 text-center group hover:shadow-xl transition-all duration-300">
-                  <div className="w-32 h-32 mx-auto mb-6 relative">
+                <div className="text-center">
+                  <div className="w-40 h-40 mx-auto mb-5">
                     <Image
                       src="/images/equipe/liliana.jpeg"
                       alt="Liliana DELMAS"
-                      width={128}
-                      height={128}
+                      width={160}
+                      height={160}
                       className="w-full h-full rounded-full object-cover"
                     />
                   </div>
-                  <h3 className="text-2xl font-bold text-[#013F63] mb-2">Liliana DELMAS</h3>
-                  <p className="text-purple-600 font-medium mb-4">Formatrice et consultante</p>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    Spécialisée dans l'accompagnement professionnel et les bilans de compétences,
-                    elle assure aussi la coordination des formations.
-                  </p>
+                  <h3 className="text-lg text-[#013F63] mb-3">
+                    <span className="font-semibold">Liliana</span> <span className="font-brittany">DELMAS</span>
+                  </h3>
+                  <Link 
+                    href="/equipe/liliana-delmas"
+                    className="text-orange-400 hover:text-orange-500 underline text-sm transition-colors"
+                  >
+                    Plus d'infos sur l'expert
+                  </Link>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
-        {/* Équipe Formatrice */}
-        <section className="py-24 bg-gradient-to-br from-slate-50 via-white to-blue-50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              
-              <div className="text-center mb-16">
-                <h2 className="text-4xl lg:text-5xl font-bold text-[#013F63] mb-6">
-                  L'équipe <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">formatrice</span>
-                </h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                  Des expertes passionnées qui vous transmettent leur savoir-faire
-                </p>
-              </div>
-
-              <div className="grid md:grid-cols-4 gap-6">
-                
                 {/* Stéphanie */}
-                <div className="bg-white rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300">
-                  <div className="w-24 h-24 mx-auto mb-6 relative">
+                <div className="text-center">
+                  <div className="w-40 h-40 mx-auto mb-5">
                     <Image
                       src="/images/equipe/stephanie.jpeg"
-                      alt="Stéphanie GARCIA"
-                      width={96}
-                      height={96}
+                      alt="Stéphanie BRETON"
+                      width={160}
+                      height={160}
                       className="w-full h-full rounded-full object-cover"
                     />
                   </div>
-                  <h3 className="text-xl font-bold text-[#013F63] mb-1">Stéphanie GARCIA</h3>
-                  <p className="text-blue-600 font-medium text-sm mb-3">Coordinatrice pédagogique</p>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    Elle coordonne les programmes de formation et assure le lien entre apprenants, 
-                    formateurs et entreprises partenaires.
-                  </p>
+                  <h3 className="text-lg text-[#013F63] mb-3">
+                    <span className="font-semibold">Stéphanie</span> <span className="font-brittany">BRETON</span>
+                  </h3>
+                  <Link 
+                    href="/equipe/stephanie-breton"
+                    className="text-orange-400 hover:text-orange-500 underline text-sm transition-colors"
+                  >
+                    Plus d'infos sur l'expert
+                  </Link>
                 </div>
+              </div>
+
+              {/* Deuxième ligne équipe */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8 mb-14 max-w-5xl mx-auto">
 
                 {/* Nathalie */}
-                <div className="bg-white rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300">
-                  <div className="w-24 h-24 mx-auto mb-6 relative">
+                <div className="text-center">
+                  <div className="w-40 h-40 mx-auto mb-5">
                     <Image
                       src="/images/equipe/nathalie.jpeg"
                       alt="Nathalie BIOTTI"
-                      width={96}
-                      height={96}
+                      width={160}
+                      height={160}
                       className="w-full h-full rounded-full object-cover"
                     />
                   </div>
-                  <h3 className="text-xl font-bold text-[#013F63] mb-1">Nathalie BIOTTI</h3>
-                  <p className="text-orange-600 font-medium text-sm mb-3">Formatrice</p>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    Formatrice polyvalente, elle intervient sur différents modules de formation professionnelle.
-                  </p>
+                  <h3 className="text-lg text-[#013F63] mb-3">
+                    <span className="font-semibold">Nathalie</span> <span className="font-brittany">BIOTTI</span>
+                  </h3>
+                  <Link 
+                    href="/equipe/nathalie-biotti"
+                    className="text-orange-400 hover:text-orange-500 underline text-sm transition-colors"
+                  >
+                    Plus d'infos sur l'expert
+                  </Link>
                 </div>
 
                 {/* Mouna */}
-                <div className="bg-white rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300">
-                  <div className="w-24 h-24 mx-auto mb-6 relative">
+                <div className="text-center">
+                  <div className="w-40 h-40 mx-auto mb-5">
                     <Image
                       src="/images/equipe/mouna.jpeg"
                       alt="Mouna MNIAI"
-                      width={96}
-                      height={96}
+                      width={160}
+                      height={160}
                       className="w-full h-full rounded-full object-cover"
                     />
                   </div>
-                  <h3 className="text-xl font-bold text-[#013F63] mb-1">Mouna MNIAI</h3>
-                  <p className="text-blue-600 font-medium text-sm mb-3">Consultante en emploi</p>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    Spécialiste des techniques de recherche d'emploi et de l'accompagnement vers l'insertion.
-                  </p>
+                  <h3 className="text-lg text-[#013F63] mb-3">
+                    <span className="font-semibold">Mouna</span> <span className="font-brittany">MNIAI</span>
+                  </h3>
+                  <Link 
+                    href="/equipe/mouna-mniai"
+                    className="text-orange-400 hover:text-orange-500 underline text-sm transition-colors"
+                  >
+                    Plus d'infos sur l'expert
+                  </Link>
                 </div>
 
                 {/* Cécile */}
-                <div className="bg-white rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300">
-                  <div className="w-24 h-24 mx-auto mb-6 relative">
+                <div className="text-center">
+                  <div className="w-40 h-40 mx-auto mb-5">
                     <Image
                       src="/images/equipe/cecile.jpeg"
                       alt="Cécile BERNAT"
-                      width={96}
-                      height={96}
+                      width={160}
+                      height={160}
                       className="w-full h-full rounded-full object-cover"
                     />
                   </div>
-                  <h3 className="text-xl font-bold text-[#013F63] mb-1">Cécile BERNAT</h3>
-                  <p className="text-orange-600 font-medium text-sm mb-3">Formatrice RH</p>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    Experte en ressources humaines, elle forme aux métiers RH et aux soft skills managériales.
-                  </p>
+                  <h3 className="text-lg text-[#013F63] mb-3">
+                    <span className="font-semibold">Cécile</span> <span className="font-brittany">BERNAT</span>
+                  </h3>
+                  <Link 
+                    href="/equipe/cecile-bernat"
+                    className="text-orange-400 hover:text-orange-500 underline text-sm transition-colors"
+                  >
+                    Plus d'infos sur l'expert
+                  </Link>
                 </div>
 
                 {/* Coraline */}
-                <div className="bg-white rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300">
-                  <div className="w-24 h-24 mx-auto mb-6 relative">
+                <div className="text-center">
+                  <div className="w-40 h-40 mx-auto mb-5">
                     <Image
                       src="/images/equipe/coraline.jpeg"
                       alt="Coraline ABADIE"
-                      width={96}
-                      height={96}
+                      width={160}
+                      height={160}
                       className="w-full h-full rounded-full object-cover"
                     />
                   </div>
-                  <h3 className="text-xl font-bold text-[#013F63] mb-1">Coraline ABADIE</h3>
-                  <p className="text-blue-600 font-medium text-sm mb-3">Formatrice et Intervenante Théâtre</p>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    Utilise les techniques théâtrales pour développer la confiance en soi et l'expression orale.
-                  </p>
+                  <h3 className="text-lg text-[#013F63] mb-3">
+                    <span className="font-semibold">Coraline</span> <span className="font-brittany">ABADIE</span>
+                  </h3>
+                  <Link 
+                    href="/equipe/coraline-abadie"
+                    className="text-orange-400 hover:text-orange-500 underline text-sm transition-colors"
+                  >
+                    Plus d'infos sur l'expert
+                  </Link>
                 </div>
+              </div>
+
+              {/* Troisième ligne équipe - Centrée */}
+              <div className="flex justify-center gap-6 lg:gap-8 max-w-5xl mx-auto">
 
                 {/* Windy */}
-                <div className="bg-white rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300">
-                  <div className="w-24 h-24 mx-auto mb-6 relative">
+                <div className="text-center">
+                  <div className="w-40 h-40 mx-auto mb-5">
                     <Image
                       src="/images/equipe/windy.jpeg"
                       alt="Windy TELGA"
-                      width={96}
-                      height={96}
+                      width={160}
+                      height={160}
                       className="w-full h-full rounded-full object-cover"
                     />
                   </div>
-                  <h3 className="text-xl font-bold text-[#013F63] mb-1">Windy TELGA</h3>
-                  <p className="text-orange-600 font-medium text-sm mb-3">Formatrice communication & coaching emploi</p>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    Spécialisée dans la communication professionnelle et le coaching pour l'emploi.
-                  </p>
+                  <h3 className="text-lg text-[#013F63] mb-3">
+                    <span className="font-semibold">Windy</span> <span className="font-brittany">TELGA</span>
+                  </h3>
+                  <Link 
+                    href="/equipe/windy-telga"
+                    className="text-orange-400 hover:text-orange-500 underline text-sm transition-colors"
+                  >
+                    Plus d'infos sur l'expert
+                  </Link>
                 </div>
 
                 {/* Anne-Lise */}
-                <div className="bg-white rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300">
-                  <div className="w-24 h-24 mx-auto mb-6 relative">
+                <div className="text-center">
+                  <div className="w-40 h-40 mx-auto mb-5">
                     <Image
                       src="/images/equipe/anne-lise.jpeg"
                       alt="Anne-Lise COATRINE"
-                      width={96}
-                      height={96}
+                      width={160}
+                      height={160}
                       className="w-full h-full rounded-full object-cover"
                     />
                   </div>
-                  <h3 className="text-xl font-bold text-[#013F63] mb-1">Anne-Lise COATRINE</h3>
-                  <p className="text-blue-600 font-medium text-sm mb-3">Intervenante Théâtre</p>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    Experte en expression corporelle et développement de la confiance par les arts dramatiques.
-                  </p>
+                  <h3 className="text-lg text-[#013F63] mb-3">
+                    <span className="font-semibold">Anne-Lise</span> <span className="font-brittany">COATRINE</span>
+                  </h3>
+                  <Link 
+                    href="/equipe/anne-lise-coatrine"
+                    className="text-orange-400 hover:text-orange-500 underline text-sm transition-colors"
+                  >
+                    Plus d'infos sur l'expert
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
         </section>
+
 
         {/* Contact équipe */}
         <section className="py-24 bg-white">
@@ -309,6 +346,8 @@ export default function NotreEquipe() {
             </div>
           </div>
         </section>
+
+
 
         <Footer />
 
