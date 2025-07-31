@@ -303,76 +303,76 @@ export default function FormationsCourtes() {
         </section>
 
         {/* Nos 4 Formations */}
-        <section className="py-24 bg-white" id="formations">
+        <section className="py-16 bg-white" id="formations">
           <div className="container mx-auto px-4">
             <div className="max-w-7xl mx-auto">
               
-              <div className="text-center mb-20">
-                <h2 className="text-4xl lg:text-5xl font-bold text-[#013F63] mb-6 leading-tight">
-                  Nos <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">4 formations</span>
+              <div className="text-center mb-12">
+                <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight">
+                  Nos <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">4 formations</span>
                 </h2>
-                <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
                   Chaque formation peut être suivie indépendamment
                 </p>
               </div>
 
-              <div className="space-y-6 max-w-5xl mx-auto">
+              <div className="space-y-4 max-w-4xl mx-auto">
                 {formations.map((formation, index) => {
                   const couleurClasses = getCouleurClasses(formation.couleur)
                   const [gradientFrom, gradientTo, textColor, bgColor, borderColor] = couleurClasses.split(' ')
                   const isOpen = openFormations[formation.id]
                   
                   return (
-                    <div key={formation.id} className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
+                    <div key={formation.id} className="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
                       
                       {/* En-tête cliquable */}
                       <button 
                         onClick={() => toggleFormation(formation.id)}
-                        className={`w-full bg-gradient-to-r ${gradientFrom} ${gradientTo} text-white p-6 flex items-center justify-between hover:opacity-90 transition-opacity`}
+                        className={`w-full bg-gradient-to-r ${gradientFrom} ${gradientTo} text-white p-4 flex items-center justify-between hover:opacity-90 transition-opacity`}
                       >
-                        <div className="flex items-center gap-4">
-                          <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                            <span className="text-white font-bold text-lg">{formation.id}</span>
+                        <div className="flex items-center gap-3">
+                          <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                            <span className="text-white font-bold text-sm">{formation.id}</span>
                           </div>
                           <div className="text-left">
-                            <h3 className="text-lg lg:text-xl font-bold">{formation.titre}</h3>
-                            <p className="text-white/90">{formation.sousTitre}</p>
+                            <h3 className="text-base lg:text-lg font-bold">{formation.titre}</h3>
+                            <p className="text-white/90 text-sm">{formation.sousTitre}</p>
                           </div>
                         </div>
                         <div className="flex-shrink-0">
                           {isOpen ? (
-                            <ChevronUp className="w-6 h-6 text-white" />
+                            <ChevronUp className="w-5 h-5 text-white" />
                           ) : (
-                            <ChevronDown className="w-6 h-6 text-white" />
+                            <ChevronDown className="w-5 h-5 text-white" />
                           )}
                         </div>
                       </button>
 
                       {/* Contenu déroulant */}
                       {isOpen && (
-                        <div className="p-6 border-t border-gray-200 animate-in slide-in-from-top-4 duration-300">
-                          <div className="grid lg:grid-cols-2 gap-8">
+                        <div className="p-4 border-t border-gray-200 animate-in slide-in-from-top-4 duration-300">
+                          <div className="grid lg:grid-cols-2 gap-6">
                             
                             {/* Colonne gauche : Public & Objectifs */}
-                            <div className="space-y-6">
+                            <div className="space-y-4">
                               <div>
-                                <h4 className="text-lg font-bold text-[#013F63] mb-3 flex items-center gap-2">
-                                  <Users className={`w-5 h-5 ${textColor}`} />
+                                <h4 className="text-base font-bold text-[#013F63] mb-2 flex items-center gap-2">
+                                  <Users className={`w-4 h-4 ${textColor}`} />
                                   Public & Prérequis
                                 </h4>
-                                <p className="text-gray-700 leading-relaxed text-sm">{formation.public}</p>
+                                <p className="text-gray-700 leading-relaxed text-xs">{formation.public}</p>
                               </div>
 
                               <div>
-                                <h4 className="text-lg font-bold text-[#013F63] mb-3 flex items-center gap-2">
-                                  <Target className={`w-5 h-5 ${textColor}`} />
+                                <h4 className="text-base font-bold text-[#013F63] mb-2 flex items-center gap-2">
+                                  <Target className={`w-4 h-4 ${textColor}`} />
                                   Objectifs pédagogiques
                                 </h4>
-                                <div className="space-y-2">
+                                <div className="space-y-1">
                                   {formation.objectifs.map((objectif, idx) => (
                                     <div key={idx} className="flex items-start gap-2">
-                                      <CheckCircle className={`w-4 h-4 ${textColor} flex-shrink-0 mt-0.5`} />
-                                      <span className="text-gray-700 text-sm">{objectif}</span>
+                                      <CheckCircle className={`w-3 h-3 ${textColor} flex-shrink-0 mt-0.5`} />
+                                      <span className="text-gray-700 text-xs">{objectif}</span>
                                     </div>
                                   ))}
                                 </div>
@@ -381,19 +381,19 @@ export default function FormationsCourtes() {
 
                             {/* Colonne droite : Programme */}
                             <div>
-                              <h4 className="text-lg font-bold text-[#013F63] mb-3 flex items-center gap-2">
-                                <BookOpen className={`w-5 h-5 ${textColor}`} />
+                              <h4 className="text-base font-bold text-[#013F63] mb-2 flex items-center gap-2">
+                                <BookOpen className={`w-4 h-4 ${textColor}`} />
                                 Programme
                               </h4>
-                              <div className="space-y-3">
+                              <div className="space-y-2">
                                 {formation.programme.map((jour, idx) => (
-                                  <div key={idx} className={`${bgColor} ${borderColor} border rounded-lg p-3`}>
-                                    <h5 className="font-semibold text-[#013F63] mb-2 text-sm">{jour.jour}</h5>
+                                  <div key={idx} className={`${bgColor} ${borderColor} border rounded-lg p-2`}>
+                                    <h5 className="font-semibold text-[#013F63] mb-1 text-xs">{jour.jour}</h5>
                                     <div className="space-y-1">
                                       {jour.contenu.map((item, itemIdx) => (
-                                        <div key={itemIdx} className="flex items-start gap-2">
-                                          <div className={`w-1.5 h-1.5 ${textColor.replace('text-', 'bg-')} rounded-full flex-shrink-0 mt-1.5`}></div>
-                                          <span className="text-gray-700 text-xs">{item}</span>
+                                        <div key={itemIdx} className="flex items-start gap-1">
+                                          <div className={`w-1 h-1 ${textColor.replace('text-', 'bg-')} rounded-full flex-shrink-0 mt-1`}></div>
+                                          <span className="text-gray-700 text-xs leading-tight">{item}</span>
                                         </div>
                                       ))}
                                     </div>
@@ -404,15 +404,15 @@ export default function FormationsCourtes() {
                           </div>
 
                           {/* Sessions */}
-                          <div className="mt-6 pt-4 border-t border-gray-100">
-                            <h4 className="text-lg font-bold text-[#013F63] mb-3 flex items-center gap-2">
-                              <Calendar className={`w-5 h-5 ${textColor}`} />
+                          <div className="mt-4 pt-3 border-t border-gray-100">
+                            <h4 className="text-base font-bold text-[#013F63] mb-2 flex items-center gap-2">
+                              <Calendar className={`w-4 h-4 ${textColor}`} />
                               Prochaines sessions
                             </h4>
                             <div className="grid md:grid-cols-2 gap-2">
                               {formation.sessions.map((session, idx) => (
-                                <div key={idx} className="bg-gray-50 rounded-lg p-3 text-center">
-                                  <span className="text-gray-700 font-medium text-sm">{session}</span>
+                                <div key={idx} className="bg-gray-50 rounded-lg p-2 text-center">
+                                  <span className="text-gray-700 font-medium text-xs">{session}</span>
                                 </div>
                               ))}
                             </div>
