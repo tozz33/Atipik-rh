@@ -248,13 +248,9 @@ export default function FormationsCourtesProfessionnalisantes() {
               <div className="max-w-6xl mx-auto">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                   
-                  {/* Contenu à gauche */}
-                  <div className="lg:order-1">
-                    <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                      Nos formations visent à répondre à ces enjeux, à travers une approche concrète et immédiatement transposable.
-                    </p>
-                    
-                    <div className="space-y-6">
+                                  {/* Contenu à gauche */}
+                <div className="lg:order-1">
+                  <div className="space-y-6">
                       <div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm border-l-4 border-orange-500">
                         <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
                           <CheckCircle className="w-4 h-4 text-white" />
