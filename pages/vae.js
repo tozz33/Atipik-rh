@@ -24,7 +24,7 @@ export default function VAE() {
     },
     {
       question: "Quel est le taux de réussite ?",
-      answer: "Avec notre accompagnement, 85% de nos candidats obtiennent une validation totale dès le premier passage. 10% obtiennent une validation partielle et complètent ensuite leur parcours. Le taux d'échec total est très faible."
+      answer: "Avec notre accompagnement, 95% de nos candidats obtiennent une validation totale dès le premier passage. 5% obtiennent une validation partielle et complètent ensuite leur parcours. Le taux d'échec total est très faible."
     },
     {
       question: "Comment financer ma VAE ?",
@@ -44,7 +44,7 @@ export default function VAE() {
     <>
       <Head>
         <title>VAE à Bordeaux : obtenez votre diplôme par l'expérience | Atipik RH</title>
-        <meta name="description" content="Transformez votre expérience en diplôme grâce à la VAE à Bordeaux. Accompagnement expert, 85% de réussite, 1er RDV offert. Financement CPF possible." />
+        <meta name="description" content="Transformez votre expérience en diplôme grâce à la VAE à Bordeaux. Accompagnement expert, 95% de réussite, 1er RDV offert. Financement CPF possible." />
         <meta name="keywords" content="VAE Bordeaux, validation acquis expérience, diplôme par expérience, accompagnement VAE, financement CPF VAE" />
         <link rel="canonical" href="https://atipikrh.fr/vae" />
       </Head>
@@ -58,29 +58,6 @@ export default function VAE() {
 
         {/* Hero Section avec background animé */}
         <section className="relative py-16 overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">
-          {/* Éléments graphiques décoratifs */}
-          <div className="absolute top-0 right-0 w-88 h-88 opacity-45">
-            <svg viewBox="0 0 352 352" className="w-full h-full">
-              <path d="M352,0 C352,0 284,68 216,68 C148,68 80,136 80,204 C80,272 148,340 216,340 L352,340 Z" fill="url(#vaeBlueGradient)" />
-              <defs>
-                <linearGradient id="vaeBlueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#dbeafe" stopOpacity="0.7"/>
-                  <stop offset="100%" stopColor="#1d4ed8" stopOpacity="0.3"/>
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-          <div className="absolute top-12 right-12 w-36 h-36 opacity-30">
-            <svg viewBox="0 0 144 144" className="w-full h-full">
-              <circle cx="72" cy="72" r="56" fill="url(#vaeOrangeGradient)" />
-              <defs>
-                <linearGradient id="vaeOrangeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#fed7aa" stopOpacity="0.5"/>
-                  <stop offset="100%" stopColor="#ea580c" stopOpacity="0.2"/>
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
           
           {/* Background animé existant */}
           <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
@@ -91,31 +68,15 @@ export default function VAE() {
             
             {/* Titre principal */}
             <div className="text-center mb-8 max-w-5xl mx-auto">
-              <h1 className="text-4xl lg:text-6xl font-bold text-[#013F63] mb-8 leading-tight tracking-tight">
-                VAE à <span className="text-[#013F63] font-brittany text-5xl lg:text-7xl">Bordeaux</span><br/>
-                Transformez votre <span className="text-orange-500 font-brittany text-5xl lg:text-7xl">expérience</span> en diplôme
+              <h1 className="text-3xl lg:text-5xl font-bold text-[#013F63] mb-8 leading-tight tracking-tight">
+                VAE à <span className="text-blue-600 font-brittany text-5xl lg:text-6xl">Lormont</span><br/>
+                Transformez votre <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">expérience</span> en diplôme
               </h1>
               <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed font-light mb-8">
-                15 ans d'expertise, 85% de réussite<br className="hidden lg:block"/>
+                5 ans d'expertise, 95% de réussite<br className="hidden lg:block"/>
                 <span className="text-[#013F63] font-medium">Faites reconnaître officiellement vos compétences</span>
               </p>
               
-              {/* Statistiques hero */}
-              <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
-                <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100">
-                  <div className="text-3xl font-bold text-[#013F63] mb-2">85%</div>
-                  <p className="text-gray-700">de réussite avec notre accompagnement</p>
-                </div>
-                <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100">
-                  <div className="text-3xl font-bold text-[#013F63] mb-2">1 an</div>
-                  <p className="text-gray-700">d'expérience minimum requis</p>
-                </div>
-                <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100">
-                  <div className="text-3xl font-bold text-[#013F63] mb-2">100%</div>
-                  <p className="text-gray-700">des diplômes accessibles par VAE</p>
-                </div>
-              </div>
-
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contact" className="inline-flex px-8 py-4 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold shadow-lg transition text-lg hover:scale-105">
@@ -199,13 +160,13 @@ export default function VAE() {
                     Atipik RH, votre expert VAE en Gironde
                   </h3>
                   <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                    Basés à Lormont près de Bordeaux, nous accompagnons depuis plus de 15 ans 
-                    les professionnels dans leur démarche VAE. Notre taux de réussite de 85% 
+                    Basés à Lormont près de Bordeaux, nous accompagnons depuis 5 ans 
+                    les professionnels dans leur démarche VAE. Notre taux de réussite de 95% 
                     témoigne de notre expertise et de la qualité de notre accompagnement.
                   </p>
                   <div className="grid md:grid-cols-2 gap-8">
                     <div className="text-center">
-                      <div className="text-4xl font-bold text-[#013F63] mb-2">15 ans</div>
+                      <div className="text-4xl font-bold text-[#013F63] mb-2">5 ans</div>
                       <p className="text-gray-700">d'expérience en accompagnement VAE</p>
                     </div>
                     <div className="text-center">

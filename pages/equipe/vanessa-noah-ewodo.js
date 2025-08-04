@@ -57,7 +57,7 @@ export default function VanessaNoahEwodo() {
                     Directrice
                   </div>
                   <h1 className="text-3xl lg:text-4xl font-bold text-[#013F63] leading-tight">
-                    Vanessa NOAH EWODO
+                    <span className="font-brittany text-4xl lg:text-5xl">Vanessa</span> <span className="font-semibold">NOAH EWODO</span>
                   </h1>
                   <p className="text-gray-600 leading-relaxed">
                     Accompagnement à distance sur toute la France ou en présentiel à <span className="text-orange-500 font-semibold">Lormont</span>

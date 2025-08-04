@@ -85,8 +85,8 @@ export default function Financement() {
       external: false
     },
     {
-      logoSrc: "/images/financements/Logo_Pole_Emploi.png",
-      logoAlt: "Logo CSP - Contrat de Sécurisation Professionnelle",
+      logoSrc: "/images/financements/Bloc_Marque_RF_France_Travail_CMJN_Horizontal_Coul_Positif.jpg",
+      logoAlt: "Logo France Travail - CSP - Contrat de Sécurisation Professionnelle",
       title: "CSP (Contrat de Sécurisation Professionnelle)",
       details: [
         { label: "Contexte", value: "Licenciement économique envisagé" },
@@ -158,8 +158,8 @@ export default function Financement() {
             {/* Titre principal */}
             <div className="text-center mb-6 max-w-5xl mx-auto">
               <h1 className="text-3xl lg:text-5xl font-bold text-[#013F63] mb-6 leading-tight tracking-tight">
-                Solutions de <span className="text-blue-600 font-brittany text-4xl lg:text-5xl">financement</span><br/>
-                selon votre <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">statut</span>
+                Solutions de <span className="text-blue-600 font-brittany text-5xl lg:text-6xl">financement</span><br/>
+                selon votre <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">statut</span>
               </h1>
               <p className="text-lg lg:text-xl text-gray-600 leading-relaxed font-light mb-6">
                 Chaque situation professionnelle offre des possibilités de financement spécifiques<br className="hidden lg:block"/>
@@ -303,8 +303,8 @@ export default function Financement() {
                       <div className="flex items-center gap-4 mb-6">
                         <div className="w-16 h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
                           <Image
-                            src="/images/financements/Logo_Pole_Emploi.png"
-                            alt="Logo Pôle Emploi"
+                            src="/images/financements/Bloc_Marque_RF_France_Travail_CMJN_Horizontal_Coul_Positif.jpg"
+                            alt="Logo France Travail"
                             width={48}
                             height={48}
                             className="object-contain"

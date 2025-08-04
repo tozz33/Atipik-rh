@@ -24,8 +24,8 @@ export default function FormationsIndex() {
     <>
       <Head>
         <title>Formations professionnelles à Bordeaux - Certifiantes & Professionnalisantes | Atipik RH</title>
-        <meta name="description" content="Formations certifiantes (CIP, FPA) et formations professionnalisantes à Bordeaux. Toutes nos formations sont éligibles au CPF. Centre de formation à Lormont." />
-        <meta name="keywords" content="formations Bordeaux, CIP, FPA, formations professionnalisantes, CPF, Lormont, formation professionnelle" />
+        <meta name="description" content="Formations certifiantes (CIP, FPA) et formations courtes professionnalisantes à Bordeaux. Toutes nos formations sont éligibles au CPF. Centre de formation à Lormont." />
+        <meta name="keywords" content="formations Bordeaux, CIP, FPA, formations courtes professionnalisantes, CPF, Lormont, formation professionnelle" />
         <link rel="canonical" href="https://atipikrh.fr/formations" />
       </Head>
 
@@ -47,10 +47,10 @@ export default function FormationsIndex() {
             
             {/* Titre principal */}
             <div className="text-center mb-16 max-w-5xl mx-auto">
-              <h1 className="text-4xl lg:text-6xl font-bold text-[#013F63] mb-8 leading-tight tracking-tight">
-                Formations <span className="text-blue-600 font-brittany text-5xl lg:text-6xl">professionnelles</span><br/>
-                à <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">Bordeaux</span>
-              </h1>
+                          <h1 className="text-3xl lg:text-5xl font-bold text-[#013F63] mb-8 leading-tight tracking-tight">
+              Formations <span className="text-blue-600 font-brittany text-5xl lg:text-6xl">professionnelles</span><br/>
+              à <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">Bordeaux</span>
+            </h1>
               <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed font-light mb-8">
                 Développez vos compétences avec nos formations certifiantes et professionnalisantes<br className="hidden lg:block"/>
                 <span className="text-blue-600 font-medium">100% éligibles au CPF</span>
@@ -153,20 +153,20 @@ export default function FormationsIndex() {
                   </Link>
                 </div>
 
-                {/* Formations professionnalisantes */}
+                {/* Formations courtes professionnalisantes */}
                 <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center">
                       <Lightbulb className="w-8 h-8 text-orange-600" />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-[#013F63]">Formations Professionnalisantes</h3>
+                      <h3 className="text-2xl font-bold text-[#013F63]">Formations Courtes Professionnalisantes</h3>
                       <p className="text-gray-600">Montée en compétences</p>
                     </div>
                   </div>
                   
                   <p className="text-gray-700 leading-relaxed mb-6">
-                    Des formations professionnalisantes (1 à 5 jours) pour développer des compétences 
+                                          Des formations courtes professionnalisantes (1 à 5 jours) pour développer des compétences 
                     spécifiques et rester à jour dans votre domaine.
                   </p>
                   
@@ -196,8 +196,8 @@ export default function FormationsIndex() {
                     </div>
                   </div>
                   
-                  <Link href="/formations/courtes" className="block w-full text-center px-6 py-3 rounded-full bg-orange-500 hover:bg-orange-600 text-white font-semibold transition">
-                    Voir les formations professionnalisantes
+                                      <Link href="/formations-courtes-professionnalisantes" className="block w-full text-center px-6 py-3 rounded-full bg-orange-500 hover:bg-orange-600 text-white font-semibold transition">
+                                            Voir les formations courtes professionnalisantes
                   </Link>
                 </div>
               </div>
@@ -358,9 +358,9 @@ export default function FormationsIndex() {
             <div className="max-w-6xl mx-auto">
               
               <div className="text-center mb-16">
-                <h2 className="text-4xl lg:text-6xl font-bold text-[#013F63] mb-8 leading-tight tracking-tight">
-                  Prêt(e) à franchir le <span className="text-orange-500 font-brittany text-5xl lg:text-7xl">pas</span> ?
-                </h2>
+                            <h2 className="text-3xl lg:text-5xl font-bold text-[#013F63] mb-8 leading-tight tracking-tight">
+              Prêt(e) à franchir le <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">pas</span> ?
+            </h2>
                 <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
                   Découvrez la formation qui transformera votre avenir professionnel.<br className="hidden lg:block"/>
                   <span className="text-orange-500 font-medium">Votre nouvelle carrière commence ici</span>

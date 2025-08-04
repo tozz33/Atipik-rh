@@ -125,7 +125,7 @@ export default function BilanCompetences() {
           
           {/* Titre principal */}
           <div className="text-center mb-12 max-w-5xl mx-auto">
-            <h1 className="text-4xl lg:text-6xl font-bold text-[#013F63] mb-8 leading-tight tracking-tight">
+            <h1 className="text-3xl lg:text-5xl font-bold text-[#013F63] mb-8 leading-tight tracking-tight">
               Bilan de <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">compétences</span><br/>
               à <span className="text-blue-600 font-brittany text-5xl lg:text-6xl">Bordeaux</span>
             </h1>

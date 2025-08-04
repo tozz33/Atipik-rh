@@ -23,8 +23,14 @@ export default function CertificationAccessibilite() {
         <div className="h-20"></div>
 
                 {/* Introduction */}
-        <section className="py-12 bg-gradient-to-br from-slate-50 to-blue-50">
-          <div className="container mx-auto px-4">
+        <section className="relative py-16 overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">
+          
+          {/* Background animé */}
+          <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+          <div className="absolute top-40 right-1/4 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-1000"></div>
+          <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-orange-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-2000"></div>
+          
+          <div className="relative z-10 container mx-auto px-4 pt-8 pb-8">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-3xl lg:text-5xl font-bold text-[#013F63] mb-6 leading-tight tracking-tight">
                 Certification <span className="text-orange-500 font-brittany font-black">& Accessibilité</span>
@@ -45,7 +51,7 @@ export default function CertificationAccessibilite() {
                 <div className="text-center lg:text-left lg:pl-12">
                   <div className="text-center lg:text-left mb-8">
                     <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-6">
-                      Certification <span className="text-orange-500 font-brittany text-3xl lg:text-4xl">qualité</span>
+                      Certification <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">qualité</span>
                     </h2>
                   </div>
                   
@@ -122,7 +128,7 @@ export default function CertificationAccessibilite() {
                 <div className="text-center lg:text-left order-1 lg:order-2">
                                       <div className="text-center lg:text-left mb-8">
                       <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-6">
-                        Handi<span className="text-orange-500 font-brittany text-3xl lg:text-4xl">accueillant</span>
+                        Handi<span className="text-orange-500 font-brittany text-4xl lg:text-5xl">accueillant</span>
                       </h2>
                     </div>
                   
@@ -170,7 +176,7 @@ export default function CertificationAccessibilite() {
                 <div className="text-center lg:text-left lg:pl-12">
                   <div className="text-center lg:text-left mb-8">
                     <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-6">
-                      Partenariats <span className="text-orange-500 font-brittany text-3xl lg:text-4xl">d'excellence</span>
+                      Partenariats <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">d'excellence</span>
                     </h2>
                   </div>
 
@@ -239,7 +245,7 @@ export default function CertificationAccessibilite() {
 
                 <div className="text-center lg:text-left">
                   <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-6">
-                    Club d'entreprise <span className="text-orange-500 font-brittany text-3xl lg:text-4xl">Bassens</span>
+                    Club d'entreprise <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Bassens</span>
                   </h2>
                   <p className="text-xl text-gray-600 leading-relaxed mb-8">
                     Atipik RH est fière de faire partie du Club d'Entreprise de Bassens, 
@@ -272,7 +278,7 @@ export default function CertificationAccessibilite() {
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl lg:text-5xl font-bold text-[#013F63] mb-6">
-                  Pourquoi ces <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">certifications ?</span>
+                  Pourquoi ces <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">engagements ?</span>
                 </h2>
                 <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
                   Des garanties concrètes pour votre parcours de formation
@@ -323,7 +329,7 @@ export default function CertificationAccessibilite() {
             <div className="max-w-4xl mx-auto text-center">
               
               <h2 className="text-4xl lg:text-5xl font-bold text-[#013F63] mb-6">
-                Prêt à bénéficier d'une <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">formation certifiée ?</span>
+                Prêt à bénéficier d'une <span className="text-orange-500 font-brittany text-5xl lg:text-6xl whitespace-nowrap">formation certifiée ?</span>
               </h2>
               
               <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">

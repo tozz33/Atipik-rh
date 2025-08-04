@@ -24,29 +24,6 @@ export default function FormationCIP() {
 
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-orange-50">
-          {/* Éléments graphiques décoratifs */}
-          <div className="absolute top-0 right-0 w-96 h-96 opacity-60">
-            <svg viewBox="0 0 400 400" className="w-full h-full">
-              <path d="M400,0 C400,0 320,80 240,80 C160,80 80,160 80,240 C80,320 160,400 240,400 L400,400 Z" fill="url(#blueGradient)" />
-              <defs>
-                <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#dbeafe" stopOpacity="0.8"/>
-                  <stop offset="100%" stopColor="#93c5fd" stopOpacity="0.4"/>
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-          <div className="absolute top-20 right-20 w-48 h-48 opacity-40">
-            <svg viewBox="0 0 200 200" className="w-full h-full">
-              <circle cx="100" cy="100" r="80" fill="url(#orangeGradient)" />
-              <defs>
-                <linearGradient id="orangeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#fed7aa" stopOpacity="0.6"/>
-                  <stop offset="100%" stopColor="#fb923c" stopOpacity="0.3"/>
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
           
           {/* Background animé existant */}
           <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
@@ -61,9 +38,9 @@ export default function FormationCIP() {
                 Titre Professionnel Niveau 5 • RNCP37274
               </div>
               
-              <h1 className="text-4xl lg:text-6xl font-bold text-[#013F63] mb-8 leading-tight tracking-tight">
+              <h1 className="text-3xl lg:text-5xl font-bold text-[#013F63] mb-8 leading-tight tracking-tight">
                 Formation <span className="text-blue-600 font-brittany text-5xl lg:text-6xl">CIP</span><br/>
-                <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Conseiller en Insertion Professionnelle</span>
+                <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">Conseiller en Insertion Professionnelle</span>
               </h1>
               
               <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed font-light mb-8">

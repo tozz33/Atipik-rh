@@ -169,7 +169,7 @@ export default function QuizBilanCompetences() {
                   {/* Header du quiz */}
                   <div className="text-center mb-12">
                     <h1 className="text-3xl lg:text-4xl font-bold mb-4">
-                      <span className="text-[#013F63]">Avez-vous besoin d'un</span> <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">bilan de compétences</span> ?
+                      <span className="text-[#013F63]">Avez-vous besoin d'un</span> <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">bilan de compétences</span> ?
                     </h1>
                     <p className="text-xl text-gray-600 mb-8">
                       Découvrez en 8 questions si un bilan peut vous aider dans votre évolution professionnelle

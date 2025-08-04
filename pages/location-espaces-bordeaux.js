@@ -108,7 +108,7 @@ export default function LocationEspacesBordeaux() {
     <>
       <Head>
         {/* SEO Meta Tags */}
-        <title>Location Salle Formation & Bureau Bordeaux - Dès 40€ | Atipik RH Lormont</title>
+        <title>Location Salle Formation & Bureau Lormont - Dès 40€ | Atipik RH Lormont</title>
         <meta name="description" content="🏢 Location salle formation, réunion et bureau à Bordeaux-Lormont. 3 salles (10-20 pers) + bureaux individuels. Équipées, parking gratuit. Dès 40€/demi-journée." />
         <meta name="keywords" content="location salle formation Bordeaux, location salle réunion Lormont, bureau à louer Bordeaux, espace formation Gironde, salle équipée Bordeaux métropole" />
         
@@ -119,7 +119,7 @@ export default function LocationEspacesBordeaux() {
         <meta name="ICBM" content="44.8787, -0.5241" />
         
         {/* Open Graph */}
-        <meta property="og:title" content="Location Salle Formation & Bureau Bordeaux - Dès 40€ | Atipik RH" />
+                  <meta property="og:title" content="Location Salle Formation & Bureau Lormont - Dès 40€ | Atipik RH" />
         <meta property="og:description" content="🏢 3 salles de formation (10-20 personnes) + bureaux individuels à louer à Bordeaux-Lormont. Équipées, parking gratuit, dès 40€." />
         <meta property="og:type" content="business.business" />
         <meta property="og:url" content="https://atipikrh.com/location-espaces-bordeaux" />
@@ -132,7 +132,7 @@ export default function LocationEspacesBordeaux() {
         
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Location Salle Formation & Bureau Bordeaux - Dès 40€" />
+                  <meta name="twitter:title" content="Location Salle Formation & Bureau Lormont - Dès 40€" />
         <meta name="twitter:description" content="3 salles équipées + bureaux individuels à Bordeaux-Lormont. Parking gratuit, Wi-Fi, tout inclus." />
         
         {/* Canonical URL */}
@@ -272,10 +272,10 @@ export default function LocationEspacesBordeaux() {
 
               {/* Titre principal H1 optimisé SEO */}
               <div className="text-center mb-16">
-                <h1 className="text-4xl lg:text-6xl font-bold text-[#013F63] mb-6 leading-tight">
-                  Location <span className="text-orange-500 font-brittany text-5xl lg:text-7xl">Salle</span> Formation<br/>
-                  & <span className="text-blue-600 font-brittany text-5xl lg:text-7xl">Bureau</span> Bordeaux
-                </h1>
+                              <h1 className="text-3xl lg:text-5xl font-bold text-[#013F63] mb-6 leading-tight">
+                Location <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">Salle</span> Formation<br/>
+                & <span className="text-blue-600 font-brittany text-5xl lg:text-6xl">Bureau</span> Lormont
+              </h1>
                 <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed mb-8">
                   <strong>3 salles équipées</strong> (10-20 personnes) + <strong>bureaux individuels</strong><br className="hidden lg:block"/>
                   à <span className="text-orange-500 font-semibold">Lormont</span> - Parking gratuit inclus
@@ -292,11 +292,11 @@ export default function LocationEspacesBordeaux() {
                     <div className="text-sm text-gray-700">équipées</div>
                   </div>
                   <div className="bg-white rounded-xl p-4 shadow-lg border border-gray-100">
-                    <div className="text-2xl font-bold text-purple-600 mb-1">5min</div>
+                    <div className="text-2xl font-bold text-[#013F63] mb-1">5min</div>
                     <div className="text-sm text-gray-700">de Bordeaux</div>
                   </div>
                   <div className="bg-white rounded-xl p-4 shadow-lg border border-gray-100">
-                    <div className="text-2xl font-bold text-green-600 mb-1">Parking</div>
+                    <div className="text-2xl font-bold text-orange-500 mb-1">Parking</div>
                     <div className="text-sm text-gray-700">gratuit</div>
                   </div>
                 </div>
@@ -371,7 +371,7 @@ export default function LocationEspacesBordeaux() {
                         </div>
                         <div className="flex justify-between items-center py-2">
                           <span className="text-gray-700">Weekend</span>
-                          <span className="font-bold text-purple-600">{salle.weekend}€</span>
+                          <span className="font-bold text-[#013F63]">{salle.weekend}€</span>
                         </div>
                       </div>
 
@@ -381,7 +381,7 @@ export default function LocationEspacesBordeaux() {
                         <div className="space-y-1">
                           {salle.equipements.map((equip, i) => (
                             <div key={i} className="flex items-center gap-2 text-sm text-gray-600">
-                              <CheckCircle className="w-4 h-4 text-green-500" />
+                              <CheckCircle className="w-4 h-4 text-orange-500" />
                               {equip}
                             </div>
                           ))}
@@ -446,7 +446,7 @@ export default function LocationEspacesBordeaux() {
                         </div>
                         <div className="flex justify-between items-center">
                           <span className="text-gray-700">Weekend</span>
-                          <span className="font-bold text-purple-600">{bureau.weekend}€</span>
+                          <span className="font-bold text-[#013F63]">{bureau.weekend}€</span>
                         </div>
                       </div>
 
@@ -486,7 +486,7 @@ export default function LocationEspacesBordeaux() {
               
               <div className="text-center mb-16">
                 <h2 className="text-4xl lg:text-5xl font-bold text-[#013F63] mb-6">
-                  Équipements <span className="text-purple-600 font-brittany text-5xl lg:text-6xl">Inclus</span>
+                  Équipements <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">Inclus</span>
                 </h2>
                 <p className="text-xl text-gray-600">
                   Tout le nécessaire pour la réussite de vos événements professionnels
@@ -506,27 +506,27 @@ export default function LocationEspacesBordeaux() {
                   <p className="text-sm text-gray-600">Wi-Fi haut débit gratuit</p>
                 </div>
                 
-                <div className="text-center p-6 bg-purple-50 rounded-2xl">
-                  <Coffee className="w-12 h-12 text-purple-600 mx-auto mb-4" />
+                <div className="text-center p-6 bg-orange-50 rounded-2xl">
+                  <Coffee className="w-12 h-12 text-orange-500 mx-auto mb-4" />
                   <h3 className="font-bold text-gray-800 mb-2">Restauration</h3>
                   <p className="text-sm text-gray-600">Thé, café, collations</p>
                 </div>
                 
-                <div className="text-center p-6 bg-green-50 rounded-2xl">
-                  <Car className="w-12 h-12 text-green-600 mx-auto mb-4" />
+                <div className="text-center p-6 bg-blue-50 rounded-2xl">
+                  <Car className="w-12 h-12 text-[#013F63] mx-auto mb-4" />
                   <h3 className="font-bold text-gray-800 mb-2">Stationnement</h3>
                   <p className="text-sm text-gray-600">Parking privé gratuit</p>
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-3xl p-8 border border-gray-100">
+              <div className="bg-gradient-to-br from-blue-50 to-orange-50 rounded-3xl p-8 border border-gray-100">
                 <h3 className="text-2xl font-bold text-[#013F63] mb-6 text-center">
                   Liste complète des équipements - Salles de formation
                 </h3>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                   {equipementsInclus.map((equip, index) => (
                     <div key={index} className="flex items-center gap-3 p-3 bg-white/60 rounded-lg">
-                      <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-orange-500 flex-shrink-0" />
                       <span className="text-gray-700">{equip}</span>
                     </div>
                   ))}
@@ -565,24 +565,24 @@ export default function LocationEspacesBordeaux() {
 
                   <div className="bg-white rounded-2xl p-6 shadow-lg">
                     <h3 className="font-bold text-gray-800 mb-4 flex items-center gap-2">
-                      <Car className="w-6 h-6 text-green-600" />
+                      <Car className="w-6 h-6 text-[#013F63]" />
                       Accès et stationnement
                     </h3>
                     <ul className="space-y-2 text-gray-600">
                       <li className="flex items-center gap-2">
-                        <CheckCircle className="w-4 h-4 text-green-500" />
+                        <CheckCircle className="w-4 h-4 text-orange-500" />
                         5 minutes du centre de Bordeaux
                       </li>
                       <li className="flex items-center gap-2">
-                        <CheckCircle className="w-4 h-4 text-green-500" />
+                        <CheckCircle className="w-4 h-4 text-orange-500" />
                         Parking privé gratuit sur place
                       </li>
                       <li className="flex items-center gap-2">
-                        <CheckCircle className="w-4 h-4 text-green-500" />
+                        <CheckCircle className="w-4 h-4 text-orange-500" />
                         Accès tramway Ligne A - Arrêt Lormont
                       </li>
                       <li className="flex items-center gap-2">
-                        <CheckCircle className="w-4 h-4 text-green-500" />
+                        <CheckCircle className="w-4 h-4 text-orange-500" />
                         Proche rocade A630
                       </li>
                     </ul>
@@ -601,24 +601,30 @@ export default function LocationEspacesBordeaux() {
                   </div>
                 </div>
 
-                {/* Placeholder pour carte */}
-                <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
-                  <div className="bg-gradient-to-br from-blue-100 to-orange-100 rounded-xl h-80 flex items-center justify-center mb-6">
-                    <div className="text-center">
-                      <MapPin className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                      <p className="text-gray-600">Carte interactive</p>
-                      <p className="text-sm text-gray-500">Lormont - Bordeaux Métropole</p>
+                {/* Localisation Google Maps */}
+                <div className="bg-white rounded-2xl p-8 shadow-lg">
+                  <div className="flex items-center mb-6">
+                    <MapPin className="w-8 h-8 text-accent-500 mr-3" />
+                    <h3 className="text-2xl font-bold text-[#013F63]">Où nous trouver ?</h3>
+                  </div>
+                  
+                  <div className="space-y-6">
+                    <div>
+                      <h4 className="font-semibold text-[#013F63] mb-4">Localisation</h4>
+                      <div className="rounded-2xl overflow-hidden shadow-lg">
+                        <iframe 
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60000!2d-0.5165701713415016!3d44.84!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f9.5!3m3!1m2!1s0xd552f25b981e299%3A0xe468ed80c941266!2s8%20Rue%20du%20Courant%2C%2033310%20Lormont!5e0!3m2!1sfr!2sfr!4v1753190014734!5m2!1sfr!2sfr"
+                          width="100%" 
+                          height="300" 
+                          style={{border: 0}}
+                          allowFullScreen="" 
+                          loading="lazy" 
+                          referrerPolicy="no-referrer-when-downgrade"
+                          title="Localisation Atipik RH - 8 Rue du Courant, 33310 Lormont"
+                        ></iframe>
+                      </div>
                     </div>
                   </div>
-                  <a 
-                    href="https://maps.google.com/maps?q=8+Rue+du+Courant+33310+Lormont"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-semibold transition"
-                  >
-                    <MapPin className="w-5 h-5 mr-2" />
-                    Voir sur Google Maps
-                  </a>
                 </div>
               </div>
             </div>
@@ -626,76 +632,118 @@ export default function LocationEspacesBordeaux() {
         </section>
 
         {/* Section Réservation & Contact */}
-        <section className="py-20 bg-gradient-to-br from-[#013F63] to-blue-800 text-white" id="contact">
+        <section className="py-16 bg-gray-50" id="contact">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
+            <div className="max-w-5xl mx-auto">
               
-              <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-                Réservez <span className="text-orange-400 font-brittany text-5xl lg:text-6xl">Maintenant</span>
-              </h2>
-              <p className="text-xl mb-12 opacity-90">
-                Disponibilités en temps réel - Réponse immédiate
-              </p>
-
-              {/* Contact methods */}
-              <div className="grid md:grid-cols-2 gap-6 mb-12">
-                <a 
-                  href="tel:0783019955"
-                  className="flex items-center justify-center gap-4 bg-white/10 hover:bg-white/20 rounded-2xl p-6 transition"
-                  aria-label="Appeler Atipik RH pour réserver"
-                >
-                  <Phone className="w-8 h-8" />
-                  <div className="text-left">
-                    <div className="font-bold text-lg">Appelez directement</div>
-                    <div className="text-orange-300">07 83 01 99 55</div>
-                    <div className="text-sm opacity-80">Réponse immédiate</div>
-                  </div>
-                </a>
-                
-                <a 
-                  href="mailto:contact@atipikrh.fr?subject=Demande de réservation salle formation"
-                  className="flex items-center justify-center gap-4 bg-white/10 hover:bg-white/20 rounded-2xl p-6 transition"
-                  aria-label="Envoyer un email à Atipik RH"
-                >
-                  <Mail className="w-8 h-8" />
-                  <div className="text-left">
-                    <div className="font-bold text-lg">Écrivez-nous</div>
-                    <div className="text-orange-300">contact@atipikrh.fr</div>
-                    <div className="text-sm opacity-80">Devis personnalisé</div>
-                  </div>
-                </a>
+              {/* Titre principal */}
+              <div className="text-center mb-12">
+                <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-[#013F63]">
+                  Réservez <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">Maintenant</span>
+                </h2>
+                <p className="text-lg text-gray-600">
+                  Disponibilités en temps réel • Réponse immédiate
+                </p>
               </div>
 
-              {/* Urgence & garanties */}
-              <div className="bg-white/10 rounded-2xl p-6 mb-8">
-                <h3 className="font-bold text-xl mb-4">🚀 Réservation express</h3>
-                <div className="grid md:grid-cols-3 gap-4 text-sm">
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-orange-400" />
-                    <span>Disponibilités en temps réel</span>
+              {/* Grid organisé */}
+              <div className="grid md:grid-cols-2 gap-6">
+                
+                {/* Contact Téléphone */}
+                <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+                  <div className="flex items-center mb-4">
+                    <Phone className="w-6 h-6 text-[#013F63] mr-2" />
+                    <h3 className="text-lg font-bold text-[#013F63]">Appelez directement</h3>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-orange-400" />
-                    <span>Confirmation immédiate</span>
+                  <a 
+                    href="tel:0783019955"
+                    className="block p-4 bg-[#013F63] hover:bg-[#012a4a] text-white rounded-xl transition-colors"
+                    aria-label="Appeler Atipik RH"
+                  >
+                    <div className="font-bold text-lg">07 83 01 99 55</div>
+                    <div className="text-blue-200 text-sm">Lun-Ven 9h-18h</div>
+                  </a>
+                </div>
+
+                {/* Contact Email */}
+                <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+                  <div className="flex items-center mb-4">
+                    <Mail className="w-6 h-6 text-orange-500 mr-2" />
+                    <h3 className="text-lg font-bold text-[#013F63]">Écrivez-nous</h3>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-orange-400" />
-                    <span>Annulation gratuite 24h avant</span>
-                  </div>
+                  <a 
+                    href="mailto:contact@atipikrh.fr?subject=Demande de réservation salle formation"
+                    className="block p-4 bg-orange-500 hover:bg-orange-600 text-white rounded-xl transition-colors"
+                    aria-label="Envoyer un email"
+                  >
+                    <div className="font-bold text-lg">contact@atipikrh.fr</div>
+                    <div className="text-orange-200 text-sm">Réponse sous 2h</div>
+                  </a>
                 </div>
               </div>
 
-              <div className="text-center">
-                <p className="text-lg font-semibold mb-2">
-                  💡 Besoin urgent d'une salle aujourd'hui ?
-                </p>
-                <a 
-                  href="tel:0783019955"
-                  className="inline-flex items-center px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white rounded-full font-bold text-lg transition hover:scale-105 shadow-lg"
-                >
-                  <Phone className="w-5 h-5 mr-2" />
-                  Appel d'urgence - 07 83 01 99 55
-                </a>
+              {/* Informations compactes */}
+              <div className="grid md:grid-cols-2 gap-6 mt-8">
+                
+                {/* Informations pratiques */}
+                <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-orange-500 mr-2" />
+                    <h3 className="text-lg font-bold text-[#013F63]">Informations pratiques</h3>
+                  </div>
+                  <div className="space-y-3 text-sm">
+                    <div className="flex justify-between">
+                      <span className="text-gray-600">Horaires :</span>
+                      <span className="font-medium text-[#013F63]">Lun-Ven 9h-18h</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-gray-600">Samedi :</span>
+                      <span className="font-medium text-[#013F63]">Sur demande de rendez-vous</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-gray-600">Confirmation :</span>
+                      <span className="font-medium text-orange-500">Immédiate</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-gray-600">Annulation :</span>
+                      <span className="font-medium text-orange-600">Gratuite 24h</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Avantages */}
+                <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+                  <div className="flex items-center mb-4">
+                    <Star className="w-6 h-6 text-orange-500 mr-2" />
+                    <h3 className="text-lg font-bold text-[#013F63]">Nos avantages</h3>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2 text-sm">
+                    <div className="flex items-center">
+                      <div className="w-2 h-2 bg-[#013F63] rounded-full mr-2"></div>
+                      <span className="text-gray-700">Équipé complet</span>
+                    </div>
+                    <div className="flex items-center">
+                      <div className="w-2 h-2 bg-orange-500 rounded-full mr-2"></div>
+                      <span className="text-gray-700">Parking gratuit</span>
+                    </div>
+                    <div className="flex items-center">
+                      <div className="w-2 h-2 bg-[#013F63] rounded-full mr-2"></div>
+                      <span className="text-gray-700">Wi-Fi haut débit</span>
+                    </div>
+                    <div className="flex items-center">
+                      <div className="w-2 h-2 bg-orange-500 rounded-full mr-2"></div>
+                      <span className="text-gray-700">Café inclus</span>
+                    </div>
+                    <div className="flex items-center">
+                      <div className="w-2 h-2 bg-[#013F63] rounded-full mr-2"></div>
+                      <span className="text-gray-700">Nettoyage</span>
+                    </div>
+                    <div className="flex items-center">
+                      <div className="w-2 h-2 bg-orange-500 rounded-full mr-2"></div>
+                      <span className="text-gray-700">Climatisation</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

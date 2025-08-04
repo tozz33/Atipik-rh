@@ -56,6 +56,26 @@ export default function Footer() {
                 </svg>
               </a>
             </div>
+            
+            {/* Logos certifications */}
+            <div className="mt-6">
+              <div className="flex space-x-4 items-center">
+                <Image 
+                  src="/images/certifications/qualiopi.png" 
+                  alt="Certification Qualiopi - Atipik RH" 
+                  width={80} 
+                  height={80}
+                  className="object-contain"
+                />
+                <Image 
+                  src="/images/certifications/formation-handicap.png" 
+                  alt="Formation Handicap - Atipik RH" 
+                  width={60} 
+                  height={60}
+                  className="object-contain"
+                />
+              </div>
+            </div>
           </div>
           
           {/* Services */}
@@ -91,32 +111,14 @@ export default function Footer() {
               <div className="mt-3 pt-2 border-t border-gray-700">
                 <p className="text-sm font-medium">Horaires :</p>
                 <p className="text-sm">Lun-Ven : 9h-18h</p>
-                <p className="text-sm">Sam : 9h-12h</p>
+                <p className="text-sm">Sam : Sur demande de rendez-vous</p>
               </div>
             </div>
           </div>
           
         </div>
         
-        {/* Certifications */}
-        <div className="mt-12 pt-8 border-t border-gray-700">
-          <div className="flex flex-wrap justify-center items-center gap-10">
-            <Image 
-              src="/images/certifications/qualiopi.png" 
-              alt="Certification Qualiopi" 
-              width={120} 
-              height={120}
-              className="h-20 w-auto opacity-70 hover:opacity-100 transition-opacity"
-            />
-            <Image 
-              src="/images/certifications/formation-handicap.png" 
-              alt="Formation accessible aux personnes handicapées" 
-              width={120} 
-              height={120}
-              className="h-20 w-auto opacity-70 hover:opacity-100 transition-opacity"
-            />
-          </div>
-        </div>
+
         
         {/* Ligne de séparation et copyright */}
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">

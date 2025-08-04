@@ -87,11 +87,11 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                     <div className="font-medium">Formation CIP</div>
                     <div className="text-xs text-blue-400">Conseiller en Insertion Professionnelle</div>
                   </Link>
-                  <Link 
-                    href="/formations/courtes" 
-                    className="block px-4 py-3 text-sm text-[#013F63] hover:bg-blue-50 hover:text-[#012a4a] transition-colors border-t border-gray-100"
-                  >
-                    <div className="font-medium">Formations professionnalisantes</div>
+                                      <Link
+                      href="/formations-courtes-professionnalisantes"
+                      className="block px-4 py-3 text-sm text-[#013F63] hover:bg-blue-50 hover:text-[#012a4a] transition-colors border-t border-gray-100"
+                    >
+                    <div className="font-medium">Formations courtes professionnalisantes</div>
                     <div className="text-xs text-blue-400">Montée en compétences rapide</div>
                   </Link>
                   <Link 

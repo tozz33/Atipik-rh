@@ -57,7 +57,7 @@ export default function NathalieBiotti() {
                     Formatrice
                   </div>
                   <h1 className="text-3xl lg:text-4xl font-bold text-[#013F63] leading-tight">
-                    Nathalie BIOTTI
+                    <span className="font-brittany text-3xl lg:text-4xl">Nathalie</span> <span className="font-semibold">BIOTTI</span>
                   </h1>
                   <p className="text-gray-600 leading-relaxed">
                     Accompagnement à distance sur toute la France ou en présentiel à <span className="text-orange-500 font-semibold">Lormont</span>

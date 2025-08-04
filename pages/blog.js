@@ -159,8 +159,14 @@ export default function Blog() {
         <div className="h-20"></div>
 
         {/* Header avec style amélioré */}
-        <section className="py-16 bg-gradient-to-br from-slate-50 to-blue-50 relative">
-          <div className="container mx-auto px-4">
+        <section className="relative py-16 overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">
+          
+          {/* Background animé */}
+          <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+          <div className="absolute top-40 right-1/4 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-1000"></div>
+          <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-orange-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-2000"></div>
+          
+          <div className="relative z-10 container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
               <div className="relative inline-block mb-6">
                 <h1 className="text-5xl lg:text-7xl font-black text-[#013F63] drop-shadow-sm tracking-tighter">
@@ -180,7 +186,7 @@ export default function Blog() {
             </div>
           </div>
           {/* Ligne orange à la séparation */}
-          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-48 h-1 bg-orange-500 rounded-full"></div>
+          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-48 h-1 bg-orange-500 rounded-full z-10"></div>
         </section>
 
                  {/* Filtres par catégorie */}

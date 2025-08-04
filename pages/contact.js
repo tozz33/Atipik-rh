@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import { MapPin, Phone, Mail, Clock, Send, MessageCircle, Calendar } from 'lucide-react'
+import { MapPin, Phone, Mail, Clock, Send, MessageCircle, Calendar, Facebook, Instagram, Linkedin } from 'lucide-react'
 
 export default function Contact() {
 
@@ -25,29 +25,7 @@ export default function Contact() {
 
         {/* Hero Section avec background animé */}
         <section className="relative py-16 overflow-hidden bg-gradient-to-br from-blue-50 via-white to-orange-50">
-          {/* Éléments graphiques décoratifs */}
-          <div className="absolute top-0 right-0 w-80 h-80 opacity-50">
-            <svg viewBox="0 0 320 320" className="w-full h-full">
-              <path d="M320,0 C320,0 260,60 200,60 C140,60 80,120 80,180 C80,240 140,300 200,300 L320,300 Z" fill="url(#contactBlueGradient)" />
-              <defs>
-                <linearGradient id="contactBlueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#dbeafe" stopOpacity="0.8"/>
-                  <stop offset="100%" stopColor="#2563eb" stopOpacity="0.3"/>
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-          <div className="absolute top-16 right-16 w-32 h-32 opacity-35">
-            <svg viewBox="0 0 128 128" className="w-full h-full">
-              <circle cx="64" cy="64" r="48" fill="url(#contactOrangeGradient)" />
-              <defs>
-                <linearGradient id="contactOrangeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#fed7aa" stopOpacity="0.6"/>
-                  <stop offset="100%" stopColor="#f97316" stopOpacity="0.2"/>
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
+
           
           {/* Background animé existant */}
           <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
@@ -58,9 +36,9 @@ export default function Contact() {
             
             {/* Titre principal */}
             <div className="text-center mb-8 max-w-4xl mx-auto">
-              <h1 className="text-4xl lg:text-6xl font-bold mb-8 leading-tight tracking-tight">
-                <span className="text-[#013F63]">Parlons de votre</span> <span className="text-orange-500 font-brittany text-5xl lg:text-7xl">projet</span>
-              </h1>
+                          <h1 className="text-3xl lg:text-5xl font-bold mb-8 leading-tight tracking-tight">
+              <span className="text-[#013F63]">Parlons de votre</span> <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">projet</span>
+            </h1>
               <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed font-light">
                 Un premier échange pour clarifier vos objectifs<br className="hidden lg:block"/>
                 <span className="text-orange-500 font-medium">et découvrir les solutions qui vous correspondent.</span>
@@ -196,7 +174,7 @@ export default function Contact() {
                     </div>
                     <div className="flex justify-between">
                       <span>Samedi</span>
-                      <span className="font-medium">9h00 - 12h00</span>
+                      <span className="font-medium">Sur demande de rendez-vous</span>
                     </div>
                     <div className="flex justify-between">
                       <span>Dimanche</span>
@@ -220,7 +198,7 @@ export default function Contact() {
                     <div className="flex items-start">
                       <MapPin className="w-6 h-6 text-gray-400 mr-4 mt-1 flex-shrink-0" />
                       <div>
-                        <p className="font-semibold text-gray-900">Adresse</p>
+                        <p className="font-semibold text-[#013F63]">Adresse</p>
                         <p className="text-gray-600">
                           8 Rue du Courant<br />
                           33310 Lormont<br />
@@ -232,7 +210,7 @@ export default function Contact() {
                     <div className="flex items-center">
                       <Phone className="w-6 h-6 text-gray-400 mr-4 flex-shrink-0" />
                       <div>
-                        <p className="font-semibold text-gray-900">Téléphone</p>
+                        <p className="font-semibold text-[#013F63]">Téléphone</p>
                         <a href="tel:+33783019955" className="text-accent-500 hover:text-accent-600 transition-colors">
                           07 83 01 99 55
                         </a>
@@ -242,7 +220,7 @@ export default function Contact() {
                     <div className="flex items-center">
                       <Mail className="w-6 h-6 text-gray-400 mr-4 flex-shrink-0" />
                       <div>
-                        <p className="font-semibold text-gray-900">Email</p>
+                        <p className="font-semibold text-[#013F63]">Email</p>
                         <a href="mailto:contact@atipikrh.fr" className="text-accent-500 hover:text-accent-600 transition-colors">
                           contact@atipikrh.fr
                         </a>
@@ -260,7 +238,7 @@ export default function Contact() {
                   
                   <div className="space-y-6">
                     <div className="bg-gray-50 rounded-2xl p-6">
-                      <h3 className="font-semibold text-gray-900 mb-4">Accès transports en commun</h3>
+                      <h3 className="font-semibold text-[#013F63] mb-4">Accès transports en commun</h3>
                       <div className="space-y-3">
                         <div className="flex items-center">
                           <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></div>
@@ -278,10 +256,10 @@ export default function Contact() {
                     </div>
                     
                     <div className="mt-6">
-                      <h3 className="font-semibold text-gray-900 mb-4">Localisation</h3>
+                      <h3 className="font-semibold text-[#013F63] mb-4">Localisation</h3>
                       <div className="rounded-2xl overflow-hidden shadow-lg">
                         <iframe 
-                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4216.408390785319!2d-0.5165701713415016!3d44.87996105872701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd552f25b981e299%3A0xe468ed80c941266!2s8%20Rue%20du%20Courant%2C%2033310%20Lormont!5e0!3m2!1sfr!2sfr!4v1753190014734!5m2!1sfr!2sfr"
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60000!2d-0.5165701713415016!3d44.84!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f9.5!3m3!1m2!1s0xd552f25b981e299%3A0xe468ed80c941266!2s8%20Rue%20du%20Courant%2C%2033310%20Lormont!5e0!3m2!1sfr!2sfr!4v1753190014734!5m2!1sfr!2sfr"
                           width="100%" 
                           height="300" 
                           style={{border: 0}}
@@ -298,6 +276,57 @@ export default function Contact() {
               </div>
             </div>
 
+          </div>
+        </section>
+
+        {/* Section Réseaux Sociaux */}
+        <section className="py-8 bg-gradient-to-br from-blue-50 via-white to-orange-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+                
+                {/* Texte */}
+                <div className="text-center lg:text-left">
+                  <h2 className="text-2xl font-bold text-[#013F63]">
+                    Suivez-nous sur les <span className="text-orange-500 font-brittany text-2xl lg:text-3xl">réseaux</span>
+                  </h2>
+                </div>
+                
+                {/* Réseaux sociaux */}
+                <div className="flex items-center gap-6">
+                  <a 
+                    href="https://www.facebook.com/atipikrh33/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center w-12 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-full transition-all duration-300 transform hover:scale-110 shadow-lg"
+                    aria-label="Suivez-nous sur Facebook"
+                  >
+                    <Facebook className="w-6 h-6" />
+                  </a>
+                  
+                  <a 
+                    href="https://www.instagram.com/atipikrh33?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center w-12 h-12 bg-orange-500 hover:bg-orange-600 text-white rounded-full transition-all duration-300 transform hover:scale-110 shadow-lg"
+                    aria-label="Suivez-nous sur Instagram"
+                  >
+                    <Instagram className="w-6 h-6" />
+                  </a>
+                  
+                  <a 
+                    href="https://www.linkedin.com/company/atipik-rh33/posts/?feedView=all" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center w-12 h-12 bg-[#013F63] hover:bg-[#012a4a] text-white rounded-full transition-all duration-300 transform hover:scale-110 shadow-lg"
+                    aria-label="Suivez-nous sur LinkedIn"
+                  >
+                    <Linkedin className="w-6 h-6" />
+                  </a>
+                </div>
+                
+              </div>
+            </div>
           </div>
         </section>
 
