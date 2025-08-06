@@ -4,7 +4,7 @@ import { Phone, Mail } from 'lucide-react'
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-16">
+    <footer className="bg-gray-900 text-white pt-8 pb-6">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
           
@@ -111,7 +111,7 @@ export default function Footer() {
               <div className="mt-3 pt-2 border-t border-gray-700">
                 <p className="text-sm font-medium">Horaires :</p>
                 <p className="text-sm">Lun-Ven : 9h-18h</p>
-                <p className="text-sm">Sam : Sur demande de rendez-vous</p>
+                <p className="text-sm">Sam : sur rendez-vous</p>
               </div>
             </div>
           </div>

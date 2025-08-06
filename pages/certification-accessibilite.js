@@ -15,20 +15,21 @@ export default function CertificationAccessibilite() {
         <link rel="canonical" href="https://atipikrh.fr/certification-accessibilite" />
       </Head>
 
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">
+        {/* Background animé global */}
+        <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+        <div className="absolute top-40 right-1/4 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-1000"></div>
+        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-orange-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-2000"></div>
+        <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-purple-100 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-pulse animation-delay-3000"></div>
         
-        <Header isFixed={true} />
+        <div className="relative z-10">
+          <Header isFixed={true} />
 
-        {/* Spacer for fixed header */}
-        <div className="h-20"></div>
+          {/* Spacer for fixed header */}
+          <div className="h-20"></div>
 
-                {/* Introduction */}
-        <section className="relative py-16 overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">
-          
-          {/* Background animé */}
-          <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
-          <div className="absolute top-40 right-1/4 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-1000"></div>
-          <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-orange-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-2000"></div>
+                  {/* Introduction */}
+          <section className="relative py-16 overflow-hidden">
           
           <div className="relative z-10 container mx-auto px-4 pt-8 pb-8">
             <div className="max-w-4xl mx-auto text-center">
@@ -44,7 +45,7 @@ export default function CertificationAccessibilite() {
         </section>
 
         {/* Certification Qualiopi */}
-        <section className="py-24 bg-white">
+        <section className="py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="grid lg:grid-cols-2 gap-16 items-start">
@@ -109,7 +110,7 @@ export default function CertificationAccessibilite() {
         </section>
 
         {/* Formation & Handicap */}
-        <section className="py-24 bg-white">
+        <section className="py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
                             <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -169,7 +170,7 @@ export default function CertificationAccessibilite() {
         {/* Mon Compte Formation - Supprimé car plus dans le footer */}
 
         {/* Nos entreprises s'engagent */}
-        <section className="py-24 bg-gray-50">
+        <section className="py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="grid lg:grid-cols-2 gap-16 items-start">
@@ -227,12 +228,12 @@ export default function CertificationAccessibilite() {
         </section>
 
         {/* Club d'entreprise Bassens */}
-        <section className="py-24 bg-white">
+        <section className="py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="grid lg:grid-cols-2 gap-16 items-center">
-                <div className="text-center">
-                  <div className="bg-gray-50 rounded-2xl p-12 shadow-lg">
+                                  <div className="text-center">
+                  <div className="rounded-2xl p-12 shadow-lg">
                     <Image
                       src="/images/certifications/Club entreprise de bassens.jpg"
                       alt="Logo Club d'Entreprise Bassens"
@@ -273,7 +274,7 @@ export default function CertificationAccessibilite() {
         </section>
 
         {/* Avantages des certifications */}
-        <section className="py-24 bg-white">
+        <section className="py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
@@ -324,7 +325,7 @@ export default function CertificationAccessibilite() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-24 bg-white">
+        <section className="py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               
@@ -348,7 +349,8 @@ export default function CertificationAccessibilite() {
           </div>
         </section>
 
-        <Footer />
+          <Footer />
+        </div>
 
       </div>
     </>

@@ -2,8 +2,8 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import Header from '../../components/Header'
+import Footer from '../../components/Footer'
 import { 
   Users, 
   Target, 
@@ -32,7 +32,7 @@ export default function FormationsCourtesProfessionnalisantes() {
   const formations = [
     {
       id: 1,
-      titre: "Développer la relation entreprise",
+      titre: "Développer la relation entreprise: de l'accompagnement à la relation entreprise",
       sousTitre: "De l'accompagnement à la relation entreprise",
       public: "Professionnels sans expérience en relation entreprises (CIP débutants, travailleurs sociaux…)",
       objectifs: [
@@ -68,7 +68,7 @@ export default function FormationsCourtesProfessionnalisantes() {
     },
     {
       id: 2,
-      titre: "Recrutement inclusif en entreprise", 
+      titre: "Renforcer la relation avec l'entreprise : de la prospection à la valorisation de votre offre", 
       sousTitre: "Accompagner les entreprises vers plus d'inclusion",
       public: "Professionnels souhaitant développer une approche inclusive du recrutement",
       objectifs: [
@@ -104,7 +104,7 @@ export default function FormationsCourtesProfessionnalisantes() {
     },
     {
       id: 3,
-      titre: "Valorisation des compétences transférables",
+      titre: "Recruter en insertion avec les entreprises : De la co-construction à l'accompagnement stratégique RH",
       sousTitre: "Révéler et valoriser le potentiel",
       public: "Professionnels de l'accompagnement, conseillers emploi, formateurs",
       objectifs: [
@@ -140,7 +140,7 @@ export default function FormationsCourtesProfessionnalisantes() {
     },
     {
       id: 4,
-      titre: "Posture et relation d'aide",
+      titre: "Renforcer sa pratique des recrutement inclusif : de la diversité à la performance RH",
       sousTitre: "Optimiser sa pratique professionnelle",
       public: "Tous professionnels de l'accompagnement social et professionnel",
       objectifs: [
@@ -182,7 +182,7 @@ export default function FormationsCourtesProfessionnalisantes() {
         <title>Formations Courtes Professionnalisantes | Atipik RH - Lormont Bordeaux</title>
         <meta name="description" content="Formations courtes professionnalisantes pour structures d'accompagnement, acteurs insertion et entreprises. Relation entreprise, recrutement inclusif - 1150€" />
         <meta name="keywords" content="formation courte, professionnalisante, relation entreprise, recrutement inclusif, insertion professionnelle, Bordeaux, Lormont" />
-        <link rel="canonical" href="https://atipikrh.com/formations-courtes-professionnalisantes" />
+        <link rel="canonical" href="https://atipikrh.fr/formations/courtes-professionnalisantes" />
       </Head>
 
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">
@@ -484,11 +484,29 @@ export default function FormationsCourtesProfessionnalisantes() {
           {/* Accessibilité Handicap */}
           <section className="py-8">
             <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto text-center">
-                <p className="text-sm text-gray-600">
-                  <strong>Accessibilité Handicap :</strong> Nos formations sont accessibles aux personnes en situation de handicap. 
-                  Contactez-nous pour étudier ensemble les modalités d'accès qui conviennent le mieux à votre situation.
-                </p>
+              <div className="max-w-4xl mx-auto">
+                <div className="flex items-center justify-center gap-6">
+                  <Image 
+                    src="/images/certifications/formation-handicap.png" 
+                    alt="Formation accessible aux personnes en situation de handicap" 
+                    width={80} 
+                    height={80}
+                    className="object-contain flex-shrink-0"
+                  />
+                  <div className="text-sm text-gray-600 text-left">
+                    <p className="mb-2">
+                      <strong>Accessibilité Handicap :</strong> Nos formations sont accessibles aux personnes en situation de handicap.
+                    </p>
+                    <p className="mb-3">
+                      Contactez-nous pour étudier ensemble les modalités d'accès qui conviennent le mieux à votre situation.
+                    </p>
+                    <p>
+                      <strong>Responsable :</strong> Vanessa NOAH EWODO - Directrice<br/>
+                      <a href="mailto:contact@atipikrh.com" className="text-orange-500 hover:text-orange-600 transition-colors">contact@atipikrh.com</a> | 
+                      <a href="tel:0783019955" className="text-orange-500 hover:text-orange-600 transition-colors ml-1">07 83 01 99 55</a>
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </section>

@@ -5,7 +5,7 @@ import Layout from '../components/Layout';
 import Link from 'next/link'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import { Users, Mail, Phone, MapPin } from 'lucide-react'
+import { Users, Mail, Phone, MapPin, User } from 'lucide-react'
 
 export default function NotreEquipe() {
 
@@ -18,15 +18,21 @@ export default function NotreEquipe() {
         <link rel="canonical" href="https://atipikrh.fr/notre-equipe" />
       </Head>
 
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">
+        {/* Background animé global */}
+        <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+        <div className="absolute top-40 right-1/4 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-1000"></div>
+        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-orange-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-2000"></div>
+        <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-purple-100 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-pulse animation-delay-3000"></div>
         
-        <Header isFixed={true} />
+        <div className="relative z-10">
+          <Header isFixed={true} />
 
         {/* Spacer for fixed header */}
         <div className="h-20"></div>
 
         {/* Équipe d'Atipik RH */}
-        <section className="py-24 bg-white">
+        <section className="py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-7xl mx-auto">
               
@@ -44,71 +50,86 @@ export default function NotreEquipe() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                   {/* Vanessa - Directrice */}
                   <div className="text-center">
-                    <div className="w-32 h-32 mx-auto mb-4">
-                      <Image
-                        src="/images/equipe/Vanessa.jpeg"
-                        alt="Vanessa NOAH EWODO"
-                        width={128}
-                        height={128}
-                        className="w-full h-full rounded-full object-cover"
-                      />
-                    </div>
+                    <Link href="/equipe/vanessa-noah-ewodo" className="inline-block mb-4">
+                      <div className="w-40 h-40 mx-auto group [perspective:1000px]">
+                        <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                          {/* Face avant - Photo */}
+                          <div className="absolute inset-0 [backface-visibility:hidden] rounded-full">
+                            <Image
+                              src="/images/equipe/Vanessa.jpeg"
+                              alt="Vanessa NOAH EWODO"
+                              width={160}
+                              height={160}
+                              className="w-full h-full rounded-full object-cover cursor-pointer"
+                            />
+                          </div>
+                          {/* Face arrière - Icône temporaire */}
+                          <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center">
+                            <User className="w-16 h-16 text-white" />
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
                     <h3 className="text-lg text-[#013F63] mb-3">
                       <span className="font-brittany text-2xl">Vanessa</span> <span className="font-semibold">NOAH EWODO</span>
                     </h3>
                     <p className="text-orange-600 font-medium text-sm mb-3">Directrice</p>
-                    <Link 
-                      href="/equipe/vanessa-noah-ewodo"
-                      className="text-orange-400 hover:text-orange-500 underline text-sm transition-colors"
-                    >
-                      Plus d'infos sur l'expert
-                    </Link>
                   </div>
 
                   {/* Brunilda - Chargée de Formation */}
                   <div className="text-center">
-                    <div className="w-32 h-32 mx-auto mb-4">
-                      <Image
-                        src="/images/equipe/brunilda.jpeg"
-                        alt="Brunilda RAFAEL"
-                        width={128}
-                        height={128}
-                        className="w-full h-full rounded-full object-cover"
-                      />
-                    </div>
+                    <Link href="/equipe/brunilda-rafael" className="inline-block mb-4">
+                      <div className="w-40 h-40 mx-auto group [perspective:1000px]">
+                        <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                          {/* Face avant - Photo */}
+                          <div className="absolute inset-0 [backface-visibility:hidden] rounded-full">
+                            <Image
+                              src="/images/equipe/brunilda.jpeg"
+                              alt="Brunilda RAFAEL"
+                              width={160}
+                              height={160}
+                              className="w-full h-full rounded-full object-cover cursor-pointer"
+                            />
+                          </div>
+                          {/* Face arrière - Icône temporaire */}
+                          <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                            <User className="w-16 h-16 text-white" />
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
                     <h3 className="text-lg text-[#013F63] mb-3">
                       <span className="font-brittany text-2xl">Brunilda</span> <span className="font-semibold">RAFAEL</span>
                     </h3>
                     <p className="text-blue-600 font-medium text-sm mb-3">Chargée de Formation</p>
-                    <Link 
-                      href="/equipe/brunilda-rafael"
-                      className="text-orange-400 hover:text-orange-500 underline text-sm transition-colors"
-                    >
-                      Plus d'infos sur l'expert
-                    </Link>
                   </div>
 
                   {/* Liliana - Communication */}
                   <div className="text-center">
-                    <div className="w-32 h-32 mx-auto mb-4">
-                      <Image
-                        src="/images/equipe/liliana.jpeg"
-                        alt="Liliana DELMAS"
-                        width={128}
-                        height={128}
-                        className="w-full h-full rounded-full object-cover"
-                      />
-                    </div>
+                    <Link href="/equipe/liliana-delmas" className="inline-block mb-4">
+                      <div className="w-40 h-40 mx-auto group [perspective:1000px]">
+                        <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                          {/* Face avant - Photo */}
+                          <div className="absolute inset-0 [backface-visibility:hidden] rounded-full">
+                            <Image
+                              src="/images/equipe/liliana.jpeg"
+                              alt="Liliana DELMAS"
+                              width={160}
+                              height={160}
+                              className="w-full h-full rounded-full object-cover cursor-pointer"
+                            />
+                          </div>
+                          {/* Face arrière - Icône temporaire */}
+                          <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center">
+                            <User className="w-16 h-16 text-white" />
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
                     <h3 className="text-lg text-[#013F63] mb-3">
                       <span className="font-brittany text-2xl">Liliana</span> <span className="font-semibold">DELMAS</span>
                     </h3>
                     <p className="text-orange-600 font-medium text-sm mb-3">Chargée de Communication</p>
-                    <Link 
-                      href="/equipe/liliana-delmas"
-                      className="text-orange-400 hover:text-orange-500 underline text-sm transition-colors"
-                    >
-                      Plus d'infos sur l'expert
-                    </Link>
                   </div>
                 </div>
               </div>
@@ -127,156 +148,191 @@ export default function NotreEquipe() {
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
                   {/* Stéphanie */}
                   <div className="text-center">
-                    <div className="w-32 h-32 mx-auto mb-4">
-                      <Image
-                        src="/images/equipe/stephanie.jpeg"
-                        alt="Stéphanie BRETON"
-                        width={128}
-                        height={128}
-                        className="w-full h-full rounded-full object-cover"
-                      />
-                    </div>
+                    <Link href="/equipe/stephanie-breton" className="inline-block mb-4">
+                      <div className="w-40 h-40 mx-auto group [perspective:1000px]">
+                        <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                          {/* Face avant - Photo */}
+                          <div className="absolute inset-0 [backface-visibility:hidden] rounded-full">
+                            <Image
+                              src="/images/equipe/stephanie.jpeg"
+                              alt="Stéphanie BRETON"
+                              width={160}
+                              height={160}
+                              className="w-full h-full rounded-full object-cover cursor-pointer"
+                            />
+                          </div>
+                          {/* Face arrière - Icône temporaire */}
+                          <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-full bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
+                            <User className="w-16 h-16 text-white" />
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
                     <h3 className="text-base text-[#013F63] mb-2">
                       <span className="font-brittany text-xl">Stéphanie</span> <span className="font-semibold">BRETON</span>
                     </h3>
-                    <Link 
-                      href="/equipe/stephanie-breton"
-                      className="text-orange-400 hover:text-orange-500 underline text-sm transition-colors"
-                    >
-                      Plus d'infos
-                    </Link>
                   </div>
 
                   {/* Nathalie */}
                   <div className="text-center">
-                    <div className="w-32 h-32 mx-auto mb-4">
-                      <Image
-                        src="/images/equipe/nathalie.jpeg"
-                        alt="Nathalie BIOTTI"
-                        width={128}
-                        height={128}
-                        className="w-full h-full rounded-full object-cover"
-                      />
-                    </div>
+                    <Link href="/equipe/nathalie-biotti" className="inline-block mb-4">
+                      <div className="w-40 h-40 mx-auto group [perspective:1000px]">
+                        <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                          {/* Face avant - Photo */}
+                          <div className="absolute inset-0 [backface-visibility:hidden] rounded-full">
+                            <Image
+                              src="/images/equipe/nathalie.jpeg"
+                              alt="Nathalie BIOTTI"
+                              width={160}
+                              height={160}
+                              className="w-full h-full rounded-full object-cover cursor-pointer"
+                            />
+                          </div>
+                          {/* Face arrière - Icône temporaire */}
+                          <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
+                            <User className="w-16 h-16 text-white" />
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
                     <h3 className="text-base text-[#013F63] mb-2">
                       <span className="font-brittany text-xl">Nathalie</span> <span className="font-semibold">BIOTTI</span>
                     </h3>
-                    <Link 
-                      href="/equipe/nathalie-biotti"
-                      className="text-orange-400 hover:text-orange-500 underline text-sm transition-colors"
-                    >
-                      Plus d'infos
-                    </Link>
                   </div>
 
                   {/* Mouna */}
                   <div className="text-center">
-                    <div className="w-32 h-32 mx-auto mb-4">
-                      <Image
-                        src="/images/equipe/mouna.jpeg"
-                        alt="Mouna MNIAI"
-                        width={128}
-                        height={128}
-                        className="w-full h-full rounded-full object-cover"
-                      />
-                    </div>
+                    <Link href="/equipe/mouna-mniai" className="inline-block mb-4">
+                      <div className="w-40 h-40 mx-auto group [perspective:1000px]">
+                        <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                          {/* Face avant - Photo */}
+                          <div className="absolute inset-0 [backface-visibility:hidden] rounded-full">
+                            <Image
+                              src="/images/equipe/mouna.jpeg"
+                              alt="Mouna MNIAI"
+                              width={160}
+                              height={160}
+                              className="w-full h-full rounded-full object-cover cursor-pointer"
+                            />
+                          </div>
+                          {/* Face arrière - Icône temporaire */}
+                          <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-full bg-gradient-to-br from-pink-400 to-pink-600 flex items-center justify-center">
+                            <User className="w-16 h-16 text-white" />
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
                     <h3 className="text-base text-[#013F63] mb-2">
                       <span className="font-brittany text-xl">Mouna</span> <span className="font-semibold">MNIAI</span>
                     </h3>
-                    <Link 
-                      href="/equipe/mouna-mniai"
-                      className="text-orange-400 hover:text-orange-500 underline text-sm transition-colors"
-                    >
-                      Plus d'infos
-                    </Link>
                   </div>
 
                   {/* Cécile */}
                   <div className="text-center">
-                    <div className="w-32 h-32 mx-auto mb-4">
-                      <Image
-                        src="/images/equipe/cecile.jpeg"
-                        alt="Cécile BERNAT"
-                        width={128}
-                        height={128}
-                        className="w-full h-full rounded-full object-cover"
-                      />
-                    </div>
+                    <Link href="/equipe/cecile-bernat" className="inline-block mb-4">
+                      <div className="w-40 h-40 mx-auto group [perspective:1000px]">
+                        <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                          {/* Face avant - Photo */}
+                          <div className="absolute inset-0 [backface-visibility:hidden] rounded-full">
+                            <Image
+                              src="/images/equipe/cecile.jpeg"
+                              alt="Cécile BERNAT"
+                              width={160}
+                              height={160}
+                              className="w-full h-full rounded-full object-cover cursor-pointer"
+                            />
+                          </div>
+                          {/* Face arrière - Icône temporaire */}
+                          <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-full bg-gradient-to-br from-indigo-400 to-indigo-600 flex items-center justify-center">
+                            <User className="w-16 h-16 text-white" />
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
                     <h3 className="text-base text-[#013F63] mb-2">
                       <span className="font-brittany text-xl">Cécile</span> <span className="font-semibold">BERNAT</span>
                     </h3>
-                    <Link 
-                      href="/equipe/cecile-bernat"
-                      className="text-orange-400 hover:text-orange-500 underline text-sm transition-colors"
-                    >
-                      Plus d'infos
-                    </Link>
                   </div>
 
                   {/* Coraline */}
                   <div className="text-center">
-                    <div className="w-32 h-32 mx-auto mb-4">
-                      <Image
-                        src="/images/equipe/coraline.jpeg"
-                        alt="Coraline ABADIE"
-                        width={128}
-                        height={128}
-                        className="w-full h-full rounded-full object-cover"
-                      />
-                    </div>
+                    <Link href="/equipe/coraline-abadie" className="inline-block mb-4">
+                      <div className="w-40 h-40 mx-auto group [perspective:1000px]">
+                        <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                          {/* Face avant - Photo */}
+                          <div className="absolute inset-0 [backface-visibility:hidden] rounded-full">
+                            <Image
+                              src="/images/equipe/coraline.jpeg"
+                              alt="Coraline ABADIE"
+                              width={160}
+                              height={160}
+                              className="w-full h-full rounded-full object-cover cursor-pointer"
+                            />
+                          </div>
+                          {/* Face arrière - Icône temporaire */}
+                          <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-full bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center">
+                            <User className="w-16 h-16 text-white" />
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
                     <h3 className="text-base text-[#013F63] mb-2">
                       <span className="font-brittany text-xl">Coraline</span> <span className="font-semibold">ABADIE</span>
                     </h3>
-                    <Link 
-                      href="/equipe/coraline-abadie"
-                      className="text-orange-400 hover:text-orange-500 underline text-sm transition-colors"
-                    >
-                      Plus d'infos
-                    </Link>
                   </div>
 
                   {/* Windy */}
                   <div className="text-center">
-                    <div className="w-32 h-32 mx-auto mb-4">
-                      <Image
-                        src="/images/equipe/windy.jpeg"
-                        alt="Windy TELGA"
-                        width={128}
-                        height={128}
-                        className="w-full h-full rounded-full object-cover"
-                      />
-                    </div>
+                    <Link href="/equipe/windy-telga" className="inline-block mb-4">
+                      <div className="w-40 h-40 mx-auto group [perspective:1000px]">
+                        <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                          {/* Face avant - Photo */}
+                          <div className="absolute inset-0 [backface-visibility:hidden] rounded-full">
+                            <Image
+                              src="/images/equipe/windy.jpeg"
+                              alt="Windy TELGA"
+                              width={160}
+                              height={160}
+                              className="w-full h-full rounded-full object-cover cursor-pointer"
+                            />
+                          </div>
+                          {/* Face arrière - Icône temporaire */}
+                          <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center">
+                            <User className="w-16 h-16 text-white" />
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
                     <h3 className="text-base text-[#013F63] mb-2">
                       <span className="font-brittany text-xl">Windy</span> <span className="font-semibold">TELGA</span>
                     </h3>
-                    <Link 
-                      href="/equipe/windy-telga"
-                      className="text-orange-400 hover:text-orange-500 underline text-sm transition-colors"
-                    >
-                      Plus d'infos
-                    </Link>
                   </div>
 
                   {/* Anne-Lise */}
                   <div className="text-center">
-                    <div className="w-32 h-32 mx-auto mb-4">
-                      <Image
-                        src="/images/equipe/anne-lise.jpeg"
-                        alt="Anne-Lise COATRINE"
-                        width={128}
-                        height={128}
-                        className="w-full h-full rounded-full object-cover"
-                      />
-                    </div>
+                    <Link href="/equipe/anne-lise-coatrine" className="inline-block mb-4">
+                      <div className="w-40 h-40 mx-auto group [perspective:1000px]">
+                        <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                          {/* Face avant - Photo */}
+                          <div className="absolute inset-0 [backface-visibility:hidden] rounded-full">
+                            <Image
+                              src="/images/equipe/anne-lise.jpeg"
+                              alt="Anne-Lise COATRINE"
+                              width={160}
+                              height={160}
+                              className="w-full h-full rounded-full object-cover cursor-pointer"
+                            />
+                          </div>
+                          {/* Face arrière - Icône temporaire */}
+                          <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-full bg-gradient-to-br from-red-400 to-red-600 flex items-center justify-center">
+                            <User className="w-16 h-16 text-white" />
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
                     <h3 className="text-base text-[#013F63] mb-2">
                       <span className="font-brittany text-xl">Anne-Lise</span> <span className="font-semibold">COATRINE</span>
                     </h3>
-                    <Link 
-                      href="/equipe/anne-lise-coatrine"
-                      className="text-orange-400 hover:text-orange-500 underline text-sm transition-colors"
-                    >
-                      Plus d'infos
-                    </Link>
                   </div>
                 </div>
               </div>
@@ -286,12 +342,12 @@ export default function NotreEquipe() {
 
 
         {/* Contact équipe */}
-        <section className="pt-12 pb-24 bg-white">
+        <section className="pt-6 pb-24">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               
               <h2 className="text-4xl lg:text-5xl font-bold text-[#013F63] mb-6">
-                Rencontrez <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">notre équipe</span>
+                Rencontrons-<span className="text-orange-500 font-brittany text-5xl lg:text-6xl">nous</span>
               </h2>
               
               <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
@@ -349,7 +405,7 @@ export default function NotreEquipe() {
           </div>
         </section>
 
-
+        </div>
 
         <Footer />
 

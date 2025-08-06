@@ -24,7 +24,7 @@ export default function Contact() {
         <div className="h-20"></div>
 
         {/* Hero Section avec background animé */}
-        <section className="relative py-16 overflow-hidden bg-gradient-to-br from-blue-50 via-white to-orange-50">
+        <section className="relative py-8 overflow-hidden bg-gradient-to-br from-blue-50 via-white to-orange-50">
 
           
           {/* Background animé existant */}
@@ -143,7 +143,7 @@ export default function Contact() {
                         id="message"
                         name="message"
                         required
-                        rows="5"
+                        rows="6"
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-colors resize-y"
                         placeholder="Décrivez-nous votre projet, vos objectifs ou vos questions..."
                       ></textarea>
@@ -174,7 +174,7 @@ export default function Contact() {
                     </div>
                     <div className="flex justify-between">
                       <span>Samedi</span>
-                      <span className="font-medium">Sur demande de rendez-vous</span>
+                      <span className="font-medium">sur rendez-vous</span>
                     </div>
                     <div className="flex justify-between">
                       <span>Dimanche</span>
@@ -243,7 +243,7 @@ export default function Contact() {
                         <div className="flex items-center">
                           <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></div>
                           <p className="text-gray-600">
-                            <span className="font-medium">Tram A</span> - arrêt « Lauriers » (350 mètres)
+                            <span className="font-medium">Tram A</span> direction LA GARDETTE BASSENS CARBON BLANC - arrêt « Lauriers » (350 mètres)
                           </p>
                         </div>
                         <div className="flex items-center">

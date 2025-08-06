@@ -158,7 +158,7 @@ export default function Financement() {
             {/* Titre principal */}
             <div className="text-center mb-6 max-w-5xl mx-auto">
               <h1 className="text-3xl lg:text-5xl font-bold text-[#013F63] mb-6 leading-tight tracking-tight">
-                Solutions de <span className="text-blue-600 font-brittany text-5xl lg:text-6xl">financement</span><br/>
+                Solutions de <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">financement</span><br/>
                 selon votre <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">statut</span>
               </h1>
               <p className="text-lg lg:text-xl text-gray-600 leading-relaxed font-light mb-6">
@@ -296,7 +296,8 @@ export default function Financement() {
               {activeTab === 'demandeurs-emploi' && (
                 <>
                   {/* Options de financement pour demandeurs d'emploi */}
-                  <div className="grid md:grid-cols-3 gap-8">
+                  <div className="py-8">
+                    <div className="grid md:grid-cols-3 gap-8">
                     
                     {/* AIF */}
                     <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[550px]">
@@ -388,13 +389,15 @@ export default function Financement() {
                       </Link>
                     </div>
                   </div>
+                  </div>
                 </>
               )}
 
               {activeTab === 'independants' && (
                 <>
                   {/* Options de financement pour indépendants */}
-                  <div className="grid md:grid-cols-3 gap-8">
+                  <div className="py-8">
+                    <div className="grid md:grid-cols-3 gap-8">
                     
                     {/* FAF */}
                     <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[550px]">
@@ -486,6 +489,7 @@ export default function Financement() {
                       </Link>
                     </div>
                   </div>
+                  </div>
                 </>
               )}
             </div>
@@ -531,6 +535,36 @@ export default function Financement() {
                     </div>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Accessibilité Handicap */}
+        <section className="py-8">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="flex items-center justify-center gap-6">
+                <Image 
+                  src="/images/certifications/formation-handicap.png" 
+                  alt="Formation accessible aux personnes en situation de handicap" 
+                  width={80} 
+                  height={80}
+                  className="object-contain flex-shrink-0"
+                />
+                <div className="text-sm text-gray-600 text-left">
+                  <p className="mb-2">
+                    <strong>Accessibilité Handicap :</strong> Nos formations sont accessibles aux personnes en situation de handicap.
+                  </p>
+                  <p className="mb-3">
+                    Contactez-nous pour étudier ensemble les modalités d'accès qui conviennent le mieux à votre situation.
+                  </p>
+                  <p>
+                    <strong>Responsable :</strong> Vanessa NOAH EWODO - Directrice<br/>
+                    <a href="mailto:contact@atipikrh.com" className="text-orange-500 hover:text-orange-600 transition-colors">contact@atipikrh.com</a> | 
+                    <a href="tel:0783019955" className="text-orange-500 hover:text-orange-600 transition-colors ml-1">07 83 01 99 55</a>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
