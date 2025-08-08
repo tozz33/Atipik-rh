@@ -33,27 +33,24 @@ export default function FormationsIndex() {
           {/* Spacer for fixed header */}
           <div className="h-20"></div>
 
-          {/* Hero Section */}
-          <section className="py-12">
-            <div className="container mx-auto px-4">
-              <div className="text-center max-w-4xl mx-auto">
-                <h1 className="text-3xl lg:text-5xl font-bold text-[#013F63] mb-6 leading-tight tracking-tight">
-                  Nos <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">Formations</span>
-                </h1>
-                <p className="text-lg lg:text-xl text-gray-600 leading-relaxed font-light">
-                  Développez vos compétences avec nos formations<br className="hidden lg:block"/>
-                  <span className="text-orange-500 font-medium">adaptées à vos objectifs professionnels</span>
-                </p>
-              </div>
-            </div>
-          </section>
 
-          {/* Nos 3 Formations */}
-          <section className="py-8">
+
+          {/* Formations Certifiantes */}
+          <section className="py-12">
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto">
                 
-                <div className="grid lg:grid-cols-3 gap-8">
+                {/* Titre Section Certifiantes */}
+                <div className="text-center mb-12">
+                  <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4">
+                    Formations <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Certifiantes</span>
+                  </h2>
+                  <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Obtenez une certification reconnue par l'État et développez votre expertise professionnelle
+                  </p>
+                </div>
+                
+                <div className="grid lg:grid-cols-2 gap-8 justify-center">
                   
                   {/* Formation CIP */}
                   <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:scale-105">
@@ -115,12 +112,34 @@ export default function FormationsIndex() {
                     </div>
                   </div>
 
-                  {/* Formations courtes professionnalisantes */}
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Professionnalisation du CIP */}
+          <section className="py-12">
+            <div className="container mx-auto px-4">
+              <div className="max-w-6xl mx-auto">
+                
+                {/* Titre Section Professionnalisation */}
+                <div className="text-center mb-12">
+                  <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4">
+                    Formations <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Professionnalisantes</span>
+                  </h2>
+                  <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Perfectionnez vos compétences de conseiller en insertion professionnelle avec nos formations courtes spécialisées
+                  </p>
+                </div>
+                
+                <div className="grid lg:grid-cols-1 gap-8 justify-center max-w-2xl mx-auto">
+                  
+                  {/* Formations professionnalisantes */}
                   <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:scale-105">
                     <div className="text-center">
                       <p className="text-sm text-orange-500 mb-2 font-bold">Formation</p>
                       <h3 className="text-xl font-bold text-[#013F63] mb-6">
-                        FORMATIONS PROFESSIONNALISANTES
+                        PROFESSIONNALISATION DU CIP
                       </h3>
                       
                       <div className="space-y-3 mb-8 text-sm text-gray-600">

@@ -143,7 +143,7 @@ export default function Contact() {
                         id="message"
                         name="message"
                         required
-                        rows="6"
+                        rows="5"
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-transparent transition-colors resize-y"
                         placeholder="Décrivez-nous votre projet, vos objectifs ou vos questions..."
                       ></textarea>
@@ -243,7 +243,7 @@ export default function Contact() {
                         <div className="flex items-center">
                           <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></div>
                           <p className="text-gray-600">
-                            <span className="font-medium">Tram A</span> direction LA GARDETTE BASSENS CARBON BLANC - arrêt « Lauriers » (350 mètres)
+                            <span className="font-medium">Tram A - LA GARDETTE</span> - arrêt « Lauriers » (350 mètres)
                           </p>
                         </div>
                         <div className="flex items-center">

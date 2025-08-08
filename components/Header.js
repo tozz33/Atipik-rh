@@ -138,11 +138,18 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                     <div className="text-xs text-blue-400">Les experts qui vous accompagnent</div>
                   </Link>
                   <Link 
-                    href="/certification-accessibilite" 
+                    href="/certification" 
                     className="block px-4 py-3 text-sm text-[#013F63] hover:bg-blue-50 hover:text-[#012a4a] transition-colors border-t border-gray-100"
                   >
-                    <div className="font-medium">Certification & Accessibilité</div>
-                    <div className="text-xs text-blue-400">Qualité et inclusion</div>
+                    <div className="font-medium">Certification</div>
+                    <div className="text-xs text-blue-400">Qualité et accessibilité</div>
+                  </Link>
+                  <Link 
+                    href="/partenariat" 
+                    className="block px-4 py-3 text-sm text-[#013F63] hover:bg-blue-50 hover:text-[#012a4a] transition-colors border-t border-gray-100"
+                  >
+                    <div className="font-medium">Partenariat</div>
+                    <div className="text-xs text-blue-400">Réseau d'entreprises engagées</div>
                   </Link>
                 </div>
               </div>
