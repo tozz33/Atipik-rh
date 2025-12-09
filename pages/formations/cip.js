@@ -758,7 +758,7 @@ export default function FormationCIP() {
                         <div className="space-y-3 text-[#013F63] text-sm">
                           <p>• <strong>Durée : 1102 heures</strong></p>
                           <div className="ml-4 space-y-1">
-                            <p>◦ <strong>693 heures en centre</strong></p>
+                            <p>◦ <strong>714 heures en centre</strong></p>
                             <p>◦ <strong>385 heures en entreprise</strong></p>
                             <p>◦ <strong>3 heures de session de certification</strong></p>
                           </div>
