@@ -372,8 +372,8 @@ export default function FormationCIP() {
     { label: "Taux de satisfaction", value: "9,7/10" },
     { label: "Taux de présentation au titre préparé", value: "100%" },
     { label: "Taux d'obtention du titre", value: "95%" },
-    { label: "Taux d'insertion dans le métier visé à 6 mois", value: "67%" },
-    { label: "Taux d'insertion globale à 6 mois", value: "78%" }
+    { label: "Taux d'insertion dans le métier visé à 6 mois", value: "74%" },
+    { label: "Taux d'insertion globale à 6 mois", value: "84%" }
   ]
 
   const franceCompetencesStats = [
