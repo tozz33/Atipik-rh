@@ -1,5 +1,5 @@
 
-# Atipik RH – SEO & Content Rules (v3, sans vidéo)
+# Atipik RH – Règles SEO & Contenu (v3, sans vidéo)
 
 > **Objectif :** garantir que chaque page générée par Cursor respecte les meilleures pratiques SEO 2025, **sans intégrer de contenu vidéo**.
 

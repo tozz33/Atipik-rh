@@ -1,0 +1,6 @@
+Toutes les interactions avec Cursor (chat, génération de contenu, refactor, messages, commentaires, textes marketing) doivent être rédigées en **français**.
+
+- Répondre **uniquement en français**, y compris pour les titres, les messages d’erreur reformulés, et les exemples.
+- Si l’utilisateur demande explicitement une réponse dans une autre langue, rappeler la contrainte et proposer une alternative en français.
+- Conserver les noms de variables, fonctions, fichiers et API tels quels (ne pas “franciser” les identifiants de code).
+- Pour le contenu du site, privilégier le vouvoiement et un ton professionnel, clair et chaleureux.
