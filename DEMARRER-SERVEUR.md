@@ -51,6 +51,9 @@ Si Node.js est installé et accessible :
 Une fois le serveur démarré, ouvrez votre navigateur et accédez à :
 **http://localhost:3000**
 
+> **Note :** Le navigateur s'ouvrira automatiquement sur cette adresse une fois que le serveur sera prêt (généralement quelques secondes après le démarrage).
+> Si Node.js est déjà installé mais pas détecté, redémarrez PowerShell et relancez le script.
+
 ## Arrêter le serveur
 
 Appuyez sur `Ctrl + C` dans le terminal PowerShell

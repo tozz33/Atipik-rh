@@ -19,10 +19,11 @@ if ($existingProcess) {
 }
 
 # Essayer de trouver Node.js dans différents emplacements
+$programFilesX86 = ${env:ProgramFiles(x86)}
 $nodePaths = @(
     "node",
     "$env:ProgramFiles\nodejs\node.exe",
-    "$env:ProgramFiles(x86)\nodejs\node.exe",
+    "$programFilesX86\nodejs\node.exe",
     "$env:LOCALAPPDATA\Programs\nodejs\node.exe",
     "$env:USERPROFILE\AppData\Roaming\npm\node.exe"
 )
@@ -79,18 +80,38 @@ Write-Host ""
 Write-Host "📍 Démarrage du serveur sur http://localhost:3000..." -ForegroundColor Cyan
 Write-Host ""
 
+# Trouver npm
+$npmPath = $null
+$npmDir = Split-Path $nodePath -Parent
+if (Test-Path "$npmDir\npm.cmd") {
+    $npmPath = "$npmDir\npm.cmd"
+} elseif (Test-Path "$npmDir\node_modules\npm\bin\npm-cli.js") {
+    $npmPath = "$nodePath $npmDir\node_modules\npm\bin\npm-cli.js"
+}
+
+# Vérifier les dépendances
+if (-not (Test-Path "node_modules")) {
+    Write-Host "📦 Installation des dépendances..." -ForegroundColor Yellow
+    if ($npmPath) {
+        & cmd /c "$npmPath install"
+    } else {
+        Write-Host "⚠️  npm non trouvé, tentative avec node..." -ForegroundColor Yellow
+    }
+}
+
 # Lancer le serveur
+Write-Host "🚀 Démarrage du serveur..." -ForegroundColor Green
 try {
-    & $nodePath "$PSScriptRoot\node_modules\.bin\next" dev -p 3000
+    if ($npmPath) {
+        & cmd /c "$npmPath run dev"
+    } elseif (Test-Path "node_modules\.bin\next.cmd") {
+        & "node_modules\.bin\next.cmd" dev -p 3000
+    } else {
+        & $nodePath "node_modules\.bin\next" dev -p 3000
+    }
 } catch {
     Write-Host "❌ Erreur lors du démarrage du serveur" -ForegroundColor Red
-    Write-Host "Tentative avec npm..." -ForegroundColor Yellow
-    try {
-        & npm run dev
-    } catch {
-        Write-Host "❌ Impossible de démarrer le serveur" -ForegroundColor Red
-        Write-Host "Assurez-vous que les dépendances sont installées: npm install" -ForegroundColor Yellow
-        exit 1
-    }
+    Write-Host "Assurez-vous que les dépendances sont installées: npm install" -ForegroundColor Yellow
+    exit 1
 }
 
