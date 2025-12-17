@@ -30,8 +30,8 @@ ETAPE 4 : DEMARRER LE SERVEUR
 Tapez :
     npm run dev
 
-Ou double-cliquez sur : demarrer-serveur.bat
-
+Ou double-cliquez sur : demarrer-serveur.
+bat
 ETAPE 5 : OUVRIR LE SITE
 -------------------------
 Une fois le message "Ready" apparu, ouvrez votre navigateur et allez sur :
