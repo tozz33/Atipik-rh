@@ -548,33 +548,6 @@ export default function Financement() {
                       </Link>
                       </div>
                     </div>
-
-                    {/* FNE-Formation */}
-                    <div className="flex-shrink-0 w-72 md:w-80">
-                      <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-[500px] md:h-[550px]">
-                      <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6 h-16 md:h-20">
-                        <div className="w-12 h-12 md:w-16 md:h-16 bg-white rounded-xl border border-gray-200 flex items-center justify-center flex-shrink-0 p-2">
-                          <Image
-                            src="/images/financements/Bloc_Marque_RF_France_Travail_CMJN_Horizontal_Coul_Positif.jpg"
-                            alt="Logo FNE-Formation"
-                            width={48}
-                            height={48}
-                            className="object-contain w-6 h-6 md:w-12 md:h-12"
-                          />
-                        </div>
-                        <h3 className="text-sm md:text-lg font-bold text-[#013F63] leading-tight flex-1 text-center">FNE-Formation</h3>
-                      </div>
-                      <div className="space-y-2 md:space-y-3 mb-4 md:mb-6 flex-grow">
-                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Contexte :</strong> Difficultés économiques temporaires</p>
-                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Financement :</strong> Prise en charge par France Travail</p>
-                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Objectif :</strong> Maintenir l'emploi et les compétences</p>
-                        <p className="text-[#013F63] text-xs md:text-sm"><strong>Conditions :</strong> Accord de branche ou d'entreprise</p>
-                      </div>
-                      <a href="https://les-aides.fr/aide/V2Fv3w/dreets/fne-formation.html" target="_blank" rel="noopener noreferrer" className="block w-full text-center px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition mt-auto">
-                        En savoir plus FNE-Formation
-                      </a>
-                      </div>
-                    </div>
                   </div>
                   </div>
                 </>

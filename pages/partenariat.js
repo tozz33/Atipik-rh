@@ -149,9 +149,8 @@ export default function Partenariat() {
                       Les <span className="text-orange-500 font-brittany text-3xl lg:text-4xl">Acteurs de la Compétence</span>
                     </h3>
                     <p className="text-lg text-[#013F63] leading-relaxed font-light mb-6">
-                      Nos partenariats avec les acteurs de la compétence nous permettent 
-                      d'offrir des formations de qualité, certifiantes et adaptées aux 
-                      besoins du marché du travail.
+                      ATIPIK RH est fier d'être adhérent de la fédération professionnelle "Les Acteurs de la Compétence", 
+                      un réseau qui promeut la qualité des formations professionnelles et l'adaptation aux besoins du marché du travail.
                     </p>
                     <div className="space-y-4 text-[#013F63]">
                       <div className="flex items-start">
@@ -168,7 +167,7 @@ export default function Partenariat() {
                       </div>
                       <div className="flex items-start">
                         <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                        <span>Réseau d'entreprises partenaires</span>
+                        <span>Réseau d'entreprises adhérentes</span>
                       </div>
                     </div>
                   </div>
