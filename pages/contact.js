@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import HoneypotField from '../components/HoneypotField'
 import { MapPin, Phone, Mail, Clock, Send, MessageCircle, Calendar, Facebook, Instagram, Linkedin } from 'lucide-react'
 
 export default function Contact() {
@@ -17,6 +18,13 @@ export default function Contact() {
     sujet: '',
     message: ''
   })
+  const [honeypot, setHoneypot] = useState('')
+  const [formTimestamp, setFormTimestamp] = useState(null)
+
+  useEffect(() => {
+    // Enregistrer le timestamp de chargement du formulaire
+    setFormTimestamp(Date.now())
+  }, [])
 
   useEffect(() => {
     // Pré-remplir le formulaire en fonction des paramètres d'URL
@@ -56,6 +64,13 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    
+    // Vérification honeypot côté client
+    if (honeypot) {
+      console.log('Honeypot déclenché')
+      return
+    }
+    
     setIsSubmitting(true)
 
     try {
@@ -64,7 +79,11 @@ export default function Contact() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          honeypot,
+          timestamp: formTimestamp
+        }),
       })
 
       const data = await response.json()
@@ -202,6 +221,7 @@ export default function Contact() {
                   </div>
                   
                   <form onSubmit={handleSubmit}>
+                  <HoneypotField value={honeypot} onChange={(e) => setHoneypot(e.target.value)} />
                   <div className="space-y-5">
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>

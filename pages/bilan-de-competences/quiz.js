@@ -1,8 +1,9 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
+import HoneypotField from '../../components/HoneypotField'
 import { CheckCircle, ArrowRight, ArrowLeft, Mail, Phone } from 'lucide-react'
 
 export default function QuizBilanCompetences() {
@@ -10,6 +11,13 @@ export default function QuizBilanCompetences() {
   const [answers, setAnswers] = useState({})
   const [userInfo, setUserInfo] = useState({ name: '', email: '', phone: '' })
   const [showResults, setShowResults] = useState(false)
+  const [honeypot, setHoneypot] = useState('')
+  const [formTimestamp, setFormTimestamp] = useState(null)
+
+  useEffect(() => {
+    // Enregistrer le timestamp de chargement du formulaire
+    setFormTimestamp(Date.now())
+  }, [])
 
   const questions = [
     {
@@ -111,6 +119,12 @@ export default function QuizBilanCompetences() {
   const handleUserInfoSubmit = async (e) => {
     e.preventDefault()
     
+    // Vérification honeypot côté client
+    if (honeypot) {
+      console.log('Honeypot déclenché')
+      return
+    }
+    
     try {
       // Envoyer les données à notre API route côté serveur (plus fiable)
       const response = await fetch('/api/send-quiz-brevo', {
@@ -121,7 +135,9 @@ export default function QuizBilanCompetences() {
         body: JSON.stringify({
           userInfo,
           answers,
-          questions
+          questions,
+          honeypot,
+          timestamp: formTimestamp
         }),
       })
 
@@ -236,6 +252,7 @@ export default function QuizBilanCompetences() {
                       </div>
 
                       <form onSubmit={handleUserInfoSubmit} className="max-w-md mx-auto space-y-6">
+                        <HoneypotField value={honeypot} onChange={(e) => setHoneypot(e.target.value)} />
                         <div>
                           <label htmlFor="name" className="block text-sm font-medium text-[#013F63] mb-2">
                             Votre prénom *

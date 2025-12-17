@@ -1,6 +1,20 @@
+import { antiSpamMiddleware } from '../../lib/antiSpam'
+
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Method not allowed' })
+  }
+
+  // Vérification anti-spam
+  const spamCheck = antiSpamMiddleware(req)
+  if (!spamCheck.success) {
+    if (spamCheck.statusCode === 429) {
+      res.setHeader('Retry-After', spamCheck.retryAfter)
+    }
+    return res.status(spamCheck.statusCode).json({ 
+      message: spamCheck.message,
+      error: spamCheck.error
+    })
   }
 
   const { userInfo, answers, questions } = req.body

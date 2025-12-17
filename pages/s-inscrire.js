@@ -1,8 +1,9 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import HoneypotField from '../components/HoneypotField'
 
 export default function SInscrire() {
   const [formData, setFormData] = useState({
@@ -22,6 +23,13 @@ export default function SInscrire() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [showAllDates, setShowAllDates] = useState(false)
+  const [honeypot, setHoneypot] = useState('')
+  const [formTimestamp, setFormTimestamp] = useState(null)
+
+  useEffect(() => {
+    // Enregistrer le timestamp de chargement du formulaire
+    setFormTimestamp(Date.now())
+  }, [])
 
   // Prochaines dates de réunions par formation
   const datesFPA = [
@@ -99,13 +107,22 @@ export default function SInscrire() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    
+    // Vérification honeypot côté client
+    if (honeypot) {
+      console.log('Honeypot déclenché')
+      return
+    }
+    
     setIsSubmitting(true)
 
     try {
       // Ajouter la modalité aux données envoyées
       const dataToSend = {
         ...formData,
-        modalite: modaliteSelectionnee
+        modalite: modaliteSelectionnee,
+        honeypot,
+        timestamp: formTimestamp
       }
       
       const response = await fetch('/api/inscription-reunion', {
@@ -320,6 +337,7 @@ export default function SInscrire() {
                     <h2 className="text-2xl font-bold text-[#013F63] mb-6">Formulaire d'inscription</h2>
                     
                     <form onSubmit={handleSubmit} className="space-y-6">
+                      <HoneypotField value={honeypot} onChange={(e) => setHoneypot(e.target.value)} />
                       <div>
                         <label htmlFor="formation" className="block text-sm font-medium text-[#013F63] mb-2">
                           Formation qui vous intéresse <span className="text-red-500">*</span>
