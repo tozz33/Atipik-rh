@@ -78,9 +78,9 @@ export default function HomePage() {
     },
     {
       id: 2,
-      title: "Réunions d'information collective CIP & FPA",
-      subtitle: "",
-      description: "Vous envisagez une formation CIP ou FPA ? Découvrez concrètement les parcours, le contenu des formations et obtenez toutes les réponses à vos questions lors de nos réunions d'information.",
+      title: "Réunions d'information collective",
+      subtitle: "CIP & FPA",
+      description: "Vous envisagez une formation CIP ou FPA ? Découvrez concrètement les parcours, le contenu des formations et obtenez toutes les réponses à vos questions. Notre équipe vous présente l'approche pédagogique, les débouchés professionnels et les possibilités de financement.",
       buttonText: "",
       buttonLink: "",
       image: "/images/hero/reunion-info-2.jpeg",
@@ -157,6 +157,16 @@ export default function HomePage() {
                   style={{ objectPosition: '60% center' }}
                   priority={index === 0}
                 />
+                {/* Overlay teal foncé pour la bannière réunions */}
+                {slide.isReunion && (
+                  <div className="absolute inset-0 bg-[#013F63]/90"></div>
+                )}
+                {/* Overlay gradient diagonal orange/peach pour la bannière salles */}
+                {slide.id === 4 && (
+                  <div className="absolute inset-0" style={{
+                    background: 'linear-gradient(to bottom right, #f97316 0%, #f97316 50%, #fed7aa 50%, #fed7aa 100%)'
+                  }}></div>
+                )}
               </div>
 
               {/* Contenu - Layout horizontal */}
@@ -166,51 +176,28 @@ export default function HomePage() {
                     {/* Texte à gauche */}
                     <div className="text-white space-y-3 max-w-xl">
                       {slide.isReunion ? (
-                        <h1 className="text-xl lg:text-3xl font-bold leading-tight text-white">
-                          <span className="font-brittany text-2xl lg:text-3xl block">
-                            Réunions d'information collective
-                          </span>
-                          <span className="block text-3xl lg:text-4xl tracking-wide mt-1 text-orange-300">
-                            CIP &amp; FPA
-                          </span>
+                        <h1 className="text-2xl lg:text-4xl font-bold leading-tight text-white">
+                          Réunions d'information collective
                         </h1>
                       ) : (
                         <h1 className="text-2xl lg:text-4xl font-bold leading-tight">
                           {slide.title}
                         </h1>
                       )}
-                      {slide.subtitle && slide.subtitle.trim() !== "" && (
-                        <p className="text-base lg:text-lg font-semibold opacity-95">
-                          {slide.subtitle}
+                      {slide.isReunion ? (
+                        <p className="text-base lg:text-lg font-semibold text-white opacity-95">
+                          CIP &amp; FPA
                         </p>
+                      ) : (
+                        slide.subtitle && slide.subtitle.trim() !== "" && (
+                          <p className="text-base lg:text-lg font-semibold opacity-95">
+                            {slide.subtitle}
+                          </p>
+                        )
                       )}
                       <p className="text-sm lg:text-base opacity-90 leading-relaxed">
                         {slide.description}
                       </p>
-                      {slide.isReunion && (
-                        <ul className="space-y-1.5 text-sm lg:text-sm opacity-90 list-none pl-0">
-                          <li className="flex items-start">
-                            <span className="mr-2">•</span>
-                            <span>Notre équipe pédagogique</span>
-                          </li>
-                          <li className="flex items-start">
-                            <span className="mr-2">•</span>
-                            <span>Le contenu détaillé des formations CIP et FPA</span>
-                          </li>
-                          <li className="flex items-start">
-                            <span className="mr-2">•</span>
-                            <span>Notre approche pédagogique au plus près du réel</span>
-                          </li>
-                          <li className="flex items-start">
-                            <span className="mr-2">•</span>
-                            <span>Les débouchés professionnels</span>
-                          </li>
-                          <li className="flex items-start">
-                            <span className="mr-2">•</span>
-                            <span>Les possibilités de financement</span>
-                          </li>
-                        </ul>
-                      )}
                       {!slide.isQuiz && !slide.isReunion && (
                         <a
                           href={slide.buttonLink}

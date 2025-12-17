@@ -34,6 +34,15 @@ const nextConfig = {
       },
     ]
   },
+  
+  // Configuration des images pour permettre les query strings
+  images: {
+    localPatterns: [
+      {
+        pathname: '/images/**',
+      },
+    ],
+  },
 }
 
 module.exports = nextConfig
