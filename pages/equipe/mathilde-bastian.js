@@ -6,15 +6,15 @@ import Footer from '../../components/Footer';
 import { ArrowLeft, User } from 'lucide-react';
 import { useState } from 'react';
 
-export default function LilianaDelmas() {
+export default function MathildeBastian() {
   const [showChildPhoto, setShowChildPhoto] = useState(false);
   return (
     <>
       <Head>
-        <title>Liliana ALMEIDA | Coordinatrice - Atipik RH</title>
-        <meta name="description" content="Découvrez le profil de Liliana ALMEIDA, Coordinatrice chez Atipik RH. Son parcours, ses compétences et son accompagnement personnalisé." />
-        <meta name="keywords" content="Liliana ALMEIDA, coordinatrice Atipik RH, formation professionnelle, Lormont" />
-        <link rel="canonical" href="https://atipikrh.fr/equipe/liliana-almeida" />
+        <title>Mathilde BASTIAN | Assistante Administrative - Atipik RH</title>
+        <meta name="description" content="Découvrez le profil de Mathilde BASTIAN, Assistante Administrative chez Atipik RH. Son parcours, ses compétences et son accompagnement personnalisé." />
+        <meta name="keywords" content="Mathilde BASTIAN, assistante administrative Atipik RH, formation professionnelle, Lormont" />
+        <link rel="canonical" href="https://atipikrh.fr/equipe/mathilde-bastian" />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
@@ -46,8 +46,8 @@ export default function LilianaDelmas() {
                     <div className="absolute inset-0 rounded-2xl rotate-6 group-hover:rotate-3 transition-transform duration-300 overflow-hidden">
                       {showChildPhoto ? (
                         <Image
-                          src="/images/equipe/liliana.jpeg"
-                          alt="Liliana ALMEIDA"
+                          src="/images/equipe/mathilde.jpeg"
+                          alt="Mathilde BASTIAN"
                           width={350}
                           height={400}
                           className="w-full h-full object-cover rounded-2xl"
@@ -69,8 +69,8 @@ export default function LilianaDelmas() {
                         </div>
                       ) : (
                         <Image
-                          src="/images/equipe/liliana.jpeg"
-                          alt="Liliana ALMEIDA"
+                          src="/images/equipe/mathilde.jpeg"
+                          alt="Mathilde BASTIAN"
                           width={350}
                           height={400}
                           className="w-full h-full object-cover rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-300"
@@ -83,10 +83,10 @@ export default function LilianaDelmas() {
                 {/* Content à droite */}
                 <div className="lg:col-span-8 space-y-4">
                   <h1 className="text-3xl lg:text-4xl font-bold text-[#013F63] leading-tight">
-                    <span className="font-brittany text-4xl lg:text-5xl">Liliana</span> <span className="font-semibold">ALMEIDA</span>
+                    <span className="font-brittany text-4xl lg:text-5xl">Mathilde</span> <span className="font-semibold">BASTIAN</span>
                   </h1>
                   <div className="inline-flex items-center px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm font-medium">
-                    Coordinatrice
+                    Assistante Administrative
                   </div>
                 </div>
               </div>
@@ -206,4 +206,5 @@ export default function LilianaDelmas() {
       </div>
     </>
   );
-} 
+}
+
