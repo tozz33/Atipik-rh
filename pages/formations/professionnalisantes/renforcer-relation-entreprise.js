@@ -493,11 +493,11 @@ export default function RenforcerRelationEntreprise() {
 
                 <div className="grid md:grid-cols-2 gap-8 mb-12">
                   
-                  {/* Session Novembre 2025 */}
+                  {/* Session 2026 */}
                   <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 text-center">
                     <div className="bg-orange-100 text-[#013F63] rounded-t-2xl -mx-8 -mt-8 p-4 mb-6">
-                      <h3 className="text-2xl font-bold mb-2 text-orange-500">Session d'Automne</h3>
-                      <p className="text-orange-600">Novembre 2025</p>
+                      <h3 className="text-2xl font-bold mb-2 text-orange-500">Session d'Hiver</h3>
+                      <p className="text-orange-600">2026</p>
                     </div>
                     
                     <div className="mb-6">
@@ -505,13 +505,13 @@ export default function RenforcerRelationEntreprise() {
                         <div className="w-auto h-8 bg-blue-100 rounded-full flex items-center justify-center px-3">
                           <span className="text-[#013F63] font-bold text-sm">Présentiel</span>
                         </div>
-                        <span className="text-[#013F63] font-medium">3 au 4 novembre 2025</span>
+                        <span className="text-[#013F63] font-medium">à venir</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <div className="w-auto h-8 bg-blue-100 rounded-full flex items-center justify-center px-3">
                           <span className="text-[#013F63] font-bold text-sm">Distanciel</span>
                         </div>
-                        <span className="text-[#013F63] font-medium">21 novembre 2025</span>
+                        <span className="text-[#013F63] font-medium">à venir</span>
                       </div>
                     </div>
                   </div>

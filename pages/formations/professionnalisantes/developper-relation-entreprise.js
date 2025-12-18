@@ -493,8 +493,8 @@ export default function DevelopperRelationEntreprise() {
                   {/* Session Octobre 2025 */}
                   <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 text-center">
                     <div className="bg-orange-100 text-[#013F63] rounded-t-2xl -mx-8 -mt-8 p-4 mb-6">
-                      <h3 className="text-2xl font-bold mb-2 text-orange-500">Session d'Automne</h3>
-                      <p className="text-orange-600">Octobre 2025</p>
+                      <h3 className="text-2xl font-bold mb-2 text-orange-500">Session de Printemps</h3>
+                      <p className="text-orange-600">2026</p>
                     </div>
                     
                     <div className="mb-6">
@@ -502,13 +502,13 @@ export default function DevelopperRelationEntreprise() {
                         <div className="w-auto h-8 bg-blue-100 rounded-full flex items-center justify-center px-3">
                           <span className="text-[#013F63] font-bold text-sm">Présentiel</span>
                         </div>
-                        <span className="text-[#013F63] font-medium">7 au 8 octobre 2025</span>
+                        <span className="text-[#013F63] font-medium">à venir</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <div className="w-auto h-8 bg-blue-100 rounded-full flex items-center justify-center px-3">
                           <span className="text-[#013F63] font-bold text-sm">Distanciel</span>
                         </div>
-                        <span className="text-[#013F63] font-medium">24 octobre 2025</span>
+                        <span className="text-[#013F63] font-medium">à venir</span>
                       </div>
                     </div>
                   </div>
@@ -525,7 +525,7 @@ export default function DevelopperRelationEntreprise() {
                         <div className="w-auto h-8 bg-blue-100 rounded-full flex items-center justify-center px-3">
                           <span className="text-[#013F63] font-bold text-sm">Présentiel</span>
                         </div>
-                        <span className="text-[#013F63] font-medium">12 au 13 janvier 2026</span>
+                        <span className="text-[#013F63] font-medium">13 au 14 janvier 2026</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <div className="w-auto h-8 bg-blue-100 rounded-full flex items-center justify-center px-3">
