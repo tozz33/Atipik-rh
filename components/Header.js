@@ -206,7 +206,13 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                           href="/formations/professionnalisantes/renforcer-pratique-recrutement-inclusif" 
                           className="block px-4 py-3 text-sm text-[#013F63] hover:bg-blue-50 hover:text-[#012a4a] transition-colors border-t border-gray-100 font-medium"
                         >
-                          Renforcer sa pratique du recrutement inclusif
+                          Prévenir les discriminations dans le recrutement
+                        </Link>
+                        <Link 
+                          href="/formations/professionnalisantes/renforcer-pratique-recrutement-diversite" 
+                          className="block px-4 py-3 text-sm text-[#013F63] hover:bg-blue-50 hover:text-[#012a4a] transition-colors border-t border-gray-100 font-medium"
+                        >
+                          Renforcer sa pratique des recrutements sur les compétences
                         </Link>
                       </div>
                     </div>
@@ -410,7 +416,7 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                               className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
-                              Renforcer sa pratique du recrutement inclusif
+                              Prévenir les discriminations dans le recrutement
                             </Link>
                           </div>
                         )}

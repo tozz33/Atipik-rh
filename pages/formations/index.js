@@ -142,6 +142,13 @@ export default function FormationsIndex() {
                 
                 <div className="grid lg:grid-cols-2 gap-8 justify-center">
                   
+                  {/* Titre de section - Professionels de l'insertion */}
+                  <div className="lg:col-span-2 mb-4">
+                    <h3 className="text-3xl lg:text-4xl font-bold text-[#013F63] text-center mb-4">
+                      <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Professionels</span> de l'insertion
+                    </h3>
+                  </div>
+
                   {/* Formation 1 - Développer la relation entreprise */}
                   <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:scale-105 flex flex-col">
                     <div className="text-center flex-1 flex flex-col">
@@ -157,11 +164,11 @@ export default function FormationsIndex() {
                       <div className="space-y-3 mb-8 text-sm text-[#013F63] flex-1">
                         <div className="flex items-center justify-center gap-2">
                           <Clock className="w-4 h-4" />
-                          <span>3 jours</span>
+                          <span>21 heures</span>
                         </div>
                         <div className="flex items-center justify-center gap-2">
                           <Users className="w-4 h-4" />
-                          <span>10-12 personnes</span>
+                          <span>4 à 12 personnes par session</span>
                         </div>
                         <div className="flex items-center justify-center gap-2">
                           <Award className="w-4 h-4" />
@@ -178,26 +185,29 @@ export default function FormationsIndex() {
                     </div>
                   </div>
 
-                  {/* Formation 2 - Renforcer la relation avec l'entreprise */}
+                  {/* Formation 2 - Renforcer la relation entreprise */}
                   <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:scale-105 flex flex-col">
                     <div className="text-center flex-1 flex flex-col">
                       <div className="h-24 flex flex-col justify-center mb-6">
                         <h3 className="text-lg font-bold text-[#013F63] mb-2 leading-tight">
-                          RENFORCER LA RELATION AVEC L'ENTREPRISE
+                          RENFORCER LA RELATION ENTREPRISE
                         </h3>
                         <p className="text-base text-[#013F63] font-medium">
                           De la prospection à la valorisation de votre offre
+                        </p>
+                        <p className="text-base text-orange-500 font-medium mt-2">
+                          Formation obligatoire
                         </p>
                       </div>
                       
                       <div className="space-y-3 mb-8 text-sm text-[#013F63] flex-1">
                         <div className="flex items-center justify-center gap-2">
                           <Clock className="w-4 h-4" />
-                          <span>3 jours</span>
+                          <span>21 heures</span>
                         </div>
                         <div className="flex items-center justify-center gap-2">
                           <Users className="w-4 h-4" />
-                          <span>10-12 personnes</span>
+                          <span>4 à 12 personnes par session</span>
                         </div>
                         <div className="flex items-center justify-center gap-2">
                           <Award className="w-4 h-4" />
@@ -229,11 +239,11 @@ export default function FormationsIndex() {
                       <div className="space-y-3 mb-8 text-sm text-[#013F63] flex-1">
                         <div className="flex items-center justify-center gap-2">
                           <Clock className="w-4 h-4" />
-                          <span>3 jours</span>
+                          <span>21 heures</span>
                         </div>
                         <div className="flex items-center justify-center gap-2">
                           <Users className="w-4 h-4" />
-                          <span>10-12 personnes</span>
+                          <span>4 à 12 personnes par session</span>
                         </div>
                         <div className="flex items-center justify-center gap-2">
                           <Award className="w-4 h-4" />
@@ -250,26 +260,36 @@ export default function FormationsIndex() {
                     </div>
                   </div>
 
-                  {/* Formation 4 - Renforcer sa pratique des recrutement inclusif */}
+                  {/* Titre de section - Professionels des RH et du recrutement */}
+                  <div className="lg:col-span-2 mt-8 mb-4">
+                    <h3 className="text-3xl lg:text-4xl font-bold text-[#013F63] text-center mb-4">
+                      <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Professionels</span> des RH et du recrutement
+                    </h3>
+                  </div>
+
+                  {/* Formation 4 - Prévenir les discriminations dans le recrutement */}
                   <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:scale-105 flex flex-col">
                     <div className="text-center flex-1 flex flex-col">
-                      <div className="h-24 flex flex-col justify-center mb-6">
+                      <div className="h-32 flex flex-col justify-center mb-6">
                         <h3 className="text-lg font-bold text-[#013F63] mb-2 leading-tight">
-                          RENFORCER SA PRATIQUE DU RECRUTEMENT INCLUSIF
+                          PRÉVENIR LES DISCRIMINATIONS DANS LE RECRUTEMENT
                         </h3>
+                        <p className="text-base text-orange-500 font-medium">
+                          Formation obligatoire
+                        </p>
                         <p className="text-base text-[#013F63] font-medium">
-                          De la diversité à la performance RH
+                          Du cadre légal aux pratiques professionnelles responsables
                         </p>
                       </div>
                       
                       <div className="space-y-3 mb-8 text-sm text-[#013F63] flex-1">
                         <div className="flex items-center justify-center gap-2">
                           <Clock className="w-4 h-4" />
-                          <span>3 jours</span>
+                          <span>11 heures</span>
                         </div>
                         <div className="flex items-center justify-center gap-2">
                           <Users className="w-4 h-4" />
-                          <span>10-12 personnes</span>
+                          <span>4 à 12 personnes par session</span>
                         </div>
                         <div className="flex items-center justify-center gap-2">
                           <Award className="w-4 h-4" />
@@ -279,6 +299,42 @@ export default function FormationsIndex() {
                       
                       <div className="mt-auto">
                         <Link href="/formations/professionnalisantes/renforcer-pratique-recrutement-inclusif" className="block w-full text-center px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition group">
+                          Découvrir
+                          <ArrowRight className="w-4 h-4 inline ml-2 group-hover:translate-x-1 transition-transform" />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Formation 5 - Renforcer sa pratique des recrutements sur les compétences de la diversité */}
+                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:scale-105 flex flex-col">
+                    <div className="text-center flex-1 flex flex-col">
+                      <div className="h-24 flex flex-col justify-center mb-6">
+                        <h3 className="text-lg font-bold text-[#013F63] mb-2 leading-tight">
+                          RENFORCER SA PRATIQUE DES RECRUTEMENTS SUR LES COMPÉTENCES
+                        </h3>
+                        <p className="text-base text-[#013F63] font-medium">
+                          De la diversité à la performance RH
+                        </p>
+                      </div>
+                      
+                      <div className="space-y-3 mb-8 text-sm text-[#013F63] flex-1">
+                        <div className="flex items-center justify-center gap-2">
+                          <Clock className="w-4 h-4" />
+                          <span>11 heures en mixed learning</span>
+                        </div>
+                        <div className="flex items-center justify-center gap-2">
+                          <Users className="w-4 h-4" />
+                          <span>4 à 12 personnes par session</span>
+                        </div>
+                        <div className="flex items-center justify-center gap-2">
+                          <Award className="w-4 h-4" />
+                          <span>Attestation de formation</span>
+                        </div>
+                      </div>
+                      
+                      <div className="mt-auto">
+                        <Link href="/formations/professionnalisantes/renforcer-pratique-recrutement-diversite" className="block w-full text-center px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition group">
                           Découvrir
                           <ArrowRight className="w-4 h-4 inline ml-2 group-hover:translate-x-1 transition-transform" />
                         </Link>

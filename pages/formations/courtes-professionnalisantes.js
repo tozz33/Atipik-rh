@@ -207,6 +207,60 @@ export default function FormationsCourtesProfessionnalisantes() {
         "Public : 10 personnes maximum",
         "Méthodes : Analyse de pratiques, jeux de rôles, supervision"
       ]
+    },
+    {
+      id: 5,
+      titre: "Renforcer sa pratique des recrutements sur les compétences de la diversité à la performance RH",
+      sousTitre: "Formation courte – Professionnalisation des pratiques RH",
+      public: "Professionnel·les RH, Recruteurs/recruteuses, Managers amené·es à recruter",
+      objectifs: [
+        "Comprendre le cadre légal et les enjeux liés à la non-discrimination à l'embauche",
+        "Identifier les biais et freins dans les pratiques de recrutement",
+        "Mettre en œuvre des méthodes de recrutement centrées sur les compétences",
+        "Intégrer des pratiques inclusives à chaque étape du parcours candidat",
+        "Structurer une démarche d'amélioration continue des recrutements",
+        "Mobiliser les acteurs et dispositifs du territoire pour élargir les viviers"
+      ],
+      programme: [
+        {
+          jour: "Jour 1 : Cadre légal et recrutement par les compétences",
+          contenu: [
+            "Cadre légal du recrutement et principes de non-discrimination",
+            "Diversité, inclusion et performance RH",
+            "Recrutement par les compétences : méthodes et outils",
+            "Identification des biais et freins dans les pratiques"
+          ]
+        },
+        {
+          jour: "Jour 2 : Pratiques inclusives et amélioration continue",
+          contenu: [
+            "Analyse des pratiques et des processus existants",
+            "Neutralité, objectivation et transparence dans la prise de décision",
+            "Diagnostic des pratiques RH et indicateurs de suivi",
+            "Coopération avec les acteurs de l'emploi et de l'insertion"
+          ]
+        },
+        {
+          jour: "Travail intersession (asynchrone) : Auto-diagnostic",
+          contenu: [
+            "Travail intersession sur les outils et processus de recrutement"
+          ]
+        },
+        {
+          jour: "Classe virtuelle (J+7 ou J+15) : Retour d'expérience",
+          contenu: [
+            "Classe virtuelle de retour d'expérience",
+            "Construction d'un plan d'actions opérationnel",
+            "Évaluation et validation du plan d'actions individuel"
+          ]
+        }
+      ],
+      details: [
+        "Durée : 18 heures (mixed learning)",
+        "Prérequis : Avoir une première expérience du recrutement",
+        "Public : 12 personnes maximum",
+        "Méthodes : Apports théoriques, ateliers collaboratifs, études de cas, mises en situation"
+      ]
     }
   ]
 
@@ -324,7 +378,7 @@ export default function FormationsCourtesProfessionnalisantes() {
                 
                 <div className="text-center mb-12">
                   <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight">
-                    Nos <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">4 formations</span>
+                    Nos <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">5 formations</span>
                   </h2>
                   <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
                     Chaque formation peut être suivie indépendamment
