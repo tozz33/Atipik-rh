@@ -1,24 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  
-  // Configuration simple et stable
-  experimental: {
-    // Désactiver seulement Fast Refresh de manière douce
-    forceSwcTransforms: false,
-  },
-  
+
   // Redirections pour les anciens liens WordPress
   async redirects() {
     return [
       {
         source: '/wp-content/uploads/2025/09/Plaquette-location-de-salles.pdf',
         destination: '/location-salles-lormont',
-        permanent: true, // Code 301 (redirection permanente)
+        permanent: true,
       },
     ]
   },
-  
+
   // Headers pour sécurité et SEO
   async headers() {
     return [
@@ -34,10 +28,6 @@ const nextConfig = {
             value: 'SAMEORIGIN',
           },
           {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block',
-          },
-          {
             key: 'Referrer-Policy',
             value: 'strict-origin-when-cross-origin',
           },
@@ -45,8 +35,8 @@ const nextConfig = {
       },
     ]
   },
-  
-  // Configuration des images pour optimiser les performances
+
+  // Configuration des images
   images: {
     localPatterns: [
       {
@@ -58,14 +48,8 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 60,
   },
-  
-  // Compression et optimisation
+
   compress: true,
-  
-  // Optimisation du build
-  swcMinify: true,
-  
-  // Production source maps désactivées pour la sécurité
   productionBrowserSourceMaps: false,
 }
 
