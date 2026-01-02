@@ -261,6 +261,20 @@ export default function RenforcerPratiqueRecrutementDiversite() {
                   </h2>
                 </div>
 
+                {/* Image Le+ de ce programme */}
+                <div className="flex justify-center mb-8">
+                  <div className="max-w-2xl w-full">
+                    <Image
+                      src="/images/formations/le-plus-programme.png"
+                      alt="Le+ de ce programme - Invitations exclusives aux événements organisés par le Collectif Professionnel de l'Insertion et des RH"
+                      width={800}
+                      height={400}
+                      className="w-full h-auto rounded-lg shadow-md"
+                      priority={false}
+                    />
+                  </div>
+                </div>
+
                 <div className="flex flex-col lg:flex-row gap-8 items-start justify-center">
                   
                   {/* Carte bleue à gauche - Informations clés */}
