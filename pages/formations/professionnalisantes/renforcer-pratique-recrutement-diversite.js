@@ -263,19 +263,50 @@ export default function RenforcerPratiqueRecrutementDiversite() {
 
                 <div className="flex flex-col lg:flex-row gap-8 items-start justify-center">
                   
-                  {/* Carte bleue à gauche */}
+                  {/* Carte bleue à gauche - Informations clés */}
                   <div className="w-full lg:w-96 flex-shrink-0 rounded-xl p-4 text-white" style={{backgroundColor: '#013F63'}}>
+                    <div className="mb-4">
+                      <h3 className="text-lg font-bold mb-3">Informations clés</h3>
+                    </div>
                     <div className="space-y-3">
                       
                       <div className="flex items-start gap-2">
-                        <GraduationCap className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                        <Clock className="w-4 h-4 mt-0.5 flex-shrink-0" />
                         <div>
-                          <p className="font-semibold mb-0.5 text-sm">Prérequis :</p>
-                          <ul className="text-blue-100 text-xs mt-1 space-y-0.5">
-                            {formation.prerequis.map((prerequis, i) => (
-                              <li key={i}>• {prerequis}</li>
-                            ))}
-                          </ul>
+                          <p className="font-semibold mb-0.5 text-sm">Durée totale :</p>
+                          <p className="text-blue-100 text-xs">{formation.duree}</p>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-2">
+                        <Users className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                        <div>
+                          <p className="font-semibold mb-0.5 text-sm">Modalité :</p>
+                          <p className="text-blue-100 text-xs">{formation.modalite}</p>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-2">
+                        <Clock className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                        <div>
+                          <p className="font-semibold mb-0.5 text-sm">Horaires :</p>
+                          <p className="text-blue-100 text-xs">{formation.horaires}</p>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-2">
+                        <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                        <div>
+                          <p className="font-semibold mb-0.5 text-sm">Lieu :</p>
+                          <p className="text-blue-100 text-xs">{formation.lieu}</p>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-2">
+                        <Users className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                        <div>
+                          <p className="font-semibold mb-0.5 text-sm">Taille du groupe :</p>
+                          <p className="text-blue-100 text-xs">{formation.effectif}</p>
                         </div>
                       </div>
 
@@ -284,35 +315,6 @@ export default function RenforcerPratiqueRecrutementDiversite() {
                         <div>
                           <p className="font-semibold mb-0.5 text-sm">Niveau de sortie :</p>
                           <p className="text-blue-100 text-xs">{formation.niveauSortie}</p>
-                        </div>
-                      </div>
-
-                      <div className="flex items-start gap-2">
-                        <Award className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                        <div>
-                          <p className="font-semibold mb-0.5 text-sm">Type d'action :</p>
-                          <p className="text-blue-100 text-xs">{formation.typeAction}</p>
-                        </div>
-                      </div>
-
-                      <div className="flex items-start gap-2">
-                        <Clock className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                        <div>
-                          <p className="font-semibold mb-0.5 text-sm">Durée :</p>
-                          <p className="text-blue-100 text-xs">{formation.duree}</p>
-                          <ul className="text-blue-100 text-xs mt-1 space-y-0.5">
-                            {formation.dureeDetails.map((detail, i) => (
-                              <li key={i}>• {detail}</li>
-                            ))}
-                          </ul>
-                        </div>
-                      </div>
-
-                      <div className="flex items-start gap-2">
-                        <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                        <div>
-                          <p className="font-semibold mb-0.5 text-sm">Horaire :</p>
-                          <p className="text-blue-100 text-xs">Du lundi au vendredi, de 9h00 à 12h30 et de 13h30 à 17h00</p>
                         </div>
                       </div>
 
@@ -518,6 +520,43 @@ export default function RenforcerPratiqueRecrutementDiversite() {
                                 </li>
                               ))}
                             </ul>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+
+                    {/* MODALITÉS D'ÉVALUATION */}
+                    <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+                      <button
+                        onClick={() => toggleSection('evaluation')}
+                        className="w-full p-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
+                      >
+                        <div className="flex items-center gap-3">
+                          <h3 className="text-base font-bold text-[#013F63]">MODALITÉS D'ÉVALUATION</h3>
+                        </div>
+                        {openSections.evaluation ? (
+                          <ChevronUp className="w-5 h-5 text-[#013F63]" />
+                        ) : (
+                          <ChevronDown className="w-5 h-5 text-[#013F63]" />
+                        )}
+                      </button>
+                      {openSections.evaluation && (
+                        <div className="p-4 border-t border-gray-100">
+                          <div className="text-[#013F63] text-sm space-y-3">
+                            <p>L'évaluation des acquis est réalisée :</p>
+                            <div className="space-y-2">
+                              <div className="flex items-start gap-3">
+                                <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                                <span>par un auto-positionnement en amont</span>
+                              </div>
+                              <div className="flex items-start gap-3">
+                                <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                                <span>en aval de la formation, par des mises en situation et études de cas en lien avec les pratiques de recrutement.</span>
+                              </div>
+                            </div>
+                            <p className="mt-3">
+                              Une évaluation à chaud permet de mesurer la satisfaction des participants et l'attente des objectifs pédagogiques.
+                            </p>
                           </div>
                         </div>
                       )}

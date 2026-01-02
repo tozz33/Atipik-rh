@@ -72,8 +72,8 @@ export default function RecruterInsertionEntreprises() {
       texte: "Dans un contexte où le recrutement en insertion devient un enjeu stratégique pour les entreprises, développer ses compétences en recrutement inclusif permet de créer des équipes diversifiées et performantes. Cette formation vous donne les clés pour identifier et valoriser les talents issus de l'insertion.",
       slogan: "Un recrutement inclusif, c'est la clé du succès pour des équipes performantes !"
     },
-    public: "Professionnels de l'accompagnement, managers de parcours, partenaires emploi. Conseiller.e en Insertion Professionnelle expérimenté.e et/ou ayant suivi modules 1 et 2",
-    prerequis: "Aucun prérequis spécifique",
+    public: "Professionnels de l'accompagnement socio-professionels , Conseiller.e en Insertion Professionnelle expérimenté.e et/ou ayant suivi modules 1 et 2",
+    prerequis: "Justifier d'une première expérience professionnelle en lien avec l'accompagnement de publics , la relation entreprise, le recrutement ou l'intégration professionnelle.",
     objectifs: [
       "Comprendre les logiques de recrutement d'entreprise",
       "Se positionner comme facilitateur entre entreprise et candidat",

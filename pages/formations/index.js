@@ -195,9 +195,6 @@ export default function FormationsIndex() {
                         <p className="text-base text-[#013F63] font-medium">
                           De la prospection à la valorisation de votre offre
                         </p>
-                        <p className="text-base text-orange-500 font-medium mt-2">
-                          Formation obligatoire
-                        </p>
                       </div>
                       
                       <div className="space-y-3 mb-8 text-sm text-[#013F63] flex-1">
@@ -321,7 +318,7 @@ export default function FormationsIndex() {
                       <div className="space-y-3 mb-8 text-sm text-[#013F63] flex-1">
                         <div className="flex items-center justify-center gap-2">
                           <Clock className="w-4 h-4" />
-                          <span>11 heures en mixed learning</span>
+                          <span>11 heures</span>
                         </div>
                         <div className="flex items-center justify-center gap-2">
                           <Users className="w-4 h-4" />

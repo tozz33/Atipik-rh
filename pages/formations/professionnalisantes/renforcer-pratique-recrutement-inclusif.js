@@ -519,6 +519,43 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                       )}
                     </div>
 
+                    {/* MODALITÉS D'ÉVALUATION */}
+                    <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+                      <button
+                        onClick={() => toggleSection('evaluation')}
+                        className="w-full p-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
+                      >
+                        <div className="flex items-center gap-3">
+                          <h3 className="text-base font-bold text-[#013F63]">MODALITÉS D'ÉVALUATION</h3>
+                        </div>
+                        {openSections.evaluation ? (
+                          <ChevronUp className="w-5 h-5 text-[#013F63]" />
+                        ) : (
+                          <ChevronDown className="w-5 h-5 text-[#013F63]" />
+                        )}
+                      </button>
+                      {openSections.evaluation && (
+                        <div className="p-4 border-t border-gray-100">
+                          <div className="text-[#013F63] text-sm space-y-3">
+                            <p>L'évaluation des acquis est réalisée :</p>
+                            <div className="space-y-2">
+                              <div className="flex items-start gap-3">
+                                <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                                <span>par un auto-positionnement en amont</span>
+                              </div>
+                              <div className="flex items-start gap-3">
+                                <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                                <span>en aval de la formation, par des mises en situation et études de cas en lien avec les pratiques de recrutement.</span>
+                              </div>
+                            </div>
+                            <p className="mt-3">
+                              <strong>Une évaluation à chaud</strong> permet de mesurer la satisfaction des participants et l'atteinte des objectifs pédagogiques.
+                            </p>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+
                   </div>
                 </div>
 
