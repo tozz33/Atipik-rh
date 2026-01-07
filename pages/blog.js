@@ -120,6 +120,18 @@ export default function Blog() {
       author: "Liliana ALMEIDA",
       category: "Tous",
       keywords: "recrutement inclusif, pratiques de recrutement, pénurie de talents, diversité, inclusion, vivier de candidats"
+    },
+    {
+      id: 15,
+      slug: "portefeuille-competences-insertion-reconversion-employabilite",
+      title: "Portefeuille de compétences : un outil stratégique pour l'insertion professionnelle et la reconversion",
+      excerpt: "Dans un contexte de mutations du marché du travail, l'insertion professionnelle, la reconversion professionnelle et le bilan de compétences sont devenus des leviers essentiels pour renforcer l'employabilité et sécuriser les parcours.",
+      image: "/images/hero/bilan-competences.jpg",
+      date: "7 janvier 2026",
+      readTime: "5 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Bilan de compétences",
+      keywords: "portefeuille compétences, insertion professionnelle, reconversion professionnelle, employabilité, compétences transférables, CIP, bilan compétences, ATIPIK RH"
     }
   ];
 

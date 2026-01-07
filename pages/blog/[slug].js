@@ -1514,6 +1514,69 @@ export default function BlogArticle() {
 
         <p><em>La reconversion professionnelle est un projet qui se construit étape par étape. Avec une bonne préparation, un accompagnement adapté et de la persévérance, elle peut être l'opportunité de donner un nouveau sens à votre carrière et de vous épanouir pleinement dans votre vie professionnelle.</em></p>
       `
+    },
+    {
+      id: 15,
+      slug: "portefeuille-competences-insertion-reconversion-employabilite",
+      title: "Portefeuille de compétences : un outil stratégique pour l'insertion professionnelle et la reconversion",
+      excerpt: "Dans un contexte de mutations du marché du travail, l'insertion professionnelle, la reconversion professionnelle et le bilan de compétences sont devenus des leviers essentiels pour renforcer l'employabilité et sécuriser les parcours.",
+      image: "/images/hero/bilan-competences.jpg",
+      date: "7 janvier 2026",
+      readTime: "5 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Bilan de compétences",
+      keywords: "portefeuille compétences, insertion professionnelle, reconversion professionnelle, employabilité, compétences transférables, CIP, bilan compétences, ATIPIK RH",
+      content: `
+        <p>Dans un contexte de mutations du marché du travail, l'insertion professionnelle, la reconversion professionnelle et le bilan de compétences sont devenus des leviers essentiels pour renforcer l'employabilité et sécuriser les parcours. Chez ATIPIK RH, nous accompagnons les personnes, avec ou sans diplôme, dans la valorisation de leurs compétences et la construction de projets professionnels durables.</p>
+
+        <h2>Le portefeuille de compétences : définition et enjeux</h2>
+
+        <p>Le portefeuille de compétences est un outil stratégique qui permet de recenser, organiser et valoriser l'ensemble des compétences acquises tout au long de la vie professionnelle et personnelle. Il dépasse la simple liste de diplômes pour mettre en lumière les savoir-faire, savoir-être et savoir-agir développés dans différents contextes.</p>
+
+        <p>Cet outil prend tout son sens dans un marché du travail en constante évolution où les parcours professionnels sont de plus en plus diversifiés. Il permet de valoriser les parcours atypiques, reconnaître l'expérience acquise hors du cadre formel, faciliter l'identification des compétences transférables et sécuriser les transitions professionnelles.</p>
+
+        <h2>L'accompagnement par les Conseillers en Insertion Professionnelle</h2>
+
+        <p>Nos conseillers en insertion professionnelle (CIP) s'appuient sur le portefeuille de compétences pour accompagner des publics aux parcours variés, parfois atypiques, vers l'emploi, la formation ou la reconversion professionnelle.</p>
+
+        <p>Chaque personne possède un parcours unique. Nos CIP adoptent une approche sur-mesure qui prend en compte la diversité des parcours (avec ou sans diplôme), les compétences formelles et informelles, les aspirations et motivations, ainsi que le contexte local du marché de l'emploi en Gironde.</p>
+
+        <p>Notre méthode d'accompagnement structurée permet d'identifier les compétences, les organiser et les catégoriser, les valoriser pour les employeurs, identifier les compétences transférables vers de nouveaux secteurs, et construire un projet professionnel réaliste.</p>
+
+        <h2>Un outil stratégique de reconversion professionnelle</h2>
+
+        <p>Le portefeuille de compétences est un outil stratégique de reconversion professionnelle, permettant d'identifier les compétences transférables, de sécuriser les transitions et de construire un projet professionnel réaliste et progressif.</p>
+
+        <p>Lors d'une reconversion, toutes les compétences ne sont pas perdues. Le portefeuille permet de repérer les compétences transversales (communication, gestion de projet, travail en équipe, adaptabilité), valoriser l'expérience acquise même dans un nouveau secteur, et construire un argumentaire solide pour expliquer comment les compétences passées sont pertinentes pour le nouveau projet.</p>
+
+        <p>Une reconversion professionnelle peut être source d'inquiétude. Le portefeuille de compétences offre une vision claire de ses atouts, un plan d'action pour identifier les compétences à développer, une progression réaliste étape par étape, et une base solide sur laquelle s'appuyer en cas de difficultés.</p>
+
+        <h2>Renforcer l'employabilité et la confiance en soi</h2>
+
+        <p>En rendant visibles les compétences acquises dans et hors du cadre formel, cet outil renforce l'employabilité, la confiance en soi et la capacité à se positionner face aux employeurs et partenaires de l'insertion.</p>
+
+        <p>Le portefeuille améliore l'employabilité en offrant une meilleure visibilité des compétences, une argumentation solide avec des exemples concrets et facilite l'adaptation aux offres d'emploi. Pour les personnes sans diplôme ou aux parcours atypiques, il légitime l'expérience, réduit l'auto-censure et renforce l'estime de soi. Avec un portefeuille bien construit, il devient plus facile de rédiger un CV efficace, préparer les entretiens et construire un réseau professionnel.</p>
+
+        <div style="margin: 2rem 0;">
+          <img 
+            src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop" 
+            alt="Reconversion professionnelle et développement des compétences transférables"
+            style="width: 100%; height: auto; border-radius: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"
+          />
+        </div>
+
+        <h2>L'accompagnement ATIPIK RH</h2>
+
+        <p>Chez ATIPIK RH, nos conseillers en insertion professionnelle accompagnent tous les publics (avec ou sans diplôme, jeunes ou seniors) en utilisant des méthodes éprouvées et une connaissance approfondie du marché de l'emploi en Gironde.</p>
+
+        <p>Le portefeuille de compétences s'intègre naturellement dans nos accompagnements : <a href="/bilan-de-competences">bilan de compétences</a>, <a href="/formation-conseiller-insertion-professionnelle">formation CIP</a>, accompagnement à la reconversion et valorisation de l'expérience.</p>
+
+        <p><strong>Prêt à valoriser vos compétences et à construire votre projet professionnel ?</strong> Contactez-nous pour découvrir comment nous pouvons vous accompagner dans cette démarche.</p>
+
+        <hr />
+
+        <p><em>Découvrez aussi nos autres articles sur le <a href="/blog/bilan-competences-lormont-5-etapes-reconversion">bilan de compétences</a> et la <a href="/blog/reconversion-professionnelle-comment-reussir-changement-carriere">reconversion professionnelle</a>.</em></p>
+      `
     }
   ];
 
