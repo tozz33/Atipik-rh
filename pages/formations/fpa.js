@@ -276,6 +276,9 @@ export default function FormationFPA() {
 
   // Observer pour les statistiques Atipik RH
   useEffect(() => {
+    const node = statsRef.current
+    if (!node) return
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !hasAnimatedStats) {
@@ -298,19 +301,20 @@ export default function FormationFPA() {
       { threshold: 0.3 }
     )
 
-    if (statsRef.current) {
-      observer.observe(statsRef.current)
-    }
+    observer.observe(node)
 
     return () => {
-      if (statsRef.current) {
-        observer.unobserve(statsRef.current)
+      if (node) {
+        observer.unobserve(node)
       }
     }
   }, [hasAnimatedStats])
 
   // Observer pour les statistiques France Compétences
   useEffect(() => {
+    const node = franceStatsRef.current
+    if (!node) return
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !hasAnimatedFranceStats) {
@@ -340,13 +344,11 @@ export default function FormationFPA() {
       { threshold: 0.3 }
     )
 
-    if (franceStatsRef.current) {
-      observer.observe(franceStatsRef.current)
-    }
+    observer.observe(node)
 
     return () => {
-      if (franceStatsRef.current) {
-        observer.unobserve(franceStatsRef.current)
+      if (node) {
+        observer.unobserve(node)
       }
     }
   }, [hasAnimatedFranceStats])
@@ -423,9 +425,9 @@ export default function FormationFPA() {
 
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">
         {/* Background animé global */}
-        <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
-        <div className="absolute top-40 right-1/4 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-1000"></div>
-        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-orange-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-2000"></div>
+        <div className="absolute top-20 left-1/4 w-96 h-96 bg-muted-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+        <div className="absolute top-40 right-1/4 w-96 h-96 bg-muted-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-1000"></div>
+        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-accent-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-2000"></div>
         <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-purple-100 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-pulse animation-delay-3000"></div>
         
         <div className="relative z-10">
@@ -442,7 +444,7 @@ export default function FormationFPA() {
               <div className="text-center max-w-4xl mx-auto">
                 <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] mb-6 leading-tight tracking-tight">
                   Formation<br/>
-                  <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Formateur Professionnel d'Adultes</span>
+                  <span className="text-accent-500 font-brittany text-4xl lg:text-5xl">Formateur Professionnel d'Adultes</span>
                 </h1>
                 <p className="text-lg lg:text-xl text-[#013F63] leading-relaxed font-light">
                   Devenez <strong>formateur certifié</strong> et accompagnez la montée en compétences
@@ -468,7 +470,7 @@ export default function FormationFPA() {
                     <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-orange-400 to-transparent"></div>
                   </div>
                   
-                  <div className="text-orange-500 font-bold text-xl leading-relaxed text-center">
+                  <div className="text-accent-500 font-bold text-xl leading-relaxed text-center">
                     <p>
                       Devenez un formateur expert avec une certification reconnue et développez vos compétences pédagogiques !
                     </p>
@@ -509,7 +511,7 @@ export default function FormationFPA() {
                       <Clock className="w-5 h-5 mt-0.5 flex-shrink-0" />
                       <div>
                         <p className="font-semibold mb-0.5 text-base">Horaire :</p>
-                        <p className="text-blue-100 text-sm">Du lundi au vendredi, de 9h00 à 12h30 et de 13h30 à 17h00</p>
+                        <p className="text-neutral-100 text-sm">Du lundi au vendredi, de 9h00 à 12h30 et de 13h30 à 17h00</p>
                       </div>
                     </div>
 
@@ -517,7 +519,7 @@ export default function FormationFPA() {
                       <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0" />
                       <div>
                         <p className="font-semibold mb-0.5 text-base">Lieu :</p>
-                        <p className="text-blue-100 text-sm">8 rue du Courant, 33310 Lormont</p>
+                        <p className="text-neutral-100 text-sm">8 rue du Courant, 33310 Lormont</p>
                       </div>
                     </div>
 
@@ -525,7 +527,7 @@ export default function FormationFPA() {
                       <Users className="w-5 h-5 mt-0.5 flex-shrink-0" />
                       <div>
                         <p className="font-semibold mb-0.5 text-base">Taille du groupe :</p>
-                        <p className="text-blue-100 text-sm">Entre 6 et 12 personnes</p>
+                        <p className="text-neutral-100 text-sm">Entre 6 et 12 personnes</p>
                       </div>
                     </div>
 
@@ -533,7 +535,7 @@ export default function FormationFPA() {
                       <BookOpen className="w-5 h-5 mt-0.5 flex-shrink-0" />
                       <div>
                         <p className="font-semibold mb-0.5 text-base">Modalité :</p>
-                        <p className="text-blue-100 text-sm">En présentiel</p>
+                        <p className="text-neutral-100 text-sm">En présentiel</p>
                       </div>
                     </div>
                   </div>
@@ -558,7 +560,7 @@ export default function FormationFPA() {
                       )}
                     </button>
                     {openModules['prerequis'] && (
-                      <div className="p-3 border-t border-gray-100">
+                      <div className="p-3 border-t border-muted-blue-200">
                         <ul className="text-[#013F63] text-sm leading-relaxed space-y-2 list-disc list-inside">
                           <li>Une expertise technique dans un domaine spécifique est essentielle</li>
                           <li>Un projet de formation validé par au minimum deux enquêtes métiers et/ou une immersion</li>
@@ -584,7 +586,7 @@ export default function FormationFPA() {
                       )}
                     </button>
                     {openModules['public'] && (
-                      <div className="p-3 border-t border-gray-100">
+                      <div className="p-3 border-t border-muted-blue-200">
                         <p className="text-[#013F63] text-sm leading-relaxed">
                           Cette formation s'adresse aux personnes souhaitant exercer le métier de formateur professionnel d'adultes dans différents contextes : organismes de formation, entreprises, associations, institutions publiques.
                         </p>
@@ -621,8 +623,8 @@ export default function FormationFPA() {
                             style={{height: timelineHeight, maxHeight: timelineHeight}}
                           >
                             {/* Ligne orange verticale avec effet de défilement - s'arrête au centre du cercle 3 */}
-                            <div className="w-full h-full bg-gray-200"></div>
-                            <div className="w-full h-full bg-orange-500 timeline-scroll-line"></div>
+                            <div className="w-full h-full bg-muted-blue-200"></div>
+                            <div className="w-full h-full bg-accent-500 timeline-scroll-line"></div>
                           </div>
                           
                           {/* Étapes */}
@@ -630,11 +632,11 @@ export default function FormationFPA() {
                             
                             {/* Étape 1 */}
                             <div className="flex items-start gap-5">
-                              <div className="relative z-10 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
+                              <div className="relative z-10 w-12 h-12 bg-accent-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
                                 <span className="text-white text-base font-bold">1</span>
                               </div>
                               <div className="flex-grow pt-0.5">
-                                <h4 className="text-orange-500 font-bold text-base mb-4 uppercase tracking-tight">
+                                <h4 className="text-accent-500 font-bold text-base mb-4 uppercase tracking-tight">
                                   Dossier de candidature
                                 </h4>
                                 <ul className="text-[#013F63] text-sm space-y-1.5 mb-4 leading-relaxed">
@@ -648,11 +650,11 @@ export default function FormationFPA() {
                                   href="/documents/dossier-candidature/dossier-candidature-FPA.pdf"
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="inline-flex items-center px-3 py-1.5 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-md transition-colors text-xs mb-4"
+                                  className="inline-flex items-center px-3 py-1.5 bg-accent-500 hover:bg-accent-600 text-white font-medium rounded-md transition-colors text-xs mb-4"
                                 >
                                   Télécharger le dossier de candidature
                                 </a>
-                                <p className="text-orange-500 text-sm leading-relaxed">
+                                <p className="text-accent-500 text-sm leading-relaxed">
                                   La sélection des candidats s'effectue après l'étude du dossier d'inscription et l'émission d'un premier avis favorable.
                                 </p>
                               </div>
@@ -660,7 +662,7 @@ export default function FormationFPA() {
 
                             {/* Étape 2 */}
                             <div className="flex items-center gap-5">
-                              <div className="relative z-10 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
+                              <div className="relative z-10 w-12 h-12 bg-accent-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
                                 <span className="text-white text-base font-bold">2</span>
                               </div>
                               <div className="flex-grow">
@@ -690,11 +692,11 @@ export default function FormationFPA() {
                         </p>
                         
                         <div className="mt-8 text-center">
-                          <p className="text-orange-500 font-bold text-sm mb-3">
+                          <p className="text-accent-500 font-bold text-sm mb-3">
                             Il est fortement recommandé de participer à une réunion d'information collective.
                           </p>
                           <Link href="/s-inscrire">
-                            <button className="inline-flex items-center px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-md transition-colors text-xs">
+                            <button className="inline-flex items-center px-4 py-2 bg-accent-500 hover:bg-accent-600 text-white font-medium rounded-md transition-colors text-xs">
                               S'inscrire à une réunion d'information
                             </button>
                           </Link>
@@ -719,7 +721,7 @@ export default function FormationFPA() {
                       )}
                     </button>
                     {openModules['methodes'] && (
-                      <div className="p-3 border-t border-gray-100">
+                      <div className="p-3 border-t border-muted-blue-200">
                         <div className="space-y-3 text-[#013F63] text-sm">
                           <p className="font-semibold text-[#013F63]">UNE FORMATION BASÉE SUR LA PRATIQUE PÉDAGOGIQUE</p>
                           <p>• Alternance entre apports théoriques et mises en situation pratiques</p>
@@ -747,7 +749,7 @@ export default function FormationFPA() {
                       )}
                     </button>
                     {openModules['deroulement'] && (
-                      <div className="p-3 border-t border-gray-100">
+                      <div className="p-3 border-t border-muted-blue-200">
                         <div className="space-y-2 text-[#013F63] text-sm">
                           <p>• <strong>Durée : 934 heures</strong></p>
                           <ul className="list-none ml-4 space-y-1">
@@ -776,7 +778,7 @@ export default function FormationFPA() {
                       )}
                     </button>
                     {openModules['evaluation'] && (
-                      <div className="p-3 border-t border-gray-100">
+                      <div className="p-3 border-t border-muted-blue-200">
                         <div className="space-y-3 text-[#013F63] text-sm">
                           <p>Des évaluations formatives sont réalisées tout au long de la formation. Pour obtenir votre titre professionnel de Formateur professionnel d'adultes, vous devrez réaliser 4 épreuves. Elles ont pour but de prouver au jury que vous avez acquis les compétences nécessaires pour devenir formateur.</p>
                           <p className="font-semibold">La durée totale de l'épreuve est de 3h :</p>

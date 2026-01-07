@@ -58,10 +58,10 @@ export default function Header({ isFixed = false, isHomePage = false }) {
   }, [isMobileMenuOpen])
 
   const headerClasses = isFixed 
-    ? "fixed top-0 left-0 right-0 z-[9998] bg-white/95 backdrop-blur-md border-b border-gray-200/50 transition-all duration-500"
+    ? "fixed top-0 left-0 right-0 z-[9998] bg-white/95 backdrop-blur-md border-b border-muted-blue-200/50 transition-all duration-500"
     : isHomePage 
-    ? "fixed top-0 left-0 right-0 z-[9998] bg-white/95 backdrop-blur-md border-b border-gray-200/50 transform -translate-y-full opacity-0 transition-all duration-500"
-    : "bg-stone-50/80 backdrop-blur-sm"
+    ? "fixed top-0 left-0 right-0 z-[9998] bg-white/95 backdrop-blur-md border-b border-muted-blue-200/50 transform -translate-y-full opacity-0 transition-all duration-500"
+    : "bg-neutral-100/80 backdrop-blur-sm"
 
   return (
     <header id={isHomePage ? "main-header" : undefined} className={headerClasses}>
@@ -108,7 +108,7 @@ export default function Header({ isFixed = false, isHomePage = false }) {
               </Link>
               
               {/* Menu déroulant */}
-              <div className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 transition-all duration-200 z-[9999] ${
+              <div className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-muted-blue-200 transition-all duration-200 z-[9999] ${
                 isFormationsOpen ? 'opacity-100 visible transform translate-y-0' : 'opacity-0 invisible transform -translate-y-2'
               }`}>
                 <div className="py-2">
@@ -120,7 +120,7 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                   >
                     <Link 
                       href="/formations"
-                      className="block px-4 py-3 text-sm text-[#013F63] hover:bg-blue-50 hover:text-[#012a4a] transition-colors"
+                      className="block px-4 py-3 text-sm text-[#013F63] hover:bg-muted-blue-200 hover:text-[#012a4a] transition-colors"
                     >
                       <div className="font-medium flex items-center justify-between">
                         Formation CIP
@@ -128,23 +128,23 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
                       </div>
-                      <div className="text-xs text-blue-400">Conseiller en Insertion Professionnelle</div>
+                      <div className="text-xs text-accent-500">Conseiller en Insertion Professionnelle</div>
                     </Link>
                     
                     {/* Sous-menu à droite */}
-                    <div className={`absolute left-full top-0 ml-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 transition-all duration-200 z-[10000] ${
+                    <div className={`absolute left-full top-0 ml-2 w-56 bg-white rounded-lg shadow-lg border border-muted-blue-200 transition-all duration-200 z-[10000] ${
                       isCIPSubMenuOpen ? 'opacity-100 visible transform translate-x-0' : 'opacity-0 invisible transform -translate-x-2'
                     }`}>
                       <div className="py-2">
                         <Link 
                           href="/formations/cip" 
-                          className="block px-4 py-3 text-sm text-[#013F63] hover:bg-blue-50 hover:text-[#012a4a] transition-colors font-medium"
+                          className="block px-4 py-3 text-sm text-[#013F63] hover:bg-muted-blue-200 hover:text-[#012a4a] transition-colors font-medium"
                         >
                           Formation complète
                         </Link>
                         <Link 
                           href="/formations/ccp3" 
-                          className="block px-4 py-3 text-sm text-[#013F63] hover:bg-blue-50 hover:text-[#012a4a] transition-colors border-t border-gray-100 font-medium"
+                          className="block px-4 py-3 text-sm text-[#013F63] hover:bg-muted-blue-200 hover:text-[#012a4a] transition-colors border-t border-muted-blue-200 font-medium"
                         >
                           CCP3 uniquement
                         </Link>
@@ -154,21 +154,21 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                   
                   <Link 
                     href="/formations/fpa" 
-                    className="block px-4 py-3 text-sm text-[#013F63] hover:bg-blue-50 hover:text-[#012a4a] transition-colors border-t border-gray-100"
+                    className="block px-4 py-3 text-sm text-[#013F63] hover:bg-muted-blue-200 hover:text-[#012a4a] transition-colors border-t border-muted-blue-200"
                   >
                     <div className="font-medium">Formation FPA</div>
-                    <div className="text-xs text-blue-400">Formateur Professionnel d'Adultes</div>
+                    <div className="text-xs text-accent-500">Formateur Professionnel d'Adultes</div>
                   </Link>
                   
                   {/* Formations courtes professionnalisantes avec sous-menu à droite */}
                   <div 
-                    className="relative group/courtes border-t border-gray-100"
+                    className="relative group/courtes border-t border-muted-blue-200"
                     onMouseEnter={() => setIsCourtesSubMenuOpen(true)}
                     onMouseLeave={() => setIsCourtesSubMenuOpen(false)}
                   >
                     <Link 
                       href="/formations#formations-professionnalisantes"
-                      className="block px-4 py-3 text-sm text-[#013F63] hover:bg-blue-50 hover:text-[#012a4a] transition-colors"
+                      className="block px-4 py-3 text-sm text-[#013F63] hover:bg-muted-blue-200 hover:text-[#012a4a] transition-colors"
                     >
                       <div className="font-medium flex items-center justify-between">
                         Formations courtes professionnalisantes
@@ -176,41 +176,41 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
                       </div>
-                      <div className="text-xs text-blue-400">Montée en compétences rapide</div>
+                      <div className="text-xs text-accent-500">Montée en compétences rapide</div>
                     </Link>
                     
                     {/* Sous-menu à droite */}
-                    <div className={`absolute left-full top-0 ml-2 w-72 bg-white rounded-lg shadow-lg border border-gray-200 transition-all duration-200 z-[10000] ${
+                    <div className={`absolute left-full top-0 ml-2 w-72 bg-white rounded-lg shadow-lg border border-muted-blue-200 transition-all duration-200 z-[10000] ${
                       isCourtesSubMenuOpen ? 'opacity-100 visible transform translate-x-0' : 'opacity-0 invisible transform -translate-x-2'
                     }`}>
                       <div className="py-2">
                         <Link 
                           href="/formations/professionnalisantes/developper-relation-entreprise" 
-                          className="block px-4 py-3 text-sm text-[#013F63] hover:bg-blue-50 hover:text-[#012a4a] transition-colors font-medium"
+                          className="block px-4 py-3 text-sm text-[#013F63] hover:bg-muted-blue-200 hover:text-[#012a4a] transition-colors font-medium"
                         >
                           Développer la relation entreprise
                         </Link>
                         <Link 
                           href="/formations/professionnalisantes/renforcer-relation-entreprise" 
-                          className="block px-4 py-3 text-sm text-[#013F63] hover:bg-blue-50 hover:text-[#012a4a] transition-colors border-t border-gray-100 font-medium"
+                          className="block px-4 py-3 text-sm text-[#013F63] hover:bg-muted-blue-200 hover:text-[#012a4a] transition-colors border-t border-muted-blue-200 font-medium"
                         >
                           Renforcer la relation entreprise
                         </Link>
                         <Link 
                           href="/formations/professionnalisantes/recruter-insertion-entreprises" 
-                          className="block px-4 py-3 text-sm text-[#013F63] hover:bg-blue-50 hover:text-[#012a4a] transition-colors border-t border-gray-100 font-medium"
+                          className="block px-4 py-3 text-sm text-[#013F63] hover:bg-muted-blue-200 hover:text-[#012a4a] transition-colors border-t border-muted-blue-200 font-medium"
                         >
                           Recruter en insertion avec les entreprises
                         </Link>
                         <Link 
                           href="/formations/professionnalisantes/renforcer-pratique-recrutement-inclusif" 
-                          className="block px-4 py-3 text-sm text-[#013F63] hover:bg-blue-50 hover:text-[#012a4a] transition-colors border-t border-gray-100 font-medium"
+                          className="block px-4 py-3 text-sm text-[#013F63] hover:bg-muted-blue-200 hover:text-[#012a4a] transition-colors border-t border-muted-blue-200 font-medium"
                         >
                           Prévenir les discriminations dans le recrutement
                         </Link>
                         <Link 
                           href="/formations/professionnalisantes/renforcer-pratique-recrutement-diversite" 
-                          className="block px-4 py-3 text-sm text-[#013F63] hover:bg-blue-50 hover:text-[#012a4a] transition-colors border-t border-gray-100 font-medium"
+                          className="block px-4 py-3 text-sm text-[#013F63] hover:bg-muted-blue-200 hover:text-[#012a4a] transition-colors border-t border-muted-blue-200 font-medium"
                         >
                           Renforcer sa pratique des recrutements sur les compétences
                         </Link>
@@ -242,37 +242,37 @@ export default function Header({ isFixed = false, isHomePage = false }) {
               </button>
               
               {/* Menu déroulant */}
-              <div className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 transition-all duration-200 z-[9999] ${
+              <div className={`absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-muted-blue-200 transition-all duration-200 z-[9999] ${
                 isQuiSommesNousOpen ? 'opacity-100 visible transform translate-y-0' : 'opacity-0 invisible transform -translate-y-2'
               }`}>
                 <div className="py-2">
                   <Link 
                     href="/notre-histoire" 
-                    className="block px-4 py-3 text-sm text-[#013F63] hover:bg-blue-50 hover:text-[#012a4a] transition-colors"
+                    className="block px-4 py-3 text-sm text-[#013F63] hover:bg-muted-blue-200 hover:text-[#012a4a] transition-colors"
                   >
                     <div className="font-medium">Notre histoire</div>
-                    <div className="text-xs text-blue-400">Depuis 2019, une aventure humaine</div>
+                    <div className="text-xs text-accent-500">Depuis 2019, une aventure humaine</div>
                   </Link>
                   <Link 
                     href="/notre-equipe" 
-                    className="block px-4 py-3 text-sm text-[#013F63] hover:bg-blue-50 hover:text-[#012a4a] transition-colors border-t border-gray-100"
+                    className="block px-4 py-3 text-sm text-[#013F63] hover:bg-muted-blue-200 hover:text-[#012a4a] transition-colors border-t border-muted-blue-200"
                   >
                     <div className="font-medium">Notre équipe</div>
-                    <div className="text-xs text-blue-400">Les spécialistes qui vous accompagnent</div>
+                    <div className="text-xs text-accent-500">Les spécialistes qui vous accompagnent</div>
                   </Link>
                   <Link 
                     href="/certification" 
-                    className="block px-4 py-3 text-sm text-[#013F63] hover:bg-blue-50 hover:text-[#012a4a] transition-colors border-t border-gray-100"
+                    className="block px-4 py-3 text-sm text-[#013F63] hover:bg-muted-blue-200 hover:text-[#012a4a] transition-colors border-t border-muted-blue-200"
                   >
                     <div className="font-medium">Certification</div>
-                    <div className="text-xs text-blue-400">Qualité et accessibilité</div>
+                    <div className="text-xs text-accent-500">Qualité et accessibilité</div>
                   </Link>
                   <Link 
                     href="/partenariat" 
-                    className="block px-4 py-3 text-sm text-[#013F63] hover:bg-blue-50 hover:text-[#012a4a] transition-colors border-t border-gray-100"
+                    className="block px-4 py-3 text-sm text-[#013F63] hover:bg-muted-blue-200 hover:text-[#012a4a] transition-colors border-t border-muted-blue-200"
                   >
                     <div className="font-medium">Partenariat</div>
-                    <div className="text-xs text-blue-400">Réseau d'entreprises engagées</div>
+                    <div className="text-xs text-accent-500">Réseau d'entreprises engagées</div>
                   </Link>
                 </div>
               </div>
@@ -310,7 +310,7 @@ export default function Header({ isFixed = false, isHomePage = false }) {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="lg:hidden mobile-menu-container z-[9999] relative">
-            <div className="bg-white border-t border-gray-200 shadow-lg">
+            <div className="bg-white border-t border-muted-blue-200 shadow-lg">
               <div className="px-4 py-6 space-y-4">
                 {/* Formations */}
                 <div>

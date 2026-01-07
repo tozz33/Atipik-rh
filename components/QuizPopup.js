@@ -47,7 +47,7 @@ export default function QuizPopup({ quizSectionRef }) {
       `}>
         <Link 
           href="/bilan-de-competences/quiz"
-          className="inline-flex items-center gap-2 px-5 py-3 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-xl shadow-2xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 hover:shadow-3xl group border border-orange-400"
+          className="inline-flex items-center gap-2 px-5 py-3 bg-accent-500 hover:bg-accent-600 text-white font-medium rounded-xl shadow-2xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 hover:shadow-3xl group border border-accent-500"
         >
           <FileText className="w-4 h-4 group-hover:rotate-12 transition-transform duration-300" />
           <span className="text-sm font-medium">Faire le Quiz</span>

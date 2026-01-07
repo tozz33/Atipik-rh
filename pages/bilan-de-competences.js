@@ -74,11 +74,11 @@ export default function BilanCompetences() {
       {/* Background uniforme pour toute la page */}
       <div className="bg-gradient-to-br from-slate-50 via-white to-blue-50 relative overflow-hidden">
         {/* Éléments décoratifs en arrière-plan pour toute la page */}
-        <div className="absolute top-20 left-10 w-72 h-72 bg-orange-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
-        <div className="absolute top-40 right-10 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-1000"></div>
-        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-orange-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-2000"></div>
-        <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-purple-100 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-pulse animation-delay-3000"></div>
-        <div className="absolute bottom-1/3 left-1/4 w-80 h-80 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-pulse animation-delay-4000"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-accent-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+        <div className="absolute top-40 right-10 w-96 h-96 bg-muted-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-1000"></div>
+        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-accent-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-2000"></div>
+        <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-accent-300 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-pulse animation-delay-3000"></div>
+        <div className="absolute bottom-1/3 left-1/4 w-80 h-80 bg-muted-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-pulse animation-delay-4000"></div>
 
         <div className="relative z-10">
         
@@ -90,11 +90,11 @@ export default function BilanCompetences() {
           {/* Titre principal */}
           <div className="text-center mb-8 max-w-5xl mx-auto">
             <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] mb-3 leading-tight tracking-tight">
-              Bilan de <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">compétences</span>
+              Bilan de <span className="text-accent-500 font-brittany text-4xl lg:text-5xl">compétences</span>
             </h1>
             <p className="text-lg text-[#013F63] leading-relaxed font-light mb-8">
               Révélez votre potentiel et construisez votre avenir professionnel<br className="hidden lg:block"/>
-              <span className="text-orange-500 font-medium">avec un accompagnement personnalisé</span>
+              <span className="text-accent-500 font-medium">avec un accompagnement personnalisé</span>
             </p>
           </div>
           
@@ -102,8 +102,8 @@ export default function BilanCompetences() {
           <div className="max-w-4xl mx-auto mb-12">
             <div className="relative">
               {/* Éléments décoratifs en arrière-plan */}
-              <div className="absolute -top-4 -left-4 w-8 h-8 bg-orange-200 rounded-full opacity-60"></div>
-              <div className="absolute -bottom-4 -right-4 w-6 h-6 bg-blue-200 rounded-full opacity-60"></div>
+              <div className="absolute -top-4 -left-4 w-8 h-8 bg-accent-300 rounded-full opacity-60"></div>
+              <div className="absolute -bottom-4 -right-4 w-6 h-6 bg-muted-blue-200 rounded-full opacity-60"></div>
               
               {/* Contenu principal */}
               <div className="bg-gradient-to-br from-slate-50 via-white to-blue-50 rounded-3xl p-8 shadow-lg border-2 border-[#013F63] relative z-10">
@@ -125,7 +125,7 @@ export default function BilanCompetences() {
                   </div>
                   
                   <p className="text-xl text-[#013F63] font-bold leading-relaxed">
-                    <span className="text-orange-500">Le bilan de compétences constitue un outil de gestion de carrière,</span><br/>
+                    <span className="text-accent-500">Le bilan de compétences constitue un outil de gestion de carrière,</span><br/>
                     <span className="text-[#013F63]">qui renforce votre employabilité !</span>
                   </p>
                 </div>
@@ -159,7 +159,7 @@ export default function BilanCompetences() {
                       <UserCheck className="w-4 h-4 mt-0.5 flex-shrink-0" />
                       <div>
                         <p className="font-semibold mb-0.5 text-sm">Niveau d'entrée :</p>
-                        <p className="text-blue-100 text-xs">Sans niveau spécifique</p>
+                        <p className="text-neutral-100 text-xs">Sans niveau spécifique</p>
                     </div>
                 </div>
 
@@ -167,7 +167,7 @@ export default function BilanCompetences() {
                       <Target className="w-4 h-4 mt-0.5 flex-shrink-0" />
                       <div>
                         <p className="font-semibold mb-0.5 text-sm">Code Certifinfo :</p>
-                        <p className="text-blue-100 text-xs">n°93559</p>
+                        <p className="text-neutral-100 text-xs">n°93559</p>
               </div>
             </div>
 
@@ -175,7 +175,7 @@ export default function BilanCompetences() {
                       <Clock className="w-4 h-4 mt-0.5 flex-shrink-0" />
                       <div>
                         <p className="font-semibold mb-0.5 text-sm">Durée :</p>
-                        <p className="text-blue-100 text-xs">20 - 24 heures</p>
+                        <p className="text-neutral-100 text-xs">20 - 24 heures</p>
                       </div>
                     </div>
 
@@ -183,7 +183,7 @@ export default function BilanCompetences() {
                       <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
                       <div>
                         <p className="font-semibold mb-0.5 text-sm">Lieu :</p>
-                        <p className="text-blue-100 text-xs">8 rue du Courant, 33310 Lormont</p>
+                        <p className="text-neutral-100 text-xs">8 rue du Courant, 33310 Lormont</p>
                       </div>
                     </div>
 
@@ -191,7 +191,7 @@ export default function BilanCompetences() {
                       <Users className="w-4 h-4 mt-0.5 flex-shrink-0" />
                       <div>
                         <p className="font-semibold mb-0.5 text-sm">Modalité :</p>
-                        <p className="text-blue-100 text-xs">Individuelle et confidentielle</p>
+                        <p className="text-neutral-100 text-xs">Individuelle et confidentielle</p>
                       </div>
                     </div>
 
@@ -199,7 +199,7 @@ export default function BilanCompetences() {
                       <BookOpen className="w-4 h-4 mt-0.5 flex-shrink-0" />
                       <div>
                         <p className="font-semibold mb-0.5 text-sm">Sélection :</p>
-                        <p className="text-blue-100 text-xs">Entretien préalable</p>
+                        <p className="text-neutral-100 text-xs">Entretien préalable</p>
                       </div>
                     </div>
                   </div>
@@ -209,9 +209,9 @@ export default function BilanCompetences() {
                 <div className="w-full lg:w-96 flex-shrink-0 space-y-4">
                   
                   {/* Public visé et prérequis */}
-                  <div className="bg-white rounded-xl shadow-lg border border-gray-100">
+                  <div className="bg-white rounded-xl shadow-lg border border-muted-blue-200">
                     <button
-                      className="w-full py-3.5 px-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors rounded-xl"
+                      className="w-full py-3.5 px-4 text-left flex justify-between items-center hover:bg-neutral-100 transition-colors rounded-xl"
                       onClick={() => toggleModule('public')}
                     >
                       <div className="flex items-center gap-3">
@@ -224,7 +224,7 @@ export default function BilanCompetences() {
                       )}
                     </button>
                     {openModules['public'] && (
-                      <div className="p-6 border-t border-gray-100">
+                      <div className="p-6 border-t border-muted-blue-200">
                         <div className="space-y-4 text-[#013F63]">
                           <div>
                             <h4 className="font-bold text-base mb-3 text-[#013F63]">Public visé :</h4>
@@ -246,9 +246,9 @@ export default function BilanCompetences() {
                   </div>
 
                   {/* Modalités et délais d'accès */}
-                  <div className="bg-white rounded-xl shadow-lg border border-gray-100">
+                  <div className="bg-white rounded-xl shadow-lg border border-muted-blue-200">
                     <button
-                      className="w-full py-3.5 px-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors rounded-xl"
+                      className="w-full py-3.5 px-4 text-left flex justify-between items-center hover:bg-neutral-100 transition-colors rounded-xl"
                       onClick={() => toggleModule('modalites')}
                     >
                       <div className="flex items-center gap-3">
@@ -261,7 +261,7 @@ export default function BilanCompetences() {
                       )}
                     </button>
                     {openModules['modalites'] && (
-                      <div className="p-6 border-t border-gray-100">
+                      <div className="p-6 border-t border-muted-blue-200">
                         {/* Réglementaires - Format simple */}
                         <div className="mb-6 pb-6 border-b border-gray-200">
                           <h4 className="font-bold text-base mb-2 text-[#013F63]">Réglementaires :</h4>
@@ -273,8 +273,8 @@ export default function BilanCompetences() {
                         {/* Timeline verticale pour les étapes */}
                         <div className="relative pl-6">
                           {/* Ligne verticale */}
-                          <div className="absolute left-6 top-6 bottom-6 w-0.5 bg-gray-200">
-                            <div className="w-full h-full bg-orange-500 timeline-scroll-line"></div>
+                          <div className="absolute left-6 top-6 bottom-6 w-0.5 bg-muted-blue-200">
+                            <div className="w-full h-full bg-accent-500 timeline-scroll-line"></div>
                           </div>
                           
                           {/* Étapes */}
@@ -282,11 +282,11 @@ export default function BilanCompetences() {
                             
                             {/* Étape 1 : Rendez-vous initial */}
                             <div className="flex items-start gap-5">
-                              <div className="relative z-10 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
+                              <div className="relative z-10 w-12 h-12 bg-accent-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
                                 <span className="text-white text-base font-bold">1</span>
                               </div>
                               <div className="flex-grow">
-                                <h4 className="text-orange-500 font-bold text-base mb-4 uppercase tracking-tight">
+                                <h4 className="text-accent-500 font-bold text-base mb-4 uppercase tracking-tight">
                                   Rendez-vous initial
                                 </h4>
                                 <p className="text-[#013F63] text-sm leading-relaxed mb-4">
@@ -294,7 +294,7 @@ export default function BilanCompetences() {
                                 </p>
                                 <Link
                                   href="/contact"
-                                  className="inline-flex items-center px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-md transition-colors text-sm"
+                                  className="inline-flex items-center px-4 py-2 bg-accent-500 hover:bg-accent-600 text-white font-medium rounded-md transition-colors text-sm"
                                 >
                                   Prendre rendez-vous
                                   <ArrowRight className="w-4 h-4 ml-2" />
@@ -304,11 +304,11 @@ export default function BilanCompetences() {
 
                             {/* Étape 2 : Financement et délais d'accès */}
                             <div className="flex items-start gap-5">
-                              <div className="relative z-10 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
+                              <div className="relative z-10 w-12 h-12 bg-accent-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
                                 <span className="text-white text-base font-bold">2</span>
                               </div>
                               <div className="flex-grow">
-                                <h4 className="text-orange-500 font-bold text-base mb-4 uppercase tracking-tight">
+                                <h4 className="text-accent-500 font-bold text-base mb-4 uppercase tracking-tight">
                                   Financement et délais d'accès
                                 </h4>
                                 <p className="text-[#013F63] text-sm leading-relaxed mb-4">
@@ -372,11 +372,11 @@ export default function BilanCompetences() {
 
                             {/* Étape 3 : Début du bilan */}
                             <div className="flex items-start gap-5">
-                              <div className="relative z-10 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
+                              <div className="relative z-10 w-12 h-12 bg-accent-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
                                 <span className="text-white text-base font-bold">3</span>
                               </div>
                               <div className="flex-grow">
-                                <h4 className="text-orange-500 font-bold text-base mb-4 uppercase tracking-tight">
+                                <h4 className="text-accent-500 font-bold text-base mb-4 uppercase tracking-tight">
                                   Début du bilan
                                 </h4>
                                 <p className="text-[#013F63] text-sm leading-relaxed mb-4">
@@ -385,7 +385,7 @@ export default function BilanCompetences() {
                                 <div className="space-y-2 text-[#013F63] text-sm">
                                   <p><strong>Type de parcours :</strong> Individualisé</p>
                                   <p><strong>Parcours personnalisable :</strong> Oui</p>
-                                  <p className="mt-3 text-orange-500 font-medium">L'ensemble des séances est réalisé de manière confidentielle et individuelle.</p>
+                                  <p className="mt-3 text-accent-500 font-medium">L'ensemble des séances est réalisé de manière confidentielle et individuelle.</p>
                                 </div>
                               </div>
                             </div>
@@ -397,9 +397,9 @@ export default function BilanCompetences() {
                   </div>
 
                   {/* Programme */}
-                  <div className="bg-white rounded-xl shadow-lg border border-gray-100">
+                  <div className="bg-white rounded-xl shadow-lg border border-muted-blue-200">
                     <button
-                      className="w-full py-3.5 px-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors rounded-xl"
+                      className="w-full py-3.5 px-4 text-left flex justify-between items-center hover:bg-neutral-100 transition-colors rounded-xl"
                       onClick={() => toggleModule('programme')}
                     >
                       <div className="flex items-center gap-3">
@@ -412,7 +412,7 @@ export default function BilanCompetences() {
                       )}
                     </button>
                     {openModules['programme'] && (
-                      <div className="p-3 border-t border-gray-100">
+                      <div className="p-3 border-t border-muted-blue-200">
                         <div className="space-y-3 text-[#013F63] text-sm">
                           <div>
                             <p className="font-semibold text-[#013F63] mb-2">PHASE PRÉLIMINAIRE :</p>
@@ -441,9 +441,9 @@ export default function BilanCompetences() {
                   </div>
 
                   {/* Résultats attendus */}
-                  <div className="bg-white rounded-xl shadow-lg border border-gray-100">
+                  <div className="bg-white rounded-xl shadow-lg border border-muted-blue-200">
                     <button
-                      className="w-full py-3.5 px-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors rounded-xl"
+                      className="w-full py-3.5 px-4 text-left flex justify-between items-center hover:bg-neutral-100 transition-colors rounded-xl"
                       onClick={() => toggleModule('resultats')}
                     >
                       <div className="flex items-center gap-3">
@@ -456,7 +456,7 @@ export default function BilanCompetences() {
                       )}
                     </button>
                     {openModules['resultats'] && (
-                      <div className="p-3 border-t border-gray-100">
+                      <div className="p-3 border-t border-muted-blue-200">
                         <div className="space-y-3 text-[#013F63] text-sm">
                           <p>1. Acquérir une meilleure connaissance de soi (traits de personnalité, compétences, valeurs, centres intérêts,...)</p>
                           <p>2. Élargir sa connaissance des outils de gestion de carrière et des dispositifs d'accompagnements et d'aides financières à l'emploi</p>
@@ -467,9 +467,9 @@ export default function BilanCompetences() {
                   </div>
 
                   {/* Suite de parcours possible */}
-                  <div className="bg-white rounded-xl shadow-lg border border-gray-100">
+                  <div className="bg-white rounded-xl shadow-lg border border-muted-blue-200">
                     <button
-                      className="w-full py-3.5 px-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors rounded-xl"
+                      className="w-full py-3.5 px-4 text-left flex justify-between items-center hover:bg-neutral-100 transition-colors rounded-xl"
                       onClick={() => toggleModule('suite')}
                     >
                       <div className="flex items-center gap-3">
@@ -482,7 +482,7 @@ export default function BilanCompetences() {
                       )}
                     </button>
                     {openModules['suite'] && (
-                      <div className="p-3 border-t border-gray-100">
+                      <div className="p-3 border-t border-muted-blue-200">
                         <div className="space-y-3 text-[#013F63] text-sm">
                           <p>• Questionnaire de suivi à 6 mois</p>
                         </div>
@@ -505,26 +505,26 @@ export default function BilanCompetences() {
               {/* Partie gauche - Questions en cartes */}
               <div className="bg-neutral-100 p-12">
                 <div className="space-y-3">
-                  <div className="bg-white rounded-xl p-4 shadow-sm border-l-4 border-orange-500 hover:shadow-md transition-shadow duration-200">
+                  <div className="bg-white rounded-xl p-4 shadow-sm border-l-4 border-accent-500 hover:shadow-md transition-shadow duration-200">
                     <span className="text-[#013F63] font-medium">Vous vous sentez perdu(e) professionnellement ?</span>
                   </div>
-                  <div className="bg-white rounded-xl p-4 shadow-sm border-l-4 border-orange-500 hover:shadow-md transition-shadow duration-200">
+                  <div className="bg-white rounded-xl p-4 shadow-sm border-l-4 border-accent-500 hover:shadow-md transition-shadow duration-200">
                     <span className="text-[#013F63] font-medium">Votre travail manque de sens à vos yeux ?</span>
                   </div>
-                  <div className="bg-white rounded-xl p-4 shadow-sm border-l-4 border-orange-500 hover:shadow-md transition-shadow duration-200">
+                  <div className="bg-white rounded-xl p-4 shadow-sm border-l-4 border-accent-500 hover:shadow-md transition-shadow duration-200">
                     <span className="text-[#013F63] font-medium">Vous ne vous sentez pas (plus) à votre place ?</span>
                   </div>
-                  <div className="bg-white rounded-xl p-4 shadow-sm border-l-4 border-orange-500 hover:shadow-md transition-shadow duration-200">
+                  <div className="bg-white rounded-xl p-4 shadow-sm border-l-4 border-accent-500 hover:shadow-md transition-shadow duration-200">
                     <span className="text-[#013F63] font-medium">Le métier vous pose question ou l'entreprise au sein de laquelle vous évoluez ne correspond plus à vos valeurs...</span>
                   </div>
-                  <div className="bg-white rounded-xl p-4 shadow-sm border-l-4 border-orange-500 hover:shadow-md transition-shadow duration-200">
+                  <div className="bg-white rounded-xl p-4 shadow-sm border-l-4 border-accent-500 hover:shadow-md transition-shadow duration-200">
                     <span className="text-[#013F63] font-medium">Vous avez l'impression de ne pas/plus avoir de compétences.</span>
                   </div>
                 </div>
               </div>
               
               {/* Partie droite - Appel à l'action vers le quiz */}
-              <div className="bg-blue-200 text-[#013F63] p-12 flex items-center">
+              <div className="bg-muted-blue-200 text-[#013F63] p-12 flex items-center">
                 <div className="w-full text-center">
                   <p className="text-2xl mb-4 text-[#013F63] italic font-semibold">
                     Une situation vous interpelle ?
@@ -532,7 +532,7 @@ export default function BilanCompetences() {
                   <p className="text-xl mb-8 text-[#013F63] font-medium">
                     Découvrez en 2 minutes si le bilan de compétences peut vous aider
                   </p>
-                  <Link href="/bilan-de-competences/quiz" className="inline-flex items-center gap-3 px-8 py-4 bg-white text-[#013F63] hover:bg-gray-50 font-semibold rounded-lg transition-all duration-300 border-2 border-white/20 hover:border-white shadow-md hover:shadow-xl text-lg transform hover:scale-105 hover:-translate-y-1 group">
+                  <Link href="/bilan-de-competences/quiz" className="inline-flex items-center gap-3 px-8 py-4 bg-white text-[#013F63] hover:bg-neutral-100 font-semibold rounded-lg transition-all duration-300 border-2 border-white/20 hover:border-white shadow-md hover:shadow-xl text-lg transform hover:scale-105 hover:-translate-y-1 group">
                     Démarrer le quiz
                     <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" />
                   </Link>
@@ -554,12 +554,12 @@ export default function BilanCompetences() {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             
-            <div className="bg-gradient-to-r from-blue-50 to-orange-50 rounded-2xl p-8 shadow-lg border border-gray-100">
+            <div className="bg-gradient-to-r from-muted-blue-200 to-accent-300 rounded-2xl p-8 shadow-lg border border-muted-blue-200">
               <div className="max-w-3xl mx-auto">
                 
                 <div className="text-center mb-6">
                   <h2 className="text-2xl lg:text-3xl font-bold text-[#013F63] mb-2 leading-tight">
-                    À l'issue de votre <span className="text-orange-500 font-brittany text-3xl lg:text-4xl">bilan de compétences</span>
+                    À l'issue de votre <span className="text-accent-500 font-brittany text-3xl lg:text-4xl">bilan de compétences</span>
                   </h2>
                 </div>
 
@@ -628,7 +628,7 @@ export default function BilanCompetences() {
             
             <div className="text-center mb-6">
               <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-2">
-                Nos <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">2 formules</span>
+                Nos <span className="text-accent-500 font-brittany text-4xl lg:text-5xl">2 formules</span>
               </h2>
               <p className="text-lg text-[#013F63] leading-relaxed font-light max-w-2xl mx-auto">
                 Deux approches adaptées à vos besoins et votre situation
@@ -650,7 +650,7 @@ export default function BilanCompetences() {
                   
                   {/* Prix en haut */}
                   <div className="text-center mb-6">
-                    <div className="text-4xl font-bold text-orange-500 mb-2">1 900<span className="text-2xl">€</span></div>
+                    <div className="text-4xl font-bold text-accent-500 mb-2">1 900<span className="text-2xl">€</span></div>
                   </div>
                   
                   {/* Description */}
@@ -666,24 +666,24 @@ export default function BilanCompetences() {
                   {/* Détails */}
                   <div className="space-y-3 mb-6 flex-grow">
                     <div className="flex items-start gap-2">
-                      <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-accent-500 rounded-full mt-2 flex-shrink-0"></div>
                       <span className="text-[#013F63] text-sm">
                         <strong>20 heures</strong> d'accompagnement dont <strong>16 heures</strong> de face à face ou en visioconférence
                       </span>
                     </div>
                     <div className="flex items-start gap-2">
-                      <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-accent-500 rounded-full mt-2 flex-shrink-0"></div>
                       <span className="text-[#013F63] text-sm">Remise du document de synthèse</span>
                     </div>
                     <div className="flex items-start gap-2">
-                      <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+                      <div className="w-2 h-2 bg-accent-500 rounded-full mt-2 flex-shrink-0"></div>
                       <span className="text-[#013F63] text-sm">Questionnaire de suivi à 6 mois</span>
                     </div>
                   </div>
                   
                   {/* Bouton */}
                   <div className="text-center">
-                    <a href="https://www.moncompteformation.gouv.fr/espace-prive/html/#/formation/recherche/84890745700024_BCESSENTIELPRESENTIEL/84890745700024_BCESSENTIELDISTANCIEL" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-orange-500 hover:bg-orange-600 text-white font-semibold transition-colors">
+                    <a href="https://www.moncompteformation.gouv.fr/espace-prive/html/#/formation/recherche/84890745700024_BCESSENTIELPRESENTIEL/84890745700024_BCESSENTIELDISTANCIEL" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-accent-500 hover:bg-accent-600 text-white font-semibold transition-colors">
                       Je choisis cette formule
                     </a>
                   </div>
@@ -693,8 +693,8 @@ export default function BilanCompetences() {
               {/* Formule Horizon */}
               <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
                 {/* Header */}
-                <div className="bg-blue-100 p-6 text-center">
-                  <h3 className="text-2xl font-bold text-blue-600">Horizon</h3>
+                <div className="bg-muted-blue-200 p-6 text-center">
+                  <h3 className="text-2xl font-bold text-primary-600">Horizon</h3>
                 </div>
                 
                 {/* Contenu de la carte */}
@@ -702,7 +702,7 @@ export default function BilanCompetences() {
                   
                   {/* Prix en haut */}
                   <div className="text-center mb-6">
-                    <div className="text-4xl font-bold text-blue-600 mb-2">2 250<span className="text-2xl">€</span></div>
+                    <div className="text-4xl font-bold text-primary-600 mb-2">2 250<span className="text-2xl">€</span></div>
                   </div>
                   
                   {/* Description */}
@@ -769,10 +769,10 @@ export default function BilanCompetences() {
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               
               {/* Financements pour les salariés */}
-              <div className="bg-blue-50 rounded-xl p-6 border border-blue-200 w-full">
+              <div className="bg-muted-blue-200 rounded-xl p-6 border border-muted-blue-200 w-full">
                 <h4 className="text-lg font-bold text-[#013F63] mb-4 text-center">Pour les salariés</h4>
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="text-center p-6 bg-white rounded-xl border border-blue-200 hover:shadow-md transition-shadow duration-300 flex flex-col h-40 w-full">
+                  <div className="text-center p-6 bg-white rounded-xl border border-muted-blue-200 hover:shadow-md transition-shadow duration-300 flex flex-col h-40 w-full">
                     <div className="w-20 h-20 mx-auto mb-4 bg-white rounded-lg flex items-center justify-center p-2 shadow-md">
                       <Image
                         src="/images/financements/cpf.jpg"
@@ -785,7 +785,7 @@ export default function BilanCompetences() {
                     <h5 className="font-semibold text-[#013F63] text-sm mb-1 h-12 flex items-center justify-center text-center leading-tight">CPF</h5>
                   </div>
                   
-                  <div className="text-center p-6 bg-white rounded-xl border border-blue-200 hover:shadow-md transition-shadow duration-300 flex flex-col h-40 w-full">
+                  <div className="text-center p-6 bg-white rounded-xl border border-muted-blue-200 hover:shadow-md transition-shadow duration-300 flex flex-col h-40 w-full">
                     <div className="w-20 h-20 mx-auto mb-4 bg-white rounded-lg flex items-center justify-center p-2 shadow-md">
                       <Image
                         src="/images/financements/Logo-Financement-Personnel.webp"

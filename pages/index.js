@@ -94,6 +94,16 @@ export default function HomePage() {
       buttonText: "Voir nos salles",
       buttonLink: "/location-salles-lormont",
       image: "/images/hero/reunion-info-2.jpeg"
+    },
+    {
+      id: 5,
+      title: "Investissez-en vous-même",
+      subtitle: "Facilités de paiement jusqu'à 9 fois",
+      description: "Accédez à nos formations ou accompagnements grâce au paiement jusqu'à 9 fois sans frais.\nSolutions de financement pour faciliter l'accès à nos services",
+      buttonText: "Découvrir les facilités",
+      buttonLink: "/financement",
+      image: "/images/hero/reunion-info-2.jpeg",
+      isPaiement: true
     }
   ]
 
@@ -127,12 +137,12 @@ export default function HomePage() {
         <link rel="canonical" href="https://atipikrh.fr/" />
       </Head>
 
-      <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">
+      <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-neutral-100 via-white to-muted-blue-200">
         {/* Background animé global */}
-        <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
-        <div className="absolute top-40 right-1/4 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-1000"></div>
-        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-orange-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-2000"></div>
-        <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-purple-100 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-pulse animation-delay-3000"></div>
+        <div className="absolute top-20 left-1/4 w-96 h-96 bg-muted-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+        <div className="absolute top-40 right-1/4 w-96 h-96 bg-muted-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-1000"></div>
+        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-accent-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-2000"></div>
+        <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-accent-300 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-pulse animation-delay-3000"></div>
         
         <div className="relative z-10">
           <Header isFixed={true} />
@@ -161,6 +171,10 @@ export default function HomePage() {
                 {slide.isReunion && (
                   <div className="absolute inset-0 bg-[#013F63]/90"></div>
                 )}
+                {/* Overlay teal foncé pour la bannière facilités de paiement */}
+                {slide.isPaiement && (
+                  <div className="absolute inset-0 bg-[#013F63]/90"></div>
+                )}
                 {/* Overlay gradient diagonal orange/peach pour la bannière salles */}
                 {slide.id === 4 && (
                   <div className="absolute inset-0" style={{
@@ -179,6 +193,10 @@ export default function HomePage() {
                         <h1 className="text-2xl lg:text-4xl font-bold leading-tight text-white">
                           Réunions d'information collective
                         </h1>
+                      ) : slide.isPaiement ? (
+                        <h1 className="text-2xl lg:text-4xl font-bold leading-tight text-white">
+                          {slide.title}
+                        </h1>
                       ) : (
                         <h1 className="text-2xl lg:text-4xl font-bold leading-tight">
                           {slide.title}
@@ -188,6 +206,10 @@ export default function HomePage() {
                         <p className="text-base lg:text-lg font-semibold text-white opacity-95">
                           CIP &amp; FPA
                         </p>
+                      ) : slide.isPaiement ? (
+                        <p className="text-base lg:text-lg font-semibold text-white opacity-95">
+                          {slide.subtitle}
+                        </p>
                       ) : (
                         slide.subtitle && slide.subtitle.trim() !== "" && (
                           <p className="text-base lg:text-lg font-semibold opacity-95">
@@ -195,18 +217,18 @@ export default function HomePage() {
                           </p>
                         )
                       )}
-                      <p className="text-sm lg:text-base opacity-90 leading-relaxed">
+                      <p className="text-sm lg:text-base opacity-90 leading-relaxed whitespace-pre-line">
                         {slide.description}
                       </p>
-                      {!slide.isQuiz && !slide.isReunion && (
+                      {!slide.isQuiz && !slide.isReunion && !slide.isPaiement && (
                         <a
                           href={slide.buttonLink}
                           className={`inline-flex items-center px-8 py-4 bg-white font-bold rounded-lg transition-all duration-300 shadow-xl text-base lg:text-lg mt-6 transform hover:scale-105 ${
                             slide.isReunion
-                              ? 'text-orange-500 hover:bg-orange-50' 
+                              ? 'text-accent-500 hover:bg-accent-300' 
                               : slide.id === 4
-                              ? 'text-[#013F63] hover:bg-blue-50' 
-                              : 'text-orange-500 hover:bg-orange-50'
+                              ? 'text-[#013F63] hover:bg-muted-blue-200' 
+                              : 'text-accent-500 hover:bg-accent-300'
                           }`}
                         >
                           {slide.buttonText}
@@ -218,15 +240,15 @@ export default function HomePage() {
                     <div className="hidden lg:flex justify-end items-center">
                       {slide.isQuiz ? (
                         /* Élément carré simple pour le quiz */
-                        <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 border border-white/20 text-gray-800 max-w-sm shadow-xl">
+                        <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 border border-white/20 text-neutral-900 max-w-sm shadow-xl">
                           <div className="text-center">
                             <div className="flex items-center justify-center gap-2 mb-6">
-                              <Clock className="w-6 h-6 text-orange-500" />
-                              <span className="text-4xl font-brittany text-orange-500">3 min</span>
+                              <Clock className="w-6 h-6 text-accent-500" />
+                              <span className="text-4xl font-brittany text-accent-500">3 min</span>
                             </div>
                             <Link
                               href="/bilan-de-competences/quiz"
-                              className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-xl hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-lg"
+                              className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-accent-500 to-accent-600 text-white font-semibold rounded-xl hover:from-accent-600 hover:to-accent-600 transition-all duration-300 shadow-lg"
                             >
                               Commencer le quiz
                             </Link>
@@ -234,23 +256,44 @@ export default function HomePage() {
                         </div>
                       ) : slide.isReunion ? (
                         /* Fenêtre pour les réunions d'information collective */
-                        <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 border border-orange-200 text-gray-800 max-w-sm shadow-xl">
+                        <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 border border-accent-300 text-neutral-900 max-w-sm shadow-xl">
                           <div className="text-center mb-4">
                             <h3 className="text-lg lg:text-xl font-bold mb-1 text-[#013F63] leading-snug">
-                              <span className="font-brittany text-2xl lg:text-3xl text-orange-500 block mb-1">
+                              <span className="font-brittany text-2xl lg:text-3xl text-accent-500 block mb-1">
                                 Ces réunions
                               </span>
                               sont organisées régulièrement, en présentiel ou en distanciel.
                             </h3>
-                            <p className="text-xs text-gray-600 mt-1">
+                            <p className="text-xs text-neutral-900 mt-1">
                               Gratuite • Sans engagement • Places limitées
                             </p>
                           </div>
                           <Link
                             href="/s-inscrire"
-                            className="w-full inline-flex items-center justify-center px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-xl transition-all duration-300 shadow-lg text-base"
+                            className="w-full inline-flex items-center justify-center px-6 py-3 bg-accent-500 hover:bg-accent-600 text-white font-bold rounded-xl transition-all duration-300 shadow-lg text-base"
                           >
                             Voir les prochaines dates
+                          </Link>
+                        </div>
+                      ) : slide.isPaiement ? (
+                        /* Fenêtre pour les facilités de paiement */
+                        <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 border border-accent-300 text-neutral-900 max-w-sm shadow-xl">
+                          <div className="text-center mb-4">
+                            <h3 className="text-lg lg:text-xl font-bold mb-1 text-[#013F63] leading-snug">
+                              <span className="font-brittany text-2xl lg:text-3xl text-accent-500 block mb-1">
+                                Ces facilités
+                              </span>
+                              sont disponibles pour toutes nos formations et accompagnements.
+                            </h3>
+                            <p className="text-xs text-neutral-900 mt-1">
+                              Sans frais • Jusqu'à 9 fois • Accessible à tous
+                            </p>
+                          </div>
+                          <Link
+                            href="/financement"
+                            className="w-full inline-flex items-center justify-center px-6 py-3 bg-accent-500 hover:bg-accent-600 text-white font-bold rounded-xl transition-all duration-300 shadow-lg text-base"
+                          >
+                            Découvrir les facilités
                           </Link>
                         </div>
                       ) : null}
@@ -299,7 +342,7 @@ export default function HomePage() {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4">
-                Nos <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Accompagnements</span>
+                Nos <span className="text-accent-500 font-brittany text-4xl lg:text-5xl">Accompagnements</span>
               </h2>
               <p className="text-lg text-[#013F63] max-w-2xl mx-auto">
                 Découvrez nos trois domaines d'expertise pour votre développement professionnel
@@ -308,7 +351,7 @@ export default function HomePage() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {/* Carte Formations */}
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100 flex flex-col h-full">
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-muted-blue-200 flex flex-col h-full">
                 <div className="relative h-48">
                   <Image 
                     src="/images/hero/formations.jpg"
@@ -327,7 +370,7 @@ export default function HomePage() {
                   </p>
                   <div className="mt-auto">
                     <div className="flex items-center justify-between mb-4">
-                      <span className="text-sm text-orange-500 font-medium">Finançable CPF</span>
+                      <span className="text-sm text-accent-500 font-medium">Finançable CPF</span>
                     </div>
                     <Link
                       href="/formations"
@@ -343,7 +386,7 @@ export default function HomePage() {
               </div>
 
               {/* Carte Bilan de Compétences */}
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100 flex flex-col h-full">
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-muted-blue-200 flex flex-col h-full">
                 <div className="relative h-48">
                   <Image 
                     src="/images/hero/bilan-competences.jpg" 
@@ -362,7 +405,7 @@ export default function HomePage() {
                   </p>
                   <div className="mt-auto">
                     <div className="flex items-center justify-between mb-4">
-                      <span className="text-sm text-orange-500 font-medium">Finançable CPF</span>
+                      <span className="text-sm text-accent-500 font-medium">Finançable CPF</span>
                     </div>
                     <Link
                       href="/bilan-de-competences"
@@ -378,7 +421,7 @@ export default function HomePage() {
               </div>
 
               {/* Carte VAE */}
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100 flex flex-col h-full">
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-muted-blue-200 flex flex-col h-full">
                 <div className="relative h-48">
                   <Image 
                     src="/images/hero/vae.jpg"
@@ -397,7 +440,7 @@ export default function HomePage() {
                   </p>
                   <div className="mt-auto">
                     <div className="flex items-center justify-between mb-4">
-                      <span className="text-sm text-orange-500 font-medium">Finançable CPF</span>
+                      <span className="text-sm text-accent-500 font-medium">Finançable CPF</span>
                     </div>
                     <Link
                       href="/vae"

@@ -163,9 +163,9 @@ export default function RenforcerPratiqueRecrutementInclusif() {
 
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">
         {/* Background animé global */}
-        <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
-        <div className="absolute top-40 right-1/4 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-1000"></div>
-        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-orange-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-2000"></div>
+        <div className="absolute top-20 left-1/4 w-96 h-96 bg-muted-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+        <div className="absolute top-40 right-1/4 w-96 h-96 bg-muted-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-1000"></div>
+        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-accent-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-2000"></div>
         <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-purple-100 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-pulse animation-delay-3000"></div>
         
         <div className="relative z-10">
@@ -180,7 +180,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
               <div className="max-w-4xl mx-auto">
                 <Link 
                   href="/formations" 
-                  className="inline-flex items-center gap-2 text-[#013F63] hover:text-orange-500 transition-colors font-medium"
+                  className="inline-flex items-center gap-2 text-[#013F63] hover:text-accent-500 transition-colors font-medium"
                 >
                   <ArrowLeft className="w-4 h-4" />
                   Retour aux formations
@@ -194,9 +194,9 @@ export default function RenforcerPratiqueRecrutementInclusif() {
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center">
                 <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] mb-3 leading-tight tracking-tight">
-                  Prévenir les discriminations dans le <span className="font-brittany text-3xl lg:text-5xl text-orange-500">recrutement</span>
+                  Prévenir les discriminations dans le <span className="font-brittany text-3xl lg:text-5xl text-accent-500">recrutement</span>
                 </h1>
-                <p className="text-base lg:text-lg text-orange-500 mb-4 font-normal">
+                <p className="text-base lg:text-lg text-accent-500 mb-4 font-normal">
                   {formation.sousTitre}
                 </p>
                 <p className="text-sm lg:text-base text-[#013F63] font-normal max-w-3xl mx-auto">
@@ -223,7 +223,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                           {formation.presentation.texte2}
                         </p>
                         <div className="w-20 h-0.5 bg-gradient-to-r from-orange-300 to-orange-500 mb-3 mx-auto"></div>
-                        <p className="text-orange-500 font-bold">
+                        <p className="text-accent-500 font-bold">
                           {formation.presentation.slogan}
                         </p>
                       </div>
@@ -240,8 +240,8 @@ export default function RenforcerPratiqueRecrutementInclusif() {
 
                 {/* Le+ de ce programme */}
                 <div className="max-w-4xl mx-auto mb-8">
-                  <div className="bg-white rounded-3xl p-6 shadow-lg border border-gray-100">
-                    <p className="font-bold text-orange-500 mb-2 text-center">Le+ de ce programme</p>
+                  <div className="bg-white rounded-3xl p-6 shadow-lg border border-muted-blue-200">
+                    <p className="font-bold text-accent-500 mb-2 text-center">Le+ de ce programme</p>
                     <p className="text-[#013F63] text-sm">
                       À l'issue de la formation, chaque participant bénéficie d'invitations exclusives aux événements organisés par le Collectif Professionnel de l'Insertion et des RH : <strong>Les Rencontres Atipik de la Richesse Humaine</strong>
                     </p>
@@ -261,7 +261,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                         <Clock className="w-4 h-4 mt-0.5 flex-shrink-0" />
                         <div>
                           <p className="font-semibold mb-0.5 text-sm">Durée totale :</p>
-                          <p className="text-blue-100 text-xs">{formation.duree}</p>
+                          <p className="text-neutral-100 text-xs">{formation.duree}</p>
                         </div>
                       </div>
 
@@ -269,7 +269,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                         <Users className="w-4 h-4 mt-0.5 flex-shrink-0" />
                         <div>
                           <p className="font-semibold mb-0.5 text-sm">Modalité :</p>
-                          <p className="text-blue-100 text-xs">{formation.modalite}</p>
+                          <p className="text-neutral-100 text-xs">{formation.modalite}</p>
                         </div>
                       </div>
 
@@ -277,7 +277,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                         <Clock className="w-4 h-4 mt-0.5 flex-shrink-0" />
                         <div>
                           <p className="font-semibold mb-0.5 text-sm">Horaires :</p>
-                          <p className="text-blue-100 text-xs">{formation.horaires}</p>
+                          <p className="text-neutral-100 text-xs">{formation.horaires}</p>
                         </div>
                       </div>
 
@@ -285,7 +285,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                         <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
                         <div>
                           <p className="font-semibold mb-0.5 text-sm">Lieu :</p>
-                          <p className="text-blue-100 text-xs">{formation.lieu}</p>
+                          <p className="text-neutral-100 text-xs">{formation.lieu}</p>
                         </div>
                       </div>
 
@@ -293,7 +293,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                         <Users className="w-4 h-4 mt-0.5 flex-shrink-0" />
                         <div>
                           <p className="font-semibold mb-0.5 text-sm">Taille du groupe :</p>
-                          <p className="text-blue-100 text-xs">{formation.tailleGroupe}</p>
+                          <p className="text-neutral-100 text-xs">{formation.tailleGroupe}</p>
                         </div>
                       </div>
 
@@ -301,7 +301,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                         <Target className="w-4 h-4 mt-0.5 flex-shrink-0" />
                         <div>
                           <p className="font-semibold mb-0.5 text-sm">Niveau de sortie :</p>
-                          <p className="text-blue-100 text-xs">{formation.niveauSortie}</p>
+                          <p className="text-neutral-100 text-xs">{formation.niveauSortie}</p>
                         </div>
                       </div>
 
@@ -315,7 +315,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                     <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                       <button
                         onClick={() => toggleSection('prerequis')}
-                        className="w-full p-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
+                        className="w-full p-4 text-left flex items-center justify-between bg-neutral-100 hover:bg-muted-blue-200 transition-colors"
                       >
                         <div className="flex items-center gap-3">
                           <h3 className="text-base font-bold text-[#013F63]">PRÉREQUIS</h3>
@@ -327,11 +327,11 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                         )}
                       </button>
                       {openSections.prerequis && (
-                        <div className="p-4 border-t border-gray-100">
+                        <div className="p-4 border-t border-muted-blue-200">
                           <ul className="space-y-2">
                             {formation.prerequis.map((prerequis, i) => (
                               <li key={i} className="flex items-start gap-3 text-[#013F63] text-sm">
-                                <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                                <CheckCircle className="w-4 h-4 text-accent-500 mt-0.5 flex-shrink-0" />
                                 {prerequis}
                               </li>
                             ))}
@@ -344,7 +344,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                     <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                       <button
                         onClick={() => toggleSection('public')}
-                        className="w-full p-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
+                        className="w-full p-4 text-left flex items-center justify-between bg-neutral-100 hover:bg-muted-blue-200 transition-colors"
                       >
                         <div className="flex items-center gap-3">
                           <h3 className="text-base font-bold text-[#013F63]">PUBLIC VISÉ</h3>
@@ -356,7 +356,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                         )}
                       </button>
                       {openSections.public && (
-                        <div className="p-4 border-t border-gray-100 space-y-3">
+                        <div className="p-4 border-t border-muted-blue-200 space-y-3">
                           <p className="text-[#013F63] text-sm">
                             {formation.publicObligatoire.split('obligatoire').map((part, i) => 
                               i === 0 ? part : <span key={i}><strong>obligatoire</strong>{part}</span>
@@ -375,7 +375,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                     <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                       <button
                         onClick={() => toggleSection('modalites')}
-                        className="w-full p-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
+                        className="w-full p-4 text-left flex items-center justify-between bg-neutral-100 hover:bg-muted-blue-200 transition-colors"
                       >
                         <div className="flex items-center gap-3">
                           <h3 className="text-base font-bold text-[#013F63]">MODALITÉS D'ADMISSION</h3>
@@ -387,7 +387,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                         )}
                       </button>
                       {openSections.modalites && (
-                        <div className="p-4 border-t border-gray-100">
+                        <div className="p-4 border-t border-muted-blue-200">
                           <p className="text-[#013F63] text-sm mb-2">
                             {formation.modalitesAdmission.texte1}
                           </p>
@@ -404,7 +404,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                     <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                       <button
                         onClick={() => toggleSection('methodes')}
-                        className="w-full p-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
+                        className="w-full p-4 text-left flex items-center justify-between bg-neutral-100 hover:bg-muted-blue-200 transition-colors"
                       >
                         <div className="flex items-center gap-3">
                           <h3 className="text-base font-bold text-[#013F63]">MÉTHODES PÉDAGOGIQUES</h3>
@@ -416,11 +416,11 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                         )}
                       </button>
                       {openSections.methodes && (
-                        <div className="p-4 border-t border-gray-100">
+                        <div className="p-4 border-t border-muted-blue-200">
                           <div className="space-y-2">
                             {formation.methodesPedagogiques.map((methode, i) => (
                               <div key={i} className="flex items-start gap-3">
-                                <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                                <CheckCircle className="w-4 h-4 text-accent-500 mt-0.5 flex-shrink-0" />
                                 <span className="text-[#013F63] text-sm">{methode}</span>
                               </div>
                             ))}
@@ -433,7 +433,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                     <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                       <button
                         onClick={() => toggleSection('deroulement')}
-                        className="w-full p-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
+                        className="w-full p-4 text-left flex items-center justify-between bg-neutral-100 hover:bg-muted-blue-200 transition-colors"
                       >
                         <div className="flex items-center gap-3">
                           <h3 className="text-base font-bold text-[#013F63]">DÉROULEMENT DE LA FORMATION</h3>
@@ -445,11 +445,11 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                         )}
                       </button>
                       {openSections.deroulement && (
-                        <div className="p-4 border-t border-gray-100">
+                        <div className="p-4 border-t border-muted-blue-200">
                           <div className="space-y-2">
                             {formation.deroulement.map((item, i) => (
                               <div key={i} className="flex items-start gap-3">
-                                <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                                <CheckCircle className="w-4 h-4 text-accent-500 mt-0.5 flex-shrink-0" />
                                 <span className="text-[#013F63] text-sm">{item}</span>
                               </div>
                             ))}
@@ -462,7 +462,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                     <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                       <button
                         onClick={() => toggleSection('objectif')}
-                        className="w-full p-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
+                        className="w-full p-4 text-left flex items-center justify-between bg-neutral-100 hover:bg-muted-blue-200 transition-colors"
                       >
                         <div className="flex items-center gap-3">
                           <h3 className="text-base font-bold text-[#013F63]">OBJECTIFS PÉDAGOGIQUES</h3>
@@ -474,11 +474,11 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                         )}
                       </button>
                       {openSections.objectif && (
-                        <div className="p-4 border-t border-gray-100">
+                        <div className="p-4 border-t border-muted-blue-200">
                           <div className="space-y-2">
                             {formation.objectifs.map((objectif, i) => (
                               <div key={i} className="flex items-start gap-3">
-                                <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                                <CheckCircle className="w-4 h-4 text-accent-500 mt-0.5 flex-shrink-0" />
                                 <span className="text-[#013F63] text-sm">{objectif}</span>
                               </div>
                             ))}
@@ -491,7 +491,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                     <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                       <button
                         onClick={() => toggleSection('resultats')}
-                        className="w-full p-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
+                        className="w-full p-4 text-left flex items-center justify-between bg-neutral-100 hover:bg-muted-blue-200 transition-colors"
                       >
                         <div className="flex items-center gap-3">
                           <h3 className="text-base font-bold text-[#013F63]">RÉSULTATS ATTENDUS</h3>
@@ -503,13 +503,13 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                         )}
                       </button>
                       {openSections.resultats && (
-                        <div className="p-4 border-t border-gray-100">
+                        <div className="p-4 border-t border-muted-blue-200">
                           <div className="text-[#013F63] text-sm space-y-3">
                             <p className="text-justify">{formation.resultatsAttendus.introduction}</p>
                             <ul className="space-y-2 ml-4">
                               {formation.resultatsAttendus.puces.map((puce, i) => (
                                 <li key={i} className="flex items-start gap-2">
-                                  <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                                  <CheckCircle className="w-4 h-4 text-accent-500 mt-0.5 flex-shrink-0" />
                                   <span>{puce}</span>
                                 </li>
                               ))}
@@ -523,7 +523,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                     <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                       <button
                         onClick={() => toggleSection('evaluation')}
-                        className="w-full p-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
+                        className="w-full p-4 text-left flex items-center justify-between bg-neutral-100 hover:bg-muted-blue-200 transition-colors"
                       >
                         <div className="flex items-center gap-3">
                           <h3 className="text-base font-bold text-[#013F63]">MODALITÉS D'ÉVALUATION</h3>
@@ -535,16 +535,16 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                         )}
                       </button>
                       {openSections.evaluation && (
-                        <div className="p-4 border-t border-gray-100">
+                        <div className="p-4 border-t border-muted-blue-200">
                           <div className="text-[#013F63] text-sm space-y-3">
                             <p>L'évaluation des acquis est réalisée :</p>
                             <div className="space-y-2">
                               <div className="flex items-start gap-3">
-                                <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                                <CheckCircle className="w-4 h-4 text-accent-500 mt-0.5 flex-shrink-0" />
                                 <span>par un auto-positionnement en amont</span>
                               </div>
                               <div className="flex items-start gap-3">
-                                <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                                <CheckCircle className="w-4 h-4 text-accent-500 mt-0.5 flex-shrink-0" />
                                 <span>en aval de la formation, par des mises en situation et études de cas en lien avec les pratiques de recrutement.</span>
                               </div>
                             </div>
@@ -572,7 +572,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                 
                 <div className="text-center mb-12">
                   <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight">
-                    Programme <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">détaillé</span>
+                    Programme <span className="text-accent-500 font-brittany text-5xl lg:text-6xl">détaillé</span>
                   </h2>
                 </div>
 
@@ -580,7 +580,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                   {formation.programme.map((phase, i) => (
                     <div 
                       key={i} 
-                      className={`bg-white rounded-2xl shadow-lg border border-gray-100 flex flex-col transition-all duration-700 ease-out overflow-hidden ${
+                      className={`bg-white rounded-2xl shadow-lg border border-muted-blue-200 flex flex-col transition-all duration-700 ease-out overflow-hidden ${
                         cardsVisible 
                           ? 'transform translate-y-0 opacity-100' 
                           : 'transform -translate-y-8 opacity-0'
@@ -589,7 +589,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                         transitionDelay: `${i * 200}ms` // Délai progressif pour chaque carte
                       }}
                     >
-                      <div className="text-[#013F63] p-6 flex items-center justify-start min-h-20 bg-blue-100">
+                      <div className="text-[#013F63] p-6 flex items-center justify-start min-h-20 bg-muted-blue-200">
                         <h3 className="text-xl font-bold text-left leading-tight">{phase.jour}</h3>
                       </div>
                       <div className="space-y-2 flex-1 p-8 relative">
@@ -600,7 +600,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                           </div>
                         ))}
                         <div className="absolute bottom-4 right-4">
-                          <span className="text-sm font-brittany text-orange-500 font-medium">
+                          <span className="text-sm font-brittany text-accent-500 font-medium">
                             {phase.modalite}
                           </span>
                         </div>
@@ -619,7 +619,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                 
                 <div className="text-center mb-12">
                   <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight">
-                    <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Tarifs</span>
+                    <span className="text-accent-500 font-brittany text-4xl lg:text-5xl">Tarifs</span>
                   </h2>
                 </div>
 
@@ -627,26 +627,26 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                 <div className="grid md:grid-cols-2 gap-8 mb-12">
                   
                   {/* Tarif INTER */}
-                  <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 text-center">
-                    <div className="bg-orange-100 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4 h-20 flex items-center justify-center">
-                      <h3 className="text-2xl font-bold text-orange-500">Tarif INTER</h3>
+                  <div className="bg-white rounded-3xl p-6 shadow-xl border border-muted-blue-200 text-center">
+                    <div className="bg-accent-300 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4 h-20 flex items-center justify-center">
+                      <h3 className="text-2xl font-bold text-accent-500">Tarif INTER</h3>
                     </div>
                     
                     <div className="mb-6">
-                      <div className="text-4xl font-bold text-orange-500 mb-2"> 990 € / stagiaire</div>
+                      <div className="text-4xl font-bold text-accent-500 mb-2"> 990 € / stagiaire</div>
                     </div>
                     
                     <Link
                       href="/contact"
-                      className="inline-block px-8 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-full transition-colors"
+                      className="inline-block px-8 py-3 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-full transition-colors"
                     >
                       En savoir plus
                     </Link>
                   </div>
 
                   {/* Tarif INTRA */}
-                  <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 text-center">
-                    <div className="bg-blue-100 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4 h-20 flex items-center justify-center">
+                  <div className="bg-white rounded-3xl p-6 shadow-xl border border-muted-blue-200 text-center">
+                    <div className="bg-muted-blue-200 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4 h-20 flex items-center justify-center">
                       <h3 className="text-2xl font-bold text-blue-600">Tarif INTRA</h3>
                     </div>
                     
@@ -673,7 +673,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                 
                 <div className="text-center mb-12">
                   <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight">
-                    Comment <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">financer</span> votre formation ?
+                    Comment <span className="text-accent-500 font-brittany text-4xl lg:text-5xl">financer</span> votre formation ?
                   </h2>
                   <p className="text-lg text-[#013F63] leading-relaxed max-w-2xl mx-auto">
                     Plusieurs solutions s'offrent à vous
@@ -684,7 +684,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
                   
                   {/* FAF - Indépendants */}
-                  <div className="text-center p-6 bg-white rounded-xl border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+                  <div className="text-center p-6 bg-white rounded-xl border border-muted-blue-200 hover:shadow-lg transition-shadow duration-300">
                     <div className="w-20 h-20 mx-auto mb-4 bg-white rounded-lg flex items-center justify-center p-2 shadow-md">
                       <Image
                         src="/images/financements/logo-faf.jpeg"
@@ -699,7 +699,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                   </div>
 
                   {/* OPCO - Salariés */}
-                  <div className="text-center p-6 bg-white rounded-xl border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+                  <div className="text-center p-6 bg-white rounded-xl border border-muted-blue-200 hover:shadow-lg transition-shadow duration-300">
                     <div className="w-20 h-20 mx-auto mb-4 bg-white rounded-lg flex items-center justify-center p-2 shadow-md">
                       <Image
                         src="/images/financements/logo-opco.webp"
@@ -716,12 +716,12 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                   
                 {/* Investissement personnel */}
                 <div className="mt-8">
-                    <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 text-center">
+                    <div className="bg-white rounded-2xl p-6 shadow-lg border border-muted-blue-200 text-center">
                       <h4 className="text-2xl font-bold text-[#013F63] mb-6">
-                        <span className="text-orange-500 font-brittany text-3xl">Investissement</span> perso
+                        <span className="text-accent-500 font-brittany text-3xl">Investissement</span> perso
                       </h4>
                       <p className="text-base text-[#013F63] font-medium leading-relaxed">
-                        Paiement en <span className="text-6xl font-light text-orange-500 font-brittany leading-none mx-4">x3</span> sans frais grâce à notre partenaire financier.
+                        Paiement en <span className="text-6xl font-light text-accent-500 font-brittany leading-none mx-4">x3</span> sans frais grâce à notre partenaire financier.
                       </p>
                     </div>
                   </div>
@@ -743,7 +743,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                 
                 <div className="text-center mb-12">
                   <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight">
-                    Prochaines <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">sessions</span>
+                    Prochaines <span className="text-accent-500 font-brittany text-4xl lg:text-5xl">sessions</span>
                   </h2>
                   <p className="text-lg text-[#013F63] leading-relaxed max-w-2xl mx-auto">
                     Réservez dès maintenant votre place pour cette formation spécialisée
@@ -753,21 +753,21 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                 <div className="grid md:grid-cols-2 gap-8 mb-12">
                   
                   {/* Session Mars 2026 */}
-                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 text-center">
-                    <div className="bg-orange-100 text-[#013F63] rounded-t-2xl -mx-8 -mt-8 p-4 mb-6">
-                      <h3 className="text-2xl font-bold mb-2 text-orange-500">Session de Printemps</h3>
-                      <p className="text-orange-600">Mars 2026</p>
+                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-muted-blue-200 text-center">
+                    <div className="bg-accent-300 text-[#013F63] rounded-t-2xl -mx-8 -mt-8 p-4 mb-6">
+                      <h3 className="text-2xl font-bold mb-2 text-accent-500">Session de Printemps</h3>
+                      <p className="text-accent-600">Mars 2026</p>
                     </div>
                     
                     <div className="mb-6">
                       <div className="flex items-center gap-2 mb-4">
-                        <div className="w-auto h-8 bg-blue-100 rounded-full flex items-center justify-center px-3">
+                        <div className="w-auto h-8 bg-muted-blue-200 rounded-full flex items-center justify-center px-3">
                           <span className="text-[#013F63] font-bold text-sm">Présentiel</span>
                         </div>
                         <span className="text-[#013F63] font-medium">12 mars 2026</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <div className="w-auto h-8 bg-blue-100 rounded-full flex items-center justify-center px-3">
+                        <div className="w-auto h-8 bg-muted-blue-200 rounded-full flex items-center justify-center px-3">
                           <span className="text-[#013F63] font-bold text-sm">Distanciel</span>
                         </div>
                         <span className="text-[#013F63] font-medium">19 ou 26 mars 2026</span>
@@ -776,23 +776,23 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                   </div>
 
                   {/* Session 2026 */}
-                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 text-center">
-                    <div className="bg-orange-100 text-[#013F63] rounded-t-2xl -mx-8 -mt-8 p-4 mb-6">
-                      <h3 className="text-2xl font-bold mb-2 text-orange-500">Session d'été
+                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-muted-blue-200 text-center">
+                    <div className="bg-accent-300 text-[#013F63] rounded-t-2xl -mx-8 -mt-8 p-4 mb-6">
+                      <h3 className="text-2xl font-bold mb-2 text-accent-500">Session d'été
                     
                       </h3>
-                      <p className="text-orange-600">2026</p>
+                      <p className="text-accent-600">2026</p>
                     </div>
                     
                     <div className="mb-6">
                       <div className="flex items-center gap-2 mb-4">
-                        <div className="w-auto h-8 bg-blue-100 rounded-full flex items-center justify-center px-3">
+                        <div className="w-auto h-8 bg-muted-blue-200 rounded-full flex items-center justify-center px-3">
                           <span className="text-[#013F63] font-bold text-sm">Présentiel</span>
                         </div>
                         <span className="text-[#013F63] font-medium">à venir</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <div className="w-auto h-8 bg-blue-100 rounded-full flex items-center justify-center px-3">
+                        <div className="w-auto h-8 bg-muted-blue-200 rounded-full flex items-center justify-center px-3">
                           <span className="text-[#013F63] font-bold text-sm">Distanciel</span>
                         </div>
                         <span className="text-[#013F63] font-medium">à venir</span>
@@ -810,7 +810,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
               <div className="max-w-4xl mx-auto text-center">
                 
                 <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-6">
-                  Intéressé(e) par cette <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">formation ?</span>
+                  Intéressé(e) par cette <span className="text-accent-500 font-brittany text-4xl lg:text-5xl">formation ?</span>
                 </h2>
                 
                 <p className="text-xl text-[#013F63] mb-12 max-w-2xl mx-auto">
@@ -839,7 +839,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
               <div className="max-w-4xl mx-auto">
                 
                 {/* Contenu principal */}
-                <div className="bg-gradient-to-r from-blue-50 to-orange-50 rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+                <div className="bg-gradient-to-r from-blue-50 to-orange-50 rounded-2xl shadow-lg border border-muted-blue-200 overflow-hidden">
                   <div className="grid lg:grid-cols-3 gap-0">
                     
                     {/* Section gauche - Logo */}
@@ -881,13 +881,13 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                           <div className="flex items-center gap-4 mt-1">
                             <a 
                               href="mailto:contact@atipikrh.com" 
-                              className="text-orange-500 hover:text-orange-600 transition-colors text-sm font-medium"
+                              className="text-accent-500 hover:text-accent-600 transition-colors text-sm font-medium"
                             >
                               contact@atipikrh.com
                             </a>
                             <a 
                               href="tel:0783019955" 
-                              className="text-orange-500 hover:text-orange-600 transition-colors text-sm font-medium"
+                              className="text-accent-500 hover:text-accent-600 transition-colors text-sm font-medium"
                             >
                               07 83 01 99 55
                             </a>

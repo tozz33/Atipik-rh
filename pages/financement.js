@@ -14,6 +14,31 @@ export default function Financement() {
     setOpenFaq(openFaq === index ? null : index);
   };
 
+  const financementAnswer = (
+    <div className="space-y-4">
+      <div>
+        <p className="font-bold mb-2">Quelles solutions de financement sont proposées ?</p>
+        <p>ATIPIK RH propose, via un partenaire financier, des solutions de paiement échelonné pouvant aller jusqu'à 9 mensualités, afin de faciliter l'accès à ses accompagnements et formations.</p>
+      </div>
+      <div>
+        <p className="font-bold mb-2">Ces solutions sont-elles accessibles à tous ?</p>
+        <p>Les facilités de paiement sont proposées sous réserve d'acceptation par notre partenaire financier. Les conditions d'éligibilité sont précisées lors de l'échange avec notre équipe.</p>
+      </div>
+      <div>
+        <p className="font-bold mb-2">Y a-t-il des frais supplémentaires ?</p>
+        <p>Les conditions financières (frais éventuels, échéancier) sont communiquées de manière claire et transparente avant tout engagement.</p>
+      </div>
+      <div>
+        <p className="font-bold mb-2">Quand le financement est-il mis en place ?</p>
+        <p>La solution de financement est étudiée avant la contractualisation, afin de garantir une information complète au bénéficiaire, conformément aux exigences Qualiopi.</p>
+      </div>
+      <div>
+        <p className="font-bold mb-2">Puis-je cumuler cette solution avec un autre financement ? <span className="text-orange-500">Oui !</span></p>
+        <p>Selon votre situation, ces facilités de paiement peuvent être complémentaires à d'autres dispositifs ( Par exemple : CPF + AIF pour les demandeurs d'emploi, CPF + plan de formation pour les salariés, ou CPF + FAF pour les indépendants.).</p>
+      </div>
+    </div>
+  );
+
   const faqData = [
     {
       question: "Mon employeur sera-t-il informé si j'utilise mon CPF ?",
@@ -28,8 +53,8 @@ export default function Financement() {
       answer: "Cela dépend de votre activité : FIFPL (professions libérales), AGEFICE (commerçants), FAFCEA (artisans). Nous vous aidons à identifier le bon organisme."
     },
     {
-      question: "Puis-je cumuler plusieurs financements ?",
-      answer: "Oui ! Par exemple : CPF + AIF pour les demandeurs d'emploi, CPF + plan de formation pour les salariés, ou CPF + FAF pour les indépendants."
+      question: "Financer votre accompagnement",
+      answer: financementAnswer
     }
   ];
   const salariesCards = [
@@ -607,9 +632,9 @@ export default function Financement() {
                       </button>
                       {openFaq === index && (
                         <div className="px-6 pb-6">
-                          <p className="text-[#013F63] leading-relaxed">
+                          <div className="text-[#013F63] leading-relaxed">
                             {faq.answer}
-                          </p>
+                          </div>
                         </div>
                       )}
                     </div>

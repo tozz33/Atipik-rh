@@ -192,6 +192,9 @@ export default function FormationCCP3() {
 
   // Observer pour les statistiques Atipik RH
   useEffect(() => {
+    const node = statsRef.current
+    if (!node) return
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !hasAnimatedStats) {
@@ -232,19 +235,20 @@ export default function FormationCCP3() {
       { threshold: 0.3 }
     )
 
-    if (statsRef.current) {
-      observer.observe(statsRef.current)
-    }
+    observer.observe(node)
 
     return () => {
-      if (statsRef.current) {
-        observer.unobserve(statsRef.current)
+      if (node) {
+        observer.unobserve(node)
       }
     }
   }, [hasAnimatedStats])
 
   // Observer pour les statistiques France Compétences
   useEffect(() => {
+    const node = franceStatsRef.current
+    if (!node) return
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !hasAnimatedFranceStats) {
@@ -274,13 +278,11 @@ export default function FormationCCP3() {
       { threshold: 0.3 }
     )
 
-    if (franceStatsRef.current) {
-      observer.observe(franceStatsRef.current)
-    }
+    observer.observe(node)
 
     return () => {
-      if (franceStatsRef.current) {
-        observer.unobserve(franceStatsRef.current)
+      if (node) {
+        observer.unobserve(node)
       }
     }
   }, [hasAnimatedFranceStats])
@@ -387,9 +389,9 @@ export default function FormationCCP3() {
 
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">
         {/* Background animé global */}
-        <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
-        <div className="absolute top-40 right-1/4 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-1000"></div>
-        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-orange-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-2000"></div>
+        <div className="absolute top-20 left-1/4 w-96 h-96 bg-muted-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+        <div className="absolute top-40 right-1/4 w-96 h-96 bg-muted-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-1000"></div>
+        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-accent-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-2000"></div>
         <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-purple-100 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-pulse animation-delay-3000"></div>
         
         <div className="relative z-10">
@@ -405,7 +407,7 @@ export default function FormationCCP3() {
               {/* Titre principal */}
               <div className="text-center max-w-4xl mx-auto">
                 <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] mb-3 leading-tight tracking-tight">
-                  Conseiller en <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Insertion Professionnelle (C.C.P 3)</span>
+                  Conseiller en <span className="text-accent-500 font-brittany text-4xl lg:text-5xl">Insertion Professionnelle (C.C.P 3)</span>
                 </h1>
                 <p className="text-lg text-[#013F63] leading-relaxed font-light">
                   Devenez expert de l'<strong>accompagnement vers l'emploi</strong>
@@ -434,7 +436,7 @@ export default function FormationCCP3() {
                     <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-orange-400 to-transparent"></div>
                   </div>
                   
-                  <div className="text-orange-500 font-bold text-xl leading-relaxed text-center">
+                  <div className="text-accent-500 font-bold text-xl leading-relaxed text-center">
                     <p>
                       Devenez un partenaire incontournable des employeurs avec une certification reconnue !
                     </p>
@@ -470,7 +472,7 @@ export default function FormationCCP3() {
                       <UserCheck className="w-4 h-4 mt-0.5 flex-shrink-0" />
                       <div>
                         <p className="font-semibold mb-0.5 text-sm">Prérequis :</p>
-                        <p className="text-blue-100 text-xs">Niveau terminal et/ou expérience professionnelle</p>
+                        <p className="text-neutral-100 text-xs">Niveau terminal et/ou expérience professionnelle</p>
                     </div>
                 </div>
 
@@ -478,7 +480,7 @@ export default function FormationCCP3() {
                       <Target className="w-4 h-4 mt-0.5 flex-shrink-0" />
                       <div>
                         <p className="font-semibold mb-0.5 text-sm">Niveau de sortie :</p>
-                        <p className="text-blue-100 text-xs">Niveau 5 - titre <a href="https://www.francecompetences.fr/recherche/rncp/37274/" target="_blank" rel="noopener noreferrer" className="text-blue-200 hover:text-white underline transition-colors">RNCP37274</a></p>
+                        <p className="text-neutral-100 text-xs">Niveau 5 - titre <a href="https://www.francecompetences.fr/recherche/rncp/37274/" target="_blank" rel="noopener noreferrer" className="text-blue-200 hover:text-white underline transition-colors">RNCP37274</a></p>
               </div>
             </div>
 
@@ -486,7 +488,7 @@ export default function FormationCCP3() {
                       <Clock className="w-4 h-4 mt-0.5 flex-shrink-0" />
                       <div>
                         <p className="font-semibold mb-0.5 text-sm">Horaire :</p>
-                        <p className="text-blue-100 text-xs">Du lundi au vendredi, de 9h00 à 12h30 et de 13h30 à 17h00</p>
+                        <p className="text-neutral-100 text-xs">Du lundi au vendredi, de 9h00 à 12h30 et de 13h30 à 17h00</p>
                       </div>
                     </div>
 
@@ -494,7 +496,7 @@ export default function FormationCCP3() {
                       <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
                       <div>
                         <p className="font-semibold mb-0.5 text-sm">Lieu :</p>
-                        <p className="text-blue-100 text-xs">8 rue du Courant, 33310 Lormont</p>
+                        <p className="text-neutral-100 text-xs">8 rue du Courant, 33310 Lormont</p>
                       </div>
                     </div>
 
@@ -502,7 +504,7 @@ export default function FormationCCP3() {
                       <Users className="w-4 h-4 mt-0.5 flex-shrink-0" />
                       <div>
                         <p className="font-semibold mb-0.5 text-sm">Taille du groupe :</p>
-                        <p className="text-blue-100 text-xs">Entre 10 et 15 personnes</p>
+                        <p className="text-neutral-100 text-xs">Entre 10 et 15 personnes</p>
                       </div>
                     </div>
 
@@ -510,7 +512,7 @@ export default function FormationCCP3() {
                       <BookOpen className="w-4 h-4 mt-0.5 flex-shrink-0" />
                       <div>
                         <p className="font-semibold mb-0.5 text-sm">Modalité :</p>
-                        <p className="text-blue-100 text-xs">En présentiel</p>
+                        <p className="text-neutral-100 text-xs">En présentiel</p>
                       </div>
                     </div>
                   </div>
@@ -535,7 +537,7 @@ export default function FormationCCP3() {
                       )}
                     </button>
                     {openModules['public'] && (
-                      <div className="p-3 border-t border-gray-100">
+                      <div className="p-3 border-t border-muted-blue-200">
                         <p className="text-[#013F63] text-sm leading-relaxed">
                           Cette formation s'adresse aux personnes qui disposent d'un goût prononcé pour l'accompagnement, l'échange et un sens de l'écoute développé, avec une expérience professionnelle dans l'accompagnement social.
                         </p>
@@ -572,8 +574,8 @@ export default function FormationCCP3() {
                             style={{height: timelineHeight, maxHeight: timelineHeight}}
                           >
                             {/* Ligne orange verticale avec effet de défilement - s'arrête au centre du cercle 3 */}
-                            <div className="w-full h-full bg-gray-200"></div>
-                            <div className="w-full h-full bg-orange-500 timeline-scroll-line"></div>
+                            <div className="w-full h-full bg-muted-blue-200"></div>
+                            <div className="w-full h-full bg-accent-500 timeline-scroll-line"></div>
                           </div>
                           
                           {/* Étapes */}
@@ -581,11 +583,11 @@ export default function FormationCCP3() {
                             
                             {/* Étape 1 */}
                             <div className="flex items-start gap-5">
-                              <div className="relative z-10 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
+                              <div className="relative z-10 w-12 h-12 bg-accent-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
                                 <span className="text-white text-base font-bold">1</span>
                               </div>
                               <div className="flex-grow pt-0.5">
-                                <h4 className="text-orange-500 font-bold text-base mb-4 uppercase tracking-tight">
+                                <h4 className="text-accent-500 font-bold text-base mb-4 uppercase tracking-tight">
                                   Dossier de candidature
                                 </h4>
                                 <ul className="text-[#013F63] text-sm space-y-1.5 mb-4 leading-relaxed">
@@ -599,11 +601,11 @@ export default function FormationCCP3() {
                                   href="/documents/dossier-candidature/dossier-candidature-CIP.pdf"
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="inline-flex items-center px-3 py-1.5 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-md transition-colors text-xs mb-4"
+                                  className="inline-flex items-center px-3 py-1.5 bg-accent-500 hover:bg-accent-600 text-white font-medium rounded-md transition-colors text-xs mb-4"
                                 >
                                   Télécharger le dossier de candidature
                                 </a>
-                                <p className="text-orange-500 text-sm leading-relaxed">
+                                <p className="text-accent-500 text-sm leading-relaxed">
                                   La sélection des candidats s'effectue après l'étude du dossier d'inscription et l'émission d'un premier avis favorable.
                                 </p>
                               </div>
@@ -611,7 +613,7 @@ export default function FormationCCP3() {
 
                             {/* Étape 2 */}
                             <div className="flex items-center gap-5">
-                              <div className="relative z-10 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
+                              <div className="relative z-10 w-12 h-12 bg-accent-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
                                 <span className="text-white text-base font-bold">2</span>
                               </div>
                               <div className="flex-grow">
@@ -641,11 +643,11 @@ export default function FormationCCP3() {
                         </p>
                         
                         <div className="mt-8 text-center">
-                          <p className="text-orange-500 font-bold text-sm mb-3">
+                          <p className="text-accent-500 font-bold text-sm mb-3">
                             Il est fortement recommandé de participer à une réunion d'information collective.
                           </p>
                           <Link href="/s-inscrire">
-                            <button className="inline-flex items-center px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-md transition-colors text-xs">
+                            <button className="inline-flex items-center px-4 py-2 bg-accent-500 hover:bg-accent-600 text-white font-medium rounded-md transition-colors text-xs">
                               S'inscrire à une réunion d'information
                             </button>
                           </Link>
@@ -670,7 +672,7 @@ export default function FormationCCP3() {
                       )}
                     </button>
                     {openModules['methodes'] && (
-                      <div className="p-3 border-t border-gray-100">
+                      <div className="p-3 border-t border-muted-blue-200">
                         <div className="space-y-3 text-[#013F63] text-sm">
                           <p className="font-semibold text-[#013F63]">UNE FORMATION ACTION BASÉE SUR UNE PÉDAGOGIE INNOVANTE</p>
                           <p>• Formation action basée sur des temps d'acquisition de connaissances, de cas pratique, et d'échanges d'expériences</p>
@@ -697,7 +699,7 @@ export default function FormationCCP3() {
                       )}
                     </button>
                     {openModules['deroulement'] && (
-                      <div className="p-3 border-t border-gray-100">
+                      <div className="p-3 border-t border-muted-blue-200">
                         <div className="space-y-3 text-[#013F63] text-sm">
                           <p>• <strong>Durée : 371 heures</strong></p>
                           <div className="ml-4 space-y-1">
@@ -726,7 +728,7 @@ export default function FormationCCP3() {
                       )}
                     </button>
                     {openModules['evaluation'] && (
-                      <div className="p-3 border-t border-gray-100">
+                      <div className="p-3 border-t border-muted-blue-200">
                         <div className="space-y-2 text-[#013F63] text-sm">
                           <p>◦ Feuilles de présence.</p>
                           <p>◦ Une évaluation en cours de formation</p>
@@ -751,7 +753,7 @@ export default function FormationCCP3() {
                 {/* Titre de section */}
                 <div className="text-center mb-4">
                   <h2 className="text-lg lg:text-xl font-bold text-[#013F63] mb-3">
-                    <span className="text-orange-500 font-brittany text-xl lg:text-2xl">Une méthodologie</span> D'INTERVENTION AU PLUS PRÈS DU RÉEL
+                    <span className="text-accent-500 font-brittany text-xl lg:text-2xl">Une méthodologie</span> D'INTERVENTION AU PLUS PRÈS DU RÉEL
                   </h2>
                 </div>
 

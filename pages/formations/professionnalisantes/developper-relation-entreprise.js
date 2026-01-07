@@ -119,9 +119,9 @@ export default function DevelopperRelationEntreprise() {
 
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">
         {/* Background animé global */}
-        <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
-        <div className="absolute top-40 right-1/4 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-1000"></div>
-        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-orange-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-2000"></div>
+        <div className="absolute top-20 left-1/4 w-96 h-96 bg-muted-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+        <div className="absolute top-40 right-1/4 w-96 h-96 bg-muted-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-1000"></div>
+        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-accent-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-2000"></div>
         <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-purple-100 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-pulse animation-delay-3000"></div>
         
         <div className="relative z-10">
@@ -136,7 +136,7 @@ export default function DevelopperRelationEntreprise() {
               <div className="max-w-4xl mx-auto">
                 <Link 
                   href="/formations" 
-                  className="inline-flex items-center gap-2 text-[#013F63] hover:text-orange-500 transition-colors font-medium"
+                  className="inline-flex items-center gap-2 text-[#013F63] hover:text-accent-500 transition-colors font-medium"
                 >
                   <ArrowLeft className="w-4 h-4" />
                   Retour aux formations
@@ -150,7 +150,7 @@ export default function DevelopperRelationEntreprise() {
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center">
                 <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight tracking-tight">
-                  Développer la <span className="font-brittany text-3xl lg:text-5xl text-orange-500">relation entreprise</span>
+                  Développer la <span className="font-brittany text-3xl lg:text-5xl text-accent-500">relation entreprise</span>
                 </h1>
                 <p className="text-lg lg:text-xl text-[#013F63] mb-4 font-medium">
                   {formation.sousTitre}
@@ -179,7 +179,7 @@ export default function DevelopperRelationEntreprise() {
                         <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-orange-400 to-transparent"></div>
                       </div>
                       
-                      <div className="text-orange-500 font-bold text-xl leading-relaxed text-center">
+                      <div className="text-accent-500 font-bold text-xl leading-relaxed text-center">
                         <p>
                           Une relation entreprise solide, c'est la clé du succès pour l'insertion professionnelle !
                         </p>
@@ -251,23 +251,23 @@ export default function DevelopperRelationEntreprise() {
                     <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                       <button
                         onClick={() => toggleSection('objectif')}
-                        className="w-full p-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
+                        className="w-full p-4 text-left flex items-center justify-between bg-neutral-100 hover:bg-muted-blue-200 transition-colors"
                       >
                         <div className="flex items-center gap-3">
                           <h3 className="text-base font-bold text-[#013F63]">OBJECTIFS PÉDAGOGIQUES</h3>
                         </div>
                         {openSections.objectif ? (
-                          <ChevronUp className="w-5 h-5 text-gray-600" />
+                          <ChevronUp className="w-5 h-5 text-neutral-900" />
                         ) : (
-                          <ChevronDown className="w-5 h-5 text-gray-600" />
+                          <ChevronDown className="w-5 h-5 text-neutral-900" />
                         )}
                       </button>
                       {openSections.objectif && (
-                        <div className="p-4 border-t border-gray-100">
+                        <div className="p-4 border-t border-muted-blue-200">
                           <div className="space-y-2">
                             {formation.objectifs.map((objectif, i) => (
                               <div key={i} className="flex items-start gap-3">
-                                <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                                <CheckCircle className="w-4 h-4 text-accent-500 mt-0.5 flex-shrink-0" />
                                 <span className="text-[#013F63] text-sm">{objectif}</span>
                               </div>
                             ))}
@@ -280,19 +280,19 @@ export default function DevelopperRelationEntreprise() {
                     <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                       <button
                         onClick={() => toggleSection('public')}
-                        className="w-full p-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
+                        className="w-full p-4 text-left flex items-center justify-between bg-neutral-100 hover:bg-muted-blue-200 transition-colors"
                       >
                         <div className="flex items-center gap-3">
                           <h3 className="text-base font-bold text-[#013F63]">PUBLIC VISÉ</h3>
                         </div>
                         {openSections.public ? (
-                          <ChevronUp className="w-5 h-5 text-gray-600" />
+                          <ChevronUp className="w-5 h-5 text-neutral-900" />
                         ) : (
-                          <ChevronDown className="w-5 h-5 text-gray-600" />
+                          <ChevronDown className="w-5 h-5 text-neutral-900" />
                         )}
                       </button>
                       {openSections.public && (
-                        <div className="p-4 border-t border-gray-100">
+                        <div className="p-4 border-t border-muted-blue-200">
                           <p className="text-[#013F63] text-sm">{formation.public}</p>
                         </div>
                       )}
@@ -302,19 +302,19 @@ export default function DevelopperRelationEntreprise() {
                     <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                       <button
                         onClick={() => toggleSection('prerequis')}
-                        className="w-full p-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
+                        className="w-full p-4 text-left flex items-center justify-between bg-neutral-100 hover:bg-muted-blue-200 transition-colors"
                       >
                         <div className="flex items-center gap-3">
                           <h3 className="text-base font-bold text-[#013F63]">PRÉREQUIS</h3>
                         </div>
                         {openSections.prerequis ? (
-                          <ChevronUp className="w-5 h-5 text-gray-600" />
+                          <ChevronUp className="w-5 h-5 text-neutral-900" />
                         ) : (
-                          <ChevronDown className="w-5 h-5 text-gray-600" />
+                          <ChevronDown className="w-5 h-5 text-neutral-900" />
                         )}
                       </button>
                       {openSections.prerequis && (
-                        <div className="p-4 border-t border-gray-100">
+                        <div className="p-4 border-t border-muted-blue-200">
                           <p className="text-[#013F63] text-sm">Avoir de l'expérience dans l'accompagnement social et/ou d'insertion professionnelle</p>
                         </div>
                       )}
@@ -324,19 +324,19 @@ export default function DevelopperRelationEntreprise() {
                     <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                       <button
                         onClick={() => toggleSection('modalites')}
-                        className="w-full p-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
+                        className="w-full p-4 text-left flex items-center justify-between bg-neutral-100 hover:bg-muted-blue-200 transition-colors"
                       >
                         <div className="flex items-center gap-3">
                           <h3 className="text-base font-bold text-[#013F63]">MODALITÉS D'ADMISSION</h3>
                         </div>
                         {openSections.modalites ? (
-                          <ChevronUp className="w-5 h-5 text-gray-600" />
+                          <ChevronUp className="w-5 h-5 text-neutral-900" />
                         ) : (
-                          <ChevronDown className="w-5 h-5 text-gray-600" />
+                          <ChevronDown className="w-5 h-5 text-neutral-900" />
                         )}
                       </button>
                       {openSections.modalites && (
-                        <div className="p-4 border-t border-gray-100">
+                        <div className="p-4 border-t border-muted-blue-200">
                           <p className="text-[#013F63] text-sm">
                             Nous sommes à votre disposition, par téléphone ou par mail, afin d'analyser et d'évaluer vos besoins.<br/>
                             Dans le cadre de nos actions de formation, un programme est construit, personnalisé et élaboré, en cohérence avec vos objectifs et les spécificités de votre structure.
@@ -361,7 +361,7 @@ export default function DevelopperRelationEntreprise() {
                 
                 <div className="text-center mb-12">
                   <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight">
-                    Programme <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">détaillé</span>
+                    Programme <span className="text-accent-500 font-brittany text-5xl lg:text-6xl">détaillé</span>
                   </h2>
                   <p className="text-lg text-[#013F63] leading-relaxed max-w-3xl mx-auto">
                     Un parcours complet sur 3 jours pour maîtriser la relation entreprise
@@ -372,7 +372,7 @@ export default function DevelopperRelationEntreprise() {
                   {formation.programme.map((jour, i) => (
                     <div 
                       key={i} 
-                      className={`bg-white rounded-2xl shadow-lg border border-gray-100 flex flex-col transition-all duration-700 ease-out overflow-hidden ${
+                      className={`bg-white rounded-2xl shadow-lg border border-muted-blue-200 flex flex-col transition-all duration-700 ease-out overflow-hidden ${
                         cardsVisible 
                           ? 'transform translate-y-0 opacity-100' 
                           : 'transform -translate-y-8 opacity-0'
@@ -381,7 +381,7 @@ export default function DevelopperRelationEntreprise() {
                         transitionDelay: `${i * 200}ms` // Délai progressif pour chaque carte
                       }}
                     >
-                      <div className="text-[#013F63] p-6 flex items-center justify-start h-20 bg-blue-100">
+                      <div className="text-[#013F63] p-6 flex items-center justify-start h-20 bg-muted-blue-200">
                         <h3 className="text-xl font-bold text-left leading-tight">{jour.jour}</h3>
                       </div>
                       <div className="space-y-2 flex-1 p-8 relative">
@@ -392,7 +392,7 @@ export default function DevelopperRelationEntreprise() {
                           </div>
                         ))}
                         <div className="absolute bottom-4 right-4">
-                          <span className="text-lg font-brittany text-orange-500 font-medium">
+                          <span className="text-lg font-brittany text-accent-500 font-medium">
                             {i === 2 ? 'Distanciel' : 'Présentiel'}
                           </span>
                         </div>
@@ -411,7 +411,7 @@ export default function DevelopperRelationEntreprise() {
                 
                 <div className="text-center mb-12">
                   <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight">
-                    <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Tarifs</span>
+                    <span className="text-accent-500 font-brittany text-4xl lg:text-5xl">Tarifs</span>
                   </h2>
                 </div>
 
@@ -419,27 +419,27 @@ export default function DevelopperRelationEntreprise() {
                 <div className="grid md:grid-cols-2 gap-8 mb-12">
                   
                   {/* Tarif INTER */}
-                  <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 text-center">
-                    <div className="bg-orange-100 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4 h-20 flex items-center justify-center">
-                      <h3 className="text-2xl font-bold text-orange-500">Tarif INTER</h3>
+                  <div className="bg-white rounded-3xl p-6 shadow-xl border border-muted-blue-200 text-center">
+                    <div className="bg-accent-300 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4 h-20 flex items-center justify-center">
+                      <h3 className="text-2xl font-bold text-accent-500">Tarif INTER</h3>
                     </div>
                     
                     <div className="mb-6">
-                      <div className="text-4xl font-bold text-orange-500 mb-2">1 365<span className="text-2xl">€ / stagiaire</span></div>
+                      <div className="text-4xl font-bold text-accent-500 mb-2">1 365<span className="text-2xl">€ / stagiaire</span></div>
                     </div>
                     
                     <Link
                       href="/contact"
-                      className="inline-block px-8 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-full transition-colors"
+                      className="inline-block px-8 py-3 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-full transition-colors"
                     >
                       En savoir plus
                     </Link>
                   </div>
 
                   {/* Tarif INTRA */}
-                  <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 text-center">
-                    <div className="bg-blue-100 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4 h-20 flex items-center justify-center">
-                      <h3 className="text-2xl font-bold text-blue-600">Tarif INTRA</h3>
+                  <div className="bg-white rounded-3xl p-6 shadow-xl border border-muted-blue-200 text-center">
+                    <div className="bg-muted-blue-200 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4 h-20 flex items-center justify-center">
+                      <h3 className="text-2xl font-bold text-primary-600">Tarif INTRA</h3>
                     </div>
                     
                     <div className="mb-6">
@@ -465,7 +465,7 @@ export default function DevelopperRelationEntreprise() {
                 
                 <div className="text-center mb-12">
                   <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight">
-                    Comment <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">financer</span> votre formation ?
+                    Comment <span className="text-accent-500 font-brittany text-4xl lg:text-5xl">financer</span> votre formation ?
                   </h2>
                   <p className="text-lg text-[#013F63] leading-relaxed max-w-2xl mx-auto">
                     Plusieurs solutions s'offrent à vous
@@ -476,7 +476,7 @@ export default function DevelopperRelationEntreprise() {
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
                   
                   {/* FAF - Indépendants */}
-                  <div className="text-center p-6 bg-white rounded-xl border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+                  <div className="text-center p-6 bg-white rounded-xl border border-muted-blue-200 hover:shadow-lg transition-shadow duration-300">
                     <div className="w-20 h-20 mx-auto mb-4 bg-white rounded-lg flex items-center justify-center p-2 shadow-md">
                       <Image
                         src="/images/financements/logo-faf.jpeg"
@@ -491,7 +491,7 @@ export default function DevelopperRelationEntreprise() {
                   </div>
 
                   {/* OPCO - Salariés */}
-                  <div className="text-center p-6 bg-white rounded-xl border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+                  <div className="text-center p-6 bg-white rounded-xl border border-muted-blue-200 hover:shadow-lg transition-shadow duration-300">
                     <div className="w-20 h-20 mx-auto mb-4 bg-white rounded-lg flex items-center justify-center p-2 shadow-md">
                       <Image
                         src="/images/financements/logo-opco.webp"
@@ -508,12 +508,12 @@ export default function DevelopperRelationEntreprise() {
                   
                 {/* Autofinancement */}
                 <div className="mt-8">
-                    <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 text-center">
+                    <div className="bg-white rounded-2xl p-6 shadow-lg border border-muted-blue-200 text-center">
                       <h4 className="text-2xl font-bold text-[#013F63] mb-6">
-                        <span className="text-orange-500 font-brittany text-3xl">Investissez</span> en vous-même
+                        <span className="text-accent-500 font-brittany text-3xl">Investissez</span> en vous-même
                       </h4>
                       <p className="text-base text-[#013F63] font-medium leading-relaxed">
-                        Paiement en <span className="text-6xl font-light text-orange-500 font-brittany leading-none mx-4">x3</span> sans frais grâce à notre partenaire financier.
+                        Paiement en <span className="text-6xl font-light text-accent-500 font-brittany leading-none mx-4">x3</span> sans frais grâce à notre partenaire financier.
                       </p>
                     </div>
                   </div>
@@ -535,7 +535,7 @@ export default function DevelopperRelationEntreprise() {
                 
                 <div className="text-center mb-12">
                   <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight">
-                    Prochaines <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">sessions</span>
+                    Prochaines <span className="text-accent-500 font-brittany text-4xl lg:text-5xl">sessions</span>
                   </h2>
                   <p className="text-lg text-[#013F63] leading-relaxed max-w-2xl mx-auto">
                     Réservez dès maintenant votre place pour cette formation très demandée
@@ -545,21 +545,21 @@ export default function DevelopperRelationEntreprise() {
                 <div className="grid md:grid-cols-2 gap-8 mb-12">
                   
                   {/* Session Janvier 2026 */}
-                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 text-center">
-                    <div className="bg-orange-100 text-[#013F63] rounded-t-2xl -mx-8 -mt-8 p-4 mb-6">
-                      <h3 className="text-2xl font-bold mb-2 text-orange-500">Session d'Hiver</h3>
-                      <p className="text-orange-600">Janvier 2026</p>
+                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-muted-blue-200 text-center">
+                    <div className="bg-accent-300 text-[#013F63] rounded-t-2xl -mx-8 -mt-8 p-4 mb-6">
+                      <h3 className="text-2xl font-bold mb-2 text-accent-500">Session d'Hiver</h3>
+                      <p className="text-accent-600">Janvier 2026</p>
                     </div>
                     
                     <div className="mb-6">
                       <div className="flex items-center gap-2 mb-4">
-                        <div className="w-auto h-8 bg-blue-100 rounded-full flex items-center justify-center px-3">
+                        <div className="w-auto h-8 bg-muted-blue-200 rounded-full flex items-center justify-center px-3">
                           <span className="text-[#013F63] font-bold text-sm">Présentiel</span>
                         </div>
                         <span className="text-[#013F63] font-medium">13 au 14 janvier 2026</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <div className="w-auto h-8 bg-blue-100 rounded-full flex items-center justify-center px-3">
+                        <div className="w-auto h-8 bg-muted-blue-200 rounded-full flex items-center justify-center px-3">
                           <span className="text-[#013F63] font-bold text-sm">Distanciel</span>
                         </div>
                         <span className="text-[#013F63] font-medium">23 janvier 2026</span>
@@ -568,21 +568,21 @@ export default function DevelopperRelationEntreprise() {
                   </div>
 
                   {/* Session Octobre 2025 */}
-                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 text-center">
-                    <div className="bg-orange-100 text-[#013F63] rounded-t-2xl -mx-8 -mt-8 p-4 mb-6">
-                      <h3 className="text-2xl font-bold mb-2 text-orange-500">Session de Printemps</h3>
-                      <p className="text-orange-600">2026</p>
+                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-muted-blue-200 text-center">
+                    <div className="bg-accent-300 text-[#013F63] rounded-t-2xl -mx-8 -mt-8 p-4 mb-6">
+                      <h3 className="text-2xl font-bold mb-2 text-accent-500">Session de Printemps</h3>
+                      <p className="text-accent-600">2026</p>
                     </div>
                     
                     <div className="mb-6">
                       <div className="flex items-center gap-2 mb-4">
-                        <div className="w-auto h-8 bg-blue-100 rounded-full flex items-center justify-center px-3">
+                        <div className="w-auto h-8 bg-muted-blue-200 rounded-full flex items-center justify-center px-3">
                           <span className="text-[#013F63] font-bold text-sm">Présentiel</span>
                         </div>
                         <span className="text-[#013F63] font-medium">à venir</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <div className="w-auto h-8 bg-blue-100 rounded-full flex items-center justify-center px-3">
+                        <div className="w-auto h-8 bg-muted-blue-200 rounded-full flex items-center justify-center px-3">
                           <span className="text-[#013F63] font-bold text-sm">Distanciel</span>
                         </div>
                         <span className="text-[#013F63] font-medium">à venir</span>
@@ -600,7 +600,7 @@ export default function DevelopperRelationEntreprise() {
               <div className="max-w-4xl mx-auto text-center">
                 
                 <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-6">
-                  Intéressé(e) par cette <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">formation ?</span>
+                  Intéressé(e) par cette <span className="text-accent-500 font-brittany text-4xl lg:text-5xl">formation ?</span>
                 </h2>
                 
                 <p className="text-xl text-[#013F63] mb-12 max-w-2xl mx-auto">
@@ -629,7 +629,7 @@ export default function DevelopperRelationEntreprise() {
               <div className="max-w-4xl mx-auto">
                 
                 {/* Contenu principal */}
-                <div className="bg-gradient-to-r from-blue-50 to-orange-50 rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+                <div className="bg-gradient-to-r from-blue-50 to-orange-50 rounded-2xl shadow-lg border border-muted-blue-200 overflow-hidden">
                   <div className="grid lg:grid-cols-3 gap-0">
                     
                     {/* Section gauche - Logo */}
@@ -671,13 +671,13 @@ export default function DevelopperRelationEntreprise() {
                           <div className="flex items-center gap-4 mt-1">
                             <a 
                               href="mailto:contact@atipikrh.com" 
-                              className="text-orange-500 hover:text-orange-600 transition-colors text-sm font-medium"
+                              className="text-accent-500 hover:text-accent-600 transition-colors text-sm font-medium"
                             >
                               contact@atipikrh.com
                             </a>
                             <a 
                               href="tel:0783019955" 
-                              className="text-orange-500 hover:text-orange-600 transition-colors text-sm font-medium"
+                              className="text-accent-500 hover:text-accent-600 transition-colors text-sm font-medium"
                             >
                               07 83 01 99 55
                             </a>

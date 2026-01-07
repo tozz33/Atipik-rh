@@ -177,6 +177,9 @@ export default function VAE() {
 
   // Observer pour les statistiques Atipik RH
   useEffect(() => {
+    const node = statsRef.current
+    if (!node) return
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !hasAnimatedStats) {
@@ -230,13 +233,11 @@ export default function VAE() {
       { threshold: 0.3 }
     )
 
-    if (statsRef.current) {
-      observer.observe(statsRef.current)
-    }
+    observer.observe(node)
 
     return () => {
-      if (statsRef.current) {
-        observer.unobserve(statsRef.current)
+      if (node) {
+        observer.unobserve(node)
       }
     }
   }, [hasAnimatedStats])
@@ -404,11 +405,11 @@ export default function VAE() {
 
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-orange-50">
         {/* Background animé global */}
-        <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
-        <div className="absolute top-40 right-1/4 w-96 h-96 bg-orange-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-1000"></div>
-        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-2000"></div>
-        <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-orange-100 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-pulse animation-delay-3000"></div>
-        <div className="absolute top-3/4 right-1/3 w-64 h-64 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-pulse animation-delay-4000"></div>
+        <div className="absolute top-20 left-1/4 w-96 h-96 bg-muted-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+        <div className="absolute top-40 right-1/4 w-96 h-96 bg-accent-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-1000"></div>
+        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-muted-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-2000"></div>
+        <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-accent-300 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-pulse animation-delay-3000"></div>
+        <div className="absolute top-3/4 right-1/3 w-64 h-64 bg-muted-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-pulse animation-delay-4000"></div>
 
         <div className="relative z-10">
           <Header isFixed={true} />
@@ -421,7 +422,7 @@ export default function VAE() {
             <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight tracking-tight text-center">
-                Accompagnement <span className="font-brittany text-3xl lg:text-5xl text-orange-500">VAE</span>
+                Accompagnement <span className="font-brittany text-3xl lg:text-5xl text-accent-500">VAE</span>
                 </h1>
               <p className="text-lg text-[#013F63] leading-relaxed font-light max-w-3xl mx-auto">
                 Valorisez votre expérience professionnelle et obtenez une certification reconnue
@@ -447,7 +448,7 @@ export default function VAE() {
                   <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-orange-400 to-transparent"></div>
                 </div>
                 
-                <div className="text-orange-500 font-bold text-xl leading-relaxed text-center">
+                <div className="text-accent-500 font-bold text-xl leading-relaxed text-center">
                   <p>
                     La VAE constitue un outil de valorisation de l'expérience, qui transforme votre parcours en certification officielle !
                   </p>
@@ -479,7 +480,7 @@ export default function VAE() {
                       <UserCheck className="w-5 h-5 mt-0.5 flex-shrink-0" />
                       <div>
                         <p className="font-semibold mb-0.5 text-base">Niveau d'entrée :</p>
-                        <p className="text-blue-100 text-sm">Aucun diplôme requis</p>
+                        <p className="text-neutral-100 text-sm">Aucun diplôme requis</p>
                     </div>
                 </div>
 
@@ -487,7 +488,7 @@ export default function VAE() {
                       <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0" />
                     <div>
                         <p className="font-semibold mb-0.5 text-base">Lieu :</p>
-                        <p className="text-blue-100 text-sm">8 Rue du Courant, 33310 Lormont</p>
+                        <p className="text-neutral-100 text-sm">8 Rue du Courant, 33310 Lormont</p>
                       </div>
                   </div>
                   
@@ -495,17 +496,17 @@ export default function VAE() {
                       <Clock className="w-5 h-5 mt-0.5 flex-shrink-0" />
                     <div className="flex-1">
                         <p className="font-semibold mb-0.5 text-base">Durée :</p>
-                        <div className="text-blue-100 text-sm space-y-1.5">
+                        <div className="text-neutral-100 text-sm space-y-1.5">
                           <p>
                             <span className="font-semibold text-white">Jusqu'à 30 heures</span>
                           </p>
-                          <p className="text-blue-200/90 text-xs pt-0.5">
+                          <p className="text-neutral-100 text-xs pt-0.5">
                             (hors dossier de faisabilité et acte formatif type SST ou AFGSU)
                           </p>
                           <p>
                             Réparties sur <span className="font-semibold text-white">6 à 18 mois</span>
                           </p>
-                          <p className="text-blue-200/90 text-xs pt-0.5">
+                          <p className="text-neutral-100 text-xs pt-0.5">
                             De l'inscription sur la plateforme France VAE jusqu'à l'entretien post jury
                           </p>
                         </div>
@@ -516,7 +517,7 @@ export default function VAE() {
                       <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0" />
                     <div>
                         <p className="font-semibold mb-0.5 text-base">Modalité :</p>
-                        <p className="text-blue-100 text-sm">Présentiel ou Distanciel</p>
+                        <p className="text-neutral-100 text-sm">Présentiel ou Distanciel</p>
                   </div>
                       </div>
                     </div>
@@ -529,7 +530,7 @@ export default function VAE() {
                   <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                       <button
                       onClick={() => toggleEtape('public')}
-                      className="w-full p-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
+                      className="w-full p-4 text-left flex items-center justify-between bg-neutral-100 hover:bg-accent-300 transition-colors"
                     >
                       <div className="flex items-center gap-3">
                         <h3 className="text-base font-bold text-[#013F63]">PUBLIC VISÉ</h3>
@@ -541,7 +542,7 @@ export default function VAE() {
                           )}
                       </button>
                     {openEtapes['public'] && (
-                      <div className="p-4 border-t border-gray-100">
+                      <div className="p-4 border-t border-muted-blue-200">
                         <p className="text-[#013F63] text-sm leading-relaxed">
                           Notre accompagnement VAE s'adresse à toute personne souhaitant faire reconnaître son expérience par un diplôme, un titre ou un certificat de qualification professionnelle : salariés du secteur privé, demandeurs d'emploi, travailleurs indépendants, bénévoles, volontaires et proches aidants.
                         </p>
@@ -553,26 +554,26 @@ export default function VAE() {
                   <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                     <button
                       onClick={() => toggleEtape('prerequis')}
-                      className="w-full p-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
+                      className="w-full p-4 text-left flex items-center justify-between bg-neutral-100 hover:bg-accent-300 transition-colors"
                     >
                       <div className="flex items-center gap-3">
                         <h3 className="text-base font-bold text-[#013F63]">PRÉREQUIS</h3>
                               </div>
                       {openEtapes['prerequis'] ? (
-                        <ChevronUp className="w-5 h-5 text-gray-600" />
+                        <ChevronUp className="w-5 h-5 text-neutral-900" />
                       ) : (
-                        <ChevronDown className="w-5 h-5 text-gray-600" />
+                        <ChevronDown className="w-5 h-5 text-neutral-900" />
                       )}
                     </button>
                     {openEtapes['prerequis'] && (
-                      <div className="p-4 border-t border-gray-100">
+                      <div className="p-4 border-t border-muted-blue-200">
                         <p className="text-[#013F63] text-sm leading-relaxed mb-2">
                           Justifier d'au moins une expérience significative (salariée, non salariée, bénévole, volontaire ou extra-professionnelle) en lien direct avec la certification visée.
                         </p>
                         <p className="text-[#013F63] text-sm leading-relaxed">
                           La VAE est accessible sans exigence de durée minimale d'expérience.
                         </p>
-                        <div className="mt-4 bg-blue-50/80 border-l-4 border-orange-500 rounded-lg p-3">
+                        <div className="mt-4 bg-muted-blue-200/80 border-l-4 border-accent-500 rounded-lg p-3">
                           <p className="text-[#013F63] text-xs leading-relaxed italic">
                             Le cas échéant, certains prérequis spécifiques peuvent être exigés en fonction des diplômes visés.
                           </p>
@@ -585,19 +586,19 @@ export default function VAE() {
                   <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                     <button
                       onClick={() => toggleEtape('modalites')}
-                      className="w-full p-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
+                      className="w-full p-4 text-left flex items-center justify-between bg-neutral-100 hover:bg-accent-300 transition-colors"
                     >
                       <div className="flex items-center gap-3">
                         <h3 className="text-base font-bold text-[#013F63]">MODALITÉS ET DÉLAIS D'ACCÈS</h3>
                               </div>
                       {openEtapes['modalites'] ? (
-                        <ChevronUp className="w-5 h-5 text-gray-600" />
+                        <ChevronUp className="w-5 h-5 text-neutral-900" />
                       ) : (
-                        <ChevronDown className="w-5 h-5 text-gray-600" />
+                        <ChevronDown className="w-5 h-5 text-neutral-900" />
                       )}
                     </button>
                     {openEtapes['modalites'] && (
-                      <div className="p-6 border-t border-gray-100 bg-gradient-to-br from-blue-50/50 to-orange-50/30">
+                      <div className="p-6 border-t border-muted-blue-200 bg-gradient-to-br from-muted-blue-200/50 to-accent-300/30">
                         <div className="space-y-5">
                           <div className="bg-white rounded-lg p-4 shadow-sm border-l-4 border-[#013F63]">
                             <p className="text-[#013F63] text-sm leading-relaxed font-medium">
@@ -610,7 +611,7 @@ export default function VAE() {
                           <div className="grid gap-3 mt-5">
                             <div className="bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow border-l-4 border-orange-500">
                               <div className="flex items-start gap-3">
-                                <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center flex-shrink-0 mt-0.5 border border-gray-200 p-1.5">
+                                <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center flex-shrink-0 mt-0.5 border border-muted-blue-200 p-1.5">
                                   <Image 
                                     src="/images/financements/cpf.jpg" 
                                     alt="CPF" 
@@ -627,7 +628,7 @@ export default function VAE() {
                             </div>
                             <div className="bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow border-l-4 border-orange-400">
                               <div className="flex items-start gap-3">
-                                <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center flex-shrink-0 mt-0.5 border border-gray-200 p-1.5">
+                                <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center flex-shrink-0 mt-0.5 border border-muted-blue-200 p-1.5">
                                   <Image 
                                     src="/images/financements/logo-opco.webp" 
                                     alt="OPCO" 
@@ -644,7 +645,7 @@ export default function VAE() {
                             </div>
                             <div className="bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow border-l-4 border-[#013F63]">
                               <div className="flex items-start gap-3">
-                                <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center flex-shrink-0 mt-0.5 border border-gray-200 p-1.5">
+                                <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center flex-shrink-0 mt-0.5 border border-muted-blue-200 p-1.5">
                                   <Image 
                                     src="/images/financements/logo entreprise.jpg" 
                                     alt="Employeur" 
@@ -669,21 +670,21 @@ export default function VAE() {
                   <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                     <button
                       onClick={() => toggleEtape('objectifs')}
-                      className="w-full p-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
+                      className="w-full p-4 text-left flex items-center justify-between bg-neutral-100 hover:bg-accent-300 transition-colors"
                     >
                       <div className="flex items-center gap-3">
                         <h3 className="text-base font-bold text-[#013F63]">OBJECTIFS</h3>
                       </div>
                       {openEtapes['objectifs'] ? (
-                        <ChevronUp className="w-5 h-5 text-gray-600" />
+                        <ChevronUp className="w-5 h-5 text-neutral-900" />
                       ) : (
-                        <ChevronDown className="w-5 h-5 text-gray-600" />
+                        <ChevronDown className="w-5 h-5 text-neutral-900" />
                       )}
                     </button>
                     {openEtapes['objectifs'] && (
-                      <div className="p-4 border-t border-gray-100">
+                      <div className="p-4 border-t border-muted-blue-200">
                         <div className="space-y-3">
-                          <div className="flex items-start gap-3 p-3 border-l-2 border-[#013F63] bg-blue-50/30 rounded-r-lg">
+                          <div className="flex items-start gap-3 p-3 border-l-2 border-[#013F63] bg-muted-blue-200/30 rounded-r-lg">
                             <div className="w-5 h-5 rounded-full bg-[#013F63] flex items-center justify-center flex-shrink-0 mt-0.5">
                               <span className="text-white text-xs font-bold">1</span>
                             </div>
@@ -691,8 +692,8 @@ export default function VAE() {
                               Apporter une aide méthodologique pour rédiger tout ou partie des livrables de preuves du diplôme visé.
                             </p>
                           </div>
-                          <div className="flex items-start gap-3 p-3 border-l-2 border-orange-500 bg-orange-50/30 rounded-r-lg">
-                            <div className="w-5 h-5 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <div className="flex items-start gap-3 p-3 border-l-2 border-accent-500 bg-accent-300/30 rounded-r-lg">
+                            <div className="w-5 h-5 rounded-full bg-accent-500 flex items-center justify-center flex-shrink-0 mt-0.5">
                               <span className="text-white text-xs font-bold">2</span>
                             </div>
                             <p className="text-sm text-[#013F63] leading-relaxed">
@@ -708,19 +709,19 @@ export default function VAE() {
                   <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                     <button
                       onClick={() => toggleEtape('methodes')}
-                      className="w-full p-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
+                      className="w-full p-4 text-left flex items-center justify-between bg-neutral-100 hover:bg-accent-300 transition-colors"
                     >
                       <div className="flex items-center gap-3">
                         <h3 className="text-base font-bold text-[#013F63]">MÉTHODES PÉDAGOGIQUES</h3>
                       </div>
                       {openEtapes['methodes'] ? (
-                        <ChevronUp className="w-5 h-5 text-gray-600" />
+                        <ChevronUp className="w-5 h-5 text-neutral-900" />
                       ) : (
-                        <ChevronDown className="w-5 h-5 text-gray-600" />
+                        <ChevronDown className="w-5 h-5 text-neutral-900" />
                       )}
                     </button>
                     {openEtapes['methodes'] && (
-                      <div className="p-4 border-t border-gray-100">
+                      <div className="p-4 border-t border-muted-blue-200">
                         <div className="space-y-3">
                           {/* Entretiens individuels */}
                           <div className="relative group">
@@ -747,7 +748,7 @@ export default function VAE() {
                           </div>
 
                           {/* Groupe des dossiers - Regroupés visuellement */}
-                          <div className="relative border-l-4 border-orange-400 pl-4 space-y-3">
+                          <div className="relative border-l-4 border-accent-500 pl-4 space-y-3">
                             <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-gradient-to-b from-orange-400 via-[#013F63] to-orange-400 opacity-30"></div>
                             
                             {/* Dossier de faisabilité */}
@@ -762,7 +763,7 @@ export default function VAE() {
                                     <div className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-[#013F63] rounded-full border-2 border-white"></div>
                                   </div>
                                   <div className="flex-1 pt-0.5">
-                                    <h4 className="font-bold text-base text-[#013F63] mb-2 group-hover:text-orange-600 transition-colors">
+                                    <h4 className="font-bold text-base text-[#013F63] mb-2 group-hover:text-accent-600 transition-colors">
                                       Dossier de faisabilité
                                     </h4>
                                     <div className="h-0.5 w-10 bg-gradient-to-r from-orange-500 to-[#013F63] rounded-full mb-2"></div>
@@ -783,7 +784,7 @@ export default function VAE() {
                                     <div className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-orange-500 rounded-full border-2 border-white"></div>
                                   </div>
                                   <div className="flex-1 pt-0.5">
-                                    <h4 className="font-bold text-base text-[#013F63] mb-2 group-hover:text-orange-600 transition-colors">
+                                    <h4 className="font-bold text-base text-[#013F63] mb-2 group-hover:text-accent-600 transition-colors">
                                       Dossier de validation
                                     </h4>
                                     <div className="h-0.5 w-10 bg-gradient-to-r from-[#013F63] to-orange-500 rounded-full mb-2"></div>
@@ -804,7 +805,7 @@ export default function VAE() {
                                     <div className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-[#013F63] rounded-full border-2 border-white"></div>
                                   </div>
                                   <div className="flex-1 pt-0.5">
-                                    <h4 className="font-bold text-base text-[#013F63] mb-2 group-hover:text-orange-600 transition-colors">
+                                    <h4 className="font-bold text-base text-[#013F63] mb-2 group-hover:text-accent-600 transition-colors">
                                       Référentiel de certification
                                     </h4>
                                     <div className="h-0.5 w-10 bg-gradient-to-r from-orange-500 to-[#013F63] rounded-full mb-2"></div>
@@ -843,23 +844,23 @@ export default function VAE() {
                   <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                     <button
                       onClick={() => toggleEtape('suivi')}
-                      className="w-full p-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
+                      className="w-full p-4 text-left flex items-center justify-between bg-neutral-100 hover:bg-accent-300 transition-colors"
                     >
                       <div className="flex items-center gap-3">
                         <h3 className="text-base font-bold text-[#013F63]">MODALITÉS DE SUIVI</h3>
                       </div>
                       {openEtapes['suivi'] ? (
-                        <ChevronUp className="w-5 h-5 text-gray-600" />
+                        <ChevronUp className="w-5 h-5 text-neutral-900" />
                       ) : (
-                        <ChevronDown className="w-5 h-5 text-gray-600" />
+                        <ChevronDown className="w-5 h-5 text-neutral-900" />
                       )}
                     </button>
                     {openEtapes['suivi'] && (
-                      <div className="p-4 border-t border-gray-100">
+                      <div className="p-4 border-t border-muted-blue-200">
                         <div className="space-y-4">
                           <div className="relative group">
                             <div className="absolute -inset-0.5 bg-gradient-to-r from-[#013F63] to-orange-500 rounded-xl opacity-0 group-hover:opacity-10 blur transition-opacity duration-300"></div>
-                            <div className="relative bg-gradient-to-br from-blue-50/30 via-white to-orange-50/30 rounded-xl p-5 border-l-4 border-orange-500">
+                            <div className="relative bg-gradient-to-br from-muted-blue-200/30 via-white to-accent-300/30 rounded-xl p-5 border-l-4 border-accent-500">
                               <div className="flex items-start gap-4">
                                 <div className="relative flex-shrink-0">
                                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center shadow-lg">
@@ -886,7 +887,7 @@ export default function VAE() {
                                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#013F63] to-[#012a4a] flex items-center justify-center shadow-lg">
                                     <Users className="w-6 h-6 text-white" />
                                   </div>
-                                  <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-orange-500 rounded-full border-2 border-white flex items-center justify-center">
+                                  <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-accent-500 rounded-full border-2 border-white flex items-center justify-center">
                                     <CheckCircle className="w-3 h-3 text-white" />
                                   </div>
                                 </div>
@@ -907,25 +908,25 @@ export default function VAE() {
                   <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                     <button
                       onClick={() => toggleEtape('validation')}
-                      className="w-full p-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
+                      className="w-full p-4 text-left flex items-center justify-between bg-neutral-100 hover:bg-accent-300 transition-colors"
                     >
                       <div className="flex items-center gap-3">
                         <h3 className="text-base font-bold text-[#013F63]">MODALITÉ DE VALIDATION</h3>
                       </div>
                       {openEtapes['validation'] ? (
-                        <ChevronUp className="w-5 h-5 text-gray-600" />
+                        <ChevronUp className="w-5 h-5 text-neutral-900" />
                       ) : (
-                        <ChevronDown className="w-5 h-5 text-gray-600" />
+                        <ChevronDown className="w-5 h-5 text-neutral-900" />
                       )}
                     </button>
                     {openEtapes['validation'] && (
-                      <div className="p-4 border-t border-gray-100">
+                      <div className="p-4 border-t border-muted-blue-200">
                         <p className="text-sm leading-relaxed text-[#013F63] mb-4">
                           Dans le cadre d'une démarche de Validation des Acquis de l'Expérience (VAE), l'obtention du titre, diplôme ou de la certification visée dépend de la validation des blocs de compétences qui la composent. À l'issue de votre passage devant le jury, trois décisions sont possibles :
                         </p>
                         <div className="space-y-3">
                           {/* Validation totale */}
-                          <div className="flex items-start gap-3 p-3 border-l-2 border-[#013F63] bg-blue-50/30 rounded-r-lg">
+                          <div className="flex items-start gap-3 p-3 border-l-2 border-[#013F63] bg-muted-blue-200/30 rounded-r-lg">
                             <div className="w-5 h-5 rounded-full bg-[#013F63] flex items-center justify-center flex-shrink-0 mt-0.5">
                               <span className="text-white text-xs">✓</span>
                             </div>
@@ -938,8 +939,8 @@ export default function VAE() {
                           </div>
 
                           {/* Validation partielle */}
-                          <div className="flex items-start gap-3 p-3 border-l-2 border-orange-500 bg-orange-50/30 rounded-r-lg">
-                            <div className="w-5 h-5 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <div className="flex items-start gap-3 p-3 border-l-2 border-accent-500 bg-accent-300/30 rounded-r-lg">
+                            <div className="w-5 h-5 rounded-full bg-accent-500 flex items-center justify-center flex-shrink-0 mt-0.5">
                               <span className="text-white text-xs">!</span>
                             </div>
                             <div>
@@ -957,7 +958,7 @@ export default function VAE() {
                           </div>
 
                           {/* Non-validation */}
-                          <div className="flex items-start gap-3 p-3 border-l-2 border-[#013F63] bg-blue-50/30 rounded-r-lg">
+                          <div className="flex items-start gap-3 p-3 border-l-2 border-[#013F63] bg-muted-blue-200/30 rounded-r-lg">
                             <div className="w-5 h-5 rounded-full bg-[#013F63] flex items-center justify-center flex-shrink-0 mt-0.5">
                               <span className="text-white text-xs">×</span>
                             </div>
@@ -990,7 +991,7 @@ export default function VAE() {
               
               <div className="text-center mb-16">
                 <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4">
-                  Nos <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">domaines d'expertise</span>
+                  Nos <span className="text-accent-500 font-brittany text-5xl lg:text-6xl">domaines d'expertise</span>
                   </h2>
                 <p className="text-lg text-[#013F63] leading-relaxed font-light max-w-3xl mx-auto">
                   Nous proposons un accompagnement uniquement sur cette sélection de domaines d'expertise.
@@ -1005,13 +1006,13 @@ export default function VAE() {
                       key={index} 
                       className={`bg-white rounded-lg border-l-4 p-3 hover:shadow-md transition-all duration-200 ${
                         isEven 
-                          ? 'border-l-[#013F63] border-t border-r border-b border-gray-200 hover:border-[#013F63]' 
-                          : 'border-l-orange-500 border-t border-r border-b border-gray-200 hover:border-orange-500'
+                          ? 'border-l-[#013F63] border-t border-r border-b border-muted-blue-200 hover:border-[#013F63]' 
+                          : 'border-l-accent-500 border-t border-r border-b border-muted-blue-200 hover:border-accent-500'
                       }`}
                     >
                       <div className="flex items-start justify-between gap-2">
                         <span className={`text-xs font-semibold ${
-                          isEven ? 'text-[#013F63]' : 'text-orange-500'
+                          isEven ? 'text-[#013F63]' : 'text-accent-500'
                         }`}>
                           {domaine.code}
                         </span>
@@ -1026,7 +1027,7 @@ export default function VAE() {
 
               {/* Call to action */}
               <div className="text-center mt-12">
-                <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 max-w-2xl mx-auto">
+                <div className="bg-white rounded-2xl p-8 shadow-lg border border-muted-blue-200 max-w-2xl mx-auto">
                   <h3 className="text-xl font-bold text-[#013F63] mb-4">
                     En savoir +
                   </h3>
@@ -1065,7 +1066,7 @@ export default function VAE() {
               
               <div className="text-center mb-12">
                 <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight">
-                  Les étapes de notre <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">accompagnement</span>
+                  Les étapes de notre <span className="text-accent-500 font-brittany text-5xl lg:text-6xl">accompagnement</span>
                 </h2>
                 <p className="text-lg text-[#013F63] leading-relaxed font-light max-w-3xl mx-auto">
                   Un parcours structuré en 5 étapes pour maximiser vos chances de réussite
@@ -1079,7 +1080,7 @@ export default function VAE() {
                   const gradientTo = "to-[#012a4a]"
                   
                   return (
-                    <div key={etape.id} className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
+                    <div key={etape.id} className="bg-white rounded-2xl shadow-lg border border-muted-blue-200 overflow-hidden">
                       
                       {/* En-tête cliquable */}
                     <button
@@ -1106,14 +1107,14 @@ export default function VAE() {
                     
                       {/* Contenu déroulant */}
                       {isOpen && (
-                        <div className="p-6 border-t border-gray-200 animate-in slide-in-from-top-4 duration-300">
+                        <div className="p-6 border-t border-muted-blue-200 animate-in slide-in-from-top-4 duration-300">
                           
                           {/* Objectifs */}
                           <div className="mb-6">
                             <div className="space-y-2">
                               {etape.objectifs.map((objectif, i) => (
                                 <div key={i} className="flex items-start gap-2 text-sm">
-                                  <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                                  <CheckCircle className="w-4 h-4 text-accent-500 mt-0.5 flex-shrink-0" />
                                   <span className="text-[#013F63]">{objectif}</span>
                   </div>
                 ))}
@@ -1124,13 +1125,13 @@ export default function VAE() {
 
                           {/* Note spéciale */}
                           {etape.note && etape.id !== 3 && (
-                            <div className="border-t border-gray-100 pt-4">
+                            <div className="border-t border-muted-blue-200 pt-4">
                               <h4 className="text-sm font-bold text-[#013F63] mb-3 flex items-center gap-2">
                                 <Calendar className="w-4 h-4" />
                                 Information importante
                               </h4>
                               <div className="flex items-center gap-2 text-sm text-[#013F63]">
-                                <CheckCircle className="w-3 h-3 text-orange-500 flex-shrink-0" />
+                                <CheckCircle className="w-3 h-3 text-accent-500 flex-shrink-0" />
                                 {etape.note}
                               </div>
                             </div>
@@ -1152,17 +1153,17 @@ export default function VAE() {
               
               <div className="text-center mb-12">
                 <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4">
-                  Nos <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">2 formules</span>
+                  Nos <span className="text-accent-500 font-brittany text-5xl lg:text-6xl">2 formules</span>
                   </h2>
                 </div>
 
               <div className="grid md:grid-cols-2 gap-8 mb-12">
                   
                   {/* Niveau 3 et 4 */}
-                <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 text-center">
-                  <div className="bg-orange-100 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4">
-                    <h3 className="text-2xl font-bold mb-2 text-orange-500">Niveau 3 et 4</h3>
-                    <p className="text-orange-600">CAP - BEP - BAC - TITRE PROFESSIONNEL</p>
+                <div className="bg-white rounded-3xl p-6 shadow-xl border border-muted-blue-200 text-center">
+                  <div className="bg-accent-300 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4">
+                    <h3 className="text-2xl font-bold mb-2 text-accent-500">Niveau 3 et 4</h3>
+                    <p className="text-accent-600">CAP - BEP - BAC - TITRE PROFESSIONNEL</p>
                     </div>
                     
                   <div className="mb-4">

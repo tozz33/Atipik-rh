@@ -145,9 +145,9 @@ export default function RecruterInsertionEntreprises() {
 
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">
         {/* Background animé global */}
-        <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
-        <div className="absolute top-40 right-1/4 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-1000"></div>
-        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-orange-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-2000"></div>
+        <div className="absolute top-20 left-1/4 w-96 h-96 bg-muted-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+        <div className="absolute top-40 right-1/4 w-96 h-96 bg-muted-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-1000"></div>
+        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-accent-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-2000"></div>
         <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-purple-100 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-pulse animation-delay-3000"></div>
         
         <div className="relative z-10">
@@ -162,7 +162,7 @@ export default function RecruterInsertionEntreprises() {
               <div className="max-w-4xl mx-auto">
                 <Link 
                   href="/formations" 
-                  className="inline-flex items-center gap-2 text-[#013F63] hover:text-orange-500 transition-colors font-medium"
+                  className="inline-flex items-center gap-2 text-[#013F63] hover:text-accent-500 transition-colors font-medium"
                 >
                   <ArrowLeft className="w-4 h-4" />
                   Retour aux formations
@@ -176,7 +176,7 @@ export default function RecruterInsertionEntreprises() {
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center">
                 <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight tracking-tight">
-                  Recruter en insertion avec les <span className="font-brittany text-3xl lg:text-5xl text-orange-500">entreprises</span>
+                  Recruter en insertion avec les <span className="font-brittany text-3xl lg:text-5xl text-accent-500">entreprises</span>
                 </h1>
                 <p className="text-lg lg:text-xl text-[#013F63] mb-4 font-medium">
                   {formation.sousTitre}
@@ -199,7 +199,7 @@ export default function RecruterInsertionEntreprises() {
                           {formation.presentation.texte}
                         </p>
                         <div className="w-20 h-0.5 bg-gradient-to-r from-orange-300 to-orange-500 mb-3 mx-auto"></div>
-                        <p className="text-orange-500 font-bold">
+                        <p className="text-accent-500 font-bold">
                           {formation.presentation.slogan}
                         </p>
                       </div>
@@ -216,8 +216,8 @@ export default function RecruterInsertionEntreprises() {
 
                 {/* Le+ de ce programme */}
                 <div className="max-w-4xl mx-auto mb-8">
-                  <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
-                    <p className="font-bold text-orange-500 mb-3 text-center">Le+ de ce programme</p>
+                  <div className="bg-white rounded-xl p-6 shadow-lg border border-muted-blue-200">
+                    <p className="font-bold text-accent-500 mb-3 text-center">Le+ de ce programme</p>
                     <p className="text-[#013F63]">
                       À l'issue de la formation, vous bénéficiez d'invitations exclusives aux événements organisés par le Collectif Professionnel de l'Insertion et des RH : Les Rencontres Atipik de la Richesse Humaine
                     </p>
@@ -234,7 +234,7 @@ export default function RecruterInsertionEntreprises() {
                         <Clock className="w-4 h-4 mt-0.5 flex-shrink-0" />
                         <div>
                           <p className="font-semibold mb-0.5 text-sm">Durée totale :</p>
-                          <p className="text-blue-100 text-xs">{formation.informationsCles.dureeTotale}</p>
+                          <p className="text-neutral-100 text-xs">{formation.informationsCles.dureeTotale}</p>
                         </div>
                       </div>
 
@@ -242,7 +242,7 @@ export default function RecruterInsertionEntreprises() {
                         <Award className="w-4 h-4 mt-0.5 flex-shrink-0" />
                         <div>
                           <p className="font-semibold mb-0.5 text-sm">Modalité :</p>
-                          <p className="text-blue-100 text-xs">{formation.informationsCles.modalite}</p>
+                          <p className="text-neutral-100 text-xs">{formation.informationsCles.modalite}</p>
                         </div>
                       </div>
 
@@ -250,7 +250,7 @@ export default function RecruterInsertionEntreprises() {
                         <Clock className="w-4 h-4 mt-0.5 flex-shrink-0" />
                         <div>
                           <p className="font-semibold mb-0.5 text-sm">Horaires :</p>
-                          <p className="text-blue-100 text-xs">{formation.informationsCles.horaires}</p>
+                          <p className="text-neutral-100 text-xs">{formation.informationsCles.horaires}</p>
                         </div>
                       </div>
 
@@ -258,7 +258,7 @@ export default function RecruterInsertionEntreprises() {
                         <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
                         <div>
                           <p className="font-semibold mb-0.5 text-sm">Lieu :</p>
-                          <p className="text-blue-100 text-xs">{formation.informationsCles.lieu}</p>
+                          <p className="text-neutral-100 text-xs">{formation.informationsCles.lieu}</p>
                         </div>
                       </div>
 
@@ -266,7 +266,7 @@ export default function RecruterInsertionEntreprises() {
                         <Users className="w-4 h-4 mt-0.5 flex-shrink-0" />
                         <div>
                           <p className="font-semibold mb-0.5 text-sm">Taille du groupe :</p>
-                          <p className="text-blue-100 text-xs">{formation.informationsCles.tailleGroupe}</p>
+                          <p className="text-neutral-100 text-xs">{formation.informationsCles.tailleGroupe}</p>
                         </div>
                       </div>
 
@@ -274,7 +274,7 @@ export default function RecruterInsertionEntreprises() {
                         <Target className="w-4 h-4 mt-0.5 flex-shrink-0" />
                         <div>
                           <p className="font-semibold mb-0.5 text-sm">Niveau de sortie :</p>
-                          <p className="text-blue-100 text-xs">{formation.informationsCles.niveauSortie}</p>
+                          <p className="text-neutral-100 text-xs">{formation.informationsCles.niveauSortie}</p>
                         </div>
                       </div>
 
@@ -288,7 +288,7 @@ export default function RecruterInsertionEntreprises() {
                     <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                       <button
                         onClick={() => toggleSection('prerequis')}
-                        className="w-full p-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
+                        className="w-full p-4 text-left flex items-center justify-between bg-neutral-100 hover:bg-muted-blue-200 transition-colors"
                       >
                         <div className="flex items-center gap-3">
                           <h3 className="text-base font-bold text-[#013F63]">PRÉREQUIS</h3>
@@ -300,7 +300,7 @@ export default function RecruterInsertionEntreprises() {
                         )}
                       </button>
                       {openSections.prerequis && (
-                        <div className="p-4 border-t border-gray-100">
+                        <div className="p-4 border-t border-muted-blue-200">
                           <p className="text-[#013F63] text-sm">{formation.prerequis}</p>
                         </div>
                       )}
@@ -310,7 +310,7 @@ export default function RecruterInsertionEntreprises() {
                     <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                       <button
                         onClick={() => toggleSection('public')}
-                        className="w-full p-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
+                        className="w-full p-4 text-left flex items-center justify-between bg-neutral-100 hover:bg-muted-blue-200 transition-colors"
                       >
                         <div className="flex items-center gap-3">
                           <h3 className="text-base font-bold text-[#013F63]">PUBLIC VISÉ</h3>
@@ -322,7 +322,7 @@ export default function RecruterInsertionEntreprises() {
                         )}
                       </button>
                       {openSections.public && (
-                        <div className="p-4 border-t border-gray-100">
+                        <div className="p-4 border-t border-muted-blue-200">
                           <p className="text-[#013F63] text-sm">{formation.public}</p>
                         </div>
                       )}
@@ -332,7 +332,7 @@ export default function RecruterInsertionEntreprises() {
                     <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                       <button
                         onClick={() => toggleSection('modalites')}
-                        className="w-full p-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
+                        className="w-full p-4 text-left flex items-center justify-between bg-neutral-100 hover:bg-muted-blue-200 transition-colors"
                       >
                         <div className="flex items-center gap-3">
                           <h3 className="text-base font-bold text-[#013F63]">MODALITÉS ET DÉLAIS D'ACCÈS</h3>
@@ -344,12 +344,12 @@ export default function RecruterInsertionEntreprises() {
                         )}
                       </button>
                       {openSections.modalites && (
-                        <div className="p-6 border-t border-gray-100">
+                        <div className="p-6 border-t border-muted-blue-200">
                           {/* Timeline verticale pour les étapes */}
                           <div className="relative pl-6">
                             {/* Ligne verticale */}
                             <div className="absolute left-6 top-6 bottom-6 w-0.5 bg-gray-200">
-                              <div className="w-full h-full bg-orange-500 timeline-scroll-line"></div>
+                              <div className="w-full h-full bg-accent-500 timeline-scroll-line"></div>
                             </div>
                             
                             {/* Étapes */}
@@ -357,11 +357,11 @@ export default function RecruterInsertionEntreprises() {
                               
                               {/* Étape 1 : Rendez-vous initial */}
                               <div className="flex items-start gap-5">
-                                <div className="relative z-10 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
+                                <div className="relative z-10 w-12 h-12 bg-accent-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
                                   <span className="text-white text-base font-bold">1</span>
                                 </div>
                                 <div className="flex-grow">
-                                  <h4 className="text-orange-500 font-bold text-base mb-4 uppercase tracking-tight">
+                                  <h4 className="text-accent-500 font-bold text-base mb-4 uppercase tracking-tight">
                                     Rendez-vous
                                   </h4>
                                   <p className="text-[#013F63] text-sm leading-relaxed mb-4">
@@ -372,7 +372,7 @@ export default function RecruterInsertionEntreprises() {
                                   </p>
                                   <Link
                                     href="/contact"
-                                    className="inline-flex items-center px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-md transition-colors text-sm"
+                                    className="inline-flex items-center px-4 py-2 bg-accent-500 hover:bg-accent-600 text-white font-medium rounded-md transition-colors text-sm"
                                   >
                                     Prendre rendez-vous
                                     <ArrowRight className="w-4 h-4 ml-2" />
@@ -382,11 +382,11 @@ export default function RecruterInsertionEntreprises() {
 
                               {/* Étape 2 : Financement et délais d'accès */}
                               <div className="flex items-start gap-5">
-                                <div className="relative z-10 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
+                                <div className="relative z-10 w-12 h-12 bg-accent-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
                                   <span className="text-white text-base font-bold">2</span>
                                 </div>
                                 <div className="flex-grow">
-                                  <h4 className="text-orange-500 font-bold text-base mb-4 uppercase tracking-tight">
+                                  <h4 className="text-accent-500 font-bold text-base mb-4 uppercase tracking-tight">
                                     Financement et délais d'accès
                                   </h4>
                                   <p className="text-[#013F63] text-sm leading-relaxed mb-4">
@@ -395,7 +395,7 @@ export default function RecruterInsertionEntreprises() {
                                   <div className="grid gap-3 mt-4">
                                     <div className="bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow border-l-4 border-orange-400">
                                       <div className="flex items-start gap-3">
-                                        <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center flex-shrink-0 mt-0.5 border border-gray-200 p-1.5">
+                                        <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center flex-shrink-0 mt-0.5 border border-muted-blue-200 p-1.5">
                                           <Image 
                                             src="/images/financements/logo-opco.webp" 
                                             alt="OPCO" 
@@ -412,7 +412,7 @@ export default function RecruterInsertionEntreprises() {
                                     </div>
                                     <div className="bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow border-l-4 border-[#013F63]">
                                       <div className="flex items-start gap-3">
-                                        <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center flex-shrink-0 mt-0.5 border border-gray-200 p-1.5">
+                                        <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center flex-shrink-0 mt-0.5 border border-muted-blue-200 p-1.5">
                                           <Image 
                                             src="/images/financements/logo entreprise.jpg" 
                                             alt="Employeur" 
@@ -441,7 +441,7 @@ export default function RecruterInsertionEntreprises() {
                     <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                       <button
                         onClick={() => toggleSection('methodes')}
-                        className="w-full p-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
+                        className="w-full p-4 text-left flex items-center justify-between bg-neutral-100 hover:bg-muted-blue-200 transition-colors"
                       >
                         <div className="flex items-center gap-3">
                           <h3 className="text-base font-bold text-[#013F63]">MÉTHODES PÉDAGOGIQUES</h3>
@@ -453,11 +453,11 @@ export default function RecruterInsertionEntreprises() {
                         )}
                       </button>
                       {openSections.methodes && (
-                        <div className="p-4 border-t border-gray-100">
+                        <div className="p-4 border-t border-muted-blue-200">
                           <div className="space-y-2">
                             {formation.methodesPedagogiques.map((methode, i) => (
                               <div key={i} className="flex items-start gap-3">
-                                <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                                <CheckCircle className="w-4 h-4 text-accent-500 mt-0.5 flex-shrink-0" />
                                 <span className="text-[#013F63] text-sm">{methode}</span>
                               </div>
                             ))}
@@ -470,7 +470,7 @@ export default function RecruterInsertionEntreprises() {
                     <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                       <button
                         onClick={() => toggleSection('deroulement')}
-                        className="w-full p-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
+                        className="w-full p-4 text-left flex items-center justify-between bg-neutral-100 hover:bg-muted-blue-200 transition-colors"
                       >
                         <div className="flex items-center gap-3">
                           <h3 className="text-base font-bold text-[#013F63]">DÉROULEMENT DE LA FORMATION</h3>
@@ -482,7 +482,7 @@ export default function RecruterInsertionEntreprises() {
                         )}
                       </button>
                       {openSections.deroulement && (
-                        <div className="p-4 border-t border-gray-100">
+                        <div className="p-4 border-t border-muted-blue-200">
                           <p className="text-[#013F63] text-sm whitespace-pre-line">{formation.deroulement}</p>
                         </div>
                       )}
@@ -492,7 +492,7 @@ export default function RecruterInsertionEntreprises() {
                     <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                       <button
                         onClick={() => toggleSection('objectif')}
-                        className="w-full p-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
+                        className="w-full p-4 text-left flex items-center justify-between bg-neutral-100 hover:bg-muted-blue-200 transition-colors"
                       >
                         <div className="flex items-center gap-3">
                           <h3 className="text-base font-bold text-[#013F63]">OBJECTIFS PÉDAGOGIQUES</h3>
@@ -504,11 +504,11 @@ export default function RecruterInsertionEntreprises() {
                         )}
                       </button>
                       {openSections.objectif && (
-                        <div className="p-4 border-t border-gray-100">
+                        <div className="p-4 border-t border-muted-blue-200">
                           <div className="space-y-2">
                             {formation.objectifs.map((objectif, i) => (
                               <div key={i} className="flex items-start gap-3">
-                                <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                                <CheckCircle className="w-4 h-4 text-accent-500 mt-0.5 flex-shrink-0" />
                                 <span className="text-[#013F63] text-sm">{objectif}</span>
                               </div>
                             ))}
@@ -521,7 +521,7 @@ export default function RecruterInsertionEntreprises() {
                     <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                       <button
                         onClick={() => toggleSection('resultats')}
-                        className="w-full p-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
+                        className="w-full p-4 text-left flex items-center justify-between bg-neutral-100 hover:bg-muted-blue-200 transition-colors"
                       >
                         <div className="flex items-center gap-3">
                           <h3 className="text-base font-bold text-[#013F63]">RÉSULTATS ATTENDUS</h3>
@@ -533,13 +533,13 @@ export default function RecruterInsertionEntreprises() {
                         )}
                       </button>
                       {openSections.resultats && (
-                        <div className="p-4 border-t border-gray-100">
+                        <div className="p-4 border-t border-muted-blue-200">
                           <div className="text-[#013F63] text-sm text-justify space-y-3">
                             <p>{formation.resultatsAttendus.introduction}</p>
                             <ul className="space-y-2 ml-4">
                               {formation.resultatsAttendus.puces.map((puce, i) => (
                                 <li key={i} className="flex items-start gap-2">
-                                  <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                                  <CheckCircle className="w-4 h-4 text-accent-500 mt-0.5 flex-shrink-0" />
                                   <span>{puce}</span>
                                 </li>
                               ))}
@@ -553,7 +553,7 @@ export default function RecruterInsertionEntreprises() {
                     <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                       <button
                         onClick={() => toggleSection('evaluation')}
-                        className="w-full p-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors"
+                        className="w-full p-4 text-left flex items-center justify-between bg-neutral-100 hover:bg-muted-blue-200 transition-colors"
                       >
                         <div className="flex items-center gap-3">
                           <h3 className="text-base font-bold text-[#013F63]">MODALITÉS D'ÉVALUATION</h3>
@@ -565,17 +565,17 @@ export default function RecruterInsertionEntreprises() {
                         )}
                       </button>
                       {openSections.evaluation && (
-                        <div className="p-4 border-t border-gray-100">
+                        <div className="p-4 border-t border-muted-blue-200">
                           <div className="text-[#013F63] text-sm leading-relaxed space-y-2">
                             <p>
                               L'évaluation des acquis est réalisée :
                             </p>
                             <div className="flex items-start gap-3">
-                              <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                              <CheckCircle className="w-4 h-4 text-accent-500 mt-0.5 flex-shrink-0" />
                               <span>par un auto-positionnement en amont</span>
                             </div>
                             <div className="flex items-start gap-3">
-                              <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                              <CheckCircle className="w-4 h-4 text-accent-500 mt-0.5 flex-shrink-0" />
                               <span>en aval de la formation, par des mises en situation et études de cas en lien avec les pratiques de recrutement.</span>
                             </div>
                             <p>
@@ -602,7 +602,7 @@ export default function RecruterInsertionEntreprises() {
                 
                 <div className="text-center mb-12">
                   <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight">
-                    Programme <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">détaillé</span>
+                    Programme <span className="text-accent-500 font-brittany text-5xl lg:text-6xl">détaillé</span>
                   </h2>
                   <p className="text-lg text-[#013F63] leading-relaxed max-w-3xl mx-auto">
                     Un parcours complet sur 3 jours pour maîtriser le recrutement inclusif
@@ -613,7 +613,7 @@ export default function RecruterInsertionEntreprises() {
                   {formation.programme.map((jour, i) => (
                     <div 
                       key={i} 
-                      className={`bg-white rounded-2xl shadow-lg border border-gray-100 flex flex-col transition-all duration-700 ease-out overflow-hidden ${
+                      className={`bg-white rounded-2xl shadow-lg border border-muted-blue-200 flex flex-col transition-all duration-700 ease-out overflow-hidden ${
                         cardsVisible 
                           ? 'transform translate-y-0 opacity-100' 
                           : 'transform -translate-y-8 opacity-0'
@@ -622,7 +622,7 @@ export default function RecruterInsertionEntreprises() {
                         transitionDelay: `${i * 200}ms`
                       }}
                     >
-                      <div className="text-[#013F63] p-6 flex items-center justify-start h-20 bg-blue-100">
+                      <div className="text-[#013F63] p-6 flex items-center justify-start h-20 bg-muted-blue-200">
                         <h3 className="text-xl font-bold text-left leading-tight">{jour.jour}</h3>
                       </div>
                       <div className="space-y-2 flex-1 p-8 relative">
@@ -633,7 +633,7 @@ export default function RecruterInsertionEntreprises() {
                           </div>
                         ))}
                         <div className="absolute bottom-4 right-4">
-                          <span className="text-sm font-brittany text-orange-500 font-medium">
+                          <span className="text-sm font-brittany text-accent-500 font-medium">
                             {jour.modalite}
                           </span>
                         </div>
@@ -653,22 +653,22 @@ export default function RecruterInsertionEntreprises() {
                 
                 <div className="text-center mb-12">
                   <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight">
-                    <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Tarifs</span>
+                    <span className="text-accent-500 font-brittany text-4xl lg:text-5xl">Tarifs</span>
                   </h2>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
                   
                   {/* Tarif INTER */}
-                  <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
-                    <div className="bg-orange-100 px-6 py-4">
-                      <h3 className="text-xl font-bold text-orange-600 text-center">Tarif INTER</h3>
+                  <div className="bg-white rounded-2xl shadow-lg border border-muted-blue-200 overflow-hidden">
+                    <div className="bg-accent-300 px-6 py-4">
+                      <h3 className="text-xl font-bold text-accent-600 text-center">Tarif INTER</h3>
                     </div>
                     <div className="p-8 text-center">
-                      <p className="text-4xl font-bold text-orange-500 mb-6">1 365€ <span className="text-[#013F63] text-base lowercase">/ stagiaire</span></p>
+                      <p className="text-4xl font-bold text-accent-500 mb-6">1 365€ <span className="text-[#013F63] text-base lowercase">/ stagiaire</span></p>
                       <Link 
                         href="/contact" 
-                        className="inline-block w-full px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg"
+                        className="inline-block w-full px-6 py-3 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg"
                       >
                         En savoir plus
                       </Link>
@@ -676,8 +676,8 @@ export default function RecruterInsertionEntreprises() {
                   </div>
 
                   {/* Tarif INTRA */}
-                  <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
-                    <div className="bg-blue-100 px-6 py-4">
+                  <div className="bg-white rounded-2xl shadow-lg border border-muted-blue-200 overflow-hidden">
+                    <div className="bg-muted-blue-200 px-6 py-4">
                       <h3 className="text-xl font-bold text-[#013F63] text-center">Tarif INTRA</h3>
                     </div>
                     <div className="p-8 text-center">
@@ -704,7 +704,7 @@ export default function RecruterInsertionEntreprises() {
                 
                 <div className="text-center mb-12">
                   <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight">
-                    Comment <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">financer</span> votre formation ?
+                    Comment <span className="text-accent-500 font-brittany text-4xl lg:text-5xl">financer</span> votre formation ?
                   </h2>
                   <p className="text-lg text-[#013F63] leading-relaxed max-w-2xl mx-auto">
                     Plusieurs solutions s'offrent à vous
@@ -715,7 +715,7 @@ export default function RecruterInsertionEntreprises() {
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
                   
                   {/* FAF - Indépendants */}
-                  <div className="text-center p-6 bg-white rounded-xl border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+                  <div className="text-center p-6 bg-white rounded-xl border border-muted-blue-200 hover:shadow-lg transition-shadow duration-300">
                     <div className="w-20 h-20 mx-auto mb-4 bg-white rounded-lg flex items-center justify-center p-2 shadow-md">
                       <Image
                         src="/images/financements/logo-faf.jpeg"
@@ -730,7 +730,7 @@ export default function RecruterInsertionEntreprises() {
                   </div>
 
                   {/* OPCO - Salariés */}
-                  <div className="text-center p-6 bg-white rounded-xl border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+                  <div className="text-center p-6 bg-white rounded-xl border border-muted-blue-200 hover:shadow-lg transition-shadow duration-300">
                     <div className="w-20 h-20 mx-auto mb-4 bg-white rounded-lg flex items-center justify-center p-2 shadow-md">
                       <Image
                         src="/images/financements/logo-opco.webp"
@@ -747,12 +747,12 @@ export default function RecruterInsertionEntreprises() {
                   
                   {/* Autofinancement */}
                   <div className="mt-8">
-                    <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 text-center">
+                    <div className="bg-white rounded-2xl p-6 shadow-lg border border-muted-blue-200 text-center">
                       <h4 className="text-2xl font-bold text-[#013F63] mb-6">
-                        <span className="text-orange-500 font-brittany text-3xl">Investissez</span> en vous-même
+                        <span className="text-accent-500 font-brittany text-3xl">Investissez</span> en vous-même
                       </h4>
                       <p className="text-base text-[#013F63] font-medium leading-relaxed">
-                        Paiement en <span className="text-6xl font-light text-orange-500 font-brittany leading-none mx-4">x3</span> sans frais grâce à notre partenaire financier.
+                        Paiement en <span className="text-6xl font-light text-accent-500 font-brittany leading-none mx-4">x3</span> sans frais grâce à notre partenaire financier.
                       </p>
                     </div>
                   </div>
@@ -775,7 +775,7 @@ export default function RecruterInsertionEntreprises() {
                 
                 <div className="text-center mb-12">
                   <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight">
-                    Prochaines <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">sessions</span>
+                    Prochaines <span className="text-accent-500 font-brittany text-4xl lg:text-5xl">sessions</span>
                   </h2>
                   <p className="text-lg text-[#013F63] leading-relaxed max-w-2xl mx-auto">
                     Réservez dès maintenant votre place pour cette formation spécialisée
@@ -785,21 +785,21 @@ export default function RecruterInsertionEntreprises() {
                 <div className="grid md:grid-cols-2 gap-8 mb-12 max-w-4xl mx-auto">
                   
                   {/* Session Janvier 2026 */}
-                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 text-center">
-                    <div className="bg-orange-100 text-[#013F63] rounded-t-2xl -mx-8 -mt-8 p-4 mb-6">
-                      <h3 className="text-2xl font-bold mb-2 text-orange-500">Session d'Hiver</h3>
-                      <p className="text-orange-600">Janvier 2026</p>
+                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-muted-blue-200 text-center">
+                    <div className="bg-accent-300 text-[#013F63] rounded-t-2xl -mx-8 -mt-8 p-4 mb-6">
+                      <h3 className="text-2xl font-bold mb-2 text-accent-500">Session d'Hiver</h3>
+                      <p className="text-accent-600">Janvier 2026</p>
                     </div>
                     
                     <div className="mb-6">
                       <div className="flex items-center gap-2 mb-4">
-                        <div className="w-auto h-8 bg-blue-100 rounded-full flex items-center justify-center px-3">
+                        <div className="w-auto h-8 bg-muted-blue-200 rounded-full flex items-center justify-center px-3">
                           <span className="text-[#013F63] font-bold text-sm">Présentiel</span>
                         </div>
                         <span className="text-[#013F63] font-medium">22 au 23 janvier 2026</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <div className="w-auto h-8 bg-blue-100 rounded-full flex items-center justify-center px-3">
+                        <div className="w-auto h-8 bg-muted-blue-200 rounded-full flex items-center justify-center px-3">
                           <span className="text-[#013F63] font-bold text-sm">Distanciel</span>
                         </div>
                         <span className="text-[#013F63] font-medium">6 février 2026</span>
@@ -808,21 +808,21 @@ export default function RecruterInsertionEntreprises() {
                   </div>
 
                   {/* Session Avril 2026 */}
-                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 text-center">
-                    <div className="bg-orange-100 text-[#013F63] rounded-t-2xl -mx-8 -mt-8 p-4 mb-6">
-                      <h3 className="text-2xl font-bold mb-2 text-orange-500">Session de Printemps</h3>
-                      <p className="text-orange-600">Avril 2026</p>
+                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-muted-blue-200 text-center">
+                    <div className="bg-accent-300 text-[#013F63] rounded-t-2xl -mx-8 -mt-8 p-4 mb-6">
+                      <h3 className="text-2xl font-bold mb-2 text-accent-500">Session de Printemps</h3>
+                      <p className="text-accent-600">Avril 2026</p>
                     </div>
                     
                     <div className="mb-6">
                       <div className="flex items-center gap-2 mb-4">
-                        <div className="w-auto h-8 bg-blue-100 rounded-full flex items-center justify-center px-3">
+                        <div className="w-auto h-8 bg-muted-blue-200 rounded-full flex items-center justify-center px-3">
                           <span className="text-[#013F63] font-bold text-sm">Présentiel</span>
                         </div>
                         <span className="text-[#013F63] font-medium">23 au 24 avril 2026</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <div className="w-auto h-8 bg-blue-100 rounded-full flex items-center justify-center px-3">
+                        <div className="w-auto h-8 bg-muted-blue-200 rounded-full flex items-center justify-center px-3">
                           <span className="text-[#013F63] font-bold text-sm">Distanciel</span>
                         </div>
                         <span className="text-[#013F63] font-medium">30 avril 2026</span>
@@ -840,7 +840,7 @@ export default function RecruterInsertionEntreprises() {
               <div className="max-w-4xl mx-auto text-center">
                 
                 <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-6">
-                  Intéressé(e) par cette <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">formation ?</span>
+                  Intéressé(e) par cette <span className="text-accent-500 font-brittany text-4xl lg:text-5xl">formation ?</span>
                 </h2>
                 
                 <p className="text-xl text-[#013F63] mb-12 max-w-2xl mx-auto">
@@ -869,7 +869,7 @@ export default function RecruterInsertionEntreprises() {
               <div className="max-w-4xl mx-auto">
                 
                 {/* Contenu principal */}
-                <div className="bg-gradient-to-r from-blue-50 to-orange-50 rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+                <div className="bg-gradient-to-r from-blue-50 to-orange-50 rounded-2xl shadow-lg border border-muted-blue-200 overflow-hidden">
                   <div className="grid lg:grid-cols-3 gap-0">
                     
                     {/* Section gauche - Logo */}
@@ -911,13 +911,13 @@ export default function RecruterInsertionEntreprises() {
                           <div className="flex items-center gap-4 mt-1">
                             <a 
                               href="mailto:contact@atipikrh.com" 
-                              className="text-orange-500 hover:text-orange-600 transition-colors text-sm font-medium"
+                              className="text-accent-500 hover:text-accent-600 transition-colors text-sm font-medium"
                             >
                               contact@atipikrh.com
                             </a>
                             <a 
                               href="tel:0783019955" 
-                              className="text-orange-500 hover:text-orange-600 transition-colors text-sm font-medium"
+                              className="text-accent-500 hover:text-accent-600 transition-colors text-sm font-medium"
                             >
                               07 83 01 99 55
                             </a>

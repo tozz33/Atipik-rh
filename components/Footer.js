@@ -19,7 +19,7 @@ export default function Footer() {
                 className="h-12 w-auto mb-6 brightness-0 invert hover:opacity-80 transition-opacity cursor-pointer"
               />
             </Link>
-            <p className="text-gray-300 mb-6 leading-relaxed">
+            <p className="text-neutral-100 mb-6 leading-relaxed">
               Votre centre de formation à Lormont. 
               Bilan de compétences, VAE et formations certifiantes.
             </p>
@@ -30,7 +30,7 @@ export default function Footer() {
                   href="https://www.linkedin.com/company/atipik-rh33/posts/?feedView=all" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-neutral-100 hover:text-white transition-colors"
                 >
                   <span className="sr-only">LinkedIn</span>
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -41,7 +41,7 @@ export default function Footer() {
                   href="https://www.facebook.com/atipikrh33/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-neutral-100 hover:text-white transition-colors"
                 >
                   <span className="sr-only">Facebook</span>
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -52,7 +52,7 @@ export default function Footer() {
                   href="https://www.instagram.com/atipikrh33?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-neutral-100 hover:text-white transition-colors"
                 >
                   <span className="sr-only">Instagram</span>
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -62,7 +62,7 @@ export default function Footer() {
               </div>
               
               {/* Ligne de séparation */}
-              <div className="w-px h-8 bg-gray-500"></div>
+              <div className="w-px h-8 bg-muted-blue-200"></div>
               
               {/* Logos certifications */}
               <div className="flex space-x-4 items-center">
@@ -87,7 +87,7 @@ export default function Footer() {
           {/* Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Nos accompagnements</h3>
-            <ul className="space-y-2 text-gray-300">
+            <ul className="space-y-2 text-neutral-100">
               <li>
                 <Link href="/vae" className="hover:text-white transition-colors cursor-pointer">
                   VAE
@@ -124,7 +124,7 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
-            <div className="space-y-2 text-gray-300">
+            <div className="space-y-2 text-neutral-100">
               <p className="flex items-center">
                 <Phone className="w-4 h-4 mr-2" />
                 <a href="tel:+33783019955" className="hover:text-white transition-colors">
@@ -138,7 +138,7 @@ export default function Footer() {
                 </a>
               </p>
               <p>8 Rue du Courant, 33310 Lormont</p>
-              <div className="mt-3 pt-2 border-t border-gray-700">
+              <div className="mt-3 pt-2 border-t border-muted-blue-200">
                 <h3 className="text-lg font-semibold mb-4 text-white">Horaires</h3>
                 <p className="text-sm">Lun-Ven : 9h-18h</p>
                 <p className="text-sm">Sam : 09h00 à 12h00 (sur rendez-vous)</p>
@@ -151,8 +151,8 @@ export default function Footer() {
 
         
         {/* Copyright condensé */}
-        <div className="border-t border-gray-600 mt-6 pt-4 text-center">
-          <div className="flex flex-wrap justify-center items-center gap-3 text-sm text-gray-400">
+        <div className="border-t border-muted-blue-200 mt-6 pt-4 text-center">
+          <div className="flex flex-wrap justify-center items-center gap-3 text-sm text-neutral-100">
             <Link href="/mentions-legales" className="hover:text-white transition-colors">
               Mentions légales
             </Link>

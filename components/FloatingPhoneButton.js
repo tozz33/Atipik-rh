@@ -30,8 +30,8 @@ export default function FloatingPhoneButton() {
           onMouseLeave={() => setIsHovered(false)}
           className={`
             ${showPhoneNumber 
-              ? 'bg-white text-orange-500 border-2 border-orange-500 hover:bg-orange-50' 
-              : 'bg-orange-500 hover:bg-orange-600 text-white border-2 border-orange-500'
+              ? 'bg-white text-accent-500 border-2 border-accent-500 hover:bg-accent-300' 
+              : 'bg-accent-500 hover:bg-accent-600 text-white border-2 border-accent-500'
             }
             rounded-full shadow-lg hover:shadow-xl 
             transition-all duration-300 ease-out overflow-hidden flex items-center
@@ -44,7 +44,7 @@ export default function FloatingPhoneButton() {
             gap: showPhoneNumber ? '12px' : (isHovered ? '12px' : '0')
           }}
         >
-          <Phone className={`w-6 h-6 flex-shrink-0 ${showPhoneNumber ? 'text-orange-500' : 'text-white'}`} />
+          <Phone className={`w-6 h-6 flex-shrink-0 ${showPhoneNumber ? 'text-accent-500' : 'text-white'}`} />
           
           {/* Texte qui apparaît au survol ou numéro de téléphone */}
           <span 
@@ -58,7 +58,7 @@ export default function FloatingPhoneButton() {
             {showPhoneNumber ? (
               <a 
                 href="tel:0783019955" 
-                className="text-orange-500 hover:text-orange-600 transition-colors"
+                className="text-accent-500 hover:text-accent-600 transition-colors"
               >
                 07 83 01 99 55
               </a>
