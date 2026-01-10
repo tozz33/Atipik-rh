@@ -1,9 +1,13 @@
 import '../styles/globals.css'
 import Head from 'next/head'
 import Script from 'next/script'
+import { useGoogleAnalytics } from '../hooks/useGoogleAnalytics'
 
 
 export default function App({ Component, pageProps }) {
+  // Initialiser Google Analytics avec gestion du consentement
+  useGoogleAnalytics()
+
   return (
     <>
       <Head>
@@ -18,6 +22,30 @@ export default function App({ Component, pageProps }) {
         id="gtm-script"
         dangerouslySetInnerHTML={{
           __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-T45Z2XRQ');`
+        }}
+      />
+      
+      {/* Google Analytics (gtag.js) - Chargement du script */}
+      <Script
+        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=G-0T6JYZBLQN"
+        id="ga-script-loader"
+      />
+      
+      {/* Google Analytics (gtag.js) - Configuration */}
+      <Script
+        strategy="afterInteractive"
+        id="ga-script-config"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-0T6JYZBLQN', {
+              anonymize_ip: true,
+              cookie_flags: 'SameSite=None;Secure'
+            });
+          `
         }}
       />
       
