@@ -25,29 +25,7 @@ export default function App({ Component, pageProps }) {
         }}
       />
       
-      {/* Google Analytics (gtag.js) - Chargement du script */}
-      <Script
-        strategy="afterInteractive"
-        src="https://www.googletagmanager.com/gtag/js?id=G-0T6JYZBLQN"
-        id="ga-script-loader"
-      />
-      
-      {/* Google Analytics (gtag.js) - Configuration */}
-      <Script
-        strategy="afterInteractive"
-        id="ga-script-config"
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-0T6JYZBLQN', {
-              anonymize_ip: true,
-              cookie_flags: 'SameSite=None;Secure'
-            });
-          `
-        }}
-      />
+      {/* Google Analytics - Les scripts seront chargés dynamiquement après consentement via lib/analytics.js */}
       
       <Component {...pageProps} />
     </>
