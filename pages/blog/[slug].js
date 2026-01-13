@@ -1596,14 +1596,6 @@ export default function BlogArticle() {
 
         <p>Bonne nouvelle : en 2026, plusieurs dispositifs existent pour financer tout ou partie de votre bilan de compétences, parfois sans avancer de frais. Voici un guide clair pour lever le frein financier et investir sereinement dans votre avenir professionnel.</p>
 
-        <div style="margin: 2rem 0;">
-          <img 
-            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=800&fit=crop&q=80" 
-            alt="Financement bilan de compétences 2026 - Collaboration professionnelle et développement de carrière"
-            style="width: 100%; height: auto; border-radius: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"
-          />
-        </div>
-
         <h2>1. Le Compte Personnel de Formation (CPF) : l'autonomie avant tout</h2>
 
         <p>Le CPF reste le levier principal pour financer un bilan de compétences.</p>

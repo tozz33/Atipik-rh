@@ -48,6 +48,14 @@ const nextConfig = {
         pathname: '/images/**',
       },
     ],
+    // Configuration pour les images externes (Unsplash)
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        pathname: '/**',
+      },
+    ],
   },
 
   compress: true,
