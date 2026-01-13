@@ -132,6 +132,18 @@ export default function Blog() {
       author: "Vanessa NOAH EWODO",
       category: "Bilan de compétences",
       keywords: "portefeuille compétences, insertion professionnelle, reconversion professionnelle, employabilité, compétences transférables, CIP, bilan compétences, ATIPIK RH"
+    },
+    {
+      id: 16,
+      slug: "financer-bilan-competences-2026-cpf-france-travail-employeur",
+      title: "Comment financer un bilan de compétences en 2026 ? (CPF, France Travail, employeur)",
+      excerpt: "Guide complet pour financer votre bilan de compétences en 2026 : CPF, financement employeur, France Travail, FAF pour indépendants. Toutes les solutions pour lever le frein financier et investir sereinement dans votre avenir professionnel.",
+      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=800&fit=crop&q=80",
+      date: "13 janvier 2026",
+      readTime: "12 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Bilan de compétences",
+      keywords: "financement bilan compétences, bilan compétences CPF, financer bilan compétences 2026, France Travail bilan compétences, employeur finance bilan compétences, Aide Individuelle Formation, Fonds Assurance Formation indépendant"
     }
   ];
 

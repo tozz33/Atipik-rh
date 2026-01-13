@@ -1577,6 +1577,188 @@ export default function BlogArticle() {
 
         <p><em>Découvrez aussi nos autres articles sur le <a href="/blog/bilan-competences-lormont-5-etapes-reconversion">bilan de compétences</a> et la <a href="/blog/reconversion-professionnelle-comment-reussir-changement-carriere">reconversion professionnelle</a>.</em></p>
       `
+    },
+    {
+      id: 16,
+      slug: "financer-bilan-competences-2026-cpf-france-travail-employeur",
+      title: "Comment financer un bilan de compétences en 2026 ? (CPF, France Travail, employeur)",
+      excerpt: "Guide complet pour financer votre bilan de compétences en 2026 : CPF, financement employeur, France Travail, FAF pour indépendants. Toutes les solutions pour lever le frein financier et investir sereinement dans votre avenir professionnel.",
+      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=800&fit=crop&q=80",
+      date: "13 janvier 2026",
+      readTime: "12 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Bilan de compétences",
+      keywords: "financement bilan compétences, bilan compétences CPF, financer bilan compétences 2026, France Travail bilan compétences, employeur finance bilan compétences, Aide Individuelle Formation, Fonds Assurance Formation indépendant",
+      content: `
+        <p>Vous ressentez le besoin de changer d'air, de redonner du sens à votre carrière ou de sécuriser un nouveau projet professionnel ? Le bilan de compétences est un outil puissant pour faire le point, identifier vos forces et construire une trajectoire réaliste.</p>
+
+        <p>Mais une question revient presque toujours en premier : <strong>combien ça coûte… et surtout, qui paye ?</strong></p>
+
+        <p>Bonne nouvelle : en 2026, plusieurs dispositifs existent pour financer tout ou partie de votre bilan de compétences, parfois sans avancer de frais. Voici un guide clair pour lever le frein financier et investir sereinement dans votre avenir professionnel.</p>
+
+        <div style="margin: 2rem 0;">
+          <img 
+            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=800&fit=crop&q=80" 
+            alt="Financement bilan de compétences 2026 - Collaboration professionnelle et développement de carrière"
+            style="width: 100%; height: auto; border-radius: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"
+          />
+        </div>
+
+        <h2>1. Le Compte Personnel de Formation (CPF) : l'autonomie avant tout</h2>
+
+        <p>Le CPF reste le levier principal pour financer un bilan de compétences.</p>
+
+        <p>Chaque actif (salarié, demandeur d'emploi, indépendant) cumule des droits en euros tout au long de sa vie professionnelle.</p>
+
+        <h3>Comment ça fonctionne ?</h3>
+
+        <ul>
+          <li>Vous choisissez librement votre organisme de bilan de compétences</li>
+          <li>Vous mobilisez vos droits directement via la plateforme officielle <a href="https://www.moncompteformation.gouv.fr" target="_blank" rel="noopener noreferrer">Mon Compte Formation</a></li>
+          <li>Le financement est individuel et confidentiel</li>
+        </ul>
+
+        <h3>Ce qu'il faut savoir en 2026</h3>
+
+        <ul>
+          <li>Une participation forfaitaire peut être demandée selon votre situation</li>
+          <li>Cette participation peut parfois être prise en charge ou exonérée (selon les politiques publiques ou accords de branche)</li>
+        </ul>
+
+        <h3>Les avantages</h3>
+
+        <ul>
+          <li>Aucun accord de l'employeur requis si le bilan est réalisé hors temps de travail</li>
+          <li>Démarche simple et rapide</li>
+          <li>Liberté de choix de l'organisme</li>
+        </ul>
+
+        <p><strong>C'est la solution idéale si vous souhaitez avancer de manière discrète et autonome.</strong></p>
+
+        <h2>2. Le financement par l'employeur : un outil de sécurisation des parcours</h2>
+
+        <p>Si votre réflexion s'inscrit dans une évolution interne, une mobilité ou une prévention de l'usure professionnelle, votre employeur peut financer votre bilan.</p>
+
+        <h3>Le cadre</h3>
+
+        <ul>
+          <li>Le bilan de compétences est intégré au Plan de Développement des Compétences</li>
+          <li>L'entreprise prend en charge les frais pédagogiques</li>
+          <li>Le salaire est maintenu si le bilan se déroule sur le temps de travail</li>
+        </ul>
+
+        <h3>Le bon angle à adopter</h3>
+
+        <p>Lors d'un entretien professionnel ou annuel, présentez le bilan comme :</p>
+
+        <ul>
+          <li>Un outil de fidélisation,</li>
+          <li>Un levier de motivation,</li>
+          <li>Ou un moyen de prévenir l'épuisement professionnel et les ruptures de parcours.</li>
+        </ul>
+
+        <p><strong>Bien positionné, le bilan de compétences est un investissement gagnant-gagnant pour le salarié comme pour l'employeur.</strong></p>
+
+        <h2>3. France Travail (ex-Pôle emploi) : un appui pour les demandeurs d'emploi</h2>
+
+        <p>Si vous êtes actuellement en recherche d'emploi, le bilan de compétences peut être un outil structurant pour sécuriser votre retour à l'emploi.</p>
+
+        <h3>Les solutions possibles</h3>
+
+        <ul>
+          <li>Mobilisation de votre CPF</li>
+          <li>Complément de financement via l'Aide Individuelle à la Formation (AIF) si vos droits sont insuffisants</li>
+        </ul>
+
+        <h3>Les conditions</h3>
+
+        <ul>
+          <li>Le bilan doit être validé par votre conseiller France Travail</li>
+          <li>Il doit s'inscrire clairement dans votre projet de retour à l'emploi ou de reconversion</li>
+        </ul>
+
+        <h3>Conseil clé : préparez un argumentaire montrant que le bilan va :</h3>
+
+        <ul>
+          <li>Clarifier votre projet,</li>
+          <li>Raccourcir votre période de chômage,</li>
+          <li>Renforcer votre employabilité.</li>
+        </ul>
+
+        <h2>4. Et pour les indépendants ?</h2>
+
+        <p>Les travailleurs indépendants peuvent mobiliser leur Fonds d'Assurance Formation (FAF) (ex. : AGEFICE, FIF PL, FAFCEA selon l'activité).</p>
+
+        <p>Les modalités varient selon les fonds, mais le bilan de compétences peut être pris en charge partiellement ou totalement, sous conditions.</p>
+
+        <h2>Pourquoi ne pas attendre ?</h2>
+
+        <p>Un bilan de compétences n'est pas une dépense, c'est un investissement à fort impact. En 2026, le marché du travail valorise plus que jamais :</p>
+
+        <ul>
+          <li>L'adaptabilité,</li>
+          <li>La connaissance de ses compétences,</li>
+          <li>Les parcours construits et assumés.</li>
+        </ul>
+
+        <p>Attendre, c'est parfois :</p>
+
+        <ul>
+          <li>Laisser dormir ses droits CPF,</li>
+          <li>Rester bloqué dans une situation inconfortable,</li>
+          <li>Ou subir une transition plutôt que la choisir.</li>
+        </ul>
+
+        <p><strong>Bon à savoir :</strong> un bilan de compétences dure en moyenne 24 heures, réparties sur plusieurs semaines, avec un rythme compatible avec la vie professionnelle et personnelle.</p>
+
+        <h2>Tableau récapitulatif des financements en 2026</h2>
+
+        <div style="overflow-x: auto; margin: 2rem 0;">
+          <table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd;">
+            <thead>
+              <tr style="background-color: #013F63; color: white;">
+                <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Profil</th>
+                <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Dispositif principal</th>
+                <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Accord nécessaire ?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding: 12px; border: 1px solid #ddd;">Salarié (démarche personnelle)</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">CPF (hors temps de travail)</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Non</td>
+              </tr>
+              <tr style="background-color: #f9f9f9;">
+                <td style="padding: 12px; border: 1px solid #ddd;">Salarié (démarche co-construite)</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Plan de développement des compétences</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Oui (employeur)</td>
+              </tr>
+              <tr>
+                <td style="padding: 12px; border: 1px solid #ddd;">Demandeur d'emploi</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">CPF + AIF France Travail</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Oui (conseiller)</td>
+              </tr>
+              <tr style="background-color: #f9f9f9;">
+                <td style="padding: 12px; border: 1px solid #ddd;">Indépendant</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Fonds d'Assurance Formation</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Selon critères</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Prêt·e à faire le point sur votre avenir professionnel ?</h2>
+
+        <p>Le financement ne doit plus être un frein à votre épanouissement ni à votre sécurisation professionnelle. Être accompagné·e dans un bilan de compétences, c'est reprendre la main sur son parcours — avec méthode, humanité et réalisme.</p>
+
+        <p>Chez <a href="/bilan-de-competences">ATIPIK RH</a>, nous vous accompagnons à chaque étape, y compris dans la mobilisation des financements.</p>
+
+        <p><strong>Parce que chaque parcours mérite d'être reconnu, valorisé et choisi.</strong></p>
+
+        <hr />
+
+        <p><em>Découvrez aussi nos autres articles sur le <a href="/blog/portefeuille-competences-insertion-reconversion-employabilite">portefeuille de compétences</a> et le <a href="/blog/financer-bilan-vae-formation-atipik-rh">financement des formations</a>.</em></p>
+      `
     }
   ];
 
@@ -1749,7 +1931,7 @@ export default function BlogArticle() {
               />
 
               {/* Call to action */}
-              <div className="mt-16 bg-gradient-to-br from-slate-50 to-blue-50 rounded-3xl p-8 text-center">
+              <div className="mt-16 bg-gradient-to-br from-orange-50 to-accent-100 rounded-3xl p-8 text-center">
                 <h3 className="text-2xl font-bold text-[#013F63] mb-4">
                   Intéressé par nos services ?
                 </h3>

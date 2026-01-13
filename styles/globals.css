@@ -290,11 +290,11 @@
 }
 
 .prose h2 {
-  @apply text-2xl lg:text-3xl font-bold text-[#013F63] mb-6 mt-10 leading-tight;
+  @apply text-2xl lg:text-3xl font-bold text-accent-500 mb-6 mt-10 leading-tight;
 }
 
 .prose h3 {
-  @apply text-xl lg:text-2xl font-semibold text-[#013F63] mb-4 mt-8 leading-tight;
+  @apply text-xl lg:text-2xl font-semibold text-accent-500 mb-4 mt-8 leading-tight;
 }
 
 .prose p {
