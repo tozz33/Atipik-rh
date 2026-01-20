@@ -144,6 +144,18 @@ export default function Blog() {
       author: "Vanessa NOAH EWODO",
       category: "Bilan de compétences",
       keywords: "financement bilan compétences, bilan compétences CPF, financer bilan compétences 2026, France Travail bilan compétences, employeur finance bilan compétences, Aide Individuelle Formation, Fonds Assurance Formation indépendant"
+    },
+    {
+      id: 17,
+      slug: "devenir-formateur-adultes-sans-etudes-longues-reconversion",
+      title: "Devenir formateur pour adultes sans reprendre des études longues : est-ce vraiment possible ?",
+      excerpt: "Changer de métier sans repartir sur les bancs de l'université est aujourd'hui une aspiration forte. Parmi les reconversions qui attirent de plus en plus de professionnels expérimentés, le métier de formateur pour adultes occupe une place à part.",
+      image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1200&h=800&fit=crop&q=80",
+      date: "20 janvier 2026",
+      readTime: "15 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords: "formateur adultes, formation FPA, reconversion formateur, devenir formateur sans diplôme, formation courte formateur, pédagogie adultes, formateur professionnel adultes, reconversion professionnelle formateur"
     }
   ];
 
