@@ -13,736 +13,448 @@ export default function BlogArticle() {
   // Articles data avec slugs SEO-optimisés
   const articles = [
     {
-      id: 1,
-      slug: "formation-conseiller-insertion-professionnelle-lormont",
-      title: "Formation de Conseiller en Insertion Professionnelle à Lormont : débouchés et programme",
-      excerpt: "Découvrez notre formation CIP complète, les débouchés professionnels et pourquoi choisir la Gironde pour développer cette expertise.",
-      image: "/images/hero/formations.jpg",
-      date: "15 janvier 2025",
-      readTime: "12 min",
-      author: "Brunilda RAFAEL",
-      category: "Formations",
-      keywords: "formation CIP, conseiller insertion professionnelle, Lormont, débouchés emploi, programme formation",
-      content: `
-        <p>Le métier de Conseiller en Insertion Professionnelle (CIP) connaît un essor considérable dans un contexte où l'accompagnement vers l'emploi devient une priorité nationale. À Lormont, près de Bordeaux, notre centre de formation vous propose de vous former à cette profession passionnante et porteuse d'avenir. Découvrez le programme complet, les débouchés professionnels et pourquoi choisir la Gironde pour développer cette expertise.</p>
-
-        <h2>Le métier de Conseiller en Insertion Professionnelle : une mission d'accompagnement essentielle</h2>
-
-        <p>Le Conseiller en Insertion Professionnelle accompagne des personnes en recherche d'emploi, en reconversion ou en situation de précarité professionnelle. Son rôle consiste à faciliter leur accès ou leur retour à l'emploi en proposant un accompagnement personnalisé et adapté à chaque situation.</p>
-
-        <h3>Missions principales du CIP</h3>
-
-        <p><strong>Accueil et évaluation :</strong></p>
-        <ul>
-          <li>Réaliser un diagnostic de la situation professionnelle</li>
-          <li>Identifier les compétences, aptitudes et freins à l'emploi</li>
-          <li>Évaluer les motivations et les projets professionnels</li>
-          <li>Analyser les besoins en formation ou en accompagnement</li>
-        </ul>
-
-        <p><strong>Accompagnement individualisé :</strong></p>
-        <ul>
-          <li>Élaborer un parcours d'insertion personnalisé</li>
-          <li>Définir des objectifs réalistes et mesurables</li>
-          <li>Proposer des actions adaptées (formation, mise en situation, stage)</li>
-          <li>Assurer un suivi régulier et ajuster le parcours si nécessaire</li>
-        </ul>
-
-        <p><strong>Médiation avec les employeurs :</strong></p>
-        <ul>
-          <li>Prospecter et développer un réseau d'entreprises partenaires</li>
-          <li>Présenter les profils des candidats aux employeurs</li>
-          <li>Négocier des conditions d'intégration favorables</li>
-          <li>Assurer le suivi des placements et l'accompagnement post-embauche</li>
-        </ul>
-
-        <h2>Pourquoi se former à Lormont, près de Bordeaux ?</h2>
-
-        <h3>Un bassin d'emploi favorable aux métiers de l'insertion</h3>
-
-        <p>La région bordelaise présente des caractéristiques particulièrement favorables pour exercer le métier de CIP :</p>
-
-        <p><strong>Dynamisme du marché de l'emploi :</strong></p>
-        <ul>
-          <li>Croissance économique soutenue de la métropole bordelaise</li>
-          <li>Diversité des secteurs d'activité (aéronautique, numérique, services)</li>
-          <li>Nombreuses créations d'entreprises et d'emplois</li>
-          <li>Politiques publiques volontaristes en matière d'insertion</li>
-        </ul>
-
-        <p><strong>Tissu associatif développé :</strong></p>
-        <ul>
-          <li>Nombreuses structures d'insertion par l'activité économique (SIAE)</li>
-          <li>Associations d'aide à la recherche d'emploi</li>
-          <li>Dispositifs d'accompagnement spécialisés</li>
-          <li>Partenariats public-privé actifs</li>
-        </ul>
-
-        <h3>Proximité avec les employeurs et les réseaux professionnels</h3>
-
-        <p>Notre centre de formation à Lormont bénéficie d'une position stratégique qui facilite :</p>
-        <ul>
-          <li>Les stages pratiques en entreprise</li>
-          <li>Les rencontres avec les professionnels du secteur</li>
-          <li>L'accès aux offres d'emploi locales</li>
-          <li>La participation aux réseaux territoriaux d'insertion</li>
-        </ul>
-
-        <h2>Programme de formation CIP : un parcours complet et professionnalisant</h2>
-
-        <p>Notre formation de Conseiller en Insertion Professionnelle suit le référentiel officiel du Titre Professionnel de niveau 5 (Bac+2) reconnu par le Ministère du Travail.</p>
-
-        <h3>Bloc de compétences 1 : Accueillir pour analyser la demande des personnes et poser les bases d'un diagnostic partagé</h3>
-
-        <p><strong>Durée : 280 heures</strong></p>
-
-        <p><strong>Compétences visées :</strong></p>
-        <ul>
-          <li>Informer une personne ou un groupe sur les ressources en matière d'insertion et les services dématérialisés</li>
-          <li>Analyser la demande de la personne et poser les bases d'un diagnostic partagé</li>
-          <li>Exercer une veille informationnelle, technique et prospective pour adapter son activité au public et au contexte</li>
-          <li>Travailler en équipe, en réseau et dans un cadre partenarial pour optimiser la réponse aux besoins des personnes</li>
-        </ul>
-
-        <p><strong>Contenu pédagogique :</strong></p>
-        <ul>
-          <li><strong>Techniques d'accueil et de communication</strong> : Écoute active, reformulation, gestion des émotions</li>
-          <li><strong>Diagnostic social et professionnel</strong> : Outils d'évaluation, entretien de diagnostic, analyse des freins</li>
-          <li><strong>Connaissance des dispositifs</strong> : Panorama des aides et mesures d'insertion, droits sociaux</li>
-          <li><strong>Veille et documentation</strong> : Méthodologie de recherche, sources d'information, outils numériques</li>
-          <li><strong>Travail en réseau</strong> : Partenariat local, institutions, acteurs de l'emploi en Gironde</li>
-        </ul>
-
-        <h3>Bloc de compétences 2 : Accompagner les personnes dans leur parcours d'insertion sociale et professionnelle</h3>
-
-        <p><strong>Durée : 385 heures</strong></p>
-
-        <p><strong>Compétences visées :</strong></p>
-        <ul>
-          <li>Contractualiser et suivre avec la personne son parcours d'insertion professionnelle</li>
-          <li>Accompagner une personne à l'élaboration de son projet professionnel</li>
-          <li>Accompagner la réalisation des projets d'insertion</li>
-          <li>Concevoir des ateliers thématiques favorisant l'insertion</li>
-          <li>Préparer et animer des ateliers thématiques favorisant l'insertion</li>
-        </ul>
-
-        <p><strong>Contenu pédagogique :</strong></p>
-        <ul>
-          <li><strong>Méthodologie de projet</strong> : Contractualisation, planification, suivi, évaluation</li>
-          <li><strong>Techniques de bilan professionnel</strong> : Outils d'auto-évaluation, tests d'orientation, exploration métiers</li>
-          <li><strong>Accompagnement au changement</strong> : Psychologie de l'insertion, motivation, confiance en soi</li>
-          <li><strong>Animation de groupes</strong> : Techniques d'animation, gestion des dynamiques collectives</li>
-          <li><strong>Pédagogie pour adultes</strong> : Conception d'ateliers, supports pédagogiques, évaluation des acquis</li>
-        </ul>
-
-        <p><strong>Ateliers pratiques spécialisés :</strong></p>
-        <ul>
-          <li>Techniques de recherche d'emploi (TRE)</li>
-          <li>Rédaction de CV et lettres de motivation</li>
-          <li>Préparation aux entretiens d'embauche</li>
-          <li>Utilisation des outils numériques</li>
-          <li>Gestion du stress et développement personnel</li>
-        </ul>
-
-        <h3>Bloc de compétences 3 : Mettre en œuvre une offre de services auprès des employeurs pour favoriser l'insertion professionnelle</h3>
-
-        <p><strong>Durée : 245 heures</strong></p>
-
-        <p><strong>Compétences visées :</strong></p>
-        <ul>
-          <li>Prospecter les employeurs et développer des modes de coopération</li>
-          <li>Apporter un appui technique aux employeurs en matière de recrutement</li>
-          <li>Faciliter l'intégration et le maintien du salarié dans son environnement professionnel</li>
-        </ul>
-
-        <p><strong>Contenu pédagogique :</strong></p>
-        <ul>
-          <li><strong>Prospection commerciale</strong> : Techniques de démarchage, argumentaire, négociation</li>
-          <li><strong>Analyse des besoins employeurs</strong> : Étude de poste, définition de profil, adéquation homme-poste</li>
-          <li><strong>Médiation emploi</strong> : Présentation de candidatures, accompagnement du recrutement</li>
-          <li><strong>Suivi en entreprise</strong> : Intégration, résolution de conflits, maintien dans l'emploi</li>
-          <li><strong>Partenariat entreprises</strong> : Développement du réseau, conventions, actions collectives</li>
-        </ul>
-
-        <h3>Stage pratique en entreprise</h3>
-
-        <p><strong>Durée : 315 heures (9 semaines)</strong></p>
-
-        <p>Le stage se déroule obligatoirement dans une structure d'insertion professionnelle :</p>
-        <ul>
-          <li>France Travail, Mission Locale, Cap Emploi</li>
-          <li>Associations d'insertion (PLIE, centres sociaux)</li>
-          <li>Structures d'insertion par l'activité économique</li>
-          <li>Organismes de formation avec service insertion</li>
-        </ul>
-
-        <p><strong>Objectifs du stage :</strong></p>
-        <ul>
-          <li>Mettre en pratique les compétences acquises en formation</li>
-          <li>Découvrir le fonctionnement d'une structure d'insertion</li>
-          <li>Développer son réseau professionnel local</li>
-          <li>Valider son projet professionnel</li>
-        </ul>
-
-        <p>Notre proximité avec Bordeaux facilite l'accès à de nombreux terrains de stage de qualité dans toute la métropole.</p>
-
-        <h2>Débouchés professionnels : un secteur qui recrute</h2>
-
-        <h3>Structures employeuses</h3>
-
-        <p>Le métier de CIP offre des débouchés variés dans de nombreuses structures :</p>
-
-        <p><strong>Service public de l'emploi :</strong></p>
-        <ul>
-          <li>France Travail (conseillers emploi, référents RSA)</li>
-          <li>Missions Locales (conseillers jeunes)</li>
-          <li>Cap Emploi (conseillers handicap)</li>
-          <li>Conseils Départementaux (insertion RSA)</li>
-        </ul>
-
-        <p><strong>Secteur associatif :</strong></p>
-        <ul>
-          <li>Plans Locaux pour l'Insertion et l'Emploi (PLIE)</li>
-          <li>Associations d'insertion sociale et professionnelle</li>
-          <li>Centres sociaux et maisons de quartier</li>
-          <li>Associations spécialisées (femmes, seniors, détenus)</li>
-        </ul>
-
-        <p><strong>Structures d'insertion par l'activité économique :</strong></p>
-        <ul>
-          <li>Entreprises d'insertion (EI)</li>
-          <li>Associations intermédiaires (AI)</li>
-          <li>Ateliers et chantiers d'insertion (ACI)</li>
-          <li>Entreprises de travail temporaire d'insertion (ETTI)</li>
-        </ul>
-
-        <h3>Perspectives d'évolution de carrière</h3>
-
-        <p>Le métier de CIP offre de nombreuses possibilités d'évolution :</p>
-
-        <p><strong>Évolution hiérarchique :</strong></p>
-        <ul>
-          <li>Coordinateur d'équipe CIP</li>
-          <li>Responsable de service insertion</li>
-          <li>Directeur de structure d'insertion</li>
-          <li>Chargé de mission insertion (collectivités)</li>
-        </ul>
-
-        <p><strong>Spécialisations sectorielles :</strong></p>
-        <ul>
-          <li>Insertion des personnes handicapées</li>
-          <li>Accompagnement des jeunes décrocheurs</li>
-          <li>Insertion des publics éloignés de l'emploi</li>
-          <li>Accompagnement vers la création d'entreprise</li>
-        </ul>
-
-        <h2>Le marché de l'emploi CIP en Gironde</h2>
-
-        <h3>Une demande soutenue</h3>
-
-        <p>La Gironde présente des indicateurs favorables pour l'emploi des CIP :</p>
-
-        <p><strong>Politiques publiques volontaristes :</strong></p>
-        <ul>
-          <li>Plan départemental d'insertion renforcé</li>
-          <li>Développement du RSA et de l'accompagnement personnalisé</li>
-          <li>Investissements dans l'insertion des jeunes</li>
-          <li>Soutien aux structures d'insertion par l'activité économique</li>
-        </ul>
-
-        <h3>Rémunération et conditions d'emploi</h3>
-
-        <p><strong>Fourchettes de salaires :</strong></p>
-        <ul>
-          <li>CIP débutant : 1 600 € à 1 800 € brut/mois</li>
-          <li>CIP expérimenté : 1 800 € à 2 200 € brut/mois</li>
-          <li>Coordinateur/Responsable : 2 200 € à 2 800 € brut/mois</li>
-          <li>Directeur de structure : 2 800 € à 3 500 € brut/mois</li>
-        </ul>
-
-        <h2>Témoignage : Sandrine, diplômée CIP 2023</h2>
-
-        <blockquote>
-          <p><em>"Après une reconversion professionnelle, j'ai choisi la formation CIP à Lormont pour sa proximité et sa réputation. Le programme était très complet et les stages m'ont permis de découvrir différents univers professionnels. Aujourd'hui, je travaille comme conseillère emploi dans une Mission Locale de la métropole bordelaise. J'accompagne des jeunes vers l'emploi et je trouve un vrai sens à mon travail. La formation m'a donné tous les outils nécessaires pour exercer sereinement ce métier passionnant."</em></p>
-        </blockquote>
-
-        <h2>Financement de votre formation CIP</h2>
-
-        <h3>Dispositifs de financement disponibles</h3>
-
-        <p><strong>Le Compte Personnel de Formation (CPF) :</strong></p>
-        <ul>
-          <li>Formation éligible CPF</li>
-          <li>Financement total ou partiel selon vos droits acquis</li>
-          <li>Possibilité d'abondement employeur ou régional</li>
-        </ul>
-
-        <p><strong>Financement France Travail :</strong></p>
-        <ul>
-          <li>Aide Individuelle à la Formation (AIF)</li>
-          <li>Action de Formation Conventionnée (AFC)</li>
-          <li>Préparation Opérationnelle à l'Emploi (POE)</li>
-        </ul>
-
-        <p><strong>Financement Région Nouvelle-Aquitaine :</strong></p>
-        <ul>
-          <li>Programme régional de formation qualifiante</li>
-          <li>Aide aux demandeurs d'emploi</li>
-          <li>Rémunération pendant la formation</li>
-        </ul>
-
-        <h2>Conditions d'admission et prérequis</h2>
-
-        <h3>Prérequis d'accès</h3>
-
-        <p><strong>Niveau de formation :</strong></p>
-        <ul>
-          <li>Niveau Bac ou équivalent recommandé</li>
-          <li>Possibilité d'accès avec expérience professionnelle significative</li>
-          <li>Validation des Acquis de l'Expérience (VAE) possible</li>
-        </ul>
-
-        <p><strong>Compétences requises :</strong></p>
-        <ul>
-          <li>Excellent niveau en français (écrit et oral)</li>
-          <li>Aisance relationnelle et sens de l'écoute</li>
-          <li>Capacités d'adaptation et d'organisation</li>
-          <li>Intérêt pour les questions sociales et d'emploi</li>
-        </ul>
-
-        <h2>Certification et validation</h2>
-
-        <h3>Modalités d'évaluation</h3>
-
-        <p><strong>Épreuves de certification :</strong></p>
-        <ul>
-          <li><strong>Mise en situation professionnelle</strong> : Animation d'un atelier collectif (1h30)</li>
-          <li><strong>Entretien technique</strong> : Analyse d'une situation professionnelle (45 min)</li>
-          <li><strong>Entretien final</strong> : Présentation du dossier professionnel (30 min)</li>
-        </ul>
-
-        <h3>Titre professionnel et reconnaissance</h3>
-
-        <p><strong>Certification officielle :</strong></p>
-        <ul>
-          <li>Titre Professionnel de Conseiller en Insertion Professionnelle</li>
-          <li>Niveau 5 (Bac+2) au Répertoire National des Certifications Professionnelles</li>
-          <li>Reconnaissance par les employeurs du secteur</li>
-          <li>Équivalence européenne possible</li>
-        </ul>
-
-        <p><strong>Taux de réussite :</strong></p>
-        <ul>
-          <li>87% de réussite à la certification (promotion 2023)</li>
-          <li>92% d'insertion professionnelle à 6 mois</li>
-          <li>78% d'emploi durable (CDI ou CDD > 6 mois)</li>
-        </ul>
-
-        <h2>Pourquoi choisir notre centre de formation à Lormont ?</h2>
-
-        <h3>Avantages géographiques</h3>
-
-        <p><strong>Situation privilégiée :</strong></p>
-        <ul>
-          <li>À 10 minutes de Bordeaux centre</li>
-          <li>Accès tramway ligne A (arrêt Buttinière)</li>
-          <li>Parking gratuit pour les stagiaires</li>
-          <li>Proximité des structures de stage</li>
-        </ul>
-
-        <h3>Expertise pédagogique reconnue</h3>
-
-        <p><strong>Équipe expérimentée :</strong></p>
-        <ul>
-          <li>Formateurs certifiés et expérimentés</li>
-          <li>Professionnels du secteur en activité</li>
-          <li>Méthodes pédagogiques actualisées</li>
-          <li>Suivi personnalisé de chaque stagiaire</li>
-        </ul>
-
-        <p><strong>Réseau professionnel développé :</strong></p>
-        <ul>
-          <li>Partenariats avec 50+ structures d'insertion</li>
-          <li>Relations privilégiées avec les employeurs locaux</li>
-          <li>Réseau d'anciens diplômés actif</li>
-          <li>Veille permanente sur l'évolution des métiers</li>
-        </ul>
-
-        <h2>Conclusion : Un métier d'avenir à portée de main</h2>
-
-        <p>Devenir Conseiller en Insertion Professionnelle à Lormont, c'est choisir un métier porteur de sens dans un environnement économique dynamique. Notre formation complète et reconnue vous donne toutes les clés pour réussir dans ce secteur en pleine expansion.</p>
-
-        <p>Entre expertise pédagogique, accompagnement personnalisé et réseau professionnel développé, nous mettons tous les atouts de votre côté pour faire de votre reconversion un succès.</p>
-
-        <p><strong>Prêt à vous lancer dans cette aventure professionnelle enrichissante ?</strong></p>
-
-        <p><strong>N'attendez plus : votre nouvelle carrière de CIP commence ici, à Lormont !</strong></p>
-
-        <hr />
-
-        <p><em>Découvrez aussi nos autres formations : Formateur Professionnel d'Adultes (FPA), bilans de compétences, et accompagnement VAE. Un parcours complet pour votre développement professionnel.</em></p>
-      `
-    },
-    {
-      id: 14,
-      slug: "difficultes-recrutement-pratiques-marche",
-      title: "Et si vos difficultés de recrutement venaient de vos pratiques, pas seulement du marché ?",
-      excerpt: "Les candidatures tardent à arriver, les profils ne correspondent pas et la pénurie de talents semble devenir la seule explication. Et si la solution se trouvait aussi dans vos pratiques de recrutement ?",
-      image: "/images/hero/formations.jpg",
-      date: "23 octobre 2025",
-      readTime: "9 min",
-      author: "Liliana ALMEIDA",
-      category: "Tous",
-      keywords: "recrutement inclusif, pratiques de recrutement, pénurie de talents, diversité, inclusion, vivier de candidats",
-      content: `
-        <p>Vous publiez une offre. Une semaine passe. Puis deux. Puis trois. Les candidatures se comptent sur les doigts d'une main, et aucune ne correspond vraiment à ce que vous cherchez.</p>
-
-        <p>Bienvenue dans le quotidien de milliers de recruteurs en 2025. Santé, hôtellerie, restauration, BTP, industrie, services… Peu de secteurs échappent à cette réalité : les candidats se font rares, les postes restent vacants et, pendant ce temps, l'activité ralentit tandis que les équipes en poste s'essoufflent.</p>
-
-        <p>Face à cette situation, on entend souvent les mêmes explications :</p>
-
-        <ul>
-          <li>&laquo; Les jeunes ne veulent plus travailler &raquo;</li>
-          <li>&laquo; Il n'y a pas assez de candidats qualifiés sur le marché &raquo;</li>
-          <li>&laquo; Notre secteur n'attire pas &raquo;</li>
-        </ul>
-
-        <p>Mais si le problème ne se situait pas uniquement là où on le pense ? Et si nos pratiques de recrutement fermaient la porte à des talents qui n'attendent qu'une opportunité ?</p>
-
-        <h2>Le vrai sujet : nous cherchons tous le même profil</h2>
-
-        <p>Soyons honnêtes : lorsqu'on rédige une offre d'emploi, on a souvent en tête un profil idéal.</p>
-
-        <ul>
-          <li>Diplôme précis</li>
-          <li>Un minimum d'années d'expérience</li>
-          <li>Disponibilité immédiate</li>
-          <li>Maîtrise parfaite d'un outil ou d'une réglementation</li>
-        </ul>
-
-        <p>Et, presque inconsciemment, on ajoute d'autres filtres qui éliminent encore plus de candidats.</p>
-
-        <ul>
-          <li>Pas de trous dans le CV</li>
-          <li>Parcours linéaire et cohérent</li>
-          <li>Codes culturels identiques aux nôtres</li>
-        </ul>
-
-        <p>Résultat ? Nous pêchons tous dans le même vivier, de plus en plus restreint. Et nous nous étonnons de revenir bredouilles. La bonne nouvelle, c'est qu'il existe une multitude de talents disponibles : ils ont simplement des parcours différents.</p>
-
-        <h2>L'inclusion : plus qu'une valeur, un levier business</h2>
-
-        <p>Recruter de manière inclusive, ce n'est pas faire de la discrimination dite positive ou cocher une case RSE. C'est élargir stratégiquement son vivier pour recruter plus, mieux et plus vite.</p>
-
-        <h3>Regarder au-delà du diplôme</h3>
-        <p>Un autodidacte passionné peut surpasser un bac+5 démotivé. Une personne en reconversion apporte un regard neuf et une motivation démultipliée.</p>
-
-        <h3>Valoriser les compétences transférables</h3>
-        <p>Cette commerciale qui postule en RH ? Elle maîtrise l'écoute, la négociation, la gestion de la relation. Des compétences précieuses, transposables immédiatement.</p>
-
-        <h3>Adapter ses exigences à la réalité</h3>
-        <p>Exiger 5 ans d'expérience sur un métier qui a changé il y a 2 ans ou demander la maîtrise d'un logiciel qui s'apprend en une semaine, c'est parfois se tirer une balle dans le pied.</p>
-
-        <h3>Questionner ses biais</h3>
-        <p>Pourquoi ce CV avec un trou de deux ans vous refroidit-il ? Pourquoi ce prénom vous fait-il hésiter ? Pourquoi l'âge d'un candidat vous fait-il douter ? Interroger ses réflexes, c'est ouvrir le champ des possibles.</p>
-
-        <h2>Ce qui change quand on recrute autrement</h2>
-
-        <h3>Un vivier qui s'élargit instantanément</h3>
-        <p>Seniors expérimentés, personnes en situation de handicap, profils issus de quartiers prioritaires, talents en reconversion… Vous multipliez vos opportunités et diversifiez vos recrutements.</p>
-
-        <h3>Des recrutements plus rapides</h3>
-        <p>Moins de concurrence sur des profils atypiques, c'est plus de réactivité et moins de surenchère salariale. Vous gagnez en efficacité.</p>
-
-        <h3>Une marque employeur qui gagne en crédibilité</h3>
-        <p>Les candidats parlent entre eux. Une entreprise inclusive attire naturellement plus de talents, de tous horizons, et se différencie sur un marché tendu.</p>
-
-        <h3>Des équipes plus performantes</h3>
-        <p>La diversité de parcours enrichit les réflexions, stimule l'innovation et renforce la cohésion. On ne le répétera jamais assez : l'inclusion est aussi un sujet de performance.</p>
-
-        <p>Le recrutement inclusif n'est pas une révolution. C'est une adaptation de nos pratiques actuelles. Une manière de regarder autrement les candidats, d'évaluer différemment les potentiels et d'offrir une expérience de recrutement plus juste.</p>
-
-        <h2>L'inclusion, c'est voir ce que les autres ne voient pas</h2>
-
-        <p>Sur un marché tendu, les entreprises qui performent sont celles qui osent sortir des sentiers battus : celles qui comprennent qu'un parcours atypique n'est pas un handicap, mais une richesse ; celles qui forment plutôt que d'attendre ; celles qui recrutent des humains, pas des fiches de poste.</p>
-
-        <p>Le recrutement inclusif n'est pas une tendance. C'est une nécessité stratégique pour toute organisation qui veut rester compétitive.</p>
-
-        <p>Alors, prêt·e à regarder votre vivier de talents autrement ? Prêt·e à aborder les candidats différemment ?</p>
-
-        <p>Chez ATIPIK RH, nous accompagnons les professionnel·les RH et du recrutement pour traduire ces intentions en pratiques concrètes. Parce que vos prochains talents sont déjà là : il suffit de savoir les voir.</p>
-
-        <p><strong><span class="text-orange-500">Envie d'aller plus loin ? Découvrez notre formation courte pour prévenir les discriminations dans le recrutement et repartir avec des outils prêts à l'emploi.</span></strong></p>
-
-        <div class="text-center mt-8 mb-8">
-          <a href="/formations/professionnalisantes/renforcer-pratique-recrutement-inclusif"
-             class="inline-flex items-center px-6 py-3 bg-orange-500 hover:bg-[#013F63] text-white hover:text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 shadow-lg no-underline hover:no-underline">
-            Découvrir la formation
-          </a>
-        </div>
-      `
-    },
-    {
-      id: 2,
-      slug: "centre-formation-lormont-rive-droite-bordeaux",
-      title: "Centre de formation professionnelle à Lormont : pourquoi choisir la rive droite de Bordeaux ?",
-      excerpt: "Découvrez pourquoi notre centre de formation à Lormont offre tous les avantages d'une proximité avec Bordeaux, tout en bénéficiant des atouts spécifiques de la rive droite.",
-      image: "/images/hero/formations.jpg",
-      date: "10 janvier 2025",
-      readTime: "10 min",
+      id: 17,
+      slug: "devenir-formateur-adultes-sans-etudes-longues-reconversion",
+      title: "Devenir formateur pour adultes sans reprendre des études longues : est-ce vraiment possible ?",
+      excerpt: "Changer de métier sans repartir sur les bancs de l'université est aujourd'hui une aspiration forte. Parmi les reconversions qui attirent de plus en plus de professionnels expérimentés, le métier de formateur pour adultes occupe une place à part.",
+      image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1200&h=800&fit=crop&q=80",
+      date: "20 janvier 2026",
+      readTime: "15 min",
       author: "Vanessa NOAH EWODO",
       category: "Formations",
-      keywords: "centre formation Lormont, rive droite Bordeaux, formation professionnelle, avantages géographiques, accessibilité",
+      keywords: "formateur adultes, formation FPA, reconversion formateur, devenir formateur sans diplôme, formation courte formateur, pédagogie adultes, formateur professionnel adultes, reconversion professionnelle formateur",
       content: `
-        <p>Lorsqu'il s'agit de choisir un centre de formation professionnelle dans l'agglomération bordelaise, la localisation joue un rôle déterminant dans la réussite de votre projet. Lormont, commune dynamique de la rive droite de Bordeaux, s'impose comme un choix stratégique pour votre formation. Découvrez pourquoi notre centre de formation à Lormont offre tous les avantages d'une proximité avec Bordeaux, tout en bénéficiant des atouts spécifiques de la rive droite.</p>
+        <p>Changer de métier sans repartir sur les bancs de l'université est aujourd'hui une aspiration forte. Parmi les reconversions qui attirent de plus en plus de professionnels expérimentés, le métier de <strong>formateur pour adultes</strong> occupe une place à part. Transmission, sens, autonomie… mais aussi beaucoup de questions.</p>
 
-        <h2>Lormont : une position géographique stratégique</h2>
+        <p>Faut-il un diplôme ? Une formation longue ? Un parcours académique irréprochable ?</p>
 
-        <h3>Au cœur de l'agglomération bordelaise</h3>
+        <p><strong>Bonne nouvelle : devenir formateur pour adultes sans études longues est possible, à condition de structurer son projet intelligemment.</strong></p>
 
-        <p>Située à seulement 8 kilomètres du centre-ville de Bordeaux, Lormont occupe une position privilégiée sur la rive droite de la Garonne. Cette commune de 22 000 habitants fait partie intégrante de Bordeaux Métropole et bénéficie de tous les avantages d'une grande agglomération tout en conservant son identité propre.</p>
+        <h2>Pourquoi le métier de formateur pour adultes séduit autant en reconversion</h2>
 
-        <p><strong>Avantages géographiques :</strong></p>
-        <ul>
-          <li><strong>Proximité immédiate</strong> avec Bordeaux centre (15 minutes en tramway)</li>
-          <li><strong>Accès direct</strong> aux grands axes routiers (A10, A89, rocade)</li>
-          <li><strong>Desserte optimale</strong> par les transports en commun</li>
-          <li><strong>Environnement plus calme</strong> que le centre-ville bordelais</li>
-        </ul>
+        <p>Après plusieurs années de carrière, nombreux sont ceux qui ressentent l'envie de transmettre leur expérience plutôt que de continuer à l'appliquer uniquement sur le terrain.</p>
 
-        <h3>Une commune en pleine transformation</h3>
-
-        <p>Lormont connaît depuis plusieurs années une dynamique de développement remarquable qui en fait un territoire d'avenir :</p>
-
-        <p><strong>Projets d'aménagement structurants :</strong></p>
-        <ul>
-          <li>Rénovation urbaine du quartier Génicart</li>
-          <li>Développement du pôle tertiaire des Iris</li>
-          <li>Création d'espaces verts et de loisirs (parc des Coteaux)</li>
-          <li>Amélioration des infrastructures de transport</li>
-        </ul>
-
-        <p>Cette transformation fait de Lormont un territoire attractif pour les entreprises et les centres de formation, créant un écosystème favorable à l'emploi et à la formation professionnelle.</p>
-
-        <h2>Les avantages pratiques de la rive droite pour votre formation</h2>
-
-        <h3>Accessibilité et transport : un atout majeur</h3>
-
-        <p><strong>Transports en commun optimisés :</strong></p>
-        <ul>
-          <li><strong>Tramway ligne A</strong> : liaison directe Lormont ↔ Bordeaux centre en 15 minutes</li>
-          <li><strong>Réseau de bus TBM</strong> : lignes 7, 40, 44 desservant toute la rive droite</li>
-          <li><strong>Navettes intercommunales</strong> : connexions avec les communes voisines</li>
-          <li><strong>Fréquences élevées</strong> : passage toutes les 5-10 minutes aux heures de pointe</li>
-        </ul>
-
-        <p><strong>Accès routier facilité :</strong></p>
-        <ul>
-          <li><strong>Rocade A630</strong> accessible en 5 minutes</li>
-          <li><strong>Parking gratuit</strong> disponible pour nos stagiaires</li>
-          <li><strong>Voies cyclables</strong> sécurisées depuis Bordeaux</li>
-          <li><strong>Zones de stationnement</strong> nombreuses et gratuites</li>
-        </ul>
-
-        <p>Cette accessibilité remarquable permet à nos stagiaires de venir facilement depuis toute l'agglomération bordelaise, sans les contraintes de circulation et de stationnement du centre-ville.</p>
-
-        <h3>Un environnement propice à l'apprentissage</h3>
-
-        <p><strong>Cadre de vie apaisé :</strong><br>
-        Contrairement à l'effervescence du centre de Bordeaux, Lormont offre un environnement plus serein, particulièrement favorable à la concentration et à l'apprentissage. Nos locaux bénéficient :</p>
+        <p>Le métier de formateur répond à plusieurs aspirations fortes :</p>
 
         <ul>
-          <li><strong>D'espaces verts</strong> à proximité (parc des Coteaux, berges de Garonne)</li>
-          <li><strong>D'un niveau sonore</strong> réduit par rapport au centre-ville</li>
-          <li><strong>D'une architecture moderne</strong> dans des bâtiments récents</li>
-          <li><strong>De services de proximité</strong> (restauration, commerces, banques)</li>
+          <li><strong>Donner du sens à son parcours professionnel</strong></li>
+          <li><strong>Valoriser une expertise acquise au fil des années</strong></li>
+          <li><strong>Conserver une certaine liberté</strong> (statut, organisation, missions)</li>
+          <li><strong>Travailler avec des publics variés et engagés</strong></li>
         </ul>
 
-        <p><strong>Équipements modernes :</strong><br>
-        Notre centre de formation à Lormont dispose d'installations de dernière génération :</p>
+        <p>Dans de nombreux secteurs – management, ressources humaines, sécurité, numérique, relation client – la demande de formateurs qualifiés dépasse l'offre. L'expérience terrain y est souvent plus recherchée qu'un diplôme académique.</p>
+
+        <h2>Faut-il un diplôme pour devenir formateur pour adultes ?</h2>
+
+        <p>C'est l'une des idées reçues les plus fréquentes.</p>
+
+        <h3>Ce que dit la réalité</h3>
+
+        <p>Il n'existe pas de diplôme obligatoire unique pour exercer comme formateur pour adultes. Ce qui compte avant tout, c'est :</p>
+
         <ul>
-          <li>Salles de formation climatisées et lumineuses</li>
-          <li>Équipements informatiques et audiovisuels performants</li>
-          <li>Espaces de détente et de restauration</li>
-          <li>Connexion internet haut débit</li>
-          <li>Accessibilité PMR complète</li>
+          <li>votre expertise métier</li>
+          <li>votre capacité à la transmettre</li>
+          <li>votre posture professionnelle face à un public adulte</li>
         </ul>
 
-        <h2>La rive droite : un bassin d'emploi en développement</h2>
+        <p>Former des adultes ne consiste pas à "réciter un savoir". Il s'agit d'accompagner, de faire réfléchir, de favoriser l'autonomie et l'apprentissage par l'expérience.</p>
 
-        <h3>Dynamisme économique de la rive droite</h3>
+        <h3>Ce que regardent les recruteurs et organismes de formation</h3>
 
-        <p>La rive droite de Bordeaux connaît un essor économique remarquable qui multiplie les opportunités professionnelles pour nos diplômés :</p>
+        <p>Dans les faits, les recruteurs et organismes s'intéressent surtout à :</p>
 
-        <p><strong>Secteurs en croissance :</strong></p>
         <ul>
-          <li><strong>Logistique et transport</strong> : proximité du port de Bordeaux</li>
-          <li><strong>Services aux entreprises</strong> : développement du tertiaire</li>
-          <li><strong>Commerce et distribution</strong> : zones commerciales dynamiques</li>
-          <li><strong>Santé et services à la personne</strong> : vieillissement de la population</li>
-          <li><strong>Économie sociale et solidaire</strong> : nombreuses associations actives</li>
+          <li>votre crédibilité professionnelle</li>
+          <li>votre capacité à structurer un contenu</li>
+          <li>votre aisance relationnelle</li>
+          <li>votre adaptabilité aux différents publics</li>
         </ul>
 
-        <p><strong>Zones d'activités attractives :</strong></p>
+        <p>Une formation pédagogique est donc un atout fort, mais elle n'a pas besoin d'être longue ou universitaire.</p>
+
+        <h2>Formation de formateur pour adultes : quelles options sans études longues ?</h2>
+
+        <p>Il existe aujourd'hui des parcours adaptés aux adultes en reconversion.</p>
+
+        <h3>Des formations courtes et ciblées</h3>
+
+        <p>De nombreuses formations permettent d'acquérir rapidement :</p>
+
         <ul>
-          <li><strong>Parc d'Activités des Jalles</strong> (Blanquefort-Eysines)</li>
-          <li><strong>Zone industrielle de Bassens</strong></li>
-          <li><strong>Pôle logistique de Fargues-Saint-Hilaire</strong></li>
-          <li><strong>Centre commercial Rives d'Arcins</strong> (Bègles)</li>
+          <li>les bases de la pédagogie pour adultes</li>
+          <li>la posture de formateur</li>
+          <li>les méthodes d'animation</li>
+          <li>l'évaluation des acquis</li>
         </ul>
 
-        <h3>Opportunités de stage et d'emploi locales</h3>
+        <p>Certaines formations certifiantes, comme celles orientées "formateur professionnel d'adultes", peuvent être suivies sans reprendre des études longues, souvent sur quelques mois, parfois en parallèle d'une activité.</p>
 
-        <p>Notre implantation à Lormont nous permet de développer un réseau d'entreprises partenaires particulièrement dense sur la rive droite :</p>
+        <h3>Présentiel, distanciel ou hybride</h3>
 
-        <p><strong>Entreprises partenaires :</strong></p>
+        <p>Le format dépend de votre situation :</p>
+
         <ul>
-          <li>PME locales en croissance</li>
-          <li>Filiales de grands groupes implantées récemment</li>
-          <li>Associations et structures d'insertion</li>
-          <li>Collectivités territoriales (mairies, intercommunalités)</li>
-          <li>Établissements de santé et médico-sociaux</li>
+          <li>le présentiel favorise la mise en pratique</li>
+          <li>le distanciel offre plus de flexibilité</li>
+          <li>l'hybride combine les deux</li>
         </ul>
 
-        <p>Cette proximité facilite :</p>
+        <p>L'essentiel n'est pas le format, mais l'adéquation avec votre projet réel.</p>
+
+        <h2>Avant la formation : pourquoi le bilan de compétences est une étape clé</h2>
+
+        <p>C'est ici que de nombreux projets échouent… par précipitation.</p>
+
+        <p>Se former sans avoir clarifié son projet expose à :</p>
+
         <ul>
-          <li><strong>La recherche de stages</strong> pour nos stagiaires</li>
-          <li><strong>L'insertion professionnelle</strong> à l'issue de la formation</li>
-          <li><strong>Le maintien des liens</strong> avec les employeurs locaux</li>
-          <li><strong>L'adaptation des formations</strong> aux besoins du territoire</li>
+          <li>un mauvais choix de formation</li>
+          <li>une perte de temps et d'argent</li>
+          <li>une reconversion peu alignée avec ses aspirations</li>
         </ul>
 
-        <h2>Coût de la vie et avantages financiers</h2>
+        <p>Un <a href="/bilan-de-competences">bilan de compétences</a> permet de :</p>
 
-        <h3>Un rapport qualité-prix imbattable</h3>
-
-        <p>Choisir Lormont pour votre formation, c'est bénéficier d'un excellent rapport qualité-prix :</p>
-
-        <p><strong>Avantages financiers directs :</strong></p>
         <ul>
-          <li><strong>Stationnement gratuit</strong> (économie de 3 à 5€/jour vs Bordeaux centre)</li>
-          <li><strong>Restauration moins chère</strong> que dans le centre-ville</li>
-          <li><strong>Loyers plus abordables</strong> pour ceux qui souhaitent se rapprocher</li>
-          <li><strong>Transports en commun</strong> inclus dans l'abonnement métropolitain</li>
+          <li>identifier vos compétences transférables</li>
+          <li>vérifier la cohérence de votre projet de formateur</li>
+          <li>définir votre positionnement (salarié, indépendant, vacataire)</li>
+          <li>sécuriser votre trajectoire professionnelle</li>
         </ul>
 
-        <p><strong>Calcul d'économies sur une formation de 10 mois :</strong></p>
+        <p>Chez Atipik RH, le bilan de compétences n'est pas une formalité. C'est un véritable outil de décision, pensé pour les parcours atypiques et les reconversions durables.</p>
+
+        <div style="margin: 3rem 0; text-align: center;">
+          <a href="/s-inscrire" style="display: inline-block; cursor: pointer; transition: transform 0.3s ease;">
+            <img src="/images/blog/formateur-fpa-cta.jpg" alt="Prêt à vous lancer dans cette aventure professionnelle ? M'inscrire à la formation Formateur Professionnel d'Adultes (FPA)" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(1, 63, 99, 0.3); border: 2px solid #013F63; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'; this.style.boxShadow='0 6px 16px rgba(1, 63, 99, 0.4)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(1, 63, 99, 0.3)';" />
+          </a>
+        </div>
+
+        <h2>Comment financer une formation de formateur pour adultes ?</h2>
+
+        <p>Bonne nouvelle : plusieurs solutions existent.</p>
+
+        <p>Selon votre situation, vous pouvez mobiliser :</p>
+
         <ul>
-          <li>Stationnement : 600 à 1000€ d'économie</li>
-          <li>Restauration : 300 à 500€ d'économie</li>
-          <li>Temps de transport : 2h/semaine gagnées</li>
-          <li><strong>Total : plus de 1000€ d'économies</strong> par rapport à une formation en centre-ville</li>
+          <li>le CPF</li>
+          <li>des aides via France Travail</li>
+          <li>un financement employeur</li>
+          <li>un autofinancement réfléchi et stratégique</li>
         </ul>
 
-        <h2>Notre centre de formation : l'excellence à Lormont</h2>
+        <p>Dans de nombreux cas, le bilan de compétences est lui-même finançable, ce qui permet de poser des bases solides avant d'investir dans une formation.</p>
 
-        <h3>Une expertise reconnue au service de votre réussite</h3>
+        <h2>Les erreurs fréquentes à éviter quand on veut devenir formateur</h2>
 
-        <p><strong>Formations proposées :</strong></p>
+        <p>Certaines erreurs reviennent souvent :</p>
+
         <ul>
-          <li><strong>Bilan de compétences</strong> : accompagnement personnalisé vers la reconversion</li>
-          <li><strong>Formation CIP</strong> : Conseiller en Insertion Professionnelle (Titre Professionnel Niveau 5)</li>
-          <li><strong>Formation FPA</strong> : Formateur Professionnel d'Adultes (Titre Professionnel Niveau 5)</li>
-          <li><strong>Accompagnement VAE</strong> : Validation des Acquis de l'Expérience</li>
-          <li><strong>Formations sur mesure</strong> pour entreprises et collectivités</li>
+          <li>penser que l'expertise suffit à former</li>
+          <li>choisir une formation sans projet clair</li>
+          <li>négliger la posture pédagogique</li>
+          <li>sous-estimer le temps nécessaire pour s'installer</li>
         </ul>
 
-        <p><strong>Taux de réussite exceptionnels :</strong></p>
+        <p>Devenir formateur est un véritable métier, qui s'apprend et se construit dans la durée.</p>
+
+        <h2>Devenir formateur : salarié, indépendant ou les deux ?</h2>
+
+        <p>Il existe plusieurs voies :</p>
+
         <ul>
-          <li><strong>87% de réussite</strong> aux certifications (moyenne nationale : 78%)</li>
-          <li><strong>92% d'insertion professionnelle</strong> à 6 mois post-formation</li>
-          <li><strong>95% de satisfaction</strong> stagiaires (enquête 2023)</li>
-          <li><strong>100% de nos formations</strong> éligibles CPF</li>
+          <li>formateur salarié (interne ou organisme)</li>
+          <li>formateur vacataire</li>
+          <li>formateur indépendant</li>
+          <li>combinaison de plusieurs statuts</li>
         </ul>
 
-        <h3>Une équipe pédagogique d'excellence</h3>
+        <p>Chaque option a ses avantages et ses contraintes. Le bon choix dépend de votre personnalité, de vos objectifs et de votre équilibre de vie souhaité.</p>
 
-        <p><strong>Formateurs experts :</strong></p>
+        <h2>Êtes-vous fait pour devenir formateur pour adultes ?</h2>
+
+        <p>Posez-vous ces questions :</p>
+
         <ul>
-          <li><strong>Certifiés et expérimentés</strong> dans leur domaine</li>
-          <li><strong>Professionnels en activité</strong> apportant leur expertise terrain</li>
-          <li><strong>Formation continue</strong> aux dernières évolutions pédagogiques</li>
-          <li><strong>Approche personnalisée</strong> adaptée à chaque profil</li>
+          <li>Aimez-vous transmettre et expliquer ?</li>
+          <li>Êtes-vous à l'aise à l'oral ?</li>
+          <li>Savez-vous vous adapter à des publics variés ?</li>
+          <li>Êtes-vous prêt à apprendre en continu ?</li>
+          <li>Acceptez-vous de remettre vos pratiques en question ?</li>
         </ul>
 
-        <h2>Témoignages : ils ont choisi Lormont et ne le regrettent pas</h2>
+        <p>Si vous vous reconnaissez dans ces points, le métier de formateur peut devenir une évolution naturelle de votre parcours.</p>
 
-        <h3>Patricia, 35 ans, formation CIP</h3>
+        <h2>Et maintenant, quelle est la prochaine étape ?</h2>
 
-        <blockquote>
-          <p><em>"J'habite Cenon et j'hésitais entre plusieurs centres pour ma formation de Conseillère en Insertion Professionnelle. J'ai choisi Lormont pour la proximité et je ne le regrette pas ! Le tramway me dépose à 2 minutes du centre, je peux me garer gratuitement quand je viens en voiture, et l'ambiance est vraiment studieuse. Les formateurs connaissent parfaitement le marché de l'emploi local, ce qui m'a permis de trouver un stage puis un emploi rapidement sur la rive droite."</em></p>
-        </blockquote>
+        <p>Vous envisagez de devenir formateur pour adultes, mais vous voulez passer à l'action de façon structurée et sécurisée ? Ne laissez pas votre projet au stade de l'intention.</p>
 
-        <h3>Marc, 42 ans, formation FPA</h3>
+        <p>Chez Atipik RH, nous accompagnons les futurs formateurs de la réflexion à la concrétisation, grâce à une formation de <strong>Formateur Professionnel d'Adultes (FPA)</strong> pensée pour les parcours en reconversion et les profils expérimentés.</p>
 
-        <blockquote>
-          <p><em>"Après 15 ans dans l'industrie, je voulais me reconvertir dans la formation. Le centre de Lormont m'a séduit par son professionnalisme et sa localisation. Venir de Libourne en voiture était facile, et j'ai apprécié le calme des lieux pour me concentrer sur cette nouvelle orientation. Aujourd'hui, je forme les futurs techniciens de maintenance dans une entreprise de Bassens. Tout s'est enchaîné naturellement grâce au réseau local du centre."</em></p>
-        </blockquote>
+        <p>Cette formation vous permet de :</p>
 
-        <h3>Sophie, 28 ans, bilan de compétences</h3>
-
-        <blockquote>
-          <p><em>"En pleine réflexion sur mon avenir professionnel, j'ai réalisé mon bilan de compétences à Lormont. L'accompagnement a été remarquable et très ancré dans la réalité locale. Ma consultante m'a fait rencontrer des professionnels de la rive droite, et j'ai découvert des opportunités que je ne soupçonnais pas. Résultat : j'ai créé mon auto-entreprise en communication digitale et mes premiers clients sont des PME lormontaises !"</em></p>
-        </blockquote>
-
-        <h2>Accessibilité et mobilité durable</h2>
-
-        <h3>Engagement écologique</h3>
-
-        <p>Notre centre de Lormont s'inscrit dans une démarche de développement durable :</p>
-
-        <p><strong>Transports verts encouragés :</strong></p>
         <ul>
-          <li><strong>Abri vélos sécurisé</strong> et gratuit</li>
-          <li><strong>Bornes de recharge</strong> véhicules électriques à proximité</li>
-          <li><strong>Covoiturage</strong> organisé entre stagiaires</li>
-          <li><strong>Incitations</strong> à l'utilisation des transports en commun</li>
+          <li>adopter la posture de formateur professionnel</li>
+          <li>acquérir les fondamentaux de la pédagogie pour adultes</li>
+          <li>structurer et animer des formations efficaces</li>
+          <li>transformer votre expérience en véritable compétence transmissible</li>
         </ul>
 
-        <p><strong>Bilan carbone optimisé :</strong></p>
-        <ul>
-          <li>Réduction de 40% des émissions CO2 vs formation en centre-ville</li>
-          <li>Moins de congestion automobile</li>
-          <li>Trajets plus courts pour les habitants de rive droite</li>
-          <li>Contribution positive à la qualité de l'air métropolitain</li>
-        </ul>
+        <p>Avant de vous lancer, nous vous aidons à vérifier que cette voie est la bonne pour vous, et à sécuriser votre parcours (positionnement, financement, débouchés).</p>
 
-        <h3>Accessibilité universelle</h3>
-
-        <p><strong>Accueil de tous les publics :</strong></p>
-        <ul>
-          <li><strong>Locaux PMR</strong> entièrement accessibles</li>
-          <li><strong>Signalétique adaptée</strong> aux déficients visuels</li>
-          <li><strong>Boucles magnétiques</strong> pour malentendants</li>
-          <li><strong>Personnel formé</strong> à l'accueil du handicap</li>
-          <li><strong>Partenariat Cap Emploi</strong> pour l'insertion professionnelle</li>
-        </ul>
-
-        <h2>Conclusion : Lormont, le choix de la réussite</h2>
-
-        <p>Choisir notre centre de formation professionnelle à Lormont, c'est faire le pari gagnant d'un territoire en pleine mutation, alliant tous les avantages de la proximité bordelaise aux atouts spécifiques de la rive droite.</p>
-
-        <p><strong>Les raisons de nous choisir :</strong></p>
-
-        <p><strong>Accessibilité optimale</strong> : tramway, parking gratuit, liaisons routières<br>
-        <strong>Environnement propice</strong> : calme, moderne, services de proximité<br>
-        <strong>Coût maîtrisé</strong> : économies substantielles vs centre-ville<br>
-        <strong>Réseau local développé</strong> : entreprises partenaires, opportunités d'emploi<br>
-        <strong>Expertise reconnue</strong> : taux de réussite et d'insertion exceptionnels<br>
-        <strong>Accompagnement personnalisé</strong> : suivi individuel de qualité<br>
-        <strong>Territoire d'avenir</strong> : investissements et développement économique</p>
-
-        <h3>Votre réussite commence à Lormont</h3>
-
-        <p>Que vous souhaitiez réaliser un bilan de compétences, vous former aux métiers de CIP ou FPA, ou bénéficier d'un accompagnement VAE, notre centre de Lormont vous offre toutes les conditions de la réussite.</p>
-
-        <p><strong>Prêt à franchir le pas ?</strong></p>
-
-        <p><strong>Votre avenir professionnel se dessine ici, à Lormont, aux portes de Bordeaux !</strong></p>
+        <div style="margin: 2rem 0; padding: 1.5rem; background-color: #f8f9fa; border-left: 4px solid #013F63; border-radius: 8px;">
+          <p style="margin-bottom: 1rem;"><strong>Prêt à vous lancer dans cette aventure professionnelle ?</strong></p>
+          <p style="margin-bottom: 1rem;">
+            <a href="/s-inscrire" style="display: inline-block; padding: 12px 24px; background-color: #013F63; color: white; text-decoration: none; border-radius: 8px; font-weight: 600; margin-right: 1rem; transition: background-color 0.3s;">M'inscrire à la formation Formateur Professionnel d'Adultes (FPA)</a>
+          </p>
+          <p style="margin-top: 1rem; margin-bottom: 0;">
+            <strong>Vous avez encore des questions sur votre projet ou sur les financements possibles ?</strong><br/>
+            <a href="/contact" style="display: inline-block; padding: 12px 24px; border: 2px solid #013F63; color: #013F63; text-decoration: none; border-radius: 8px; font-weight: 600; margin-top: 0.5rem; transition: background-color 0.3s;">Échanger avec un conseiller Atipik RH</a>
+          </p>
+        </div>
 
         <hr />
 
-        <p><em>Découvrez nos formations CIP, FPA, nos bilans de compétences et notre accompagnement VAE. Un centre de formation d'excellence au cœur de la dynamique métropolitaine bordelaise.</em></p>
+        <p><em>Découvrez aussi nos autres articles sur la <a href="/blog/formation-conseiller-insertion-professionnelle-lormont">formation CIP</a> et le <a href="/blog/financer-bilan-vae-formation-atipik-rh">financement des formations</a>.</em></p>
+      `
+    },
+    {
+      id: 16,
+      slug: "financer-bilan-competences-2026-cpf-france-travail-employeur",
+      title: "Comment financer un bilan de compétences en 2026 ? (CPF, France Travail, employeur)",
+      excerpt: "Guide complet pour financer votre bilan de compétences en 2026 : CPF, financement employeur, France Travail, FAF pour indépendants. Toutes les solutions pour lever le frein financier et investir sereinement dans votre avenir professionnel.",
+      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=800&fit=crop&q=80",
+      date: "13 janvier 2026",
+      readTime: "12 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Bilan de compétences",
+      keywords: "financement bilan compétences, bilan compétences CPF, financer bilan compétences 2026, France Travail bilan compétences, employeur finance bilan compétences, Aide Individuelle Formation, Fonds Assurance Formation indépendant",
+      content: `
+        <p>Vous ressentez le besoin de changer d'air, de redonner du sens à votre carrière ou de sécuriser un nouveau projet professionnel ? Le bilan de compétences est un outil puissant pour faire le point, identifier vos forces et construire une trajectoire réaliste.</p>
+
+        <p>Mais une question revient presque toujours en premier : <strong>combien ça coûte… et surtout, qui paye ?</strong></p>
+
+        <p>Bonne nouvelle : en 2026, plusieurs dispositifs existent pour financer tout ou partie de votre bilan de compétences, parfois sans avancer de frais. Voici un guide clair pour lever le frein financier et investir sereinement dans votre avenir professionnel.</p>
+
+        <h2>1. Le Compte Personnel de Formation (CPF) : l'autonomie avant tout</h2>
+
+        <p>Le CPF reste le levier principal pour financer un bilan de compétences.</p>
+
+        <p>Chaque actif (salarié, demandeur d'emploi, indépendant) cumule des droits en euros tout au long de sa vie professionnelle.</p>
+
+        <h3>Comment ça fonctionne ?</h3>
+
+        <ul>
+          <li>Vous choisissez librement votre organisme de bilan de compétences</li>
+          <li>Vous mobilisez vos droits directement via la plateforme officielle <a href="https://www.moncompteformation.gouv.fr" target="_blank" rel="noopener noreferrer">Mon Compte Formation</a></li>
+          <li>Le financement est individuel et confidentiel</li>
+        </ul>
+
+        <h3>Ce qu'il faut savoir en 2026</h3>
+
+        <ul>
+          <li>Une participation forfaitaire peut être demandée selon votre situation</li>
+          <li>Cette participation peut parfois être prise en charge ou exonérée (selon les politiques publiques ou accords de branche)</li>
+        </ul>
+
+        <h3>Les avantages</h3>
+
+        <ul>
+          <li>Aucun accord de l'employeur requis si le bilan est réalisé hors temps de travail</li>
+          <li>Démarche simple et rapide</li>
+          <li>Liberté de choix de l'organisme</li>
+        </ul>
+
+        <p><strong>C'est la solution idéale si vous souhaitez avancer de manière discrète et autonome.</strong></p>
+
+        <h2>2. Le financement par l'employeur : un outil de sécurisation des parcours</h2>
+
+        <p>Si votre réflexion s'inscrit dans une évolution interne, une mobilité ou une prévention de l'usure professionnelle, votre employeur peut financer votre bilan.</p>
+
+        <h3>Le cadre</h3>
+
+        <ul>
+          <li>Le bilan de compétences est intégré au Plan de Développement des Compétences</li>
+          <li>L'entreprise prend en charge les frais pédagogiques</li>
+          <li>Le salaire est maintenu si le bilan se déroule sur le temps de travail</li>
+        </ul>
+
+        <h3>Le bon angle à adopter</h3>
+
+        <p>Lors d'un entretien professionnel ou annuel, présentez le bilan comme :</p>
+
+        <ul>
+          <li>Un outil de fidélisation,</li>
+          <li>Un levier de motivation,</li>
+          <li>Ou un moyen de prévenir l'épuisement professionnel et les ruptures de parcours.</li>
+        </ul>
+
+        <p><strong>Bien positionné, le bilan de compétences est un investissement gagnant-gagnant pour le salarié comme pour l'employeur.</strong></p>
+
+        <h2>3. France Travail (ex-Pôle emploi) : un appui pour les demandeurs d'emploi</h2>
+
+        <p>Si vous êtes actuellement en recherche d'emploi, le bilan de compétences peut être un outil structurant pour sécuriser votre retour à l'emploi.</p>
+
+        <h3>Les solutions possibles</h3>
+
+        <ul>
+          <li>Mobilisation de votre CPF</li>
+          <li>Complément de financement via l'Aide Individuelle à la Formation (AIF) si vos droits sont insuffisants</li>
+        </ul>
+
+        <h3>Les conditions</h3>
+
+        <ul>
+          <li>Le bilan doit être validé par votre conseiller France Travail</li>
+          <li>Il doit s'inscrire clairement dans votre projet de retour à l'emploi ou de reconversion</li>
+        </ul>
+
+        <h3>Conseil clé : préparez un argumentaire montrant que le bilan va :</h3>
+
+        <ul>
+          <li>Clarifier votre projet,</li>
+          <li>Raccourcir votre période de chômage,</li>
+          <li>Renforcer votre employabilité.</li>
+        </ul>
+
+        <h2>4. Et pour les indépendants ?</h2>
+
+        <p>Les travailleurs indépendants peuvent mobiliser leur Fonds d'Assurance Formation (FAF) (ex. : AGEFICE, FIF PL, FAFCEA selon l'activité).</p>
+
+        <p>Les modalités varient selon les fonds, mais le bilan de compétences peut être pris en charge partiellement ou totalement, sous conditions.</p>
+
+        <h2>Pourquoi ne pas attendre ?</h2>
+
+        <p>Un bilan de compétences n'est pas une dépense, c'est un investissement à fort impact. En 2026, le marché du travail valorise plus que jamais :</p>
+
+        <ul>
+          <li>L'adaptabilité,</li>
+          <li>La connaissance de ses compétences,</li>
+          <li>Les parcours construits et assumés.</li>
+        </ul>
+
+        <p>Attendre, c'est parfois :</p>
+
+        <ul>
+          <li>Laisser dormir ses droits CPF,</li>
+          <li>Rester bloqué dans une situation inconfortable,</li>
+          <li>Ou subir une transition plutôt que la choisir.</li>
+        </ul>
+
+        <p><strong>Bon à savoir :</strong> un bilan de compétences dure en moyenne 24 heures, réparties sur plusieurs semaines, avec un rythme compatible avec la vie professionnelle et personnelle.</p>
+
+        <h2>Tableau récapitulatif des financements en 2026</h2>
+
+        <div style="overflow-x: auto; margin: 2rem 0;">
+          <table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd;">
+            <thead>
+              <tr style="background-color: #013F63; color: white;">
+                <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Profil</th>
+                <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Dispositif principal</th>
+                <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Accord nécessaire ?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding: 12px; border: 1px solid #ddd;">Salarié (démarche personnelle)</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">CPF (hors temps de travail)</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Non</td>
+              </tr>
+              <tr style="background-color: #f9f9f9;">
+                <td style="padding: 12px; border: 1px solid #ddd;">Salarié (démarche co-construite)</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Plan de développement des compétences</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Oui (employeur)</td>
+              </tr>
+              <tr>
+                <td style="padding: 12px; border: 1px solid #ddd;">Demandeur d'emploi</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">CPF + AIF France Travail</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Oui (conseiller)</td>
+              </tr>
+              <tr style="background-color: #f9f9f9;">
+                <td style="padding: 12px; border: 1px solid #ddd;">Indépendant</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Fonds d'Assurance Formation</td>
+                <td style="padding: 12px; border: 1px solid #ddd;">Selon critères</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Prêt·e à faire le point sur votre avenir professionnel ?</h2>
+
+        <p>Le financement ne doit plus être un frein à votre épanouissement ni à votre sécurisation professionnelle. Être accompagné·e dans un bilan de compétences, c'est reprendre la main sur son parcours — avec méthode, humanité et réalisme.</p>
+
+        <p>Chez <a href="/bilan-de-competences">ATIPIK RH</a>, nous vous accompagnons à chaque étape, y compris dans la mobilisation des financements.</p>
+
+        <p><strong>Parce que chaque parcours mérite d'être reconnu, valorisé et choisi.</strong></p>
+
+        <hr />
+
+        <p><em>Découvrez aussi nos autres articles sur le <a href="/blog/portefeuille-competences-insertion-reconversion-employabilite">portefeuille de compétences</a> et le <a href="/blog/financer-bilan-vae-formation-atipik-rh">financement des formations</a>.</em></p>
+      `
+    },
+    {
+      id: 15,
+      slug: "portefeuille-competences-insertion-reconversion-employabilite",
+      title: "Portefeuille de compétences : un outil stratégique pour l'insertion professionnelle et la reconversion",
+      excerpt: "Dans un contexte de mutations du marché du travail, l'insertion professionnelle, la reconversion professionnelle et le bilan de compétences sont devenus des leviers essentiels pour renforcer l'employabilité et sécuriser les parcours.",
+      image: "/images/hero/bilan-competences.jpg",
+      date: "7 janvier 2026",
+      readTime: "5 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Bilan de compétences",
+      keywords: "portefeuille compétences, insertion professionnelle, reconversion professionnelle, employabilité, compétences transférables, CIP, bilan compétences, ATIPIK RH",
+      content: `
+        <p>Dans un contexte de mutations du marché du travail, l'insertion professionnelle, la reconversion professionnelle et le bilan de compétences sont devenus des leviers essentiels pour renforcer l'employabilité et sécuriser les parcours. Chez ATIPIK RH, nous accompagnons les personnes, avec ou sans diplôme, dans la valorisation de leurs compétences et la construction de projets professionnels durables.</p>
+
+        <h2>Le portefeuille de compétences : définition et enjeux</h2>
+
+        <p>Le portefeuille de compétences est un outil stratégique qui permet de recenser, organiser et valoriser l'ensemble des compétences acquises tout au long de la vie professionnelle et personnelle. Il dépasse la simple liste de diplômes pour mettre en lumière les savoir-faire, savoir-être et savoir-agir développés dans différents contextes.</p>
+
+        <p>Cet outil prend tout son sens dans un marché du travail en constante évolution où les parcours professionnels sont de plus en plus diversifiés. Il permet de valoriser les parcours atypiques, reconnaître l'expérience acquise hors du cadre formel, faciliter l'identification des compétences transférables et sécuriser les transitions professionnelles.</p>
+
+        <h2>L'accompagnement par les Conseillers en Insertion Professionnelle</h2>
+
+        <p>Nos conseillers en insertion professionnelle (CIP) s'appuient sur le portefeuille de compétences pour accompagner des publics aux parcours variés, parfois atypiques, vers l'emploi, la formation ou la reconversion professionnelle.</p>
+
+        <p>Chaque personne possède un parcours unique. Nos CIP adoptent une approche sur-mesure qui prend en compte la diversité des parcours (avec ou sans diplôme), les compétences formelles et informelles, les aspirations et motivations, ainsi que le contexte local du marché de l'emploi en Gironde.</p>
+
+        <p>Notre méthode d'accompagnement structurée permet d'identifier les compétences, les organiser et les catégoriser, les valoriser pour les employeurs, identifier les compétences transférables vers de nouveaux secteurs, et construire un projet professionnel réaliste.</p>
+
+        <h2>Un outil stratégique de reconversion professionnelle</h2>
+
+        <p>Le portefeuille de compétences est un outil stratégique de reconversion professionnelle, permettant d'identifier les compétences transférables, de sécuriser les transitions et de construire un projet professionnel réaliste et progressif.</p>
+
+        <p>Lors d'une reconversion, toutes les compétences ne sont pas perdues. Le portefeuille permet de repérer les compétences transversales (communication, gestion de projet, travail en équipe, adaptabilité), valoriser l'expérience acquise même dans un nouveau secteur, et construire un argumentaire solide pour expliquer comment les compétences passées sont pertinentes pour le nouveau projet.</p>
+
+        <p>Une reconversion professionnelle peut être source d'inquiétude. Le portefeuille de compétences offre une vision claire de ses atouts, un plan d'action pour identifier les compétences à développer, une progression réaliste étape par étape, et une base solide sur laquelle s'appuyer en cas de difficultés.</p>
+
+        <h2>Renforcer l'employabilité et la confiance en soi</h2>
+
+        <p>En rendant visibles les compétences acquises dans et hors du cadre formel, cet outil renforce l'employabilité, la confiance en soi et la capacité à se positionner face aux employeurs et partenaires de l'insertion.</p>
+
+        <p>Le portefeuille améliore l'employabilité en offrant une meilleure visibilité des compétences, une argumentation solide avec des exemples concrets et facilite l'adaptation aux offres d'emploi. Pour les personnes sans diplôme ou aux parcours atypiques, il légitime l'expérience, réduit l'auto-censure et renforce l'estime de soi. Avec un portefeuille bien construit, il devient plus facile de rédiger un CV efficace, préparer les entretiens et construire un réseau professionnel.</p>
+
+        <div style="margin: 2rem 0;">
+          <img 
+            src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop" 
+            alt="Reconversion professionnelle et développement des compétences transférables"
+            style="width: 100%; height: auto; border-radius: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"
+          />
+        </div>
+
+        <h2>L'accompagnement ATIPIK RH</h2>
+
+        <p>Chez ATIPIK RH, nos conseillers en insertion professionnelle accompagnent tous les publics (avec ou sans diplôme, jeunes ou seniors) en utilisant des méthodes éprouvées et une connaissance approfondie du marché de l'emploi en Gironde.</p>
+
+        <p>Le portefeuille de compétences s'intègre naturellement dans nos accompagnements : <a href="/bilan-de-competences">bilan de compétences</a>, <a href="/formation-conseiller-insertion-professionnelle">formation CIP</a>, accompagnement à la reconversion et valorisation de l'expérience.</p>
+
+        <p><strong>Prêt à valoriser vos compétences et à construire votre projet professionnel ?</strong> Contactez-nous pour découvrir comment nous pouvons vous accompagner dans cette démarche.</p>
+
+        <hr />
+
+        <p><em>Découvrez aussi nos autres articles sur le <a href="/blog/bilan-competences-lormont-5-etapes-reconversion">bilan de compétences</a> et la <a href="/blog/reconversion-professionnelle-comment-reussir-changement-carriere">reconversion professionnelle</a>.</em></p>
       `
     },
     {
@@ -1516,453 +1228,128 @@ export default function BlogArticle() {
       `
     },
     {
-      id: 15,
-      slug: "portefeuille-competences-insertion-reconversion-employabilite",
-      title: "Portefeuille de compétences : un outil stratégique pour l'insertion professionnelle et la reconversion",
-      excerpt: "Dans un contexte de mutations du marché du travail, l'insertion professionnelle, la reconversion professionnelle et le bilan de compétences sont devenus des leviers essentiels pour renforcer l'employabilité et sécuriser les parcours.",
-      image: "/images/hero/bilan-competences.jpg",
-      date: "7 janvier 2026",
-      readTime: "5 min",
+      id: 18,
+      slug: "atipik-rh-espace-emploi-projets-partenariat-mem-wejob-lormont",
+      title: "ATIPIK RH, un espace au service de l'emploi et de vos projets - Partenariat MEM we.job",
+      excerpt: "Découvrez notre partenariat avec le programme MEM – Métier et Emploi porté par we.job. ATIPIK RH met à disposition ses locaux professionnels à Lormont pour l'accompagnement vers l'emploi, la reconversion et la réflexion professionnelle.",
+      image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1200&h=800&fit=crop&q=80",
+      date: "25 janvier 2026",
+      readTime: "4 min",
       author: "Vanessa NOAH EWODO",
-      category: "Bilan de compétences",
-      keywords: "portefeuille compétences, insertion professionnelle, reconversion professionnelle, employabilité, compétences transférables, CIP, bilan compétences, ATIPIK RH",
+      category: "Partenariat",
+      keywords: "location de salle Lormont, espace professionnel Lormont, accompagnement emploi, insertion professionnelle, partenariat we.job, MEM Métier Emploi, centre formation Lormont, salles équipées formation, ateliers professionnels, événements professionnels Bordeaux",
       content: `
-        <p>Dans un contexte de mutations du marché du travail, l'insertion professionnelle, la reconversion professionnelle et le bilan de compétences sont devenus des leviers essentiels pour renforcer l'employabilité et sécuriser les parcours. Chez ATIPIK RH, nous accompagnons les personnes, avec ou sans diplôme, dans la valorisation de leurs compétences et la construction de projets professionnels durables.</p>
+        <p>Nous sommes fiers d'accueillir dans nos locaux à Lormont le programme <strong>MEM – Métier et Emploi</strong>, porté par <strong>we.job</strong>, dédié aux personnes en recherche d'emploi, en reconversion ou en réflexion professionnelle.</p>
 
-        <h2>Le portefeuille de compétences : définition et enjeux</h2>
+        <h2>Un partenariat au service de l'insertion professionnelle</h2>
 
-        <p>Le portefeuille de compétences est un outil stratégique qui permet de recenser, organiser et valoriser l'ensemble des compétences acquises tout au long de la vie professionnelle et personnelle. Il dépasse la simple liste de diplômes pour mettre en lumière les savoir-faire, savoir-être et savoir-agir développés dans différents contextes.</p>
+        <p>Ce partenariat illustre la vocation d'<strong><span style="color: #f97316;">ATIPIK RH</span></strong> : proposer un cadre professionnel, inclusif et adapté à l'accompagnement collectif et individuel. En ouvrant nos portes au programme MEM, nous renforçons notre engagement en faveur de l'insertion professionnelle et de l'accompagnement des parcours de vie.</p>
 
-        <p>Cet outil prend tout son sens dans un marché du travail en constante évolution où les parcours professionnels sont de plus en plus diversifiés. Il permet de valoriser les parcours atypiques, reconnaître l'expérience acquise hors du cadre formel, faciliter l'identification des compétences transférables et sécuriser les transitions professionnelles.</p>
+        <h3>Le programme MEM – Métier et Emploi par we.job</h3>
 
-        <h2>L'accompagnement par les Conseillers en Insertion Professionnelle</h2>
+        <p>Le programme MEM (Métier et Emploi) est un dispositif innovant qui accompagne les personnes dans leur parcours professionnel. Que vous soyez en recherche d'emploi, en reconversion ou simplement en réflexion sur votre avenir professionnel, ce programme vous offre un accompagnement personnalisé et adapté à vos besoins.</p>
 
-        <p>Nos conseillers en insertion professionnelle (CIP) s'appuient sur le portefeuille de compétences pour accompagner des publics aux parcours variés, parfois atypiques, vers l'emploi, la formation ou la reconversion professionnelle.</p>
+        <h2>Un espace professionnel au service de vos projets</h2>
 
-        <p>Chaque personne possède un parcours unique. Nos CIP adoptent une approche sur-mesure qui prend en compte la diversité des parcours (avec ou sans diplôme), les compétences formelles et informelles, les aspirations et motivations, ainsi que le contexte local du marché de l'emploi en Gironde.</p>
+        <p>Notre centre de formation à Lormont met également à disposition des <strong>salles équipées et modulables</strong> pour répondre à tous vos besoins professionnels :</p>
 
-        <p>Notre méthode d'accompagnement structurée permet d'identifier les compétences, les organiser et les catégoriser, les valoriser pour les employeurs, identifier les compétences transférables vers de nouveaux secteurs, et construire un projet professionnel réaliste.</p>
+        <h3>Nos espaces disponibles</h3>
 
-        <h2>Un outil stratégique de reconversion professionnelle</h2>
+        <ul>
+          <li><strong>Formations</strong> : Salles adaptées pour vos sessions de formation professionnelle, avec équipements multimédias et configuration modulable selon vos besoins pédagogiques</li>
+          <li><strong>Ateliers</strong> : Espaces conviviaux pour animer des ateliers collectifs, des workshops ou des sessions de travail collaboratif</li>
+          <li><strong>Réunions</strong> : Bureaux et salles de réunion équipées pour vos rendez-vous professionnels, entretiens ou réunions d'équipe</li>
+          <li><strong>Dispositifs d'insertion</strong> : Locaux adaptés pour l'accueil de programmes d'insertion professionnelle, comme le programme MEM</li>
+          <li><strong>Événements professionnels</strong> : Espaces modulables pour organiser vos séminaires, conférences ou événements professionnels</li>
+        </ul>
 
-        <p>Le portefeuille de compétences est un outil stratégique de reconversion professionnelle, permettant d'identifier les compétences transférables, de sécuriser les transitions et de construire un projet professionnel réaliste et progressif.</p>
+        <h2>Pourquoi choisir <span style="color: #f97316;">ATIPIK RH</span> pour vos événements professionnels ?</h2>
 
-        <p>Lors d'une reconversion, toutes les compétences ne sont pas perdues. Le portefeuille permet de repérer les compétences transversales (communication, gestion de projet, travail en équipe, adaptabilité), valoriser l'expérience acquise même dans un nouveau secteur, et construire un argumentaire solide pour expliquer comment les compétences passées sont pertinentes pour le nouveau projet.</p>
+        <h3>Localisation stratégique à Lormont</h3>
 
-        <p>Une reconversion professionnelle peut être source d'inquiétude. Le portefeuille de compétences offre une vision claire de ses atouts, un plan d'action pour identifier les compétences à développer, une progression réaliste étape par étape, et une base solide sur laquelle s'appuyer en cas de difficultés.</p>
+        <p>Notre centre bénéficie d'une situation privilégiée :</p>
+        <ul>
+          <li>À 10 minutes du centre de Bordeaux</li>
+          <li>Accès facile en transport en commun (tramway ligne A)</li>
+          <li>Parking gratuit disponible</li>
+          <li>Proximité des principaux axes routiers</li>
+        </ul>
 
-        <h2>Renforcer l'employabilité et la confiance en soi</h2>
+        <h3>Équipements modernes et adaptables</h3>
 
-        <p>En rendant visibles les compétences acquises dans et hors du cadre formel, cet outil renforce l'employabilité, la confiance en soi et la capacité à se positionner face aux employeurs et partenaires de l'insertion.</p>
+        <p>Toutes nos salles sont équipées pour répondre aux exigences des professionnels :</p>
+        <ul>
+          <li>Vidéoprojecteurs et écrans</li>
+          <li>Matériel audio-visuel</li>
+          <li>Wi-Fi haut débit</li>
+          <li>Mobilier modulable selon vos besoins</li>
+          <li>Espaces de convivialité (cafétéria, espaces détente)</li>
+        </ul>
 
-        <p>Le portefeuille améliore l'employabilité en offrant une meilleure visibilité des compétences, une argumentation solide avec des exemples concrets et facilite l'adaptation aux offres d'emploi. Pour les personnes sans diplôme ou aux parcours atypiques, il légitime l'expérience, réduit l'auto-censure et renforce l'estime de soi. Avec un portefeuille bien construit, il devient plus facile de rédiger un CV efficace, préparer les entretiens et construire un réseau professionnel.</p>
+        <h3>Un cadre professionnel et inclusif</h3>
 
-        <div style="margin: 2rem 0;">
-          <img 
-            src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop" 
-            alt="Reconversion professionnelle et développement des compétences transférables"
-            style="width: 100%; height: auto; border-radius: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"
-          />
-        </div>
+        <p>Notre approche se base sur les valeurs d'inclusion et d'accompagnement. Que vous organisiez une formation, un atelier ou un événement professionnel, vous bénéficiez d'un environnement bienveillant et adapté à tous les publics.</p>
 
-        <h2>L'accompagnement ATIPIK RH</h2>
+        <h2>Notre engagement pour l'insertion professionnelle</h2>
 
-        <p>Chez ATIPIK RH, nos conseillers en insertion professionnelle accompagnent tous les publics (avec ou sans diplôme, jeunes ou seniors) en utilisant des méthodes éprouvées et une connaissance approfondie du marché de l'emploi en Gironde.</p>
+        <p>Ce partenariat avec le programme MEM we.job s'inscrit dans notre mission globale d'accompagnement des parcours professionnels. En accueillant ce dispositif dans nos locaux, nous contribuons à :</p>
 
-        <p>Le portefeuille de compétences s'intègre naturellement dans nos accompagnements : <a href="/bilan-de-competences">bilan de compétences</a>, <a href="/formation-conseiller-insertion-professionnelle">formation CIP</a>, accompagnement à la reconversion et valorisation de l'expérience.</p>
+        <ul>
+          <li>Faciliter l'accès à l'emploi pour tous</li>
+          <li>Accompagner les personnes en reconversion professionnelle</li>
+          <li>Offrir un cadre professionnel pour la réflexion sur l'avenir professionnel</li>
+          <li>Développer les partenariats locaux au service de l'insertion</li>
+        </ul>
 
-        <p><strong>Prêt à valoriser vos compétences et à construire votre projet professionnel ?</strong> Contactez-nous pour découvrir comment nous pouvons vous accompagner dans cette démarche.</p>
+        <h2>Contactez-nous pour louer nos espaces</h2>
+
+        <p>Vous souhaitez organiser une formation, un atelier, une réunion ou un événement professionnel dans nos locaux à Lormont ? Notre équipe est à votre disposition pour vous accompagner dans l'organisation de votre événement.</p>
+
+        <p>Que vous soyez une entreprise, une association, un organisme de formation ou un professionnel indépendant, nous adaptons nos espaces à vos besoins spécifiques.</p>
 
         <hr />
 
-        <p><em>Découvrez aussi nos autres articles sur le <a href="/blog/bilan-competences-lormont-5-etapes-reconversion">bilan de compétences</a> et la <a href="/blog/reconversion-professionnelle-comment-reussir-changement-carriere">reconversion professionnelle</a>.</em></p>
-      `
-    },
-    {
-      id: 16,
-      slug: "financer-bilan-competences-2026-cpf-france-travail-employeur",
-      title: "Comment financer un bilan de compétences en 2026 ? (CPF, France Travail, employeur)",
-      excerpt: "Guide complet pour financer votre bilan de compétences en 2026 : CPF, financement employeur, France Travail, FAF pour indépendants. Toutes les solutions pour lever le frein financier et investir sereinement dans votre avenir professionnel.",
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=800&fit=crop&q=80",
-      date: "13 janvier 2026",
-      readTime: "12 min",
-      author: "Vanessa NOAH EWODO",
-      category: "Bilan de compétences",
-      keywords: "financement bilan compétences, bilan compétences CPF, financer bilan compétences 2026, France Travail bilan compétences, employeur finance bilan compétences, Aide Individuelle Formation, Fonds Assurance Formation indépendant",
-      content: `
-        <p>Vous ressentez le besoin de changer d'air, de redonner du sens à votre carrière ou de sécuriser un nouveau projet professionnel ? Le bilan de compétences est un outil puissant pour faire le point, identifier vos forces et construire une trajectoire réaliste.</p>
+        <p><strong>#LocationDeSalle #Formation #Insertion #Partenariat #AtipikRH #Lormont</strong></p>
 
-        <p>Mais une question revient presque toujours en premier : <strong>combien ça coûte… et surtout, qui paye ?</strong></p>
-
-        <p>Bonne nouvelle : en 2026, plusieurs dispositifs existent pour financer tout ou partie de votre bilan de compétences, parfois sans avancer de frais. Voici un guide clair pour lever le frein financier et investir sereinement dans votre avenir professionnel.</p>
-
-        <h2>1. Le Compte Personnel de Formation (CPF) : l'autonomie avant tout</h2>
-
-        <p>Le CPF reste le levier principal pour financer un bilan de compétences.</p>
-
-        <p>Chaque actif (salarié, demandeur d'emploi, indépendant) cumule des droits en euros tout au long de sa vie professionnelle.</p>
-
-        <h3>Comment ça fonctionne ?</h3>
-
-        <ul>
-          <li>Vous choisissez librement votre organisme de bilan de compétences</li>
-          <li>Vous mobilisez vos droits directement via la plateforme officielle <a href="https://www.moncompteformation.gouv.fr" target="_blank" rel="noopener noreferrer">Mon Compte Formation</a></li>
-          <li>Le financement est individuel et confidentiel</li>
-        </ul>
-
-        <h3>Ce qu'il faut savoir en 2026</h3>
-
-        <ul>
-          <li>Une participation forfaitaire peut être demandée selon votre situation</li>
-          <li>Cette participation peut parfois être prise en charge ou exonérée (selon les politiques publiques ou accords de branche)</li>
-        </ul>
-
-        <h3>Les avantages</h3>
-
-        <ul>
-          <li>Aucun accord de l'employeur requis si le bilan est réalisé hors temps de travail</li>
-          <li>Démarche simple et rapide</li>
-          <li>Liberté de choix de l'organisme</li>
-        </ul>
-
-        <p><strong>C'est la solution idéale si vous souhaitez avancer de manière discrète et autonome.</strong></p>
-
-        <h2>2. Le financement par l'employeur : un outil de sécurisation des parcours</h2>
-
-        <p>Si votre réflexion s'inscrit dans une évolution interne, une mobilité ou une prévention de l'usure professionnelle, votre employeur peut financer votre bilan.</p>
-
-        <h3>Le cadre</h3>
-
-        <ul>
-          <li>Le bilan de compétences est intégré au Plan de Développement des Compétences</li>
-          <li>L'entreprise prend en charge les frais pédagogiques</li>
-          <li>Le salaire est maintenu si le bilan se déroule sur le temps de travail</li>
-        </ul>
-
-        <h3>Le bon angle à adopter</h3>
-
-        <p>Lors d'un entretien professionnel ou annuel, présentez le bilan comme :</p>
-
-        <ul>
-          <li>Un outil de fidélisation,</li>
-          <li>Un levier de motivation,</li>
-          <li>Ou un moyen de prévenir l'épuisement professionnel et les ruptures de parcours.</li>
-        </ul>
-
-        <p><strong>Bien positionné, le bilan de compétences est un investissement gagnant-gagnant pour le salarié comme pour l'employeur.</strong></p>
-
-        <h2>3. France Travail (ex-Pôle emploi) : un appui pour les demandeurs d'emploi</h2>
-
-        <p>Si vous êtes actuellement en recherche d'emploi, le bilan de compétences peut être un outil structurant pour sécuriser votre retour à l'emploi.</p>
-
-        <h3>Les solutions possibles</h3>
-
-        <ul>
-          <li>Mobilisation de votre CPF</li>
-          <li>Complément de financement via l'Aide Individuelle à la Formation (AIF) si vos droits sont insuffisants</li>
-        </ul>
-
-        <h3>Les conditions</h3>
-
-        <ul>
-          <li>Le bilan doit être validé par votre conseiller France Travail</li>
-          <li>Il doit s'inscrire clairement dans votre projet de retour à l'emploi ou de reconversion</li>
-        </ul>
-
-        <h3>Conseil clé : préparez un argumentaire montrant que le bilan va :</h3>
-
-        <ul>
-          <li>Clarifier votre projet,</li>
-          <li>Raccourcir votre période de chômage,</li>
-          <li>Renforcer votre employabilité.</li>
-        </ul>
-
-        <h2>4. Et pour les indépendants ?</h2>
-
-        <p>Les travailleurs indépendants peuvent mobiliser leur Fonds d'Assurance Formation (FAF) (ex. : AGEFICE, FIF PL, FAFCEA selon l'activité).</p>
-
-        <p>Les modalités varient selon les fonds, mais le bilan de compétences peut être pris en charge partiellement ou totalement, sous conditions.</p>
-
-        <h2>Pourquoi ne pas attendre ?</h2>
-
-        <p>Un bilan de compétences n'est pas une dépense, c'est un investissement à fort impact. En 2026, le marché du travail valorise plus que jamais :</p>
-
-        <ul>
-          <li>L'adaptabilité,</li>
-          <li>La connaissance de ses compétences,</li>
-          <li>Les parcours construits et assumés.</li>
-        </ul>
-
-        <p>Attendre, c'est parfois :</p>
-
-        <ul>
-          <li>Laisser dormir ses droits CPF,</li>
-          <li>Rester bloqué dans une situation inconfortable,</li>
-          <li>Ou subir une transition plutôt que la choisir.</li>
-        </ul>
-
-        <p><strong>Bon à savoir :</strong> un bilan de compétences dure en moyenne 24 heures, réparties sur plusieurs semaines, avec un rythme compatible avec la vie professionnelle et personnelle.</p>
-
-        <h2>Tableau récapitulatif des financements en 2026</h2>
-
-        <div style="overflow-x: auto; margin: 2rem 0;">
-          <table style="width: 100%; border-collapse: collapse; border: 1px solid #ddd;">
-            <thead>
-              <tr style="background-color: #013F63; color: white;">
-                <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Profil</th>
-                <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Dispositif principal</th>
-                <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Accord nécessaire ?</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td style="padding: 12px; border: 1px solid #ddd;">Salarié (démarche personnelle)</td>
-                <td style="padding: 12px; border: 1px solid #ddd;">CPF (hors temps de travail)</td>
-                <td style="padding: 12px; border: 1px solid #ddd;">Non</td>
-              </tr>
-              <tr style="background-color: #f9f9f9;">
-                <td style="padding: 12px; border: 1px solid #ddd;">Salarié (démarche co-construite)</td>
-                <td style="padding: 12px; border: 1px solid #ddd;">Plan de développement des compétences</td>
-                <td style="padding: 12px; border: 1px solid #ddd;">Oui (employeur)</td>
-              </tr>
-              <tr>
-                <td style="padding: 12px; border: 1px solid #ddd;">Demandeur d'emploi</td>
-                <td style="padding: 12px; border: 1px solid #ddd;">CPF + AIF France Travail</td>
-                <td style="padding: 12px; border: 1px solid #ddd;">Oui (conseiller)</td>
-              </tr>
-              <tr style="background-color: #f9f9f9;">
-                <td style="padding: 12px; border: 1px solid #ddd;">Indépendant</td>
-                <td style="padding: 12px; border: 1px solid #ddd;">Fonds d'Assurance Formation</td>
-                <td style="padding: 12px; border: 1px solid #ddd;">Selon critères</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <h2>Prêt·e à faire le point sur votre avenir professionnel ?</h2>
-
-        <p>Le financement ne doit plus être un frein à votre épanouissement ni à votre sécurisation professionnelle. Être accompagné·e dans un bilan de compétences, c'est reprendre la main sur son parcours — avec méthode, humanité et réalisme.</p>
-
-        <p>Chez <a href="/bilan-de-competences">ATIPIK RH</a>, nous vous accompagnons à chaque étape, y compris dans la mobilisation des financements.</p>
-
-        <p><strong>Parce que chaque parcours mérite d'être reconnu, valorisé et choisi.</strong></p>
-
-        <hr />
-
-        <p><em>Découvrez aussi nos autres articles sur le <a href="/blog/portefeuille-competences-insertion-reconversion-employabilite">portefeuille de compétences</a> et le <a href="/blog/financer-bilan-vae-formation-atipik-rh">financement des formations</a>.</em></p>
-      `
-    },
-    {
-      id: 17,
-      slug: "devenir-formateur-adultes-sans-etudes-longues-reconversion",
-      title: "Devenir formateur pour adultes sans reprendre des études longues : est-ce vraiment possible ?",
-      excerpt: "Changer de métier sans repartir sur les bancs de l'université est aujourd'hui une aspiration forte. Parmi les reconversions qui attirent de plus en plus de professionnels expérimentés, le métier de formateur pour adultes occupe une place à part.",
-      image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1200&h=800&fit=crop&q=80",
-      date: "20 janvier 2026",
-      readTime: "15 min",
-      author: "Vanessa NOAH EWODO",
-      category: "Formations",
-      keywords: "formateur adultes, formation FPA, reconversion formateur, devenir formateur sans diplôme, formation courte formateur, pédagogie adultes, formateur professionnel adultes, reconversion professionnelle formateur",
-      content: `
-        <p>Changer de métier sans repartir sur les bancs de l'université est aujourd'hui une aspiration forte. Parmi les reconversions qui attirent de plus en plus de professionnels expérimentés, le métier de <strong>formateur pour adultes</strong> occupe une place à part. Transmission, sens, autonomie… mais aussi beaucoup de questions.</p>
-
-        <p>Faut-il un diplôme ? Une formation longue ? Un parcours académique irréprochable ?</p>
-
-        <p><strong>Bonne nouvelle : devenir formateur pour adultes sans études longues est possible, à condition de structurer son projet intelligemment.</strong></p>
-
-        <h2>Pourquoi le métier de formateur pour adultes séduit autant en reconversion</h2>
-
-        <p>Après plusieurs années de carrière, nombreux sont ceux qui ressentent l'envie de transmettre leur expérience plutôt que de continuer à l'appliquer uniquement sur le terrain.</p>
-
-        <p>Le métier de formateur répond à plusieurs aspirations fortes :</p>
-
-        <ul>
-          <li><strong>Donner du sens à son parcours professionnel</strong></li>
-          <li><strong>Valoriser une expertise acquise au fil des années</strong></li>
-          <li><strong>Conserver une certaine liberté</strong> (statut, organisation, missions)</li>
-          <li><strong>Travailler avec des publics variés et engagés</strong></li>
-        </ul>
-
-        <p>Dans de nombreux secteurs – management, ressources humaines, sécurité, numérique, relation client – la demande de formateurs qualifiés dépasse l'offre. L'expérience terrain y est souvent plus recherchée qu'un diplôme académique.</p>
-
-        <h2>Faut-il un diplôme pour devenir formateur pour adultes ?</h2>
-
-        <p>C'est l'une des idées reçues les plus fréquentes.</p>
-
-        <h3>Ce que dit la réalité</h3>
-
-        <p>Il n'existe pas de diplôme obligatoire unique pour exercer comme formateur pour adultes. Ce qui compte avant tout, c'est :</p>
-
-        <ul>
-          <li>votre expertise métier</li>
-          <li>votre capacité à la transmettre</li>
-          <li>votre posture professionnelle face à un public adulte</li>
-        </ul>
-
-        <p>Former des adultes ne consiste pas à "réciter un savoir". Il s'agit d'accompagner, de faire réfléchir, de favoriser l'autonomie et l'apprentissage par l'expérience.</p>
-
-        <h3>Ce que regardent les recruteurs et organismes de formation</h3>
-
-        <p>Dans les faits, les recruteurs et organismes s'intéressent surtout à :</p>
-
-        <ul>
-          <li>votre crédibilité professionnelle</li>
-          <li>votre capacité à structurer un contenu</li>
-          <li>votre aisance relationnelle</li>
-          <li>votre adaptabilité aux différents publics</li>
-        </ul>
-
-        <p>Une formation pédagogique est donc un atout fort, mais elle n'a pas besoin d'être longue ou universitaire.</p>
-
-        <h2>Formation de formateur pour adultes : quelles options sans études longues ?</h2>
-
-        <p>Il existe aujourd'hui des parcours adaptés aux adultes en reconversion.</p>
-
-        <h3>Des formations courtes et ciblées</h3>
-
-        <p>De nombreuses formations permettent d'acquérir rapidement :</p>
-
-        <ul>
-          <li>les bases de la pédagogie pour adultes</li>
-          <li>la posture de formateur</li>
-          <li>les méthodes d'animation</li>
-          <li>l'évaluation des acquis</li>
-        </ul>
-
-        <p>Certaines formations certifiantes, comme celles orientées "formateur professionnel d'adultes", peuvent être suivies sans reprendre des études longues, souvent sur quelques mois, parfois en parallèle d'une activité.</p>
-
-        <h3>Présentiel, distanciel ou hybride</h3>
-
-        <p>Le format dépend de votre situation :</p>
-
-        <ul>
-          <li>le présentiel favorise la mise en pratique</li>
-          <li>le distanciel offre plus de flexibilité</li>
-          <li>l'hybride combine les deux</li>
-        </ul>
-
-        <p>L'essentiel n'est pas le format, mais l'adéquation avec votre projet réel.</p>
-
-        <h2>Avant la formation : pourquoi le bilan de compétences est une étape clé</h2>
-
-        <p>C'est ici que de nombreux projets échouent… par précipitation.</p>
-
-        <p>Se former sans avoir clarifié son projet expose à :</p>
-
-        <ul>
-          <li>un mauvais choix de formation</li>
-          <li>une perte de temps et d'argent</li>
-          <li>une reconversion peu alignée avec ses aspirations</li>
-        </ul>
-
-        <p>Un <a href="/bilan-de-competences">bilan de compétences</a> permet de :</p>
-
-        <ul>
-          <li>identifier vos compétences transférables</li>
-          <li>vérifier la cohérence de votre projet de formateur</li>
-          <li>définir votre positionnement (salarié, indépendant, vacataire)</li>
-          <li>sécuriser votre trajectoire professionnelle</li>
-        </ul>
-
-        <p>Chez Atipik RH, le bilan de compétences n'est pas une formalité. C'est un véritable outil de décision, pensé pour les parcours atypiques et les reconversions durables.</p>
-
-        <div style="margin: 3rem 0; text-align: center;">
-          <a href="/s-inscrire" style="display: inline-block; cursor: pointer; transition: transform 0.3s ease;">
-            <img src="/images/blog/formateur-fpa-cta.jpg" alt="Prêt à vous lancer dans cette aventure professionnelle ? M'inscrire à la formation Formateur Professionnel d'Adultes (FPA)" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(1, 63, 99, 0.3); border: 2px solid #013F63; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'; this.style.boxShadow='0 6px 16px rgba(1, 63, 99, 0.4)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(1, 63, 99, 0.3)';" />
-          </a>
-        </div>
-
-        <h2>Comment financer une formation de formateur pour adultes ?</h2>
-
-        <p>Bonne nouvelle : plusieurs solutions existent.</p>
-
-        <p>Selon votre situation, vous pouvez mobiliser :</p>
-
-        <ul>
-          <li>le CPF</li>
-          <li>des aides via France Travail</li>
-          <li>un financement employeur</li>
-          <li>un autofinancement réfléchi et stratégique</li>
-        </ul>
-
-        <p>Dans de nombreux cas, le bilan de compétences est lui-même finançable, ce qui permet de poser des bases solides avant d'investir dans une formation.</p>
-
-        <h2>Les erreurs fréquentes à éviter quand on veut devenir formateur</h2>
-
-        <p>Certaines erreurs reviennent souvent :</p>
-
-        <ul>
-          <li>penser que l'expertise suffit à former</li>
-          <li>choisir une formation sans projet clair</li>
-          <li>négliger la posture pédagogique</li>
-          <li>sous-estimer le temps nécessaire pour s'installer</li>
-        </ul>
-
-        <p>Devenir formateur est un véritable métier, qui s'apprend et se construit dans la durée.</p>
-
-        <h2>Devenir formateur : salarié, indépendant ou les deux ?</h2>
-
-        <p>Il existe plusieurs voies :</p>
-
-        <ul>
-          <li>formateur salarié (interne ou organisme)</li>
-          <li>formateur vacataire</li>
-          <li>formateur indépendant</li>
-          <li>combinaison de plusieurs statuts</li>
-        </ul>
-
-        <p>Chaque option a ses avantages et ses contraintes. Le bon choix dépend de votre personnalité, de vos objectifs et de votre équilibre de vie souhaité.</p>
-
-        <h2>Êtes-vous fait pour devenir formateur pour adultes ?</h2>
-
-        <p>Posez-vous ces questions :</p>
-
-        <ul>
-          <li>Aimez-vous transmettre et expliquer ?</li>
-          <li>Êtes-vous à l'aise à l'oral ?</li>
-          <li>Savez-vous vous adapter à des publics variés ?</li>
-          <li>Êtes-vous prêt à apprendre en continu ?</li>
-          <li>Acceptez-vous de remettre vos pratiques en question ?</li>
-        </ul>
-
-        <p>Si vous vous reconnaissez dans ces points, le métier de formateur peut devenir une évolution naturelle de votre parcours.</p>
-
-        <h2>Et maintenant, quelle est la prochaine étape ?</h2>
-
-        <p>Vous envisagez de devenir formateur pour adultes, mais vous voulez passer à l'action de façon structurée et sécurisée ? Ne laissez pas votre projet au stade de l'intention.</p>
-
-        <p>Chez Atipik RH, nous accompagnons les futurs formateurs de la réflexion à la concrétisation, grâce à une formation de <strong>Formateur Professionnel d'Adultes (FPA)</strong> pensée pour les parcours en reconversion et les profils expérimentés.</p>
-
-        <p>Cette formation vous permet de :</p>
-
-        <ul>
-          <li>adopter la posture de formateur professionnel</li>
-          <li>acquérir les fondamentaux de la pédagogie pour adultes</li>
-          <li>structurer et animer des formations efficaces</li>
-          <li>transformer votre expérience en véritable compétence transmissible</li>
-        </ul>
-
-        <p>Avant de vous lancer, nous vous aidons à vérifier que cette voie est la bonne pour vous, et à sécuriser votre parcours (positionnement, financement, débouchés).</p>
-
-        <div style="margin: 2rem 0; padding: 1.5rem; background-color: #f8f9fa; border-left: 4px solid #013F63; border-radius: 8px;">
-          <p style="margin-bottom: 1rem;"><strong>Prêt à vous lancer dans cette aventure professionnelle ?</strong></p>
-          <p style="margin-bottom: 1rem;">
-            <a href="/s-inscrire" style="display: inline-block; padding: 12px 24px; background-color: #013F63; color: white; text-decoration: none; border-radius: 8px; font-weight: 600; margin-right: 1rem; transition: background-color 0.3s;">M'inscrire à la formation Formateur Professionnel d'Adultes (FPA)</a>
-          </p>
-          <p style="margin-top: 1rem; margin-bottom: 0;">
-            <strong>Vous avez encore des questions sur votre projet ou sur les financements possibles ?</strong><br/>
-            <a href="/contact" style="display: inline-block; padding: 12px 24px; border: 2px solid #013F63; color: #013F63; text-decoration: none; border-radius: 8px; font-weight: 600; margin-top: 0.5rem; transition: background-color 0.3s;">Échanger avec un conseiller Atipik RH</a>
-          </p>
-        </div>
-
-        <hr />
-
-        <p><em>Découvrez aussi nos autres articles sur la <a href="/blog/formation-conseiller-insertion-professionnelle-lormont">formation CIP</a> et le <a href="/blog/financer-bilan-vae-formation-atipik-rh">financement des formations</a>.</em></p>
+        <p><em>Découvrez aussi nos autres services : <a href="/bilan-de-competences">bilan de compétences</a>, <a href="/vae">VAE</a>, et nos <a href="/formations">formations certifiantes</a>.</em></p>
       `
     }
   ];
 
-  const article = articles.find(a => a.slug === slug);
+  // Fonction pour parser les dates françaises
+  const monthMap = {
+    janvier: 0,
+    fevrier: 1,
+    mars: 2,
+    avril: 3,
+    mai: 4,
+    juin: 5,
+    juillet: 6,
+    aout: 7,
+    septembre: 8,
+    octobre: 9,
+    novembre: 10,
+    decembre: 11
+  };
+
+  const normalizeMonth = (month) =>
+    month
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '');
+
+  const parseDate = (dateStr) => {
+    const [day, month, year] = dateStr.split(' ');
+    const monthIndex = monthMap[normalizeMonth(month)] ?? 0;
+    return new Date(Number(year), monthIndex, Number(day));
+  };
+
+  // Trier les articles par date en ordre décroissant
+  const sortedArticles = [...articles].sort(
+    (a, b) => parseDate(b.date) - parseDate(a.date)
+  );
+
+  const article = sortedArticles.find(a => a.slug === slug);
 
   if (!article) {
     return (
@@ -2092,9 +1479,16 @@ export default function BlogArticle() {
                   </span>
                 </div>
                 
-                <h1 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-6 leading-tight">
-                  {article.title}
-                </h1>
+                <h1 
+                  className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-6 leading-tight"
+                  dangerouslySetInnerHTML={{
+                    __html: article.slug === "atipik-rh-espace-emploi-projets-partenariat-mem-wejob-lormont"
+                      ? article.title
+                          .replace(/ATIPIK RH/g, '<span style="color: #f97316;">ATIPIK RH</span>')
+                          .replace(/Partenariat MEM we\.job/g, '<span style="color: #f97316;">Partenariat MEM we.job</span>')
+                      : article.title
+                  }}
+                />
                 
                 {/* Métadonnées */}
                 <div className="flex items-center gap-6 text-gray-500 mb-8">

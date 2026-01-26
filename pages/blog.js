@@ -14,124 +14,16 @@ export default function Blog() {
     // Articles exemples - pourront être remplacés par une base de données ou CMS plus tard
   const articles = [
     {
-      id: 1,
-      slug: "formation-conseiller-insertion-professionnelle-lormont",
-      title: "Formation de Conseiller en Insertion Professionnelle à Lormont : débouchés et programme",
-      excerpt: "Découvrez notre formation CIP complète, les débouchés professionnels et pourquoi choisir la Gironde pour développer cette expertise.",
-      image: "/images/hero/formations.jpg",
-      date: "15 janvier 2025",
-      readTime: "12 min",
-      author: "Brunilda RAFAEL",
+      id: 17,
+      slug: "devenir-formateur-adultes-sans-etudes-longues-reconversion",
+      title: "Devenir formateur pour adultes sans reprendre des études longues : est-ce vraiment possible ?",
+      excerpt: "Changer de métier sans repartir sur les bancs de l'université est aujourd'hui une aspiration forte. Parmi les reconversions qui attirent de plus en plus de professionnels expérimentés, le métier de formateur pour adultes occupe une place à part.",
+      image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1200&h=800&fit=crop&q=80",
+      date: "20 janvier 2026",
+      readTime: "15 min",
+      author: "Vanessa NOAH EWODO",
       category: "Formations",
-      keywords: "formation CIP, conseiller insertion professionnelle, Lormont, débouchés emploi, programme formation"
-    },
-    {
-      id: 2,
-      slug: "financer-bilan-vae-formation-atipik-rh",
-      title: "Financer votre formation professionnelle avec Atipik RH",
-      excerpt: "Découvrez tous les dispositifs de financement pour vos projets de formation : CPF, France Travail, OPCO, Transitions Pro. La majorité de nos accompagnements sont finançables à 100% grâce à différents dispositifs.",
-      image: "/images/hero/formations.jpg",
-      date: "20 janvier 2025",
-      readTime: "8 min",
-      author: "Vanessa NOAH EWODO",
-      category: "Financement",
-            keywords: "financement formation, CPF, bilan compétences, VAE, France Travail, OPCO, Transitions Pro, AGEFIPH"
-    },
-    {
-      id: 8,
-      slug: "reconversion-professionnelle-comment-reussir-changement-carriere",
-      title: "Reconversion professionnelle : comment réussir son changement de carrière ?",
-      excerpt: "La reconversion professionnelle concerne de plus en plus de Français. Découvrez les étapes clés, les dispositifs d'accompagnement et les conseils pratiques pour mener à bien votre projet de changement de carrière.",
-      image: "/images/hero/bilan-competences.jpg",
-      date: "22 janvier 2025",
-      readTime: "10 min",
-      author: "Vanessa NOAH EWODO",
-      category: "Reconversion",
-      keywords: "reconversion professionnelle, changement carrière, bilan compétences, formation adulte, projet professionnel, transition professionnelle"
-    },
-          {
-        id: 9,
-       slug: "centre-formation-lormont-rive-droite-bordeaux",
-       title: "Centre de formation professionnelle à Lormont : pourquoi choisir la rive droite de Bordeaux ?",
-       excerpt: "Découvrez pourquoi notre centre de formation à Lormont offre tous les avantages d'une proximité avec Bordeaux, tout en bénéficiant des atouts spécifiques de la rive droite.",
-       image: "/images/hero/formations.jpg",
-       date: "10 janvier 2025",
-       readTime: "10 min",
-       author: "Vanessa NOAH EWODO",
-       category: "Formations",
-       keywords: "centre formation Lormont, rive droite Bordeaux, formation professionnelle, avantages géographiques, accessibilité"
-     },
-         {
-       id: 10,
-       slug: "vae-valoriser-experience-obtenir-diplome",
-       title: "VAE : valoriser son expérience pour obtenir un diplôme",
-       excerpt: "La Validation des Acquis de l'Expérience peut vous permettre d'obtenir une certification reconnue.",
-       image: "/images/hero/vae.jpg",
-       date: "5 janvier 2025",
-       readTime: "6 min",
-       author: "Stéphanie BRETON",
-       category: "VAE",
-       keywords: "VAE, validation acquis expérience, diplôme expérience, certification professionnelle"
-     },
-         {
-       id: 11,
-       slug: "bilan-competences-lormont-5-etapes-reconversion",
-       title: "Bilan de compétences à Lormont : 5 étapes pour réussir sa reconversion professionnelle",
-       excerpt: "Découvrez notre méthode en 5 étapes pour construire sereinement votre projet de reconversion grâce au bilan de compétences à Lormont.",
-       image: "/images/hero/bilan-competences.jpg",
-       date: "28 décembre 2024",
-       readTime: "8 min",
-       author: "Vanessa NOAH EWODO",
-       category: "Bilan de compétences",
-       keywords: "bilan compétences Lormont, reconversion professionnelle, 5 étapes, accompagnement carrière"
-     },
-         {
-       id: 12,
-       slug: "soft-skills-competences-difference",
-       title: "Les soft skills : ces compétences qui font la différence",
-       excerpt: "Découvrez pourquoi les soft skills — communication, adaptabilité, intelligence émotionnelle — deviennent essentielles pour booster votre carrière en 2025 et comment les développer.",
-       image: "/images/hero/bilan-competences.jpg",
-       date: "10 juillet 2024",
-       readTime: "8 min",
-       author: "Brunilda RAFAEL",
-       category: "Conseils",
-       keywords: "soft skills, compétences comportementales, compétences transversales, évolution professionnelle"
-     },
-    {
-      id: 13,
-      slug: "preparer-entretien-embauche-conseils-experts",
-      title: "Préparer son entretien d'embauche : nos conseils d'experts",
-      excerpt: "Les techniques et astuces pour réussir ses entretiens et convaincre les recruteurs.",
-      image: "/images/hero/vae.jpg",
-      date: "15 décembre 2024",
-      readTime: "8 min",
-      author: "Brunilda RAFAEL",
-      category: "Recherche d'emploi",
-      keywords: "entretien embauche, conseils recrutement, préparation entretien, techniques recruteurs"
-    },
-    {
-      id: 14,
-      slug: "difficultes-recrutement-pratiques-marche",
-      title: "Et si vos difficultés de recrutement venaient de vos pratiques, pas seulement du marché ?",
-      excerpt: "Les candidatures tardent à arriver, les profils ne correspondent pas et la pénurie de talents semble devenir la seule explication. Et si la solution se trouvait aussi dans vos pratiques de recrutement ?",
-      image: "/images/hero/formations.jpg",
-      date: "23 octobre 2025",
-      readTime: "9 min",
-      author: "Liliana ALMEIDA",
-      category: "Tous",
-      keywords: "recrutement inclusif, pratiques de recrutement, pénurie de talents, diversité, inclusion, vivier de candidats"
-    },
-    {
-      id: 15,
-      slug: "portefeuille-competences-insertion-reconversion-employabilite",
-      title: "Portefeuille de compétences : un outil stratégique pour l'insertion professionnelle et la reconversion",
-      excerpt: "Dans un contexte de mutations du marché du travail, l'insertion professionnelle, la reconversion professionnelle et le bilan de compétences sont devenus des leviers essentiels pour renforcer l'employabilité et sécuriser les parcours.",
-      image: "/images/hero/bilan-competences.jpg",
-      date: "7 janvier 2026",
-      readTime: "5 min",
-      author: "Vanessa NOAH EWODO",
-      category: "Bilan de compétences",
-      keywords: "portefeuille compétences, insertion professionnelle, reconversion professionnelle, employabilité, compétences transférables, CIP, bilan compétences, ATIPIK RH"
+      keywords: "formateur adultes, formation FPA, reconversion formateur, devenir formateur sans diplôme, formation courte formateur, pédagogie adultes, formateur professionnel adultes, reconversion professionnelle formateur"
     },
     {
       id: 16,
@@ -146,16 +38,136 @@ export default function Blog() {
       keywords: "financement bilan compétences, bilan compétences CPF, financer bilan compétences 2026, France Travail bilan compétences, employeur finance bilan compétences, Aide Individuelle Formation, Fonds Assurance Formation indépendant"
     },
     {
-      id: 17,
-      slug: "devenir-formateur-adultes-sans-etudes-longues-reconversion",
-      title: "Devenir formateur pour adultes sans reprendre des études longues : est-ce vraiment possible ?",
-      excerpt: "Changer de métier sans repartir sur les bancs de l'université est aujourd'hui une aspiration forte. Parmi les reconversions qui attirent de plus en plus de professionnels expérimentés, le métier de formateur pour adultes occupe une place à part.",
-      image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1200&h=800&fit=crop&q=80",
-      date: "20 janvier 2026",
-      readTime: "15 min",
+      id: 15,
+      slug: "portefeuille-competences-insertion-reconversion-employabilite",
+      title: "Portefeuille de compétences : un outil stratégique pour l'insertion professionnelle et la reconversion",
+      excerpt: "Dans un contexte de mutations du marché du travail, l'insertion professionnelle, la reconversion professionnelle et le bilan de compétences sont devenus des leviers essentiels pour renforcer l'employabilité et sécuriser les parcours.",
+      image: "/images/hero/bilan-competences.jpg",
+      date: "7 janvier 2026",
+      readTime: "5 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Bilan de compétences",
+      keywords: "portefeuille compétences, insertion professionnelle, reconversion professionnelle, employabilité, compétences transférables, CIP, bilan compétences, ATIPIK RH"
+    },
+    {
+      id: 14,
+      slug: "difficultes-recrutement-pratiques-marche",
+      title: "Et si vos difficultés de recrutement venaient de vos pratiques, pas seulement du marché ?",
+      excerpt: "Les candidatures tardent à arriver, les profils ne correspondent pas et la pénurie de talents semble devenir la seule explication. Et si la solution se trouvait aussi dans vos pratiques de recrutement ?",
+      image: "/images/hero/formations.jpg",
+      date: "23 octobre 2025",
+      readTime: "9 min",
+      author: "Liliana ALMEIDA",
+      category: "Tous",
+      keywords: "recrutement inclusif, pratiques de recrutement, pénurie de talents, diversité, inclusion, vivier de candidats"
+    },
+    {
+      id: 18,
+      slug: "atipik-rh-espace-emploi-projets-partenariat-mem-wejob-lormont",
+      title: "ATIPIK RH, un espace au service de l'emploi et de vos projets - Partenariat MEM we.job",
+      excerpt: "Découvrez notre partenariat avec le programme MEM – Métier et Emploi porté par we.job. ATIPIK RH met à disposition ses locaux professionnels à Lormont pour l'accompagnement vers l'emploi, la reconversion et la réflexion professionnelle.",
+      image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1200&h=800&fit=crop&q=80",
+      date: "25 janvier 2026",
+      readTime: "4 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Partenariat",
+      keywords: "location de salle Lormont, espace professionnel Lormont, accompagnement emploi, insertion professionnelle, partenariat we.job, MEM Métier Emploi, centre formation Lormont, salles équipées formation, ateliers professionnels, événements professionnels Bordeaux"
+    },
+    {
+      id: 8,
+      slug: "reconversion-professionnelle-comment-reussir-changement-carriere",
+      title: "Reconversion professionnelle : comment réussir son changement de carrière ?",
+      excerpt: "La reconversion professionnelle concerne de plus en plus de Français. Découvrez les étapes clés, les dispositifs d'accompagnement et les conseils pratiques pour mener à bien votre projet de changement de carrière.",
+      image: "/images/hero/bilan-competences.jpg",
+      date: "22 janvier 2025",
+      readTime: "10 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Reconversion",
+      keywords: "reconversion professionnelle, changement carrière, bilan compétences, formation adulte, projet professionnel, transition professionnelle"
+    },
+    {
+      id: 2,
+      slug: "financer-bilan-vae-formation-atipik-rh",
+      title: "Financer votre formation professionnelle avec Atipik RH",
+      excerpt: "Découvrez tous les dispositifs de financement pour vos projets de formation : CPF, France Travail, OPCO, Transitions Pro. La majorité de nos accompagnements sont finançables à 100% grâce à différents dispositifs.",
+      image: "/images/hero/formations.jpg",
+      date: "20 janvier 2025",
+      readTime: "8 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Financement",
+      keywords: "financement formation, CPF, bilan compétences, VAE, France Travail, OPCO, Transitions Pro, AGEFIPH"
+    },
+    {
+      id: 1,
+      slug: "formation-conseiller-insertion-professionnelle-lormont",
+      title: "Formation de Conseiller en Insertion Professionnelle à Lormont : débouchés et programme",
+      excerpt: "Découvrez notre formation CIP complète, les débouchés professionnels et pourquoi choisir la Gironde pour développer cette expertise.",
+      image: "/images/hero/formations.jpg",
+      date: "15 janvier 2025",
+      readTime: "12 min",
+      author: "Brunilda RAFAEL",
+      category: "Formations",
+      keywords: "formation CIP, conseiller insertion professionnelle, Lormont, débouchés emploi, programme formation"
+    },
+    {
+      id: 9,
+      slug: "centre-formation-lormont-rive-droite-bordeaux",
+      title: "Centre de formation professionnelle à Lormont : pourquoi choisir la rive droite de Bordeaux ?",
+      excerpt: "Découvrez pourquoi notre centre de formation à Lormont offre tous les avantages d'une proximité avec Bordeaux, tout en bénéficiant des atouts spécifiques de la rive droite.",
+      image: "/images/hero/formations.jpg",
+      date: "10 janvier 2025",
+      readTime: "10 min",
       author: "Vanessa NOAH EWODO",
       category: "Formations",
-      keywords: "formateur adultes, formation FPA, reconversion formateur, devenir formateur sans diplôme, formation courte formateur, pédagogie adultes, formateur professionnel adultes, reconversion professionnelle formateur"
+      keywords: "centre formation Lormont, rive droite Bordeaux, formation professionnelle, avantages géographiques, accessibilité"
+    },
+    {
+      id: 10,
+      slug: "vae-valoriser-experience-obtenir-diplome",
+      title: "VAE : valoriser son expérience pour obtenir un diplôme",
+      excerpt: "La Validation des Acquis de l'Expérience peut vous permettre d'obtenir une certification reconnue.",
+      image: "/images/hero/vae.jpg",
+      date: "5 janvier 2025",
+      readTime: "6 min",
+      author: "Stéphanie BRETON",
+      category: "VAE",
+      keywords: "VAE, validation acquis expérience, diplôme expérience, certification professionnelle"
+    },
+    {
+      id: 11,
+      slug: "bilan-competences-lormont-5-etapes-reconversion",
+      title: "Bilan de compétences à Lormont : 5 étapes pour réussir sa reconversion professionnelle",
+      excerpt: "Découvrez notre méthode en 5 étapes pour construire sereinement votre projet de reconversion grâce au bilan de compétences à Lormont.",
+      image: "/images/hero/bilan-competences.jpg",
+      date: "28 décembre 2024",
+      readTime: "8 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Bilan de compétences",
+      keywords: "bilan compétences Lormont, reconversion professionnelle, 5 étapes, accompagnement carrière"
+    },
+    {
+      id: 13,
+      slug: "preparer-entretien-embauche-conseils-experts",
+      title: "Préparer son entretien d'embauche : nos conseils d'experts",
+      excerpt: "Les techniques et astuces pour réussir ses entretiens et convaincre les recruteurs.",
+      image: "/images/hero/vae.jpg",
+      date: "15 décembre 2024",
+      readTime: "8 min",
+      author: "Brunilda RAFAEL",
+      category: "Recherche d'emploi",
+      keywords: "entretien embauche, conseils recrutement, préparation entretien, techniques recruteurs"
+    },
+    {
+      id: 12,
+      slug: "soft-skills-competences-difference",
+      title: "Les soft skills : ces compétences qui font la différence",
+      excerpt: "Découvrez pourquoi les soft skills — communication, adaptabilité, intelligence émotionnelle — deviennent essentielles pour booster votre carrière en 2025 et comment les développer.",
+      image: "/images/hero/bilan-competences.jpg",
+      date: "10 juillet 2024",
+      readTime: "8 min",
+      author: "Brunilda RAFAEL",
+      category: "Conseils",
+      keywords: "soft skills, compétences comportementales, compétences transversales, évolution professionnelle"
     }
   ];
 
@@ -191,7 +203,7 @@ export default function Blog() {
     (a, b) => parseDate(b.date) - parseDate(a.date)
   );
 
-  const categories = ["Tous", "Formations", "Reconversion", "Financement", "VAE", "Bilan de compétences", "Conseils", "Recherche d'emploi"];
+  const categories = ["Tous", "Formations", "Reconversion", "Financement", "VAE", "Bilan de compétences", "Conseils", "Recherche d'emploi", "Partenariat"];
 
   // Filtrer les articles selon la catégorie sélectionnée
   const filteredArticles = selectedCategory === "Tous" 

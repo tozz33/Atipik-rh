@@ -287,6 +287,39 @@ export default function MentionsLegales() {
                   </div>
                 </div>
 
+                                 {/* 12. Médiation de la consommation */}
+                 <div>
+                  <h2 className="text-2xl font-bold text-[#013F63] mb-6">12. Médiation de la consommation</h2>
+                  <p className="text-gray-700 mb-4">
+                    Conformément aux articles L.616-1 et R.616-1 du Code de la consommation, le client a la possibilité de recourir gratuitement à un médiateur de la consommation en vue de la résolution amiable d'un litige qui l'opposerait à <strong>ATIPIK RH</strong>.
+                  </p>
+                  <p className="text-gray-700 mb-4">
+                    Après avoir adressé une réclamation écrite préalable à <strong>ATIPIK RH</strong> (courrier ou courriel) et en l'absence de réponse satisfaisante dans un délai de deux mois, le client peut saisir le médiateur de la consommation suivant :
+                  </p>
+                  <div className="bg-gray-50 rounded-lg p-6">
+                    <h3 className="text-lg font-semibold text-[#013F63] mb-4 flex items-center gap-2">
+                      <ExternalLink className="w-5 h-5" />
+                      MÉDIATION CONSOMMATION DÉVELOPPEMENT (MED CONSO DEV)
+                    </h3>
+                    <div className="space-y-2 text-gray-700">
+                      <p>Centre d'Affaires Stéphanois – Immeuble l'Horizon</p>
+                      <p>Esplanade de France – 3 rue J. Constant Milleret</p>
+                      <p>42000 Saint-Étienne</p>
+                      <p className="mt-4">
+                        <a 
+                          href="https://www.medconsodev.eu/" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-[#013F63] hover:text-blue-700 underline flex items-center gap-2"
+                        >
+                          https://www.medconsodev.eu/
+                          <ExternalLink className="w-4 h-4" />
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
               </div>
 
 

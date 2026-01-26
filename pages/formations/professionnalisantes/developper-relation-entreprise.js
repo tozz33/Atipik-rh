@@ -247,6 +247,99 @@ export default function DevelopperRelationEntreprise() {
                   {/* Accordéons à droite */}
                   <div className="w-full lg:w-96 flex-shrink-0 space-y-4">
                     
+                    {/* PRÉREQUIS */}
+                    <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+                      <button
+                        onClick={() => toggleSection('prerequis')}
+                        className="w-full p-4 text-left flex items-center justify-between bg-neutral-100 hover:bg-muted-blue-200 transition-colors"
+                      >
+                        <div className="flex items-center gap-3">
+                          <h3 className="text-base font-bold text-[#013F63]">PRÉREQUIS</h3>
+                        </div>
+                        {openSections.prerequis ? (
+                          <ChevronUp className="w-5 h-5 text-neutral-900" />
+                        ) : (
+                          <ChevronDown className="w-5 h-5 text-neutral-900" />
+                        )}
+                      </button>
+                      {openSections.prerequis && (
+                        <div className="p-4 border-t border-muted-blue-200">
+                          <p className="text-[#013F63] text-sm">Avoir de l'expérience dans l'accompagnement social et/ou d'insertion professionnelle</p>
+                        </div>
+                      )}
+                    </div>
+
+                    {/* PUBLIC VISÉ */}
+                    <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+                      <button
+                        onClick={() => toggleSection('public')}
+                        className="w-full p-4 text-left flex items-center justify-between bg-neutral-100 hover:bg-muted-blue-200 transition-colors"
+                      >
+                        <div className="flex items-center gap-3">
+                          <h3 className="text-base font-bold text-[#013F63]">PUBLIC VISÉ</h3>
+                        </div>
+                        {openSections.public ? (
+                          <ChevronUp className="w-5 h-5 text-neutral-900" />
+                        ) : (
+                          <ChevronDown className="w-5 h-5 text-neutral-900" />
+                        )}
+                      </button>
+                      {openSections.public && (
+                        <div className="p-4 border-t border-muted-blue-200">
+                          <p className="text-[#013F63] text-sm">{formation.public}</p>
+                        </div>
+                      )}
+                    </div>
+
+                    {/* MODALITÉS D'ADMISSION */}
+                    <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+                      <button
+                        onClick={() => toggleSection('modalites')}
+                        className="w-full p-4 text-left flex items-center justify-between bg-neutral-100 hover:bg-muted-blue-200 transition-colors"
+                      >
+                        <div className="flex items-center gap-3">
+                          <h3 className="text-base font-bold text-[#013F63]">MODALITÉS D'ADMISSION</h3>
+                        </div>
+                        {openSections.modalites ? (
+                          <ChevronUp className="w-5 h-5 text-neutral-900" />
+                        ) : (
+                          <ChevronDown className="w-5 h-5 text-neutral-900" />
+                        )}
+                      </button>
+                      {openSections.modalites && (
+                        <div className="p-4 border-t border-muted-blue-200">
+                          <p className="text-[#013F63] text-sm">
+                            Nous sommes à votre disposition, par téléphone ou par mail, afin d'analyser et d'évaluer vos besoins.<br/>
+                            Dans le cadre de nos actions de formation, un programme est construit, personnalisé et élaboré, en cohérence avec vos objectifs et les spécificités de votre structure.
+                          </p>
+                        </div>
+                      )}
+                    </div>
+
+                    {/* MÉTHODES PÉDAGOGIQUES */}
+                    <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+                      <button
+                        onClick={() => toggleSection('methodes')}
+                        className="w-full p-4 text-left flex items-center justify-between bg-neutral-100 hover:bg-muted-blue-200 transition-colors"
+                      >
+                        <div className="flex items-center gap-3">
+                          <h3 className="text-base font-bold text-[#013F63]">MÉTHODES PÉDAGOGIQUES</h3>
+                        </div>
+                        {openSections.methodes ? (
+                          <ChevronUp className="w-5 h-5 text-neutral-900" />
+                        ) : (
+                          <ChevronDown className="w-5 h-5 text-neutral-900" />
+                        )}
+                      </button>
+                      {openSections.methodes && (
+                        <div className="p-4 border-t border-muted-blue-200">
+                          <p className="text-[#013F63] text-sm">
+                            Alternance théorie/pratique, jeux de rôles, études de cas
+                          </p>
+                        </div>
+                      )}
+                    </div>
+
                     {/* OBJECTIFS PÉDAGOGIQUES */}
                     <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                       <button
@@ -276,70 +369,73 @@ export default function DevelopperRelationEntreprise() {
                       )}
                     </div>
 
-                    {/* PUBLIC VISÉ */}
+                    {/* DÉROULEMENT DE LA FORMATION */}
                     <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                       <button
-                        onClick={() => toggleSection('public')}
+                        onClick={() => toggleSection('deroulement')}
                         className="w-full p-4 text-left flex items-center justify-between bg-neutral-100 hover:bg-muted-blue-200 transition-colors"
                       >
                         <div className="flex items-center gap-3">
-                          <h3 className="text-base font-bold text-[#013F63]">PUBLIC VISÉ</h3>
+                          <h3 className="text-base font-bold text-[#013F63]">DÉROULEMENT DE LA FORMATION</h3>
                         </div>
-                        {openSections.public ? (
+                        {openSections.deroulement ? (
                           <ChevronUp className="w-5 h-5 text-neutral-900" />
                         ) : (
                           <ChevronDown className="w-5 h-5 text-neutral-900" />
                         )}
                       </button>
-                      {openSections.public && (
-                        <div className="p-4 border-t border-muted-blue-200">
-                          <p className="text-[#013F63] text-sm">{formation.public}</p>
-                        </div>
-                      )}
-                    </div>
-
-                    {/* PRÉREQUIS */}
-                    <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-                      <button
-                        onClick={() => toggleSection('prerequis')}
-                        className="w-full p-4 text-left flex items-center justify-between bg-neutral-100 hover:bg-muted-blue-200 transition-colors"
-                      >
-                        <div className="flex items-center gap-3">
-                          <h3 className="text-base font-bold text-[#013F63]">PRÉREQUIS</h3>
-                        </div>
-                        {openSections.prerequis ? (
-                          <ChevronUp className="w-5 h-5 text-neutral-900" />
-                        ) : (
-                          <ChevronDown className="w-5 h-5 text-neutral-900" />
-                        )}
-                      </button>
-                      {openSections.prerequis && (
-                        <div className="p-4 border-t border-muted-blue-200">
-                          <p className="text-[#013F63] text-sm">Avoir de l'expérience dans l'accompagnement social et/ou d'insertion professionnelle</p>
-                        </div>
-                      )}
-                    </div>
-
-                    {/* MODALITÉS D'ADMISSION */}
-                    <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-                      <button
-                        onClick={() => toggleSection('modalites')}
-                        className="w-full p-4 text-left flex items-center justify-between bg-neutral-100 hover:bg-muted-blue-200 transition-colors"
-                      >
-                        <div className="flex items-center gap-3">
-                          <h3 className="text-base font-bold text-[#013F63]">MODALITÉS D'ADMISSION</h3>
-                        </div>
-                        {openSections.modalites ? (
-                          <ChevronUp className="w-5 h-5 text-neutral-900" />
-                        ) : (
-                          <ChevronDown className="w-5 h-5 text-neutral-900" />
-                        )}
-                      </button>
-                      {openSections.modalites && (
+                      {openSections.deroulement && (
                         <div className="p-4 border-t border-muted-blue-200">
                           <p className="text-[#013F63] text-sm">
-                            Nous sommes à votre disposition, par téléphone ou par mail, afin d'analyser et d'évaluer vos besoins.<br/>
-                            Dans le cadre de nos actions de formation, un programme est construit, personnalisé et élaboré, en cohérence avec vos objectifs et les spécificités de votre structure.
+                            Formation sur 3 jours (21h) : 2 jours en présentiel et 1 jour en distanciel
+                          </p>
+                        </div>
+                      )}
+                    </div>
+
+                    {/* RÉSULTATS ATTENDUS */}
+                    <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+                      <button
+                        onClick={() => toggleSection('resultats')}
+                        className="w-full p-4 text-left flex items-center justify-between bg-neutral-100 hover:bg-muted-blue-200 transition-colors"
+                      >
+                        <div className="flex items-center gap-3">
+                          <h3 className="text-base font-bold text-[#013F63]">RÉSULTATS ATTENDUS</h3>
+                        </div>
+                        {openSections.resultats ? (
+                          <ChevronUp className="w-5 h-5 text-neutral-900" />
+                        ) : (
+                          <ChevronDown className="w-5 h-5 text-neutral-900" />
+                        )}
+                      </button>
+                      {openSections.resultats && (
+                        <div className="p-4 border-t border-muted-blue-200">
+                          <p className="text-[#013F63] text-sm">
+                            À l'issue de la formation, vous serez capable de comprendre le fonctionnement des entreprises, construire une relation efficace et coopérer durablement avec les employeurs.
+                          </p>
+                        </div>
+                      )}
+                    </div>
+
+                    {/* MODALITÉS D'ÉVALUATION */}
+                    <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+                      <button
+                        onClick={() => toggleSection('evaluation')}
+                        className="w-full p-4 text-left flex items-center justify-between bg-neutral-100 hover:bg-muted-blue-200 transition-colors"
+                      >
+                        <div className="flex items-center gap-3">
+                          <h3 className="text-base font-bold text-[#013F63]">MODALITÉS D'ÉVALUATION</h3>
+                        </div>
+                        {openSections.evaluation ? (
+                          <ChevronUp className="w-5 h-5 text-neutral-900" />
+                        ) : (
+                          <ChevronDown className="w-5 h-5 text-neutral-900" />
+                        )}
+                      </button>
+                      {openSections.evaluation && (
+                        <div className="p-4 border-t border-muted-blue-200">
+                          <p className="text-[#013F63] text-sm">
+                            Évaluation continue tout au long de la formation et remise d'une attestation de formation à l'issue du parcours.
                           </p>
                         </div>
                       )}

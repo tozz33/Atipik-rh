@@ -190,6 +190,26 @@ export default function CGV() {
                 {/* 10. Litiges */}
                 <div>
                   <h2 className="text-2xl font-bold text-[#013F63] mb-6">10. Litiges</h2>
+                  
+                  <h3 className="text-lg font-semibold text-[#013F63] mb-4">Médiation de la consommation</h3>
+                  
+                  <p className="text-gray-700 mb-4">
+                    Conformément aux articles L.616-1 et R.616-1 du Code de la consommation, le client a la possibilité de recourir gratuitement à un médiateur de la consommation en vue de la résolution amiable d'un litige qui l'opposerait à ATIPIK RH.
+                  </p>
+                  
+                  <p className="text-gray-700 mb-4">
+                    Après avoir adressé une réclamation écrite préalable à ATIPIK RH (courrier ou courriel) et en l'absence de réponse satisfaisante dans un délai de deux mois, le client peut saisir le médiateur de la consommation suivant :
+                  </p>
+                  
+                  <div className="bg-gray-50 rounded-lg p-6 mb-6">
+                    <p className="text-gray-700 font-semibold mb-2">MÉDIATION CONSOMMATION DÉVELOPPEMENT (MED CONSO DEV)</p>
+                    <p className="text-gray-700">
+                      Centre d'Affaires Stéphanois – Immeuble l'Horizon<br />
+                      Esplanade de France – 3 rue J. Constant Milleret<br />
+                      42000 Saint-Étienne
+                    </p>
+                  </div>
+                  
                   <ul className="list-disc pl-6 text-gray-700 space-y-2">
                     <li>Tout litige relatif à l'exécution d'une convention sera, dans un premier temps, réglé à l'amiable.</li>
                     <li>À défaut, les tribunaux compétents de <strong>Bordeaux</strong> seront seuls compétents.</li>
