@@ -1652,12 +1652,12 @@ export default function FormationCIP() {
                     <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 text-center">
                       <div className="bg-orange-100 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4">
                         <h3 className="text-2xl font-bold mb-2 text-orange-500">Prochaine session</h3>
-                        <p className="text-orange-600">Du 21 septembre 2026 au 13 avril 2027</p>
+                        <p className="text-orange-600">Du 21 septembre 2026 au 23 avril 2027</p>
                       </div>
                       
                       <div className="mb-4">
                         <p className="text-lg font-bold text-[#013F63]">Ouverture des candidatures</p>
-                        <p className="text-2xl font-bold text-orange-500 mt-2">30 février 2026</p>
+                        <p className="text-2xl font-bold text-orange-500 mt-2">03 février 2026</p>
                       </div>
                     </div>
                   </div>
