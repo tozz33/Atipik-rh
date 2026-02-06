@@ -13,6 +13,317 @@ export default function BlogArticle() {
   // Articles data avec slugs SEO-optimisés
   const articles = [
     {
+      id: 20,
+      slug: "valoriser-competences-cv-parcours-atypique",
+      title: "Comment valoriser ses compétences sur un CV quand on a un parcours atypique",
+      excerpt: "Parcours atypique ? Apprenez à transformer vos expériences variées en atout sur votre CV. Conseils concrets pour convaincre les recruteurs.",
+      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=800&fit=crop&q=80",
+      date: "6 février 2026",
+      readTime: "10 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Conseils",
+      keywords: "CV parcours atypique, valoriser compétences CV, CV par compétences, parcours professionnel atypique, CV reconversion, compétences transférables, rédaction CV, conseils CV, recherche emploi parcours atypique, bilan de compétences",
+      content: `
+        <p>Vous avez changé plusieurs fois de métier, alterné salariat et indépendance, connu des pauses ou des virages professionnels&nbsp;? Vous n'êtes pas seul. Les parcours dits «&nbsp;atypiques&nbsp;» sont de plus en plus fréquents. Pourtant, beaucoup de candidats doutent&nbsp;: comment rassurer un recruteur quand son CV ne suit pas un chemin linéaire&nbsp;?</p>
+
+        <p>Bonne nouvelle&nbsp;: un parcours atypique peut devenir un véritable levier de différenciation, à condition de savoir le présenter. Voici comment mettre en valeur vos compétences, raconter votre histoire et transformer vos expériences en avantage concurrentiel.</p>
+
+        <h2>1. Comprendre ce que recherchent vraiment les recruteurs</h2>
+
+        <p>Contrairement aux idées reçues, les recruteurs ne cherchent pas uniquement des CV parfaits. Ils veulent surtout&nbsp;:</p>
+
+        <ul>
+          <li><strong>Des compétences opérationnelles</strong></li>
+          <li><strong>Une capacité d'adaptation</strong></li>
+          <li><strong>De la cohérence dans le parcours</strong></li>
+          <li><strong>Un potentiel d'évolution</strong></li>
+        </ul>
+
+        <p>Un parcours atypique peut répondre à ces attentes, s'il est lisible et structuré.</p>
+
+        <p>👉 <strong>L'objectif n'est pas de tout expliquer, mais de donner du sens.</strong></p>
+
+        <h2>2. Passer d'un CV chronologique à un CV orienté compétences</h2>
+
+        <p>Quand le parcours est non linéaire, le CV chronologique classique montre vite ses limites.</p>
+
+        <h3>Le bon réflexe&nbsp;: le CV par compétences</h3>
+
+        <p>Structurez votre CV autour de 3 à 5 blocs de compétences clés&nbsp;:</p>
+
+        <ul>
+          <li><strong>Compétences métier</strong></li>
+          <li><strong>Compétences transversales</strong> (organisation, communication, gestion de projet…)</li>
+          <li><strong>Savoir-être professionnels</strong></li>
+        </ul>
+
+        <p>Pour chaque bloc, appuyez-vous sur des réalisations concrètes, issues de différents contextes.</p>
+
+        <p><strong>Exemple&nbsp;:</strong></p>
+
+        <p><em>Pilotage de projets&nbsp;: coordination d'équipes, respect des délais, gestion de priorités (salariat, association, freelance)</em></p>
+
+        <h2>3. Valoriser les expériences hors cadre traditionnel</h2>
+
+        <p>Un parcours atypique, ce n'est pas un CV vide. C'est souvent un CV riche.</p>
+
+        <p>Pensez à intégrer&nbsp;:</p>
+
+        <ul>
+          <li><strong>Activités associatives</strong></li>
+          <li><strong>Missions freelance</strong></li>
+          <li><strong>Projets personnels</strong></li>
+          <li><strong>Reprises d'études courtes</strong></li>
+          <li><strong>Périodes de transition actives</strong></li>
+        </ul>
+
+        <p>Ce qui compte, ce n'est pas le statut, mais ce que vous avez appris et développé.</p>
+
+        <h2>4. Soigner l'accroche et le résumé professionnel</h2>
+
+        <p>Le résumé en haut du CV est stratégique. Il permet de guider la lecture.</p>
+
+        <p>En 4 à 5 lignes, précisez&nbsp;:</p>
+
+        <ul>
+          <li>Votre positionnement actuel</li>
+          <li>Vos compétences clés</li>
+          <li>Votre valeur ajoutée</li>
+          <li>Votre objectif professionnel</li>
+        </ul>
+
+        <p><strong>Exemple&nbsp;:</strong></p>
+
+        <p><em>Professionnel(le) polyvalent(e) avec 10 ans d'expérience dans des environnements variés, je combine expertise opérationnelle et forte capacité d'adaptation. Aujourd'hui, je souhaite mettre mes compétences au service d'un projet aligné avec mes valeurs.</em></p>
+
+        <h2>5. Assumer son parcours… et l'expliquer en entretien</h2>
+
+        <p>Un CV bien construit ouvre la porte à l'entretien. Ensuite, il faut assumer son histoire.</p>
+
+        <p>Préparez un discours clair&nbsp;:</p>
+
+        <ul>
+          <li>Pourquoi ces changements&nbsp;?</li>
+          <li>Ce qu'ils vous ont apporté</li>
+          <li>En quoi ils sont utiles pour le poste visé</li>
+        </ul>
+
+        <p>La cohérence se construit souvent à l'oral. Un recruteur convaincu comprend qu'un parcours atypique est souvent synonyme de maturité professionnelle.</p>
+
+        <h2>6. Se faire accompagner pour prendre du recul</h2>
+
+        <p>Quand on a un parcours riche, il est parfois difficile de prendre du recul seul.</p>
+
+        <p>Un <a href="/bilan-de-competences">bilan de compétences</a> permet de&nbsp;:</p>
+
+        <ul>
+          <li><strong>Identifier ses compétences transférables</strong></li>
+          <li><strong>Clarifier son projet professionnel</strong></li>
+          <li><strong>Construire un CV aligné et impactant</strong></li>
+          <li><strong>Reprendre confiance</strong></li>
+        </ul>
+
+        <p>Chez <strong>Atipik RH</strong>, nous accompagnons justement les profils atypiques à transformer leur singularité en force.</p>
+
+        <h2>Conclusion</h2>
+
+        <p>Un parcours atypique n'est pas un problème à corriger. C'est une histoire à structurer et à valoriser. En mettant l'accent sur vos compétences, vos réalisations et votre cohérence globale, vous donnez aux recruteurs ce qu'ils attendent&nbsp;: une vision claire de votre valeur.</p>
+
+        <h2>Appels à l'action</h2>
+
+        <p>👉 <strong>Vous avez un parcours atypique et vous ne savez pas comment le présenter&nbsp;?</strong></p>
+
+        <ul>
+          <li><a href="/bilan-de-competences">Découvrez notre bilan de compétences personnalisé</a></li>
+          <li><a href="/contact">Contactez Atipik RH pour un premier échange gratuit</a></li>
+        </ul>
+
+        <p style="text-align: center; margin: 2rem 0;">
+          <a href="/contact" style="display: inline-block; padding: 12px 28px; border-radius: 999px; background-color: #013F63; color: #ffffff; text-decoration: none; font-weight: 600; box-shadow: 0 4px 12px rgba(1, 63, 99, 0.3);">
+            Réserver mon échange gratuit
+          </a>
+        </p>
+      `
+    },
+    {
+      id: 19,
+      slug: "bilan-competences-cadres-plus-40-ans-reconversion",
+      title: "Bilan de compétences pour cadres de plus de 40 ans : sécurisez votre reconversion",
+      excerpt: "Cadre de plus de 40 ans ? Clarifiez votre projet professionnel grâce à un bilan de compétences pensé pour les profils expérimentés, afin de sécuriser votre reconversion sans repartir de zéro.",
+      image: "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?w=1200&h=800&fit=crop&q=80",
+      date: "27 janvier 2026",
+      readTime: "5 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Bilan de compétences",
+      keywords: "bilan de compétences cadre, bilan compétences cadres 40 ans, reconversion cadres expérimentés, bilan compétences senior, accompagnement cadres Atipik RH, bilan de compétences Lyon, bilan de compétences à distance",
+      content: `
+        <p>Après 40 ans, la question n’est plus vraiment&nbsp;: <em>«&nbsp;Que puis-je faire&nbsp;?&nbsp;»</em> mais plutôt&nbsp;: <em>«&nbsp;Où ai-je envie d’aller… et comment y aller sans me tromper&nbsp;?&nbsp;»</em></p>
+
+        <p>À ce stade de carrière, les choix professionnels ont un impact plus fort. On ne souhaite plus repartir de zéro, ni avancer à l’aveugle. Le <strong>bilan de compétences pour cadres de plus de 40 ans</strong> s’impose alors comme un outil clé pour faire le point, sécuriser une reconversion et redonner du sens à la suite de son parcours.</p>
+
+        <p>Chez <strong>Atipik RH</strong>, nous accompagnons les profils expérimentés avec une approche humaine, stratégique et concrète, pensée pour les réalités des cadres et managers.</p>
+
+        <h2>Pourquoi faire un bilan de compétences après 40 ans&nbsp;?</h2>
+
+        <p>Après plusieurs années – parfois plusieurs décennies – de vie professionnelle, les enjeux évoluent. Vous avez souvent déjà «&nbsp;réussi&nbsp;» votre carrière aux yeux des autres, mais intérieurement, le questionnement grandit.</p>
+
+        <p>À ce stade, vous êtes souvent confronté à une ou plusieurs de ces situations&nbsp;:</p>
+
+        <ul>
+          <li>vous disposez d’une forte expertise, mais difficile à transférer vers un autre métier&nbsp;;</li>
+          <li>vous ressentez une perte de sens, un essoufflement ou un désalignement avec vos valeurs&nbsp;;</li>
+          <li>vous souhaitez évoluer ou vous reconvertir sans repartir de zéro&nbsp;;</li>
+          <li>vous cherchez un projet réaliste, aligné et durable&nbsp;;</li>
+          <li>vous voulez éviter les erreurs coûteuses en temps, en énergie ou financièrement.</li>
+        </ul>
+
+        <p>Le <strong>bilan de compétences</strong> permet de prendre du recul, d’analyser votre parcours et de faire des choix éclairés, sans précipitation ni improvisation. C’est un espace confidentiel où vous pouvez poser toutes vos questions, y compris celles que vous ne partagez pas encore avec votre entourage ou votre employeur.</p>
+
+        <h2>À qui s’adresse le bilan de compétences cadres +40&nbsp;?</h2>
+
+        <p>Ce bilan de compétences s’adresse particulièrement à vous si vous êtes&nbsp;:</p>
+
+        <ul>
+          <li><strong>cadre, manager ou dirigeant</strong>, en entreprise privée, publique ou associative&nbsp;;</li>
+          <li>en <strong>questionnement professionnel</strong> ou en perte de motivation&nbsp;;</li>
+          <li>en <strong>reconversion</strong> ou en réflexion sur une évolution de carrière (mobilité interne, prise de poste, création d’activité)&nbsp;;</li>
+          <li>après un <strong>burn-out, une rupture professionnelle, un licenciement ou une réorganisation</strong>&nbsp;;</li>
+          <li>à la recherche d’un <strong>nouveau projet professionnel crédible et sécurisant</strong>.</li>
+        </ul>
+
+        <p>Il ne s’agit pas de tout remettre en cause, mais de <strong>repositionner intelligemment votre parcours</strong>, en valorisant ce que vous avez déjà construit.</p>
+
+        <h2>Ce que vous apporte le bilan de compétences Atipik RH</h2>
+
+        <p>Notre accompagnement a été pensé pour les <strong>profils expérimentés</strong> et les parcours déjà riches. Concrètement, le bilan vous permet de&nbsp;:</p>
+
+        <ul>
+          <li><strong>identifier clairement vos compétences transférables</strong>, au-delà de votre intitulé de poste&nbsp;;</li>
+          <li><strong>valoriser votre expérience de cadre</strong> (management, pilotage, stratégie, relationnel)&nbsp;;</li>
+          <li><strong>clarifier un projet professionnel réaliste et cohérent</strong> avec vos envies et vos contraintes&nbsp;;</li>
+          <li><strong>repositionner votre profil</strong> sur le marché de l’emploi ou dans un nouveau secteur&nbsp;;</li>
+          <li><strong>construire un CV, un profil LinkedIn et un discours professionnel alignés</strong> avec votre nouvelle direction&nbsp;;</li>
+          <li><strong>reprendre confiance</strong> dans vos choix et décisions.</li>
+        </ul>
+
+        <p>Notre objectif&nbsp;: <strong>sécuriser votre reconversion sans renier votre parcours</strong>, en transformant votre expérience en véritable atout pour la suite.</p>
+
+        <h2>Une approche réellement adaptée aux cadres expérimentés</h2>
+
+        <p>Chez Atipik RH, nous ne proposons pas de <em>bilan de compétences standardisé</em>. Chaque accompagnement est pensé en fonction de votre parcours, de votre contexte et de vos enjeux spécifiques.</p>
+
+        <p>Notre différence&nbsp;:</p>
+
+        <ul>
+          <li><strong>accompagnement personnalisé et confidentiel</strong>, avec un consultant dédié&nbsp;;</li>
+          <li><strong>expertise des profils cadres et seniors</strong>, en reconversion et en transition de carrière&nbsp;;</li>
+          <li><strong>écoute active, recul et vision stratégique</strong> pour sortir de l’urgence et prendre de la hauteur&nbsp;;</li>
+          <li><strong>outils concrets et décisions actionnables</strong>, pas seulement des tests à remplir&nbsp;;</li>
+          <li><strong>accompagnement possible à distance ou en présentiel</strong>, selon votre organisation et votre localisation.</li>
+        </ul>
+
+        <p>Nous connaissons bien les réalités des cadres&nbsp;: pression des résultats, enjeux politiques, charge mentale, conciliation vie pro/vie perso… Le bilan devient un espace sécurisé pour réfléchir, décider et agir.</p>
+
+        <h2>Comment se déroule le bilan de compétences cadres +40&nbsp;?</h2>
+
+        <p>Le <a href="/bilan-de-competences">bilan de compétences</a> se déroule en trois phases structurées, dans le respect du cadre réglementaire, sur environ 24 heures réparties sur plusieurs semaines.</p>
+
+        <h3>1. Phase d’analyse&nbsp;: clarifier votre situation et vos objectifs</h3>
+
+        <p>Cette première phase permet de poser les bases de l’accompagnement&nbsp;:</p>
+
+        <ul>
+          <li>clarification de votre situation actuelle (poste, contexte, contraintes)&nbsp;;</li>
+          <li>mise en mots de votre niveau de satisfaction, de vos signaux d’alerte et de vos envies&nbsp;;</li>
+          <li>définition de vos objectifs professionnels&nbsp;: évolution, reconversion, repositionnement, préparation d’un départ…&nbsp;;</li>
+          <li>analyse de vos contraintes (familiales, financières, géographiques, de santé) pour rester réaliste.</li>
+        </ul>
+
+        <p>L’idée n’est pas de décider tout de suite de votre futur métier, mais de <strong>poser un cadre clair</strong> à votre réflexion.</p>
+
+        <h3>2. Phase d’exploration&nbsp;: mieux vous connaître et ouvrir le champ des possibles</h3>
+
+        <p>C’est le cœur du bilan. Ensemble, nous allons&nbsp;:</p>
+
+        <ul>
+          <li>identifier vos <strong>compétences, talents et moteurs</strong> (ce que vous savez faire, et ce que vous aimez vraiment faire)&nbsp;;</li>
+          <li>analyser votre <strong>parcours de cadre</strong> (missions, réussites, situations difficiles et apprentissages)&nbsp;;</li>
+          <li>mettre en lumière vos <strong>compétences transférables</strong> vers d’autres métiers ou secteurs&nbsp;;</li>
+          <li>explorer des <strong>pistes professionnelles réalistes et cohérentes</strong> avec vos priorités de vie&nbsp;;</li>
+          <li>croiser vos aspirations avec la <strong>réalité du marché</strong> (tendances emploi, secteurs qui recrutent, besoins des entreprises).</li>
+        </ul>
+
+        <p>Selon votre situation, cette phase peut intégrer des enquêtes métier, des échanges avec des professionnels, voire des mises en situation pour valider certaines pistes.</p>
+
+        <h3>3. Phase de conclusion&nbsp;: sécuriser vos décisions et passer à l’action</h3>
+
+        <p>La dernière phase vise à transformer vos réflexions en <strong>plan d’action concret</strong>&nbsp;:</p>
+
+        <ul>
+          <li>validation d’un <strong>projet professionnel principal</strong> ou de plusieurs scénarios hiérarchisés&nbsp;;</li>
+          <li>définition des <strong>étapes clés</strong> (formation, mobilité interne, création d’activité, changement de secteur, etc.)&nbsp;;</li>
+          <li>élaboration d’un <strong>plan d’action détaillé</strong> avec un calendrier réaliste&nbsp;;</li>
+          <li>remise d’une <strong>synthèse claire, structurée et exploitable</strong>, que vous pouvez réutiliser si besoin (sans être obligés de la partager avec votre employeur).</li>
+        </ul>
+
+        <p>Vous repartez avec une vision claire de la suite, des décisions assumées et un plan pour avancer étape par étape.</p>
+
+        <h2>Financement du bilan de compétences cadres</h2>
+
+        <p>Le bilan de compétences est <strong>éligible au CPF (Compte Personnel de Formation)</strong>. D’autres solutions de financement peuvent également être envisagées selon votre situation professionnelle&nbsp;:</p>
+
+        <ul>
+          <li><strong>CPF</strong> si vous souhaitez engager une démarche personnelle, en toute confidentialité&nbsp;;</li>
+          <li><strong>financement employeur</strong>, lorsqu’il s’inscrit dans une réflexion d’évolution interne ou de prévention des risques professionnels&nbsp;;</li>
+          <li><strong>France Travail</strong>, si vous êtes en recherche d’emploi&nbsp;;</li>
+          <li><strong>fonds dédiés</strong> pour les indépendants, dirigeants non salariés, professions libérales.</li>
+        </ul>
+
+        <p>Atipik RH vous accompagne dans les démarches de financement, de l’analyse à la validation du dossier. Pour aller plus loin, vous pouvez également consulter notre article dédié&nbsp;: <a href="/blog/financer-bilan-competences-2026-cpf-france-travail-employeur">Comment financer un bilan de compétences en 2026&nbsp;?</a></p>
+
+        <h2>Pourquoi choisir Atipik RH pour votre bilan de compétences cadres +40&nbsp;?</h2>
+
+        <p>Choisir Atipik RH, c’est faire le choix&nbsp;:</p>
+
+        <ul>
+          <li>d’une <strong>expertise RH reconnue</strong>, nourrie par l’accompagnement de nombreux cadres et managers&nbsp;;</li>
+          <li>d’un <strong>accompagnement humain et bienveillant</strong>, loin des approches purement administratives&nbsp;;</li>
+          <li>d’une <strong>spécialisation sur les parcours en reconversion et les profils expérimentés</strong>&nbsp;;</li>
+          <li>d’une <strong>approche pragmatique, orientée résultats</strong> et décisions concrètes&nbsp;;</li>
+          <li>d’un <strong>haut niveau de satisfaction des bénéficiaires</strong>, qui recommandent massivement l’accompagnement.</li>
+        </ul>
+
+        <p>Nous connaissons particulièrement bien les enjeux des <strong>bilan de compétences</strong> après 40 ans&nbsp;: besoin de sens, sécurité financière, équilibre de vie, regard des autres, fatigue accumulée, envie de «&nbsp;ne pas se tromper&nbsp;».</p>
+
+        <h2>Passez à l’action&nbsp;: un échange gratuit pour faire le point</h2>
+
+        <p>Vous êtes cadre, vous avez plus de 40 ans, et vous ressentez le besoin de faire le point sur votre avenir professionnel&nbsp;? Ne laissez pas le doute s’installer ou les décisions se prendre à votre place.</p>
+
+        <p><strong>Nous vous proposons un échange gratuit de 30 minutes</strong> avec un consultant Atipik RH pour&nbsp;:</p>
+
+        <ul>
+          <li>analyser votre situation&nbsp;;</li>
+          <li>clarifier vos attentes et vos priorités&nbsp;;</li>
+          <li>identifier les premières options qui s’offrent à vous&nbsp;;</li>
+          <li>voir comment un bilan de compétences peut vous aider concrètement.</li>
+        </ul>
+
+        <p>Ce temps d’échange, sans engagement, permet déjà de remettre un peu de clarté et de reprendre la main sur la suite.</p>
+
+        <p style="text-align: center; margin: 2rem 0;">
+          <a href="/contact" style="display: inline-block; padding: 12px 28px; border-radius: 999px; background-color: #013F63; color: #ffffff; text-decoration: none; font-weight: 600; box-shadow: 0 4px 12px rgba(1, 63, 99, 0.3);">
+            Réserver mon échange gratuit
+          </a>
+        </p>
+
+        <h2>Un accompagnement pour les cadres partout en France</h2>
+
+        <p>De Lyon à Bordeaux et partout en France, Atipik RH accompagne les <strong>cadres et managers</strong> en <strong>bilan de compétences</strong>, en présentiel dans ses lieux d’accueil et à distance.</p>
+
+        <p>Où que vous soyez, vous bénéficiez du même niveau d’écoute, d’exigence et de qualité dans votre accompagnement, pour écrire la suite de votre parcours professionnel avec plus de sens et de sérénité.</p>
+      `
+    },
+    {
       id: 17,
       slug: "devenir-formateur-adultes-sans-etudes-longues-reconversion",
       title: "Devenir formateur pour adultes sans reprendre des études longues : est-ce vraiment possible ?",

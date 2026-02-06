@@ -14,6 +14,30 @@ export default function Blog() {
     // Articles exemples - pourront être remplacés par une base de données ou CMS plus tard
   const articles = [
     {
+      id: 20,
+      slug: "valoriser-competences-cv-parcours-atypique",
+      title: "Comment valoriser ses compétences sur un CV quand on a un parcours atypique",
+      excerpt: "Parcours atypique ? Apprenez à transformer vos expériences variées en atout sur votre CV. Conseils concrets pour convaincre les recruteurs.",
+      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=800&fit=crop&q=80",
+      date: "6 février 2026",
+      readTime: "10 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Conseils",
+      keywords: "CV parcours atypique, valoriser compétences CV, CV par compétences, parcours professionnel atypique, CV reconversion, compétences transférables, rédaction CV, conseils CV, recherche emploi parcours atypique, bilan de compétences"
+    },
+    {
+      id: 19,
+      slug: "bilan-competences-cadres-plus-40-ans-reconversion",
+      title: "Bilan de compétences pour cadres de plus de 40 ans : sécurisez votre reconversion",
+      excerpt: "Cadre de plus de 40 ans ? Clarifiez votre projet professionnel grâce à un bilan de compétences pensé pour les profils expérimentés, afin de sécuriser votre reconversion sans repartir de zéro.",
+      image: "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?w=1200&h=800&fit=crop&q=80",
+      date: "27 janvier 2026",
+      readTime: "5 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Bilan de compétences",
+      keywords: "bilan de compétences cadre, bilan compétences cadres 40 ans, reconversion cadres expérimentés, bilan compétences senior, accompagnement cadres Atipik RH, bilan de compétences Lyon, bilan de compétences à distance"
+    },
+    {
       id: 17,
       slug: "devenir-formateur-adultes-sans-etudes-longues-reconversion",
       title: "Devenir formateur pour adultes sans reprendre des études longues : est-ce vraiment possible ?",
