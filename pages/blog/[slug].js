@@ -6,12 +6,183 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { Calendar, Clock, User, ArrowLeft } from 'lucide-react';
 
-export default function BlogArticle() {
-  const router = useRouter();
-  const { slug } = router.query;
+const BLOG_ARTICLES = [
+    {
+      id: 21,
+      slug: "vae-ou-bilan-competences-que-choisir-selon-parcours",
+      title: "VAE ou bilan de compétences : que choisir selon son parcours ?",
+      excerpt: "VAE ou bilan de compétences : découvrez les différences, les avantages et les critères pour choisir le dispositif le plus adapté à votre parcours professionnel.",
+      image: "/images/hero/bilan-competences.jpg",
+      date: "9 février 2026",
+      readTime: "8 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Bilan de compétences",
+      keywords: "VAE, bilan de compétences, reconversion professionnelle, CPF, validation des acquis",
+      content: `
+        <p>Vous avez de l'expérience, mais vous ne savez pas comment la valoriser ou la transformer en projet professionnel concret&nbsp;? Deux dispositifs reviennent souvent&nbsp;: la <strong>VAE (Validation des Acquis de l'Expérience)</strong> et le <strong>bilan de compétences</strong>.</p>
 
-  // Articles data avec slugs SEO-optimisés
-  const articles = [
+        <p>Souvent confondus, ils répondent pourtant à des objectifs très différents. Le bon choix dépend avant tout de votre parcours, de votre objectif professionnel et de votre niveau de clarté sur la suite de votre carrière.</p>
+
+        <p>Dans cet article, Atipik RH vous aide à y voir clair, simplement et concrètement.</p>
+
+        <h2>VAE et bilan de compétences&nbsp;: deux démarches, deux finalités</h2>
+
+        <h3>La VAE&nbsp;: transformer son expérience en diplôme</h3>
+
+        <p>La VAE permet d'obtenir un diplôme, un titre ou une certification grâce à son expérience professionnelle (salariée, indépendante ou bénévole).</p>
+
+        <p>Elle est faite pour vous si&nbsp;:</p>
+
+        <ul>
+          <li>Vous exercez déjà un métier que vous souhaitez officialiser</li>
+          <li>Vous avez au moins 1 an d'expérience en lien avec la certification visée</li>
+          <li>Vous voulez sécuriser votre parcours ou évoluer (promotion, concours, mobilité)</li>
+        </ul>
+
+        <p>Concrètement, la VAE permet&nbsp;:</p>
+
+        <ul>
+          <li>De faire reconnaître vos compétences par un diplôme reconnu</li>
+          <li>De renforcer votre crédibilité sur le marché du travail</li>
+          <li>D'évoluer sans retourner sur les bancs de l'école</li>
+        </ul>
+
+        <p>⚠️ <strong>Attention</strong>&nbsp;: la VAE demande rigueur, temps et accompagnement pour maximiser les chances de réussite.</p>
+
+        <h3>Le bilan de compétences&nbsp;: clarifier, se projeter, décider</h3>
+
+        <p>Le bilan de compétences est une démarche d'introspection professionnelle guidée. Il aide à faire le point sur vos compétences, vos motivations et vos envies.</p>
+
+        <p>Il est fait pour vous si&nbsp;:</p>
+
+        <ul>
+          <li>Vous vous sentez perdu(e) ou en questionnement professionnel</li>
+          <li>Vous envisagez une reconversion ou une évolution</li>
+          <li>Vous voulez reprendre confiance après une période difficile</li>
+        </ul>
+
+        <p>Concrètement, le bilan permet&nbsp;:</p>
+
+        <ul>
+          <li>D'identifier vos compétences transférables</li>
+          <li>De clarifier un projet réaliste et motivant</li>
+          <li>D'établir un plan d'action concret (formation, VAE, mobilité…)</li>
+        </ul>
+
+        <p><em>Le bilan ne délivre pas de diplôme, mais il éclaire vos décisions.</em></p>
+
+        <h2>VAE ou bilan de compétences&nbsp;: comment faire le bon choix&nbsp;?</h2>
+
+        <p>Posez-vous ces 3 questions clés&nbsp;:</p>
+
+        <p><strong>1. Ai-je un objectif professionnel clair&nbsp;?</strong></p>
+        <ul>
+          <li>Oui, je sais exactement ce que je veux → la VAE est pertinente</li>
+          <li>Non, j'hésite, je doute → le bilan est la meilleure première étape</li>
+        </ul>
+
+        <p><strong>2. Mon expérience correspond-elle à un diplôme précis&nbsp;?</strong></p>
+        <ul>
+          <li>Oui → VAE</li>
+          <li>Pas vraiment / je ne sais pas → bilan de compétences</li>
+        </ul>
+
+        <p><strong>3. Suis-je dans une logique de validation ou de réflexion&nbsp;?</strong></p>
+        <ul>
+          <li>Valider, sécuriser, officialiser → VAE</li>
+          <li>Explorer, comprendre, construire → bilan</li>
+        </ul>
+
+        <p><em>Dans certains parcours, le bilan précède naturellement une VAE.</em></p>
+
+        <h2>Tableau comparatif&nbsp;: VAE vs bilan de compétences</h2>
+
+        <table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0;">
+          <thead>
+            <tr style="background-color: #013F63; color: white;">
+              <th style="border: 1px solid #ddd; padding: 12px; text-align: left;">Critères</th>
+              <th style="border: 1px solid #ddd; padding: 12px; text-align: left;">VAE</th>
+              <th style="border: 1px solid #ddd; padding: 12px; text-align: left;">Bilan de compétences</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="border: 1px solid #ddd; padding: 12px;">Objectif</td>
+              <td style="border: 1px solid #ddd; padding: 12px;">Obtenir un diplôme</td>
+              <td style="border: 1px solid #ddd; padding: 12px;">Clarifier un projet</td>
+            </tr>
+            <tr style="background-color: #f9f9f9;">
+              <td style="border: 1px solid #ddd; padding: 12px;">Résultat</td>
+              <td style="border: 1px solid #ddd; padding: 12px;">Certification reconnue</td>
+              <td style="border: 1px solid #ddd; padding: 12px;">Plan d'action</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #ddd; padding: 12px;">Niveau de clarté requis</td>
+              <td style="border: 1px solid #ddd; padding: 12px;">Élevé</td>
+              <td style="border: 1px solid #ddd; padding: 12px;">Faible à moyen</td>
+            </tr>
+            <tr style="background-color: #f9f9f9;">
+              <td style="border: 1px solid #ddd; padding: 12px;">Durée moyenne</td>
+              <td style="border: 1px solid #ddd; padding: 12px;">6 à 12 mois</td>
+              <td style="border: 1px solid #ddd; padding: 12px;">2 à 3 mois</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #ddd; padding: 12px;">Financement</td>
+              <td style="border: 1px solid #ddd; padding: 12px;">CPF, employeur</td>
+              <td style="border: 1px solid #ddd; padding: 12px;">CPF, employeur</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Financement&nbsp;: bonne nouvelle, les deux sont finançables</h2>
+
+        <p>En 2026, la VAE et le bilan de compétences sont finançables via le CPF.</p>
+
+        <p>Selon votre situation, d'autres options existent&nbsp;:</p>
+
+        <ul>
+          <li>Abondement employeur</li>
+          <li>Aides régionales</li>
+          <li>Accompagnement France Travail</li>
+        </ul>
+
+        <p>Chez Atipik RH, nous vous aidons à choisir le bon dispositif et à mobiliser les bons financements sans stress.</p>
+
+        <h2>L'approche Atipik RH&nbsp;: humaine, personnalisée, efficace</h2>
+
+        <p>Nous savons qu'un parcours professionnel n'est jamais linéaire.</p>
+
+        <p>C'est pourquoi nous proposons&nbsp;:</p>
+
+        <ul>
+          <li>Des bilans de compétences sur mesure, adaptés aux parcours atypiques</li>
+          <li>Un accompagnement VAE structuré et bienveillant</li>
+          <li>Une posture orientée action et confiance en soi</li>
+        </ul>
+
+        <p>Notre objectif&nbsp;: vous aider à avancer avec clarté et sérénité.</p>
+
+        <h2>En résumé&nbsp;: que choisir selon votre situation&nbsp;?</h2>
+
+        <ul>
+          <li>Vous voulez comprendre où vous en êtes → <a href="/bilan-de-competences">bilan de compétences</a></li>
+          <li>Vous voulez faire reconnaître ce que vous savez déjà faire → <a href="/vae">VAE</a></li>
+          <li>Vous hésitez encore → commencez par un échange avec un expert</li>
+        </ul>
+
+        <h2>Passez à l'action</h2>
+
+        <p>Vous ne savez pas quel dispositif est fait pour vous&nbsp;?</p>
+
+        <p><a href="/contact">Contactez Atipik RH</a> pour un diagnostic gratuit et bénéficiez d'un premier échange sans engagement.</p>
+
+        <p style="text-align: center; margin: 2rem 0;">
+          <a href="/contact" style="display: inline-block; padding: 12px 28px; border-radius: 999px; background-color: #013F63; color: #ffffff; text-decoration: none; font-weight: 600; box-shadow: 0 4px 12px rgba(1, 63, 99, 0.3);">
+            Nous contacter
+          </a>
+        </p>
+      `
+    },
     {
       id: 20,
       slug: "valoriser-competences-cv-parcours-atypique",
@@ -1627,6 +1798,11 @@ export default function BlogArticle() {
     }
   ];
 
+export default function BlogArticle({ article: articleProp }) {
+  const router = useRouter();
+  const { slug } = router.query;
+  const articles = BLOG_ARTICLES;
+
   // Fonction pour parser les dates françaises
   const monthMap = {
     janvier: 0,
@@ -1660,7 +1836,7 @@ export default function BlogArticle() {
     (a, b) => parseDate(b.date) - parseDate(a.date)
   );
 
-  const article = sortedArticles.find(a => a.slug === slug);
+  const article = articleProp ?? sortedArticles.find(a => a.slug === slug);
 
   if (!article) {
     return (
@@ -1707,13 +1883,16 @@ export default function BlogArticle() {
     return new Date().toISOString();
   };
 
+  // URL image absolue pour schémas et meta (éviter double préfixe si déjà absolu)
+  const imageUrl = article.image.startsWith('http') ? article.image : `https://atipikrh.fr${article.image}`;
+
   // Schema.org pour le SEO
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": article.title,
     "description": article.excerpt,
-    "image": `https://atipikrh.fr${article.image}`,
+    "image": imageUrl,
     "author": {
       "@type": "Person",
       "name": article.author
@@ -1745,7 +1924,7 @@ export default function BlogArticle() {
         {/* Open Graph pour les réseaux sociaux */}
         <meta property="og:title" content={article.title} />
         <meta property="og:description" content={article.excerpt} />
-        <meta property="og:image" content={`https://atipikrh.fr${article.image}`} />
+        <meta property="og:image" content={imageUrl} />
         <meta property="og:url" content={`https://atipikrh.fr/blog/${article.slug}`} />
         <meta property="og:type" content="article" />
         <meta property="og:site_name" content="Atipik RH" />
@@ -1754,13 +1933,51 @@ export default function BlogArticle() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={article.title} />
         <meta name="twitter:description" content={article.excerpt} />
-        <meta name="twitter:image" content={`https://atipikrh.fr${article.image}`} />
+        <meta name="twitter:image" content={imageUrl} />
         
         {/* Schema.org JSON-LD */}
         <script 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
         />
+        {/* FAQPage pour extraits enrichis et IA (article VAE vs bilan) */}
+        {article.slug === 'vae-ou-bilan-competences-que-choisir-selon-parcours' && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'FAQPage',
+                mainEntity: [
+                  {
+                    '@type': 'Question',
+                    name: 'Ai-je un objectif professionnel clair ?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'Oui, je sais exactement ce que je veux → la VAE est pertinente. Non, j\'hésite, je doute → le bilan de compétences est la meilleure première étape.'
+                    }
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'Mon expérience correspond-elle à un diplôme précis ?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'Oui → VAE. Pas vraiment / je ne sais pas → bilan de compétences.'
+                    }
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'Suis-je dans une logique de validation ou de réflexion ?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'Valider, sécuriser, officialiser → VAE. Explorer, comprendre, construire → bilan de compétences.'
+                    }
+                  }
+                ]
+              })
+            }}
+          />
+        )}
       </Head>
 
       <div className="min-h-screen bg-white">
@@ -1867,4 +2084,15 @@ export default function BlogArticle() {
       </div>
     </>
   );
+}
+
+export async function getStaticPaths() {
+  const paths = BLOG_ARTICLES.map((a) => ({ params: { slug: a.slug } }));
+  return { paths, fallback: false };
+}
+
+export async function getStaticProps({ params }) {
+  const article = BLOG_ARTICLES.find((a) => a.slug === params.slug);
+  if (!article) return { notFound: true };
+  return { props: { article } };
 } 

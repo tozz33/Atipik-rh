@@ -14,6 +14,18 @@ export default function Blog() {
     // Articles exemples - pourront être remplacés par une base de données ou CMS plus tard
   const articles = [
     {
+      id: 21,
+      slug: "vae-ou-bilan-competences-que-choisir-selon-parcours",
+      title: "VAE ou bilan de compétences : que choisir selon son parcours ?",
+      excerpt: "VAE ou bilan de compétences : découvrez les différences, les avantages et les critères pour choisir le dispositif le plus adapté à votre parcours professionnel.",
+      image: "/images/hero/bilan-competences.jpg",
+      date: "9 février 2026",
+      readTime: "8 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Bilan de compétences",
+      keywords: "VAE, bilan de compétences, reconversion professionnelle, CPF, validation des acquis"
+    },
+    {
       id: 20,
       slug: "valoriser-competences-cv-parcours-atypique",
       title: "Comment valoriser ses compétences sur un CV quand on a un parcours atypique",
