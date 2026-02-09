@@ -10,6 +10,7 @@
     "start": "next start",
     "lint": "next lint",
     "dev-stable": "next dev",
+    "dev-webpack": "NEXT_PRIVATE_SKIP_TURBO=1 next dev",
     "schema-test": "echo 'Schema validation placeholder'"
   },
   "dependencies": {
@@ -26,7 +27,7 @@
     "@types/node": "^20.10.5",
     "@types/react": "^18.2.45",
     "@types/react-dom": "^18.2.18",
-    "autoprefixer": "^10.4.16",
+    "autoprefixer": "^10.4.24",
     "eslint": "^9.39.2",
     "eslint-config-next": "^16.1.1",
     "postcss": "^8.4.32",
@@ -34,6 +35,6 @@
     "typescript": "^5.3.3"
   },
   "engines": {
-    "node": "20.x"
+    "node": ">=20.x"
   }
 }

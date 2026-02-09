@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  
+  // Désactiver Turbopack pour éviter les erreurs de permissions
+  experimental: {
+    turbo: false,
+  },
 
   // Redirections pour les anciens liens WordPress
   async redirects() {

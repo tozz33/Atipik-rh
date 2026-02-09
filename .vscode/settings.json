@@ -3,5 +3,6 @@
     "terminal.integrated.commandsToSkipShell": [
         ""
     ],
-    "editor.fontSize": 12
+    "editor.fontSize": 12,
+    "locale": "fr"
 }
