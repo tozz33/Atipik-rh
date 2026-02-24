@@ -14,6 +14,18 @@ export default function Blog() {
     // Articles exemples - pourront être remplacés par une base de données ou CMS plus tard
   const articles = [
     {
+      id: 22,
+      slug: "financer-reconversion-professionnelle-2026-cpf-aides-regionales",
+      title: "Financer sa reconversion en 2026 : CPF, aides régionales et parcours après 40 ans",
+      excerpt: "Salarié en reconversion, demandeur d'emploi ou professionnel de plus de 40 ans : découvrez comment financer une reconversion professionnelle en 2026 grâce au CPF, aux aides régionales et aux autres dispositifs, sans reste à charge.",
+      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=800&fit=crop&q=80",
+      date: "24 février 2026",
+      readTime: "14 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Financement",
+      keywords: "financement formation 2026, utiliser son CPF 2026, aides régionales formation, financer une reconversion, financement bilan de compétences, reconversion professionnelle après 40 ans financement, changer de métier à 45 ans financement, formation adulte en reconversion financement, comment utiliser son CPF sans reste à charge, formation éligible CPF 2026, CPF pour reconversion professionnelle, cumul CPF et aides régionales, CPF abondement employeur comment faire, aide régionale pour formation adulte, financement formation demandeur d'emploi 2026, aides reconversion professionnelle région, dispositif régional métiers en tension"
+    },
+    {
       id: 21,
       slug: "vae-ou-bilan-competences-que-choisir-selon-parcours",
       title: "VAE ou bilan de compétences : que choisir selon son parcours ?",

@@ -22,6 +22,17 @@ npm run dev
 
 Le site sera accessible sur [http://localhost:3000](http://localhost:3000)
 
+### Réactiver Autoprefixer (PostCSS)
+
+Si le build échoue avec une erreur liée à Autoprefixer, celui-ci est désactivé dans `postcss.config.js`. Pour le réactiver plus tard :
+
+1. Arrêter le serveur de dev (Ctrl+C dans le terminal).
+2. Supprimer le dossier `node_modules` (et éventuellement `package-lock.json`).
+3. Exécuter `npm install`.
+4. Dans `postcss.config.js`, décommenter la ligne `autoprefixer: {},`.
+
+Sous Windows, fermer tous les terminaux/IDE utilisant le projet avant de supprimer `node_modules` si la suppression échoue (fichier verrouillé).
+
 ## 🏗️ Build de production
 
 ```bash
