@@ -8,6 +8,122 @@ import { Calendar, Clock, User, ArrowLeft } from 'lucide-react';
 
 const BLOG_ARTICLES = [
     {
+      id: 23,
+      slug: "location-salle-formation-lormont-proche-bordeaux",
+      title: "Louer une salle de formation à Lormont (proche Bordeaux)",
+      excerpt: "Louez une salle de formation à Lormont, proche Bordeaux : espaces modernes et équipés, réservation simple et flexible. Devis personnalisé sous 24 h. Atipik RH vous accompagne.",
+      image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1200&h=800&fit=crop&q=80",
+      date: "23 mars 2026",
+      readTime: "7 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords: "location salle de formation Lormont, salle formation Lormont, louer salle Lormont, salle formation Bordeaux rive droite, location salle formation proche Bordeaux, location salle professionnelle Gironde, centre formation Lormont, réserver salle formation rive droite Bordeaux, Atipik RH",
+      content: `
+        <p><strong>Formez dans un cadre professionnel, accessible et clé en main.</strong> Offrez à vos participants une expérience de formation à la hauteur de votre expertise grâce à notre <strong>location de salle de formation à Lormont</strong>, à quelques minutes de Bordeaux.</p>
+
+        <ul>
+          <li>Salles modernes, équipées et facilement accessibles à Lormont</li>
+          <li>Réservation simple, rapide et flexible</li>
+          <li>Accompagnement humain et personnalisé</li>
+        </ul>
+
+        <p><a href="/contact?sujet=Devis%20location%20salle%20Lormont"><strong>Demandez votre devis en 24 h</strong></a> — <a href="/contact?sujet=R%C3%A9servation%20salle%20formation%20Lormont"><strong>Réservez votre salle dès maintenant</strong></a>.</p>
+
+        <p><em>Visuel recommandé&nbsp;: une salle de formation lumineuse avec des participants en situation renforce la confiance de vos futurs clients.</em></p>
+
+        <h2>Pourquoi choisir une salle de formation professionnelle&nbsp;?</h2>
+
+        <p>Former dans un environnement adapté change radicalement l'impact de vos sessions.</p>
+
+        <ul>
+          <li>Vous gagnez en crédibilité</li>
+          <li>Vos participants sont plus engagés</li>
+          <li>Vous améliorez la qualité de vos formations</li>
+        </ul>
+
+        <p><strong>Un bon cadre ne fait pas tout… mais sans lui, tout devient plus difficile.</strong></p>
+
+        <h2>Une localisation idéale à Lormont (Bordeaux rive droite)</h2>
+
+        <p>Situé à proximité immédiate de Bordeaux, notre espace vous permet de bénéficier d'une <strong>salle formation Bordeaux rive droite</strong> avec les avantages suivants&nbsp;:</p>
+
+        <ul>
+          <li>Accès rapide (rocade, tram, transports en commun)</li>
+          <li>Stationnement facilité</li>
+          <li>Environnement calme et professionnel</li>
+        </ul>
+
+        <p>Le bon équilibre entre accessibilité et confort — idéal si vous cherchez une <strong>location salle formation proche Bordeaux</strong> sans les contraintes du centre-ville.</p>
+
+        <h2>Des salles de formation adaptées à tous vos besoins</h2>
+
+        <h3>Espaces modulables</h3>
+        <p>Formations, ateliers, coaching individuel ou collectif&nbsp;: nous adaptons la configuration à votre format pédagogique.</p>
+
+        <h3>Équipements inclus</h3>
+        <ul>
+          <li>Écran et vidéoprojecteur</li>
+          <li>Wi-Fi haut débit</li>
+          <li>Paperboard</li>
+          <li>Mobilier confortable</li>
+        </ul>
+
+        <h3>Ambiance professionnelle</h3>
+        <p>Lumineux, moderne, conçu pour favoriser l'apprentissage.</p>
+
+        <h2>Une expérience simple et sans contrainte</h2>
+
+        <p>Chez Atipik RH, on simplifie votre organisation&nbsp;:</p>
+
+        <ol>
+          <li>Vous nous contactez</li>
+          <li>Nous identifions votre besoin</li>
+          <li>Vous réservez une salle adaptée</li>
+        </ol>
+
+        <p><strong>Aucun stress logistique.</strong> Vous vous concentrez sur l'essentiel&nbsp;: votre formation.</p>
+
+        <h2>Plus qu'une salle, un partenaire</h2>
+
+        <p>Nous accompagnons les professionnels RH, les formateurs et les entreprises dans leurs projets. Ce qui fait la différence&nbsp;:</p>
+
+        <ul>
+          <li>Un accueil humain et réactif</li>
+          <li>Une grande flexibilité</li>
+          <li>Une vraie compréhension de vos enjeux</li>
+        </ul>
+
+        <p>Vous n'êtes pas seul. Vous êtes accompagné.</p>
+
+        <h2>Ils nous font confiance</h2>
+
+        <blockquote>
+          <p>«&nbsp;Salle parfaitement équipée et très accessible. Mes formations ont gagné en qualité.&nbsp;»</p>
+        </blockquote>
+        <p>— Formateur indépendant</p>
+
+        <blockquote>
+          <p>«&nbsp;Organisation fluide, équipe à l'écoute. Je recommande.&nbsp;»</p>
+        </blockquote>
+        <p>— Responsable RH</p>
+
+        <h2>Passez à l'action</h2>
+
+        <p>Ne laissez pas votre lieu limiter votre impact. <a href="/contact?sujet=Location%20salle%20formation%20Lormont"><strong>Réservez votre salle de formation à Lormont dès aujourd'hui</strong></a> ou <a href="/contact?sujet=Devis%20salle%20formation%20Lormont"><strong>recevez un devis personnalisé en moins de 24 h</strong></a>. <strong>Réponse garantie sous 24 h.</strong></p>
+
+        <h3>Contact rapide</h3>
+        <ul>
+          <li><strong>Téléphone&nbsp;:</strong> <a href="tel:0783019955">07 83 01 99 55</a></li>
+          <li><strong>Email&nbsp;:</strong> <a href="mailto:contact@atipikrh.com">contact@atipikrh.com</a></li>
+          <li><strong>Formulaire&nbsp;:</strong> <a href="/contact?sujet=Location%20salle%20formation%20Lormont">indiquez votre nom, votre besoin, la date souhaitée et le nombre de participants</a> — champs courts pour un échange efficace.</li>
+        </ul>
+
+        <hr />
+
+        <p><em>Autres ressources&nbsp;: <a href="/blog/atipik-rh-espace-emploi-projets-partenariat-mem-wejob-lormont">nos locaux et partenariats à Lormont</a>, <a href="/formations">nos formations</a>, <a href="/contact">contact</a>.</em></p>
+      `
+    },
+    {
       id: 22,
       slug: "financer-reconversion-professionnelle-2026-cpf-aides-regionales",
       title: "Financer sa reconversion en 2026 : CPF, aides régionales et parcours après 40 ans",
@@ -2152,6 +2268,44 @@ export default function BlogArticle({ article: articleProp }) {
             }}
           />
         )}
+        {/* FAQPage — location salle formation Lormont */}
+        {article.slug === 'location-salle-formation-lormont-proche-bordeaux' && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'FAQPage',
+                mainEntity: [
+                  {
+                    '@type': 'Question',
+                    name: 'Proposez-vous la location de salle de formation à Lormont ?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: "Oui. Atipik RH met à disposition des salles de formation à Lormont, proche de Bordeaux (rive droite), pour formateurs, entreprises et professionnels RH, avec réservation flexible et accompagnement personnalisé."
+                    }
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'Quels équipements sont inclus dans la location de salle ?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: "Les salles sont équipées d'un écran et vidéoprojecteur, du Wi-Fi haut débit, de paperboards et d'un mobilier confortable, dans un cadre lumineux et professionnel."
+                    }
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'En combien de temps puis-je recevoir un devis pour louer une salle ?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: "Atipik RH s'engage à répondre sous 24 heures avec un devis personnalisé adapté à votre date, votre nombre de participants et votre format (formation, atelier, coaching)."
+                    }
+                  }
+                ]
+              })
+            }}
+          />
+        )}
       </Head>
 
       <div className="min-h-screen bg-white">
@@ -2159,6 +2313,30 @@ export default function BlogArticle({ article: articleProp }) {
 
         {/* Spacer for fixed header */}
         <div className="h-20"></div>
+
+        {article.slug === 'location-salle-formation-lormont-proche-bordeaux' && (
+          <div className="sticky top-20 z-40 border-b border-orange-100 bg-gradient-to-r from-orange-50 via-white to-orange-50/80 shadow-sm">
+            <div className="container mx-auto px-4 py-3 flex flex-col sm:flex-row sm:flex-wrap sm:items-center sm:justify-between gap-3">
+              <p className="text-sm text-gray-800 font-semibold text-center sm:text-left">
+                Devis sous 24 h · Salle de formation à Lormont
+              </p>
+              <div className="flex flex-wrap justify-center sm:justify-end gap-2">
+                <Link
+                  href="/contact?sujet=Devis%20location%20salle%20Lormont"
+                  className="inline-flex px-4 py-2 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white text-sm font-semibold shadow transition hover:scale-[1.02]"
+                >
+                  Demander un devis
+                </Link>
+                <Link
+                  href="/contact?sujet=R%C3%A9servation%20salle%20formation%20Lormont"
+                  className="inline-flex px-4 py-2 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white text-sm font-semibold transition"
+                >
+                  Réserver une salle
+                </Link>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Navigation */}
         <div className="container mx-auto px-4 py-6">

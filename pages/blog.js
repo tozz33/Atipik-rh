@@ -14,6 +14,18 @@ export default function Blog() {
     // Articles exemples - pourront être remplacés par une base de données ou CMS plus tard
   const articles = [
     {
+      id: 23,
+      slug: "location-salle-formation-lormont-proche-bordeaux",
+      title: "Louer une salle de formation à Lormont (proche Bordeaux)",
+      excerpt: "Louez une salle de formation à Lormont, proche Bordeaux : espaces modernes et équipés, réservation simple et flexible. Devis personnalisé sous 24 h. Atipik RH vous accompagne.",
+      image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1200&h=800&fit=crop&q=80",
+      date: "23 mars 2026",
+      readTime: "7 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords: "location salle de formation Lormont, salle formation Lormont, louer salle Lormont, salle formation Bordeaux rive droite, location salle formation proche Bordeaux, location salle professionnelle Gironde, centre formation Lormont, réserver salle formation rive droite Bordeaux, Atipik RH"
+    },
+    {
       id: 22,
       slug: "financer-reconversion-professionnelle-2026-cpf-aides-regionales",
       title: "Financer sa reconversion en 2026 : CPF, aides régionales et parcours après 40 ans",
