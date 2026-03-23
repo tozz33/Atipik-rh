@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import HoneypotField from '../components/HoneypotField'
+import { getRecaptchaToken } from '../lib/recaptcha'
 
 export default function SInscrire() {
   const [formData, setFormData] = useState({
@@ -127,12 +128,16 @@ export default function SInscrire() {
     setIsSubmitting(true)
 
     try {
-      // Ajouter la modalité aux données envoyées
+      // reCAPTCHA v3 (optionnel, dégradé silencieux si non configuré)
+      const recaptchaToken = await getRecaptchaToken('inscription_form')
+
+      // Ajouter la modalité et le token reCAPTCHA aux données envoyées
       const dataToSend = {
         ...formData,
         modalite: modaliteSelectionnee,
         honeypot,
-        timestamp: formTimestamp
+        timestamp: formTimestamp,
+        recaptchaToken
       }
       
       const response = await fetch('/api/inscription-reunion', {

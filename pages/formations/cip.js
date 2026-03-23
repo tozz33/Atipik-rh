@@ -490,6 +490,19 @@ export default function FormationCIP() {
           <section className="pt-12 pb-8">
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto">
+
+              <div className="mb-14">
+                <div className="max-w-2xl mx-auto rounded-3xl shadow-xl overflow-hidden bg-white border border-gray-100">
+                  <div className="bg-[#FCEFD9] text-center px-6 py-8">
+                    <p className="text-base md:text-xl font-bold text-[#F97316] mb-3">Prochaine session</p>
+                    <p className="text-sm md:text-base text-[#F97316]">Du 21 septembre 2026 au 23 avril 2027</p>
+                  </div>
+                  <div className="text-center px-6 py-8">
+                    <p className="text-base md:text-xl font-bold text-[#013F63] mb-3">Ouverture des candidatures</p>
+                    <p className="text-xl md:text-2xl font-bold text-[#F97316]">03 février 2026</p>
+                  </div>
+                </div>
+              </div>
               
               {/* Titre de section */}
               <div className="text-center mb-8">
@@ -758,9 +771,9 @@ export default function FormationCIP() {
                     {openModules['deroulement'] && (
                       <div className="p-3 border-t border-muted-blue-200">
                         <div className="space-y-3 text-[#013F63] text-sm">
-                          <p>• <strong>Durée : 1102 heures</strong></p>
+                          <p>• <strong>Durée : 948 heures</strong></p>
                           <div className="ml-4 space-y-1">
-                            <p>◦ <strong>714 heures en centre</strong></p>
+                            <p>◦ <strong>560 heures en centre</strong></p>
                             <p>◦ <strong>385 heures en entreprise</strong></p>
                             <p>◦ <strong>3 heures de session de certification</strong></p>
                           </div>
@@ -1451,12 +1464,12 @@ export default function FormationCIP() {
                   
                   {/* Tarif */}
                   <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 text-center">
-                    <div className="bg-orange-100 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4 h-20 flex items-center justify-center">
+                  <div className="bg-orange-100 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4 h-20 flex items-center justify-center">
                       <h3 className="text-2xl font-bold text-orange-500">Tarif</h3>
                     </div>
                     
                     <div className="mb-6">
-                      <div className="text-4xl font-bold text-orange-500 mb-2">10 500<span className="text-2xl">€</span></div>
+                      <div className="text-4xl font-bold text-orange-500 mb-2">9 100<span className="text-2xl">€</span></div>
                       <p className="text-sm text-[#013F63]">TTC</p>
                     </div>
                     
@@ -1620,47 +1633,6 @@ export default function FormationCIP() {
                     J'utilise mon CPF
                     <ArrowRight className="w-4 h-4" />
                   </a>
-                </div>
-
-              </div>
-            </div>
-          </section>
-
-          {/* Prochaines sessions */}
-          <section className="py-16">
-            <div className="container mx-auto px-4">
-              <div className="max-w-5xl mx-auto">
-
-                <div className="flex flex-col md:flex-row gap-6 justify-center mb-12">
-                  {/* Session CIP 2026 - Carte 1 */}
-                  <div className="max-w-md mx-auto">
-                    <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 text-center">
-                      <div className="bg-orange-100 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4">
-                        <h3 className="text-2xl font-bold mb-2 text-orange-500">Prochaine session</h3>
-                        <p className="text-orange-600">Du 9 février au 23 octobre 2026</p>
-                      </div>
-                      
-                      <div className="mb-4">
-                        <p className="text-lg font-bold text-[#013F63]">Ouverture des candidatures</p>
-                        <p className="text-2xl font-bold text-orange-500 mt-2">30 juin 2025</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Session CIP 2026 - Carte 2 (dupliquée) */}
-                  <div className="max-w-md mx-auto">
-                    <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 text-center">
-                      <div className="bg-orange-100 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4">
-                        <h3 className="text-2xl font-bold mb-2 text-orange-500">Prochaine session</h3>
-                        <p className="text-orange-600">Du 21 septembre 2026 au 23 avril 2027</p>
-                      </div>
-                      
-                      <div className="mb-4">
-                        <p className="text-lg font-bold text-[#013F63]">Ouverture des candidatures</p>
-                        <p className="text-2xl font-bold text-orange-500 mt-2">03 février 2026</p>
-                      </div>
-                    </div>
-                  </div>
                 </div>
 
                 {/* Réunions d'information */}

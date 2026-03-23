@@ -746,7 +746,7 @@ export default function FormationCCP3() {
           </section>
 
           {/* Méthodologie d'intervention */}
-          <section className="py-16">
+          <section className="pt-6 pb-16">
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto">
                 
@@ -859,7 +859,7 @@ export default function FormationCCP3() {
           </section>
 
           {/* Le Module CCP3 */}
-          <section className="py-16">
+          <section className="py-8">
             <div className="container mx-auto px-4">
               <div className="max-w-7xl mx-auto">
                 
@@ -1300,7 +1300,7 @@ export default function FormationCCP3() {
           </section>
 
           {/* Section Tarif et Financement */}
-          <section className="py-16">
+          <section className="pt-2 pb-8">
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto">
                 
@@ -1451,7 +1451,7 @@ export default function FormationCCP3() {
                   </div>
                 </div>
 
-                <div className="text-center mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="text-center mt-6 flex flex-col sm:flex-row gap-4 justify-center">
                   <Link href="/financement" className="inline-flex items-center gap-2 px-6 py-3 bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold rounded-full transition-all duration-300 hover:shadow-lg transform hover:scale-105">
                     En savoir plus sur les financements
                     <ArrowRight className="w-4 h-4" />
@@ -1472,23 +1472,19 @@ export default function FormationCCP3() {
           </section>
 
           {/* Prochaines sessions */}
-          <section className="py-16">
+          <section className="pt-2 pb-8">
             <div className="container mx-auto px-4">
               <div className="max-w-5xl mx-auto">
 
-                <div className="max-w-md mx-auto mb-12">
-                  {/* Session CIP 2026 */}
-                  <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 text-center">
-                    <div className="bg-orange-100 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4">
-                      <h3 className="text-2xl font-bold mb-2 text-orange-500">Prochaine session</h3>
-                      <p className="text-orange-600">Du 9 février au 23 octobre 2026</p>
-                    </div>
-                    
-                    <div className="mb-4">
-                      <p className="text-lg font-bold text-[#013F63]">Ouverture des candidatures</p>
-                      <p className="text-2xl font-bold text-orange-500 mt-2">30 juin 2025</p>
-                    </div>
-                  </div>
+                <div className="max-w-md mx-auto mb-6">
+                  <Image
+                    src="/images/formations/prochaine-session-ccp3.png"
+                    alt="Prochaine session CCP3"
+                    width={1200}
+                    height={733}
+                    className="w-full h-auto"
+                    priority
+                  />
                 </div>
 
                 {/* Réunions d'information */}
@@ -1524,7 +1520,7 @@ export default function FormationCCP3() {
           </section>
 
           {/* Section Statistiques Atipik RH */}
-          <section ref={statsRef} className="py-16 overflow-hidden">
+          <section ref={statsRef} className="pt-8 pb-16 overflow-hidden">
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto">
                 

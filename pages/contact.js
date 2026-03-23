@@ -7,6 +7,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import HoneypotField from '../components/HoneypotField'
 import { MapPin, Phone, Mail, Clock, Send, MessageCircle, Calendar, Facebook, Instagram, Linkedin } from 'lucide-react'
+import { getRecaptchaToken } from '../lib/recaptcha'
 
 export default function Contact() {
   const router = useRouter()
@@ -74,6 +75,9 @@ export default function Contact() {
     setIsSubmitting(true)
 
     try {
+      // reCAPTCHA v3 (optionnel, dégradé silencieux si non configuré)
+      const recaptchaToken = await getRecaptchaToken('contact_form')
+
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
@@ -82,7 +86,8 @@ export default function Contact() {
         body: JSON.stringify({
           ...formData,
           honeypot,
-          timestamp: formTimestamp
+          timestamp: formTimestamp,
+          recaptchaToken
         }),
       })
 

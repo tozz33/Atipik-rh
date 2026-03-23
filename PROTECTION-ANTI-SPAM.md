@@ -2,7 +2,8 @@
 
 ## Vue d'ensemble
 
-Ce projet intègre maintenant une protection anti-spam professionnelle multi-couches pour tous les formulaires du site. La solution est légère, sans dépendance externe (pas de CAPTCHA), et offre une excellente protection contre les bots et le spam.
+Ce projet intègre maintenant une protection anti-spam professionnelle multi-couches pour tous les formulaires du site.  
+La base repose sur une solution **maison légère** (honeypot, rate limiting, timing, patterns), à laquelle peuvent s’ajouter **reCAPTCHA v3** et **Akismet** pour les cas à fort risque de spam.
 
 ## Stratégie de Protection
 
@@ -55,39 +56,60 @@ Analyse du contenu pour détecter le spam.
     └── send-quiz-brevo.js       # API quiz (protégée)
 ```
 
+### Flux de traitement (vue simplifiée)
+
+```mermaid
+flowchart TD
+  user[User] --> formPage[FormPage]
+  formPage --> apiRoute[NextApiRoute]
+  apiRoute --> antiSpam[antiSpamMiddleware]
+  antiSpam --> honeypot[Honeypot]
+  antiSpam --> rateLimit[RateLimit]
+  antiSpam --> timing[Timing]
+  antiSpam --> patterns[Patterns]
+  antiSpam --> recaptcha[RecaptchaV3?]
+  antiSpam --> akismet[Akismet?]
+  antiSpam --> businessLogic[BusinessLogic]
+  businessLogic --> mailer[BrevoEmails]
+```
+
 ## Utilisation
 
 ### Côté Frontend (formulaires)
 
+Exemple minimal avec honeypot, timestamp et reCAPTCHA v3 optionnel :
+
 ```javascript
 import { useState, useEffect } from 'react'
 import HoneypotField from '../components/HoneypotField'
+import { getRecaptchaToken } from '../lib/recaptcha'
 
 export default function MonFormulaire() {
   const [honeypot, setHoneypot] = useState('')
   const [formTimestamp, setFormTimestamp] = useState(null)
 
   useEffect(() => {
-    // Enregistrer le timestamp de chargement
     setFormTimestamp(Date.now())
   }, [])
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    
-    // Vérification honeypot côté client
+
     if (honeypot) {
       console.log('Honeypot déclenché')
       return
     }
-    
-    const response = await fetch('/api/mon-endpoint', {
+
+    const recaptchaToken = await getRecaptchaToken('mon_action_formulaire')
+
+    await fetch('/api/mon-endpoint', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         ...formData,
         honeypot,
-        timestamp: formTimestamp
+        timestamp: formTimestamp,
+        recaptchaToken
       })
     })
   }
@@ -112,7 +134,17 @@ export default async function handler(req, res) {
   }
 
   // Vérification anti-spam
-  const spamCheck = antiSpamMiddleware(req)
+  const spamCheck = await antiSpamMiddleware(req, {
+    recaptcha: {
+      enabled: true,
+      action: 'mon_action_formulaire',
+      minScore: 0.5
+    },
+    akismet: {
+      enabled: false,
+      type: 'contact-form'
+    }
+  })
   if (!spamCheck.success) {
     if (spamCheck.statusCode === 429) {
       res.setHeader('Retry-After', spamCheck.retryAfter)
@@ -155,6 +187,34 @@ const RATE_LIMIT_MAX = 3              // 3 soumissions max
 const RATE_LIMIT_WINDOW = 60 * 60 * 1000  // 1 heure
 const MIN_SUBMISSION_TIME = 3000      // 3 secondes minimum
 ```
+
+### CAPTCHA & Akismet (optionnel)
+
+Pour aller plus loin, la protection peut être complétée par :
+
+- **reCAPTCHA v3** (invisible pour l’utilisateur)
+- **Akismet** (détection de spam côté serveur)
+
+#### Variables d’environnement à définir
+
+À configurer dans `.env.local` (et dans le provider de déploiement) **sans jamais les committer** :
+
+- `NEXT_PUBLIC_RECAPTCHA_SITE_KEY` : clé *site* publique reCAPTCHA v3
+- `RECAPTCHA_SECRET_KEY` : clé *secrète* reCAPTCHA v3 (côté serveur uniquement)
+- `AKISMET_API_KEY` : clé API Akismet
+- `AKISMET_SITE_URL` : URL publique du site (par ex. `https://atipikrh.fr`)
+
+#### Activation par endpoint
+
+Chaque route API peut activer ou non ces briques via les options de `antiSpamMiddleware` :
+
+- `recaptcha.enabled` : active la vérification reCAPTCHA v3 pour cette route
+- `recaptcha.action` : nom d’action attendu (ex. `contact_form`, `inscription_form`, `quiz_bilan`)
+- `recaptcha.minScore` : score minimal accepté (ex. `0.5` à `0.7`)
+- `akismet.enabled` : active la vérification Akismet
+- `akismet.type` : type de contenu (ex. `contact-form`, `lead-quiz`, etc.)
+
+Si les variables d’environnement sont absentes ou invalides, la brique correspondante est ignorée et seule la protection maison (honeypot, rate limiting, timing, patterns) reste active.
 
 ### Patterns Spam Spécifiques
 
@@ -201,6 +261,10 @@ Tous les événements anti-spam sont loggés côté serveur :
 [Anti-Spam] Rate limit dépassé - IP: 192.168.1.1, retry après 3600s
 [Anti-Spam] Validation temporelle échouée - IP: 192.168.1.1
 [Anti-Spam] Pattern suspect détecté - IP: 192.168.1.1, raison: spam_keyword
+[Anti-Spam] reCAPTCHA rejeté - IP: 192.168.1.1, raison: low_score
+[Anti-Spam] Akismet a classé la requête comme spam - IP: 192.168.1.1
+[Anti-Spam] reCAPTCHA non configuré (clés manquantes), vérification ignorée
+[Anti-Spam] Akismet non configuré (clé ou URL manquante), vérification ignorée
 [Anti-Spam] Validation réussie - IP: 192.168.1.1, soumissions restantes: 2
 ```
 
@@ -283,6 +347,7 @@ Pour toute question ou problème :
 ---
 
 **Date de mise en place** : 17 Décembre 2025  
-**Version** : 1.0  
+**Dernière mise à jour** : 9 Mars 2026  
+**Version** : 2.0  
 **Maintenance** : Automatique (nettoyage mémoire)
 

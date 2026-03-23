@@ -67,6 +67,13 @@ npm start
 
 Si nécessaire, configurez les variables d'environnement dans le panneau de déploiement :
 - Variables pour les API (Brevo, etc.)
+- Variables de protection anti-spam avancée :
+  - `NEXT_PUBLIC_RECAPTCHA_SITE_KEY`
+  - `RECAPTCHA_SECRET_KEY`
+  - `AKISMET_API_KEY`
+  - `AKISMET_SITE_URL`
+
+Les détails d’implémentation et de configuration se trouvent dans le fichier `PROTECTION-ANTI-SPAM.md`.
 
 ## 📝 Branches
 

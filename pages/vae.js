@@ -544,7 +544,7 @@ export default function VAE() {
                     {openEtapes['public'] && (
                       <div className="p-4 border-t border-muted-blue-200">
                         <p className="text-[#013F63] text-sm leading-relaxed">
-                          Notre accompagnement VAE s'adresse à toute personne souhaitant faire reconnaître son expérience par un diplôme, un titre ou un certificat de qualification professionnelle : salariés du secteur privé, demandeurs d'emploi, travailleurs indépendants, bénévoles, volontaires et proches aidants.
+                          Notre accompagnement VAE est exclusiement dédié aux professionels de l'insertion et de la formation : Quelle que soit votre situation ( salarié, demandeur d'emploi, indépendant ou bénévole), nous vous accompagnons pour faire reconnaître officiellement  vos compétences terrain.
                         </p>
                               </div>
                             )}
@@ -568,10 +568,10 @@ export default function VAE() {
                     {openEtapes['prerequis'] && (
                       <div className="p-4 border-t border-muted-blue-200">
                         <p className="text-[#013F63] text-sm leading-relaxed mb-2">
-                          Justifier d'au moins une expérience significative (salariée, non salariée, bénévole, volontaire ou extra-professionnelle) en lien direct avec la certification visée.
+                          La VAE est ouverte à toute personne justifiant d'une expérience significative en lien  avec le titre visé (CIP ou FPA) , qu'elle soit salariée, indépendante, bénévole ou volontaire.
                         </p>
                         <p className="text-[#013F63] text-sm leading-relaxed">
-                          La VAE est accessible sans exigence de durée minimale d'expérience.
+                          Aucune durée minimale d'expérince n'est requise.
                         </p>
                         <div className="mt-4 bg-muted-blue-200/80 border-l-4 border-accent-500 rounded-lg p-3">
                           <p className="text-[#013F63] text-xs leading-relaxed italic">
@@ -1162,8 +1162,8 @@ export default function VAE() {
                   {/* Niveau 3 et 4 */}
                 <div className="bg-white rounded-3xl p-6 shadow-xl border border-muted-blue-200 text-center">
                   <div className="bg-accent-300 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4">
-                    <h3 className="text-2xl font-bold mb-2 text-accent-500">Niveau 3 et 4</h3>
-                    <p className="text-accent-600">CAP - BEP - BAC - TITRE PROFESSIONNEL</p>
+                    <h3 className="text-2xl font-bold mb-2 text-accent-500">Niveau 5</h3>
+                    <p className="text-white">Titre Professionnel FPA</p>
                     </div>
                     
                   <div className="mb-4">
@@ -1186,24 +1186,24 @@ export default function VAE() {
 
                   {/* Niveau 5 */}
                 <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 text-center">
-                  <div className="bg-blue-100 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4">
-                    <h3 className="text-2xl font-bold mb-2 text-blue-600">Niveau 5</h3>
-                    <p className="text-blue-600">BTS - TITRE PROFESSIONNEL</p>
+                  <div className="bg-muted-blue-200 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4">
+                    <h3 className="text-2xl font-bold mb-2 text-[#013F63]">Niveau 5</h3>
+                    <p className="text-white">Titre Professionnel CIP</p>
                     </div>
                     
                                     <div className="mb-4">
-                    <div className="text-4xl font-bold text-blue-600 mb-2">1 900<span className="text-2xl">€</span></div>
+                    <div className="text-4xl font-bold text-[#013F63] mb-2">2 300<span className="text-2xl">€</span></div>
                     <p className="text-sm text-[#013F63]">(sans frais d'acte formatif, frais de certificateur et frais de jurys)</p>
                         </div>
                   
                   <div className="flex items-center justify-center gap-2 mb-4">
                     <Clock className="w-5 h-5 text-[#013F63]" />
-                    <span className="text-[#013F63] font-medium">Jusqu'à 24 heures de face à face</span>
+                    <span className="text-[#013F63] font-medium">Jusqu'à 30 heures de face à face</span>
                       </div>
                       
                         <Link
                           href="/contact"
-                    className="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full transition-colors"
+                    className="inline-block px-8 py-3 bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold rounded-full transition-colors"
                         >
                           Parlons-en
                         </Link>

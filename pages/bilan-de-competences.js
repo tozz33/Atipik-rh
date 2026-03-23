@@ -175,7 +175,7 @@ export default function BilanCompetences() {
                       <Clock className="w-4 h-4 mt-0.5 flex-shrink-0" />
                       <div>
                         <p className="font-semibold mb-0.5 text-sm">Durée :</p>
-                        <p className="text-neutral-100 text-xs">20 - 24 heures</p>
+                        <p className="text-neutral-100 text-xs">16 - 20 heures</p>
                       </div>
                     </div>
 
@@ -650,7 +650,7 @@ export default function BilanCompetences() {
                   
                   {/* Prix en haut */}
                   <div className="text-center mb-6">
-                    <div className="text-4xl font-bold text-accent-500 mb-2">1 900<span className="text-2xl">€</span></div>
+                    <div className="text-4xl font-bold text-accent-500 mb-2">1 600<span className="text-2xl">€</span></div>
                   </div>
                   
                   {/* Description */}
@@ -668,7 +668,7 @@ export default function BilanCompetences() {
                     <div className="flex items-start gap-2">
                       <div className="w-2 h-2 bg-accent-500 rounded-full mt-2 flex-shrink-0"></div>
                       <span className="text-[#013F63] text-sm">
-                        <strong>20 heures</strong> d'accompagnement dont <strong>16 heures</strong> de face à face ou en visioconférence
+                        <strong>16 heures</strong> de face à face ou en visioconférence
                       </span>
                     </div>
                     <div className="flex items-start gap-2">
@@ -702,7 +702,7 @@ export default function BilanCompetences() {
                   
                   {/* Prix en haut */}
                   <div className="text-center mb-6">
-                    <div className="text-4xl font-bold text-primary-600 mb-2">2 250<span className="text-2xl">€</span></div>
+                    <div className="text-4xl font-bold text-primary-600 mb-2">1 900<span className="text-2xl">€</span></div>
                   </div>
                   
                   {/* Description */}
@@ -720,7 +720,7 @@ export default function BilanCompetences() {
                     <div className="flex items-start gap-2">
                       <div className="w-2 h-2 bg-[#013F63] rounded-full mt-2 flex-shrink-0"></div>
                       <span className="text-[#013F63] text-sm">
-                        <strong>24 heures</strong> d'accompagnement dont <strong>20 heures</strong> de face à face ou en visioconférence
+                        <strong>20 heures</strong> de face à face ou en visioconférence
                       </span>
                     </div>
                     <div className="flex items-start gap-2">

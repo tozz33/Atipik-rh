@@ -5,6 +5,7 @@ import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import HoneypotField from '../../components/HoneypotField'
 import { CheckCircle, ArrowRight, ArrowLeft, Mail, Phone } from 'lucide-react'
+import { getRecaptchaToken } from '../../lib/recaptcha'
 
 export default function QuizBilanCompetences() {
   const [currentStep, setCurrentStep] = useState(0)
@@ -126,6 +127,9 @@ export default function QuizBilanCompetences() {
     }
     
     try {
+      // reCAPTCHA v3 (optionnel, dégradé silencieux si non configuré)
+      const recaptchaToken = await getRecaptchaToken('quiz_bilan')
+
       // Envoyer les données à notre API route côté serveur (plus fiable)
       const response = await fetch('/api/send-quiz-brevo', {
         method: 'POST',
@@ -137,7 +141,8 @@ export default function QuizBilanCompetences() {
           answers,
           questions,
           honeypot,
-          timestamp: formTimestamp
+          timestamp: formTimestamp,
+          recaptchaToken
         }),
       })
 

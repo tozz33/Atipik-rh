@@ -6,7 +6,17 @@ export default async function handler(req, res) {
   }
 
   // Vérification anti-spam
-  const spamCheck = antiSpamMiddleware(req)
+  const spamCheck = await antiSpamMiddleware(req, {
+    recaptcha: {
+      enabled: true,
+      action: 'quiz_bilan',
+      minScore: 0.5
+    },
+    akismet: {
+      enabled: true,
+      type: 'lead-quiz'
+    }
+  })
   if (!spamCheck.success) {
     if (spamCheck.statusCode === 429) {
       res.setHeader('Retry-After', spamCheck.retryAfter)

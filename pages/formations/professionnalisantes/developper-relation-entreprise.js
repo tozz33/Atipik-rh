@@ -544,7 +544,7 @@ export default function DevelopperRelationEntreprise() {
                     
                     <Link
                       href="/contact"
-                      className="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full transition-colors"
+                      className="inline-block px-8 py-3 bg-primary-600 hover:bg-[#012a4a] text-white font-semibold rounded-full transition-colors"
                     >
                       En savoir plus
                     </Link>
@@ -644,7 +644,7 @@ export default function DevelopperRelationEntreprise() {
                   <div className="bg-white rounded-3xl p-8 shadow-xl border border-muted-blue-200 text-center">
                     <div className="bg-accent-300 text-[#013F63] rounded-t-2xl -mx-8 -mt-8 p-4 mb-6">
                       <h3 className="text-2xl font-bold mb-2 text-accent-500">Session d'Hiver</h3>
-                      <p className="text-accent-600">Janvier 2026</p>
+                      <p className="text-white">2026</p>
                     </div>
                     
                     <div className="mb-6">
@@ -652,13 +652,13 @@ export default function DevelopperRelationEntreprise() {
                         <div className="w-auto h-8 bg-muted-blue-200 rounded-full flex items-center justify-center px-3">
                           <span className="text-[#013F63] font-bold text-sm">Présentiel</span>
                         </div>
-                        <span className="text-[#013F63] font-medium">13 au 14 janvier 2026</span>
+                        <span className="text-[#013F63] font-medium">à venir</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <div className="w-auto h-8 bg-muted-blue-200 rounded-full flex items-center justify-center px-3">
                           <span className="text-[#013F63] font-bold text-sm">Distanciel</span>
                         </div>
-                        <span className="text-[#013F63] font-medium">23 janvier 2026</span>
+                        <span className="text-[#013F63] font-medium">à venir</span>
                       </div>
                     </div>
                   </div>
@@ -667,7 +667,7 @@ export default function DevelopperRelationEntreprise() {
                   <div className="bg-white rounded-3xl p-8 shadow-xl border border-muted-blue-200 text-center">
                     <div className="bg-accent-300 text-[#013F63] rounded-t-2xl -mx-8 -mt-8 p-4 mb-6">
                       <h3 className="text-2xl font-bold mb-2 text-accent-500">Session de Printemps</h3>
-                      <p className="text-accent-600">2026</p>
+                      <p className="text-white">2026</p>
                     </div>
                     
                     <div className="mb-6">
