@@ -172,7 +172,7 @@ export default function QuizBilanCompetences() {
         <title>Quiz : Avez-vous besoin d'un bilan de compétences ? | Atipik RH</title>
         <meta name="description" content="Découvrez en 8 questions si un bilan de compétences peut vous aider dans votre évolution professionnelle. Quiz gratuit et personnalisé." />
         <meta name="keywords" content="quiz bilan compétences, test orientation professionnelle, évaluation carrière, Bordeaux" />
-        <link rel="canonical" href="https://atipikrh.fr/bilan-de-competences/quiz" />
+        <link rel="canonical" href="https://www.atipikrh.com/bilan-de-competences/quiz" />
       </Head>
 
       <div className="min-h-screen bg-white">

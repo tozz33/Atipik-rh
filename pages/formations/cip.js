@@ -427,7 +427,7 @@ export default function FormationCIP() {
         <title>Formation CIP - Conseiller en Insertion Professionnelle | Atipik RH</title>
         <meta name="description" content="Formation certifiante Conseiller en Insertion Professionnelle (CIP) niveau 5. Titre professionnel RNCP, financement CPF possible. Durée 1186h dont 385h en entreprise." />
         <meta name="keywords" content="formation CIP, conseiller insertion professionnelle, formation certifiante, CPF, Bordeaux, Lormont" />
-        <link rel="canonical" href="https://atipikrh.fr/formations/cip" />
+        <link rel="canonical" href="https://www.atipikrh.com/formations/cip" />
       </Head>
 
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">

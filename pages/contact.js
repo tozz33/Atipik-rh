@@ -182,7 +182,7 @@ export default function Contact() {
         <title>Contact - Atipik RH | Centre de formation à Lormont</title>
         <meta name="description" content="Contactez Atipik RH pour vos projets de formation, bilan de compétences et VAE à Lormont. Échangeons sur vos objectifs professionnels." />
         <meta name="keywords" content="contact Atipik RH, formation Lormont, rendez-vous bilan compétences, contact VAE Bordeaux" />
-        <link rel="canonical" href="https://atipikrh.fr/contact" />
+        <link rel="canonical" href="https://www.atipikrh.com/contact" />
       </Head>
 
       <div className="min-h-screen bg-white">

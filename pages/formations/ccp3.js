@@ -384,7 +384,7 @@ export default function FormationCCP3() {
         <title>Formation CCP3 - Conseiller en Insertion Professionnelle (C.C.P 3) | Atipik RH</title>
         <meta name="description" content="Formation certifiante CCP3 - Conseiller en Insertion Professionnelle niveau 5. Titre professionnel RNCP, financement CPF possible. Durée 1186h dont 385h en entreprise." />
         <meta name="keywords" content="formation CCP3, conseiller insertion professionnelle, formation certifiante, CPF, Bordeaux, Lormont" />
-        <link rel="canonical" href="https://atipikrh.fr/formations/ccp3" />
+        <link rel="canonical" href="https://www.atipikrh.com/formations/ccp3" />
       </Head>
 
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">

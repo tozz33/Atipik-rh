@@ -114,7 +114,7 @@ export default function DevelopperRelationEntreprise() {
         <title>Formation Développer la relation entreprise | Atipik RH - Lormont Bordeaux</title>
         <meta name="description" content="Formation professionnalisante pour développer la relation entreprise : De l'accompagnement à la relation entreprise. 3 jours, 1365€ / stagiaire. Bordeaux - Lormont." />
         <meta name="keywords" content="formation relation entreprise, accompagnement, CIP, insertion professionnelle, Bordeaux, Lormont, Atipik RH" />
-        <link rel="canonical" href="https://atipikrh.fr/formations/professionnalisantes/developper-relation-entreprise" />
+        <link rel="canonical" href="https://www.atipikrh.com/formations/professionnalisantes/developper-relation-entreprise" />
       </Head>
 
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">

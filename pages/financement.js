@@ -128,7 +128,7 @@ export default function Financement() {
         <title>Financement formations CPF, VAE, bilan de compétences | Atipik RH</title>
         <meta name="description" content="Découvrez toutes les solutions de financement pour vos formations à Bordeaux : CPF, France Travail, employeur selon votre statut professionnel." />
         <meta name="keywords" content="financement formation CPF, Mon Compte Formation, financement bilan compétences, financement VAE, France Travail AIF" />
-        <link rel="canonical" href="https://atipikrh.fr/financement" />
+        <link rel="canonical" href="https://www.atipikrh.com/financement" />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 relative overflow-hidden">

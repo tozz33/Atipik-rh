@@ -270,7 +270,7 @@ export default function FormationsCourtesProfessionnalisantes() {
         <title>Formations Courtes Professionnalisantes | Atipik RH - Lormont Bordeaux</title>
         <meta name="description" content="Formations courtes professionnalisantes pour structures d'accompagnement, acteurs insertion et entreprises. Relation entreprise, recrutement inclusif - 1150€" />
         <meta name="keywords" content="formation courte, professionnalisante, relation entreprise, recrutement inclusif, insertion professionnelle, Bordeaux, Lormont" />
-        <link rel="canonical" href="https://atipikrh.fr/formations/courtes-professionnalisantes" />
+        <link rel="canonical" href="https://www.atipikrh.com/formations/courtes-professionnalisantes" />
       </Head>
 
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">

@@ -14,7 +14,7 @@ export default function AnneLiseCoatrine() {
         <title>Anne-Lise COATRINÉ | Formatrice - Atipik RH</title>
         <meta name="description" content="Découvrez le profil de Anne-Lise COATRINÉ, Formatrice chez Atipik RH. Son parcours, ses compétences et son accompagnement personnalisé." />
         <meta name="keywords" content="Anne-Lise COATRINÉ, formatrice Atipik RH, formation professionnelle, Lormont" />
-        <link rel="canonical" href="https://atipikrh.fr/equipe/anne-lise-coatrine" />
+        <link rel="canonical" href="https://www.atipikrh.com/equipe/anne-lise-coatrine" />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">

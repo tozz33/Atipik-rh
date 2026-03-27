@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://atipikrh.fr/sitemap.xml
+Sitemap: https://www.atipikrh.com/sitemap.xml
 
 # Disallow admin/private areas (if any)
 Disallow: /api/

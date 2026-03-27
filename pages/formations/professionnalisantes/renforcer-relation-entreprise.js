@@ -115,7 +115,7 @@ export default function RenforcerRelationEntreprise() {
         <title>Formation Renforcer la relation avec l'entreprise | Atipik RH - Lormont Bordeaux</title>
         <meta name="description" content="Formation professionnalisante pour renforcer la relation avec l'entreprise : De la prospection à la valorisation de votre offre. 3 jours, Bordeaux - Lormont." />
         <meta name="keywords" content="formation relation entreprise, prospection, valorisation offre, CIP, insertion professionnelle, Bordeaux, Lormont, Atipik RH" />
-        <link rel="canonical" href="https://atipikrh.fr/formations/professionnalisantes/renforcer-relation-entreprise" />
+        <link rel="canonical" href="https://www.atipikrh.com/formations/professionnalisantes/renforcer-relation-entreprise" />
       </Head>
 
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">

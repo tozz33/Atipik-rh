@@ -155,7 +155,7 @@ export default function LocationEspacesBordeaux() {
         <title>Location Salles de Formation à Lormont | Atipik RH</title>
         <meta name="description" content="Louez nos salles de formation modernes à Lormont. 3 espaces équipés de 10 à 20 personnes. Parking gratuit, Wi-Fi, tout inclus. Réservation immédiate." />
         <meta name="keywords" content="location salle formation Lormont, salle réunion Bordeaux, espace formation équipé, location salle Gironde" />
-        <link rel="canonical" href="https://atipikrh.fr/location-salles-lormont" />
+        <link rel="canonical" href="https://www.atipikrh.com/location-salles-lormont" />
       </Head>
 
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">

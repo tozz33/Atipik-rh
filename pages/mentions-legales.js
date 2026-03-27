@@ -10,7 +10,7 @@ export default function MentionsLegales() {
         <title>Mentions Légales | Atipik RH</title>
         <meta name="description" content="Mentions légales du site Atipik RH - Informations légales, conditions d'utilisation et propriété intellectuelle." />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://atipikrh.fr/mentions-legales" />
+        <link rel="canonical" href="https://www.atipikrh.com/mentions-legales" />
       </Head>
 
       <div className="min-h-screen bg-white">

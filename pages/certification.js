@@ -12,7 +12,7 @@ export default function Certification() {
         <title>Certification | Atipik RH - Qualité et Accessibilité</title>
         <meta name="description" content="Découvrez nos certifications : Qualiopi et Formation & Handicap. Une formation inclusive et de qualité reconnue par l'État." />
         <meta name="keywords" content="certification Atipik RH, Qualiopi, Formation Handicap, inclusion, organisme formation agréé" />
-        <link rel="canonical" href="https://atipikrh.fr/certification" />
+        <link rel="canonical" href="https://www.atipikrh.com/certification" />
       </Head>
 
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">

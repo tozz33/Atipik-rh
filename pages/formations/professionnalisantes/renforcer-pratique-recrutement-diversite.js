@@ -138,12 +138,12 @@ export default function RenforcerPratiqueRecrutementDiversite() {
         <meta name="description" content="Formation professionnalisante pour renforcer sa pratique des recrutements sur les compétences : de la diversité à la performance RH. 11h en mixed learning, Bordeaux - Lormont." />
         <meta name="keywords" content="formation recrutement diversité, non-discrimination, RH, inclusion, recrutement compétences, performance RH, Bordeaux, Lormont, Atipik RH" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://atipikrh.fr/formations/professionnalisantes/renforcer-pratique-recrutement-diversite" />
+        <link rel="canonical" href="https://www.atipikrh.com/formations/professionnalisantes/renforcer-pratique-recrutement-diversite" />
         
         {/* Open Graph pour les réseaux sociaux */}
         <meta property="og:title" content="Formation Renforcer sa pratique des recrutements sur les compétences : de la diversité à la performance RH | Atipik RH" />
         <meta property="og:description" content="Formation professionnalisante pour renforcer sa pratique des recrutements sur les compétences : de la diversité à la performance RH. 11h en mixed learning, Bordeaux - Lormont." />
-        <meta property="og:url" content="https://atipikrh.fr/formations/professionnalisantes/renforcer-pratique-recrutement-diversite" />
+        <meta property="og:url" content="https://www.atipikrh.com/formations/professionnalisantes/renforcer-pratique-recrutement-diversite" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Atipik RH" />
         <meta property="og:locale" content="fr_FR" />
@@ -165,7 +165,7 @@ export default function RenforcerPratiqueRecrutementDiversite() {
               "provider": {
                 "@type": "Organization",
                 "name": "Atipik RH",
-                "url": "https://atipikrh.fr",
+                "url": "https://www.atipikrh.com",
                 "address": {
                   "@type": "PostalAddress",
                   "addressLocality": "Lormont",

@@ -14,7 +14,7 @@ export default function CecileBernat() {
         <title>Cécile BERNAT | Consultante et Formatrice Richesses Humaines - Atipik RH</title>
         <meta name="description" content="Découvrez le profil de Cécile BERNAT, Consultante et Formatrice Richesses Humaines chez Atipik RH. Son parcours, ses compétences et son accompagnement personnalisé." />
         <meta name="keywords" content="Cécile BERNAT, formatrice Atipik RH, formation professionnelle, Lormont" />
-        <link rel="canonical" href="https://atipikrh.fr/equipe/cecile-bernat" />
+        <link rel="canonical" href="https://www.atipikrh.com/equipe/cecile-bernat" />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">

@@ -14,7 +14,7 @@ export default function StephanieBreton() {
         <title>Stéphanie BRETON | Formatrice - Atipik RH</title>
         <meta name="description" content="Découvrez le profil de Stéphanie BRETON, Formatrice chez Atipik RH. Son parcours, ses compétences et son accompagnement personnalisé." />
         <meta name="keywords" content="Stéphanie BRETON, formatrice Atipik RH, formation professionnelle, Lormont" />
-        <link rel="canonical" href="https://atipikrh.fr/equipe/stephanie-breton" />
+        <link rel="canonical" href="https://www.atipikrh.com/equipe/stephanie-breton" />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">

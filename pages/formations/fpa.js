@@ -420,7 +420,7 @@ export default function FormationFPA() {
         <title>Formation FPA - Formateur Professionnel d'Adultes | Atipik RH</title>
         <meta name="description" content="Formation Formateur Professionnel d'Adultes (FPA) à Bordeaux. Devenez formateur certifié avec notre accompagnement expert. Financement CPF possible." />
         <meta name="keywords" content="formation FPA, formateur professionnel adultes, certification formateur, formation professionnelle, CPF" />
-        <link rel="canonical" href="https://atipikrh.fr/formations/fpa" />
+        <link rel="canonical" href="https://www.atipikrh.com/formations/fpa" />
       </Head>
 
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">

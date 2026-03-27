@@ -241,7 +241,7 @@ export default function SInscrire() {
         <title>S'inscrire aux réunions d'information collective | Atipik RH</title>
         <meta name="description" content="Inscrivez-vous à nos réunions d'information pour découvrir nos formations. Réunions organisées 2 fois par mois, le samedi matin à Lormont." />
         <meta name="keywords" content="inscription, réunion information, formation, Atipik RH, Lormont, samedi" />
-        <link rel="canonical" href="https://atipikrh.fr/s-inscrire" />
+        <link rel="canonical" href="https://www.atipikrh.com/s-inscrire" />
       </Head>
 
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">

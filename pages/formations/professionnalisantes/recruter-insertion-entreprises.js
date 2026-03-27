@@ -140,7 +140,7 @@ export default function RecruterInsertionEntreprises() {
         <title>Formation Recruter en insertion avec les entreprises | Atipik RH - Lormont Bordeaux</title>
         <meta name="description" content="Formation professionnalisante pour recruter en insertion avec les entreprises : De la co-construction à l'accompagnement stratégique RH. 3 jours, Bordeaux - Lormont." />
         <meta name="keywords" content="formation recrutement insertion, accompagnement RH, entreprises, recrutement inclusif, CIP, Bordeaux, Lormont, Atipik RH" />
-        <link rel="canonical" href="https://atipikrh.fr/formations/professionnalisantes/recruter-insertion-entreprises" />
+        <link rel="canonical" href="https://www.atipikrh.com/formations/professionnalisantes/recruter-insertion-entreprises" />
       </Head>
 
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">

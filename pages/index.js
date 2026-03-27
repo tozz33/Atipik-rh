@@ -134,7 +134,7 @@ export default function HomePage() {
         <title>Atipik RH - Formation, Bilan de compétences & VAE à Lormont</title>
         <meta name="description" content="Centre de formation à Lormont (33) : bilan de compétences, VAE, formations certifiantes CPF. Accompagnement personnalisé pour votre évolution professionnelle." />
         <meta name="keywords" content="Atipik RH, formation Lormont, bilan de compétences, VAE, CPF, Gironde" />
-        <link rel="canonical" href="https://atipikrh.fr/" />
+        <link rel="canonical" href="https://www.atipikrh.com/" />
       </Head>
 
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-neutral-100 via-white to-muted-blue-200">

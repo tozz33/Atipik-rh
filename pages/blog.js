@@ -313,7 +313,7 @@ export default function Blog() {
         <title>Blog | Atipik RH - Conseils et actualités formation</title>
         <meta name="description" content="Découvrez nos articles sur la formation professionnelle, la reconversion, le CPF, la VAE et l'accompagnement carrière." />
         <meta name="keywords" content="blog formation, conseils reconversion, CPF, VAE, bilan compétences, Atipik RH" />
-        <link rel="canonical" href="https://atipikrh.fr/blog" />
+        <link rel="canonical" href="https://www.atipikrh.com/blog" />
       </Head>
 
       <div className="min-h-screen bg-white">

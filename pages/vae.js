@@ -401,6 +401,7 @@ export default function VAE() {
         <title>VAE - Validation des Acquis de l'Expérience | Atipik RH</title>
         <meta name="description" content="Accompagnement VAE personnalisé pour valoriser votre expérience professionnelle et obtenir une certification reconnue." />
         <meta name="keywords" content="VAE, validation acquis expérience, certification professionnelle, accompagnement VAE, Bordeaux" />
+        <link rel="canonical" href="https://www.atipikrh.com/vae" />
       </Head>
 
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-orange-50">

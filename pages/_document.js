@@ -4,9 +4,9 @@ export default function Document() {
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": "https://atipikrh.fr/#organization",
+    "@id": "https://www.atipikrh.com/#organization",
     "name": "Atipik RH",
-    "url": "https://atipikrh.fr",
+    "url": "https://www.atipikrh.com",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Lormont",

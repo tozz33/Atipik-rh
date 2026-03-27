@@ -10,7 +10,7 @@ export default function RGPD() {
         <title>Politique de Confidentialité - RGPD | Atipik RH</title>
         <meta name="description" content="Politique de confidentialité et protection des données personnelles conformément au RGPD - Atipik RH, centre de formation à Lormont." />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://atipikrh.fr/rgpd" />
+        <link rel="canonical" href="https://www.atipikrh.com/rgpd" />
       </Head>
 
       <div className="min-h-screen bg-white">

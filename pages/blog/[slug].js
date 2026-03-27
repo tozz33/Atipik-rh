@@ -2340,7 +2340,7 @@ export default function BlogArticle({ article: articleProp }) {
   };
 
   // URL image absolue pour schémas et meta (éviter double préfixe si déjà absolu)
-  const imageUrl = article.image.startsWith('http') ? article.image : `https://atipikrh.fr${article.image}`;
+  const imageUrl = article.image.startsWith('http') ? article.image : `https://www.atipikrh.com${article.image}`;
 
   // Schema.org pour le SEO
   const articleSchema = {
@@ -2358,36 +2358,37 @@ export default function BlogArticle({ article: articleProp }) {
       "name": "Atipik RH",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://atipikrh.fr/images/logos/atipik-logo.png"
+        "url": "https://www.atipikrh.com/images/logos/atipik-logo.png"
       }
     },
     "datePublished": convertFrenchDateToISO(article.date),
     "dateModified": convertFrenchDateToISO(article.date),
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://atipikrh.fr/blog/${article.slug}`
+      "@id": `https://www.atipikrh.com/blog/${article.slug}`
     }
   };
+  const pageTitle = article?.title ? `${article.title} | Blog Atipik RH` : 'Blog | Atipik RH';
 
   return (
     <>
       <Head>
-        <title>{article.title} | Blog Atipik RH</title>
+        <title>{pageTitle}</title>
         <meta name="description" content={article.excerpt} />
         <meta name="keywords" content={article.keywords} />
-        <link rel="canonical" href={`https://atipikrh.fr/blog/${article.slug}`} />
+        <link rel="canonical" href={`https://www.atipikrh.com/blog/${article.slug}`} />
         
         {/* Open Graph pour les réseaux sociaux */}
-        <meta property="og:title" content={article.title} />
+        <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={article.excerpt} />
         <meta property="og:image" content={imageUrl} />
-        <meta property="og:url" content={`https://atipikrh.fr/blog/${article.slug}`} />
+        <meta property="og:url" content={`https://www.atipikrh.com/blog/${article.slug}`} />
         <meta property="og:type" content="article" />
         <meta property="og:site_name" content="Atipik RH" />
         
         {/* Twitter Cards */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={article.title} />
+        <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={article.excerpt} />
         <meta name="twitter:image" content={imageUrl} />
         

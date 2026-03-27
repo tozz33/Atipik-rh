@@ -12,7 +12,7 @@ export default function Partenariat() {
         <title>Partenariat | ATIPIK RH - Réseau d'entreprises engagées</title>
         <meta name="description" content="Découvrez nos partenariats : Les Entreprises s'Engagent et Club d'Entreprise Bassens. Un réseau d'entreprises dynamique et inclusif." />
         <meta name="keywords" content="partenariat ATIPIK RH, les entreprises engagent, club entreprise bassens, réseau entreprises" />
-        <link rel="canonical" href="https://atipikrh.fr/partenariat" />
+        <link rel="canonical" href="https://www.atipikrh.com/partenariat" />
       </Head>
 
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">

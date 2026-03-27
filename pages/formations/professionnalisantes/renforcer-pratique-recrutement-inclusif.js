@@ -158,7 +158,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
         <title>Formation Prévenir les discriminations dans le recrutement | Atipik RH - Lormont Bordeaux</title>
         <meta name="description" content="Formation obligatoire pour prévenir les discriminations dans le recrutement : Sécurisation des pratiques RH et développement de méthodes objectives et inclusives. 11 heures en mixed learning, Bordeaux - Lormont." />
         <meta name="keywords" content="formation prévenir discriminations recrutement, formation obligatoire non-discrimination, recrutement équitable, RH, recrutement inclusif, Bordeaux, Lormont, Atipik RH" />
-        <link rel="canonical" href="https://atipikrh.fr/formations/professionnalisantes/renforcer-pratique-recrutement-inclusif" />
+        <link rel="canonical" href="https://www.atipikrh.com/formations/professionnalisantes/renforcer-pratique-recrutement-inclusif" />
       </Head>
 
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">
