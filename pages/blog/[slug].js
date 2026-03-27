@@ -2156,6 +2156,101 @@ const BLOG_ARTICLES = [
 
         <p><em>Découvrez aussi nos autres services : <a href="/bilan-de-competences">bilan de compétences</a>, <a href="/vae">VAE</a>, et nos <a href="/formations">formations certifiantes</a>.</em></p>
       `
+    },
+    {
+      id: 14,
+      slug: "difficultes-recrutement-pratiques-marche",
+      title: "Et si vos difficultés de recrutement venaient de vos pratiques, pas seulement du marché ?",
+      excerpt: "Les candidatures tardent à arriver, les profils ne correspondent pas et la pénurie de talents semble devenir la seule explication. Et si la solution se trouvait aussi dans vos pratiques de recrutement ?",
+      image: "/images/hero/formations.jpg",
+      date: "23 octobre 2025",
+      readTime: "9 min",
+      author: "Liliana ALMEIDA",
+      category: "Tous",
+      keywords: "recrutement inclusif, pratiques de recrutement, pénurie de talents, diversité, inclusion, vivier de candidats",
+      content: `
+        <p>Le marché de l'emploi est tendu, mais cela n'explique pas tout. Dans de nombreux cas, les difficultés de recrutement viennent aussi des pratiques internes : annonces trop génériques, processus trop longs, critères trop rigides ou expérience candidat insuffisante.</p>
+
+        <h2>Pourquoi les recrutements bloquent ?</h2>
+        <ul>
+          <li>Offres d'emploi peu différenciantes</li>
+          <li>Tri des candidatures basé sur des critères non essentiels</li>
+          <li>Délais de réponse trop longs</li>
+          <li>Manque de visibilité sur la proposition de valeur employeur</li>
+        </ul>
+
+        <h2>Les leviers d'amélioration immédiats</h2>
+        <ul>
+          <li>Clarifier les compétences réellement indispensables</li>
+          <li>Raccourcir le parcours candidat</li>
+          <li>Soigner la communication sur vos valeurs et votre culture</li>
+          <li>Ouvrir davantage vos recrutements aux parcours atypiques</li>
+        </ul>
+
+        <p>Chez Atipik RH, nous accompagnons les entreprises pour structurer des pratiques de recrutement plus efficaces, inclusives et adaptées au terrain local.</p>
+      `
+    },
+    {
+      id: 1,
+      slug: "formation-conseiller-insertion-professionnelle-lormont",
+      title: "Formation de Conseiller en Insertion Professionnelle à Lormont : débouchés et programme",
+      excerpt: "Découvrez notre formation CIP complète, les débouchés professionnels et pourquoi choisir la Gironde pour développer cette expertise.",
+      image: "/images/hero/formations.jpg",
+      date: "15 janvier 2025",
+      readTime: "12 min",
+      author: "Brunilda RAFAEL",
+      category: "Formations",
+      keywords: "formation CIP, conseiller insertion professionnelle, Lormont, débouchés emploi, programme formation",
+      content: `
+        <p>La <strong>formation de Conseiller en Insertion Professionnelle (CIP) à Lormont</strong> prépare à un métier à fort impact social. Elle permet d'accompagner des publics variés vers l'emploi, la formation et l'autonomie professionnelle.</p>
+
+        <h2>Ce que vous apprenez en formation CIP</h2>
+        <ul>
+          <li>Analyser les besoins des bénéficiaires</li>
+          <li>Construire des parcours d'insertion personnalisés</li>
+          <li>Animer des ateliers collectifs (CV, entretien, projet pro)</li>
+          <li>Développer les partenariats avec les acteurs du territoire</li>
+        </ul>
+
+        <h2>Débouchés professionnels</h2>
+        <ul>
+          <li>Conseiller en insertion professionnelle</li>
+          <li>Chargé d'accompagnement emploi-formation</li>
+          <li>Référent parcours au sein d'associations et structures d'insertion</li>
+        </ul>
+
+        <p>À Lormont et sur la métropole bordelaise, la demande reste soutenue pour les profils capables d'accompagner l'évolution des parcours professionnels.</p>
+
+        <p><a href="/contact?sujet=Informations%20formation%20CIP%20Lormont"><strong>Contactez notre équipe</strong></a> pour échanger sur la prochaine session et les modalités de financement.</p>
+      `
+    },
+    {
+      id: 9,
+      slug: "centre-formation-lormont-rive-droite-bordeaux",
+      title: "Centre de formation professionnelle à Lormont : pourquoi choisir la rive droite de Bordeaux ?",
+      excerpt: "Découvrez pourquoi notre centre de formation à Lormont offre tous les avantages d'une proximité avec Bordeaux, tout en bénéficiant des atouts spécifiques de la rive droite.",
+      image: "/images/hero/formations.jpg",
+      date: "10 janvier 2025",
+      readTime: "10 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords: "centre formation Lormont, rive droite Bordeaux, formation professionnelle, avantages géographiques, accessibilité",
+      content: `
+        <p>Choisir un <strong>centre de formation à Lormont</strong>, c'est bénéficier d'un emplacement stratégique : proche de Bordeaux, accessible rapidement et intégré à un écosystème professionnel dynamique.</p>
+
+        <h2>Les atouts de la rive droite</h2>
+        <ul>
+          <li>Accès rapide depuis Bordeaux et la métropole</li>
+          <li>Cadre de travail calme et propice à l'apprentissage</li>
+          <li>Proximité avec les entreprises locales pour les mises en relation</li>
+          <li>Offre de formation adaptée aux besoins du territoire</li>
+        </ul>
+
+        <h2>Pourquoi Atipik RH</h2>
+        <p>Notre approche combine accompagnement humain, expertise terrain et pédagogie orientée résultats. Nous aidons chaque apprenant à construire un parcours professionnel concret et durable.</p>
+
+        <p><a href="/contact?sujet=Centre%20de%20formation%20Lormont"><strong>Demandez des informations</strong></a> sur nos prochaines formations à Lormont.</p>
+      `
     }
   ];
 
