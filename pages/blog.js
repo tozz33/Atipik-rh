@@ -14,6 +14,18 @@ export default function Blog() {
     // Articles exemples - pourront être remplacés par une base de données ou CMS plus tard
   const articles = [
     {
+      id: 24,
+      slug: "pourquoi-externaliser-bilan-competences-lormont-cabinet-specialise",
+      title: "Pourquoi externaliser son bilan de compétences à Lormont | Atipik RH",
+      excerpt: "Découvrez pourquoi faire appel à un cabinet spécialisé comme Atipik RH pour votre bilan de compétences à Lormont. Accompagnement personnalisé et financement CPF.",
+      image: "/images/hero/bilan-competences.jpg",
+      date: "24 mars 2026",
+      readTime: "9 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Bilan de compétences",
+      keywords: "bilan de compétences Lormont, cabinet bilan de compétences, accompagnement reconversion, financement CPF bilan de compétences, bilan de compétences personnalisé"
+    },
+    {
       id: 23,
       slug: "location-salle-formation-lormont-proche-bordeaux",
       title: "Louer une salle de formation à Lormont (proche Bordeaux)",

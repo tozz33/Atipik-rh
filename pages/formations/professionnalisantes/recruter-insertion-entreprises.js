@@ -788,7 +788,6 @@ export default function RecruterInsertionEntreprises() {
                   <div className="bg-white rounded-3xl p-8 shadow-xl border border-muted-blue-200 text-center">
                     <div className="bg-accent-300 text-[#013F63] rounded-t-2xl -mx-8 -mt-8 p-4 mb-6">
                       <h3 className="text-2xl font-bold mb-2 text-accent-500">Session d'Hiver</h3>
-                      <p className="text-accent-600">Janvier 2026</p>
                     </div>
                     
                     <div className="mb-6">
@@ -811,7 +810,6 @@ export default function RecruterInsertionEntreprises() {
                   <div className="bg-white rounded-3xl p-8 shadow-xl border border-muted-blue-200 text-center">
                     <div className="bg-accent-300 text-[#013F63] rounded-t-2xl -mx-8 -mt-8 p-4 mb-6">
                       <h3 className="text-2xl font-bold mb-2 text-accent-500">Session de Printemps</h3>
-                      <p className="text-accent-600">Avril 2026</p>
                     </div>
                     
                     <div className="mb-6">

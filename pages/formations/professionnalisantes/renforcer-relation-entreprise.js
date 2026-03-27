@@ -196,6 +196,16 @@ export default function RenforcerRelationEntreprise() {
                   </h2>
                 </div>
 
+                {/* Le+ de ce programme */}
+                <div className="max-w-4xl mx-auto mb-8">
+                  <div className="bg-white rounded-xl p-6 shadow-lg border border-muted-blue-200">
+                    <p className="font-bold text-accent-500 mb-3 text-center">Le+ de ce programme</p>
+                    <p className="text-[#013F63]">
+                      À l'issue de la formation, vous bénéficiez d'invitations exclusives aux événements organisés par le Collectif Professionnel de l'Insertion et des RH : Les Rencontres Atipik de la Richesse Humaine
+                    </p>
+                  </div>
+                </div>
+
                 <div className="flex flex-col lg:flex-row gap-8 items-start justify-center">
                   
                   {/* Carte bleue à gauche */}
@@ -646,7 +656,6 @@ export default function RenforcerRelationEntreprise() {
                   <div className="bg-white rounded-3xl p-8 shadow-xl border border-muted-blue-200 text-center">
                     <div className="bg-accent-300 text-[#013F63] rounded-t-2xl -mx-8 -mt-8 p-4 mb-6">
                       <h3 className="text-2xl font-bold mb-2 text-accent-500">Session d'Hiver</h3>
-                      <p className="text-white">2026</p>
                     </div>
                     
                     <div className="mb-6">
@@ -669,7 +678,6 @@ export default function RenforcerRelationEntreprise() {
                   <div className="bg-white rounded-3xl p-8 shadow-xl border border-muted-blue-200 text-center">
                     <div className="bg-accent-300 text-[#013F63] rounded-t-2xl -mx-8 -mt-8 p-4 mb-6">
                       <h3 className="text-2xl font-bold mb-2 text-accent-500">Session de Printemps</h3>
-                      <p className="text-white">2026</p>
                     </div>
                     
                     <div className="mb-6">

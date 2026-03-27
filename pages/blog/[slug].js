@@ -8,6 +8,115 @@ import { Calendar, Clock, User, ArrowLeft } from 'lucide-react';
 
 const BLOG_ARTICLES = [
     {
+      id: 24,
+      slug: "pourquoi-externaliser-bilan-competences-lormont-cabinet-specialise",
+      title: "Pourquoi externaliser son bilan de compétences à Lormont | Atipik RH",
+      excerpt: "Découvrez pourquoi faire appel à un cabinet spécialisé comme Atipik RH pour votre bilan de compétences à Lormont. Accompagnement personnalisé et financement CPF.",
+      image: "/images/hero/bilan-competences.jpg",
+      date: "24 mars 2026",
+      readTime: "9 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Bilan de compétences",
+      keywords: "bilan de compétences Lormont, cabinet bilan de compétences, accompagnement reconversion, financement CPF bilan de compétences, bilan de compétences personnalisé",
+      content: `
+        <p>Vous envisagez de faire un bilan de compétences, mais vous hésitez entre le faire seul ou vous faire accompagner ? C'est une question légitime. Dans un contexte professionnel en constante évolution, être bien accompagné fait souvent toute la différence.</p>
+
+        <p><strong>Externaliser son bilan de compétences à un cabinet spécialisé comme Atipik RH à Lormont</strong>, c'est choisir un cadre structuré, humain et orienté résultats pour transformer une intention en plan d'action concret.</p>
+
+        <h2>Pourquoi faire un bilan de compétences aujourd'hui ?</h2>
+
+        <p>Le bilan de compétences n'est plus réservé aux périodes de crise professionnelle. Il devient un levier stratégique pour :</p>
+        <ul>
+          <li>faire le point sur ses compétences réelles et transférables ;</li>
+          <li>sécuriser une reconversion professionnelle ;</li>
+          <li>retrouver du sens dans son travail ;</li>
+          <li>construire un projet réaliste, motivant et financable.</li>
+        </ul>
+
+        <p>En 2026, les parcours ne sont plus linéaires : <strong>anticiper est devenu essentiel</strong>.</p>
+
+        <h2>Les limites d'un bilan de compétences en autonomie</h2>
+
+        <p>Faire un bilan seul peut sembler rassurant, mais cette approche montre vite ses limites :</p>
+        <ul>
+          <li>manque de recul sur soi-même ;</li>
+          <li>difficulté à structurer une réflexion cohérente ;</li>
+          <li>méconnaissance du marché de l'emploi ;</li>
+          <li>absence de méthode claire ;</li>
+          <li>risque de stagnation ou d'abandon.</li>
+        </ul>
+
+        <p><strong>Résultat :</strong> beaucoup de projets restent au stade d'idée.</p>
+
+        <h2>Les avantages d'un cabinet bilan de compétences comme Atipik RH</h2>
+
+        <h3>1. Une expertise métier et terrain</h3>
+        <p>Chez Atipik RH, vous bénéficiez de consultants spécialisés en évolution professionnelle. Vous gagnez une lecture objective de votre parcours, des outils éprouvés et une bonne connaissance du marché local à Lormont et en Gironde.</p>
+
+        <h3>2. Un bilan de compétences personnalisé</h3>
+        <p>Chaque parcours est unique. L'accompagnement est individualisé, avec des séances adaptées à votre rythme et une méthodologie sur mesure. Vous avancez avec un cadre clair, sans rigidité.</p>
+
+        <h3>3. Un gain de temps considérable</h3>
+        <p>Structurer seul sa réflexion peut prendre des mois. Avec un accompagnement reconversion, vous allez à l'essentiel, évitez les erreurs fréquentes et prenez des décisions plus rapidement.</p>
+
+        <h3>4. Un accès facilité au financement CPF bilan de compétences</h3>
+        <p>Beaucoup de personnes ignorent que leur bilan peut être financé via le CPF. Atipik RH vous accompagne pour :</p>
+        <ul>
+          <li>le montage du dossier ;</li>
+          <li>les démarches administratives ;</li>
+          <li>la validation du financement.</li>
+        </ul>
+        <p>Moins de stress administratif, plus d'énergie pour votre projet professionnel.</p>
+
+        <h3>5. Des résultats concrets et mesurables</h3>
+        <p>Un bon bilan ne s'arrête pas à la réflexion. Il débouche sur :</p>
+        <ul>
+          <li>un projet professionnel clair ;</li>
+          <li>un plan d'action structuré ;</li>
+          <li>des pistes concrètes d'évolution.</li>
+        </ul>
+
+        <h2>Témoignages clients</h2>
+
+        <blockquote>
+          <p>« Je me sentais perdue professionnellement. Grâce à Atipik RH, j'ai pu construire un projet réaliste et retrouver confiance. »</p>
+        </blockquote>
+        <p>— Sophie, 38 ans</p>
+
+        <blockquote>
+          <p>« Un accompagnement humain, structuré et efficace. Je recommande sans hésiter. »</p>
+        </blockquote>
+        <p>— Julien, 45 ans</p>
+
+        <h2>Pourquoi choisir Atipik RH à Lormont ?</h2>
+        <ul>
+          <li>Expertise locale ;</li>
+          <li>Accompagnement humain ;</li>
+          <li>Méthodologie structurée ;</li>
+          <li>Résultats concrets ;</li>
+          <li>Financement CPF possible.</li>
+        </ul>
+
+        <h2>Maillage interne pour aller plus loin</h2>
+        <ul>
+          <li><a href="/blog/bilan-competences-lormont-5-etapes-reconversion">Faire un bilan de compétences : par où commencer ?</a></li>
+          <li><a href="/blog/financer-reconversion-professionnelle-2026-cpf-aides-regionales">Se reconvertir en 2026 : les secteurs qui recrutent</a></li>
+          <li><a href="/formations/courtes">Formation courte vs longue : que choisir ?</a></li>
+        </ul>
+
+        <h2>Focus local SEO : bilan de compétences Lormont</h2>
+        <p>Si vous recherchez un <strong>bilan de compétences à Lormont</strong>, Atipik RH vous accueille dans un cadre professionnel adapté, avec une connaissance fine du tissu économique local.</p>
+
+        <h2>Passez à l'action</h2>
+        <p>Prêt à faire le point sur votre carrière et à avancer concrètement ?</p>
+        <ul>
+          <li><a href="/contact?sujet=Rendez-vous%20bilan%20de%20comp%C3%A9tences%20Lormont"><strong>Prenez rendez-vous dès maintenant avec un consultant Atipik RH</strong></a></li>
+          <li><strong>Bilan de compétences finançable via CPF</strong></li>
+          <li><strong>Accompagnement personnalisé à Lormont</strong></li>
+        </ul>
+      `
+    },
+    {
       id: 23,
       slug: "location-salle-formation-lormont-proche-bordeaux",
       title: "Louer une salle de formation à Lormont (proche Bordeaux)",

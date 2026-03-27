@@ -71,14 +71,14 @@ export default function Footer() {
                   alt="Certification Qualiopi - Atipik RH" 
                   width={80} 
                   height={80}
-                  className="object-contain"
+                  className="object-contain w-20 h-20"
                 />
                 <Image 
                   src="/images/certifications/formation-handicap.png" 
                   alt="Formation Handicap - Atipik RH" 
                   width={50} 
                   height={50}
-                  className="object-contain"
+                  className="object-contain w-[50px] h-[50px]"
                 />
               </div>
             </div>
