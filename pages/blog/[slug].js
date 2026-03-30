@@ -8,6 +8,99 @@ import { Calendar, Clock, User, ArrowLeft } from 'lucide-react';
 
 const BLOG_ARTICLES = [
     {
+      id: 25,
+      slug: "5-signes-temps-faire-bilan-competences",
+      title: "5 signes qu'il est temps de faire un bilan de compétences en 2026",
+      excerpt: "Manque de motivation, envie de changer, stagnation : découvrez les 5 signes pour savoir quand faire un bilan de compétences à Lormont, finançable CPF en Gironde.",
+      image: "/images/blog/bilan-competences-signaux-2026.jpg",
+      date: "31 mars 2026",
+      readTime: "8 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Bilan de compétences",
+      keywords: "quand faire un bilan de compétences, bilan de compétences Lormont, signes reconversion professionnelle, évolution de carrière 2026, bilan de compétences CPF Gironde, comment savoir si je dois faire un bilan de compétences, signes qu'il faut changer de travail, bilan de compétences quand le faire, reconversion professionnelle quand se lancer",
+      content: `
+        <p>Vous ressentez un doute sur votre avenir professionnel, une perte de motivation ou l'impression de tourner en rond ? Ces signaux ne sont pas anodins.</p>
+
+        <p>Chaque année, de nombreux actifs repoussent leur réflexion... jusqu'à subir leur situation. Faire un <strong>bilan de compétences à Lormont ou en Gironde</strong> permet justement de reprendre le contrôle avant qu'il ne soit trop tard.</p>
+
+        <p>Voici <strong>5 signes concrets</strong> qui montrent <strong>quand faire un bilan de compétences</strong>.</p>
+
+        <h2>1. Vous n'avez plus de motivation au travail</h2>
+        <p>Vous vous levez sans envie. Vos missions ne vous stimulent plus. Vous faites le minimum.</p>
+        <p>Ce n'est pas forcément votre métier le problème, mais parfois :</p>
+        <ul>
+          <li>un manque de sens ;</li>
+          <li>une évolution bloquée ;</li>
+          <li>un environnement inadapté.</li>
+        </ul>
+        <p>Un bilan de compétences permet de redéfinir ce qui vous motive réellement.</p>
+
+        <h2>2. Vous pensez souvent à changer sans passer à l'action</h2>
+        <p>Vous vous dites peut-être : « Je devrais changer de métier » ou « Ce job n'est plus fait pour moi »... mais rien ne se concrétise.</p>
+        <p>Le blocage vient souvent d'un manque de :</p>
+        <ul>
+          <li>clarté ;</li>
+          <li>stratégie ;</li>
+          <li>vision réaliste.</li>
+        </ul>
+        <p>Le bilan transforme une envie floue en plan d'action structuré.</p>
+
+        <h2>3. Vous stagnez professionnellement</h2>
+        <p>Pas d'évolution, pas de nouvelles responsabilités, pas de perspective : cette stagnation pèse sur la durée.</p>
+        <p>Elle peut entraîner :</p>
+        <ul>
+          <li>perte de confiance ;</li>
+          <li>frustration ;</li>
+          <li>démotivation durable.</li>
+        </ul>
+        <p>Un bilan de compétences identifie vos leviers d'évolution, vos compétences sous-exploitées et les opportunités accessibles rapidement.</p>
+
+        <h2>4. Vous cherchez un meilleur équilibre pro / perso</h2>
+        <p>Votre travail empiète sur votre vie personnelle ? Vous ressentez une fatigue constante ?</p>
+        <p>Aujourd'hui, beaucoup de professionnels veulent retrouver un équilibre durable. Un accompagnement permet de construire un projet aligné avec :</p>
+        <ul>
+          <li>vos valeurs ;</li>
+          <li>votre rythme de vie ;</li>
+          <li>vos contraintes personnelles.</li>
+        </ul>
+
+        <h2>5. Vous avez vécu un changement ou un déclic</h2>
+        <p>Licenciement, burn-out, retour de congé parental, déménagement... Ces moments sont souvent des tournants.</p>
+        <p>Plutôt que subir, vous pouvez en faire une opportunité. Le bilan de compétences vous aide à :</p>
+        <ul>
+          <li>rebondir intelligemment ;</li>
+          <li>sécuriser votre prochaine étape ;</li>
+          <li>éviter les erreurs de reconversion.</li>
+        </ul>
+
+        <h2>Pourquoi ne pas attendre ?</h2>
+        <p>Repousser, c'est prendre le risque de rester bloqué plusieurs années, de perdre en confiance et de rater des opportunités.</p>
+        <p>Agir maintenant permet au contraire de reprendre le contrôle, d'avancer avec méthode et de sécuriser votre avenir professionnel.</p>
+
+        <h2>Pourquoi se faire accompagner par Atipik RH ?</h2>
+        <p>Chez Atipik RH à Lormont, vous bénéficiez d'un accompagnement personnalisé, d'une expertise du marché local et d'un bilan finançable via le CPF.</p>
+        <p>Objectif : passer rapidement du doute à un projet clair.</p>
+
+        <h2>Conclusion</h2>
+        <p>Si vous vous reconnaissez dans au moins un de ces signes, ce n'est probablement pas un hasard. C'est souvent le bon moment pour faire le point.</p>
+        <p>Un bilan de compétences n'est pas une remise en question : c'est une prise de décision.</p>
+
+        <h2>Passez à l'action</h2>
+        <p>Envie d'y voir plus clair dès maintenant ? <a href="/contact?sujet=Bilan%20de%20comp%C3%A9tences%20Lormont"><strong>Échangez avec un conseiller Atipik RH</strong></a> et lancez votre bilan de compétences en toute sérénité.</p>
+        <ul>
+          <li><strong>Version A (diagnostic) :</strong> <a href="/contact?sujet=Diagnostic%20projet%20professionnel%20Lormont"><strong>Je fais le point sur ma situation</strong></a></li>
+          <li><strong>Version B (rendez-vous) :</strong> <a href="/contact?sujet=Rendez-vous%20bilan%20de%20comp%C3%A9tences%20Lormont"><strong>Je réserve mon 1er échange gratuit</strong></a></li>
+        </ul>
+
+        <h3>Pour aller plus loin</h3>
+        <ul>
+          <li><a href="/blog/pourquoi-externaliser-bilan-competences-lormont-cabinet-specialise">Pourquoi externaliser son bilan de compétences à Lormont ?</a></li>
+          <li><a href="/blog/financer-reconversion-professionnelle-2026-cpf-aides-regionales">Se reconvertir en 2026 : financement et leviers concrets</a></li>
+          <li><a href="/bilan-de-competences">Découvrir la page bilan de compétences Atipik RH</a></li>
+        </ul>
+      `
+    },
+    {
       id: 24,
       slug: "pourquoi-externaliser-bilan-competences-lormont-cabinet-specialise",
       title: "Pourquoi externaliser son bilan de compétences à Lormont | Atipik RH",

@@ -14,6 +14,18 @@ export default function Blog() {
     // Articles exemples - pourront être remplacés par une base de données ou CMS plus tard
   const articles = [
     {
+      id: 25,
+      slug: "5-signes-temps-faire-bilan-competences",
+      title: "5 signes qu'il est temps de faire un bilan de compétences en 2026",
+      excerpt: "Manque de motivation, envie de changer, stagnation : découvrez les 5 signes pour savoir quand faire un bilan de compétences à Lormont, finançable CPF en Gironde.",
+      image: "/images/blog/bilan-competences-signaux-2026.jpg",
+      date: "31 mars 2026",
+      readTime: "8 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Bilan de compétences",
+      keywords: "quand faire un bilan de compétences, bilan de compétences Lormont, signes reconversion professionnelle, évolution de carrière 2026, bilan de compétences CPF Gironde, comment savoir si je dois faire un bilan de compétences, signes qu'il faut changer de travail, bilan de compétences quand le faire, reconversion professionnelle quand se lancer"
+    },
+    {
       id: 24,
       slug: "pourquoi-externaliser-bilan-competences-lormont-cabinet-specialise",
       title: "Pourquoi externaliser son bilan de compétences à Lormont | Atipik RH",
