@@ -66,7 +66,7 @@ export default function RenforcerPratiqueRecrutementDiversite() {
   }, [cardsVisible])
 
   const formation = {
-    titre: "Recruter par les compétences : techniques pour professionnels de l'insertion",
+    titre: "Renforcer sa pratique des recrutements sur les compétences : de la diversité à la performance RH",
     sousTitre: "Formation courte – Professionnalisation des pratiques RH",
     presentation: "Dans un contexte où les enjeux de recrutement, d'attractivité et de fidélisation des talents deviennent stratégiques, structurer des recrutements fondés sur les compétences permet de sécuriser les décisions, d'élargir les viviers et de renforcer durablement la performance RH. Cette formation vous donne les clés pour déployer une démarche de recrutement inclusive, outillée et orientée résultats, au service de votre stratégie RH et de votre marque employeur.",
     public: "Pour les professionnel·les des RH, recruteurs et managers d'entreprises amenés à recruter",
@@ -134,14 +134,14 @@ export default function RenforcerPratiqueRecrutementDiversite() {
   return (
     <>
       <Head>
-        <title>Recruter par les compétences : techniques pour professionnels de l'insertion | Atipik RH</title>
-        <meta name="description" content="Formation professionnelle pour conseiller en insertion : recruter par les compétences avec des techniques concrètes, en lien avec le recrutement inclusif en entreprise." />
-        <meta name="keywords" content="insertion professionnelle, conseiller en insertion, recrutement, entreprise, formation professionnelle, recrutement par les compétences" />
+        <title>Formation Renforcer sa pratique des recrutements sur les compétences : de la diversité à la performance RH | Atipik RH - Lormont Bordeaux</title>
+        <meta name="description" content="Formation professionnalisante pour renforcer sa pratique des recrutements sur les compétences : de la diversité à la performance RH. 11h en mixed learning, Bordeaux - Lormont." />
+        <meta name="keywords" content="formation recrutement diversité, non-discrimination, RH, inclusion, recrutement compétences, performance RH, Bordeaux, Lormont, Atipik RH" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://www.atipikrh.com/formations/professionnalisantes/renforcer-pratique-recrutement-diversite" />
         
         {/* Open Graph pour les réseaux sociaux */}
-        <meta property="og:title" content="Recruter par les compétences : techniques pour professionnels de l'insertion | Atipik RH" />
+        <meta property="og:title" content="Formation Renforcer sa pratique des recrutements sur les compétences : de la diversité à la performance RH | Atipik RH" />
         <meta property="og:description" content="Formation professionnalisante pour renforcer sa pratique des recrutements sur les compétences : de la diversité à la performance RH. 11h en mixed learning, Bordeaux - Lormont." />
         <meta property="og:url" content="https://www.atipikrh.com/formations/professionnalisantes/renforcer-pratique-recrutement-diversite" />
         <meta property="og:type" content="website" />
@@ -160,7 +160,7 @@ export default function RenforcerPratiqueRecrutementDiversite() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Course",
-              "name": "Recruter par les compétences : techniques pour professionnels de l'insertion",
+              "name": "Renforcer sa pratique des recrutements sur les compétences : de la diversité à la performance RH",
               "description": "Formation professionnalisante pour renforcer sa pratique des recrutements sur les compétences : de la diversité à la performance RH. 11h en mixed learning.",
               "provider": {
                 "@type": "Organization",
@@ -221,12 +221,12 @@ export default function RenforcerPratiqueRecrutementDiversite() {
             <div className="container mx-auto px-4">
               <div className="max-w-5xl mx-auto text-center">
                 <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight tracking-tight">
-                  Recruter par les{' '}
+                  Renforcer sa pratique des recrutements sur les{' '}
                   <span className="font-brittany text-3xl lg:text-5xl text-accent-500">compétences</span>
                 </h1>
                 
                 <p className="text-lg lg:text-xl text-[#013F63] font-normal leading-relaxed">
-                  Techniques pour professionnels de l'insertion
+                  de la diversité à la performance RH
                 </p>
               </div>
             </div>

@@ -32,7 +32,7 @@ export default function FormationsCourtesProfessionnalisantes() {
   const formations = [
     {
       id: 1,
-      titre: "Développer la relation entreprise en insertion professionnelle",
+      titre: "Développer la relation entreprise",
       sousTitre: "de l'accompagnement à la relation entreprise",
       public: "Professionnels sans expérience en relation entreprises (CIP débutants, travailleurs sociaux…)",
       objectifs: [
@@ -76,7 +76,7 @@ export default function FormationsCourtesProfessionnalisantes() {
     },
     {
       id: 2,
-      titre: "Renforcer le partenariat avec les entreprises en insertion", 
+      titre: "Renforcer la relation avec l'entreprise", 
       sousTitre: "de la prospection à la valorisation de votre offre",
       public: "Professionnels souhaitant développer une approche inclusive du recrutement",
       objectifs: [
@@ -121,7 +121,7 @@ export default function FormationsCourtesProfessionnalisantes() {
     },
     {
       id: 3,
-      titre: "Recruter en insertion : méthodes et outils pour travailler avec les entreprises",
+      titre: "Recruter en insertion avec les entreprises",
       sousTitre: "de la co-construction à l'accompagnement stratégique RH",
       public: "Professionnels de l'accompagnement, conseillers emploi, formateurs",
       objectifs: [
@@ -166,7 +166,7 @@ export default function FormationsCourtesProfessionnalisantes() {
     },
     {
       id: 4,
-      titre: "Prévenir les discriminations dans le recrutement (formation professionnelle)",
+      titre: "Renforcer sa pratique des recrutement inclusif",
       sousTitre: "de la diversité à la performance RH",
       public: "Tous professionnels de l'accompagnement social et professionnel",
       objectifs: [
@@ -210,7 +210,7 @@ export default function FormationsCourtesProfessionnalisantes() {
     },
     {
       id: 5,
-      titre: "Recruter par les compétences : techniques pour professionnels de l'insertion",
+      titre: "Renforcer sa pratique des recrutements sur les compétences de la diversité à la performance RH",
       sousTitre: "Formation courte – Professionnalisation des pratiques RH",
       public: "Professionnel·les RH, Recruteurs/recruteuses, Managers amené·es à recruter",
       objectifs: [
