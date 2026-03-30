@@ -1451,7 +1451,7 @@ export default function FormationCCP3() {
                   </div>
                 </div>
 
-                <div className="text-center mt-6 flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="text-center mt-6 mb-8 flex flex-col sm:flex-row gap-4 justify-center">
                   <Link href="/financement" className="inline-flex items-center gap-2 px-6 py-3 bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold rounded-full transition-all duration-300 hover:shadow-lg transform hover:scale-105">
                     En savoir plus sur les financements
                     <ArrowRight className="w-4 h-4" />

@@ -1378,7 +1378,7 @@ export default function VAE() {
               
               <div className="text-center mb-12">
                 <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-3 leading-tight">
-                  Données <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">ATIPIK RH</span>
+                  Données <span className="text-orange-500 font-brittany">ATIPIK RH</span>
                 </h2>
                 <p className="text-lg text-[#013F63] leading-relaxed font-light max-w-3xl mx-auto">
                   Les chiffres de nos accompagnements VAE témoignent de notre engagement qualité
@@ -1468,8 +1468,8 @@ export default function VAE() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               
-              <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight">
-                Intéressé(e) par un accompagnement <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">VAE ?</span>
+              <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight whitespace-nowrap">
+                Intéressé(e) par un accompagnement <span className="inline-block text-orange-500 font-brittany text-4xl lg:text-5xl whitespace-nowrap">VAE ?</span>
               </h2>
               
               <p className="text-lg text-[#013F63] leading-relaxed font-light max-w-3xl mx-auto mb-8">

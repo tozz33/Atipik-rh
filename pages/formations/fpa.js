@@ -1425,7 +1425,7 @@ export default function FormationFPA() {
                   </div>
                 </div>
 
-                <div className="text-center mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="text-center mt-8 mb-8 flex flex-col sm:flex-row gap-4 justify-center">
                   <Link href="/financement" className="inline-flex items-center gap-2 px-6 py-3 bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold rounded-full transition-all duration-300 hover:shadow-lg transform hover:scale-105">
                     En savoir plus sur les financements
                     <ArrowRight className="w-4 h-4" />
@@ -1451,16 +1451,16 @@ export default function FormationFPA() {
               <div className="max-w-4xl mx-auto">
 
                 <div className="max-w-md mx-auto mb-12">
-                  {/* Session FPA 2026 */}
+                  {/* Prochaine session FPA */}
                   <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 text-center">
                     <div className="bg-orange-100 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4">
                       <h3 className="text-2xl font-bold mb-2 text-orange-500">Prochaine session</h3>
-                      <p className="text-orange-600">Du 13 avril au 19 novembre 2026</p>
+                      <p className="text-orange-600">avril 2027</p>
                     </div>
                     
                     <div className="mb-4">
                       <p className="text-lg font-bold text-[#013F63]">Ouverture des candidatures</p>
-                      <p className="text-2xl font-bold text-orange-500 mt-2">13 septembre 2025</p>
+                      <p className="text-2xl font-bold text-orange-500 mt-2">septembre 2026</p>
                     </div>
                   </div>
                 </div>
