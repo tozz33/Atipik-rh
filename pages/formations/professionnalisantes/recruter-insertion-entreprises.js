@@ -66,7 +66,7 @@ export default function RecruterInsertionEntreprises() {
   }, [cardsVisible])
 
   const formation = {
-    titre: "Recruter en insertion avec les entreprises",
+    titre: "Recruter en insertion : méthodes et outils pour travailler avec les entreprises",
     sousTitre: "De la co-construction à l'accompagnement stratégique RH",
     presentation: {
       texte: "Dans un contexte où le recrutement en insertion devient un enjeu stratégique pour les entreprises, développer ses compétences en recrutement inclusif permet de créer des équipes diversifiées et performantes. Cette formation vous donne les clés pour identifier et valoriser les talents issus de l'insertion.",
@@ -137,9 +137,9 @@ export default function RecruterInsertionEntreprises() {
   return (
     <>
       <Head>
-        <title>Formation Recruter en insertion avec les entreprises | Atipik RH - Lormont Bordeaux</title>
-        <meta name="description" content="Formation professionnalisante pour recruter en insertion avec les entreprises : De la co-construction à l'accompagnement stratégique RH. 3 jours, Bordeaux - Lormont." />
-        <meta name="keywords" content="formation recrutement insertion, accompagnement RH, entreprises, recrutement inclusif, CIP, Bordeaux, Lormont, Atipik RH" />
+        <title>Recruter en insertion : méthodes et outils pour travailler avec les entreprises | Atipik RH</title>
+        <meta name="description" content="Formation professionnelle pour conseiller en insertion : recruter en insertion avec des méthodes et outils concrets pour coopérer avec l'entreprise et sécuriser le recrutement." />
+        <meta name="keywords" content="insertion professionnelle, conseiller en insertion, recrutement, entreprise, formation professionnelle, recrutement en insertion" />
         <link rel="canonical" href="https://www.atipikrh.com/formations/professionnalisantes/recruter-insertion-entreprises" />
       </Head>
 
@@ -176,7 +176,7 @@ export default function RecruterInsertionEntreprises() {
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center">
                 <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight tracking-tight">
-                  Recruter en insertion avec les <span className="font-brittany text-3xl lg:text-5xl text-accent-500">entreprises</span>
+                  Recruter en insertion : méthodes et outils pour travailler avec les <span className="font-brittany text-3xl lg:text-5xl text-accent-500">entreprises</span>
                 </h1>
                 <p className="text-lg lg:text-xl text-[#013F63] mb-4 font-medium">
                   {formation.sousTitre}

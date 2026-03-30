@@ -66,7 +66,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
   }, [cardsVisible])
 
   const formation = {
-    titre: "Prévenir les discriminations dans le recrutement",
+    titre: "Prévenir les discriminations dans le recrutement (formation professionnelle)",
     sousTitre: "Formation obligatoire",
     sousTitre2: "À destination des recruteurs, managers et professionnels RH",
     presentation: {
@@ -155,9 +155,9 @@ export default function RenforcerPratiqueRecrutementInclusif() {
   return (
     <>
       <Head>
-        <title>Formation Prévenir les discriminations dans le recrutement | Atipik RH - Lormont Bordeaux</title>
-        <meta name="description" content="Formation obligatoire pour prévenir les discriminations dans le recrutement : Sécurisation des pratiques RH et développement de méthodes objectives et inclusives. 11 heures en mixed learning, Bordeaux - Lormont." />
-        <meta name="keywords" content="formation prévenir discriminations recrutement, formation obligatoire non-discrimination, recrutement équitable, RH, recrutement inclusif, Bordeaux, Lormont, Atipik RH" />
+        <title>Prévenir les discriminations dans le recrutement (formation professionnelle) | Atipik RH</title>
+        <meta name="description" content="Formation professionnelle pour conseiller en insertion, recruteurs et entreprise : prévenir les discriminations dans le recrutement et sécuriser des pratiques RH inclusives." />
+        <meta name="keywords" content="insertion professionnelle, conseiller en insertion, recrutement, entreprise, formation professionnelle, discriminations recrutement" />
         <link rel="canonical" href="https://www.atipikrh.com/formations/professionnalisantes/renforcer-pratique-recrutement-inclusif" />
       </Head>
 
@@ -194,7 +194,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center">
                 <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] mb-3 leading-tight tracking-tight">
-                  Prévenir les discriminations dans le <span className="font-brittany text-3xl lg:text-5xl text-accent-500">recrutement</span>
+                  Prévenir les discriminations dans le <span className="font-brittany text-3xl lg:text-5xl text-accent-500">recrutement (formation professionnelle)</span>
                 </h1>
                 <p className="text-base lg:text-lg text-accent-500 mb-4 font-normal">
                   {formation.sousTitre}

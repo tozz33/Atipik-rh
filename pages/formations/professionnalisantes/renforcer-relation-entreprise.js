@@ -66,7 +66,7 @@ export default function RenforcerRelationEntreprise() {
   }, [cardsVisible])
 
   const formation = {
-    titre: "Renforcer la relation avec l'entreprise",
+    titre: "Renforcer le partenariat avec les entreprises en insertion",
     sousTitre: "De la prospection à la valorisation de votre offre",
     public: "Professionnels ayant une première expérience en tant que chargés de relation entreprise",
     objectifs: [
@@ -112,9 +112,9 @@ export default function RenforcerRelationEntreprise() {
   return (
     <>
       <Head>
-        <title>Formation Renforcer la relation avec l'entreprise | Atipik RH - Lormont Bordeaux</title>
-        <meta name="description" content="Formation professionnalisante pour renforcer la relation avec l'entreprise : De la prospection à la valorisation de votre offre. 3 jours, Bordeaux - Lormont." />
-        <meta name="keywords" content="formation relation entreprise, prospection, valorisation offre, CIP, insertion professionnelle, Bordeaux, Lormont, Atipik RH" />
+        <title>Renforcer le partenariat avec les entreprises en insertion | Formation professionnelle Atipik RH</title>
+        <meta name="description" content="Formation professionnelle pour conseiller en insertion : renforcer le partenariat avec les entreprises en insertion, améliorer le recrutement et développer une relation entreprise durable." />
+        <meta name="keywords" content="insertion professionnelle, conseiller en insertion, recrutement, entreprise, formation professionnelle, partenariat entreprise" />
         <link rel="canonical" href="https://www.atipikrh.com/formations/professionnalisantes/renforcer-relation-entreprise" />
       </Head>
 
@@ -151,7 +151,7 @@ export default function RenforcerRelationEntreprise() {
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center">
                 <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight tracking-tight">
-                  Renforcer la <span className="font-brittany text-3xl lg:text-5xl text-accent-500">relation entreprise</span>
+                  Renforcer le <span className="font-brittany text-3xl lg:text-5xl text-accent-500">partenariat avec les entreprises en insertion</span>
                 </h1>
                 <p className="text-lg lg:text-xl text-[#013F63] mb-4 font-medium">
                   {formation.sousTitre}

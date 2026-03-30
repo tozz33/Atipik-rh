@@ -188,31 +188,31 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                           href="/formations/professionnalisantes/developper-relation-entreprise" 
                           className="block px-4 py-3 text-sm text-[#013F63] hover:bg-muted-blue-200 hover:text-[#012a4a] transition-colors font-medium"
                         >
-                          Développer la relation entreprise
+                          Développer la relation entreprise en insertion professionnelle
                         </Link>
                         <Link 
                           href="/formations/professionnalisantes/renforcer-relation-entreprise" 
                           className="block px-4 py-3 text-sm text-[#013F63] hover:bg-muted-blue-200 hover:text-[#012a4a] transition-colors border-t border-muted-blue-200 font-medium"
                         >
-                          Renforcer la relation entreprise
+                          Renforcer le partenariat avec les entreprises en insertion
                         </Link>
                         <Link 
                           href="/formations/professionnalisantes/recruter-insertion-entreprises" 
                           className="block px-4 py-3 text-sm text-[#013F63] hover:bg-muted-blue-200 hover:text-[#012a4a] transition-colors border-t border-muted-blue-200 font-medium"
                         >
-                          Recruter en insertion avec les entreprises
+                          Recruter en insertion : méthodes et outils pour travailler avec les entreprises
                         </Link>
                         <Link 
                           href="/formations/professionnalisantes/renforcer-pratique-recrutement-inclusif" 
                           className="block px-4 py-3 text-sm text-[#013F63] hover:bg-muted-blue-200 hover:text-[#012a4a] transition-colors border-t border-muted-blue-200 font-medium"
                         >
-                          Prévenir les discriminations dans le recrutement
+                          Prévenir les discriminations dans le recrutement (formation professionnelle)
                         </Link>
                         <Link 
                           href="/formations/professionnalisantes/renforcer-pratique-recrutement-diversite" 
                           className="block px-4 py-3 text-sm text-[#013F63] hover:bg-muted-blue-200 hover:text-[#012a4a] transition-colors border-t border-muted-blue-200 font-medium"
                         >
-                          Renforcer sa pratique des recrutements sur les compétences
+                          Recruter par les compétences : techniques pour professionnels de l'insertion
                         </Link>
                       </div>
                     </div>
@@ -395,28 +395,28 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                               className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
-                              Développer la relation entreprise
+                              Développer la relation entreprise en insertion professionnelle
                             </Link>
                             <Link 
                               href="/formations/professionnalisantes/renforcer-relation-entreprise" 
                               className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
-                              Renforcer la relation entreprise
+                              Renforcer le partenariat avec les entreprises en insertion
                             </Link>
                             <Link 
                               href="/formations/professionnalisantes/recruter-insertion-entreprises" 
                               className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
-                              Recruter en insertion avec les entreprises
+                              Recruter en insertion : méthodes et outils pour travailler avec les entreprises
                             </Link>
                             <Link 
                               href="/formations/professionnalisantes/renforcer-pratique-recrutement-inclusif" 
                               className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
-                              Prévenir les discriminations dans le recrutement
+                              Prévenir les discriminations dans le recrutement (formation professionnelle)
                             </Link>
                           </div>
                         )}

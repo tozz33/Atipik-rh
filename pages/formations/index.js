@@ -149,12 +149,12 @@ export default function FormationsIndex() {
                     </h3>
                   </div>
 
-                  {/* Formation 1 - Développer la relation entreprise */}
+                  {/* Formation 1 - Développer la relation entreprise en insertion professionnelle */}
                   <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:scale-105 flex flex-col">
                     <div className="text-center flex-1 flex flex-col">
                       <div className="h-24 flex flex-col justify-center mb-6">
                         <h3 className="text-lg font-bold text-[#013F63] mb-2 leading-tight">
-                          DÉVELOPPER LA RELATION ENTREPRISE
+                          DÉVELOPPER LA RELATION ENTREPRISE EN INSERTION PROFESSIONNELLE
                         </h3>
                         <p className="text-base text-[#013F63] font-medium">
                           De l'accompagnement à la relation entreprise
@@ -185,12 +185,12 @@ export default function FormationsIndex() {
                     </div>
                   </div>
 
-                  {/* Formation 2 - Renforcer la relation entreprise */}
+                  {/* Formation 2 - Renforcer le partenariat avec les entreprises en insertion */}
                   <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:scale-105 flex flex-col">
                     <div className="text-center flex-1 flex flex-col">
                       <div className="h-24 flex flex-col justify-center mb-6">
                         <h3 className="text-lg font-bold text-[#013F63] mb-2 leading-tight">
-                          RENFORCER LA RELATION ENTREPRISE
+                          RENFORCER LE PARTENARIAT AVEC LES ENTREPRISES EN INSERTION
                         </h3>
                         <p className="text-base text-[#013F63] font-medium">
                           De la prospection à la valorisation de votre offre
@@ -221,12 +221,12 @@ export default function FormationsIndex() {
                     </div>
                   </div>
 
-                  {/* Formation 3 - Recruter en insertion avec les entreprises */}
+                  {/* Formation 3 - Recruter en insertion : méthodes et outils pour travailler avec les entreprises */}
                   <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:scale-105 flex flex-col">
                     <div className="text-center flex-1 flex flex-col">
                       <div className="h-24 flex flex-col justify-center mb-6">
                         <h3 className="text-lg font-bold text-[#013F63] mb-2 leading-tight">
-                          RECRUTER EN INSERTION AVEC LES ENTREPRISES
+                          RECRUTER EN INSERTION : MÉTHODES ET OUTILS POUR TRAVAILLER AVEC LES ENTREPRISES
                         </h3>
                         <p className="text-base text-[#013F63] font-medium">
                           De la co-construction à l'accompagnement stratégique RH
@@ -264,12 +264,12 @@ export default function FormationsIndex() {
                     </h3>
                   </div>
 
-                  {/* Formation 4 - Prévenir les discriminations dans le recrutement */}
+                  {/* Formation 4 - Prévenir les discriminations dans le recrutement (formation professionnelle) */}
                   <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:scale-105 flex flex-col">
                     <div className="text-center flex-1 flex flex-col">
                       <div className="h-32 flex flex-col justify-center mb-6">
                         <h3 className="text-lg font-bold text-[#013F63] mb-2 leading-tight">
-                          PRÉVENIR LES DISCRIMINATIONS DANS LE RECRUTEMENT
+                          PRÉVENIR LES DISCRIMINATIONS DANS LE RECRUTEMENT (FORMATION PROFESSIONNELLE)
                         </h3>
                         <p className="text-base text-orange-500 font-medium">
                           Formation obligatoire
@@ -303,12 +303,12 @@ export default function FormationsIndex() {
                     </div>
                   </div>
 
-                  {/* Formation 5 - Renforcer sa pratique des recrutements sur les compétences de la diversité */}
+                  {/* Formation 5 - Recruter par les compétences : techniques pour professionnels de l'insertion */}
                   <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:scale-105 flex flex-col">
                     <div className="text-center flex-1 flex flex-col">
                       <div className="h-24 flex flex-col justify-center mb-6">
                         <h3 className="text-lg font-bold text-[#013F63] mb-2 leading-tight">
-                          RENFORCER SA PRATIQUE DES RECRUTEMENTS SUR LES COMPÉTENCES
+                          RECRUTER PAR LES COMPÉTENCES : TECHNIQUES POUR PROFESSIONNELS DE L'INSERTION
                         </h3>
                         <p className="text-base text-[#013F63] font-medium">
                           De la diversité à la performance RH

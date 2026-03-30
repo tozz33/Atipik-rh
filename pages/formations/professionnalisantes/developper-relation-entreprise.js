@@ -65,7 +65,7 @@ export default function DevelopperRelationEntreprise() {
     }
   }, [cardsVisible])
   const formation = {
-    titre: "Développer la relation entreprise",
+    titre: "Développer la relation entreprise en insertion professionnelle",
     sousTitre: "De l'accompagnement à la relation entreprise",
     public: "Professionnels sans expérience en relation entreprises (CIP débutants, travailleurs sociaux…)",
     objectifs: [
@@ -111,9 +111,9 @@ export default function DevelopperRelationEntreprise() {
   return (
     <>
       <Head>
-        <title>Formation Développer la relation entreprise | Atipik RH - Lormont Bordeaux</title>
-        <meta name="description" content="Formation professionnalisante pour développer la relation entreprise : De l'accompagnement à la relation entreprise. 3 jours, 1365€ / stagiaire. Bordeaux - Lormont." />
-        <meta name="keywords" content="formation relation entreprise, accompagnement, CIP, insertion professionnelle, Bordeaux, Lormont, Atipik RH" />
+        <title>Développer la relation entreprise en insertion professionnelle | Formation professionnelle Atipik RH</title>
+        <meta name="description" content="Formation professionnelle pour conseiller en insertion : développer la relation entreprise en insertion professionnelle, structurer le recrutement et renforcer les partenariats entreprise." />
+        <meta name="keywords" content="insertion professionnelle, conseiller en insertion, recrutement, entreprise, formation professionnelle, relation entreprise" />
         <link rel="canonical" href="https://www.atipikrh.com/formations/professionnalisantes/developper-relation-entreprise" />
       </Head>
 
@@ -150,7 +150,7 @@ export default function DevelopperRelationEntreprise() {
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center">
                 <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight tracking-tight">
-                  Développer la <span className="font-brittany text-3xl lg:text-5xl text-accent-500">relation entreprise</span>
+                  Développer la <span className="font-brittany text-3xl lg:text-5xl text-accent-500">relation entreprise en insertion professionnelle</span>
                 </h1>
                 <p className="text-lg lg:text-xl text-[#013F63] mb-4 font-medium">
                   {formation.sousTitre}
