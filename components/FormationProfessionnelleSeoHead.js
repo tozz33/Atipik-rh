@@ -1,0 +1,46 @@
+import Head from 'next/head'
+import {
+  getProfessionnelleConfigBySlug,
+  buildJsonLdCourse,
+} from '../lib/seo/professionnalisantesConfig'
+
+const BASE = 'https://www.atipikrh.com'
+
+/**
+ * Métadonnées SEO + Open Graph + Twitter + JSON-LD Course pour une formation professionnalisante.
+ * @param {{ slug: string }} props
+ */
+export default function FormationProfessionnelleSeoHead({ slug }) {
+  const c = getProfessionnelleConfigBySlug(slug)
+  if (!c) return null
+
+  const canonical = `${BASE}${c.path}`
+  const jsonLd = buildJsonLdCourse(c)
+
+  return (
+    <Head>
+      <title>{c.metaTitle}</title>
+      <meta name="description" content={c.description} />
+      <meta name="keywords" content={c.keywords} />
+      <link rel="canonical" href={canonical} />
+
+      <meta property="og:title" content={c.metaTitle} />
+      <meta property="og:description" content={c.description} />
+      <meta property="og:url" content={canonical} />
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="Atipik RH" />
+      <meta property="og:locale" content="fr_FR" />
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={c.twitterTitle} />
+      <meta name="twitter:description" content={c.description} />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd),
+        }}
+      />
+    </Head>
+  )
+}

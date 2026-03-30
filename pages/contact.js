@@ -31,26 +31,44 @@ export default function Contact() {
     // Pré-remplir le formulaire en fonction des paramètres d'URL
     if (router.isReady) {
       const { sujet, formule, message } = router.query
-      
-      console.log('Paramètres d\'URL reçus:', { sujet, formule, message })
-      
-      if (sujet) {
-        setFormData(prev => ({ ...prev, sujet: sujet }))
+
+      const sujetStr = Array.isArray(sujet) ? sujet[0] : sujet
+      if (sujetStr) {
+        setFormData((prev) => ({ ...prev, sujet: sujetStr }))
       }
-      
-      if (formule) {
-        const formuleMessage = `Formule : ${formule}\n\n`
-        setFormData(prev => ({ 
-          ...prev, 
-          message: formuleMessage + (message || '') 
+
+      const formuleStr = Array.isArray(formule) ? formule[0] : formule
+      const messageStr = Array.isArray(message) ? message[0] : message
+      if (formuleStr) {
+        const formuleMessage = `Formule : ${formuleStr}\n\n`
+        setFormData((prev) => ({
+          ...prev,
+          message: formuleMessage + (messageStr || ''),
         }))
       }
-      
-      if (message && !formule) {
-        setFormData(prev => ({ ...prev, message: message }))
+
+      if (messageStr && !formuleStr) {
+        setFormData((prev) => ({ ...prev, message: messageStr }))
       }
     }
   }, [router.isReady, router.query])
+
+  useEffect(() => {
+    if (!router.isReady || typeof window === 'undefined') return
+    const q = router.query
+    const utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term']
+    const payload = { event: 'contact_page_context', page_path: router.asPath.split('?')[0] }
+    let hasUtm = false
+    utmKeys.forEach((k) => {
+      const v = q[k]
+      if (v == null) return
+      hasUtm = true
+      payload[k] = Array.isArray(v) ? v[0] : v
+    })
+    if (!hasUtm) return
+    window.dataLayer = window.dataLayer || []
+    window.dataLayer.push(payload)
+  }, [router.isReady, router.asPath, router.query])
 
   const handleInputChange = (e) => {
     const { name, value } = e.target

@@ -1,9 +1,13 @@
-import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState, useEffect, useRef } from 'react'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
+import FormationProfessionnelleSeoHead from '../../../components/FormationProfessionnelleSeoHead'
+import {
+  getFormationContactHref,
+  getProfessionnelleConfigBySlug,
+} from '../../../lib/seo/professionnalisantesConfig'
 import { 
   Users, 
   Target, 
@@ -25,6 +29,9 @@ import {
   UserCheck,
   Settings
 } from 'lucide-react'
+
+const SEO_SLUG = 'renforcer-pratique-recrutement-diversite'
+const seoFormation = getProfessionnelleConfigBySlug(SEO_SLUG)
 
 export default function RenforcerPratiqueRecrutementDiversite() {
   const [openSections, setOpenSections] = useState({})
@@ -66,7 +73,7 @@ export default function RenforcerPratiqueRecrutementDiversite() {
   }, [cardsVisible])
 
   const formation = {
-    titre: "Renforcer sa pratique des recrutements sur les compétences : de la diversité à la performance RH",
+    titre: seoFormation?.titreAffichage ?? "Renforcer sa pratique des recrutements sur les compétences : de la diversité à la performance RH",
     sousTitre: "Formation courte – Professionnalisation des pratiques RH",
     presentation: "Dans un contexte où les enjeux de recrutement, d'attractivité et de fidélisation des talents deviennent stratégiques, structurer des recrutements fondés sur les compétences permet de sécuriser les décisions, d'élargir les viviers et de renforcer durablement la performance RH. Cette formation vous donne les clés pour déployer une démarche de recrutement inclusive, outillée et orientée résultats, au service de votre stratégie RH et de votre marque employeur.",
     public: "Pour les professionnel·les des RH, recruteurs et managers d'entreprises amenés à recruter",
@@ -133,60 +140,7 @@ export default function RenforcerPratiqueRecrutementDiversite() {
 
   return (
     <>
-      <Head>
-        <title>Formation Renforcer sa pratique des recrutements sur les compétences : de la diversité à la performance RH | Atipik RH - Lormont Bordeaux</title>
-        <meta name="description" content="Formation professionnalisante pour renforcer sa pratique des recrutements sur les compétences : de la diversité à la performance RH. 11h en mixed learning, Bordeaux - Lormont." />
-        <meta name="keywords" content="formation recrutement diversité, non-discrimination, RH, inclusion, recrutement compétences, performance RH, Bordeaux, Lormont, Atipik RH" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://www.atipikrh.com/formations/professionnalisantes/renforcer-pratique-recrutement-diversite" />
-        
-        {/* Open Graph pour les réseaux sociaux */}
-        <meta property="og:title" content="Formation Renforcer sa pratique des recrutements sur les compétences : de la diversité à la performance RH | Atipik RH" />
-        <meta property="og:description" content="Formation professionnalisante pour renforcer sa pratique des recrutements sur les compétences : de la diversité à la performance RH. 11h en mixed learning, Bordeaux - Lormont." />
-        <meta property="og:url" content="https://www.atipikrh.com/formations/professionnalisantes/renforcer-pratique-recrutement-diversite" />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Atipik RH" />
-        <meta property="og:locale" content="fr_FR" />
-        
-        {/* Twitter Cards */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Formation Recrutement Diversité & Performance RH | Atipik RH" />
-        <meta name="twitter:description" content="Formation professionnalisante pour renforcer sa pratique des recrutements sur les compétences : de la diversité à la performance RH. 11h en mixed learning." />
-        
-        {/* Schema.org JSON-LD pour Course */}
-        <script 
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Course",
-              "name": "Renforcer sa pratique des recrutements sur les compétences : de la diversité à la performance RH",
-              "description": "Formation professionnalisante pour renforcer sa pratique des recrutements sur les compétences : de la diversité à la performance RH. 11h en mixed learning.",
-              "provider": {
-                "@type": "Organization",
-                "name": "Atipik RH",
-                "url": "https://www.atipikrh.com",
-                "address": {
-                  "@type": "PostalAddress",
-                  "addressLocality": "Lormont",
-                  "postalCode": "33310",
-                  "addressRegion": "Nouvelle-Aquitaine",
-                  "addressCountry": "FR"
-                }
-              },
-              "courseCode": "RECRUT-DIVERSITE",
-              "educationalLevel": "Formation continue",
-              "timeRequired": "PT11H",
-              "offers": {
-                "@type": "Offer",
-                "price": "715",
-                "priceCurrency": "EUR",
-                "availability": "https://schema.org/InStock"
-              }
-            })
-          }}
-        />
-      </Head>
+      <FormationProfessionnelleSeoHead slug={SEO_SLUG} />
 
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">
         {/* Background animé global */}
@@ -221,12 +175,11 @@ export default function RenforcerPratiqueRecrutementDiversite() {
             <div className="container mx-auto px-4">
               <div className="max-w-5xl mx-auto text-center">
                 <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight tracking-tight">
-                  Renforcer sa pratique des recrutements sur les{' '}
-                  <span className="font-brittany text-3xl lg:text-5xl text-accent-500">compétences</span>
+                  {seoFormation?.titreAffichage}
                 </h1>
                 
                 <p className="text-lg lg:text-xl text-[#013F63] font-normal leading-relaxed">
-                  de la diversité à la performance RH
+                  {seoFormation?.sousTitreCarte}
                 </p>
               </div>
             </div>
@@ -656,7 +609,7 @@ export default function RenforcerPratiqueRecrutementDiversite() {
                     </div>
                     
                     <Link
-                      href="/contact"
+                      href={getFormationContactHref(SEO_SLUG)}
                       className="inline-block px-8 py-3 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-full transition-colors"
                     >
                       En savoir plus
@@ -674,7 +627,7 @@ export default function RenforcerPratiqueRecrutementDiversite() {
                     </div>
                     
                     <Link
-                      href="/contact"
+                      href={getFormationContactHref(SEO_SLUG)}
                       className="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full transition-colors"
                     >
                       En savoir plus
@@ -835,7 +788,7 @@ export default function RenforcerPratiqueRecrutementDiversite() {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/contact" className="inline-flex px-8 py-4 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold shadow-lg transition text-lg hover:scale-105">
+                  <Link href={getFormationContactHref(SEO_SLUG)} className="inline-flex px-8 py-4 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold shadow-lg transition text-lg hover:scale-105">
                     Demander des informations
                   </Link>
                   <a 

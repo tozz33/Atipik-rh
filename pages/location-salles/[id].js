@@ -211,6 +211,13 @@ export default function SalleDetail() {
       <Head>
         <title>{salle.nom} - Location Salle Formation Lormont | Atipik RH</title>
         <meta name="description" content={`Louez ${salle.nom} à Lormont. ${salle.capacite}, ${salle.surface}. À partir de ${salle.demiJournee}€. Équipée, parking gratuit.`} />
+        <link rel="canonical" href={`https://www.atipikrh.com/location-salles/${id}`} />
+        <meta property="og:title" content={`${salle.nom} - Location Salle Formation Lormont | Atipik RH`} />
+        <meta property="og:description" content={`Louez ${salle.nom} à Lormont. ${salle.capacite}, ${salle.surface}. À partir de ${salle.demiJournee}€. Équipée, parking gratuit.`} />
+        <meta property="og:url" content={`https://www.atipikrh.com/location-salles/${id}`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${salle.nom} - Location salle | Atipik RH`} />
+        <meta name="twitter:description" content={`Louez ${salle.nom} à Lormont. ${salle.capacite}, ${salle.surface}.`} />
       </Head>
 
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">

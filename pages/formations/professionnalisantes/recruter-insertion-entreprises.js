@@ -1,17 +1,14 @@
-import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState, useEffect, useRef } from 'react'
-import Header from '../../../components/Header'
-import Footer from '../../../components/Footer'
-import { 
-  Users, 
-  Target, 
-  Calendar, 
-  MapPin, 
-  Euro, 
-  Clock, 
-  CheckCircle, 
+import {
+  Users,
+  Target,
+  Calendar,
+  MapPin,
+  Euro,
+  Clock,
+  CheckCircle,
   Mail,
   Award,
   BookOpen,
@@ -23,8 +20,18 @@ import {
   GraduationCap,
   FileText,
   UserCheck,
-  Settings
+  Settings,
 } from 'lucide-react'
+import Header from '../../../components/Header'
+import Footer from '../../../components/Footer'
+import FormationProfessionnelleSeoHead from '../../../components/FormationProfessionnelleSeoHead'
+import {
+  getFormationContactHref,
+  getProfessionnelleConfigBySlug,
+} from '../../../lib/seo/professionnalisantesConfig'
+
+const SEO_SLUG = 'recruter-insertion-entreprises'
+const seoFormation = getProfessionnelleConfigBySlug(SEO_SLUG)
 
 export default function RecruterInsertionEntreprises() {
   const [openSections, setOpenSections] = useState({})
@@ -66,7 +73,7 @@ export default function RecruterInsertionEntreprises() {
   }, [cardsVisible])
 
   const formation = {
-    titre: "Recruter en insertion avec les entreprises",
+    titre: seoFormation?.titreAffichage ?? "Recruter en insertion avec les entreprises",
     sousTitre: "De la co-construction à l'accompagnement stratégique RH",
     presentation: {
       texte: "Dans un contexte où le recrutement en insertion devient un enjeu stratégique pour les entreprises, développer ses compétences en recrutement inclusif permet de créer des équipes diversifiées et performantes. Cette formation vous donne les clés pour identifier et valoriser les talents issus de l'insertion.",
@@ -136,12 +143,7 @@ export default function RecruterInsertionEntreprises() {
 
   return (
     <>
-      <Head>
-        <title>Formation Recruter en insertion avec les entreprises | Atipik RH - Lormont Bordeaux</title>
-        <meta name="description" content="Formation professionnalisante pour recruter en insertion avec les entreprises : De la co-construction à l'accompagnement stratégique RH. 3 jours, Bordeaux - Lormont." />
-        <meta name="keywords" content="formation recrutement insertion, accompagnement RH, entreprises, recrutement inclusif, CIP, Bordeaux, Lormont, Atipik RH" />
-        <link rel="canonical" href="https://www.atipikrh.com/formations/professionnalisantes/recruter-insertion-entreprises" />
-      </Head>
+      <FormationProfessionnelleSeoHead slug={SEO_SLUG} />
 
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">
         {/* Background animé global */}
@@ -176,7 +178,7 @@ export default function RecruterInsertionEntreprises() {
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center">
                 <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight tracking-tight">
-                  Recruter en insertion avec les <span className="font-brittany text-3xl lg:text-5xl text-accent-500">entreprises</span>
+                  {seoFormation?.titreAffichage}
                 </h1>
                 <p className="text-lg lg:text-xl text-[#013F63] mb-4 font-medium">
                   {formation.sousTitre}
@@ -371,7 +373,7 @@ export default function RecruterInsertionEntreprises() {
                                     Dans le cadre de nos actions de <strong>formation INTRA</strong>, un programme est construit, personnalisé et élaboré, en cohérence avec vos objectifs et les spécificités de votre structure.
                                   </p>
                                   <Link
-                                    href="/contact"
+                                    href={getFormationContactHref(SEO_SLUG)}
                                     className="inline-flex items-center px-4 py-2 bg-accent-500 hover:bg-accent-600 text-white font-medium rounded-md transition-colors text-sm"
                                   >
                                     Prendre rendez-vous
@@ -667,7 +669,7 @@ export default function RecruterInsertionEntreprises() {
                     <div className="p-8 text-center">
                       <p className="text-4xl font-bold text-accent-500 mb-6">1 365€ <span className="text-[#013F63] text-base lowercase">/ stagiaire</span></p>
                       <Link 
-                        href="/contact" 
+                        href={getFormationContactHref(SEO_SLUG)} 
                         className="inline-block w-full px-6 py-3 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg"
                       >
                         En savoir plus
@@ -683,7 +685,7 @@ export default function RecruterInsertionEntreprises() {
                     <div className="p-8 text-center">
                       <p className="text-lg text-[#013F63] mb-6">sur devis</p>
                       <Link 
-                        href="/contact" 
+                        href={getFormationContactHref(SEO_SLUG)} 
                         className="inline-block w-full px-6 py-3 bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg"
                       >
                         En savoir plus
@@ -846,7 +848,7 @@ export default function RecruterInsertionEntreprises() {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/contact" className="inline-flex px-8 py-4 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold shadow-lg transition text-lg hover:scale-105">
+                  <Link href={getFormationContactHref(SEO_SLUG)} className="inline-flex px-8 py-4 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold shadow-lg transition text-lg hover:scale-105">
                     Demander des informations
                   </Link>
                   <a 

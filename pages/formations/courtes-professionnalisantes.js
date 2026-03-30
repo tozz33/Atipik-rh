@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
+import { professionnalisantesBySlug } from '../../lib/seo/professionnalisantesConfig'
 import { 
   Users, 
   Target, 
@@ -32,8 +33,8 @@ export default function FormationsCourtesProfessionnalisantes() {
   const formations = [
     {
       id: 1,
-      titre: "Développer la relation entreprise",
-      sousTitre: "de l'accompagnement à la relation entreprise",
+      titre: professionnalisantesBySlug['developper-relation-entreprise'].titreAffichage,
+      sousTitre: professionnalisantesBySlug['developper-relation-entreprise'].sousTitreCarte,
       public: "Professionnels sans expérience en relation entreprises (CIP débutants, travailleurs sociaux…)",
       objectifs: [
         "Comprendre le fonctionnement des entreprises",
@@ -76,8 +77,8 @@ export default function FormationsCourtesProfessionnalisantes() {
     },
     {
       id: 2,
-      titre: "Renforcer la relation avec l'entreprise", 
-      sousTitre: "de la prospection à la valorisation de votre offre",
+      titre: professionnalisantesBySlug['renforcer-relation-entreprise'].titreAffichage,
+      sousTitre: professionnalisantesBySlug['renforcer-relation-entreprise'].sousTitreCarte,
       public: "Professionnels souhaitant développer une approche inclusive du recrutement",
       objectifs: [
         "Maîtriser les enjeux de l'inclusion en entreprise",
@@ -121,8 +122,8 @@ export default function FormationsCourtesProfessionnalisantes() {
     },
     {
       id: 3,
-      titre: "Recruter en insertion avec les entreprises",
-      sousTitre: "de la co-construction à l'accompagnement stratégique RH",
+      titre: professionnalisantesBySlug['recruter-insertion-entreprises'].titreAffichage,
+      sousTitre: professionnalisantesBySlug['recruter-insertion-entreprises'].sousTitreCarte,
       public: "Professionnels de l'accompagnement, conseillers emploi, formateurs",
       objectifs: [
         "Identifier les compétences transférables",
@@ -166,8 +167,8 @@ export default function FormationsCourtesProfessionnalisantes() {
     },
     {
       id: 4,
-      titre: "Renforcer sa pratique des recrutement inclusif",
-      sousTitre: "de la diversité à la performance RH",
+      titre: professionnalisantesBySlug['renforcer-pratique-recrutement-inclusif'].titreAffichage,
+      sousTitre: professionnalisantesBySlug['renforcer-pratique-recrutement-inclusif'].sousTitreCarte,
       public: "Tous professionnels de l'accompagnement social et professionnel",
       objectifs: [
         "Développer une posture professionnelle adaptée",
@@ -210,8 +211,8 @@ export default function FormationsCourtesProfessionnalisantes() {
     },
     {
       id: 5,
-      titre: "Renforcer sa pratique des recrutements sur les compétences de la diversité à la performance RH",
-      sousTitre: "Formation courte – Professionnalisation des pratiques RH",
+      titre: professionnalisantesBySlug['renforcer-pratique-recrutement-diversite'].titreAffichage,
+      sousTitre: professionnalisantesBySlug['renforcer-pratique-recrutement-diversite'].sousTitreCarte,
       public: "Professionnel·les RH, Recruteurs/recruteuses, Managers amené·es à recruter",
       objectifs: [
         "Comprendre le cadre légal et les enjeux liés à la non-discrimination à l'embauche",

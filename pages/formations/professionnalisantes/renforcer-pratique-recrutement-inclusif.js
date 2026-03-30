@@ -1,17 +1,14 @@
-import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState, useEffect, useRef } from 'react'
-import Header from '../../../components/Header'
-import Footer from '../../../components/Footer'
-import { 
-  Users, 
-  Target, 
-  Calendar, 
-  MapPin, 
-  Euro, 
-  Clock, 
-  CheckCircle, 
+import {
+  Users,
+  Target,
+  Calendar,
+  MapPin,
+  Euro,
+  Clock,
+  CheckCircle,
   Mail,
   Award,
   BookOpen,
@@ -23,8 +20,18 @@ import {
   GraduationCap,
   FileText,
   UserCheck,
-  Settings
+  Settings,
 } from 'lucide-react'
+import Header from '../../../components/Header'
+import Footer from '../../../components/Footer'
+import FormationProfessionnelleSeoHead from '../../../components/FormationProfessionnelleSeoHead'
+import {
+  getFormationContactHref,
+  getProfessionnelleConfigBySlug,
+} from '../../../lib/seo/professionnalisantesConfig'
+
+const SEO_SLUG = 'renforcer-pratique-recrutement-inclusif'
+const seoFormation = getProfessionnelleConfigBySlug(SEO_SLUG)
 
 export default function RenforcerPratiqueRecrutementInclusif() {
   const [openSections, setOpenSections] = useState({})
@@ -66,7 +73,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
   }, [cardsVisible])
 
   const formation = {
-    titre: "Prévenir les discriminations dans le recrutement",
+    titre: seoFormation?.titreAffichage ?? "Prévenir les discriminations dans le recrutement",
     sousTitre: "Formation obligatoire",
     sousTitre2: "À destination des recruteurs, managers et professionnels RH",
     presentation: {
@@ -154,12 +161,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
 
   return (
     <>
-      <Head>
-        <title>Formation Prévenir les discriminations dans le recrutement | Atipik RH - Lormont Bordeaux</title>
-        <meta name="description" content="Formation obligatoire pour prévenir les discriminations dans le recrutement : Sécurisation des pratiques RH et développement de méthodes objectives et inclusives. 11 heures en mixed learning, Bordeaux - Lormont." />
-        <meta name="keywords" content="formation prévenir discriminations recrutement, formation obligatoire non-discrimination, recrutement équitable, RH, recrutement inclusif, Bordeaux, Lormont, Atipik RH" />
-        <link rel="canonical" href="https://www.atipikrh.com/formations/professionnalisantes/renforcer-pratique-recrutement-inclusif" />
-      </Head>
+      <FormationProfessionnelleSeoHead slug={SEO_SLUG} />
 
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">
         {/* Background animé global */}
@@ -194,7 +196,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center">
                 <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] mb-3 leading-tight tracking-tight">
-                  Prévenir les discriminations dans le <span className="font-brittany text-3xl lg:text-5xl text-accent-500">recrutement</span>
+                  {seoFormation?.titreAffichage}
                 </h1>
                 <p className="text-base lg:text-lg text-accent-500 mb-4 font-normal">
                   {formation.sousTitre}
@@ -637,7 +639,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                     </div>
                     
                     <Link
-                      href="/contact"
+                      href={getFormationContactHref(SEO_SLUG)}
                       className="inline-block px-8 py-3 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-full transition-colors"
                     >
                       En savoir plus
@@ -655,7 +657,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                     </div>
                     
                     <Link
-                      href="/contact"
+                      href={getFormationContactHref(SEO_SLUG)}
                       className="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full transition-colors"
                     >
                       En savoir plus
@@ -816,7 +818,7 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/contact" className="inline-flex px-8 py-4 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold shadow-lg transition text-lg hover:scale-105">
+                  <Link href={getFormationContactHref(SEO_SLUG)} className="inline-flex px-8 py-4 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold shadow-lg transition text-lg hover:scale-105">
                     Demander des informations
                   </Link>
                   <a 

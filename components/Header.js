@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
+import { FORMATION_PRO_LIST } from '../lib/seo/professionnalisantesConfig'
 
 export default function Header({ isFixed = false, isHomePage = false }) {
   const [isFormationsOpen, setIsFormationsOpen] = useState(false)
@@ -184,36 +185,17 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                       isCourtesSubMenuOpen ? 'opacity-100 visible transform translate-x-0' : 'opacity-0 invisible transform -translate-x-2'
                     }`}>
                       <div className="py-2">
-                        <Link 
-                          href="/formations/professionnalisantes/developper-relation-entreprise" 
-                          className="block px-4 py-3 text-sm text-[#013F63] hover:bg-muted-blue-200 hover:text-[#012a4a] transition-colors font-medium"
-                        >
-                          Développer la relation entreprise
-                        </Link>
-                        <Link 
-                          href="/formations/professionnalisantes/renforcer-relation-entreprise" 
-                          className="block px-4 py-3 text-sm text-[#013F63] hover:bg-muted-blue-200 hover:text-[#012a4a] transition-colors border-t border-muted-blue-200 font-medium"
-                        >
-                          Renforcer la relation entreprise
-                        </Link>
-                        <Link 
-                          href="/formations/professionnalisantes/recruter-insertion-entreprises" 
-                          className="block px-4 py-3 text-sm text-[#013F63] hover:bg-muted-blue-200 hover:text-[#012a4a] transition-colors border-t border-muted-blue-200 font-medium"
-                        >
-                          Recruter en insertion avec les entreprises
-                        </Link>
-                        <Link 
-                          href="/formations/professionnalisantes/renforcer-pratique-recrutement-inclusif" 
-                          className="block px-4 py-3 text-sm text-[#013F63] hover:bg-muted-blue-200 hover:text-[#012a4a] transition-colors border-t border-muted-blue-200 font-medium"
-                        >
-                          Prévenir les discriminations dans le recrutement
-                        </Link>
-                        <Link 
-                          href="/formations/professionnalisantes/renforcer-pratique-recrutement-diversite" 
-                          className="block px-4 py-3 text-sm text-[#013F63] hover:bg-muted-blue-200 hover:text-[#012a4a] transition-colors border-t border-muted-blue-200 font-medium"
-                        >
-                          Renforcer sa pratique des recrutements sur les compétences
-                        </Link>
+                        {FORMATION_PRO_LIST.map((f, idx) => (
+                          <Link
+                            key={f.slug}
+                            href={f.path}
+                            className={`block px-4 py-3 text-sm text-[#013F63] hover:bg-muted-blue-200 hover:text-[#012a4a] transition-colors font-medium ${
+                              idx > 0 ? 'border-t border-muted-blue-200' : ''
+                            }`}
+                          >
+                            {f.titreMenu}
+                          </Link>
+                        ))}
                       </div>
                     </div>
                   </div>
@@ -390,34 +372,16 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                         </button>
                         {isMobileCourtesOpen && (
                           <div className="ml-4 space-y-1">
-                            <Link 
-                              href="/formations/professionnalisantes/developper-relation-entreprise" 
-                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
-                              onClick={() => setIsMobileMenuOpen(false)}
-                            >
-                              Développer la relation entreprise
-                            </Link>
-                            <Link 
-                              href="/formations/professionnalisantes/renforcer-relation-entreprise" 
-                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
-                              onClick={() => setIsMobileMenuOpen(false)}
-                            >
-                              Renforcer la relation entreprise
-                            </Link>
-                            <Link 
-                              href="/formations/professionnalisantes/recruter-insertion-entreprises" 
-                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
-                              onClick={() => setIsMobileMenuOpen(false)}
-                            >
-                              Recruter en insertion avec les entreprises
-                            </Link>
-                            <Link 
-                              href="/formations/professionnalisantes/renforcer-pratique-recrutement-inclusif" 
-                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
-                              onClick={() => setIsMobileMenuOpen(false)}
-                            >
-                              Prévenir les discriminations dans le recrutement
-                            </Link>
+                            {FORMATION_PRO_LIST.map((f) => (
+                              <Link
+                                key={f.slug}
+                                href={f.path}
+                                className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                              >
+                                {f.titreMenu}
+                              </Link>
+                            ))}
                           </div>
                         )}
                       </div>
