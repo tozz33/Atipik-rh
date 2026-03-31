@@ -73,7 +73,7 @@ export default function RenforcerPratiqueRecrutementDiversite() {
   }, [cardsVisible])
 
   const formation = {
-    titre: seoFormation?.titreAffichage ?? "Renforcer sa pratique des recrutements sur les compétences : de la diversité à la performance RH",
+    titre: seoFormation?.titreAffichage ?? "Renforcer ses pratiques de recrutement sur les compétences : de la diversité à la performance RH",
     sousTitre: "Formation courte – Professionnalisation des pratiques RH",
     presentation: "Dans un contexte où les enjeux de recrutement, d'attractivité et de fidélisation des talents deviennent stratégiques, structurer des recrutements fondés sur les compétences permet de sécuriser les décisions, d'élargir les viviers et de renforcer durablement la performance RH. Cette formation vous donne les clés pour déployer une démarche de recrutement inclusive, outillée et orientée résultats, au service de votre stratégie RH et de votre marque employeur.",
     public: "Pour les professionnel·les des RH, recruteurs et managers d'entreprises amenés à recruter",
@@ -724,10 +724,10 @@ export default function RenforcerPratiqueRecrutementDiversite() {
 
                 <div className="grid md:grid-cols-2 gap-8 mb-12">
                   
-                  {/* Session Printemps 2026 */}
+                  {/* Session juin 2026 */}
                   <div className="bg-white rounded-3xl p-8 shadow-xl border border-muted-blue-200 text-center">
                     <div className="bg-accent-300 text-[#013F63] rounded-t-2xl -mx-8 -mt-8 p-4 mb-6">
-                      <h3 className="text-2xl font-bold mb-2 text-accent-500">Session de Printemps</h3>
+                      <h3 className="text-2xl font-bold mb-2 text-accent-500">Session de juin</h3>
                     </div>
                     
                     <div className="mb-6">
@@ -735,23 +735,21 @@ export default function RenforcerPratiqueRecrutementDiversite() {
                         <div className="w-auto h-8 bg-muted-blue-200 rounded-full flex items-center justify-center px-3">
                           <span className="text-[#013F63] font-bold text-sm">Présentiel</span>
                         </div>
-                        <span className="text-[#013F63] font-medium">à venir</span>
+                        <span className="text-[#013F63] font-medium">18 juin 2026</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <div className="w-auto h-8 bg-muted-blue-200 rounded-full flex items-center justify-center px-3">
                           <span className="text-[#013F63] font-bold text-sm">Distanciel</span>
                         </div>
-                        <span className="text-[#013F63] font-medium">à venir</span>
+                        <span className="text-[#013F63] font-medium">25 juin 2026 matin</span>
                       </div>
                     </div>
                   </div>
 
-                  {/* Session 2026 */}
+                  {/* Session septembre 2026 */}
                   <div className="bg-white rounded-3xl p-8 shadow-xl border border-muted-blue-200 text-center">
                     <div className="bg-accent-300 text-[#013F63] rounded-t-2xl -mx-8 -mt-8 p-4 mb-6">
-                      <h3 className="text-2xl font-bold mb-2 text-accent-500">Session d'été
-                    
-                      </h3>
+                      <h3 className="text-2xl font-bold mb-2 text-accent-500">Session de septembre</h3>
                     </div>
                     
                     <div className="mb-6">
@@ -759,13 +757,13 @@ export default function RenforcerPratiqueRecrutementDiversite() {
                         <div className="w-auto h-8 bg-muted-blue-200 rounded-full flex items-center justify-center px-3">
                           <span className="text-[#013F63] font-bold text-sm">Présentiel</span>
                         </div>
-                        <span className="text-[#013F63] font-medium">à venir</span>
+                        <span className="text-[#013F63] font-medium">18 septembre 2026</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <div className="w-auto h-8 bg-muted-blue-200 rounded-full flex items-center justify-center px-3">
                           <span className="text-[#013F63] font-bold text-sm">Distanciel</span>
                         </div>
-                        <span className="text-[#013F63] font-medium">à venir</span>
+                        <span className="text-[#013F63] font-medium">25 septembre 2026 matin</span>
                       </div>
                     </div>
                   </div>

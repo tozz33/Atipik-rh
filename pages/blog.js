@@ -14,6 +14,42 @@ export default function Blog() {
     // Articles exemples - pourront être remplacés par une base de données ou CMS plus tard
   const articles = [
     {
+      id: 27,
+      slug: "comment-ameliorer-pratiques-recrutement-rh-2026",
+      title: "Comment améliorer ses pratiques de recrutement ?",
+      excerpt: "Améliorer ses pratiques de recrutement : méthodes, outils et formation RH pour équipes RH et managers recruteurs. Processus, scorecards, KPI et professionnalisation — avec Atipik RH à Lormont (proche Bordeaux).",
+      image: "/images/hero/formations.jpg",
+      date: "15 avril 2026",
+      readTime: "14 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords: "formation recrutement RH, formation techniques recrutement, améliorer recrutement entreprise, comment mener un entretien structuré, étapes processus recrutement efficace, réduire erreurs de recrutement, améliorer qualité embauche, optimiser recrutement entreprise, techniques entretien recrutement, structurer processus recrutement, outils recrutement efficaces, grille entretien recrutement, formation recruteur RH, Atipik RH"
+    },
+    {
+      id: 28,
+      slug: "prevenir-discriminations-recrutement-methodes-obligations-outils-rh",
+      title: "Prévenir les discriminations dans le recrutement : méthodes, obligations et outils RH",
+      excerpt: "Cadre légal, marque employeur et biais : comment sécuriser le recrutement avec des méthodes concrètes (standardisation, scoring, traçabilité) et une formation RH alignée sur vos enjeux.",
+      image: "/images/hero/formations.jpg",
+      date: "10 avril 2026",
+      readTime: "12 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords: "formation discrimination recrutement, formation recrutement inclusif, prévenir discriminations RH, comment éviter discrimination à l'embauche, biais inconscients recrutement, grille recrutement non discriminante, sanction discrimination recrutement, obligations recruteur discrimination, processus recrutement équitable, former recruteurs biais, discrimination à l'embauche loi, Atipik RH, Bordeaux, Lormont"
+    },
+    {
+      id: 26,
+      slug: "recrutement-competences-methode-complete-rh-2026",
+      title: "Recrutement par les compétences : méthode complète pour RH en 2026",
+      excerpt: "Méthode opérationnelle en 5 étapes, KPI, erreurs à éviter et mise en œuvre concrète : guide pour les équipes RH et recruteurs qui veulent fiabiliser leurs décisions et renforcer l'inclusion.",
+      image: "/images/hero/formations.jpg",
+      date: "3 avril 2026",
+      readTime: "13 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords: "recrutement par les compétences, méthode recrutement compétences, soft skills recrutement, recrutement sans CV, recrutement inclusif entreprise, KPI recrutement RH, optimiser recrutement, grille d'entretien compétences, référentiel compétences, formation recruteurs Bordeaux, Atipik RH"
+    },
+    {
       id: 25,
       slug: "5-signes-temps-faire-bilan-competences",
       title: "5 signes qu'il est temps de faire un bilan de compétences en 2026",

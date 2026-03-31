@@ -5,8 +5,196 @@ import { useRouter } from 'next/router';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { Calendar, Clock, User, ArrowLeft } from 'lucide-react';
+import { prevenirDiscriminationsRecrutementContent } from '../../lib/blog/prevenirDiscriminationsRecrutementContent';
 
 const BLOG_ARTICLES = [
+    {
+      id: 27,
+      slug: "comment-ameliorer-pratiques-recrutement-rh-2026",
+      title: "Comment améliorer ses pratiques de recrutement ?",
+      excerpt: "Améliorer ses pratiques de recrutement : méthodes, outils et formation RH pour équipes RH et managers recruteurs. Processus, scorecards, KPI et professionnalisation — avec Atipik RH à Lormont (proche Bordeaux).",
+      image: "/images/hero/formations.jpg",
+      date: "15 avril 2026",
+      readTime: "14 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords: "formation recrutement RH, formation techniques recrutement, améliorer recrutement entreprise, comment mener un entretien structuré, étapes processus recrutement efficace, réduire erreurs de recrutement, améliorer qualité embauche, optimiser recrutement entreprise, techniques entretien recrutement, structurer processus recrutement, outils recrutement efficaces, grille entretien recrutement, formation recruteur RH, Atipik RH",
+      content: `
+        <p><strong>Améliorer ses pratiques de recrutement : méthodes, outils et formation RH</strong> — tel est l’enjeu pour les <strong>RH opérationnels</strong> et les <strong>managers recruteurs</strong> qui veulent gagner en <strong>efficacité</strong>, <strong>temps</strong> et <strong>qualité d’embauche</strong>. Cet article pose les bases : limites des pratiques informelles, structuration du processus, outils, formation et pilotage par indicateurs.</p>
+
+        <h2>Les limites des pratiques actuelles</h2>
+        <p>Un <strong>recrutement intuitif</strong> (« on sent bien la personne ») expose à plusieurs risques : critères implicites, <strong>biais</strong> de similarité ou de confirmation, arbitrages incomparables d’un entretien à l’autre, et décisions difficiles à expliquer en interne.</p>
+        <p>Les conséquences : délais qui s’allongent, mauvais recrutements coûteux, tension sur les équipes et image employeur fragile. Pour un éclairage sur le marché et les pratiques, voir aussi notre article <a href="/blog/difficultes-recrutement-pratiques-marche">sur les difficultés de recrutement et les pratiques en entreprise</a>.</p>
+
+        <h2>Structurer un processus efficace</h2>
+        <p>Un <strong>processus de recrutement efficace</strong> s’appuie sur des étapes claires :</p>
+        <ul>
+          <li><strong>Sourcing</strong> : canaux, message employeur et critères d’éligibilité alignés sur le besoin réel ;</li>
+          <li><strong>Tri</strong> : critères objectifs (compétences, disponibilité, contraintes) pour réduire le bruit avant l’entretien ;</li>
+          <li><strong>Entretien</strong> : formats structurés, mêmes questions pour des postes comparables, prise de notes homogène.</li>
+        </ul>
+        <p>Pour une <strong>méthode complète</strong> centrée sur les compétences, reportez-vous au guide <a href="/blog/recrutement-competences-methode-complete-rh-2026">Recrutement par les compétences : méthode complète pour RH en 2026</a>. Côté candidat, nos conseils sur <a href="/blog/preparer-entretien-embauche-conseils-experts">la préparation à l’entretien d’embauche</a> illustrent l’importance de la clarté des attentes — réciproque côté recruteur.</p>
+
+        <h2>Les outils indispensables</h2>
+        <p>Pour <strong>outils recrutement efficaces</strong> et traçabilité :</p>
+        <ul>
+          <li><strong>Scorecards / grilles</strong> : critères pondérés, comportements observables, notation partagée entre interviewers ;</li>
+          <li><strong>ATS ou outil de suivi</strong> : pipeline lisible, historique des échanges, conformité documentaire ;</li>
+          <li><strong>Tests ou mises en situation</strong> : lorsque c’est proportionné et lié au poste (sélection par les compétences).</li>
+        </ul>
+        <p>L’objectif est de remplacer l’impression globale par des <strong>décisions comparables</strong> et défendables.</p>
+
+        <h2>Professionnaliser ses recruteurs</h2>
+        <p>La <strong>formation recruteur RH</strong> et la <strong>standardisation</strong> (guides d’entretien, barèmes, rituels de décision) réduisent la variabilité entre managers. La formation <a href="/formations/professionnalisantes/renforcer-pratique-recrutement-diversite"><strong>Renforcer ses pratiques de recrutement</strong></a> (mixed learning, Atipik RH) prolonge cette logique : méthodes concrètes, diversité des viviers et performance RH. Pour le <strong>cadre légal</strong> et la prévention des <strong>discriminations</strong>, la formation <a href="/formations/professionnalisantes/renforcer-pratique-recrutement-inclusif">Prévenir les discriminations dans le recrutement</a> est un complément utile.</p>
+
+        <h2>Mesurer la performance</h2>
+        <p>Quelques <strong>KPI</strong> pour <strong>améliorer ses recrutements</strong> : délai moyen pour pourvoir le poste, taux de réussite en fin de période d’essai, satisfaction hiring manager, coût par embauche (si disponible). Ces indicateurs aident à <strong>améliorer la qualité d’embauche</strong> et à repérer où le processus bloque (sourcing, sélection, intégration).</p>
+
+        <h2>Passer à l’action</h2>
+        <p>Concrètement, vous pouvez :</p>
+        <ul>
+          <li><a href="/contact?sujet=Demande%20grille%20d%27entretien%20structur%C3%A9e%20%E2%80%94%20blog%20Atipik%20RH"><strong>Télécharger la grille d’entretien structurée</strong></a> (nous vous recontactons avec le modèle et les précisions d’usage) ;</li>
+          <li><a href="/contact?sujet=%C3%89valuation%20processus%20de%20recrutement%20%E2%80%94%20blog%20Atipik%20RH"><strong>Évaluer votre processus de recrutement</strong></a> avec l’équipe Atipik RH ;</li>
+          <li><a href="/contact?sujet=Demande%20formation%20%E2%80%94%20Renforcer%20ses%20pratiques%20de%20recrutement%20%28Atipik%20RH%29"><strong>Former vos managers recruteurs</strong></a> — ou consulter la <a href="/formations/professionnalisantes/renforcer-pratique-recrutement-diversite">page de la formation</a>.</li>
+        </ul>
+        <p>Basée à <strong>Lormont</strong> (proche <strong>Bordeaux</strong>), Atipik RH accompagne les équipes RH et les directions sur le recrutement et la formation professionnelle.</p>
+
+        <h3>À suivre : pistes de lecture (série à venir)</h3>
+        <p>Pour poursuivre votre réflexion SEO et opérationnelle, des contenus dédiés pourront approfondir : les <strong>étapes d’un processus de recrutement efficace</strong>, <strong>comment mener un entretien structuré</strong>, les <strong>erreurs de recrutement</strong> qui coûtent cher, <strong>comment évaluer un candidat</strong> avec des outils concrets, et les <strong>KPI</strong> à suivre en priorité — en lien direct avec cet article pilier.</p>
+
+        <h3>Liens utiles</h3>
+        <ul>
+          <li><a href="/blog/prevenir-discriminations-recrutement-methodes-obligations-outils-rh">Prévenir les discriminations dans le recrutement : méthodes, obligations et outils RH</a></li>
+          <li><a href="/blog/recrutement-competences-methode-complete-rh-2026">Recrutement par les compétences : méthode complète pour RH en 2026</a></li>
+          <li><a href="/blog/difficultes-recrutement-pratiques-marche">Difficultés de recrutement et pratiques</a></li>
+          <li><a href="/formations/professionnalisantes/renforcer-pratique-recrutement-diversite">Formation — Renforcer ses pratiques de recrutement</a></li>
+        </ul>
+      `
+    },
+    {
+      id: 28,
+      slug: "prevenir-discriminations-recrutement-methodes-obligations-outils-rh",
+      title: "Prévenir les discriminations dans le recrutement : méthodes, obligations et outils RH",
+      excerpt: "Cadre légal, marque employeur et biais : comment sécuriser le recrutement avec des méthodes concrètes (standardisation, scoring, traçabilité) et une formation RH alignée sur vos enjeux.",
+      image: "/images/hero/formations.jpg",
+      date: "10 avril 2026",
+      readTime: "12 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords: "formation discrimination recrutement, formation recrutement inclusif, prévenir discriminations RH, comment éviter discrimination à l'embauche, biais inconscients recrutement, grille recrutement non discriminante, sanction discrimination recrutement, obligations recruteur discrimination, processus recrutement équitable, former recruteurs biais, discrimination à l'embauche loi, Atipik RH, Bordeaux, Lormont",
+      content: prevenirDiscriminationsRecrutementContent
+    },
+    {
+      id: 26,
+      slug: "recrutement-competences-methode-complete-rh-2026",
+      title: "Recrutement par les compétences : méthode complète pour RH en 2026",
+      excerpt: "Méthode opérationnelle en 5 étapes, KPI, erreurs à éviter et mise en œuvre concrète : guide pour les équipes RH et recruteurs qui veulent fiabiliser leurs décisions et renforcer l'inclusion.",
+      image: "/images/hero/formations.jpg",
+      date: "3 avril 2026",
+      readTime: "13 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords: "recrutement par les compétences, méthode recrutement compétences, soft skills recrutement, recrutement sans CV, recrutement inclusif entreprise, KPI recrutement RH, optimiser recrutement, grille d'entretien compétences, référentiel compétences, formation recruteurs Bordeaux, Atipik RH",
+      content: `
+        <p>Le modèle classique centré sur le CV montre ses limites : tension sur les viviers, décisions parfois biaisées et coûts cachés liés au turnover ou à l'onboarding.</p>
+        <p>Les organisations qui veulent gagner en performance font évoluer leur approche vers le <strong>recrutement par les compétences</strong> : évaluer ce que la personne sait réellement faire et comment elle peut réussir dans le poste, au-delà du seul parcours passé.</p>
+        <p>Dans cet article, vous trouverez une <strong>méthode opérationnelle en cinq étapes</strong>, les <strong>indicateurs</strong> utiles pour piloter, les <strong>erreurs fréquentes</strong> et des pistes pour <strong>déployer</strong> cette démarche en interne — avec des renvois vers nos <a href="/formations/professionnalisantes/renforcer-pratique-recrutement-diversite">formations RH</a> à Atipik RH (Lormont, proche Bordeaux).</p>
+
+        <h2>Pourquoi le recrutement traditionnel atteint ses limites</h2>
+        <h3>Des freins structurels</h3>
+        <p>Le CV reste un outil utile, mais il peut introduire plusieurs biais : survalorisation des diplômes ou des intitulés de postes, effets de halo, ou encore discrimination indirecte lorsque des critères non essentiels éliminent des profils pertinents.</p>
+        <p>Les études et baromètres RH convergent souvent sur un constat : une part significative des recrutements ne répond pas pleinement aux attentes — avec des conséquences directes sur les coûts (remplacement, intégration, perte de productivité) et sur le climat social.</p>
+
+        <h3>Enjeu business</h3>
+        <p>Un recrutement mal cadré impacte la performance des équipes, la charge managériale et la marque employeur. Le recrutement devient un <strong>levier stratégique</strong>, pas uniquement une fonction administrative.</p>
+
+        <h2>Les fondamentaux du recrutement par les compétences</h2>
+        <h3>Définition</h3>
+        <p>Le recrutement par les compétences consiste à évaluer un candidat sur :</p>
+        <ul>
+          <li>ses <strong>compétences techniques</strong> (hard skills) ;</li>
+          <li>ses <strong>compétences comportementales</strong> (soft skills) ;</li>
+          <li>sa <strong>capacité à réussir</strong> dans les missions et le contexte du poste.</li>
+        </ul>
+
+        <h3>Différence clé avec le recrutement « CV-centré »</h3>
+        <div class="overflow-x-auto my-6 not-prose">
+          <table class="min-w-full border border-gray-200 text-sm text-left">
+            <thead>
+              <tr class="bg-gray-50">
+                <th class="border border-gray-200 px-3 py-2 font-semibold text-gray-800">Recrutement classique</th>
+                <th class="border border-gray-200 px-3 py-2 font-semibold text-gray-800">Recrutement par compétences</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border border-gray-200 px-3 py-2">Analyse centrée sur le parcours et le CV</td>
+                <td class="border border-gray-200 px-3 py-2">Analyse centrée sur les compétences attendues</td>
+              </tr>
+              <tr class="bg-gray-50/50">
+                <td class="border border-gray-200 px-3 py-2">Subjectivité et impressions fortes</td>
+                <td class="border border-gray-200 px-3 py-2">Évaluation structurée et critères partagés</td>
+              </tr>
+              <tr>
+                <td class="border border-gray-200 px-3 py-2">Biais fréquents (similarité, confirmation…)</td>
+                <td class="border border-gray-200 px-3 py-2">Décision objectivée et traçable</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Objectif : <strong>réduire l'incertitude</strong> et fiabiliser la décision, tout en ouvrant le vivier à des parcours plus variés lorsque c'est pertinent — un sujet proche de celui abordé dans notre article <a href="/blog/difficultes-recrutement-pratiques-marche">sur les pratiques de recrutement et le marché</a>.</p>
+
+        <h2>Méthodologie en cinq étapes</h2>
+
+        <h3>1. Analyser le besoin réel</h3>
+        <p>Évitez de recruter une « copie » du précédent titulaire. Identifiez les missions critiques, les contraintes du contexte (rythme, autonomie, interfaces) et les compétences réellement indispensables — celles qui font la différence à 3 mois et à 12 mois.</p>
+
+        <h3>2. Construire un référentiel de compétences</h3>
+        <p>Formalisez une grille lisible : compétences techniques, soft skills, niveaux attendus (ex. autonomie, gestion du stress, capacité d'apprentissage). Cette base sert à la fois à l'annonce, au tri et à l'entretien.</p>
+
+        <h3>3. Mettre en place des méthodes d'évaluation fiables</h3>
+        <p>Remplacez l'entretien « au feeling » par une combinaison d'outils adaptés : mises en situation, cas pratiques, exercices job-related, entretien structuré. Pour creuser l'entretien, voir aussi nos conseils sur <a href="/blog/preparer-entretien-embauche-conseils-experts">la préparation d'entretien</a> (côté candidat) — la logique d'exigence et de clarté est la même côté recruteur.</p>
+
+        <h3>4. Structurer l'entretien</h3>
+        <p>Chaque candidat doit être évalué sur les mêmes critères : questions cadrées, grille de scoring, prise de notes comparables. C'est une condition pour limiter les biais et sécuriser vos décisions — thématique centrale de notre formation <a href="/formations/professionnalisantes/renforcer-pratique-recrutement-inclusif">Prévenir les discriminations dans le recrutement</a>.</p>
+
+        <h3>5. Objectiver la décision</h3>
+        <p>Arbitrage fondé sur l'adéquation compétences / poste, le potentiel et les critères validés en amont — pas sur la seule « impression générale ».</p>
+
+        <h2>Indicateurs (KPI) pour piloter l'efficacité</h2>
+        <p>Suivez par exemple :</p>
+        <ul>
+          <li>taux de réussite à l'issue de la période d'essai ;</li>
+          <li>turnover à 6 ou 12 mois sur les embauches récentes ;</li>
+          <li>délai moyen de recrutement ;</li>
+          <li>satisfaction des managers (outil simple de questionnaire).</li>
+        </ul>
+        <p>Les équipes qui structurent cette approche cherchent en général à améliorer la <strong>qualité d'embauche</strong> et la <strong>diversité des profils</strong> lorsque le référentiel est bien calibré. Pour approfondir les soft skills, l'article <a href="/blog/soft-skills-competences-difference">sur les soft skills</a> complète utilement cette lecture.</p>
+
+        <h2>Erreurs fréquentes</h2>
+        <ul>
+          <li><strong>Conserver une logique « CV cachée »</strong> : on affiche une grille de compétences, mais on décide encore sur le prestige des écoles ou des marques.</li>
+          <li><strong>Ne pas former les recruteurs et managers</strong> : sans cadrage commun, la méthode se dégrade vite.</li>
+          <li><strong>Absence d'outils structurés</strong> : la subjectivité revient par les interstices.</li>
+          <li><strong>Sous-estimer les soft skills</strong> : pourtant souvent déterminantes pour la réussite sur le poste.</li>
+        </ul>
+
+        <h2>Déployer le recrutement par les compétences dans votre organisation</h2>
+        <p>Les leviers : formation des équipes RH et opérationnelles, mise à jour des fiches de poste, outils d'évaluation partagés, pilotage par quelques indicateurs simples. La transformation est <strong>culturelle</strong> autant que <strong>technique</strong>.</p>
+
+        <h2>Passer à l'action avec Atipik RH</h2>
+        <p>Vous souhaitez <strong>professionnaliser vos pratiques</strong> et ancrer le recrutement par les compétences dans vos équipes ?</p>
+        <p>Notre formation <a href="/formations/professionnalisantes/renforcer-pratique-recrutement-diversite"><strong>Renforcer ses pratiques de recrutement : de la diversité à la performance RH</strong></a> propose une mise en œuvre concrète (méthodes, inclusion, performance). Pour sécuriser le cadre légal et les biais, complétez avec <a href="/formations/professionnalisantes/renforcer-pratique-recrutement-inclusif">la formation sur la prévention des discriminations au recrutement</a>.</p>
+        <p>Pour un échange personnalisé : <a href="/contact?sujet=Demande%20formation%20%E2%80%94%20recrutement%20par%20les%20comp%C3%A9tences%20%28Atipik%20RH%29"><strong>contactez Atipik RH</strong></a> — nous répondons aux besoins des structures d'insertion, des équipes RH et des directions.</p>
+
+        <h3>Pour aller plus loin</h3>
+        <ul>
+          <li><a href="/blog/difficultes-recrutement-pratiques-marche">Et si vos difficultés de recrutement venaient de vos pratiques ?</a></li>
+          <li><a href="/blog/soft-skills-competences-difference">Les soft skills : ces compétences qui font la différence</a></li>
+          <li><a href="/formations/professionnalisantes/renforcer-pratique-recrutement-diversite">Page formation — recrutement par les compétences et performance RH</a></li>
+        </ul>
+      `
+    },
     {
       id: 25,
       slug: "5-signes-temps-faire-bilan-competences",
@@ -2597,6 +2785,144 @@ export default function BlogArticle({ article: articleProp }) {
                     acceptedAnswer: {
                       '@type': 'Answer',
                       text: "Atipik RH s'engage à répondre sous 24 heures avec un devis personnalisé adapté à votre date, votre nombre de participants et votre format (formation, atelier, coaching)."
+                    }
+                  }
+                ]
+              })
+            }}
+          />
+        )}
+        {/* FAQPage — recrutement par les compétences RH 2026 */}
+        {article.slug === 'recrutement-competences-methode-complete-rh-2026' && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'FAQPage',
+                mainEntity: [
+                  {
+                    '@type': 'Question',
+                    name: 'Qu’est-ce que le recrutement par les compétences ?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: "C’est une approche qui consiste à évaluer les candidats sur les compétences techniques et comportementales nécessaires au poste, avec des critères structurés et comparables, plutôt que de se concentrer uniquement sur le CV ou le parcours."
+                    }
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'Quels KPI suivre pour améliorer ses recrutements ?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: "On peut suivre entre autres le taux de réussite à l’issue de la période d’essai, le turnover à 6 ou 12 mois, le délai moyen de recrutement et la satisfaction des managers, afin de piloter la qualité d’embauche."
+                    }
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'Comment évaluer les soft skills en recrutement ?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: "En définissant des comportements observables, en utilisant des mises en situation ou des entretiens structurés, et en notant les réponses sur une grille commune — plutôt qu’en restant sur des impressions générales."
+                    }
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'Où se former au recrutement par les compétences près de Bordeaux ?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: "Atipik RH propose des formations professionnalisantes à Lormont (proche Bordeaux), notamment sur la pratique des recrutements fondés sur les compétences et l’inclusion, avec des modalités en présentiel ou mixed learning selon les parcours."
+                    }
+                  }
+                ]
+              })
+            }}
+          />
+        )}
+        {/* FAQPage — comment améliorer ses pratiques de recrutement */}
+        {article.slug === 'comment-ameliorer-pratiques-recrutement-rh-2026' && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'FAQPage',
+                mainEntity: [
+                  {
+                    '@type': 'Question',
+                    name: 'Comment mener un entretien de recrutement structuré ?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: "On définit des critères et des questions communes à tous les candidats pour un même poste, on note sur une grille (scorecard) et on évite les décisions uniquement fondées sur l’impression générale. Des guides d’entretien et des barèmes partagés entre interviewers renforcent la comparabilité."
+                    }
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'Quelles sont les étapes d’un processus de recrutement efficace ?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: "Typiquement : clarification du besoin et du profil, sourcing et diffusion, tri sur critères objectifs, entretiens structurés et éventuellement mises en situation, puis décision objectivée et intégration du collaborateur — avec pilotage par quelques indicateurs."
+                    }
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'Comment réduire les erreurs de recrutement en entreprise ?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: "En cadrant le besoin, en standardisant les entretiens, en formant les managers recruteurs, en limitant les biais par des grilles communes et en mesurant la qualité d’embauche (période d’essai, turnover récent, satisfaction managers)."
+                    }
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'Où suivre une formation recrutement RH près de Bordeaux ?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: "Atipik RH propose des formations professionnalisantes à Lormont (proche Bordeaux), notamment pour renforcer les pratiques de recrutement et la prévention des discriminations, en présentiel ou mixed learning selon les parcours."
+                    }
+                  }
+                ]
+              })
+            }}
+          />
+        )}
+        {/* FAQPage — prévenir les discriminations au recrutement */}
+        {article.slug === 'prevenir-discriminations-recrutement-methodes-obligations-outils-rh' && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'FAQPage',
+                mainEntity: [
+                  {
+                    '@type': 'Question',
+                    name: 'Quelles obligations pour le recruteur en matière de non-discrimination à l’embauche ?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: "Le Code du travail et le droit pénal encadrent l’embauche et interdisent de refuser l’emploi d’un candidat ou de favoriser une personne pour des motifs discriminatoires liés notamment à l’origine, au sexe, aux mœurs, à l’orientation sexuelle, à l’âge, à la situation de famille, aux caractéristiques génétiques, à l’appartenance ou non-appartenance à une ethnie, une nation ou une race, aux opinions politiques, aux activités syndicales, à l’appartenance ou non-appartenance à une religion, aux convictions, à la santé, au handicap ou à l’apparence physique. Les recruteurs doivent veiller à des critères objectifs, proportionnés et liés au poste. Pour une analyse précise, un conseil juridique est recommandé."
+                    }
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'Comment évaluer et limiter les biais inconscients en recrutement ?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: "On peut structurer les entretiens (mêmes questions, grille de notation), sensibiliser les équipes aux biais de similarité et d’effet de halo, et objectiver les décisions avec des scorecards partagées. La formation des recruteurs et managers est un levier clé."
+                    }
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'Comment structurer un recrutement non discriminant ?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: "Définir le besoin et les compétences réellement nécessaires, utiliser une grille d’évaluation commune, traçabilité des critères décisionnels, éviter les questions sans lien avec le poste, et harmoniser les étapes pour tous les candidats à un même poste."
+                    }
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'Où suivre une formation prévention des discriminations au recrutement près de Bordeaux ?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: "Atipik RH propose à Lormont (rive droite de Bordeaux) la formation « Prévenir les discriminations dans le recrutement » : cadre légal, biais cognitifs et recrutement objectif, en présentiel ou mixed learning selon les parcours."
                     }
                   }
                 ]

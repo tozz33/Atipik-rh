@@ -152,7 +152,7 @@ export default function NotreHistoire() {
                     <p className="text-lg text-[#013F63] leading-relaxed mb-8">
                       C'est le grand jour ! Vanessa crée Atipik RH dans un élan de passion et de détermination. 
                       Au commencement, elle se concentre uniquement sur les bilans de compétences, mais déjà avec une vision claire : 
-                      créer un centre de formation prenant des valeurs de proximité et d'inclusion. 
+                      créer un centre de formation prônant des valeurs de proximité et d'inclusion. 
                       L'accompagnement humain et personnalisé est au cœur de cette belle aventure qui commence.
                     </p>
 
