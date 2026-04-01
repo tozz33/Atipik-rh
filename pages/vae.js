@@ -380,19 +380,27 @@ export default function VAE() {
     }
   ]
 
-  const domainesCertification = [
-    { code: "15041", titre: "Mise à niveau" },
-    { code: "15061", titre: "Accompagnement vers emploi" },
-    { code: "15066", titre: "Efficacité personnelle" },
-    { code: "15081", titre: "Bilan professionnel" },
-    { code: "15084", titre: "Préparation entrée formation" },
-    { code: "32008", titre: "Responsabilité sociétale entreprise" },
-    { code: "33072", titre: "Intégration salarié" },
-    { code: "33091", titre: "GEPP" },
-    { code: "43437", titre: "Personnel paramédical" },
-    { code: "44042", titre: "Enfance" },
-    { code: "44542", titre: "Pédagogie" },
-    { code: "44590", titre: "Accompagnement formation" }
+  const formulesVae = [
+    {
+      id: 'fpa',
+      titreCertif: 'Titre Professionnel FPA',
+      headerWrapperClass: 'bg-accent-300 text-[#013F63]',
+      niveauClass: 'text-accent-500',
+      niveauLigneClass: 'text-[#013F63]',
+      cardBorder: 'border-muted-blue-200',
+      priceClass: 'text-orange-500',
+      buttonClass: 'bg-orange-500 hover:bg-orange-600'
+    },
+    {
+      id: 'cip',
+      titreCertif: 'Titre Professionnel CIP',
+      headerWrapperClass: 'bg-[#013F63]',
+      niveauClass: 'text-white',
+      niveauLigneClass: 'text-accent-500',
+      cardBorder: 'border-gray-100',
+      priceClass: 'text-[#013F63]',
+      buttonClass: 'bg-[#013F63] hover:bg-[#012a4a]'
+    }
   ]
 
   return (
@@ -985,45 +993,69 @@ export default function VAE() {
             </div>
           </section>
 
-        {/* Section Certifications proposées */}
+        {/* Section domaines d'expertise (offres FPA / CIP) */}
         <section className="py-16">
             <div className="container mx-auto px-4">
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-6xl mx-auto">
               
-              <div className="text-center mb-16">
+              <div className="text-center mb-12">
                 <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4">
-                  Nos <span className="text-accent-500 font-brittany text-5xl lg:text-6xl">domaines d'expertise</span>
-                  </h2>
+                  Nos <span className="text-accent-500 font-brittany text-5xl lg:text-6xl">domaines d&apos;expertise</span>
+                </h2>
                 <p className="text-lg text-[#013F63] leading-relaxed font-light max-w-3xl mx-auto">
-                  Nous proposons un accompagnement uniquement sur cette sélection de domaines d'expertise.
+                  Nous proposons un accompagnement uniquement sur cette sélection de domaines d&apos;expertise.
                 </p>
               </div>
 
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-                {domainesCertification.map((domaine, index) => {
-                  const isEven = index % 2 === 0
-                  return (
-                    <div 
-                      key={index} 
-                      className={`bg-white rounded-lg border-l-4 p-3 hover:shadow-md transition-all duration-200 ${
-                        isEven 
-                          ? 'border-l-[#013F63] border-t border-r border-b border-muted-blue-200 hover:border-[#013F63]' 
-                          : 'border-l-accent-500 border-t border-r border-b border-muted-blue-200 hover:border-accent-500'
-                      }`}
-                    >
-                      <div className="flex items-start justify-between gap-2">
-                        <span className={`text-xs font-semibold ${
-                          isEven ? 'text-[#013F63]' : 'text-accent-500'
-                        }`}>
-                          {domaine.code}
-                        </span>
-                      </div>
-                      <h3 className="text-sm font-medium text-[#013F63] mt-1">
-                        {domaine.titre}
-                      </h3>
+              <div className="grid md:grid-cols-2 gap-8 mb-12">
+                {formulesVae.map((formule) => (
+                  <div
+                    key={formule.id}
+                    className={`bg-white rounded-3xl p-6 shadow-xl border text-center ${formule.cardBorder}`}
+                  >
+                    <div className={`${formule.headerWrapperClass} rounded-t-2xl -mx-6 -mt-6 p-4 mb-4`}>
+                      <h3 className={`text-2xl font-bold mb-2 ${formule.niveauClass}`}>{formule.titreCertif}</h3>
+                      <p className={`font-semibold ${formule.niveauLigneClass}`}>Niveau 5</p>
                     </div>
-                  )
-                })}
+
+                    <div className="mb-4">
+                      <div className={`text-4xl font-bold mb-2 ${formule.priceClass}`}>
+                        2 300<span className="text-2xl">€</span>
+                      </div>
+                      <p className="text-sm text-[#013F63]">
+                        (sans frais d&apos;acte formatif, frais de certificateur et frais de jurys)
+                      </p>
+                    </div>
+
+                    <div className="flex items-center justify-center gap-2 mb-4">
+                      <Clock className="w-5 h-5 text-[#013F63]" />
+                      <span className="text-[#013F63] font-medium">Jusqu&apos;à 30 heures de face à face</span>
+                    </div>
+
+                    <Link
+                      href="/contact"
+                      className={`inline-block px-8 py-3 text-white font-semibold rounded-full transition-colors ${formule.buttonClass}`}
+                    >
+                      Parlons-en
+                    </Link>
+                  </div>
+                ))}
+              </div>
+
+              {/* Note importante sur les frais DAVA */}
+              <div className="mt-8 max-w-4xl mx-auto mb-12">
+                <div className="bg-gradient-to-r from-blue-50 to-orange-50 rounded-2xl p-6 shadow-lg border-l-4 border-[#013F63]">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-full bg-[#013F63] flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-white text-xl font-bold">!</span>
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-[#013F63] text-sm leading-relaxed font-medium">
+                        <span className="font-semibold text-orange-600">Conformément à la réglementation,</span> pour les diplômes relevant de l&apos;Éducation nationale, un forfait de <span className="font-bold text-[#013F63]">250 €</span> est demandé par le DAVA pour l&apos;étude de la recevabilité et l&apos;instruction du dossier jusqu&apos;au jury VAE.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               {/* Call to action */}
@@ -1056,7 +1088,7 @@ export default function VAE() {
                   </div>
                 </div>
               </div>
-              </div>
+            </div>
             </div>
           </section>
 
@@ -1142,89 +1174,6 @@ export default function VAE() {
                     </div>
                   )
                 })}
-              </div>
-              </div>
-            </div>
-          </section>
-
-        {/* Section Nos 2 formules */}
-        <section className="py-16">
-            <div className="container mx-auto px-4">
-              <div className="max-w-6xl mx-auto">
-              
-              <div className="text-center mb-12">
-                <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4">
-                  Nos <span className="text-accent-500 font-brittany text-5xl lg:text-6xl">2 formules</span>
-                  </h2>
-                </div>
-
-              <div className="grid md:grid-cols-2 gap-8 mb-12">
-                  
-                  {/* Niveau 3 et 4 */}
-                <div className="bg-white rounded-3xl p-6 shadow-xl border border-muted-blue-200 text-center">
-                  <div className="bg-accent-300 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4">
-                    <h3 className="text-2xl font-bold mb-2 text-accent-500">Niveau 5</h3>
-                    <p className="text-white">Titre Professionnel FPA</p>
-                    </div>
-                    
-                  <div className="mb-4">
-                    <div className="text-4xl font-bold text-orange-500 mb-2">2 300<span className="text-2xl">€</span></div>
-                    <p className="text-sm text-[#013F63]">(sans frais d'acte formatif, frais de certificateur et frais de jurys)</p>
-                        </div>
-                  
-                  <div className="flex items-center justify-center gap-2 mb-4">
-                    <Clock className="w-5 h-5 text-[#013F63]" />
-                    <span className="text-[#013F63] font-medium">Jusqu'à 30 heures de face à face</span>
-                      </div>
-                      
-                        <Link
-                          href="/contact"
-                    className="inline-block px-8 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-full transition-colors"
-                        >
-                          Parlons-en
-                        </Link>
-                  </div>
-
-                  {/* Niveau 5 */}
-                <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 text-center">
-                  <div className="bg-muted-blue-200 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4">
-                    <h3 className="text-2xl font-bold mb-2 text-[#013F63]">Niveau 5</h3>
-                    <p className="text-white">Titre Professionnel CIP</p>
-                    </div>
-                    
-                                    <div className="mb-4">
-                    <div className="text-4xl font-bold text-[#013F63] mb-2">2 300<span className="text-2xl">€</span></div>
-                    <p className="text-sm text-[#013F63]">(sans frais d'acte formatif, frais de certificateur et frais de jurys)</p>
-                        </div>
-                  
-                  <div className="flex items-center justify-center gap-2 mb-4">
-                    <Clock className="w-5 h-5 text-[#013F63]" />
-                    <span className="text-[#013F63] font-medium">Jusqu'à 30 heures de face à face</span>
-                      </div>
-                      
-                        <Link
-                          href="/contact"
-                    className="inline-block px-8 py-3 bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold rounded-full transition-colors"
-                        >
-                          Parlons-en
-                        </Link>
-                    </div>
-                  </div>
-              
-              {/* Note importante sur les frais DAVA */}
-              <div className="mt-8 max-w-4xl mx-auto">
-                <div className="bg-gradient-to-r from-blue-50 to-orange-50 rounded-2xl p-6 shadow-lg border-l-4 border-[#013F63]">
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-[#013F63] flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <span className="text-white text-xl font-bold">!</span>
-                    </div>
-                    <div className="flex-1">
-                      <p className="text-[#013F63] text-sm leading-relaxed font-medium">
-                        <span className="font-semibold text-orange-600">Conformément à la réglementation,</span> pour les diplômes relevant de l'Éducation nationale, un forfait de <span className="font-bold text-[#013F63]">250 €</span> est demandé par le DAVA pour l'étude de la recevabilité et l'instruction du dossier jusqu'au jury VAE.
-                      </p>
-                    </div>
-                  </div>
-                </div>
               </div>
               </div>
             </div>
@@ -1378,7 +1327,10 @@ export default function VAE() {
               
               <div className="text-center mb-12">
                 <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-3 leading-tight">
-                  Données <span className="text-orange-500 font-brittany">ATIPIK RH</span>
+                  Données{' '}
+                  <span className="text-orange-500 font-brittany font-bold text-lg lg:text-xl">
+                    ATIPIK RH
+                  </span>
                 </h2>
                 <p className="text-lg text-[#013F63] leading-relaxed font-light max-w-3xl mx-auto">
                   Les chiffres de nos accompagnements VAE témoignent de notre engagement qualité
