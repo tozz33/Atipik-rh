@@ -14,11 +14,47 @@ export default function Blog() {
     // Articles exemples - pourront être remplacés par une base de données ou CMS plus tard
   const articles = [
     {
+      id: 31,
+      slug: "reduire-couts-recrutement-formation-rh",
+      title: "Réduire ses coûts de recrutement grâce à la formation",
+      excerpt: "Méthode simple pour optimiser le coût par embauche, structurer l'évaluation et améliorer la performance RH grâce à la formation des recruteurs.",
+      image: "/images/blog/reduire-couts-recrutement-formation-rh.png",
+      date: "18 avril 2026",
+      readTime: "9 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords: "réduire coût recrutement, optimisation recrutement RH, recrutement efficace, stratégie RH performance, formation recruteurs"
+    },
+    {
+      id: 30,
+      slug: "comment-reduire-couts-recrutement-30-pourcent-formation-rh",
+      title: "Comment réduire vos coûts de recrutement de 30% grâce à la formation RH ?",
+      excerpt: "Découvrez comment réduire le coût par embauche, limiter le turnover et accélérer vos recrutements avec une formation RH courte orientée performance et ROI.",
+      image: "/images/blog/comment-reduire-couts-recrutement-30-pourcent-formation-rh.png",
+      date: "12 avril 2026",
+      readTime: "12 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords: "réduire coût recrutement, cout par embauche, recrutement efficace, performance RH, ROI formation RH, recrutement par les compétences, réduire turnover recrutement, time-to-hire"
+    },
+    {
+      id: 29,
+      slug: "recrutement-sans-discrimination",
+      title: "Recrutement sans discrimination : sécurisez vos pratiques et améliorez vos performances RH",
+      excerpt: "Méthode concrète en 4 étapes pour structurer vos recrutements, réduire les biais, sécuriser vos décisions et améliorer durablement vos résultats RH.",
+      image: "/images/hero/formations.jpg",
+      date: "8 avril 2026",
+      readTime: "10 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords: "recrutement sans discrimination, biais recrutement, recrutement inclusif, non-discrimination RH, entretien structure, grille de scoring, traçabilité recrutement"
+    },
+    {
       id: 27,
       slug: "comment-ameliorer-pratiques-recrutement-rh-2026",
       title: "Comment améliorer ses pratiques de recrutement ?",
       excerpt: "Améliorer ses pratiques de recrutement : méthodes, outils et formation RH pour équipes RH et managers recruteurs. Processus, scorecards, KPI et professionnalisation — avec Atipik RH à Lormont (proche Bordeaux).",
-      image: "/images/hero/formations.jpg",
+      image: "/images/blog/comment-ameliorer-pratiques-recrutement-rh-2026.png",
       date: "15 avril 2026",
       readTime: "14 min",
       author: "Vanessa NOAH EWODO",
@@ -28,21 +64,21 @@ export default function Blog() {
     {
       id: 28,
       slug: "prevenir-discriminations-recrutement-methodes-obligations-outils-rh",
-      title: "Prévenir les discriminations dans le recrutement : méthodes, obligations et outils RH",
-      excerpt: "Cadre légal, marque employeur et biais : comment sécuriser le recrutement avec des méthodes concrètes (standardisation, scoring, traçabilité) et une formation RH alignée sur vos enjeux.",
-      image: "/images/hero/formations.jpg",
+      title: "Prévenir les discriminations à l'embauche : cadre légal, risques et conformité RH",
+      excerpt: "Guide conformité pour RH et managers : obligations légales, biais, risques, traçabilité et actions concrètes pour sécuriser vos pratiques de recrutement.",
+      image: "/images/blog/prevenir-discriminations-recrutement-methodes-obligations-outils-rh.png",
       date: "10 avril 2026",
       readTime: "12 min",
       author: "Vanessa NOAH EWODO",
       category: "Formations",
-      keywords: "formation discrimination recrutement, formation recrutement inclusif, prévenir discriminations RH, comment éviter discrimination à l'embauche, biais inconscients recrutement, grille recrutement non discriminante, sanction discrimination recrutement, obligations recruteur discrimination, processus recrutement équitable, former recruteurs biais, discrimination à l'embauche loi, Atipik RH, Bordeaux, Lormont"
+      keywords: "prévenir discriminations embauche, discrimination à l'embauche loi, obligations recruteur discrimination, conformité recrutement RH, risque juridique recrutement, traçabilité recrutement, biais inconscients recrutement, Atipik RH Bordeaux Lormont"
     },
     {
       id: 26,
       slug: "recrutement-competences-methode-complete-rh-2026",
       title: "Recrutement par les compétences : méthode complète pour RH en 2026",
       excerpt: "Méthode opérationnelle en 5 étapes, KPI, erreurs à éviter et mise en œuvre concrète : guide pour les équipes RH et recruteurs qui veulent fiabiliser leurs décisions et renforcer l'inclusion.",
-      image: "/images/hero/formations.jpg",
+      image: "/images/blog/recrutement-competences-methode-complete-rh-2026.png",
       date: "3 avril 2026",
       readTime: "13 min",
       author: "Vanessa NOAH EWODO",

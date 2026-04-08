@@ -6,14 +6,56 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { Calendar, Clock, User, ArrowLeft } from 'lucide-react';
 import { prevenirDiscriminationsRecrutementContent } from '../../lib/blog/prevenirDiscriminationsRecrutementContent';
+import { recrutementSansDiscriminationContent } from '../../lib/blog/recrutementSansDiscriminationContent';
+import { reduireCoutRecrutementFormationRhContent } from '../../lib/blog/reduireCoutRecrutementFormationRhContent';
+import { reduireCoutsRecrutementFormationContent } from '../../lib/blog/reduireCoutsRecrutementFormationContent';
 
 const BLOG_ARTICLES = [
+    {
+      id: 31,
+      slug: "reduire-couts-recrutement-formation-rh",
+      title: "Réduire ses coûts de recrutement grâce à la formation",
+      excerpt: "Méthode simple pour optimiser le coût par embauche, structurer l'évaluation et améliorer la performance RH grâce à la formation des recruteurs.",
+      image: "/images/blog/reduire-couts-recrutement-formation-rh.png",
+      date: "18 avril 2026",
+      readTime: "9 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords: "réduire coût recrutement, optimisation recrutement RH, recrutement efficace, stratégie RH performance, formation recruteurs",
+      content: reduireCoutsRecrutementFormationContent
+    },
+    {
+      id: 30,
+      slug: "comment-reduire-couts-recrutement-30-pourcent-formation-rh",
+      title: "Comment réduire vos coûts de recrutement de 30% grâce à la formation RH ?",
+      excerpt: "Découvrez comment réduire le coût par embauche, limiter le turnover et accélérer vos recrutements avec une formation RH courte orientée performance et ROI.",
+      image: "/images/blog/comment-reduire-couts-recrutement-30-pourcent-formation-rh.png",
+      date: "12 avril 2026",
+      readTime: "12 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords: "réduire coût recrutement, cout par embauche, recrutement efficace, performance RH, ROI formation RH, recrutement par les compétences, réduire turnover recrutement, time-to-hire",
+      content: reduireCoutRecrutementFormationRhContent
+    },
+    {
+      id: 29,
+      slug: "recrutement-sans-discrimination",
+      title: "Recrutement sans discrimination : sécurisez vos pratiques et améliorez vos performances RH",
+      excerpt: "Méthode concrète en 4 étapes pour structurer vos recrutements, réduire les biais, sécuriser vos décisions et améliorer durablement vos résultats RH.",
+      image: "/images/hero/formations.jpg",
+      date: "8 avril 2026",
+      readTime: "10 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords: "recrutement sans discrimination, biais recrutement, recrutement inclusif, non-discrimination RH, entretien structure, grille de scoring, traçabilité recrutement",
+      content: recrutementSansDiscriminationContent
+    },
     {
       id: 27,
       slug: "comment-ameliorer-pratiques-recrutement-rh-2026",
       title: "Comment améliorer ses pratiques de recrutement ?",
       excerpt: "Améliorer ses pratiques de recrutement : méthodes, outils et formation RH pour équipes RH et managers recruteurs. Processus, scorecards, KPI et professionnalisation — avec Atipik RH à Lormont (proche Bordeaux).",
-      image: "/images/hero/formations.jpg",
+      image: "/images/blog/comment-ameliorer-pratiques-recrutement-rh-2026.png",
       date: "15 avril 2026",
       readTime: "14 min",
       author: "Vanessa NOAH EWODO",
@@ -74,14 +116,14 @@ const BLOG_ARTICLES = [
     {
       id: 28,
       slug: "prevenir-discriminations-recrutement-methodes-obligations-outils-rh",
-      title: "Prévenir les discriminations dans le recrutement : méthodes, obligations et outils RH",
-      excerpt: "Cadre légal, marque employeur et biais : comment sécuriser le recrutement avec des méthodes concrètes (standardisation, scoring, traçabilité) et une formation RH alignée sur vos enjeux.",
-      image: "/images/hero/formations.jpg",
+      title: "Prévenir les discriminations à l'embauche : cadre légal, risques et conformité RH",
+      excerpt: "Guide conformité pour RH et managers : obligations légales, biais, risques, traçabilité et actions concrètes pour sécuriser vos pratiques de recrutement.",
+      image: "/images/blog/prevenir-discriminations-recrutement-methodes-obligations-outils-rh.png",
       date: "10 avril 2026",
       readTime: "12 min",
       author: "Vanessa NOAH EWODO",
       category: "Formations",
-      keywords: "formation discrimination recrutement, formation recrutement inclusif, prévenir discriminations RH, comment éviter discrimination à l'embauche, biais inconscients recrutement, grille recrutement non discriminante, sanction discrimination recrutement, obligations recruteur discrimination, processus recrutement équitable, former recruteurs biais, discrimination à l'embauche loi, Atipik RH, Bordeaux, Lormont",
+      keywords: "prévenir discriminations embauche, discrimination à l'embauche loi, obligations recruteur discrimination, conformité recrutement RH, risque juridique recrutement, traçabilité recrutement, biais inconscients recrutement, Atipik RH Bordeaux Lormont",
       content: prevenirDiscriminationsRecrutementContent
     },
     {
@@ -89,7 +131,7 @@ const BLOG_ARTICLES = [
       slug: "recrutement-competences-methode-complete-rh-2026",
       title: "Recrutement par les compétences : méthode complète pour RH en 2026",
       excerpt: "Méthode opérationnelle en 5 étapes, KPI, erreurs à éviter et mise en œuvre concrète : guide pour les équipes RH et recruteurs qui veulent fiabiliser leurs décisions et renforcer l'inclusion.",
-      image: "/images/hero/formations.jpg",
+      image: "/images/blog/recrutement-competences-methode-complete-rh-2026.png",
       date: "3 avril 2026",
       readTime: "13 min",
       author: "Vanessa NOAH EWODO",
@@ -2884,6 +2926,52 @@ export default function BlogArticle({ article: articleProp }) {
             }}
           />
         )}
+        {/* FAQPage — recrutement sans discrimination */}
+        {article.slug === 'recrutement-sans-discrimination' && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'FAQPage',
+                mainEntity: [
+                  {
+                    '@type': 'Question',
+                    name: 'Qu’est-ce qu’un recrutement sans discrimination ?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: "Un recrutement sans discrimination repose sur des critères objectifs, identiques pour tous les candidats, avec des décisions justifiables et traçables."
+                    }
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'Comment réduire les biais en recrutement ?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: "Il faut structurer les entretiens, utiliser une grille de scoring commune, évaluer les compétences en situation et former les recruteurs aux biais cognitifs."
+                    }
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'Pourquoi la traçabilité est-elle importante dans le recrutement ?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: "La traçabilité permet de justifier les décisions, de sécuriser juridiquement le processus et d’améliorer le pilotage RH dans la durée."
+                    }
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'Quels résultats attendre d’un recrutement plus structuré ?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: "Les entreprises observent généralement une meilleure qualité d’embauche, une baisse du turnover, une réduction du temps de recrutement et des décisions plus défendables."
+                    }
+                  }
+                ]
+              })
+            }}
+          />
+        )}
         {/* FAQPage — prévenir les discriminations au recrutement */}
         {article.slug === 'prevenir-discriminations-recrutement-methodes-obligations-outils-rh' && (
           <script
@@ -2903,26 +2991,34 @@ export default function BlogArticle({ article: articleProp }) {
                   },
                   {
                     '@type': 'Question',
-                    name: 'Comment évaluer et limiter les biais inconscients en recrutement ?',
+                    name: 'Quels éléments de preuve conserver pour démontrer la conformité du recrutement ?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: "On peut structurer les entretiens (mêmes questions, grille de notation), sensibiliser les équipes aux biais de similarité et d’effet de halo, et objectiver les décisions avec des scorecards partagées. La formation des recruteurs et managers est un levier clé."
+                      text: "Conservez, de façon proportionnée et conforme au RGPD, la définition du besoin, les critères objectifs liés au poste, la trame d’entretien, les grilles de scoring, les comptes rendus factuels et la justification finale de décision. Ces éléments facilitent la démonstration de conformité en cas de contrôle ou de contestation."
                     }
                   },
                   {
                     '@type': 'Question',
-                    name: 'Comment structurer un recrutement non discriminant ?',
+                    name: 'Quels sont les risques pour l’entreprise en cas de discrimination à l’embauche ?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: "Définir le besoin et les compétences réellement nécessaires, utiliser une grille d’évaluation commune, traçabilité des critères décisionnels, éviter les questions sans lien avec le poste, et harmoniser les étapes pour tous les candidats à un même poste."
+                      text: "Les risques sont juridiques (contentieux, sanctions), réputationnels (atteinte à la marque employeur) et organisationnels (perte de talents, tensions internes). Une gouvernance RH claire et une traçabilité des décisions réduisent significativement cette exposition."
                     }
                   },
                   {
                     '@type': 'Question',
-                    name: 'Où suivre une formation prévention des discriminations au recrutement près de Bordeaux ?',
+                    name: 'Quelle différence entre discrimination directe et discrimination indirecte en recrutement ?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: "Atipik RH propose à Lormont (rive droite de Bordeaux) la formation « Prévenir les discriminations dans le recrutement » : cadre légal, biais cognitifs et recrutement objectif, en présentiel ou mixed learning selon les parcours."
+                      text: "La discrimination directe correspond à un traitement défavorable explicite fondé sur un critère prohibé. La discrimination indirecte concerne une règle apparemment neutre qui défavorise en pratique un groupe, sans justification objective et proportionnée au poste."
+                    }
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'Comment sensibiliser recruteurs et managers à la conformité anti-discrimination ?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: "Il est recommandé de former régulièrement les acteurs du recrutement, d’aligner les pratiques via des supports communs (annonces, trames, grilles), et de suivre des indicateurs simples de conformité. Cette démarche limite les écarts individuels et renforce la sécurité juridique."
                     }
                   }
                 ]
