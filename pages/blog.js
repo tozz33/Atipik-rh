@@ -14,6 +14,18 @@ export default function Blog() {
     // Articles exemples - pourront être remplacés par une base de données ou CMS plus tard
   const articles = [
     {
+      id: 32,
+      slug: "discrimination-embauche-obligations-legales-risques-solutions-entreprises",
+      title: "Discrimination à l'embauche : obligations légales, risques et solutions pour les entreprises",
+      excerpt: "Loi 2017-86, 25 critères prohibés, sanctions pénales : tout ce que vos recruteurs doivent maîtriser pour recruter en conformité. Formation disponible à Lormont.",
+      image: "/images/blog/discrimination-embauche-obligations-legales-risques-solutions.jpg",
+      date: "14 avril 2026",
+      readTime: "3 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords: "discrimination recrutement loi, obligation formation non-discrimination, risque juridique recrutement"
+    },
+    {
       id: 31,
       slug: "reduire-couts-recrutement-formation-rh",
       title: "Réduire ses coûts de recrutement grâce à la formation",

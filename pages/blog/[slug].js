@@ -9,8 +9,22 @@ import { prevenirDiscriminationsRecrutementContent } from '../../lib/blog/preven
 import { recrutementSansDiscriminationContent } from '../../lib/blog/recrutementSansDiscriminationContent';
 import { reduireCoutRecrutementFormationRhContent } from '../../lib/blog/reduireCoutRecrutementFormationRhContent';
 import { reduireCoutsRecrutementFormationContent } from '../../lib/blog/reduireCoutsRecrutementFormationContent';
+import { discriminationEmbaucheObligationsLegalesContent } from '../../lib/blog/discriminationEmbaucheObligationsLegalesContent';
 
 const BLOG_ARTICLES = [
+    {
+      id: 32,
+      slug: "discrimination-embauche-obligations-legales-risques-solutions-entreprises",
+      title: "Discrimination à l'embauche : obligations légales, risques et solutions pour les entreprises",
+      excerpt: "Loi 2017-86, 25 critères prohibés, sanctions pénales : tout ce que vos recruteurs doivent maîtriser pour recruter en conformité. Formation disponible à Lormont.",
+      image: "/images/blog/discrimination-embauche-obligations-legales-risques-solutions.jpg",
+      date: "14 avril 2026",
+      readTime: "3 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords: "discrimination recrutement loi, obligation formation non-discrimination, risque juridique recrutement",
+      content: discriminationEmbaucheObligationsLegalesContent
+    },
     {
       id: 31,
       slug: "reduire-couts-recrutement-formation-rh",
