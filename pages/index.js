@@ -6,6 +6,7 @@ import { Clock } from 'lucide-react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import CookieBanner from '../components/CookieBanner'
+import DarwinEventPopup from '../components/DarwinEventPopup'
 
 export default function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -67,6 +68,27 @@ export default function HomePage() {
   // Données du carousel - annonces et réunions informatives
   const slides = [
     {
+      id: 6,
+      title: "Et si\nvos talents étaient la où vous ne regardez pas ?",
+      subtitle: "Soirée d'échange dédiée au recrutement inclusif, pensée cornme un temps de réflexion entre entreprises.",
+      rdvText: "RDV : mardi 05 mai de 18h30 a 21h00 a Darwin Eco-systeme",
+      description: "RDV : mardi 05 mai de 18h30 a 21h00 a Darwin Eco-systeme\n\nAu programme :\n• Une table ronde collaborative entre entreprises,\n• Un temoignage concret d'un RH d'entreprise engagee,\n• Un moment convivial pour echanger librement.",
+      buttonText: "",
+      buttonLink: "",
+      image: "/images/hero/reunion-info-2.jpeg",
+      isPaiement: true
+    },
+    {
+      id: 5,
+      title: "Investissez-en vous-même",
+      subtitle: "Facilités de paiement jusqu'à 9 fois",
+      description: "Accédez à nos formations ou accompagnements grâce au paiement jusqu'à 9 fois sans frais.\nSolutions de financement pour faciliter l'accès à nos services",
+      buttonText: "Découvrir les facilités",
+      buttonLink: "/financement",
+      image: "/images/hero/reunion-info-2.jpeg",
+      isPaiement: true
+    },
+    {
       id: 1,
       title: "Un Bilan de Compétences est-il fait pour vous ?",
       subtitle: "Découvrez-le en 3 minutes",
@@ -95,16 +117,7 @@ export default function HomePage() {
       buttonLink: "/location-salles-lormont",
       image: "/images/hero/reunion-info-2.jpeg"
     },
-    {
-      id: 5,
-      title: "Investissez-en vous-même",
-      subtitle: "Facilités de paiement jusqu'à 9 fois",
-      description: "Accédez à nos formations ou accompagnements grâce au paiement jusqu'à 9 fois sans frais.\nSolutions de financement pour faciliter l'accès à nos services",
-      buttonText: "Découvrir les facilités",
-      buttonLink: "/financement",
-      image: "/images/hero/reunion-info-2.jpeg",
-      isPaiement: true
-    }
+    
   ]
 
   // Auto-défilement du carousel
@@ -128,6 +141,23 @@ export default function HomePage() {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
   }
 
+  const getMobileDescription = (slide) => {
+    const mobileDescriptionsBySlideId = {
+      1: "Faites le point sur votre avenir professionnel avec notre quiz guidé en 3 minutes.",
+      2: "Découvrez le parcours CIP/FPA, les débouchés et les financements lors de nos réunions d'information.",
+      4: "Louez nos espaces modernes à Lormont pour vos formations, réunions et séminaires.",
+      5: "Bénéficiez d'un paiement jusqu'à 9 fois pour faciliter l'accès à nos formations.",
+      6: "RDV mardi 05 mai de 18h30 à 21h00 à Darwin Eco-système pour une soirée recrutement inclusif."
+    }
+
+    const shortText = mobileDescriptionsBySlideId[slide.id]
+    if (shortText) return shortText
+
+    const maxLength = 120
+    if (!slide.description || slide.description.length <= maxLength) return slide.description
+    return `${slide.description.slice(0, maxLength).trimEnd()}...`
+  }
+
   return (
     <>
       <Head>
@@ -148,7 +178,7 @@ export default function HomePage() {
           <Header isFixed={true} />
         
         {/* Bandeau déroulant (Carousel) - Style compact */}
-        <section className="relative h-[360px] lg:h-[430px] overflow-hidden rounded-lg mx-4 lg:mx-8 mt-24 shadow-2xl">
+        <section className="relative h-[560px] max-[375px]:h-[600px] sm:h-[520px] md:h-[500px] lg:h-[430px] overflow-hidden rounded-lg mx-2 max-[375px]:mx-1.5 sm:mx-4 lg:mx-8 mt-24 shadow-2xl">
           {slides.map((slide, index) => (
             <div
               key={slide.id}
@@ -185,45 +215,57 @@ export default function HomePage() {
 
               {/* Contenu - Layout horizontal */}
               <div className="relative h-full flex items-center">
-                <div className="container mx-auto px-6 lg:px-12">
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div className="container mx-auto px-3 max-[375px]:px-2.5 sm:px-6 lg:px-12">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-4 md:gap-5 lg:gap-8 items-center">
                     {/* Texte à gauche */}
-                    <div className="text-white space-y-3 max-w-xl">
+                    <div className={`text-white space-y-1.5 max-[375px]:space-y-1 sm:space-y-3 max-w-xl ${slide.id === 5 ? 'lg:-mt-10' : ''}`}>
                       {slide.isReunion ? (
-                        <h1 className="text-2xl lg:text-4xl font-bold leading-tight text-white">
+                        <h1 className="text-xl max-[375px]:text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-white">
                           Réunions d'information collective
                         </h1>
                       ) : slide.isPaiement ? (
-                        <h1 className="text-2xl lg:text-4xl font-bold leading-tight text-white">
+                        <h1 className="text-xl max-[375px]:text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-white">
                           {slide.title}
                         </h1>
                       ) : (
-                        <h1 className="text-2xl lg:text-4xl font-bold leading-tight">
+                        <h1 className="text-xl max-[375px]:text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
                           {slide.title}
                         </h1>
                       )}
                       {slide.isReunion ? (
-                        <p className="text-base lg:text-lg font-semibold text-white opacity-95">
+                        <p className="text-sm max-[375px]:text-xs sm:text-base lg:text-lg font-semibold text-white opacity-95">
                           CIP &amp; FPA
                         </p>
                       ) : slide.isPaiement ? (
-                        <p className="text-base lg:text-lg font-semibold text-white opacity-95">
+                        <p className="text-sm max-[375px]:text-xs sm:text-base lg:text-lg font-semibold text-white opacity-95">
                           {slide.subtitle}
                         </p>
                       ) : (
                         slide.subtitle && slide.subtitle.trim() !== "" && (
-                          <p className="text-base lg:text-lg font-semibold opacity-95">
+                          <p className="text-sm max-[375px]:text-xs sm:text-base lg:text-lg font-semibold opacity-95">
                             {slide.subtitle}
                           </p>
                         )
                       )}
-                      <p className="text-sm lg:text-base opacity-90 leading-relaxed whitespace-pre-line">
-                        {slide.description}
-                      </p>
+                      {slide.id === 6 ? (
+                        <p className="text-xs max-[375px]:text-[11px] sm:text-sm lg:text-base opacity-90 leading-relaxed whitespace-pre-line">
+                          <span className="sm:hidden">{getMobileDescription(slide)}</span>
+                          <span className="hidden sm:inline">
+                            <span className="text-accent-500 font-semibold">{slide.rdvText}</span>
+                            {'\n\n'}
+                            {slide.description.replace(`${slide.rdvText}\n\n`, '')}
+                          </span>
+                        </p>
+                      ) : (
+                        <p className="text-xs max-[375px]:text-[11px] sm:text-sm lg:text-base opacity-90 leading-relaxed whitespace-pre-line">
+                          <span className="sm:hidden">{getMobileDescription(slide)}</span>
+                          <span className="hidden sm:inline">{slide.description}</span>
+                        </p>
+                      )}
                       {!slide.isQuiz && !slide.isReunion && !slide.isPaiement && (
                         <a
                           href={slide.buttonLink}
-                          className={`inline-flex items-center px-8 py-4 bg-white font-bold rounded-lg transition-all duration-300 shadow-xl text-base lg:text-lg mt-6 transform hover:scale-105 ${
+                          className={`inline-flex items-center px-4 max-[375px]:px-3 sm:px-8 py-2.5 max-[375px]:py-2 sm:py-4 bg-white font-bold rounded-lg transition-all duration-300 shadow-xl text-sm max-[375px]:text-xs sm:text-base lg:text-lg mt-3 sm:mt-6 transform hover:scale-105 ${
                             slide.isReunion
                               ? 'text-accent-500 hover:bg-accent-300' 
                               : slide.id === 4
@@ -234,6 +276,56 @@ export default function HomePage() {
                           {slide.buttonText}
                         </a>
                       )}
+                    </div>
+
+                    {/* Fenêtre d'information mobile */}
+                    <div className="lg:hidden">
+                      {slide.isQuiz ? (
+                        <div className="bg-white/95 backdrop-blur-sm rounded-xl p-3 max-[375px]:p-2.5 sm:p-4 border border-white/20 text-neutral-900 shadow-xl max-w-xs w-full sm:w-auto">
+                          <div className="flex items-center justify-center gap-2 mb-3 sm:mb-4">
+                            <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-accent-500" />
+                            <span className="text-xl max-[375px]:text-lg sm:text-2xl font-brittany text-accent-500">3 min</span>
+                          </div>
+                          <Link
+                            href="/bilan-de-competences/quiz"
+                            className="w-full inline-flex items-center justify-center px-4 py-2 max-[375px]:py-1.5 sm:py-2.5 bg-gradient-to-r from-accent-500 to-accent-600 text-white font-semibold rounded-lg hover:from-accent-600 hover:to-accent-600 transition-all duration-300 text-xs sm:text-sm"
+                          >
+                            Commencer le quiz
+                          </Link>
+                        </div>
+                      ) : slide.isReunion ? (
+                        <div className="bg-white/95 backdrop-blur-sm rounded-xl p-3 max-[375px]:p-2.5 sm:p-4 border border-accent-300 text-neutral-900 shadow-xl max-w-xs w-full sm:w-auto">
+                          <h3 className="text-sm sm:text-base font-bold mb-1.5 sm:mb-2 text-[#013F63] leading-snug">
+                            <span className="font-brittany text-lg sm:text-xl text-accent-500 block mb-1">
+                              Ces réunions
+                            </span>
+                            sont organisées en présentiel ou en distanciel.
+                          </h3>
+                          <p className="text-[10px] sm:text-[11px] text-neutral-900 mb-2.5 sm:mb-3">
+                            Gratuite • Sans engagement • Places limitées
+                          </p>
+                          <Link
+                            href="/s-inscrire"
+                            className="w-full inline-flex items-center justify-center px-4 py-2 max-[375px]:py-1.5 sm:py-2.5 bg-accent-500 hover:bg-accent-600 text-white font-bold rounded-lg transition-all duration-300 text-xs sm:text-sm"
+                          >
+                            Voir les prochaines dates
+                          </Link>
+                        </div>
+                      ) : slide.isPaiement ? (
+                        <div className="bg-white/95 backdrop-blur-sm rounded-xl p-3 max-[375px]:p-2.5 sm:p-4 border border-white/20 text-neutral-900 shadow-xl max-w-xs w-full sm:w-auto">
+                          {slide.id === 5 && (
+                            <p className="text-[11px] sm:text-xs text-[#013F63] font-bold leading-relaxed mb-2.5 sm:mb-3">
+                              Solutions de financement pour faciliter l'accès à nos services
+                            </p>
+                          )}
+                          <Link
+                            href={slide.id === 6 ? "https://forms.gle/3Tcs941QpcegRCMA7" : "/financement"}
+                            className="w-full inline-flex items-center justify-center px-4 py-2 max-[375px]:py-1.5 sm:py-2.5 bg-gradient-to-r from-accent-500 to-accent-600 text-white font-semibold rounded-lg hover:from-accent-600 hover:to-accent-600 transition-all duration-300 text-xs sm:text-sm"
+                          >
+                            {slide.id === 6 ? "juste ici" : "accédez ici"}
+                          </Link>
+                        </div>
+                      ) : null}
                     </div>
                     
                     {/* Fenêtre d'information à droite */}
@@ -276,25 +368,28 @@ export default function HomePage() {
                           </Link>
                         </div>
                       ) : slide.isPaiement ? (
-                        /* Fenêtre pour les facilités de paiement */
-                        <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 border border-accent-300 text-neutral-900 max-w-sm shadow-xl">
-                          <div className="text-center mb-4">
-                            <h3 className="text-lg lg:text-xl font-bold mb-1 text-[#013F63] leading-snug">
-                              <span className="font-brittany text-2xl lg:text-3xl text-accent-500 block mb-1">
-                                Ces facilités
-                              </span>
-                              sont disponibles pour toutes nos formations et accompagnements.
-                            </h3>
-                            <p className="text-xs text-neutral-900 mt-1">
-                              Sans frais • Jusqu'à 9 fois • Accessible à tous
-                            </p>
+                        /* Fenêtre style quiz pour les slides paiement */
+                        <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 border border-white/20 text-neutral-900 max-w-sm shadow-xl">
+                          <div className="text-center">
+                            {slide.id === 5 ? (
+                              <p className="text-sm text-[#013F63] font-bold leading-relaxed mb-4">
+                                Solutions de financement pour faciliter l'accès à nos services
+                              </p>
+                            ) : (
+                              <div className="flex items-center justify-center gap-2 mb-6">
+                                <Clock className="w-6 h-6 text-accent-500" />
+                                <span className="text-4xl font-brittany text-accent-500">Incrivez-vous</span>
+                              </div>
+                            )}
+                            <Link
+                              href={slide.id === 6 ? "https://forms.gle/3Tcs941QpcegRCMA7" : "/financement"}
+                              className={`inline-flex mx-auto items-center justify-center px-6 py-3 bg-gradient-to-r from-accent-500 to-accent-600 text-white font-semibold hover:from-accent-600 hover:to-accent-600 transition-all duration-300 shadow-lg ${
+                                slide.id === 5 ? 'w-[260px] max-w-full rounded-2xl' : 'w-full rounded-xl'
+                              }`}
+                            >
+                              {slide.id === 6 ? "juste ici" : "accédez ici"}
+                            </Link>
                           </div>
-                          <Link
-                            href="/financement"
-                            className="w-full inline-flex items-center justify-center px-6 py-3 bg-accent-500 hover:bg-accent-600 text-white font-bold rounded-xl transition-all duration-300 shadow-lg text-base"
-                          >
-                            Découvrir les facilités
-                          </Link>
                         </div>
                       ) : null}
                     </div>
@@ -307,30 +402,30 @@ export default function HomePage() {
           {/* Boutons de navigation - Plus discrets */}
           <button
             onClick={prevSlide}
-            className="absolute left-3 top-1/2 transform -translate-y-1/2 bg-black/30 backdrop-blur-sm text-white p-2 rounded-full hover:bg-black/50 transition-colors duration-300 z-10"
+            className="absolute left-2 max-[375px]:left-1.5 sm:left-3 top-1/2 transform -translate-y-1/2 bg-black/30 backdrop-blur-sm text-white p-1.5 max-[375px]:p-1 sm:p-2 rounded-full hover:bg-black/50 transition-colors duration-300 z-10"
           >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
           
           <button
             onClick={nextSlide}
-            className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-black/30 backdrop-blur-sm text-white p-2 rounded-full hover:bg-black/50 transition-colors duration-300 z-10"
+            className="absolute right-2 max-[375px]:right-1.5 sm:right-3 top-1/2 transform -translate-y-1/2 bg-black/30 backdrop-blur-sm text-white p-1.5 max-[375px]:p-1 sm:p-2 rounded-full hover:bg-black/50 transition-colors duration-300 z-10"
           >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
 
           {/* Indicateurs de slides - Style moderne */}
-          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+          <div className="absolute bottom-2.5 sm:bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-1.5 sm:space-x-2">
             {slides.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  index === currentSlide ? 'bg-white w-6' : 'bg-white/60'
+                className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full transition-all duration-300 ${
+                  index === currentSlide ? 'bg-white ring-2 ring-white/70' : 'bg-white/60'
                 }`}
               />
             ))}
@@ -467,6 +562,7 @@ export default function HomePage() {
         
         {/* Cookie Banner */}
         <CookieBanner />
+        <DarwinEventPopup />
       </div>
     </>
   )
