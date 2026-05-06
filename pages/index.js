@@ -6,7 +6,6 @@ import { Clock } from 'lucide-react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import CookieBanner from '../components/CookieBanner'
-import DarwinEventPopup from '../components/DarwinEventPopup'
 
 export default function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -67,17 +66,6 @@ export default function HomePage() {
 
   // Données du carousel - annonces et réunions informatives
   const slides = [
-    {
-      id: 6,
-      title: "Et si\nvos talents étaient la où vous ne regardez pas ?",
-      subtitle: "Soirée d'échange dédiée au recrutement inclusif, pensée cornme un temps de réflexion entre entreprises.",
-      rdvText: "RDV : mardi 05 mai de 18h30 a 21h00 a Darwin Eco-systeme",
-      description: "RDV : mardi 05 mai de 18h30 a 21h00 a Darwin Eco-systeme\n\nAu programme :\n• Une table ronde collaborative entre entreprises,\n• Un temoignage concret d'un RH d'entreprise engagee,\n• Un moment convivial pour echanger librement.",
-      buttonText: "",
-      buttonLink: "",
-      image: "/images/hero/reunion-info-2.jpeg",
-      isPaiement: true
-    },
     {
       id: 5,
       title: "Investissez-en vous-même",
@@ -146,8 +134,7 @@ export default function HomePage() {
       1: "Faites le point sur votre avenir professionnel avec notre quiz guidé en 3 minutes.",
       2: "Découvrez le parcours CIP/FPA, les débouchés et les financements lors de nos réunions d'information.",
       4: "Louez nos espaces modernes à Lormont pour vos formations, réunions et séminaires.",
-      5: "Bénéficiez d'un paiement jusqu'à 9 fois pour faciliter l'accès à nos formations.",
-      6: "RDV mardi 05 mai de 18h30 à 21h00 à Darwin Eco-système pour une soirée recrutement inclusif."
+      5: "Bénéficiez d'un paiement jusqu'à 9 fois pour faciliter l'accès à nos formations."
     }
 
     const shortText = mobileDescriptionsBySlideId[slide.id]
@@ -247,21 +234,10 @@ export default function HomePage() {
                           </p>
                         )
                       )}
-                      {slide.id === 6 ? (
-                        <p className="text-xs max-[375px]:text-[11px] sm:text-sm lg:text-base opacity-90 leading-relaxed whitespace-pre-line">
-                          <span className="sm:hidden">{getMobileDescription(slide)}</span>
-                          <span className="hidden sm:inline">
-                            <span className="text-accent-500 font-semibold">{slide.rdvText}</span>
-                            {'\n\n'}
-                            {slide.description.replace(`${slide.rdvText}\n\n`, '')}
-                          </span>
-                        </p>
-                      ) : (
-                        <p className="text-xs max-[375px]:text-[11px] sm:text-sm lg:text-base opacity-90 leading-relaxed whitespace-pre-line">
-                          <span className="sm:hidden">{getMobileDescription(slide)}</span>
-                          <span className="hidden sm:inline">{slide.description}</span>
-                        </p>
-                      )}
+                      <p className="text-xs max-[375px]:text-[11px] sm:text-sm lg:text-base opacity-90 leading-relaxed whitespace-pre-line">
+                        <span className="sm:hidden">{getMobileDescription(slide)}</span>
+                        <span className="hidden sm:inline">{slide.description}</span>
+                      </p>
                       {!slide.isQuiz && !slide.isReunion && !slide.isPaiement && (
                         <a
                           href={slide.buttonLink}
@@ -319,10 +295,10 @@ export default function HomePage() {
                             </p>
                           )}
                           <Link
-                            href={slide.id === 6 ? "https://forms.gle/3Tcs941QpcegRCMA7" : "/financement"}
+                            href="/financement"
                             className="w-full inline-flex items-center justify-center px-4 py-2 max-[375px]:py-1.5 sm:py-2.5 bg-gradient-to-r from-accent-500 to-accent-600 text-white font-semibold rounded-lg hover:from-accent-600 hover:to-accent-600 transition-all duration-300 text-xs sm:text-sm"
                           >
-                            {slide.id === 6 ? "juste ici" : "accédez ici"}
+                            accédez ici
                           </Link>
                         </div>
                       ) : null}
@@ -382,12 +358,12 @@ export default function HomePage() {
                               </div>
                             )}
                             <Link
-                              href={slide.id === 6 ? "https://forms.gle/3Tcs941QpcegRCMA7" : "/financement"}
+                              href="/financement"
                               className={`inline-flex mx-auto items-center justify-center px-6 py-3 bg-gradient-to-r from-accent-500 to-accent-600 text-white font-semibold hover:from-accent-600 hover:to-accent-600 transition-all duration-300 shadow-lg ${
                                 slide.id === 5 ? 'w-[260px] max-w-full rounded-2xl' : 'w-full rounded-xl'
                               }`}
                             >
-                              {slide.id === 6 ? "juste ici" : "accédez ici"}
+                              accédez ici
                             </Link>
                           </div>
                         </div>
@@ -562,7 +538,6 @@ export default function HomePage() {
         
         {/* Cookie Banner */}
         <CookieBanner />
-        <DarwinEventPopup />
       </div>
     </>
   )

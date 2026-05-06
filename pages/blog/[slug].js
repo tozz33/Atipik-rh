@@ -10,8 +10,38 @@ import { recrutementSansDiscriminationContent } from '../../lib/blog/recrutement
 import { reduireCoutRecrutementFormationRhContent } from '../../lib/blog/reduireCoutRecrutementFormationRhContent';
 import { reduireCoutsRecrutementFormationContent } from '../../lib/blog/reduireCoutsRecrutementFormationContent';
 import { discriminationEmbaucheObligationsLegalesContent } from '../../lib/blog/discriminationEmbaucheObligationsLegalesContent';
+import {
+  biaisCognitifsRecrutementContent,
+  biaisCognitifsRecrutementFaqItems,
+  biaisCognitifsRecrutementInternalLinks,
+  biaisCognitifsRecrutementSecondaryKeywords,
+} from '../../lib/blog/biaisCognitifsRecrutementContent';
+import { getAllArticles, getArticleBySlug } from '../../lib/blog/articleRepository';
+import { buildArticleSeo } from '../../lib/blog/articleSeoMapper';
 
 const BLOG_ARTICLES = [
+    {
+      id: 33,
+      slug: "biais-cognitifs-recrutement-methode-bordeaux",
+      title: "Biais cognitifs dans le recrutement : comment neutraliser les erreurs de jugement qui vous coûtent cher",
+      excerpt: "Les biais cognitifs faussent vos recrutements et exposent votre entreprise à des risques juridiques. Découvrez la méthode pour recruter objectivement à Bordeaux.",
+      image: "/images/hero/formations.jpg",
+      date: "6 mai 2026",
+      readTime: "12 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords: "biais cognitifs recrutement, recrutement objectif compétences, formation recrutement sans discrimination, grille évaluation recrutement, formation prévention discrimination Bordeaux",
+      seo: {
+        metaTitle: "Biais cognitifs et recrutement : la méthode | Atipik RH",
+        metaDescription:
+          "Les biais cognitifs faussent vos recrutements et exposent votre entreprise à des risques juridiques. Découvrez la méthode pour recruter objectivement à Bordeaux.",
+        canonicalPath: "/blog/biais-cognitifs-recrutement-methode-bordeaux",
+        secondaryKeywords: biaisCognitifsRecrutementSecondaryKeywords,
+      },
+      faqItems: biaisCognitifsRecrutementFaqItems,
+      internalLinks: biaisCognitifsRecrutementInternalLinks,
+      content: biaisCognitifsRecrutementContent
+    },
     {
       id: 32,
       slug: "discrimination-embauche-obligations-legales-risques-solutions-entreprises",
@@ -2594,7 +2624,7 @@ const BLOG_ARTICLES = [
 export default function BlogArticle({ article: articleProp }) {
   const router = useRouter();
   const { slug } = router.query;
-  const articles = BLOG_ARTICLES;
+  const articles = getAllArticles(BLOG_ARTICLES);
 
   // Fonction pour parser les dates françaises
   const monthMap = {
@@ -2629,7 +2659,7 @@ export default function BlogArticle({ article: articleProp }) {
     (a, b) => parseDate(b.date) - parseDate(a.date)
   );
 
-  const article = articleProp ?? sortedArticles.find(a => a.slug === slug);
+  const article = articleProp ?? sortedArticles.find((a) => a.slug === slug);
 
   if (!article) {
     return (
@@ -2653,80 +2683,28 @@ export default function BlogArticle({ article: articleProp }) {
     );
   }
 
-  // Fonction pour convertir la date française en format ISO
-  const convertFrenchDateToISO = (frenchDate) => {
-    const monthMap = {
-      'janvier': '01', 'février': '02', 'mars': '03', 'avril': '04',
-      'mai': '05', 'juin': '06', 'juillet': '07', 'août': '08',
-      'septembre': '09', 'octobre': '10', 'novembre': '11', 'décembre': '12'
-    };
-    
-    const parts = frenchDate.split(' ');
-    if (parts.length === 3) {
-      const day = parts[0].padStart(2, '0');
-      const month = monthMap[parts[1]];
-      const year = parts[2];
-      
-      if (month) {
-        return `${year}-${month}-${day}T00:00:00.000Z`;
-      }
-    }
-    
-    // Fallback si le parsing échoue
-    return new Date().toISOString();
-  };
-
-  // URL image absolue pour schémas et meta (éviter double préfixe si déjà absolu)
-  const imageUrl = article.image.startsWith('http') ? article.image : `https://www.atipikrh.com${article.image}`;
-
-  // Schema.org pour le SEO
-  const articleSchema = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": article.title,
-    "description": article.excerpt,
-    "image": imageUrl,
-    "author": {
-      "@type": "Person",
-      "name": article.author
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Atipik RH",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.atipikrh.com/images/logos/atipik-logo.png"
-      }
-    },
-    "datePublished": convertFrenchDateToISO(article.date),
-    "dateModified": convertFrenchDateToISO(article.date),
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": `https://www.atipikrh.com/blog/${article.slug}`
-    }
-  };
-  const pageTitle = article?.title ? `${article.title} | Blog Atipik RH` : 'Blog | Atipik RH';
+  const { canonicalUrl, imageUrl, pageTitle, articleSchema, faqSchema } = buildArticleSeo(article);
 
   return (
     <>
       <Head>
         <title>{pageTitle}</title>
-        <meta name="description" content={article.excerpt} />
+        <meta name="description" content={article.seo.metaDescription} />
         <meta name="keywords" content={article.keywords} />
-        <link rel="canonical" href={`https://www.atipikrh.com/blog/${article.slug}`} />
+        <link rel="canonical" href={canonicalUrl} />
         
         {/* Open Graph pour les réseaux sociaux */}
         <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={article.excerpt} />
+        <meta property="og:description" content={article.seo.metaDescription} />
         <meta property="og:image" content={imageUrl} />
-        <meta property="og:url" content={`https://www.atipikrh.com/blog/${article.slug}`} />
+        <meta property="og:url" content={canonicalUrl} />
         <meta property="og:type" content="article" />
         <meta property="og:site_name" content="Atipik RH" />
         
         {/* Twitter Cards */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={pageTitle} />
-        <meta name="twitter:description" content={article.excerpt} />
+        <meta name="twitter:description" content={article.seo.metaDescription} />
         <meta name="twitter:image" content={imageUrl} />
         
         {/* Schema.org JSON-LD */}
@@ -2734,309 +2712,11 @@ export default function BlogArticle({ article: articleProp }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
         />
-        {/* FAQPage pour extraits enrichis et IA (article VAE vs bilan) */}
-        {article.slug === 'vae-ou-bilan-competences-que-choisir-selon-parcours' && (
+        {faqSchema && (
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                '@context': 'https://schema.org',
-                '@type': 'FAQPage',
-                mainEntity: [
-                  {
-                    '@type': 'Question',
-                    name: 'Ai-je un objectif professionnel clair ?',
-                    acceptedAnswer: {
-                      '@type': 'Answer',
-                      text: 'Oui, je sais exactement ce que je veux → la VAE est pertinente. Non, j\'hésite, je doute → le bilan de compétences est la meilleure première étape.'
-                    }
-                  },
-                  {
-                    '@type': 'Question',
-                    name: 'Mon expérience correspond-elle à un diplôme précis ?',
-                    acceptedAnswer: {
-                      '@type': 'Answer',
-                      text: 'Oui → VAE. Pas vraiment / je ne sais pas → bilan de compétences.'
-                    }
-                  },
-                  {
-                    '@type': 'Question',
-                    name: 'Suis-je dans une logique de validation ou de réflexion ?',
-                    acceptedAnswer: {
-                      '@type': 'Answer',
-                      text: 'Valider, sécuriser, officialiser → VAE. Explorer, comprendre, construire → bilan de compétences.'
-                    }
-                  }
-                ]
-              })
-            }}
-          />
-        )}
-        {/* FAQPage pour l'article financement reconversion 2026 */}
-        {article.slug === 'financer-reconversion-professionnelle-2026-cpf-aides-regionales' && (
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                '@context': 'https://schema.org',
-                '@type': 'FAQPage',
-                mainEntity: [
-                  {
-                    '@type': 'Question',
-                    name: 'Peut-on financer une reconversion professionnelle après 40 ans avec le CPF ?',
-                    acceptedAnswer: {
-                      '@type': 'Answer',
-                      text: "Oui. Le CPF peut financer une reconversion professionnelle après 40 ans, à condition que la formation soit certifiante et éligible. Dans de nombreux cas, il est possible de compléter avec une aide régionale ou un abondement employeur pour sécuriser le projet."
-                    }
-                  },
-                  {
-                    '@type': 'Question',
-                    name: 'Comment éviter un reste à charge sur sa formation en 2026 ?',
-                    acceptedAnswer: {
-                      '@type': 'Answer',
-                      text: "Pour éviter un reste à charge CPF, il est recommandé de combiner plusieurs dispositifs : CPF, aide régionale, employeur et France Travail. Un accompagnement spécialisé permet d’identifier les cumuls possibles et de construire un plan de financement adapté à votre situation."
-                    }
-                  },
-                  {
-                    '@type': 'Question',
-                    name: 'Quelle est la meilleure solution pour financer un bilan de compétences ?',
-                    acceptedAnswer: {
-                      '@type': 'Answer',
-                      text: "Le bilan de compétences peut être financé via le CPF, par l’employeur ou par certains dispositifs régionaux. La meilleure solution dépend de votre statut (salarié, indépendant, demandeur d’emploi) et de votre projet de reconversion."
-                    }
-                  }
-                ]
-              })
-            }}
-          />
-        )}
-        {/* FAQPage — location salle formation Lormont */}
-        {article.slug === 'location-salle-formation-lormont-proche-bordeaux' && (
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                '@context': 'https://schema.org',
-                '@type': 'FAQPage',
-                mainEntity: [
-                  {
-                    '@type': 'Question',
-                    name: 'Proposez-vous la location de salle de formation à Lormont ?',
-                    acceptedAnswer: {
-                      '@type': 'Answer',
-                      text: "Oui. Atipik RH met à disposition des salles de formation à Lormont, proche de Bordeaux (rive droite), pour formateurs, entreprises et professionnels RH, avec réservation flexible et accompagnement personnalisé."
-                    }
-                  },
-                  {
-                    '@type': 'Question',
-                    name: 'Quels équipements sont inclus dans la location de salle ?',
-                    acceptedAnswer: {
-                      '@type': 'Answer',
-                      text: "Les salles sont équipées d'un écran et vidéoprojecteur, du Wi-Fi haut débit, de paperboards et d'un mobilier confortable, dans un cadre lumineux et professionnel."
-                    }
-                  },
-                  {
-                    '@type': 'Question',
-                    name: 'En combien de temps puis-je recevoir un devis pour louer une salle ?',
-                    acceptedAnswer: {
-                      '@type': 'Answer',
-                      text: "Atipik RH s'engage à répondre sous 24 heures avec un devis personnalisé adapté à votre date, votre nombre de participants et votre format (formation, atelier, coaching)."
-                    }
-                  }
-                ]
-              })
-            }}
-          />
-        )}
-        {/* FAQPage — recrutement par les compétences RH 2026 */}
-        {article.slug === 'recrutement-competences-methode-complete-rh-2026' && (
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                '@context': 'https://schema.org',
-                '@type': 'FAQPage',
-                mainEntity: [
-                  {
-                    '@type': 'Question',
-                    name: 'Qu’est-ce que le recrutement par les compétences ?',
-                    acceptedAnswer: {
-                      '@type': 'Answer',
-                      text: "C’est une approche qui consiste à évaluer les candidats sur les compétences techniques et comportementales nécessaires au poste, avec des critères structurés et comparables, plutôt que de se concentrer uniquement sur le CV ou le parcours."
-                    }
-                  },
-                  {
-                    '@type': 'Question',
-                    name: 'Quels KPI suivre pour améliorer ses recrutements ?',
-                    acceptedAnswer: {
-                      '@type': 'Answer',
-                      text: "On peut suivre entre autres le taux de réussite à l’issue de la période d’essai, le turnover à 6 ou 12 mois, le délai moyen de recrutement et la satisfaction des managers, afin de piloter la qualité d’embauche."
-                    }
-                  },
-                  {
-                    '@type': 'Question',
-                    name: 'Comment évaluer les soft skills en recrutement ?',
-                    acceptedAnswer: {
-                      '@type': 'Answer',
-                      text: "En définissant des comportements observables, en utilisant des mises en situation ou des entretiens structurés, et en notant les réponses sur une grille commune — plutôt qu’en restant sur des impressions générales."
-                    }
-                  },
-                  {
-                    '@type': 'Question',
-                    name: 'Où se former au recrutement par les compétences près de Bordeaux ?',
-                    acceptedAnswer: {
-                      '@type': 'Answer',
-                      text: "Atipik RH propose des formations professionnalisantes à Lormont (proche Bordeaux), notamment sur la pratique des recrutements fondés sur les compétences et l’inclusion, avec des modalités en présentiel ou mixed learning selon les parcours."
-                    }
-                  }
-                ]
-              })
-            }}
-          />
-        )}
-        {/* FAQPage — comment améliorer ses pratiques de recrutement */}
-        {article.slug === 'comment-ameliorer-pratiques-recrutement-rh-2026' && (
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                '@context': 'https://schema.org',
-                '@type': 'FAQPage',
-                mainEntity: [
-                  {
-                    '@type': 'Question',
-                    name: 'Comment mener un entretien de recrutement structuré ?',
-                    acceptedAnswer: {
-                      '@type': 'Answer',
-                      text: "On définit des critères et des questions communes à tous les candidats pour un même poste, on note sur une grille (scorecard) et on évite les décisions uniquement fondées sur l’impression générale. Des guides d’entretien et des barèmes partagés entre interviewers renforcent la comparabilité."
-                    }
-                  },
-                  {
-                    '@type': 'Question',
-                    name: 'Quelles sont les étapes d’un processus de recrutement efficace ?',
-                    acceptedAnswer: {
-                      '@type': 'Answer',
-                      text: "Typiquement : clarification du besoin et du profil, sourcing et diffusion, tri sur critères objectifs, entretiens structurés et éventuellement mises en situation, puis décision objectivée et intégration du collaborateur — avec pilotage par quelques indicateurs."
-                    }
-                  },
-                  {
-                    '@type': 'Question',
-                    name: 'Comment réduire les erreurs de recrutement en entreprise ?',
-                    acceptedAnswer: {
-                      '@type': 'Answer',
-                      text: "En cadrant le besoin, en standardisant les entretiens, en formant les managers recruteurs, en limitant les biais par des grilles communes et en mesurant la qualité d’embauche (période d’essai, turnover récent, satisfaction managers)."
-                    }
-                  },
-                  {
-                    '@type': 'Question',
-                    name: 'Où suivre une formation recrutement RH près de Bordeaux ?',
-                    acceptedAnswer: {
-                      '@type': 'Answer',
-                      text: "Atipik RH propose des formations professionnalisantes à Lormont (proche Bordeaux), notamment pour renforcer les pratiques de recrutement et la prévention des discriminations, en présentiel ou mixed learning selon les parcours."
-                    }
-                  }
-                ]
-              })
-            }}
-          />
-        )}
-        {/* FAQPage — recrutement sans discrimination */}
-        {article.slug === 'recrutement-sans-discrimination' && (
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                '@context': 'https://schema.org',
-                '@type': 'FAQPage',
-                mainEntity: [
-                  {
-                    '@type': 'Question',
-                    name: 'Qu’est-ce qu’un recrutement sans discrimination ?',
-                    acceptedAnswer: {
-                      '@type': 'Answer',
-                      text: "Un recrutement sans discrimination repose sur des critères objectifs, identiques pour tous les candidats, avec des décisions justifiables et traçables."
-                    }
-                  },
-                  {
-                    '@type': 'Question',
-                    name: 'Comment réduire les biais en recrutement ?',
-                    acceptedAnswer: {
-                      '@type': 'Answer',
-                      text: "Il faut structurer les entretiens, utiliser une grille de scoring commune, évaluer les compétences en situation et former les recruteurs aux biais cognitifs."
-                    }
-                  },
-                  {
-                    '@type': 'Question',
-                    name: 'Pourquoi la traçabilité est-elle importante dans le recrutement ?',
-                    acceptedAnswer: {
-                      '@type': 'Answer',
-                      text: "La traçabilité permet de justifier les décisions, de sécuriser juridiquement le processus et d’améliorer le pilotage RH dans la durée."
-                    }
-                  },
-                  {
-                    '@type': 'Question',
-                    name: 'Quels résultats attendre d’un recrutement plus structuré ?',
-                    acceptedAnswer: {
-                      '@type': 'Answer',
-                      text: "Les entreprises observent généralement une meilleure qualité d’embauche, une baisse du turnover, une réduction du temps de recrutement et des décisions plus défendables."
-                    }
-                  }
-                ]
-              })
-            }}
-          />
-        )}
-        {/* FAQPage — prévenir les discriminations au recrutement */}
-        {article.slug === 'prevenir-discriminations-recrutement-methodes-obligations-outils-rh' && (
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                '@context': 'https://schema.org',
-                '@type': 'FAQPage',
-                mainEntity: [
-                  {
-                    '@type': 'Question',
-                    name: 'Quelles obligations pour le recruteur en matière de non-discrimination à l’embauche ?',
-                    acceptedAnswer: {
-                      '@type': 'Answer',
-                      text: "Le Code du travail et le droit pénal encadrent l’embauche et interdisent de refuser l’emploi d’un candidat ou de favoriser une personne pour des motifs discriminatoires liés notamment à l’origine, au sexe, aux mœurs, à l’orientation sexuelle, à l’âge, à la situation de famille, aux caractéristiques génétiques, à l’appartenance ou non-appartenance à une ethnie, une nation ou une race, aux opinions politiques, aux activités syndicales, à l’appartenance ou non-appartenance à une religion, aux convictions, à la santé, au handicap ou à l’apparence physique. Les recruteurs doivent veiller à des critères objectifs, proportionnés et liés au poste. Pour une analyse précise, un conseil juridique est recommandé."
-                    }
-                  },
-                  {
-                    '@type': 'Question',
-                    name: 'Quels éléments de preuve conserver pour démontrer la conformité du recrutement ?',
-                    acceptedAnswer: {
-                      '@type': 'Answer',
-                      text: "Conservez, de façon proportionnée et conforme au RGPD, la définition du besoin, les critères objectifs liés au poste, la trame d’entretien, les grilles de scoring, les comptes rendus factuels et la justification finale de décision. Ces éléments facilitent la démonstration de conformité en cas de contrôle ou de contestation."
-                    }
-                  },
-                  {
-                    '@type': 'Question',
-                    name: 'Quels sont les risques pour l’entreprise en cas de discrimination à l’embauche ?',
-                    acceptedAnswer: {
-                      '@type': 'Answer',
-                      text: "Les risques sont juridiques (contentieux, sanctions), réputationnels (atteinte à la marque employeur) et organisationnels (perte de talents, tensions internes). Une gouvernance RH claire et une traçabilité des décisions réduisent significativement cette exposition."
-                    }
-                  },
-                  {
-                    '@type': 'Question',
-                    name: 'Quelle différence entre discrimination directe et discrimination indirecte en recrutement ?',
-                    acceptedAnswer: {
-                      '@type': 'Answer',
-                      text: "La discrimination directe correspond à un traitement défavorable explicite fondé sur un critère prohibé. La discrimination indirecte concerne une règle apparemment neutre qui défavorise en pratique un groupe, sans justification objective et proportionnée au poste."
-                    }
-                  },
-                  {
-                    '@type': 'Question',
-                    name: 'Comment sensibiliser recruteurs et managers à la conformité anti-discrimination ?',
-                    acceptedAnswer: {
-                      '@type': 'Answer',
-                      text: "Il est recommandé de former régulièrement les acteurs du recrutement, d’aligner les pratiques via des supports communs (annonces, trames, grilles), et de suivre des indicateurs simples de conformité. Cette démarche limite les écarts individuels et renforce la sécurité juridique."
-                    }
-                  }
-                ]
-              })
+              __html: JSON.stringify(faqSchema)
             }}
           />
         )}
@@ -3173,12 +2853,12 @@ export default function BlogArticle({ article: articleProp }) {
 }
 
 export async function getStaticPaths() {
-  const paths = BLOG_ARTICLES.map((a) => ({ params: { slug: a.slug } }));
+  const paths = getAllArticles(BLOG_ARTICLES).map((a) => ({ params: { slug: a.slug } }));
   return { paths, fallback: false };
 }
 
 export async function getStaticProps({ params }) {
-  const article = BLOG_ARTICLES.find((a) => a.slug === params.slug);
+  const article = getArticleBySlug(BLOG_ARTICLES, params.slug);
   if (!article) return { notFound: true };
   return { props: { article } };
 } 

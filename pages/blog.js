@@ -5,6 +5,7 @@ import { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Calendar, Clock, ArrowRight, User, ChevronLeft, ChevronRight } from 'lucide-react';
+import { getAllArticles } from '../lib/blog/articleRepository';
 
 export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState("Tous");
@@ -13,6 +14,31 @@ export default function Blog() {
 
     // Articles exemples - pourront être remplacés par une base de données ou CMS plus tard
   const articles = [
+    {
+      id: 33,
+      slug: "biais-cognitifs-recrutement-methode-bordeaux",
+      title: "Biais cognitifs dans le recrutement : comment neutraliser les erreurs de jugement qui vous coûtent cher",
+      excerpt: "Les biais cognitifs faussent vos recrutements et exposent votre entreprise à des risques juridiques. Découvrez la méthode pour recruter objectivement à Bordeaux.",
+      image: "/images/hero/formations.jpg",
+      date: "6 mai 2026",
+      readTime: "12 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords: "biais cognitifs recrutement, recrutement objectif compétences, formation recrutement sans discrimination, grille évaluation recrutement, formation prévention discrimination Bordeaux",
+      seo: {
+        metaTitle: "Biais cognitifs et recrutement : la méthode | Atipik RH",
+        metaDescription:
+          "Les biais cognitifs faussent vos recrutements et exposent votre entreprise à des risques juridiques. Découvrez la méthode pour recruter objectivement à Bordeaux.",
+        canonicalPath: "/blog/biais-cognitifs-recrutement-methode-bordeaux",
+        secondaryKeywords: [
+          "biais cognitifs recrutement comment les éviter",
+          "formation recrutement objectif compétences Bordeaux",
+          "grille évaluation entretien embauche",
+          "recrutement non discriminant méthode pratique",
+          "formation prévention discrimination recrutement OPCO",
+        ],
+      },
+    },
     {
       id: 32,
       slug: "discrimination-embauche-obligations-legales-risques-solutions-entreprises",
@@ -367,7 +393,8 @@ export default function Blog() {
     return new Date(Number(year), monthIndex, Number(day));
   };
 
-  const sortedArticles = [...articles].sort(
+  const normalizedArticles = getAllArticles(articles);
+  const sortedArticles = [...normalizedArticles].sort(
     (a, b) => parseDate(b.date) - parseDate(a.date)
   );
 
