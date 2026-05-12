@@ -21,6 +21,428 @@ import { buildArticleSeo } from '../../lib/blog/articleSeoMapper';
 
 const BLOG_ARTICLES = [
     {
+      id: 36,
+      slug: "formation-fpa-bordeaux-formateur-professionnel-adultes",
+      title: "Devenir formateur professionnel d'adultes à Bordeaux : formation FPA, certification et débouchés",
+      excerpt: "Devenez formateur professionnel d'adultes à Bordeaux. Formation FPA niveau 5 en 7 mois chez Atipik RH à Lormont : programme, financement CPF, débouchés et prochaines sessions.",
+      image: "/images/blog/formation-fpa-bordeaux-formateur-professionnel-adultes.svg",
+      date: "17 mai 2026",
+      readTime: "14 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords: "formation formateur professionnel adultes Bordeaux, formation FPA Lormont, devenir formateur reconversion, formation FPA financement CPF, titre professionnel FPA niveau 5 Gironde, formation FPA Bordeaux financement CPF, devenir formateur professionnel adultes reconversion, formation FPA Lormont Gironde, titre professionnel FPA niveau 5 Bordeaux, débouchés formateur professionnel adultes Gironde, où faire formation FPA Bordeaux Métropole, formation FPA CIP Bordeaux cumul certifications",
+      seo: {
+        metaTitle: "Formation FPA à Bordeaux : certification, débouchés & financement | Atipik RH",
+        metaDescription:
+          "Devenez formateur professionnel d'adultes à Bordeaux. Formation FPA niveau 5 en 7 mois chez Atipik RH à Lormont : programme, financement CPF, débouchés et prochaines sessions.",
+        canonicalPath: "/blog/formation-fpa-bordeaux-formateur-professionnel-adultes",
+        secondaryKeywords: [
+          "formation formateur professionnel adultes Bordeaux",
+          "formation FPA Lormont",
+          "devenir formateur reconversion",
+          "formation FPA financement CPF",
+          "titre professionnel FPA niveau 5 Gironde",
+        ],
+      },
+      faqItems: [
+        {
+          question: "Où faire une formation FPA à Bordeaux ?",
+          answer: "Atipik RH propose une formation FPA à Lormont, dans Bordeaux Métropole, accessible depuis toute la Gironde. La formation est certifiée Qualiopi et débouche sur un titre professionnel niveau 5 reconnu par le Ministère du Travail.",
+        },
+        {
+          question: "Combien de temps dure la formation FPA ?",
+          answer: "La formation FPA chez Atipik RH dure 7 mois, en format mixte présentiel et distanciel. Elle accueille des groupes de 8 à 15 personnes pour garantir un accompagnement de qualité et des échanges de pratiques enrichissants.",
+        },
+        {
+          question: "La formation FPA est-elle finançable par le CPF ?",
+          answer: "Oui. La formation FPA d'Atipik RH est éligible au CPF. Elle peut également être financée via France Travail (AIF), le CSP, le plan de développement des compétences de l'employeur, ou par paiement en plusieurs fois sans frais pour un financement personnel.",
+        },
+        {
+          question: "Quelle est la différence entre le FPA et le CIP ?",
+          answer: "Le FPA (Formateur Professionnel d'Adultes) forme à la conception et à l'animation de formations. Le CIP (Conseiller en Insertion Professionnelle) forme à l'accompagnement individuel de personnes vers l'emploi. Les deux titres sont complémentaires et proposés par Atipik RH à Lormont.",
+        },
+        {
+          question: "Faut-il déjà avoir de l'expérience en formation pour s'inscrire ?",
+          answer: "Non. La formation FPA est accessible aux profils sans expérience préalable en formation, dès lors qu'ils disposent d'une expertise métier à transmettre ou d'un projet professionnel cohérent. Un entretien préalable permet d'évaluer la motivation et d'adapter le parcours si nécessaire.",
+        },
+        {
+          question: "Peut-on valider le FPA par blocs de compétences ?",
+          answer: "Oui. Il est possible de valider le titre FPA en totalité ou par blocs de compétences (CCP). Cette souplesse permet d'adapter le parcours à votre situation, notamment si vous disposez déjà de certaines compétences pédagogiques.",
+        },
+      ],
+      internalLinks: [
+        { label: "Page formation FPA", href: "/formations/certifiantes/formateur-professionnel-adultes", type: "formation" },
+        { label: "Page formation CIP", href: "/formations/cip", type: "formation" },
+        { label: "Page financement", href: "/financement", type: "financement" },
+        { label: "Page contact", href: "/contact", type: "contact" },
+      ],
+      content: `
+        <p>Vous avez une expertise métier solide et l'envie de la transmettre ? Ou vous souhaitez vous reconvertir dans un secteur porteur, alliant pédagogie, autonomie et impact concret ? Le métier de <strong>formateur professionnel d'adultes (FPA)</strong> s'impose comme l'une des reconversions les plus cohérentes pour les experts qui veulent donner du sens à leur expérience.</p>
+        <p>En Nouvelle-Aquitaine, le marché de la formation professionnelle continue est en pleine expansion. Plus de 300 offres d'emploi formateur sont actives en ce moment sur la seule région, avec une répartition qui reflète la diversité des possibilités : 48 % en indépendant, 38 % en CDI, 14 % en CDD.</p>
+        <p>Atipik RH, organisme de formation certifié Qualiopi basé à Lormont au cœur de Bordeaux Métropole, propose une formation FPA complète de 7 mois débouchant sur un titre professionnel de niveau 5 (équivalent Bac+2).</p>
+
+        <h2>Qu'est-ce qu'un formateur professionnel d'adultes ?</h2>
+        <h3>Définition et rôle du FPA</h3>
+        <p>Le formateur professionnel d'adultes conçoit, anime et évalue des actions de formation à destination de publics adultes en activité, en reconversion ou en insertion professionnelle. Son rôle ne se limite pas à transmettre un savoir : il adapte sa pédagogie aux besoins de chaque apprenant, construit des parcours multimodaux (présentiel, distanciel, e-learning) et accompagne individuellement chaque participant vers l'acquisition de compétences opérationnelles.</p>
+        <p>Le titre professionnel FPA est inscrit au RNCP sous le numéro 37275, délivré par le Ministère du Travail, avec une validité jusqu'au 29 avril 2028.</p>
+
+        <h3>Les missions concrètes au quotidien</h3>
+        <ul>
+          <li>Analyser les besoins de formation et définir les objectifs pédagogiques.</li>
+          <li>Concevoir des séquences de formation et des supports adaptés au public.</li>
+          <li>Animer des sessions en présentiel, en distanciel ou en format hybride.</li>
+          <li>Évaluer les acquis des apprenants et ajuster sa pratique en conséquence.</li>
+          <li>Accompagner les apprenants en difficulté de manière individualisée.</li>
+          <li>Inscrire sa pratique dans une démarche qualité et de responsabilité sociale.</li>
+        </ul>
+
+        <h2>Dans quels contextes travaille un FPA ?</h2>
+        <ul>
+          <li>Organismes de formation professionnelle (privés, associatifs, publics).</li>
+          <li>Centres de formation d'apprentis (CFA) et structures d'insertion par l'activité économique.</li>
+          <li>Services formation des grandes entreprises et ETI (formation interne).</li>
+          <li>Cabinets de conseil et de développement des compétences.</li>
+          <li>Missions locales, OPCO, structures d'accompagnement à l'emploi.</li>
+          <li>Activité indépendante : formateur freelance ou portage salarial.</li>
+        </ul>
+
+        <h2>Pourquoi se former au métier de FPA en 2026 ?</h2>
+        <h3>Un marché porteur</h3>
+        <p>Le secteur de la formation professionnelle continue en France représente plus de 32 milliards d'euros de dépenses annuelles. La réforme de 2018 (loi Avenir Professionnel) et le déploiement massif du CPF ont transformé le marché, en créant une demande croissante de formateurs qualifiés.</p>
+        <p>En Gironde et Bordeaux Métropole, la dynamique est particulièrement forte : aéronautique, numérique, santé, insertion professionnelle et ESS sont autant de secteurs qui recrutent des formateurs spécialisés.</p>
+
+        <h3>Reconversion : pourquoi le FPA attire des experts métier</h3>
+        <ul>
+          <li>Professionnels RH, formateurs internes ou responsables formation souhaitant se certifier.</li>
+          <li>Experts métier (technique, commercial, social, santé, numérique) voulant transmettre leur savoir-faire.</li>
+          <li>Conseillers en insertion professionnelle (CIP) souhaitant élargir leur périmètre d'intervention.</li>
+          <li>Indépendants ou consultants cherchant à structurer et développer une activité de formation.</li>
+          <li>Reconvertis issus de l'enseignement, du management ou du travail social.</li>
+        </ul>
+
+        <h2>La formation FPA chez Atipik RH à Lormont</h2>
+        <h3>Programme et blocs de compétences</h3>
+        <ul>
+          <li><strong>CCP 1 :</strong> Concevoir et préparer la formation.</li>
+          <li><strong>CCP 2 :</strong> Animer une formation et évaluer les acquis.</li>
+          <li><strong>CCP 3 :</strong> Accompagner les apprenants en formation.</li>
+        </ul>
+        <p>La pédagogie combine apports théoriques, mises en situation pratiques, analyse de pratiques professionnelles et réalisation d'une action de formation réelle devant jury.</p>
+
+        <h3>Format et durée</h3>
+        <p>La formation se déroule sur 7 mois, en format présentiel et distanciel combinés, avec des groupes de 8 à 15 participants pour garantir un suivi individualisé.</p>
+
+        <h3>Public visé et prérequis</h3>
+        <ul>
+          <li>Tout professionnel disposant d'une expertise métier à transmettre.</li>
+          <li>Conseillers en insertion professionnelle (CIP) souhaitant élargir leurs compétences.</li>
+          <li>Formateurs occasionnels souhaitant se certifier.</li>
+          <li>Demandeurs d'emploi en projet de reconversion vers la formation.</li>
+          <li>Salariés en transition professionnelle ou en CPF de transition.</li>
+        </ul>
+        <p>Aucun diplôme spécifique n'est requis à l'entrée. Un entretien préalable permet d'évaluer la cohérence du projet et les acquis de l'expérience.</p>
+
+        <h3>Certification : titre professionnel niveau 5 (Bac+2)</h3>
+        <p>À l'issue de la formation, les participants passent les épreuves de certification devant un jury de professionnels. Le titre professionnel Formateur Professionnel d'Adultes (FPA) est inscrit au RNCP (n°37275), délivré par le Ministère du Travail. La validation peut se faire en totalité ou par bloc de compétences (CCP).</p>
+
+        <h2>Comment financer la formation FPA ?</h2>
+        <h3>CPF : mobiliser son compte formation</h3>
+        <p>La formation FPA d'Atipik RH est éligible au Compte Personnel de Formation (CPF). En cas de droits insuffisants, un abondement complémentaire peut être demandé auprès de votre OPCO ou de la Région Nouvelle-Aquitaine.</p>
+
+        <h3>France Travail : AIF et financements demandeurs d'emploi</h3>
+        <p>Les demandeurs d'emploi peuvent mobiliser l'Aide Individuelle à la Formation (AIF) de France Travail pour financer tout ou partie de la formation. Atipik RH vous accompagne dans la constitution du dossier.</p>
+
+        <h3>Plan de développement des compétences (employeur)</h3>
+        <p>Si vous êtes salarié, votre employeur peut financer la formation via le plan de développement des compétences.</p>
+
+        <h3>Paiement en plusieurs fois sans frais chez Atipik RH</h3>
+        <p>Pour les participants qui financent tout ou partie de leur formation à titre personnel, Atipik RH propose un paiement jusqu'à 9 fois sans frais.</p>
+
+        <h2>Quels débouchés après une formation FPA à Bordeaux ?</h2>
+        <h3>Les employeurs et structures qui recrutent des FPA en Gironde</h3>
+        <ul>
+          <li>Organismes de formation : GRETA-CFA Aquitaine, AFPA Bordeaux-Pessac, Campus du Lac, IFPA, Modula Formation.</li>
+          <li>Structures d'insertion : missions locales, GEIQ, structures IAE, Solerys et opérateurs France Travail.</li>
+          <li>Grandes entreprises avec centre de formation interne : Airbus, Thalès, groupes industriels de la Métropole.</li>
+          <li>Associations et structures ESS : Croix-Rouge Compétence, Diaconat de Bordeaux, IREP Gradignan.</li>
+          <li>Cabinets de conseil en développement des compétences et portage salarial.</li>
+          <li>Activité indépendante : formateur freelance sur missions courtes ou partenariats durables.</li>
+        </ul>
+
+        <h3>Évolutions de carrière et cumul avec d'autres certifications</h3>
+        <p>Le titre FPA est une base solide qui ouvre plusieurs trajectoires d'évolution : coordinateur pédagogique, responsable de formation, ingénieur pédagogique ou directeur d'organisme de formation.</p>
+        <p>Le FPA se cumule naturellement avec le titre CIP, également proposé par Atipik RH à Lormont.</p>
+
+        <h2>Pourquoi choisir Atipik RH à Lormont pour votre formation FPA ?</h2>
+        <p>Atipik RH est un organisme de formation certifié Qualiopi, fondé en 2019 à Lormont par Vanessa Noah Ewodo, spécialiste en psychologie, formation pour adultes et ressources humaines.</p>
+        <ul>
+          <li>Une pédagogie ancrée dans les réalités du terrain en Nouvelle-Aquitaine.</li>
+          <li>Des formateurs issus du secteur de la formation professionnelle et de l'ingénierie pédagogique.</li>
+          <li>Un suivi individualisé tout au long du parcours, groupes limités à 8-15 participants.</li>
+          <li>Une localisation à Lormont, accessible depuis Bordeaux, Mérignac, Cenon, Libourne.</li>
+          <li>Un accompagnement au montage des dossiers de financement (CPF, AIF, OPCO).</li>
+        </ul>
+
+        <h2>Conclusion : transformer votre expertise en métier</h2>
+        <p>Devenir formateur professionnel d'adultes, c'est donner une nouvelle dimension à ce que vous savez faire. Le marché de la formation en Gironde est porteur, les financements existent, et le titre professionnel FPA est reconnu par les acteurs du secteur.</p>
+        <p><a href="/formations/certifiantes/formateur-professionnel-adultes">Voir les prochaines sessions de formation FPA</a> ou <a href="/contact">contacter Atipik RH</a>.</p>
+      `,
+    },
+    {
+      id: 35,
+      slug: "bilan-de-competences-lormont-bordeaux",
+      title: "Bilan de compétences à Lormont : tout savoir pour faire le point sur votre carrière et financer votre démarche",
+      excerpt: "Faites le point sur votre carrière avec un bilan de compétences à Lormont (Bordeaux Métropole). Accompagnement personnalisé, financement CPF, Qualiopi. Atipik RH.",
+      image: "/images/blog/bilan-competences-signaux-2026.jpg",
+      date: "18 mai 2026",
+      readTime: "14 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Bilan de compétences",
+      keywords: "bilan de compétences Bordeaux, bilan de compétences financement CPF, bilan de compétences reconversion Bordeaux, bilan de compétences Gironde, organisme bilan de compétences Qualiopi Lormont, bilan de compétences Lormont financement CPF, bilan de compétences Bordeaux organisme Qualiopi, comment financer bilan de compétences 2026, bilan de compétences reconversion professionnelle Gironde, bilan de compétences salarié CDI confidentiel, où faire bilan de compétences Bordeaux Métropole",
+      seo: {
+        metaTitle: "Bilan de compétences à Lormont : financement CPF & accompagnement | Atipik RH",
+        metaDescription:
+          "Faites le point sur votre carrière avec un bilan de compétences à Lormont (Bordeaux Métropole). Accompagnement personnalisé, financement CPF, Qualiopi. Atipik RH.",
+        canonicalPath: "/blog/bilan-de-competences-lormont-bordeaux",
+        secondaryKeywords: [
+          "bilan de compétences Bordeaux",
+          "bilan de compétences financement CPF",
+          "bilan de compétences reconversion Bordeaux",
+          "bilan de compétences Gironde",
+          "organisme bilan de compétences Qualiopi Lormont",
+        ],
+      },
+      faqItems: [
+        {
+          question: "Où faire un bilan de compétences à Lormont ou Bordeaux ?",
+          answer: "Atipik RH propose des bilans de compétences à Lormont, au cœur de Bordeaux Métropole, accessibles depuis Bordeaux, Cenon, Mérignac, Pessac et Libourne, en présentiel ou distanciel.",
+        },
+        {
+          question: "Combien de temps dure un bilan de compétences ?",
+          answer: "La durée légale maximale est de 24 heures, réparties sur plusieurs semaines. En pratique, le parcours dure souvent 8 à 12 semaines selon votre rythme.",
+        },
+        {
+          question: "Le bilan de compétences est-il confidentiel ?",
+          answer: "Oui. Le document de synthèse final appartient uniquement au bénéficiaire et n'est transmis à aucun tiers sans accord explicite.",
+        },
+        {
+          question: "Quelle différence entre bilan de compétences et coaching professionnel ?",
+          answer: "Le bilan est un dispositif légal structuré en 3 phases, finançable CPF. Le coaching est plus souple et ciblé sur un objectif précis, sans cadre légal de financement CPF.",
+        },
+        {
+          question: "Peut-on faire un bilan de compétences en CDI sans en informer l'employeur ?",
+          answer: "Oui, si la démarche est financée via le CPF sur temps personnel. Un accord employeur est requis uniquement si la réalisation a lieu sur le temps de travail.",
+        },
+        {
+          question: "Quels résultats concrets attendre d'un bilan de compétences ?",
+          answer: "Un projet professionnel formalisé, une alternative crédible, un plan d'action opérationnel et une meilleure lecture de vos compétences transférables.",
+        },
+      ],
+      internalLinks: [
+        { label: "Page bilan de compétences", href: "/bilan-de-competences", type: "service" },
+        { label: "Page formation CIP", href: "/formations/cip", type: "formation" },
+        { label: "Page financement", href: "/financement", type: "financement" },
+        { label: "Page contact", href: "/contact", type: "contact" },
+      ],
+      content: `
+        <p>Vous ressentez le besoin de faire le point sur votre parcours, sans savoir exactement par où commencer ? Le bilan de compétences est l'un des dispositifs les plus structurants pour analyser vos compétences, clarifier vos motivations et construire un projet professionnel solide.</p>
+        <p>Atipik RH, organisme certifié Qualiopi basé à Lormont, au cœur de Bordeaux Métropole, propose un accompagnement individualisé pour vous aider à décider avec clarté.</p>
+
+        <h2>Qu'est-ce qu'un bilan de compétences ?</h2>
+        <h3>Définition et objectifs</h3>
+        <p>Le bilan de compétences est encadré par le Code du travail (article L6313-10). Il permet à tout actif (salarié, demandeur d'emploi, indépendant) d'analyser ses compétences professionnelles et personnelles, ses aptitudes et ses motivations afin de définir un projet professionnel réaliste.</p>
+        <p>Il répond à trois questions clés : où en suis-je ? Quelles sont mes ressources réelles ? Vers quoi puis-je me diriger avec confiance ?</p>
+
+        <h3>Ce que le bilan de compétences n'est pas</h3>
+        <p>Ce n'est ni une thérapie, ni un simple test de personnalité, ni une orientation express vers une formation. C'est une démarche structurée sur plusieurs semaines, qui aboutit à un document de synthèse confidentiel remis uniquement au bénéficiaire.</p>
+
+        <h3>Les 3 phases obligatoires</h3>
+        <ul>
+          <li><strong>Phase préliminaire :</strong> analyse de la demande, cadrage des besoins et des attentes.</li>
+          <li><strong>Phase d'investigation :</strong> exploration des compétences, motivations, valeurs et contraintes.</li>
+          <li><strong>Phase de conclusion :</strong> synthèse, projet professionnel et plan d'action détaillé.</li>
+        </ul>
+        <p>La durée maximale légale est de 24 heures, réparties sur plusieurs semaines.</p>
+
+        <h2>À qui s'adresse le bilan de compétences ?</h2>
+        <h3>Salarié en questionnement professionnel</h3>
+        <p>Si vous manquez de sens, si vous avez atteint un plafond de verre ou si vous envisagez un changement sans certitude, le bilan vous aide à décider avant une transition irréversible.</p>
+
+        <h3>Demandeur d'emploi en reconversion</h3>
+        <p>Le bilan structure votre projet, renforce sa crédibilité auprès de France Travail et facilite un retour à l'emploi aligné avec votre profil réel.</p>
+
+        <h3>Indépendant ou dirigeant à un tournant</h3>
+        <p>Le dispositif est aussi pertinent pour les non-salariés qui souhaitent sécuriser une évolution, repositionner leur activité ou préparer une transition.</p>
+
+        <h2>Pourquoi faire son bilan de compétences à Lormont avec Atipik RH ?</h2>
+        <h3>Une approche ancrée dans le territoire</h3>
+        <p>Atipik RH s'appuie sur une connaissance concrète du tissu économique local en Gironde et en Nouvelle-Aquitaine : secteurs qui recrutent, passerelles métiers et dynamiques territoriales.</p>
+
+        <h3>Un accompagnement individualisé</h3>
+        <p>Le bilan est mené en individuel, avec le même consultant du début à la fin, à un rythme adapté à vos contraintes personnelles et professionnelles.</p>
+
+        <h3>Certification Qualiopi</h3>
+        <p>La certification Qualiopi garantit un cadre qualité rigoureux et permet l'accès aux financements publics et mutualisés (CPF, France Travail, OPCO, plan de développement des compétences).</p>
+
+        <h2>Comment se déroule un bilan de compétences chez Atipik RH ?</h2>
+        <h3>Phase préliminaire</h3>
+        <p>Un premier entretien permet de clarifier le besoin, le contexte et les objectifs de la démarche.</p>
+
+        <h3>Phase d'investigation</h3>
+        <p>Vous explorez vos compétences transférables, vos motivations et vos valeurs avec des outils structurés, des exercices et des recherches métiers ciblées.</p>
+
+        <h3>Phase de conclusion</h3>
+        <p>Vous formalisez un projet principal, une alternative crédible et un plan d'action concret (formations, démarches, réseau, calendrier).</p>
+
+        <h2>Comment financer son bilan de compétences en 2026 ?</h2>
+        <h3>CPF : dispositif principal avec nouvelles règles</h3>
+        <ul>
+          <li>Plafond de prise en charge à 1 600 €.</li>
+          <li>Participation forfaitaire obligatoire de 150 €.</li>
+          <li>Délai de carence de 5 ans entre deux bilans financés par fonds publics ou mutualisés.</li>
+        </ul>
+        <p>Atipik RH vous accompagne dans le montage du dossier sur Mon Compte Formation.</p>
+
+        <h3>Autres financements possibles</h3>
+        <ul>
+          <li><strong>Plan de développement des compétences</strong> via l'employeur.</li>
+          <li><strong>AIF France Travail</strong> pour les demandeurs d'emploi.</li>
+          <li><strong>FAF</strong> pour les travailleurs indépendants.</li>
+          <li><strong>Paiement personnel échelonné</strong> jusqu'à 9 fois sans frais.</li>
+        </ul>
+
+        <h2>Conclusion</h2>
+        <p>Un bilan de compétences bien mené transforme une intention floue en projet professionnel structuré et réaliste. C'est un investissement utile pour sécuriser une évolution, une reconversion ou une reprise d'élan.</p>
+        <p><a href="/contact">Prendre rendez-vous pour un premier échange gratuit</a> ou <a href="/bilan-de-competences">découvrir l'accompagnement bilan de compétences</a>.</p>
+      `
+    },
+    {
+      id: 34,
+      slug: "formation-cip-bordeaux-conseiller-insertion-professionnelle",
+      title: "Devenir conseiller en insertion professionnelle à Bordeaux : formation CIP, débouchés et financement",
+      excerpt: "Devenez conseiller en insertion professionnelle à Bordeaux. Formation CIP niveau 5 en 8 mois chez Atipik RH à Lormont : programme, financement CPF, débouchés et prochaines sessions.",
+      image: "/images/hero/formations.jpg",
+      date: "12 mai 2026",
+      readTime: "12 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords: "formation CIP Lormont, devenir CIP reconversion, formation CIP financement CPF, conseiller insertion professionnelle débouchés, formation CIP niveau 5 Gironde, formation CIP Bordeaux financement CPF, devenir conseiller insertion professionnelle reconversion, titre professionnel CIP niveau 5 Bordeaux, où faire formation CIP Bordeaux Métropole",
+      seo: {
+        metaTitle: "Formation CIP à Bordeaux : parcours, débouchés & financement | Atipik RH",
+        metaDescription:
+          "Devenez conseiller en insertion professionnelle à Bordeaux. Formation CIP niveau 5 en 8 mois chez Atipik RH à Lormont : programme, financement CPF, débouchés et prochaines sessions.",
+        canonicalPath: "/blog/formation-cip-bordeaux-conseiller-insertion-professionnelle",
+        secondaryKeywords: [
+          "formation CIP Lormont",
+          "devenir CIP reconversion",
+          "formation CIP financement CPF",
+          "conseiller insertion professionnelle débouchés",
+          "formation CIP niveau 5 Gironde",
+        ],
+      },
+      faqItems: [
+        {
+          question: "Où faire une formation CIP à Bordeaux ?",
+          answer: "Atipik RH propose une formation CIP à Lormont, dans Bordeaux Métropole, accessible depuis toute la Gironde. La formation est certifiée Qualiopi et débouche sur un titre professionnel niveau 5 reconnu par l'État.",
+        },
+        {
+          question: "Combien de temps dure la formation CIP ?",
+          answer: "La formation CIP chez Atipik RH dure 8 mois, en format mixte présentiel et distanciel. Elle accueille des groupes de 8 à 15 personnes pour garantir un accompagnement de qualité.",
+        },
+        {
+          question: "La formation CIP est-elle finançable par le CPF ?",
+          answer: "Oui. La formation CIP d'Atipik RH est éligible au CPF. Elle peut également être financée via France Travail (AIF), le CSP, le plan de développement des compétences de l'employeur, ou par paiement en plusieurs fois sans frais pour un financement personnel.",
+        },
+        {
+          question: "Quel est le niveau de la certification CIP ?",
+          answer: "Le titre professionnel Conseiller en Insertion Professionnelle est un titre de niveau 5 (équivalent Bac+2), inscrit au RNCP et délivré par le Ministère du Travail.",
+        },
+      ],
+      internalLinks: [
+        { label: "Page formation CIP", href: "/formations/cip", type: "formation" },
+        { label: "Page bilan de compétences", href: "/bilan-de-competences", type: "service" },
+        { label: "Page financement", href: "/financement", type: "financement" },
+        { label: "Page contact", href: "/contact", type: "contact" },
+      ],
+      content: `
+        <p>Vous envisagez une reconversion professionnelle dans l'accompagnement à l'emploi ? Le métier de <strong>conseiller en insertion professionnelle (CIP)</strong> fait partie des profils les plus recherchés du secteur social en Nouvelle-Aquitaine. À Bordeaux et en Gironde, associations, missions locales et opérateurs de l'emploi recrutent régulièrement des professionnels formés.</p>
+        <p>Atipik RH, organisme certifié Qualiopi basé à Lormont, propose une formation CIP de <strong>8 mois</strong> menant à un <strong>titre professionnel niveau 5 (Bac+2)</strong>. Voici l'essentiel pour passer à l'action.</p>
+
+        <h2>Qu'est-ce qu'un conseiller en insertion professionnelle ?</h2>
+        <p>Le CIP accompagne des publics en difficulté d'accès à l'emploi : demandeurs d'emploi, jeunes sans qualification, personnes en situation de handicap, ou encore publics éloignés du marché du travail. Son rôle combine diagnostic, accompagnement humain et activation de dispositifs adaptés.</p>
+        <ul>
+          <li>Accueillir et analyser la demande des bénéficiaires</li>
+          <li>Réaliser des entretiens individuels de diagnostic</li>
+          <li>Animer des ateliers collectifs (CV, recherche d'emploi, simulation d'entretien)</li>
+          <li>Mobiliser les aides à la formation et à l'emploi</li>
+          <li>Développer un réseau d'employeurs partenaires</li>
+          <li>Assurer le suivi administratif et le reporting</li>
+        </ul>
+
+        <h2>Dans quelles structures travaille un CIP ?</h2>
+        <p>Les débouchés en Gironde sont variés :</p>
+        <ul>
+          <li>Missions locales et structures IAE</li>
+          <li>PLIE, Cap Emploi, Maisons de l'emploi</li>
+          <li>Associations intermédiaires, GEIQ, CADA</li>
+          <li>Cabinets de conseil en évolution professionnelle</li>
+          <li>France Travail et ses opérateurs</li>
+          <li>Collectivités territoriales et CCAS</li>
+        </ul>
+
+        <h2>Pourquoi se former au métier de CIP en 2026 ?</h2>
+        <p>Le secteur reste dynamique en Nouvelle-Aquitaine, avec une demande soutenue de profils certifiés. En Gironde, les offres actives montrent une répartition équilibrée entre CDI, CDD et contrats professionnalisants.</p>
+        <p>Le métier attire aussi des profils en reconversion (RH, social, enseignement, commerce, santé) grâce à :</p>
+        <ul>
+          <li>Un métier à fort impact social</li>
+          <li>Des compétences transférables depuis d'autres secteurs</li>
+          <li>Une certification reconnue par l'État</li>
+          <li>Des financements accessibles, notamment CPF</li>
+          <li>Un marché local porteur autour de Bordeaux Métropole</li>
+        </ul>
+
+        <h2>La formation CIP chez Atipik RH à Lormont</h2>
+        <h3>Programme</h3>
+        <ul>
+          <li>Bloc 1 : analyser la demande et poser un diagnostic partagé</li>
+          <li>Bloc 2 : accompagner le parcours d'insertion sociale et professionnelle</li>
+          <li>Bloc 3 : développer l'offre de services auprès des employeurs</li>
+        </ul>
+        <p>La pédagogie alterne théorie, cas réels, mises en situation et supervision de pratiques pour une montée en compétences opérationnelle.</p>
+        <h3>Format et durée</h3>
+        <p>La formation se déroule sur 8 mois, en format mixte présentiel/distanciel, avec des groupes de 8 à 15 participants.</p>
+        <h3>Public et prérequis</h3>
+        <p>La formation est ouverte aux reconvertis, professionnels du social/RH/éducation, demandeurs d'emploi et salariés en transition. Aucun diplôme spécifique n'est exigé à l'entrée ; un entretien permet de valider la cohérence du projet.</p>
+
+        <h2>Comment financer la formation CIP ?</h2>
+        <h3>CPF</h3>
+        <p>La formation est éligible au CPF. Selon vos droits, elle peut être financée totalement, ou complétée par un abondement OPCO/Région.</p>
+        <h3>France Travail (AIF)</h3>
+        <p>Les demandeurs d'emploi peuvent mobiliser l'AIF. Un accompagnement au montage du dossier est proposé.</p>
+        <h3>Plan de développement des compétences</h3>
+        <p>Les salariés peuvent passer par le financement employeur, particulièrement adapté aux structures RH et sociales.</p>
+        <h3>Paiement échelonné</h3>
+        <p>Atipik RH propose aussi un paiement jusqu'à 9 fois sans frais pour les financements personnels.</p>
+
+        <h2>Quels débouchés après la formation CIP à Bordeaux ?</h2>
+        <p>Les recruteurs de la métropole bordelaise et de la Gironde incluent missions locales, acteurs de l'IAE, associations du secteur social, opérateurs d'accompagnement à l'emploi et prestataires de France Travail.</p>
+        <p>Après expérience, des évolutions vers des postes de coordinateur insertion, responsable d'équipe, chargé de développement emploi ou formateur sont possibles.</p>
+
+        <h2>Pourquoi choisir Atipik RH ?</h2>
+        <ul>
+          <li>Organisme certifié Qualiopi</li>
+          <li>Pédagogie ancrée terrain Nouvelle-Aquitaine</li>
+          <li>Formateurs issus du secteur insertion/CEP</li>
+          <li>Suivi individualisé sur tout le parcours</li>
+          <li>Accompagnement complet au financement (CPF, AIF, OPCO)</li>
+        </ul>
+
+        <h2>Conclusion</h2>
+        <p>Le métier de CIP combine impact humain, employabilité locale et certification reconnue. Si vous souhaitez vous reconvertir rapidement dans l'accompagnement à l'emploi, la formation CIP Atipik RH à Lormont constitue un parcours concret et finançable.</p>
+        <p><a href="/formations/cip">Voir les prochaines sessions de formation CIP</a> ou <a href="/contact">contacter l'équipe Atipik RH</a>.</p>
+      `
+    },
+    {
       id: 33,
       slug: "biais-cognitifs-recrutement-methode-bordeaux",
       title: "Biais cognitifs dans le recrutement : comment neutraliser les erreurs de jugement qui vous coûtent cher",

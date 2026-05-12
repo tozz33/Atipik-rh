@@ -15,6 +15,117 @@ export default function Blog() {
     // Articles exemples - pourront être remplacés par une base de données ou CMS plus tard
   const articles = [
     {
+      id: 36,
+      slug: "formation-fpa-bordeaux-formateur-professionnel-adultes",
+      title: "Devenir formateur professionnel d'adultes à Bordeaux : formation FPA, certification et débouchés",
+      excerpt: "Devenez formateur professionnel d'adultes à Bordeaux. Formation FPA niveau 5 en 7 mois chez Atipik RH à Lormont : programme, financement CPF, débouchés et prochaines sessions.",
+      image: "/images/blog/formation-fpa-bordeaux-formateur-professionnel-adultes.svg",
+      date: "17 mai 2026",
+      readTime: "14 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords: "formation formateur professionnel adultes Bordeaux, formation FPA Lormont, devenir formateur reconversion, formation FPA financement CPF, titre professionnel FPA niveau 5 Gironde, formation FPA Bordeaux financement CPF, devenir formateur professionnel adultes reconversion, formation FPA Lormont Gironde, titre professionnel FPA niveau 5 Bordeaux, débouchés formateur professionnel adultes Gironde, où faire formation FPA Bordeaux Métropole, formation FPA CIP Bordeaux cumul certifications",
+      seo: {
+        metaTitle: "Formation FPA à Bordeaux : certification, débouchés & financement | Atipik RH",
+        metaDescription:
+          "Devenez formateur professionnel d'adultes à Bordeaux. Formation FPA niveau 5 en 7 mois chez Atipik RH à Lormont : programme, financement CPF, débouchés et prochaines sessions.",
+        canonicalPath: "/blog/formation-fpa-bordeaux-formateur-professionnel-adultes",
+        secondaryKeywords: [
+          "formation formateur professionnel adultes Bordeaux",
+          "formation FPA Lormont",
+          "devenir formateur reconversion",
+          "formation FPA financement CPF",
+          "titre professionnel FPA niveau 5 Gironde",
+        ],
+      },
+      faqItems: [
+        {
+          question: "Où faire une formation FPA à Bordeaux ?",
+          answer: "Atipik RH propose une formation FPA à Lormont, dans Bordeaux Métropole, accessible depuis toute la Gironde.",
+        },
+      ],
+      internalLinks: [
+        { label: "Page formation FPA", href: "/formations/certifiantes/formateur-professionnel-adultes", type: "formation" },
+        { label: "Page formation CIP", href: "/formations/cip", type: "formation" },
+        { label: "Page financement", href: "/financement", type: "financement" },
+        { label: "Page contact", href: "/contact", type: "contact" },
+      ],
+    },
+    {
+      id: 35,
+      slug: "bilan-de-competences-lormont-bordeaux",
+      title: "Bilan de compétences à Lormont : tout savoir pour faire le point sur votre carrière et financer votre démarche",
+      excerpt: "Faites le point sur votre carrière avec un bilan de compétences à Lormont (Bordeaux Métropole). Accompagnement personnalisé, financement CPF, Qualiopi. Atipik RH.",
+      image: "/images/blog/bilan-competences-signaux-2026.jpg",
+      date: "18 mai 2026",
+      readTime: "14 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Bilan de compétences",
+      keywords: "bilan de compétences Bordeaux, bilan de compétences financement CPF, bilan de compétences reconversion Bordeaux, bilan de compétences Gironde, organisme bilan de compétences Qualiopi Lormont, bilan de compétences Lormont financement CPF, bilan de compétences Bordeaux organisme Qualiopi, comment financer bilan de compétences 2026, bilan de compétences reconversion professionnelle Gironde, bilan de compétences salarié CDI confidentiel, où faire bilan de compétences Bordeaux Métropole",
+      seo: {
+        metaTitle: "Bilan de compétences à Lormont : financement CPF & accompagnement | Atipik RH",
+        metaDescription:
+          "Faites le point sur votre carrière avec un bilan de compétences à Lormont (Bordeaux Métropole). Accompagnement personnalisé, financement CPF, Qualiopi. Atipik RH.",
+        canonicalPath: "/blog/bilan-de-competences-lormont-bordeaux",
+        secondaryKeywords: [
+          "bilan de compétences Bordeaux",
+          "bilan de compétences financement CPF",
+          "bilan de compétences reconversion Bordeaux",
+          "bilan de compétences Gironde",
+          "organisme bilan de compétences Qualiopi Lormont",
+        ],
+      },
+      faqItems: [
+        {
+          question: "Où faire un bilan de compétences à Lormont ou Bordeaux ?",
+          answer: "Atipik RH propose des bilans de compétences à Lormont, au cœur de Bordeaux Métropole, accessibles depuis Bordeaux, Cenon, Mérignac, Pessac et Libourne.",
+        },
+      ],
+      internalLinks: [
+        { label: "Page bilan de compétences", href: "/bilan-de-competences", type: "service" },
+        { label: "Page formation CIP", href: "/formations/cip", type: "formation" },
+        { label: "Page financement", href: "/financement", type: "financement" },
+        { label: "Page contact", href: "/contact", type: "contact" },
+      ],
+    },
+    {
+      id: 34,
+      slug: "formation-cip-bordeaux-conseiller-insertion-professionnelle",
+      title: "Devenir conseiller en insertion professionnelle à Bordeaux : formation CIP, débouchés et financement",
+      excerpt: "Devenez conseiller en insertion professionnelle à Bordeaux. Formation CIP niveau 5 en 8 mois chez Atipik RH à Lormont : programme, financement CPF, débouchés et prochaines sessions.",
+      image: "/images/hero/formations.jpg",
+      date: "12 mai 2026",
+      readTime: "12 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords: "formation CIP Lormont, devenir CIP reconversion, formation CIP financement CPF, conseiller insertion professionnelle débouchés, formation CIP niveau 5 Gironde",
+      seo: {
+        metaTitle: "Formation CIP à Bordeaux : parcours, débouchés & financement | Atipik RH",
+        metaDescription:
+          "Devenez conseiller en insertion professionnelle à Bordeaux. Formation CIP niveau 5 en 8 mois chez Atipik RH à Lormont : programme, financement CPF, débouchés et prochaines sessions.",
+        canonicalPath: "/blog/formation-cip-bordeaux-conseiller-insertion-professionnelle",
+        secondaryKeywords: [
+          "formation CIP Lormont",
+          "devenir CIP reconversion",
+          "formation CIP financement CPF",
+          "conseiller insertion professionnelle débouchés",
+          "formation CIP niveau 5 Gironde",
+        ],
+      },
+      faqItems: [
+        {
+          question: "Où faire une formation CIP à Bordeaux ?",
+          answer: "Atipik RH propose une formation CIP à Lormont, dans Bordeaux Métropole, accessible depuis toute la Gironde.",
+        },
+      ],
+      internalLinks: [
+        { label: "Page formation CIP", href: "/formations/cip", type: "formation" },
+        { label: "Page bilan de compétences", href: "/bilan-de-competences", type: "service" },
+        { label: "Page financement", href: "/financement", type: "financement" },
+        { label: "Page contact", href: "/contact", type: "contact" },
+      ],
+    },
+    {
       id: 33,
       slug: "biais-cognitifs-recrutement-methode-bordeaux",
       title: "Biais cognitifs dans le recrutement : comment neutraliser les erreurs de jugement qui vous coûtent cher",
