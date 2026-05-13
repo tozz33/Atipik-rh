@@ -890,7 +890,7 @@ const BLOG_ARTICLES = [
         <ul>
           <li><a href="/blog/bilan-competences-lormont-5-etapes-reconversion">Faire un bilan de compétences : par où commencer ?</a></li>
           <li><a href="/blog/financer-reconversion-professionnelle-2026-cpf-aides-regionales">Se reconvertir en 2026 : les secteurs qui recrutent</a></li>
-          <li><a href="/formations/courtes">Formation courte vs longue : que choisir ?</a></li>
+          <li><a href="/formations/courtes-professionnalisantes">Formation courte vs longue : que choisir ?</a></li>
         </ul>
 
         <h2>Focus local SEO : bilan de compétences Lormont</h2>

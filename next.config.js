@@ -10,6 +10,17 @@ const nextConfig = {
         destination: '/location-salles-lormont',
         permanent: true,
       },
+      // Ancien catalogue MDX /formations/courtes (liens cassés) → hub actuel
+      {
+        source: '/formations/courtes',
+        destination: '/formations/courtes-professionnalisantes',
+        permanent: true,
+      },
+      {
+        source: '/formations/courtes/:path*',
+        destination: '/formations/courtes-professionnalisantes',
+        permanent: true,
+      },
     ]
   },
 

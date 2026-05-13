@@ -1,10 +1,9 @@
 import Head from 'next/head'
 import {
+  BASE_URL,
   getProfessionnelleConfigBySlug,
   buildJsonLdCourse,
 } from '../lib/seo/professionnalisantesConfig'
-
-const BASE = 'https://www.atipikrh.com'
 
 /**
  * Métadonnées SEO + Open Graph + Twitter + JSON-LD Course pour une formation professionnalisante.
@@ -14,7 +13,7 @@ export default function FormationProfessionnelleSeoHead({ slug }) {
   const c = getProfessionnelleConfigBySlug(slug)
   if (!c) return null
 
-  const canonical = `${BASE}${c.path}`
+  const canonical = `${BASE_URL}${c.path}`
   const jsonLd = buildJsonLdCourse(c)
 
   return (

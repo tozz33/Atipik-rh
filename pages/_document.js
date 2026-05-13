@@ -9,6 +9,7 @@ export default function Document() {
     "url": "https://www.atipikrh.com",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "8 Rue du Courant",
       "addressLocality": "Lormont",
       "postalCode": "33310",
       "addressRegion": "Nouvelle-Aquitaine",
