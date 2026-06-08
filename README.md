@@ -65,15 +65,22 @@ npm start
 
 ### Variables d'environnement
 
-Si nécessaire, configurez les variables d'environnement dans le panneau de déploiement :
-- Variables pour les API (Brevo, etc.)
-- Variables de protection anti-spam avancée :
-  - `NEXT_PUBLIC_RECAPTCHA_SITE_KEY`
-  - `RECAPTCHA_SECRET_KEY`
-  - `AKISMET_API_KEY`
-  - `AKISMET_SITE_URL`
+Copiez [`.env.example`](.env.example) vers `.env.local` et renseignez les valeurs.
 
-Les détails d’implémentation et de configuration se trouvent dans le fichier `PROTECTION-ANTI-SPAM.md`.
+| Variable | Obligatoire (prod) | Description |
+|----------|-------------------|-------------|
+| `BREVO_API_KEY` | Oui | Clé API Brevo (serveur uniquement) |
+| `BREVO_SENDER_EMAIL` | Non | Expéditeur validé (défaut : `contact@atipikrh.com`) |
+| `BREVO_RECIPIENT_EMAIL` | Non | Destinataire interne (défaut : `contact@atipikrh.com`) |
+| `NEXT_PUBLIC_RECAPTCHA_SITE_KEY` | Non* | Clé site reCAPTCHA v3 (*avec `RECAPTCHA_SECRET_KEY`) |
+| `RECAPTCHA_SECRET_KEY` | Non* | Clé secrète reCAPTCHA (*paire obligatoire) |
+| `AKISMET_API_KEY` | Non* | Clé Akismet (*avec `AKISMET_SITE_URL`) |
+| `AKISMET_SITE_URL` | Non* | URL du site pour Akismet |
+
+Validation centralisée : [`lib/env.ts`](lib/env.ts). Guide Vercel : [`docs/VERCEL_ENV.md`](docs/VERCEL_ENV.md).
+
+- Brevo : [`CONFIGURATION_BREVO.md`](CONFIGURATION_BREVO.md)
+- Anti-spam : [`PROTECTION-ANTI-SPAM.md`](PROTECTION-ANTI-SPAM.md)
 
 ## 📝 Branches
 

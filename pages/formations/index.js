@@ -1,5 +1,6 @@
-import Head from 'next/head'
 import Link from 'next/link'
+import ServicePageSeoHead from '../../components/ServicePageSeoHead'
+import FormationFaqSection from '../../components/FormationFaqSection'
 import Image from 'next/image'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
@@ -15,12 +16,7 @@ import {
 export default function FormationsIndex() {
   return (
     <>
-      <Head>
-        <title>Formations professionnelles à Bordeaux - Certifiantes & Professionnalisantes | Atipik RH</title>
-        <meta name="description" content="Formations certifiantes (CIP, FPA) et formations courtes professionnalisantes à Bordeaux. Toutes nos formations sont éligibles au CPF. Centre de formation à Lormont." />
-        <meta name="keywords" content="formations Bordeaux, CIP, FPA, formations courtes professionnalisantes, CPF, Lormont, formation professionnelle" />
-        <link rel="canonical" href="https://www.atipikrh.com/formations" />
-      </Head>
+      <ServicePageSeoHead briefId="formations-hub" />
 
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">
         {/* Background animé global */}
@@ -35,7 +31,20 @@ export default function FormationsIndex() {
           {/* Spacer for fixed header */}
           <div className="h-20"></div>
 
-
+          <section className="py-8">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto text-center">
+                <h1 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4">
+                  Formations professionnelles à{' '}
+                  <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Bordeaux</span>{' '}
+                  et Lormont
+                </h1>
+                <p className="text-lg text-[#013F63] max-w-2xl mx-auto">
+                  Titres certifiants CIP, FPA, module CCP3 et formations courtes professionnalisantes — centre Qualiopi à Lormont.
+                </p>
+              </div>
+            </div>
+          </section>
 
           {/* Formations Certifiantes */}
           <section className="py-12">
@@ -146,7 +155,7 @@ export default function FormationsIndex() {
                   {/* Titre de section - Professionels de l'insertion */}
                   <div className="lg:col-span-2 mb-4">
                     <h3 className="text-3xl lg:text-4xl font-bold text-[#013F63] text-center mb-4">
-                      <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Professionels</span> de l'insertion
+                      <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Professionnels</span> de l'insertion
                     </h3>
                   </div>
 
@@ -191,7 +200,7 @@ export default function FormationsIndex() {
                   {/* Titre de section - Professionels des RH et du recrutement */}
                   <div className="lg:col-span-2 mt-8 mb-4">
                     <h3 className="text-3xl lg:text-4xl font-bold text-[#013F63] text-center mb-4">
-                      <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Professionels</span> des RH et du recrutement
+                      <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Professionnels</span> des RH et du recrutement
                     </h3>
                   </div>
 
@@ -348,6 +357,21 @@ export default function FormationsIndex() {
             </div>
           </section>
 
+          <section className="py-8">
+            <div className="container mx-auto px-4 max-w-3xl text-center">
+              <p className="text-[#013F63] text-sm">
+                <Link href="/reconversion-professionnelle-bordeaux" className="font-semibold text-orange-500 hover:underline">
+                  Reconversion professionnelle à Bordeaux
+                </Link>
+                {' · '}
+                <Link href="/organisme-formation-insertion-professionnelle" className="font-semibold text-orange-500 hover:underline">
+                  Organisme de formation insertion
+                </Link>
+              </p>
+            </div>
+          </section>
+
+          <FormationFaqSection briefId="formations-hub" />
           <Footer />
         </div>
 

@@ -204,6 +204,12 @@ export default function RenforcerPratiqueRecrutementInclusif() {
                 <p className="text-sm lg:text-base text-[#013F63] font-normal max-w-3xl mx-auto">
                   Conformément à la loi n° 2017-86 du 27 janvier 2017, les entreprises de 300 salariés et plus, ainsi que les acteurs du recrutement, ont l'obligation de former les professionnels en charge du recrutement à la non-discrimination à l'embauche.
                 </p>
+                <p className="mt-4 text-sm text-[#013F63]/80 max-w-2xl mx-auto">
+                  Formation obligatoire (11 h). Pour renforcer vos pratiques RH au-delà du cadre légal :{' '}
+                  <Link href="/formations/professionnalisantes/renforcer-pratique-recrutement-diversite" className="font-semibold text-orange-500 hover:underline">
+                    Renforcer ses pratiques de recrutement
+                  </Link>
+                </p>
               </div>
             </div>
           </section>

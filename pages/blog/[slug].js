@@ -21,6 +21,136 @@ import { buildArticleSeo } from '../../lib/blog/articleSeoMapper';
 
 const BLOG_ARTICLES = [
     {
+      id: 37,
+      slug: "recruter-par-les-competences-penurie-talents",
+      title: "Pénurie de talents : pourquoi les entreprises qui recrutent par les compétences prennent une longueur d'avance",
+      excerpt: "En 2026, recruter par les compétences devient un levier prioritaire pour élargir les viviers, réduire les tensions de recrutement et sécuriser les embauches.",
+      image: "/images/blog/recrutement-competences-methode-complete-rh-2026.png",
+      date: "2 juin 2026",
+      readTime: "12 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords: "recruter par les compétences, recrutement par les compétences, compétences transférables, recrutement sans CV, soft skills recrutement, pénurie de talents, méthode de recrutement, recrutement inclusif, évaluation des compétences",
+      seo: {
+        metaTitle: "Recruter par les compétences : méthode RH 2026 | Atipik RH",
+        metaDescription:
+          "Méthode RH concrète : recruter par les compétences, grille d'évaluation, entretiens structurés. Élargissez le vivier et réduisez le turnover.",
+        canonicalPath: "/blog/recruter-par-les-competences-penurie-talents",
+        secondaryKeywords: [
+          "recrutement par les compétences",
+          "compétences transférables",
+          "recrutement sans CV",
+          "soft skills recrutement",
+          "évaluation des compétences",
+        ],
+      },
+      faqItems: [
+        {
+          question: "Quelle différence entre recrutement classique et recrutement par les compétences ?",
+          answer: "Le recrutement classique filtre d'abord sur le CV. L'approche compétences part des exigences réelles du poste et évalue des preuves concrètes via une grille structurée.",
+        },
+        {
+          question: "Le recrutement par les compétences est-il adapté aux PME ?",
+          answer: "Oui. Une PME peut démarrer simplement avec un référentiel de compétences, des entretiens structurés et des KPI de suivi (période d'essai, turnover, satisfaction manager).",
+        },
+        {
+          question: "Quels indicateurs faut-il suivre ?",
+          answer: "Délai de recrutement, taux d'acceptation des offres, réussite de période d'essai, turnover à 12 mois et satisfaction des managers à 3 mois.",
+        },
+        {
+          question: "Comment évaluer les soft skills de manière fiable ?",
+          answer: "Avec des questions comportementales identiques pour tous les candidats, une mise en situation courte et une grille de notation partagée RH-manager.",
+        },
+        {
+          question: "Pourquoi former les recruteurs à cette méthode ?",
+          answer: "La formation aligne les pratiques, réduit les biais de sélection et améliore la qualité des décisions de recrutement dans la durée.",
+        },
+      ],
+      internalLinks: [
+        { label: "Formation Recruter par les compétences", href: "/formations/professionnalisantes/renforcer-pratique-recrutement-inclusif", type: "formation" },
+        { label: "Article méthode complète recrutement compétences", href: "/blog/recrutement-competences-methode-complete-rh-2026", type: "article" },
+        { label: "Page financement", href: "/financement", type: "financement" },
+        { label: "Page contact", href: "/contact", type: "contact" },
+      ],
+      content: `
+        <h1>Pénurie de talents : pourquoi les entreprises qui recrutent par les compétences prennent une longueur d'avance</h1>
+        <p>En 2026, le marché de l'emploi reste sous tension. Selon France Travail (BMO 2026), 43,8 % des projets de recrutement sont encore jugés difficiles. Le volume d'embauches ralentit, mais la tension sur les compétences clés reste forte. Pour les DRH, responsables recrutement, chargés RH, dirigeants de PME et managers recruteurs, le vrai sujet n'est plus seulement de publier des offres : il faut mieux qualifier la capacité réelle à réussir dans le poste.</p>
+        <p>C'est précisément l'objectif de <strong>recruter par les compétences</strong>. Cette approche remplace une logique centrée sur le CV par une évaluation concrète des savoir-faire, savoir-être et compétences transférables. Dans un contexte de pénurie de talents, les entreprises qui adoptent cette méthode prennent un avantage compétitif clair : elles recrutent plus juste, plus vite et avec un meilleur niveau de sécurisation.</p>
+
+        <h2>Pourquoi les entreprises peinent encore à recruter en 2026</h2>
+        <h3>La raréfaction des profils</h3>
+        <p>Dans de nombreux secteurs, les profils immédiatement opérationnels sont rares. Les métiers de la relation client, de l'encadrement intermédiaire, de la santé-social, de la production et du numérique restent fortement concurrentiels. Un process trop long ou une fiche de poste trop restrictive suffit à perdre les bons candidats.</p>
+        <h3>L'évolution rapide des compétences</h3>
+        <p>Les postes évoluent plus vite que les référentiels de diplômes. LinkedIn observe que le recrutement orienté compétences est devenu prioritaire pour les équipes talent acquisition, car les intitulés de poste passés ne suffisent plus à prédire la performance future. Les entreprises recherchent des profils capables d'apprendre, de s'adapter et de collaborer efficacement.</p>
+        <h3>Les limites du recrutement centré sur le CV</h3>
+        <ul>
+          <li>Il survalorise l'historique plutôt que le potentiel.</li>
+          <li>Il exclut des parcours atypiques pourtant performants.</li>
+          <li>Il capte mal les soft skills décisives au quotidien.</li>
+        </ul>
+        <p>En période de pénurie de talents, ces biais coûtent cher : allongement du délai de recrutement, baisse du taux d'acceptation des offres et erreurs d'embauche.</p>
+
+        <h2>Qu'est-ce que le recrutement par les compétences ?</h2>
+        <h3>Définition</h3>
+        <p>Le <strong>recrutement par les compétences</strong> consiste à définir les compétences indispensables à la réussite dans le poste, puis à évaluer chaque candidat sur des preuves observables : cas pratiques, mises en situation, questions comportementales, scorecard d'entretien et critères partagés.</p>
+        <h3>Hard skills, soft skills et compétences transférables</h3>
+        <ul>
+          <li><strong>Hard skills</strong> : compétences techniques directement mobilisables.</li>
+          <li><strong>Soft skills</strong> : communication, coopération, organisation, adaptabilité.</li>
+          <li><strong>Compétences transférables</strong> : acquis d'autres secteurs applicables au poste cible.</li>
+        </ul>
+        <h3>Les avantages pour les recruteurs</h3>
+        <ul>
+          <li>Décisions plus objectives et comparables.</li>
+          <li>Ouverture du vivier de candidats.</li>
+          <li>Réduction des biais de sélection.</li>
+          <li>Meilleure prédiction de la performance à 6-12 mois.</li>
+        </ul>
+
+        <h2>Les bénéfices concrets du recrutement par les compétences</h2>
+        <h3>Élargir les viviers de candidats</h3>
+        <p>En remplaçant les prérequis trop stricts (diplôme, secteur, nombre d'années) par des critères de compétences, les entreprises captent des profils jusqu'ici invisibles : reconversions, autodidactes, parcours non linéaires, mobilité intersectorielle.</p>
+        <h3>Réduire les tensions de recrutement</h3>
+        <p>Une méthode claire réduit le bruit dans le sourcing et accélère la décision finale. Les recruteurs passent moins de temps sur des candidatures flatteuses sur CV mais faibles en situation réelle.</p>
+        <h3>Améliorer la diversité des recrutements</h3>
+        <p>Le recrutement inclusif devient plus concret quand les critères sont explicites, mesurables et identiques pour tous les candidats. Cette démarche améliore aussi la qualité collective des équipes.</p>
+        <h3>Réduire le turnover</h3>
+        <p>Quand l'évaluation porte sur les compétences réellement attendues, l'intégration est plus robuste et les ruptures de période d'essai diminuent.</p>
+
+        <h2>Comment mettre en place cette approche dans son entreprise</h2>
+        <h3>Identifier les compétences clés</h3>
+        <p>Partir des missions critiques des 90 premiers jours. Limiter la grille à 6-8 compétences maximum : 3 à 5 techniques, 2 à 3 comportementales, 1 à 2 transférables.</p>
+        <h3>Construire une grille d'évaluation</h3>
+        <p>Créer une scorecard simple : compétence, niveau attendu, preuve observée, note, commentaire factuel. Toute note doit être justifiée.</p>
+        <h3>Structurer les entretiens</h3>
+        <p>Poser les mêmes questions comportementales aux candidats sur les compétences clés. Ajouter une mise en situation courte pour observer le raisonnement en contexte.</p>
+        <h3>Mesurer les résultats</h3>
+        <ul>
+          <li>Délai moyen de recrutement.</li>
+          <li>Taux d'acceptation des offres.</li>
+          <li>Validation de période d'essai.</li>
+          <li>Turnover à 12 mois.</li>
+          <li>Satisfaction manager à 3 mois.</li>
+        </ul>
+
+        <h2>Les erreurs à éviter</h2>
+        <h3>Confondre diplôme et compétence</h3>
+        <p>Un diplôme peut attester d'un socle, mais il ne garantit pas la performance opérationnelle dans votre contexte d'entreprise.</p>
+        <h3>Survaloriser l'expérience sectorielle</h3>
+        <p>Des compétences transférables solides peuvent créer plus de valeur qu'un parcours strictement sectoriel.</p>
+        <h3>Négliger les compétences comportementales</h3>
+        <p>La plupart des échecs d'intégration sont liés à des enjeux de posture, de communication et de coopération.</p>
+
+        <h2>Pourquoi former ses recruteurs au recrutement par les compétences</h2>
+        <p>La méthode ne repose pas uniquement sur un nouvel outil, mais sur une discipline collective. Former les recruteurs et managers permet d'aligner les critères, sécuriser la décision, fiabiliser l'évaluation et améliorer durablement la qualité d'embauche.</p>
+        <p>La formation Atipik RH <strong>"Recruter par les compétences"</strong> apporte un cadre opérationnel immédiatement utilisable : référentiel de compétences, scorecards, trames d'entretien, KPI de pilotage et plan d'amélioration continue.</p>
+
+        <h2>Conclusion</h2>
+        <p>Face à la pénurie de talents, les entreprises qui recrutent uniquement sur le CV prennent du retard. Celles qui choisissent d'évaluer les compétences réelles gagnent en agilité, en inclusivité et en performance RH. En 2026, <strong>recruter par les compétences</strong> n'est plus une option : c'est un standard de qualité.</p>
+        <p><a href="/formations/professionnalisantes/renforcer-pratique-recrutement-inclusif">Découvrir la formation Recruter par les compétences</a> ou <a href="/contact">demander le programme</a>.</p>
+      `,
+    },
+    {
       id: 36,
       slug: "formation-fpa-bordeaux-formateur-professionnel-adultes",
       title: "Devenir formateur professionnel d'adultes à Bordeaux : formation FPA, certification et débouchés",
@@ -71,7 +201,7 @@ const BLOG_ARTICLES = [
         },
       ],
       internalLinks: [
-        { label: "Page formation FPA", href: "/formations/certifiantes/formateur-professionnel-adultes", type: "formation" },
+        { label: "Page formation FPA", href: "/formations/fpa", type: "formation" },
         { label: "Page formation CIP", href: "/formations/cip", type: "formation" },
         { label: "Page financement", href: "/financement", type: "financement" },
         { label: "Page contact", href: "/contact", type: "contact" },
@@ -185,7 +315,7 @@ const BLOG_ARTICLES = [
 
         <h2>Conclusion : transformer votre expertise en métier</h2>
         <p>Devenir formateur professionnel d'adultes, c'est donner une nouvelle dimension à ce que vous savez faire. Le marché de la formation en Gironde est porteur, les financements existent, et le titre professionnel FPA est reconnu par les acteurs du secteur.</p>
-        <p><a href="/formations/certifiantes/formateur-professionnel-adultes">Voir les prochaines sessions de formation FPA</a> ou <a href="/contact">contacter Atipik RH</a>.</p>
+        <p><a href="/formations/fpa">Voir les prochaines sessions de formation FPA</a> ou <a href="/contact">contacter Atipik RH</a>.</p>
       `,
     },
     {
@@ -2990,6 +3120,21 @@ const BLOG_ARTICLES = [
       author: "Brunilda RAFAEL",
       category: "Formations",
       keywords: "formation CIP, conseiller insertion professionnelle, Lormont, débouchés emploi, programme formation",
+      seo: {
+        metaTitle: "Centre formation CIP à Lormont | Programme & débouchés | Atipik RH",
+        metaDescription:
+          "Formation conseiller insertion à Lormont : centre Atipik RH, programme CIP, débouchés en Gironde. Article complémentaire à la fiche formation officielle.",
+        canonicalPath: "/blog/formation-conseiller-insertion-professionnelle-lormont",
+        secondaryKeywords: [
+          "centre formation Lormont",
+          "formation insertion professionnelle Gironde",
+          "devenir CIP Lormont",
+        ],
+      },
+      internalLinks: [
+        { label: "Fiche formation CIP", href: "/formations/cip", type: "formation" },
+        { label: "Réunion d'information", href: "/s-inscrire", type: "contact" },
+      ],
       content: `
         <p>La <strong>formation de Conseiller en Insertion Professionnelle (CIP) à Lormont</strong> prépare à un métier à fort impact social. Elle permet d'accompagner des publics variés vers l'emploi, la formation et l'autonomie professionnelle.</p>
 
@@ -3010,7 +3155,7 @@ const BLOG_ARTICLES = [
 
         <p>À Lormont et sur la métropole bordelaise, la demande reste soutenue pour les profils capables d'accompagner l'évolution des parcours professionnels.</p>
 
-        <p><a href="/contact?sujet=Informations%20formation%20CIP%20Lormont"><strong>Contactez notre équipe</strong></a> pour échanger sur la prochaine session et les modalités de financement.</p>
+        <p><a href="/formations/cip"><strong>Voir la fiche formation CIP</strong></a> (sessions, financement) ou <a href="/s-inscrire">vous inscrire à une réunion d'information</a>.</p>
       `
     },
     {

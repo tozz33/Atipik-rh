@@ -38,7 +38,6 @@ export default function Document() {
         
         {/* Meta tags génériques */}
         <meta charSet="utf-8" />
-        <meta name="robots" content="index, follow" />
         <meta name="author" content="Atipik RH" />
         
         {/* Favicon Atipik RH */}

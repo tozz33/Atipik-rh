@@ -120,6 +120,12 @@ export default function FormationsCourtesProfessionnalisantes() {
                   <br className="hidden lg:block" />
                   <span className="text-orange-500 font-medium">pour les acteurs de l&apos;accompagnement et de l&apos;insertion</span>
                 </p>
+                <p className="mt-6 text-sm text-[#013F63]">
+                  Montée en compétences pour les professionnels du CIP —{' '}
+                  <Link href="/formations/cip" className="font-semibold text-orange-500 hover:underline">
+                    découvrir la formation certifiante CIP
+                  </Link>
+                </p>
               </div>
             </div>
           </section>

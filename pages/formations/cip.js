@@ -1,5 +1,9 @@
-import Head from 'next/head'
 import Link from 'next/link'
+import ServicePageSeoHead from '../../components/ServicePageSeoHead'
+import FormationGeoSummary from '../../components/FormationGeoSummary'
+import FormationFaqSection from '../../components/FormationFaqSection'
+import FormationStickyCta from '../../components/FormationStickyCta'
+import { getCertifianteContactHref } from '../../lib/seo/certifiantesConfig'
 import { useState, useEffect, useRef } from 'react'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
@@ -7,6 +11,8 @@ import ReunionInfoModal from '../../components/ReunionInfoModal'
 
 import { Clock, Users, MapPin, Calendar, GraduationCap, CheckCircle, ArrowRight, CreditCard, BookOpen, Target, Award, Phone, Mail, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, UserCheck } from 'lucide-react'
 import Image from 'next/image'
+
+const CONTACT_HREF = getCertifianteContactHref('formation-cip')
 
 export default function FormationCIP() {
   const [openModules, setOpenModules] = useState({})
@@ -423,14 +429,9 @@ export default function FormationCIP() {
 
   return (
     <>
-      <Head>
-        <title>Formation CIP - Conseiller en Insertion Professionnelle | Atipik RH</title>
-        <meta name="description" content="Formation certifiante Conseiller en Insertion Professionnelle (CIP) niveau 5. Titre professionnel RNCP, financement CPF possible. Durée 1186h dont 385h en entreprise." />
-        <meta name="keywords" content="formation CIP, conseiller insertion professionnelle, formation certifiante, CPF, Bordeaux, Lormont" />
-        <link rel="canonical" href="https://www.atipikrh.com/formations/cip" />
-      </Head>
+      <ServicePageSeoHead briefId="formation-cip" />
 
-      <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">
+      <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50 pb-20 md:pb-0">
         {/* Background animé global */}
         <div className="absolute top-20 left-1/4 w-96 h-96 bg-muted-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
         <div className="absolute top-40 right-1/4 w-96 h-96 bg-muted-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-1000"></div>
@@ -456,6 +457,7 @@ export default function FormationCIP() {
                   Devenez expert de l'<strong>accompagnement vers l'emploi</strong>
                 </p>
               </div>
+              <FormationGeoSummary briefId="formation-cip" />
             </div>
           </section>
 
@@ -1474,7 +1476,7 @@ export default function FormationCIP() {
                     </div>
                     
                     <Link
-                      href="/contact"
+                      href={CONTACT_HREF}
                       className="inline-block px-8 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-full transition-colors"
                     >
                       En savoir plus
@@ -1493,7 +1495,7 @@ export default function FormationCIP() {
                     </div>
                     
                     <Link
-                      href="/contact"
+                      href={CONTACT_HREF}
                       className="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full transition-colors"
                     >
                       En savoir plus
@@ -1654,7 +1656,7 @@ export default function FormationCIP() {
                         S'inscrire à une réunion
                       </Link>
                       <Link
-                        href="/contact"
+                        href={CONTACT_HREF}
                         className="inline-flex items-center gap-2 px-8 py-4 border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold rounded-full transition-colors text-lg"
                       >
                         <Phone className="w-5 h-5" />
@@ -2069,7 +2071,8 @@ export default function FormationCIP() {
 
         </div>
 
-
+        <FormationFaqSection briefId="formation-cip" />
+        <FormationStickyCta />
 
         <Footer />
 

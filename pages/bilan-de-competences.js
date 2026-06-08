@@ -4,6 +4,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import ServicePageSeoHead from '../components/ServicePageSeoHead';
+import { getBriefById } from '../lib/seo/content-briefs';
 
 import { 
   Award, 
@@ -41,7 +43,8 @@ export default function BilanCompetences() {
     setOpenFaq(openFaq === index ? null : index);
   };
 
-  const faqData = [
+  const briefFaq = getBriefById('bilan-competences-local')?.faq ?? [];
+  const faqExtra = [
     {
       question: "Est-ce que mon employeur sera au courant ?",
       answer: "Non, absolument pas ! Votre démarche de bilan de compétences est strictement confidentielle. Si vous utilisez votre CPF, votre employeur n'est pas informé. Même si vous réalisez votre bilan sur votre temps de travail, vous n'êtes pas obligé de révéler les résultats. La confidentialité est garantie par la loi."
@@ -58,14 +61,16 @@ export default function BilanCompetences() {
       question: "À quelle fréquence puis-je faire un bilan ?",
       answer: "Il n'y a pas de limite légale, mais nous recommandons d'attendre au moins 5 ans entre deux bilans pour que la démarche garde tout son sens. Vos droits CPF se rechargent chaque année jusqu'à un plafond."
     },
-    {
-      question: "Combien de temps dure un bilan ?",
-      answer: "Un bilan de compétences peut durer jusqu'à 24 heures au total, réparties sur 3 à 4 mois. Le rythme est flexible : généralement 1 séance de 2 heures par semaine, adaptée à vos disponibilités professionnelles et personnelles."
-    }
+  ];
+  const seenFaq = new Set(briefFaq.map((f) => f.question));
+  const faqData = [
+    ...briefFaq,
+    ...faqExtra.filter((f) => !seenFaq.has(f.question)),
   ];
 
   return (
     <>
+      <ServicePageSeoHead briefId="bilan-competences-local" />
       <Header isFixed={true} />
       
       {/* Spacer for fixed header */}

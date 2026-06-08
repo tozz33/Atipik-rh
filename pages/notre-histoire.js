@@ -102,9 +102,10 @@ export default function NotreHistoire() {
   return (
     <>
       <Head>
-        <title>Notre Histoire - Test | Atipik RH - L'aventure d'un organisme pas comme les autres</title>
+        <title>Notre Histoire | Atipik RH - L&apos;aventure d&apos;un organisme pas comme les autres</title>
         <meta name="description" content="Découvrez l'histoire d'Atipik RH : de 2018 à aujourd'hui, le parcours d'une équipe passionnée qui révolutionne l'accompagnement professionnel en Nouvelle-Aquitaine." />
         <meta name="keywords" content="histoire Atipik RH, création organisme formation, Bordeaux, équipe, évolution, chronologie" />
+        <link rel="canonical" href="https://www.atipikrh.com/notre-histoire" />
       </Head>
 
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">

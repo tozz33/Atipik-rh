@@ -181,6 +181,13 @@ export default function RenforcerPratiqueRecrutementDiversite() {
                 <p className="text-lg lg:text-xl text-[#013F63] font-normal leading-relaxed">
                   {seoFormation?.sousTitreCarte}
                 </p>
+                <p className="mt-4 text-sm text-[#013F63]/80 max-w-2xl mx-auto">
+                  Obligation légale de formation anti-discrimination :{' '}
+                  <Link href="/formations/professionnalisantes/renforcer-pratique-recrutement-inclusif" className="font-semibold text-orange-500 hover:underline">
+                    Prévenir les discriminations dans le recrutement
+                  </Link>
+                  {' '}(11 h, formation obligatoire).
+                </p>
               </div>
             </div>
           </section>

@@ -1,5 +1,11 @@
-import Head from 'next/head'
 import Link from 'next/link'
+import ServicePageSeoHead from '../../components/ServicePageSeoHead'
+import FormationGeoSummary from '../../components/FormationGeoSummary'
+import FormationFaqSection from '../../components/FormationFaqSection'
+import FormationStickyCta from '../../components/FormationStickyCta'
+import { getCertifianteContactHref } from '../../lib/seo/certifiantesConfig'
+
+const CONTACT_HREF = getCertifianteContactHref('formation-ccp3')
 import { useState, useEffect, useRef } from 'react'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
@@ -380,14 +386,9 @@ export default function FormationCCP3() {
 
   return (
     <>
-      <Head>
-        <title>Formation CCP3 - Conseiller en Insertion Professionnelle (C.C.P 3) | Atipik RH</title>
-        <meta name="description" content="Formation certifiante CCP3 - Conseiller en Insertion Professionnelle niveau 5. Titre professionnel RNCP, financement CPF possible. Durée 1186h dont 385h en entreprise." />
-        <meta name="keywords" content="formation CCP3, conseiller insertion professionnelle, formation certifiante, CPF, Bordeaux, Lormont" />
-        <link rel="canonical" href="https://www.atipikrh.com/formations/ccp3" />
-      </Head>
+      <ServicePageSeoHead briefId="formation-ccp3" />
 
-      <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">
+      <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50 pb-20 md:pb-0">
         {/* Background animé global */}
         <div className="absolute top-20 left-1/4 w-96 h-96 bg-muted-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
         <div className="absolute top-40 right-1/4 w-96 h-96 bg-muted-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-1000"></div>
@@ -413,6 +414,13 @@ export default function FormationCCP3() {
                   Devenez expert de l'<strong>accompagnement vers l'emploi</strong>
                 </p>
               </div>
+              <FormationGeoSummary briefId="formation-ccp3" />
+              <p className="mt-4 text-center text-sm text-[#013F63]/80 max-w-2xl mx-auto">
+                Vous visez le titre CIP complet ?{' '}
+                <Link href="/formations/cip" className="font-semibold text-orange-500 hover:underline">
+                  Voir le parcours CIP (8 mois, 948 h)
+                </Link>
+              </p>
             </div>
           </section>
 
@@ -1325,7 +1333,7 @@ export default function FormationCCP3() {
                     </div>
                     
                     <Link
-                      href="/contact"
+                      href={CONTACT_HREF}
                       className="inline-block px-8 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-full transition-colors"
                     >
                       En savoir plus
@@ -1506,7 +1514,7 @@ export default function FormationCCP3() {
                         S'inscrire à une réunion
                       </Link>
                       <Link
-                        href="/contact"
+                        href={CONTACT_HREF}
                         className="inline-flex items-center gap-2 px-8 py-4 border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold rounded-full transition-colors text-lg"
                       >
                         <Phone className="w-5 h-5" />
@@ -1921,7 +1929,8 @@ export default function FormationCCP3() {
 
         </div>
 
-
+        <FormationFaqSection briefId="formation-ccp3" />
+        <FormationStickyCta href="/s-inscrire" label="Réunion d'information" />
 
         <Footer />
 

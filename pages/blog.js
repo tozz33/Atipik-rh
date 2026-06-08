@@ -15,6 +15,41 @@ export default function Blog() {
     // Articles exemples - pourront être remplacés par une base de données ou CMS plus tard
   const articles = [
     {
+      id: 37,
+      slug: "recruter-par-les-competences-penurie-talents",
+      title: "Pénurie de talents : pourquoi les entreprises qui recrutent par les compétences prennent une longueur d'avance",
+      excerpt: "En 2026, recruter par les compétences devient un levier prioritaire pour élargir les viviers, réduire les tensions de recrutement et sécuriser les embauches.",
+      image: "/images/blog/recrutement-competences-methode-complete-rh-2026.png",
+      date: "2 juin 2026",
+      readTime: "12 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords: "recruter par les compétences, recrutement par les compétences, compétences transférables, recrutement sans CV, soft skills recrutement, pénurie de talents, méthode de recrutement, recrutement inclusif, évaluation des compétences",
+      seo: {
+        metaTitle: "Recruter par les compétences : méthode RH 2026 | Atipik RH",
+        metaDescription:
+          "Méthode RH concrète : recruter par les compétences, grille d'évaluation, entretiens structurés. Élargissez le vivier et réduisez le turnover.",
+        canonicalPath: "/blog/recruter-par-les-competences-penurie-talents",
+        secondaryKeywords: [
+          "recrutement par les compétences",
+          "compétences transférables",
+          "recrutement sans CV",
+          "soft skills recrutement",
+          "évaluation des compétences",
+        ],
+      },
+      faqItems: [
+        {
+          question: "Quelle différence entre recrutement classique et recrutement par les compétences ?",
+          answer: "Le recrutement classique filtre d'abord sur le CV. L'approche compétences part des exigences réelles du poste et évalue des preuves concrètes via une grille structurée.",
+        },
+      ],
+      internalLinks: [
+        { label: "Formation Recruter par les compétences", href: "/formations/professionnalisantes/renforcer-pratique-recrutement-inclusif", type: "formation" },
+        { label: "Page contact", href: "/contact", type: "contact" },
+      ],
+    },
+    {
       id: 36,
       slug: "formation-fpa-bordeaux-formateur-professionnel-adultes",
       title: "Devenir formateur professionnel d'adultes à Bordeaux : formation FPA, certification et débouchés",
@@ -45,7 +80,7 @@ export default function Blog() {
         },
       ],
       internalLinks: [
-        { label: "Page formation FPA", href: "/formations/certifiantes/formateur-professionnel-adultes", type: "formation" },
+        { label: "Page formation FPA", href: "/formations/fpa", type: "formation" },
         { label: "Page formation CIP", href: "/formations/cip", type: "formation" },
         { label: "Page financement", href: "/financement", type: "financement" },
         { label: "Page contact", href: "/contact", type: "contact" },

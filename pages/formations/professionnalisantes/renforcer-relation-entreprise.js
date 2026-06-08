@@ -173,7 +173,7 @@ export default function RenforcerRelationEntreprise() {
                     <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-[#013F63]">
                       <div className="space-y-4 text-[#013F63] text-lg leading-relaxed text-center">
                         <p>
-                          Dans un contexte où la relation entreprise devient un enjeu stratégique pour l'insertion professionnelle, renforcer ses compétences en relation entreprise permet de créer des partenariats durables et efficaces. Cette formation vous donne les clés pour optimiser vos relations existantes et développer de nouveaux partenariats.
+                          Vous avez déjà une première expérience en relation entreprise ? Cette formation s&apos;adresse aux professionnels qui souhaitent structurer leur offre, professionnaliser leur prospection et valoriser l&apos;impact de leur action auprès des employeurs. L&apos;objectif : transformer des contacts ponctuels en partenariats durables et mesurables pour l&apos;insertion.
                         </p>
                       </div>
                       

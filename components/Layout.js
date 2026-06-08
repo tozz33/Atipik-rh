@@ -5,6 +5,8 @@ import CookieBanner from './CookieBanner'
 import { Phone, Mail, MapPin } from 'lucide-react'
 
 export default function Layout({ children, title, description, canonical }) {
+  const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+
   return (
     <>
       <Head>
@@ -13,6 +15,12 @@ export default function Layout({ children, title, description, canonical }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         {canonical && <link rel="canonical" href={canonical} />}
+        {googleSiteVerification && (
+          <meta
+            name="google-site-verification"
+            content={googleSiteVerification}
+          />
+        )}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
@@ -101,9 +109,9 @@ export default function Layout({ children, title, description, canonical }) {
               <div>
                 <h4 className="font-semibold mb-4">Formations</h4>
                 <ul className="space-y-2 text-neutral-100">
-                  <li><Link href="/formations/certifiantes" className="hover:text-white transition-colors">Formations certifiantes</Link></li>
+                  <li><Link href="/formations" className="hover:text-white transition-colors">Formations certifiantes</Link></li>
                   <li><Link href="/formations/courtes-professionnalisantes" className="hover:text-white transition-colors">Formations courtes professionnalisantes</Link></li>
-                  <li><Link href="/formations/certifiantes/cpf" className="hover:text-white transition-colors">Financement CPF</Link></li>
+                  <li><Link href="/financement" className="hover:text-white transition-colors">Financement CPF</Link></li>
                 </ul>
               </div>
 

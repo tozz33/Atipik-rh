@@ -197,24 +197,30 @@ Pour aller plus loin, la protection peut être complétée par :
 
 #### Variables d’environnement à définir
 
-À configurer dans `.env.local` (et dans le provider de déploiement) **sans jamais les committer** :
+Voir [`.env.example`](.env.example). Validation : [`lib/env.ts`](lib/env.ts).
 
-- `NEXT_PUBLIC_RECAPTCHA_SITE_KEY` : clé *site* publique reCAPTCHA v3
-- `RECAPTCHA_SECRET_KEY` : clé *secrète* reCAPTCHA v3 (côté serveur uniquement)
-- `AKISMET_API_KEY` : clé API Akismet
-- `AKISMET_SITE_URL` : URL publique du site (par ex. `https://atipikrh.fr`)
+| Variable | Règle |
+|----------|--------|
+| `NEXT_PUBLIC_RECAPTCHA_SITE_KEY` | Paire obligatoire avec `RECAPTCHA_SECRET_KEY` |
+| `RECAPTCHA_SECRET_KEY` | Serveur uniquement — jamais de préfixe `NEXT_PUBLIC_` |
+| `AKISMET_API_KEY` | Paire obligatoire avec `AKISMET_SITE_URL` |
+| `AKISMET_SITE_URL` | URL HTTPS canonique du site |
 
 #### Activation par endpoint
 
-Chaque route API peut activer ou non ces briques via les options de `antiSpamMiddleware` :
+Chaque route API passe `recaptcha.enabled` / `akismet.enabled` à `antiSpamMiddleware`. La vérification **ne s’exécute** que si la paire de variables est complète (`isRecaptchaActive()` / `isAkismetActive()`).
 
-- `recaptcha.enabled` : active la vérification reCAPTCHA v3 pour cette route
-- `recaptcha.action` : nom d’action attendu (ex. `contact_form`, `inscription_form`, `quiz_bilan`)
-- `recaptcha.minScore` : score minimal accepté (ex. `0.5` à `0.7`)
-- `akismet.enabled` : active la vérification Akismet
-- `akismet.type` : type de contenu (ex. `contact-form`, `lead-quiz`, etc.)
+- `recaptcha.action` : `contact_form`, `inscription_form`, `quiz_bilan`
+- `recaptcha.minScore` : ex. `0.5`
+- `akismet.type` : `contact-form`, `inscription-reunion`, `lead-quiz`
 
-Si les variables d’environnement sont absentes ou invalides, la brique correspondante est ignorée et seule la protection maison (honeypot, rate limiting, timing, patterns) reste active.
+#### Comportement production
+
+- Paire incomplète : protection maison uniquement (pas de rejet pour token manquant)
+- Paire complète en **production** : reCAPTCHA/Akismet actifs ; erreur réseau API → rejet (fail-closed)
+- Preview / local : erreur réseau API → requête autorisée (fail-open)
+
+Configuration Vercel : [`docs/VERCEL_ENV.md`](docs/VERCEL_ENV.md)
 
 ### Patterns Spam Spécifiques
 

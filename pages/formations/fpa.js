@@ -1,5 +1,11 @@
-import Head from 'next/head'
 import Link from 'next/link'
+import ServicePageSeoHead from '../../components/ServicePageSeoHead'
+import FormationGeoSummary from '../../components/FormationGeoSummary'
+import FormationFaqSection from '../../components/FormationFaqSection'
+import FormationStickyCta from '../../components/FormationStickyCta'
+import { getCertifianteContactHref } from '../../lib/seo/certifiantesConfig'
+
+const CONTACT_HREF = getCertifianteContactHref('formation-fpa')
 import { useState, useEffect, useRef } from 'react'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
@@ -416,14 +422,9 @@ export default function FormationFPA() {
 
   return (
     <>
-      <Head>
-        <title>Formation FPA - Formateur Professionnel d'Adultes | Atipik RH</title>
-        <meta name="description" content="Formation Formateur Professionnel d'Adultes (FPA) à Bordeaux. Devenez formateur certifié avec notre accompagnement expert. Financement CPF possible." />
-        <meta name="keywords" content="formation FPA, formateur professionnel adultes, certification formateur, formation professionnelle, CPF" />
-        <link rel="canonical" href="https://www.atipikrh.com/formations/fpa" />
-      </Head>
+      <ServicePageSeoHead briefId="formation-fpa" />
 
-      <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">
+      <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50 pb-20 md:pb-0">
         {/* Background animé global */}
         <div className="absolute top-20 left-1/4 w-96 h-96 bg-muted-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
         <div className="absolute top-40 right-1/4 w-96 h-96 bg-muted-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-1000"></div>
@@ -450,6 +451,7 @@ export default function FormationFPA() {
                   Devenez <strong>formateur certifié</strong> et accompagnez la montée en compétences
                 </p>
               </div>
+              <FormationGeoSummary briefId="formation-fpa" />
             </div>
           </section>
 
@@ -1270,7 +1272,7 @@ export default function FormationFPA() {
                     </div>
                     
                     <Link
-                      href="/contact"
+                      href={CONTACT_HREF}
                       className="inline-block px-8 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-full transition-colors"
                     >
                       En savoir plus
@@ -1289,7 +1291,7 @@ export default function FormationFPA() {
                     </div>
                     
                     <Link
-                      href="/contact"
+                      href={CONTACT_HREF}
                       className="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full transition-colors"
                     >
                       En savoir plus
@@ -1484,7 +1486,7 @@ export default function FormationFPA() {
                         S'inscrire à une réunion
                       </Link>
                       <Link
-                        href="/contact"
+                        href={CONTACT_HREF}
                         className="inline-flex items-center gap-2 px-8 py-4 border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold rounded-full transition-colors text-lg"
                       >
                         <Phone className="w-5 h-5" />
@@ -1730,7 +1732,7 @@ export default function FormationFPA() {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/contact" className="inline-flex px-8 py-4 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold shadow-lg transition text-lg hover:scale-105">
+                  <Link href={CONTACT_HREF} className="inline-flex px-8 py-4 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold shadow-lg transition text-lg hover:scale-105">
                     Candidater maintenant
                   </Link>
                   <a 
@@ -1816,6 +1818,9 @@ export default function FormationFPA() {
           </section>
 
         </div>
+
+        <FormationFaqSection briefId="formation-fpa" />
+        <FormationStickyCta />
 
         <Footer />
 

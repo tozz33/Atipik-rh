@@ -1,4 +1,9 @@
 import { antiSpamMiddleware } from '../../lib/antiSpam'
+import {
+  sendDualBrevoEmails,
+  SERVER_CONFIG_ERROR,
+  SEND_EMAIL_ERROR,
+} from '../../lib/brevo'
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -39,16 +44,6 @@ export default async function handler(req, res) {
   }
 
   try {
-    // Configuration Brevo depuis les variables d'environnement
-    const BREVO_API_KEY = process.env.BREVO_API_KEY
-    const BREVO_SENDER_EMAIL = process.env.BREVO_SENDER_EMAIL || 'contact@atipikrh.com'
-    const BREVO_RECIPIENT_EMAIL = process.env.BREVO_RECIPIENT_EMAIL || 'contact@atipikrh.com'
-
-    if (!BREVO_API_KEY) {
-      console.error('BREVO_API_KEY n\'est pas configurée')
-      return res.status(500).json({ error: 'Configuration serveur manquante' })
-    }
-
     // Préparer le contenu de l'email
     const scoreTotal = Object.values(answers).reduce((sum, score) => sum + score, 0)
     const scoreMoyen = (scoreTotal / questions.length).toFixed(1)
@@ -122,89 +117,34 @@ L'équipe Atipik RH
 📧 contact@atipikrh.com | 📞 07 83 01 99 55
 8 Rue du Courant, 33310 Lormont`
 
-    // Envoyer l'email de notification interne
-    const notificationResponse = await fetch('https://api.brevo.com/v3/smtp/email', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-        'api-key': BREVO_API_KEY
-      },
-      body: JSON.stringify({
-        sender: {
-          name: 'Quiz Atipik RH',
-          email: BREVO_SENDER_EMAIL
-        },
-        to: [{
-          email: BREVO_RECIPIENT_EMAIL,
-          name: 'Équipe Atipik RH'
-        }],
-        subject: `🎯 NOUVEAU LEAD QUALIFIÉ - Quiz Bilan ${userInfo.name}`,
-        textContent: emailContent
-      })
+    const result = await sendDualBrevoEmails({
+      notificationSubject: `🎯 NOUVEAU LEAD QUALIFIÉ - Quiz Bilan ${userInfo.name}`,
+      notificationContent: emailContent,
+      notificationSenderName: 'Quiz Atipik RH',
+      confirmationToEmail: userInfo.email,
+      confirmationToName: userInfo.name,
+      confirmationSubject:
+        "🎯 Vos résultats du quiz d'orientation professionnelle - Atipik RH",
+      confirmationContent,
     })
 
-    // Envoyer l'email de confirmation au prospect
-    const confirmationResponse = await fetch('https://api.brevo.com/v3/smtp/email', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-        'api-key': BREVO_API_KEY
-      },
-      body: JSON.stringify({
-        sender: {
-          name: 'Atipik RH',
-          email: BREVO_SENDER_EMAIL
-        },
-        to: [{
-          email: userInfo.email,
-          name: userInfo.name
-        }],
-        subject: `🎯 Vos résultats du quiz d'orientation professionnelle - Atipik RH`,
-        textContent: confirmationContent
-      })
-    })
+    if (result.missingConfig) {
+      return res.status(500).json(SERVER_CONFIG_ERROR)
+    }
 
-    // Vérifier que les deux emails ont été envoyés avec succès
-    if (notificationResponse.ok && confirmationResponse.ok) {
-      const notificationResult = await notificationResponse.json()
-      const confirmationResult = await confirmationResponse.json()
-      console.log('Emails du quiz envoyés avec succès via Brevo:', {
-        notification: notificationResult.messageId,
-        confirmation: confirmationResult.messageId
-      })
-      return res.status(200).json({ 
-        success: true, 
-        messageIds: {
-          notification: notificationResult.messageId,
-          confirmation: confirmationResult.messageId
-        }
-      })
-    } else {
-      // Gérer les erreurs
-      let errorMessage = 'Erreur lors de l\'envoi des emails'
-      let errorDetails = {}
-
-      if (!notificationResponse.ok) {
-        const notificationError = await notificationResponse.text()
-        console.error('Erreur notification quiz Brevo:', notificationResponse.status, notificationError)
-        errorDetails.notification = notificationError
-      }
-
-      if (!confirmationResponse.ok) {
-        const confirmationError = await confirmationResponse.text()
-        console.error('Erreur confirmation quiz Brevo:', confirmationResponse.status, confirmationError)
-        errorDetails.confirmation = confirmationError
-      }
-
-      return res.status(500).json({ 
-        error: errorMessage,
-        details: errorDetails 
+    if (result.ok) {
+      return res.status(200).json({
+        success: true,
+        messageIds: result.messageIds,
       })
     }
+
+    return res.status(500).json(SEND_EMAIL_ERROR)
   } catch (error) {
-    console.error('Erreur lors de l\'envoi Brevo:', error)
-    return res.status(500).json({ error: 'Erreur serveur', details: error.message })
+    console.error('[Quiz] Erreur lors de l\'envoi Brevo:', error)
+    return res.status(500).json({
+      message: 'Erreur serveur',
+      success: false,
+    })
   }
 } 
