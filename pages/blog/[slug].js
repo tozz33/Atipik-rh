@@ -16,10 +16,38 @@ import {
   biaisCognitifsRecrutementInternalLinks,
   biaisCognitifsRecrutementSecondaryKeywords,
 } from '../../lib/blog/biaisCognitifsRecrutementContent';
+import {
+  obligationFormationNonDiscriminationContent,
+  obligationFormationNonDiscriminationFaqItems,
+  obligationFormationNonDiscriminationInternalLinks,
+  obligationFormationNonDiscriminationSecondaryKeywords,
+} from '../../lib/blog/obligationFormationNonDiscriminationContent';
 import { getAllArticles, getArticleBySlug } from '../../lib/blog/articleRepository';
 import { buildArticleSeo } from '../../lib/blog/articleSeoMapper';
 
 const BLOG_ARTICLES = [
+    {
+      id: 38,
+      slug: "obligation-formation-non-discrimination-recrutement-entreprise",
+      title: "Discrimination à l'embauche : ce que la loi impose à votre entreprise (et comment former vos équipes)",
+      excerpt: "La loi n°2017-86 oblige les entreprises de +300 salariés à former leurs recruteurs. Obligations, risques et formation en 11h à Lormont.",
+      image: "/images/blog/obligation-formation-non-discrimination-recrutement-entreprise.jpg",
+      date: "10 juin 2026",
+      readTime: "10 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords: "formation non-discrimination recrutement, formation obligation recruteurs, prévenir discriminations embauche Bordeaux, loi anti-discrimination recrutement entreprise 2026, loi 2017-86 formation recrutement, article L1131-2 Code du travail",
+      seo: {
+        metaTitle: "Discrimination à l'embauche : obligation de formation recruteurs | Atipik RH",
+        metaDescription:
+          "La loi n°2017-86 oblige les entreprises de +300 salariés à former leurs recruteurs à la non-discrimination. Obligations, risques et formation ATIPIK RH en 11h à Lormont.",
+        canonicalPath: "/blog/obligation-formation-non-discrimination-recrutement-entreprise",
+        secondaryKeywords: obligationFormationNonDiscriminationSecondaryKeywords,
+      },
+      faqItems: obligationFormationNonDiscriminationFaqItems,
+      internalLinks: obligationFormationNonDiscriminationInternalLinks,
+      content: obligationFormationNonDiscriminationContent,
+    },
     {
       id: 37,
       slug: "recruter-par-les-competences-penurie-talents",

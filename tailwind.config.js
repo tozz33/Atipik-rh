@@ -31,6 +31,7 @@ module.exports = {
         dancing: ['Dancing Script', 'cursive'],
         signatura: ['Signatura Monoline', 'cursive'],
         sans: ['Montserrat', 'sans-serif'],
+        playfair: ['Playfair Display', 'serif'],
       },
       spacing: {
         'section': '96px',

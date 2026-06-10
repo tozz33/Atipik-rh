@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { useState, useEffect, useRef } from 'react'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
+import GuideLeadCapture from '../../../components/GuideLeadCapture'
 import FormationProfessionnelleSeoHead from '../../../components/FormationProfessionnelleSeoHead'
 import {
   getFormationContactHref,
@@ -154,6 +155,7 @@ export default function RenforcerPratiqueRecrutementDiversite() {
 
           {/* Spacer for fixed header */}
           <div className="h-20"></div>
+          <GuideLeadCapture />
 
           {/* Navigation de retour */}
           <section className="py-6">

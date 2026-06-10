@@ -3,6 +3,8 @@ import type { RegistryEntry } from './types'
 
 /** Slugs blog indexables (alignés sur pages/blog/[slug].js). */
 export const BLOG_SLUGS = [
+  'obligation-formation-non-discrimination-recrutement-entreprise',
+  'recruter-par-les-competences-penurie-talents',
   'formation-fpa-bordeaux-formateur-professionnel-adultes',
   'bilan-de-competences-lormont-bordeaux',
   'formation-cip-bordeaux-conseiller-insertion-professionnelle',
