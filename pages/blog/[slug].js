@@ -23,10 +23,39 @@ import {
   obligationFormationNonDiscriminationInternalLinks,
   obligationFormationNonDiscriminationSecondaryKeywords,
 } from '../../lib/blog/obligationFormationNonDiscriminationContent';
+import {
+  reconversionProfessionnelleJuin2026Content,
+  reconversionProfessionnelleJuin2026FaqItems,
+  reconversionProfessionnelleJuin2026InternalLinks,
+  reconversionProfessionnelleJuin2026SecondaryKeywords,
+} from '../../lib/blog/reconversionProfessionnelleJuin2026Content';
 import { getAllArticles, getArticleBySlug } from '../../lib/blog/articleRepository';
 import { buildArticleSeo } from '../../lib/blog/articleSeoMapper';
 
 const BLOG_ARTICLES = [
+    {
+      id: 39,
+      slug: "reconversion-professionnelle-juin-2026-financement-cpf",
+      title: "Reconversion professionnelle en juin 2026 : pourquoi c'est le meilleur moment pour agir (et comment financer)",
+      excerpt: "Reconversion professionnelle en 2026 : pourquoi juin est le bon moment pour agir et comment financer via CPF, France Travail ou l'employeur. Guide ATIPIK RH à Lormont.",
+      image: "/images/blog/reconversion-professionnelle-juin-2026-financement-cpf.jpg",
+      imageAlt: "Reconversion professionnelle juin 2026 — Guide financement CPF France Travail — ATIPIK RH Lormont Bordeaux",
+      date: "16 juin 2026",
+      readTime: "13 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Reconversion",
+      keywords: "reconversion professionnelle juin 2026, financement reconversion CPF, bilan de compétences Lormont, formation CIP septembre 2026, reconversion professionnelle Bordeaux, CPF bilan de compétences 2026, France Travail reconversion, reconversion rentrée 2026",
+      seo: {
+        metaTitle: "Reconversion professionnelle en juin 2026 | ATIPIK RH",
+        metaDescription:
+          "Reconversion professionnelle en 2026 : pourquoi juin est le bon moment et comment financer via CPF, France Travail ou l'employeur. Guide ATIPIK RH.",
+        canonicalPath: "/blog/reconversion-professionnelle-juin-2026-financement-cpf",
+        secondaryKeywords: reconversionProfessionnelleJuin2026SecondaryKeywords,
+      },
+      faqItems: reconversionProfessionnelleJuin2026FaqItems,
+      internalLinks: reconversionProfessionnelleJuin2026InternalLinks,
+      content: reconversionProfessionnelleJuin2026Content,
+    },
     {
       id: 38,
       slug: "obligation-formation-non-discrimination-recrutement-entreprise",
@@ -3403,7 +3432,7 @@ export default function BlogArticle({ article: articleProp }) {
                 <div className="relative h-64 lg:h-96 rounded-3xl overflow-hidden mb-8">
                   <Image
                     src={article.image}
-                    alt={article.title}
+                    alt={article.imageAlt ?? article.title}
                     width={800}
                     height={400}
                     className="w-full h-full object-cover"

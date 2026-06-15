@@ -15,6 +15,47 @@ export default function Blog() {
     // Articles exemples - pourront être remplacés par une base de données ou CMS plus tard
   const articles = [
     {
+      id: 39,
+      slug: "reconversion-professionnelle-juin-2026-financement-cpf",
+      title: "Reconversion professionnelle en juin 2026 : pourquoi c'est le meilleur moment pour agir (et comment financer)",
+      excerpt: "Reconversion professionnelle en 2026 : pourquoi juin est le bon moment pour agir et comment financer via CPF, France Travail ou l'employeur. Guide ATIPIK RH à Lormont.",
+      image: "/images/blog/reconversion-professionnelle-juin-2026-financement-cpf.jpg",
+      imageAlt: "Reconversion professionnelle juin 2026 — Guide financement CPF France Travail — ATIPIK RH Lormont Bordeaux",
+      date: "16 juin 2026",
+      readTime: "13 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Reconversion",
+      keywords: "reconversion professionnelle juin 2026, financement reconversion CPF, bilan de compétences Lormont, formation CIP septembre 2026, reconversion professionnelle Bordeaux, CPF bilan de compétences 2026, France Travail reconversion, reconversion rentrée 2026",
+      seo: {
+        metaTitle: "Reconversion professionnelle en juin 2026 | ATIPIK RH",
+        metaDescription:
+          "Reconversion professionnelle en 2026 : pourquoi juin est le bon moment et comment financer via CPF, France Travail ou l'employeur. Guide ATIPIK RH.",
+        canonicalPath: "/blog/reconversion-professionnelle-juin-2026-financement-cpf",
+        secondaryKeywords: [
+          "reconversion professionnelle juin 2026",
+          "financement reconversion CPF",
+          "bilan de compétences Lormont",
+          "formation CIP septembre 2026",
+          "reconversion professionnelle Bordeaux",
+          "CPF bilan de compétences 2026",
+        ],
+      },
+      faqItems: [
+        {
+          question: "Pourquoi juin 2026 est-il un bon moment pour une reconversion ?",
+          answer:
+            "Juin permet de faire le point avant l'été, de candidater aux formations certifiantes de la rentrée de septembre 2026 et de monter les dossiers de financement avec 2 à 6 semaines de marge administrative.",
+        },
+      ],
+      internalLinks: [
+        { label: "Bilan de compétences", href: "/bilan-de-competences", type: "service" },
+        { label: "Formation CIP", href: "/formations/cip", type: "formation" },
+        { label: "Formation FPA", href: "/formations/fpa", type: "formation" },
+        { label: "Financement 2026", href: "/financement", type: "financement" },
+        { label: "Page contact", href: "/contact", type: "contact" },
+      ],
+    },
+    {
       id: 38,
       slug: "obligation-formation-non-discrimination-recrutement-entreprise",
       title: "Discrimination à l'embauche : ce que la loi impose à votre entreprise (et comment former vos équipes)",
