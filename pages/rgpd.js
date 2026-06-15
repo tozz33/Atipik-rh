@@ -137,10 +137,21 @@ export default function RGPD() {
                 <div className="pl-6">
                   <h2 className="text-2xl font-bold text-[#013F63] mb-6">5. Partage des données</h2>
                   <p className="text-gray-700 mb-3">
-                    <strong>ATIPIK RH est seul destinataire de vos données.</strong>
+                    ATIPIK RH ne vend, ne loue et ne cède aucune de vos données personnelles à des tiers.
                   </p>
+                  <p className="text-gray-700 mb-3">
+                    Toutefois, afin d'assurer le bon fonctionnement de nos services (envoi du livret blanc, gestion des contacts, automatisation des processus), certaines de vos données peuvent être transmises à des sous-traitants techniques de confiance, agissant exclusivement pour le compte d'ATIPIK RH et conformément à la réglementation applicable en matière de protection des données personnelles.
+                  </p>
+                  <p className="text-gray-700 mb-3">
+                    Les principaux sous-traitants utilisés sont les suivants :
+                  </p>
+                  <ul className="list-disc pl-6 text-gray-700 mb-3">
+                    <li><strong>Brevo</strong> : plateforme d'emailing et de gestion des formulaires (données hébergées au sein de l'Union européenne) ;</li>
+                    <li><strong>Make</strong> : outil d'automatisation des flux de données ;</li>
+                    <li><strong>Google Workspace</strong> : solution utilisée pour l'hébergement de certaines données internes et la gestion des e-mails.</li>
+                  </ul>
                   <p className="text-gray-700">
-                    Aucune donnée personnelle n'est vendue, cédée ou communiquée à des tiers sans votre accord, sauf obligation légale.
+                    Ces prestataires mettent en œuvre des mesures de sécurité appropriées et s'engagent à respecter les exigences du Règlement Général sur la Protection des Données (RGPD).
                   </p>
                 </div>
 
