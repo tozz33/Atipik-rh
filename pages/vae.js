@@ -4,6 +4,8 @@ import Image from 'next/image'
 import { useState, useEffect, useRef } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import FinancementDisclaimer from '../components/FinancementDisclaimer'
+import { TARIF_SELON_PROFIL_COMPLET } from '../lib/tarifs/tarifsCopy'
 import { 
   Users, 
   Target, 
@@ -1019,10 +1021,12 @@ export default function VAE() {
                     </div>
 
                     <div className="mb-4">
+                      <p className="text-sm font-semibold text-[#013F63] mb-1">Tarif public</p>
                       <div className={`text-4xl font-bold mb-2 ${formule.priceClass}`}>
                         2 300<span className="text-2xl">€</span>
                       </div>
-                      <p className="text-sm text-[#013F63]">
+                      <p className="text-sm text-[#013F63]">TTC</p>
+                      <p className="text-sm text-[#013F63] mt-2">
                         (sans frais d&apos;acte formatif, frais de certificateur et frais de jurys)
                       </p>
                     </div>
@@ -1040,6 +1044,11 @@ export default function VAE() {
                     </Link>
                   </div>
                 ))}
+              </div>
+
+              <div className="bg-white rounded-3xl p-6 shadow-xl border border-muted-blue-200 text-center mb-8 max-w-3xl mx-auto">
+                <h3 className="text-xl font-bold text-primary-600 mb-3">Tarif selon profil</h3>
+                <p className="text-sm md:text-base text-[#013F63] leading-relaxed">{TARIF_SELON_PROFIL_COMPLET}</p>
               </div>
 
               {/* Note importante sur les frais DAVA */}
@@ -1191,6 +1200,8 @@ export default function VAE() {
                 Plusieurs solutions s'offrent à vous
               </p>
             </div>
+
+            <FinancementDisclaimer className="mb-8 max-w-4xl mx-auto" />
 
             {/* Section Solutions de financement - Style CIP */}
             <div className="mb-8">

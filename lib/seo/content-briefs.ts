@@ -1,5 +1,11 @@
 import { expandLongTail, getClusterForBrief } from './keywords'
+import { FINANCEMENT_DISCLAIMER } from '../tarifs/tarifsCopy'
 import type { ContentBrief } from './types'
+
+/** Ajoute la mention légale financement aux réponses FAQ concernées. */
+function faqFinancement(answer: string): string {
+  return `${answer} ${FINANCEMENT_DISCLAIMER}`
+}
 
 const SHARED_EEAT = [
   'Organisme certifié Qualiopi',
@@ -31,8 +37,9 @@ const BRIEFS: ContentBrief[] = [
       },
       {
         question: 'La formation CIP est-elle finançable avec le CPF ?',
-        answer:
+        answer: faqFinancement(
           'Oui, sous réserve d’éligibilité du titre et de votre solde CPF. Un conseiller peut vous orienter vers les autres dispositifs (France Travail, employeur).',
+        ),
       },
       {
         question: 'Quelle durée pour devenir conseiller en insertion professionnelle ?',
@@ -95,7 +102,7 @@ const BRIEFS: ContentBrief[] = [
       },
       {
         question: 'Comment financer la formation FPA ?',
-        answer: 'CPF, employeur, France Travail selon situation — voir la page financement.',
+        answer: faqFinancement('CPF, employeur, France Travail selon situation — voir la page financement.'),
       },
     ],
     internalLinks: [
@@ -174,7 +181,7 @@ const BRIEFS: ContentBrief[] = [
       },
       {
         question: 'Les formations sont-elles finançables ?',
-        answer: 'CPF, OPCO, employeur, France Travail selon dispositifs — page financement.',
+        answer: faqFinancement('CPF, OPCO, employeur, France Travail selon dispositifs — page financement.'),
       },
       {
         question: 'Comment assister à une réunion d’information ?',
@@ -213,7 +220,7 @@ const BRIEFS: ContentBrief[] = [
       },
       {
         question: 'Peut-on financer un bilan avec le CPF ?',
-        answer: 'Oui pour les bilans certifiés éligibles — vérifiez votre solde et votre projet avec notre équipe.',
+        answer: faqFinancement('Oui pour les bilans certifiés éligibles — vérifiez votre solde et votre projet avec notre équipe.'),
       },
       {
         question: 'Bilan de compétences ou VAE ?',
@@ -259,7 +266,7 @@ const BRIEFS: ContentBrief[] = [
       },
       {
         question: 'Comment financer sa reconversion en 2026 ?',
-        answer: 'CPF, aides régionales, France Travail, employeur — consultez notre page financement et articles blog dédiés.',
+        answer: faqFinancement('CPF, aides régionales, France Travail, employeur — consultez notre page financement et articles blog dédiés.'),
       },
       {
         question: 'Atipik RH accompagne-t-il les plus de 40 ans ?',
@@ -378,7 +385,7 @@ const BRIEFS: ContentBrief[] = [
       },
       {
         question: 'Existe-t-il des financements spécifiques ?',
-        answer: 'France Travail et dispositifs régionaux peuvent compléter le CPF — notre équipe vous oriente.',
+        answer: faqFinancement('France Travail et dispositifs régionaux peuvent compléter le CPF — notre équipe vous oriente.'),
       },
       {
         question: 'Les formations sont-elles compatibles avec la parentalité ?',
@@ -422,7 +429,7 @@ const BRIEFS: ContentBrief[] = [
       },
       {
         question: 'Comment financer sa formation en QPV ?',
-        answer: 'Dispositifs France Travail, ville, région selon éligibilité — page financement.',
+        answer: faqFinancement('Dispositifs France Travail, ville, région selon éligibilité — page financement.'),
       },
       {
         question: 'Le centre est-il accessible depuis les QPV bordelais ?',
@@ -501,7 +508,7 @@ const BRIEFS: ContentBrief[] = [
       },
       {
         question: 'Comment financer une formation professionnalisante ?',
-        answer: 'OPCO, employeur ou fonds propres — renseignez-vous auprès de votre structure.',
+        answer: faqFinancement('OPCO, employeur ou fonds propres — renseignez-vous auprès de votre structure.'),
       },
       {
         question: 'Où ont lieu les sessions ?',
@@ -545,7 +552,7 @@ const BRIEFS: ContentBrief[] = [
       },
       {
         question: 'Comment financer la VAE ?',
-        answer: 'CPF, employeur, France Travail selon situation.',
+        answer: faqFinancement('CPF, employeur, France Travail selon situation.'),
       },
     ],
     internalLinks: [
@@ -573,19 +580,19 @@ const BRIEFS: ContentBrief[] = [
     faq: [
       {
         question: 'Puis-je utiliser mon CPF pour une formation Atipik RH ?',
-        answer: 'Oui pour les formations éligibles — vérifiez le reste à charge éventuel.',
+        answer: faqFinancement('Oui pour les formations éligibles — vérifiez le reste à charge éventuel.'),
       },
       {
         question: 'France Travail peut-il financer ma formation ?',
-        answer: 'Selon votre projet et l’AIF — notre équipe vous guide dans les démarches.',
+        answer: faqFinancement('Selon votre projet et l’AIF — notre équipe vous guide dans les démarches.'),
       },
       {
         question: 'Mon employeur peut-il prendre en charge un bilan ?',
-        answer: 'Oui dans le cadre du plan de développement des compétences.',
+        answer: faqFinancement('Oui dans le cadre du plan de développement des compétences.'),
       },
       {
         question: 'Existe-t-il des aides régionales en Nouvelle-Aquitaine ?',
-        answer: 'Des dispositifs ponctuels existent — consultez nos articles blog actualisés.',
+        answer: faqFinancement('Des dispositifs ponctuels existent — consultez nos articles blog actualisés.'),
       },
     ],
     internalLinks: [

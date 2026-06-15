@@ -99,10 +99,14 @@ export default function CGV() {
                 <div>
                   <h2 className="text-2xl font-bold text-[#013F63] mb-6">3. Tarifs</h2>
                   <ul className="list-disc pl-6 text-gray-700 space-y-2">
-                    <li>Les tarifs sont exprimés en euros, net de TVA (<strong>ATIPIK RH</strong> n'est pas assujettie à la TVA sur les actions de formation professionnelle).</li>
-                    <li>Le prix inclut l'ensemble des prestations pédagogiques prévues (formation, suivi, documents éventuels).</li>
-                    <li>Le coût de chaque formation est précisé sur le devis transmis au bénéficiaire ou à l'organisme financeur.</li>
+                    <li>Les tarifs sont exprimés en euros TTC lorsqu&apos;ils sont affichés sur le site (<strong>Tarif public : [montant] € TTC</strong>).</li>
+                    <li>Le <strong>tarif selon profil</strong> (salariés, demandeurs d&apos;emploi, travailleurs indépendants, employeurs) fait l&apos;objet d&apos;une étude personnalisée auprès du centre ATIPIK RH.</li>
+                    <li>Le prix inclut l&apos;ensemble des prestations pédagogiques prévues (formation, suivi, documents éventuels).</li>
+                    <li>Le coût de chaque formation est précisé sur le devis transmis au bénéficiaire ou à l&apos;organisme financeur.</li>
                   </ul>
+                  <p className="text-sm text-gray-700 mt-4 leading-relaxed bg-blue-50 border border-blue-100 rounded-xl px-4 py-3" role="note">
+                    <strong>L&apos;obtention d&apos;un financement public ou mutualisé pour une action de formation professionnelle répond à des règles et conditions spécifiques qui vous engagent. Pour plus d&apos;informations, contactez ATIPIK RH.</strong>
+                  </p>
                 </div>
 
                 {/* 4. Modalités de paiement */}

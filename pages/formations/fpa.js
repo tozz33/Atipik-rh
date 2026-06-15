@@ -3,6 +3,8 @@ import ServicePageSeoHead from '../../components/ServicePageSeoHead'
 import FormationGeoSummary from '../../components/FormationGeoSummary'
 import FormationFaqSection from '../../components/FormationFaqSection'
 import FormationStickyCta from '../../components/FormationStickyCta'
+import FormationTarifSection from '../../components/FormationTarifSection'
+import FinancementDisclaimer from '../../components/FinancementDisclaimer'
 import { getCertifianteContactHref } from '../../lib/seo/certifiantesConfig'
 
 const CONTACT_HREF = getCertifianteContactHref('formation-fpa')
@@ -1245,64 +1247,11 @@ export default function FormationFPA() {
             </div>
           </section>
 
-          {/* Section Tarifs */}
-          <section className="py-12">
-            <div className="container mx-auto px-4">
-              <div className="max-w-6xl mx-auto">
-                
-                <div className="text-center mb-12">
-                  <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight">
-                    <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Tarifs</span>
-                  </h2>
-                </div>
-
-
-                {/* Section Tarifs */}
-                <div className="grid md:grid-cols-2 gap-8 mb-12">
-                  
-                  {/* Tarif */}
-                  <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 text-center">
-                    <div className="bg-orange-100 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4 h-20 flex items-center justify-center">
-                      <h3 className="text-2xl font-bold text-orange-500">Tarif</h3>
-                    </div>
-                    
-                    <div className="mb-6">
-                      <div className="text-4xl font-bold text-orange-500 mb-2">8 950<span className="text-2xl">€</span></div>
-                      <p className="text-sm text-[#013F63]">TTC</p>
-                    </div>
-                    
-                    <Link
-                      href={CONTACT_HREF}
-                      className="inline-block px-8 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-full transition-colors"
-                    >
-                      En savoir plus
-                    </Link>
-                  </div>
-
-                  {/* Tarif demandeur d'emploi */}
-                  <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 text-center">
-                    <div className="bg-blue-100 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4 h-20 flex items-center justify-center">
-                      <h3 className="text-2xl font-bold text-blue-600">Tarif demandeur d'emploi</h3>
-                    </div>
-                    
-                    <div className="mb-6">
-                      <div className="text-4xl font-bold text-blue-600 mb-2">6 500<span className="text-2xl">€</span></div>
-                      <p className="text-sm text-[#013F63]">TTC</p>
-                    </div>
-                    
-                    <Link
-                      href={CONTACT_HREF}
-                      className="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full transition-colors"
-                    >
-                      En savoir plus
-                    </Link>
-                  </div>
-                </div>
-
-
-              </div>
-            </div>
-          </section>
+          <FormationTarifSection
+            publicPrice="8950"
+            variant="certifiante"
+            contactHref={CONTACT_HREF}
+          />
 
           {/* Section Financement */}
           <section className="py-8">
@@ -1316,6 +1265,8 @@ export default function FormationFPA() {
                       Comment <span className="text-orange-500 font-brittany text-3xl lg:text-4xl">financer</span> votre formation FPA ?
                     </h3>
                   </div>
+
+                  <FinancementDisclaimer className="mb-8 max-w-4xl mx-auto" />
 
                   <div className="relative">
                     

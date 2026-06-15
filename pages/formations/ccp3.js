@@ -3,6 +3,8 @@ import ServicePageSeoHead from '../../components/ServicePageSeoHead'
 import FormationGeoSummary from '../../components/FormationGeoSummary'
 import FormationFaqSection from '../../components/FormationFaqSection'
 import FormationStickyCta from '../../components/FormationStickyCta'
+import FormationTarifSection from '../../components/FormationTarifSection'
+import FinancementDisclaimer from '../../components/FinancementDisclaimer'
 import { getCertifianteContactHref } from '../../lib/seo/certifiantesConfig'
 
 const CONTACT_HREF = getCertifianteContactHref('formation-ccp3')
@@ -1307,47 +1309,26 @@ export default function FormationCCP3() {
             </div>
           </section>
 
-          {/* Section Tarif et Financement */}
+          <FormationTarifSection
+            publicPrice="3075"
+            variant="certifiante"
+            contactHref={CONTACT_HREF}
+          />
+
+          {/* Section Financement */}
           <section className="pt-2 pb-8">
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto">
-                
-                <div className="text-center mb-12">
-                  <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight">
-<span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Tarif</span>
-                  </h2>
-                </div>
-
-                {/* Section Tarif */}
-                <div className="flex justify-center mb-12">
-                  
-                  {/* Tarif unique */}
-                  <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 text-center max-w-md w-full">
-                    <div className="bg-orange-100 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4 h-20 flex items-center justify-center">
-                      <h3 className="text-2xl font-bold text-orange-500">CCP3</h3>
-                    </div>
-                    
-                    <div className="mb-6">
-                      <div className="text-4xl font-bold text-orange-500 mb-2">3 075<span className="text-2xl">€</span></div>
-                      <p className="text-sm text-[#013F63]">TTC</p>
-                    </div>
-                    
-                    <Link
-                      href={CONTACT_HREF}
-                      className="inline-block px-8 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-full transition-colors"
-                    >
-                      En savoir plus
-                    </Link>
-                  </div>
-                </div>
 
                 {/* Section Solutions de financement */}
                 <div className="mb-8">
                   <div className="text-center mb-8">
                     <h3 className="text-2xl lg:text-3xl font-bold text-[#013F63] mb-4 leading-tight">
-                      Comment <span className="text-orange-500 font-brittany text-3xl lg:text-4xl">financer</span> votre formation CIP ?
+                      Comment <span className="text-orange-500 font-brittany text-3xl lg:text-4xl">financer</span> votre formation CCP3 ?
                     </h3>
                   </div>
+
+                  <FinancementDisclaimer className="mb-8 max-w-4xl mx-auto" />
 
                   <div className="relative">
                     

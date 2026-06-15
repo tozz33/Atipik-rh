@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import FinancementDisclaimer from '../components/FinancementDisclaimer'
 import { ArrowRight, ChevronDown, Users, CreditCard, FileText, UserCheck } from 'lucide-react'
 
 export default function Financement() {
@@ -229,6 +230,8 @@ export default function Financement() {
                 </div>
               </div>
               
+              <FinancementDisclaimer className="mb-8 max-w-4xl mx-auto" />
+
               {/* Contenu conditionnel basé sur l'onglet actif */}
               {activeTab === 'salaries' && (
                 <>
@@ -611,6 +614,8 @@ export default function Financement() {
                   Questions <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">fréquentes</span>
                 </h2>
               </div>
+
+              <FinancementDisclaimer className="mb-8" />
 
               <div className="space-y-4">
                 {faqData.map((faq, index) => (

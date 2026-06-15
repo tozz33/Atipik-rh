@@ -25,6 +25,8 @@ import {
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import FormationProfessionnelleSeoHead from '../../../components/FormationProfessionnelleSeoHead'
+import FormationTarifSection from '../../../components/FormationTarifSection'
+import FinancementDisclaimer from '../../../components/FinancementDisclaimer'
 import {
   getFormationContactHref,
   getProfessionnelleConfigBySlug,
@@ -648,56 +650,12 @@ export default function RecruterInsertionEntreprises() {
           </section>
 
 
-          {/* Section Tarifs */}
-          <section className="py-16">
-            <div className="container mx-auto px-4">
-              <div className="max-w-6xl mx-auto">
-                
-                <div className="text-center mb-12">
-                  <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight">
-                    <span className="text-accent-500 font-brittany text-4xl lg:text-5xl">Tarifs</span>
-                  </h2>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
-                  
-                  {/* Tarif INTER */}
-                  <div className="bg-white rounded-2xl shadow-lg border border-muted-blue-200 overflow-hidden">
-                    <div className="bg-accent-300 px-6 py-4">
-                      <h3 className="text-xl font-bold text-accent-600 text-center">Tarif INTER</h3>
-                    </div>
-                    <div className="p-8 text-center">
-                      <p className="text-4xl font-bold text-accent-500 mb-6">1 365€ <span className="text-[#013F63] text-base lowercase">/ stagiaire</span></p>
-                      <Link 
-                        href={getFormationContactHref(SEO_SLUG)} 
-                        className="inline-block w-full px-6 py-3 bg-accent-500 hover:bg-accent-600 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg"
-                      >
-                        En savoir plus
-                      </Link>
-                    </div>
-                  </div>
-
-                  {/* Tarif INTRA */}
-                  <div className="bg-white rounded-2xl shadow-lg border border-muted-blue-200 overflow-hidden">
-                    <div className="bg-muted-blue-200 px-6 py-4">
-                      <h3 className="text-xl font-bold text-[#013F63] text-center">Tarif INTRA</h3>
-                    </div>
-                    <div className="p-8 text-center">
-                      <p className="text-lg text-[#013F63] mb-6">sur devis</p>
-                      <Link 
-                        href={getFormationContactHref(SEO_SLUG)} 
-                        className="inline-block w-full px-6 py-3 bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg"
-                      >
-                        En savoir plus
-                      </Link>
-                    </div>
-                  </div>
-
-                </div>
-
-              </div>
-            </div>
-          </section>
+          <FormationTarifSection
+            publicPrice={seoFormation.price}
+            priceSuffix="/ stagiaire"
+            variant="professionnalisante"
+            contactHref={getFormationContactHref(SEO_SLUG)}
+          />
 
           {/* Solutions de financement */}
           <section className="py-16">
@@ -712,6 +670,8 @@ export default function RecruterInsertionEntreprises() {
                     Plusieurs solutions s'offrent à vous
                   </p>
                 </div>
+
+                <FinancementDisclaimer className="mb-8 max-w-4xl mx-auto" />
 
                 {/* Solutions de financement */}
                 <div className="grid md:grid-cols-2 gap-6 mb-6">

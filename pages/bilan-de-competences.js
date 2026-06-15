@@ -5,6 +5,8 @@ import Link from 'next/link';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ServicePageSeoHead from '../components/ServicePageSeoHead';
+import FinancementDisclaimer from '../components/FinancementDisclaimer';
+import { TARIF_SELON_PROFIL_COMPLET } from '../lib/tarifs/tarifsCopy';
 import { getBriefById } from '../lib/seo/content-briefs';
 
 import { 
@@ -655,7 +657,9 @@ export default function BilanCompetences() {
                   
                   {/* Prix en haut */}
                   <div className="text-center mb-6">
+                    <p className="text-sm font-semibold text-[#013F63] mb-1">Tarif public</p>
                     <div className="text-4xl font-bold text-accent-500 mb-2">1 600<span className="text-2xl">€</span></div>
+                    <p className="text-sm text-[#013F63]">TTC — formule Essentiel</p>
                   </div>
                   
                   {/* Description */}
@@ -707,7 +711,9 @@ export default function BilanCompetences() {
                   
                   {/* Prix en haut */}
                   <div className="text-center mb-6">
+                    <p className="text-sm font-semibold text-[#013F63] mb-1">Tarif public</p>
                     <div className="text-4xl font-bold text-primary-600 mb-2">1 900<span className="text-2xl">€</span></div>
+                    <p className="text-sm text-[#013F63]">TTC — formule Horizon</p>
                   </div>
                   
                   {/* Description */}
@@ -748,6 +754,11 @@ export default function BilanCompetences() {
               </div>
             </div>
 
+            <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 text-center mb-6 max-w-3xl mx-auto">
+              <h3 className="text-xl font-bold text-blue-600 mb-3">Tarif selon profil</h3>
+              <p className="text-sm md:text-base text-[#013F63] leading-relaxed">{TARIF_SELON_PROFIL_COMPLET}</p>
+            </div>
+
             {/* Information sur l'entretien gratuit - Bouton fixe */}
             <div className="fixed bottom-6 left-6 z-50">
               <Link href="/contact">
@@ -770,6 +781,8 @@ export default function BilanCompetences() {
                 Plusieurs solutions s'offrent à vous
               </p>
             </div>
+
+            <FinancementDisclaimer className="mb-8 max-w-4xl mx-auto" />
 
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               

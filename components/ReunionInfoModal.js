@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import FinancementDisclaimer from './FinancementDisclaimer'
 import { X, ArrowRight } from 'lucide-react'
 
 export default function ReunionInfoModal() {
@@ -128,6 +129,8 @@ export default function ReunionInfoModal() {
                 <span className="text-sm md:text-xs text-neutral-900 leading-relaxed font-sans">Les possibilités de financement</span>
               </div>
             </div>
+
+            <FinancementDisclaimer className="mb-4 text-left" />
 
             {/* Bouton CTA */}
             <Link

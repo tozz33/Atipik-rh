@@ -6,6 +6,7 @@ import { Clock } from 'lucide-react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import CookieBanner from '../components/CookieBanner'
+import FinancementDisclaimer from '../components/FinancementDisclaimer'
 
 export default function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -408,6 +409,10 @@ export default function HomePage() {
           </div>
         </section>
 
+        <div className="container mx-auto px-4 -mt-8 mb-4 max-w-4xl">
+          <FinancementDisclaimer />
+        </div>
+
         {/* Section des trois formations */}
         <section className="py-16">
           <div className="container mx-auto px-4">
@@ -528,6 +533,10 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
+            </div>
+
+            <div className="max-w-4xl mx-auto mt-10">
+              <FinancementDisclaimer />
             </div>
           </div>
         </section>

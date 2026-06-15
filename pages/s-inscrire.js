@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import HoneypotField from '../components/HoneypotField'
+import FinancementDisclaimer from '../components/FinancementDisclaimer'
 import { getRecaptchaToken } from '../lib/recaptcha'
 
 export default function SInscrire() {
@@ -357,6 +358,7 @@ export default function SInscrire() {
                             <div>Questions / Réponses personnalisées</div>
                             <div>Informations sur les financements</div>
                           </div>
+                          <FinancementDisclaimer className="mt-4 text-left" />
                         </div>
                       </div>
                     </div>

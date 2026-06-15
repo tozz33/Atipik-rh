@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import { FINANCEMENT_DISCLAIMER } from '../../lib/tarifs/tarifsCopy';
 import { Calendar, Clock, User, ArrowLeft } from 'lucide-react';
 import { prevenirDiscriminationsRecrutementContent } from '../../lib/blog/prevenirDiscriminationsRecrutementContent';
 import { recrutementSansDiscriminationContent } from '../../lib/blog/recrutementSansDiscriminationContent';
@@ -213,7 +214,7 @@ const BLOG_ARTICLES = [
         },
         {
           question: "La formation FPA est-elle finançable par le CPF ?",
-          answer: "Oui. La formation FPA d'Atipik RH est éligible au CPF. Elle peut également être financée via France Travail (AIF), le CSP, le plan de développement des compétences de l'employeur, ou par paiement en plusieurs fois sans frais pour un financement personnel.",
+          answer: `Oui. La formation FPA d'Atipik RH est éligible au CPF. Elle peut également être financée via France Travail (AIF), le CSP, le plan de développement des compétences de l'employeur, ou par paiement en plusieurs fois sans frais pour un financement personnel. ${FINANCEMENT_DISCLAIMER}`,
         },
         {
           question: "Quelle est la différence entre le FPA et le CIP ?",
@@ -304,6 +305,7 @@ const BLOG_ARTICLES = [
         <p>À l'issue de la formation, les participants passent les épreuves de certification devant un jury de professionnels. Le titre professionnel Formateur Professionnel d'Adultes (FPA) est inscrit au RNCP (n°37275), délivré par le Ministère du Travail. La validation peut se faire en totalité ou par bloc de compétences (CCP).</p>
 
         <h2>Comment financer la formation FPA ?</h2>
+        <p><strong>${FINANCEMENT_DISCLAIMER}</strong></p>
         <h3>CPF : mobiliser son compte formation</h3>
         <p>La formation FPA d'Atipik RH est éligible au Compte Personnel de Formation (CPF). En cas de droits insuffisants, un abondement complémentaire peut être demandé auprès de votre OPCO ou de la Région Nouvelle-Aquitaine.</p>
 
@@ -509,7 +511,7 @@ const BLOG_ARTICLES = [
         },
         {
           question: "La formation CIP est-elle finançable par le CPF ?",
-          answer: "Oui. La formation CIP d'Atipik RH est éligible au CPF. Elle peut également être financée via France Travail (AIF), le CSP, le plan de développement des compétences de l'employeur, ou par paiement en plusieurs fois sans frais pour un financement personnel.",
+          answer: `Oui. La formation CIP d'Atipik RH est éligible au CPF. Elle peut également être financée via France Travail (AIF), le CSP, le plan de développement des compétences de l'employeur, ou par paiement en plusieurs fois sans frais pour un financement personnel. ${FINANCEMENT_DISCLAIMER}`,
         },
         {
           question: "Quel est le niveau de la certification CIP ?",
@@ -573,6 +575,7 @@ const BLOG_ARTICLES = [
         <p>La formation est ouverte aux reconvertis, professionnels du social/RH/éducation, demandeurs d'emploi et salariés en transition. Aucun diplôme spécifique n'est exigé à l'entrée ; un entretien permet de valider la cohérence du projet.</p>
 
         <h2>Comment financer la formation CIP ?</h2>
+        <p><strong>${FINANCEMENT_DISCLAIMER}</strong></p>
         <h3>CPF</h3>
         <p>La formation est éligible au CPF. Selon vos droits, elle peut être financée totalement, ou complétée par un abondement OPCO/Région.</p>
         <h3>France Travail (AIF)</h3>
@@ -2711,12 +2714,13 @@ const BLOG_ARTICLES = [
 
         <h3>Les formations certifiantes</h3>
         <ul>
-          <li><strong>Formation FPA</strong> (Formateur Professionnel d'Adultes) : Titre professionnel de niveau 5 (Bac+2) - <strong>Coût : 8 500€</strong></li>
-          <li><strong>Formation CIP</strong> (Conseiller en Insertion Professionnelle) : Titre professionnel de niveau 5 (Bac+2) - <strong>Coût : 9 200€</strong></li>
+          <li><strong>Formation FPA</strong> (Formateur Professionnel d'Adultes) : Titre professionnel de niveau 5 (Bac+2) - <strong>Tarif public : 8 950 € TTC</strong></li>
+          <li><strong>Formation CIP</strong> (Conseiller en Insertion Professionnelle) : Titre professionnel de niveau 5 (Bac+2) - <strong>Tarif public : 9 100 € TTC</strong></li>
           <li><strong>Formations courtes professionnalisantes</strong> dans différents secteurs</li>
         </ul>
 
         <h2>Les principaux dispositifs de financement</h2>
+        <p><strong>${FINANCEMENT_DISCLAIMER}</strong></p>
 
         <h3>Le CPF – Compte Personnel de Formation</h3>
         <p>Si vous avez déjà été salarié, vous avez probablement cumulé des droits CPF. Ces crédits peuvent être utilisés pour financer un bilan de compétences, une VAE ou une formation certifiante.</p>
