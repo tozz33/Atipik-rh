@@ -78,11 +78,11 @@ export default function FormationTarifSection({
       <div className="mb-6">
         <div className={`text-4xl font-bold ${styles.publicAmount} mb-2`}>
           {display.amount}
-          <span className="text-2xl">€</span>
+          <span className="text-2xl"> € TTC</span>
         </div>
-        <p className="text-sm text-[#013F63]">
-          TTC{display.suffix ? ` ${display.suffix}` : ''}
-        </p>
+        {display.suffix ? (
+          <p className="text-sm text-[#013F63]">{display.suffix}</p>
+        ) : null}
       </div>
       <Link
         href={contactHref}

@@ -272,7 +272,7 @@ export default function FormationFPA() {
       const elapsed = currentTime - startTime
       const progress = Math.min(elapsed / duration, 1)
       
-      const current = Math.floor(start + (end - start) * progress)
+      const current = Math.max(0, Math.floor(start + (end - start) * progress))
       callback(current)
       
       if (progress < 1) {
@@ -334,9 +334,13 @@ export default function FormationFPA() {
               const numericValue = parseInt(stat.value.replace(/[^\d]/g, ''))
               if (!isNaN(numericValue)) {
                 animateCounter(0, numericValue, 2000, (current) => {
+                  const safe = Math.max(0, current)
+                  const formatted = stat.value.includes('%')
+                    ? `${safe}%`
+                    : safe.toLocaleString('fr-FR')
                   setAnimatedFranceStats(prev => ({
                     ...prev,
-                    [index]: stat.value.includes('%') ? `${current}%` : current.toString()
+                    [index]: formatted
                   }))
                 })
               } else {
@@ -1602,7 +1606,7 @@ export default function FormationFPA() {
                         <div key={index} className="w-full flex-shrink-0 px-2">
                           <div className="bg-white rounded-2xl p-6 text-center shadow-lg border border-gray-100 h-32 flex flex-col justify-center">
                             <div className="text-3xl font-bold text-[#013F63] mb-2">
-                              {animatedFranceStats[index] || '0'}
+                              {animatedFranceStats[index] ?? stat.value}
                             </div>
                             <p className="text-[#013F63] text-sm font-medium">
                               {stat.label}
@@ -1621,7 +1625,7 @@ export default function FormationFPA() {
                         <div key={index} className="w-1/3 flex-shrink-0 px-3">
                           <div className="bg-white rounded-2xl p-4 text-center shadow-lg border border-gray-100 h-28 flex flex-col justify-center">
                             <div className="text-2xl lg:text-3xl font-bold text-[#013F63] mb-2">
-                        {animatedFranceStats[index] || '0'}
+                        {animatedFranceStats[index] ?? stat.value}
                       </div>
                             <p className="text-[#013F63] text-xs lg:text-sm font-medium">
                         {stat.label}

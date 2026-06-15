@@ -658,8 +658,8 @@ export default function BilanCompetences() {
                   {/* Prix en haut */}
                   <div className="text-center mb-6">
                     <p className="text-sm font-semibold text-[#013F63] mb-1">Tarif public</p>
-                    <div className="text-4xl font-bold text-accent-500 mb-2">1 600<span className="text-2xl">€</span></div>
-                    <p className="text-sm text-[#013F63]">TTC — formule Essentiel</p>
+                    <div className="text-4xl font-bold text-accent-500 mb-2">1 600<span className="text-2xl"> € TTC</span></div>
+                    <p className="text-sm text-[#013F63]">formule Essentiel</p>
                   </div>
                   
                   {/* Description */}
@@ -712,8 +712,8 @@ export default function BilanCompetences() {
                   {/* Prix en haut */}
                   <div className="text-center mb-6">
                     <p className="text-sm font-semibold text-[#013F63] mb-1">Tarif public</p>
-                    <div className="text-4xl font-bold text-primary-600 mb-2">1 900<span className="text-2xl">€</span></div>
-                    <p className="text-sm text-[#013F63]">TTC — formule Horizon</p>
+                    <div className="text-4xl font-bold text-primary-600 mb-2">1 900<span className="text-2xl"> € TTC</span></div>
+                    <p className="text-sm text-[#013F63]">formule Horizon</p>
                   </div>
                   
                   {/* Description */}

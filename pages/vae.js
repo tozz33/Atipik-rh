@@ -1023,9 +1023,8 @@ export default function VAE() {
                     <div className="mb-4">
                       <p className="text-sm font-semibold text-[#013F63] mb-1">Tarif public</p>
                       <div className={`text-4xl font-bold mb-2 ${formule.priceClass}`}>
-                        2 300<span className="text-2xl">€</span>
+                        2 300<span className="text-2xl"> € TTC</span>
                       </div>
-                      <p className="text-sm text-[#013F63]">TTC</p>
                       <p className="text-sm text-[#013F63] mt-2">
                         (sans frais d&apos;acte formatif, frais de certificateur et frais de jurys)
                       </p>

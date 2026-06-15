@@ -11,6 +11,7 @@ import {
   buildJsonLdFormationProHub,
 } from '../../lib/seo/professionnalisantesConfig'
 import { TARIF_SELON_PROFIL_COMPLET } from '../../lib/tarifs/tarifsCopy'
+import FinancementDisclaimer from '../../components/FinancementDisclaimer'
 import {
   MapPin,
   Euro,
@@ -313,6 +314,8 @@ export default function FormationsCourtesProfessionnalisantes() {
                     </p>
                   </div>
                 </div>
+
+                <FinancementDisclaimer className="mt-8 max-w-4xl mx-auto" />
               </div>
             </div>
           </section>
