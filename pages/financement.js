@@ -230,8 +230,6 @@ export default function Financement() {
                 </div>
               </div>
               
-              <FinancementDisclaimer className="mb-8 max-w-4xl mx-auto" />
-
               {/* Contenu conditionnel basé sur l'onglet actif */}
               {activeTab === 'salaries' && (
                 <>
@@ -615,7 +613,7 @@ export default function Financement() {
                 </h2>
               </div>
 
-              <FinancementDisclaimer className="mb-8" />
+              <FinancementDisclaimer variant="compact" className="mb-8" />
 
               <div className="space-y-4">
                 {faqData.map((faq, index) => (
