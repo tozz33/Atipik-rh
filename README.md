@@ -72,8 +72,10 @@ Copiez [`.env.example`](.env.example) vers `.env.local` et renseignez les valeur
 | `BREVO_API_KEY` | Oui | Clé API Brevo (serveur uniquement) |
 | `BREVO_SENDER_EMAIL` | Non | Expéditeur validé (défaut : `contact@atipikrh.com`) |
 | `BREVO_RECIPIENT_EMAIL` | Non | Destinataire interne (défaut : `contact@atipikrh.com`) |
-| `NEXT_PUBLIC_RECAPTCHA_SITE_KEY` | Non* | Clé site reCAPTCHA v3 (*avec `RECAPTCHA_SECRET_KEY`) |
-| `RECAPTCHA_SECRET_KEY` | Non* | Clé secrète reCAPTCHA (*paire obligatoire) |
+| `NEXT_PUBLIC_RECAPTCHA_SITE_KEY` | Non* | Clé site reCAPTCHA v3 — contact, quiz (*avec `RECAPTCHA_SECRET_KEY`) |
+| `RECAPTCHA_SECRET_KEY` | Non* | Clé secrète reCAPTCHA v3 (*paire obligatoire) |
+| `NEXT_PUBLIC_RECAPTCHA_V2_SITE_KEY` | Non* | Clé site reCAPTCHA v2 invisible — inscriptions `/s-inscrire` (*avec `RECAPTCHA_V2_SECRET_KEY`) |
+| `RECAPTCHA_V2_SECRET_KEY` | Non* | Clé secrète reCAPTCHA v2 (*paire obligatoire) |
 | `AKISMET_API_KEY` | Non* | Clé Akismet (*avec `AKISMET_SITE_URL`) |
 | `AKISMET_SITE_URL` | Non* | URL du site pour Akismet |
 

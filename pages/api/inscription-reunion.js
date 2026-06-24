@@ -15,8 +15,7 @@ export default async function handler(req, res) {
   const spamCheck = await antiSpamMiddleware(req, {
     recaptcha: {
       enabled: true,
-      action: 'inscription_form',
-      minScore: 0.5
+      version: 'v2',
     },
     akismet: {
       enabled: true,

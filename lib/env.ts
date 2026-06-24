@@ -14,6 +14,8 @@ const rawEnvSchema = z
     BREVO_RECIPIENT_EMAIL: z.string().optional(),
     NEXT_PUBLIC_RECAPTCHA_SITE_KEY: z.string().optional(),
     RECAPTCHA_SECRET_KEY: z.string().optional(),
+    NEXT_PUBLIC_RECAPTCHA_V2_SITE_KEY: z.string().optional(),
+    RECAPTCHA_V2_SECRET_KEY: z.string().optional(),
     AKISMET_API_KEY: z.string().optional(),
     AKISMET_SITE_URL: z.string().optional(),
   })
@@ -26,6 +28,17 @@ const rawEnvSchema = z
         message:
           'reCAPTCHA : NEXT_PUBLIC_RECAPTCHA_SITE_KEY et RECAPTCHA_SECRET_KEY doivent être définies ensemble',
         path: ['RECAPTCHA_SECRET_KEY'],
+      })
+    }
+
+    const hasV2SiteKey = Boolean(data.NEXT_PUBLIC_RECAPTCHA_V2_SITE_KEY)
+    const hasV2Secret = Boolean(data.RECAPTCHA_V2_SECRET_KEY)
+    if (hasV2SiteKey !== hasV2Secret) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message:
+          'reCAPTCHA v2 : NEXT_PUBLIC_RECAPTCHA_V2_SITE_KEY et RECAPTCHA_V2_SECRET_KEY doivent être définies ensemble',
+        path: ['RECAPTCHA_V2_SECRET_KEY'],
       })
     }
 
@@ -47,6 +60,8 @@ export type ServerEnv = {
   brevoRecipientEmail: string
   recaptchaSiteKey: string | undefined
   recaptchaSecretKey: string | undefined
+  recaptchaV2SiteKey: string | undefined
+  recaptchaV2SecretKey: string | undefined
   akismetApiKey: string | undefined
   akismetSiteUrl: string | undefined
 }
@@ -62,6 +77,10 @@ function readRawEnv() {
       process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY
     ),
     RECAPTCHA_SECRET_KEY: trimOrUndefined(process.env.RECAPTCHA_SECRET_KEY),
+    NEXT_PUBLIC_RECAPTCHA_V2_SITE_KEY: trimOrUndefined(
+      process.env.NEXT_PUBLIC_RECAPTCHA_V2_SITE_KEY
+    ),
+    RECAPTCHA_V2_SECRET_KEY: trimOrUndefined(process.env.RECAPTCHA_V2_SECRET_KEY),
     AKISMET_API_KEY: trimOrUndefined(process.env.AKISMET_API_KEY),
     AKISMET_SITE_URL: trimOrUndefined(process.env.AKISMET_SITE_URL),
   }
@@ -82,6 +101,8 @@ function toServerEnv(
     brevoRecipientEmail: recipient,
     recaptchaSiteKey: parsed.NEXT_PUBLIC_RECAPTCHA_SITE_KEY,
     recaptchaSecretKey: parsed.RECAPTCHA_SECRET_KEY,
+    recaptchaV2SiteKey: parsed.NEXT_PUBLIC_RECAPTCHA_V2_SITE_KEY,
+    recaptchaV2SecretKey: parsed.RECAPTCHA_V2_SECRET_KEY,
     akismetApiKey: parsed.AKISMET_API_KEY,
     akismetSiteUrl: parsed.AKISMET_SITE_URL,
   }
@@ -109,6 +130,15 @@ export function isRecaptchaActive(): boolean {
   return Boolean(env.recaptchaSiteKey && env.recaptchaSecretKey)
 }
 
+export function isRecaptchaV2Active(): boolean {
+  const env = getServerEnv()
+  return Boolean(env.recaptchaV2SiteKey && env.recaptchaV2SecretKey)
+}
+
+export function getPublicRecaptchaV2SiteKey(): string {
+  return trimOrUndefined(process.env.NEXT_PUBLIC_RECAPTCHA_V2_SITE_KEY) ?? ''
+}
+
 export function isAkismetActive(): boolean {
   const env = getServerEnv()
   return Boolean(env.akismetApiKey && env.akismetSiteUrl)
@@ -129,7 +159,9 @@ function logEnvStatus(): void {
   console.log(
     `[Env] brevo=${getServerEnv().brevoApiKey ? 'ok' : 'missing'} recaptcha=${
       isRecaptchaActive() ? 'active' : 'inactive'
-    } akismet=${isAkismetActive() ? 'active' : 'inactive'}`
+    } recaptcha_v2=${isRecaptchaV2Active() ? 'active' : 'inactive'} akismet=${
+      isAkismetActive() ? 'active' : 'inactive'
+    }`
   )
 }
 

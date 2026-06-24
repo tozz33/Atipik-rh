@@ -1,11 +1,11 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import HoneypotField from '../components/HoneypotField'
 import FinancementDisclaimer from '../components/FinancementDisclaimer'
-import { getRecaptchaToken } from '../lib/recaptcha'
+import RecaptchaV2Invisible from '../components/RecaptchaV2Invisible'
 
 export default function SInscrire() {
   const [formData, setFormData] = useState({
@@ -27,6 +27,7 @@ export default function SInscrire() {
   const [showAllDates, setShowAllDates] = useState(false)
   const [honeypot, setHoneypot] = useState('')
   const [formTimestamp, setFormTimestamp] = useState(null)
+  const recaptchaRef = useRef(null)
 
   useEffect(() => {
     // Enregistrer le timestamp de chargement du formulaire
@@ -144,18 +145,18 @@ export default function SInscrire() {
     setIsSubmitting(true)
 
     try {
-      // reCAPTCHA v3 (optionnel, dégradé silencieux si non configuré)
-      const recaptchaToken = await getRecaptchaToken('inscription_form')
+      const recaptchaToken = recaptchaRef.current
+        ? await recaptchaRef.current.execute()
+        : null
 
-      // Ajouter la modalité et le token reCAPTCHA aux données envoyées
       const dataToSend = {
         ...formData,
         modalite: modaliteSelectionnee,
         honeypot,
         timestamp: formTimestamp,
-        recaptchaToken
+        recaptchaToken,
       }
-      
+
       const response = await fetch('/api/inscription-reunion', {
         method: 'POST',
         headers: {
@@ -167,15 +168,15 @@ export default function SInscrire() {
       const data = await response.json()
 
       if (response.ok && data.success) {
+        recaptchaRef.current?.reset()
         setIsSubmitted(true)
       } else {
+        recaptchaRef.current?.reset()
         throw new Error(data.message || 'Erreur lors de l\'inscription')
       }
     } catch (error) {
+      recaptchaRef.current?.reset()
       console.error('Erreur lors de l\'envoi:', error)
-      console.error('Données envoyées:', dataToSend)
-      console.error('Response status:', response?.status)
-      console.error('Response data:', data)
       alert(`Erreur lors de l'inscription: ${error.message}. Veuillez réessayer ou nous contacter directement.`)
     } finally {
       setIsSubmitting(false)
@@ -575,6 +576,8 @@ export default function SInscrire() {
                       </div>
 
 
+                      <RecaptchaV2Invisible ref={recaptchaRef} />
+
                       <button
                         type="submit"
                         disabled={isSubmitting}
@@ -592,6 +595,28 @@ export default function SInscrire() {
                           'S\'inscrire à la réunion'
                         )}
                       </button>
+
+                      <p className="text-xs text-gray-500 text-center leading-relaxed">
+                        Ce site est protégé par reCAPTCHA.{' '}
+                        <a
+                          href="https://policies.google.com/privacy"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline hover:text-[#013F63]"
+                        >
+                          Politique de confidentialité
+                        </a>{' '}
+                        et{' '}
+                        <a
+                          href="https://policies.google.com/terms"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline hover:text-[#013F63]"
+                        >
+                          Conditions d&apos;utilisation
+                        </a>{' '}
+                        de Google.
+                      </p>
                     </form>
                   </div>
                 </div>

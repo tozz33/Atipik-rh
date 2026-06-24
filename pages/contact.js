@@ -6,6 +6,7 @@ import { useRouter } from 'next/router'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import HoneypotField from '../components/HoneypotField'
+import RecaptchaV3Script from '../components/RecaptchaV3Script'
 import { MapPin, Phone, Mail, Clock, Send, MessageCircle, Calendar, Facebook, Instagram, Linkedin } from 'lucide-react'
 import { getRecaptchaToken } from '../lib/recaptcha'
 
@@ -196,6 +197,7 @@ export default function Contact() {
 
     return (
     <>
+      <RecaptchaV3Script />
       <Head>
         <title>Contact - Atipik RH | Centre de formation à Lormont</title>
         <meta name="description" content="Contactez Atipik RH pour vos projets de formation, bilan de compétences et VAE à Lormont. Échangeons sur vos objectifs professionnels." />

@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import HoneypotField from '../../components/HoneypotField'
+import RecaptchaV3Script from '../../components/RecaptchaV3Script'
 import { CheckCircle, ArrowRight, ArrowLeft, Mail, Phone } from 'lucide-react'
 import { getRecaptchaToken } from '../../lib/recaptcha'
 
@@ -168,6 +169,7 @@ export default function QuizBilanCompetences() {
 
   return (
     <>
+      <RecaptchaV3Script />
       <Head>
         <title>Quiz : Avez-vous besoin d'un bilan de compétences ? | Atipik RH</title>
         <meta name="description" content="Découvrez en 8 questions si un bilan de compétences peut vous aider dans votre évolution professionnelle. Quiz gratuit et personnalisé." />
