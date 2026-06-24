@@ -1,9 +1,45 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import Image from 'next/image'
 import { X } from 'lucide-react'
 
 const BREVO_FORM_URL =
   'https://31d6ce3a.sibforms.com/v2/serve/MUIFAF1nk8ZvFmz9VmYxCRoqwTZqOJRo19k3DEJgXJdYm4Szpltv55_0EO2y9yTUg4Li0Vait4AH5QhFcU3Rv3uQ0Xv4NI0DYu47gxLIYSaanp3p8F_evrQilrE9l_xpiFKrHilApWq8Lc6RJegBain-miula9u9PM0xQTI_St_F0wfMo1TDrWFZM5U1begN2zaUXDDRfgFJBbEo'
+
+const BREVO_ORIGIN_SUFFIX = 'sibforms.com'
+const MIN_IFRAME_HEIGHT = 320
+const DEFAULT_IFRAME_HEIGHT = 520
+const MAX_IFRAME_HEIGHT = 1200
+
+function extractBrevoIframeHeight(data) {
+  if (typeof data === 'number' && Number.isFinite(data)) return data
+
+  if (typeof data === 'string') {
+    if (data.startsWith('[iframeResize]')) {
+      const parsed = Number.parseInt(data.replace('[iframeResize]', ''), 10)
+      if (Number.isFinite(parsed)) return parsed
+    }
+
+    try {
+      return extractBrevoIframeHeight(JSON.parse(data))
+    } catch {
+      return null
+    }
+  }
+
+  if (!data || typeof data !== 'object') return null
+
+  const candidates = [data.height, data.frameHeight, data.value, data.scrollHeight]
+  for (const candidate of candidates) {
+    const parsed = Number(candidate)
+    if (Number.isFinite(parsed) && parsed > 0) return parsed
+  }
+
+  return null
+}
+
+function clampIframeHeight(height) {
+  return Math.min(MAX_IFRAME_HEIGHT, Math.max(MIN_IFRAME_HEIGHT, Math.round(height)))
+}
 
 const GUIDE_BULLETS = [
   {
@@ -25,22 +61,57 @@ const GUIDE_BULLETS = [
 ]
 
 function GuideBrevoForm() {
+  const containerRef = useRef(null)
+  const [containerHeight, setContainerHeight] = useState(DEFAULT_IFRAME_HEIGHT)
+  const [contentHeight, setContentHeight] = useState(null)
+
+  useEffect(() => {
+    const container = containerRef.current
+    if (!container || typeof ResizeObserver === 'undefined') return undefined
+
+    const syncContainerHeight = () => {
+      const nextHeight = container.clientHeight
+      if (nextHeight > 0) {
+        setContainerHeight(clampIframeHeight(nextHeight))
+      }
+    }
+
+    syncContainerHeight()
+    const observer = new ResizeObserver(syncContainerHeight)
+    observer.observe(container)
+
+    return () => observer.disconnect()
+  }, [])
+
+  useEffect(() => {
+    const onMessage = (event) => {
+      if (!event.origin.includes(BREVO_ORIGIN_SUFFIX)) return
+
+      const nextHeight = extractBrevoIframeHeight(event.data)
+      if (nextHeight) {
+        setContentHeight(clampIframeHeight(nextHeight))
+      }
+    }
+
+    window.addEventListener('message', onMessage)
+    return () => window.removeEventListener('message', onMessage)
+  }, [])
+
+  const iframeHeight = clampIframeHeight(
+    Math.max(contentHeight ?? 0, containerHeight, DEFAULT_IFRAME_HEIGHT)
+  )
+
   return (
-    <div className="guide-modal__form-card">
+    <div ref={containerRef} className="guide-modal__form-card guide-modal__form-card--iframe">
       <iframe
         width="540"
-        height="305"
+        height={iframeHeight}
         src={BREVO_FORM_URL}
         frameBorder="0"
-        scrolling="auto"
+        scrolling="no"
         allowFullScreen
         title="Formulaire d'inscription au guide pratique"
-        style={{
-          display: 'block',
-          marginLeft: 'auto',
-          marginRight: 'auto',
-          maxWidth: '100%',
-        }}
+        className="guide-modal__iframe"
       />
     </div>
   )

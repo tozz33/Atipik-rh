@@ -639,6 +639,10 @@ details p {
 
 .guide-modal__slot-form {
   order: 2;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  height: 100%;
 }
 
 .guide-modal__slot-bullets {
@@ -651,6 +655,25 @@ details p {
   background-color: #fff;
   border: 1px solid #d1d5db;
   border-radius: 0.5rem;
+}
+
+.guide-modal__form-card--iframe {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: min(68vh, 36rem);
+  padding: 0;
+  overflow: hidden;
+}
+
+.guide-modal__iframe {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0;
+  flex: 1;
 }
 
 .guide-modal__brevo-root,
@@ -862,6 +885,12 @@ details p {
     order: 1;
     grid-column: 1;
     grid-row: 1 / span 2;
+    min-height: 0;
+  }
+
+  .guide-modal__form-card--iframe {
+    min-height: 0;
+    height: 100%;
   }
 
   .guide-modal__slot-book {
