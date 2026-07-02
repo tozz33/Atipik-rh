@@ -7,11 +7,13 @@
     "dev": "next dev --webpack",
     "dev-no-hmr": "node dev-no-hmr.js",
     "build": "next build",
+    "prebuild": "npm run check:logos",
     "start": "next start",
     "lint": "next lint",
     "dev-stable": "next dev",
     "dev-webpack": "next dev --webpack",
-    "schema-test": "echo 'Schema validation placeholder'"
+    "schema-test": "echo 'Schema validation placeholder'",
+    "check:logos": "node scripts/verify-logos.mjs"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.16",
