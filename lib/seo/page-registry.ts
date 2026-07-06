@@ -39,6 +39,15 @@ export const BLOG_SLUGS = [
   'centre-formation-lormont-rive-droite-bordeaux',
 ] as const
 
+/** Fiches salles indexables (alignées sur pages/location-salles/[id].js). */
+export const LOCATION_SALLES_IDS = [
+  'grande-salle-formation',
+  'salle-reunion-moyenne',
+  'petite-salle-reunion',
+  'bureau-individuel-1',
+  'bureau-individuel-2',
+] as const
+
 const TEAM_SLUGS = [
   'vanessa-noah-ewodo',
   'brunilda-rafael',
@@ -119,6 +128,10 @@ export function getIndexableRegistry(): RegistryEntry[] {
 
   for (const slug of TEAM_SLUGS) {
     entries.push(entry(`/equipe/${slug}`, 'equipe', 0.6, 'yearly', buildDate))
+  }
+
+  for (const id of LOCATION_SALLES_IDS) {
+    entries.push(entry(`/location-salles/${id}`, 'services', 0.7, 'monthly', buildDate))
   }
 
   return entries

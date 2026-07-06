@@ -13,7 +13,9 @@
     "dev-stable": "next dev",
     "dev-webpack": "next dev --webpack",
     "schema-test": "echo 'Schema validation placeholder'",
-    "check:logos": "node scripts/verify-logos.mjs"
+    "check:logos": "node scripts/verify-logos.mjs",
+    "check:seo": "node scripts/validate-seo-indexing.mjs",
+    "check:seo:prod": "node scripts/validate-rich-results.mjs && node scripts/validate-seo-indexing.mjs"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.16",

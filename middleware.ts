@@ -1,8 +1,11 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
-/** Paramètres WordPress legacy à retirer (UTM conservés). */
+/** Paramètres WordPress legacy à retirer. */
 const LEGACY_QUERY_PARAMS = ['page_id', 'mailpoet_page', 's', 'trk']
+
+/** Paramètres UTM : redirection 301 vers l'URL propre (évite doublons canoniques GSC). */
+const UTM_QUERY_PARAMS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term']
 
 /** PDFs wp-content migrés vers de nouvelles destinations. */
 const WP_CONTENT_REDIRECTS: Record<string, string> = {
@@ -33,9 +36,16 @@ export function middleware(request: NextRequest) {
 
   const hasLegacyParam = LEGACY_QUERY_PARAMS.some((p) => request.nextUrl.searchParams.has(p))
   if (hasLegacyParam) {
-    const url = request.nextUrl.clone()
-    LEGACY_QUERY_PARAMS.forEach((p) => url.searchParams.delete(p))
-    return NextResponse.redirect(url, 301)
+    const cleanUrl = request.nextUrl.clone()
+    LEGACY_QUERY_PARAMS.forEach((p) => cleanUrl.searchParams.delete(p))
+    return NextResponse.redirect(cleanUrl, 301)
+  }
+
+  const hasUtmParam = UTM_QUERY_PARAMS.some((p) => request.nextUrl.searchParams.has(p))
+  if (hasUtmParam) {
+    const cleanUrl = request.nextUrl.clone()
+    UTM_QUERY_PARAMS.forEach((p) => cleanUrl.searchParams.delete(p))
+    return NextResponse.redirect(cleanUrl, 301)
   }
 
   return NextResponse.next()

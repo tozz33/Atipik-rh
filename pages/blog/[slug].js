@@ -3185,7 +3185,7 @@ const BLOG_ARTICLES = [
         metaTitle: "Centre formation CIP à Lormont | Programme & débouchés | Atipik RH",
         metaDescription:
           "Formation conseiller insertion à Lormont : centre Atipik RH, programme CIP, débouchés en Gironde. Article complémentaire à la fiche formation officielle.",
-        canonicalPath: "/blog/formation-conseiller-insertion-professionnelle-lormont",
+        canonicalPath: "/blog/formation-cip-bordeaux-conseiller-insertion-professionnelle",
         secondaryKeywords: [
           "centre formation Lormont",
           "formation insertion professionnelle Gironde",
