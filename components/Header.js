@@ -66,7 +66,7 @@ export default function Header({ isFixed = false, isHomePage = false }) {
 
   return (
     <header id={isHomePage ? "main-header" : undefined} className={headerClasses}>
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
           {isHomePage ? (

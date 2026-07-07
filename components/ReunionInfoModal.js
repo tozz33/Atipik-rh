@@ -38,7 +38,7 @@ export default function ReunionInfoModal() {
       <div 
         className={`
           fixed z-[10000] w-full max-w-md
-          inset-x-0 bottom-0 md:bottom-6 md:left-6 md:inset-x-auto md:w-auto
+          inset-x-0 bottom-20 md:bottom-6 md:left-6 md:inset-x-auto md:w-auto
           flex items-center justify-center md:items-end md:justify-start
           p-4 md:p-0
           ${isClosing ? 'pointer-events-none' : 'pointer-events-auto'}
@@ -72,7 +72,7 @@ export default function ReunionInfoModal() {
           <div className="p-6 md:p-6">
             {/* En-tête avec police Brittany */}
             <div className="text-center mb-6 md:mb-5">
-              <h3 className="font-brittany text-3xl md:text-2xl text-[#013F63] mb-3 md:mb-2 leading-tight whitespace-nowrap">
+              <h3 className="font-brittany text-3xl md:text-2xl text-[#013F63] mb-3 md:mb-2 leading-tight text-balance">
                 Découvrez notre formation
               </h3>
               <div className="w-24 md:w-20 h-1 bg-[#FE6400] mx-auto mb-3 md:mb-2 rounded-full"></div>

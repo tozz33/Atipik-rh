@@ -67,11 +67,11 @@ export default function HomePage() {
   const slides = [
     {
       id: 5,
-      title: "Investissez-en vous-même",
-      subtitle: "Facilités de paiement jusqu'à 9 fois",
-      description: "Accédez à nos formations ou accompagnements grâce au paiement jusqu'à 9 fois sans frais.\nSolutions de financement pour faciliter l'accès à nos services",
+      title: "Session septembre 2026 : les informations pratiques",
+      subtitle: "La prochaine session CIP chez Atipik RH est en cours d'ouverture. Les places sont limitées.",
+      description: "14 places disponibles — les candidatures sont ouvertes dès maintenant.",
       buttonText: "Découvrir les facilités",
-      buttonLink: "/financement",
+      buttonLink: "/s-inscrire",
       image: "/images/hero/reunion-info-2.jpeg",
       isPaiement: true
     },
@@ -133,7 +133,7 @@ export default function HomePage() {
       1: "Faites le point sur votre avenir professionnel avec notre quiz guidé en 3 minutes.",
       2: "Découvrez le parcours CIP/FPA, les débouchés et les financements lors de nos réunions d'information.",
       4: "Louez nos espaces modernes à Lormont pour vos formations, réunions et séminaires.",
-      5: "Bénéficiez d'un paiement jusqu'à 9 fois pour faciliter l'accès à nos formations."
+      5: "14 places disponibles — les candidatures sont ouvertes dès maintenant."
     }
 
     const shortText = mobileDescriptionsBySlideId[slide.id]
@@ -142,6 +142,14 @@ export default function HomePage() {
     const maxLength = 120
     if (!slide.description || slide.description.length <= maxLength) return slide.description
     return `${slide.description.slice(0, maxLength).trimEnd()}...`
+  }
+
+  const getMobileSubtitle = (slide) => {
+    const mobileSubtitlesBySlideId = {
+      5: "Session CIP septembre 2026 — places limitées.",
+    }
+
+    return mobileSubtitlesBySlideId[slide.id] || slide.subtitle
   }
 
   return (
@@ -164,7 +172,7 @@ export default function HomePage() {
           <Header isFixed={true} />
         
         {/* Bandeau déroulant (Carousel) - Style compact */}
-        <section className="relative h-[560px] max-[375px]:h-[600px] sm:h-[520px] md:h-[500px] lg:h-[430px] overflow-hidden rounded-lg mx-2 max-[375px]:mx-1.5 sm:mx-4 lg:mx-8 mt-24 shadow-2xl">
+        <section className="relative min-h-[540px] sm:min-h-[500px] md:min-h-[480px] lg:h-[430px] overflow-hidden rounded-lg mx-2 max-[375px]:mx-1.5 sm:mx-4 lg:mx-8 mt-24 shadow-2xl">
           {slides.map((slide, index) => (
             <div
               key={slide.id}
@@ -200,11 +208,11 @@ export default function HomePage() {
               </div>
 
               {/* Contenu - Layout horizontal */}
-              <div className="relative h-full flex items-center">
+              <div className="relative h-full flex items-center max-lg:items-start max-lg:py-4 sm:max-lg:py-6">
                 <div className="container mx-auto px-3 max-[375px]:px-2.5 sm:px-6 lg:px-12">
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-4 md:gap-5 lg:gap-8 items-center">
                     {/* Texte à gauche */}
-                    <div className={`text-white space-y-1.5 max-[375px]:space-y-1 sm:space-y-3 max-w-xl ${slide.id === 5 ? 'lg:-mt-10' : ''}`}>
+                    <div className="text-white space-y-1.5 max-[375px]:space-y-1 sm:space-y-3 max-w-xl">
                       {slide.isReunion ? (
                         <h1 className="text-xl max-[375px]:text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-white">
                           Réunions d'information collective
@@ -223,8 +231,9 @@ export default function HomePage() {
                           CIP &amp; FPA
                         </p>
                       ) : slide.isPaiement ? (
-                        <p className="text-sm max-[375px]:text-xs sm:text-base lg:text-lg font-semibold text-white opacity-95">
-                          {slide.subtitle}
+                        <p className="text-sm max-[375px]:text-xs sm:text-base lg:text-lg font-semibold text-white opacity-95 leading-snug">
+                          <span className="md:hidden">{getMobileSubtitle(slide)}</span>
+                          <span className="hidden md:inline">{slide.subtitle}</span>
                         </p>
                       ) : (
                         slide.subtitle && slide.subtitle.trim() !== "" && (
@@ -233,7 +242,7 @@ export default function HomePage() {
                           </p>
                         )
                       )}
-                      <p className="text-xs max-[375px]:text-[11px] sm:text-sm lg:text-base opacity-90 leading-relaxed whitespace-pre-line">
+                      <p className={`text-xs max-[375px]:text-[11px] sm:text-sm lg:text-base opacity-90 leading-relaxed whitespace-pre-line ${slide.isPaiement ? 'hidden lg:block' : ''}`}>
                         <span className="sm:hidden">{getMobileDescription(slide)}</span>
                         <span className="hidden sm:inline">{slide.description}</span>
                       </p>
@@ -290,11 +299,11 @@ export default function HomePage() {
                         <div className="bg-white/95 backdrop-blur-sm rounded-xl p-3 max-[375px]:p-2.5 sm:p-4 border border-white/20 text-neutral-900 shadow-xl max-w-xs w-full sm:w-auto">
                           {slide.id === 5 && (
                             <p className="text-[11px] sm:text-xs text-[#013F63] font-bold leading-relaxed mb-2.5 sm:mb-3">
-                              Solutions de financement pour faciliter l'accès à nos services
+                              Vous avez des questions ? Participez à notre réunion d'info !
                             </p>
                           )}
                           <Link
-                            href="/financement"
+                            href="/s-inscrire"
                             className="w-full inline-flex items-center justify-center px-4 py-2 max-[375px]:py-1.5 sm:py-2.5 bg-gradient-to-r from-accent-500 to-accent-600 text-white font-semibold rounded-lg hover:from-accent-600 hover:to-accent-600 transition-all duration-300 text-xs sm:text-sm"
                           >
                             accédez ici
@@ -348,7 +357,7 @@ export default function HomePage() {
                           <div className="text-center">
                             {slide.id === 5 ? (
                               <p className="text-sm text-[#013F63] font-bold leading-relaxed mb-4">
-                                Solutions de financement pour faciliter l'accès à nos services
+                                Vous avez des questions ? Participez à notre réunion d'info !
                               </p>
                             ) : (
                               <div className="flex items-center justify-center gap-2 mb-6">
@@ -357,10 +366,8 @@ export default function HomePage() {
                               </div>
                             )}
                             <Link
-                              href="/financement"
-                              className={`inline-flex mx-auto items-center justify-center px-6 py-3 bg-gradient-to-r from-accent-500 to-accent-600 text-white font-semibold hover:from-accent-600 hover:to-accent-600 transition-all duration-300 shadow-lg ${
-                                slide.id === 5 ? 'w-[260px] max-w-full rounded-2xl' : 'w-full rounded-xl'
-                              }`}
+                              href="/s-inscrire"
+                              className="inline-flex mx-auto w-full max-w-full items-center justify-center px-6 py-3 bg-gradient-to-r from-accent-500 to-accent-600 text-white font-semibold hover:from-accent-600 hover:to-accent-600 transition-all duration-300 shadow-lg rounded-2xl"
                             >
                               accédez ici
                             </Link>

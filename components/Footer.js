@@ -37,7 +37,7 @@ export default function Footer() {
               Votre centre de formation à Lormont. 
               Bilan de compétences, VAE et formations certifiantes.
             </p>
-            <div className="flex items-center gap-6">
+            <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-4 sm:gap-6">
               {/* Réseaux sociaux */}
               <div className="flex space-x-4">
                 <a 
@@ -76,7 +76,7 @@ export default function Footer() {
               </div>
               
               {/* Ligne de séparation */}
-              <div className="w-px h-8 bg-muted-blue-200"></div>
+              <div className="hidden sm:block w-px h-8 bg-muted-blue-200 shrink-0"></div>
               
               {/* Logos certifications */}
               <div className="flex space-x-4 items-center">
