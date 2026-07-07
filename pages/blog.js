@@ -15,6 +15,61 @@ export default function Blog() {
     // Articles exemples - pourront être remplacés par une base de données ou CMS plus tard
   const articles = [
     {
+      id: 40,
+      slug: "formation-cip-bordeaux-session-septembre-2026",
+      title: "Devenir Conseiller en Insertion Professionnelle à Bordeaux : tout savoir sur la session CIP d'Atipik RH (septembre 2026)",
+      excerpt: "Rejoignez la formation CIP niveau 5 (RNCP37274) chez Atipik RH à Lormont. Session du 21 sept. 2026 au 23 avr. 2027 — 14 places disponibles. Finançable CPF, AIF, Transition Pro.",
+      image: "/images/blog/formation-cip-bordeaux-session-septembre-2026.png",
+      imageAlt: "Formation CIP Bordeaux session septembre 2026 — Conseiller en Insertion Professionnelle RNCP37274 — ATIPIK RH Lormont",
+      date: "10 juillet 2026",
+      readTime: "14 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords: "formation CIP Bordeaux, formation CIP Lormont, session CIP septembre 2026, conseiller insertion professionnelle Bordeaux, RNCP37274, formation CIP financement CPF, devenir CIP reconversion, formation CIP niveau 5 Gironde",
+      seo: {
+        metaTitle: "Devenir Conseiller en Insertion Professionnelle à Bordeaux — Formation CIP Atipik RH, session septembre 2026",
+        metaDescription:
+          "Rejoignez la formation CIP niveau 5 (RNCP37274) chez Atipik RH à Lormont. Session du 21 sept. 2026 au 23 avr. 2027 — 14 places disponibles. Finançable CPF, AIF, Transition Pro.",
+        canonicalPath: "/blog/formation-cip-bordeaux-session-septembre-2026",
+        secondaryKeywords: [
+          "formation CIP Bordeaux",
+          "formation CIP Lormont",
+          "session CIP septembre 2026",
+          "conseiller insertion professionnelle Bordeaux",
+          "RNCP37274",
+          "formation CIP financement CPF",
+        ],
+      },
+      faqItems: [
+        {
+          question: "Quand démarre la session CIP septembre 2026 chez Atipik RH ?",
+          answer:
+            "La session démarre le 21 septembre 2026 et se termine le 23 avril 2027, à Lormont (Bordeaux Métropole), en présentiel.",
+        },
+        {
+          question: "Combien de places sont disponibles pour la formation CIP ?",
+          answer:
+            "14 places sont ouvertes aux candidatures. Les candidats sont sélectionnés sur dossier et entretien individuel.",
+        },
+        {
+          question: "Quel est le tarif de la formation CIP chez Atipik RH ?",
+          answer:
+            "Le tarif public est de 9 100 € TTC. Le tarif demandeur d'emploi est de 6 500 € TTC.",
+        },
+      ],
+      internalLinks: [
+        { label: "Formation CIP", href: "/formations/cip", type: "formation" },
+        { label: "Réunion d'information", href: "/s-inscrire", type: "contact" },
+        { label: "Financement 2026", href: "/financement", type: "financement" },
+        { label: "Page contact", href: "/contact", type: "contact" },
+        {
+          label: "Devenir conseiller en insertion professionnelle à Bordeaux",
+          href: "/blog/formation-cip-bordeaux-conseiller-insertion-professionnelle",
+          type: "article",
+        },
+      ],
+    },
+    {
       id: 39,
       slug: "reconversion-professionnelle-juin-2026-financement-cpf",
       title: "Reconversion professionnelle en juin 2026 : pourquoi c'est le meilleur moment pour agir (et comment financer)",

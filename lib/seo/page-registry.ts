@@ -3,6 +3,7 @@ import type { RegistryEntry } from './types'
 
 /** Slugs blog indexables (alignés sur pages/blog/[slug].js). */
 export const BLOG_SLUGS = [
+  'formation-cip-bordeaux-session-septembre-2026',
   'reconversion-professionnelle-juin-2026-financement-cpf',
   'obligation-formation-non-discrimination-recrutement-entreprise',
   'recruter-par-les-competences-penurie-talents',

@@ -29,10 +29,39 @@ import {
   reconversionProfessionnelleJuin2026InternalLinks,
   reconversionProfessionnelleJuin2026SecondaryKeywords,
 } from '../../lib/blog/reconversionProfessionnelleJuin2026Content';
+import {
+  formationCipBordeauxSessionSeptembre2026Content,
+  formationCipBordeauxSessionSeptembre2026FaqItems,
+  formationCipBordeauxSessionSeptembre2026InternalLinks,
+  formationCipBordeauxSessionSeptembre2026SecondaryKeywords,
+} from '../../lib/blog/formationCipBordeauxSessionSeptembre2026Content';
 import { getAllArticles, getArticleBySlug } from '../../lib/blog/articleRepository';
 import { buildArticleSeo } from '../../lib/blog/articleSeoMapper';
 
 const BLOG_ARTICLES = [
+    {
+      id: 40,
+      slug: "formation-cip-bordeaux-session-septembre-2026",
+      title: "Devenir Conseiller en Insertion Professionnelle à Bordeaux : tout savoir sur la session CIP d'Atipik RH (septembre 2026)",
+      excerpt: "Rejoignez la formation CIP niveau 5 (RNCP37274) chez Atipik RH à Lormont. Session du 21 sept. 2026 au 23 avr. 2027 — 14 places disponibles. Finançable CPF, AIF, Transition Pro.",
+      image: "/images/blog/formation-cip-bordeaux-session-septembre-2026.png",
+      imageAlt: "Formation CIP Bordeaux session septembre 2026 — Conseiller en Insertion Professionnelle RNCP37274 — ATIPIK RH Lormont",
+      date: "10 juillet 2026",
+      readTime: "14 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords: "formation CIP Bordeaux, formation CIP Lormont, session CIP septembre 2026, conseiller insertion professionnelle Bordeaux, RNCP37274, formation CIP financement CPF, devenir CIP reconversion, formation CIP niveau 5 Gironde",
+      seo: {
+        metaTitle: "Devenir Conseiller en Insertion Professionnelle à Bordeaux — Formation CIP Atipik RH, session septembre 2026",
+        metaDescription:
+          "Rejoignez la formation CIP niveau 5 (RNCP37274) chez Atipik RH à Lormont. Session du 21 sept. 2026 au 23 avr. 2027 — 14 places disponibles. Finançable CPF, AIF, Transition Pro.",
+        canonicalPath: "/blog/formation-cip-bordeaux-session-septembre-2026",
+        secondaryKeywords: formationCipBordeauxSessionSeptembre2026SecondaryKeywords,
+      },
+      faqItems: formationCipBordeauxSessionSeptembre2026FaqItems,
+      internalLinks: formationCipBordeauxSessionSeptembre2026InternalLinks,
+      content: formationCipBordeauxSessionSeptembre2026Content,
+    },
     {
       id: 39,
       slug: "reconversion-professionnelle-juin-2026-financement-cpf",
