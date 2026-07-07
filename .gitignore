@@ -34,3 +34,7 @@ yarn-error.log*
 
 # Cles API (GSC)
 /secrets/
+
+# Fichiers locaux temporaires
+_pdf_extract.txt
+Untitled
