@@ -4,7 +4,6 @@ import Image from 'next/image'
 import { useState, useEffect, useRef } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import FinancementDisclaimer from '../components/FinancementDisclaimer'
 import { TARIF_SELON_PROFIL_COMPLET } from '../lib/tarifs/tarifsCopy'
 import { 
   Users, 
@@ -1199,8 +1198,6 @@ export default function VAE() {
                 Plusieurs solutions s'offrent à vous
               </p>
             </div>
-
-            <FinancementDisclaimer className="mb-8 max-w-4xl mx-auto" />
 
             {/* Section Solutions de financement - Style CIP */}
             <div className="mb-8">

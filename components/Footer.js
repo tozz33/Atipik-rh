@@ -1,9 +1,23 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { Phone, Mail } from 'lucide-react'
+import FinancementDisclaimer from './FinancementDisclaimer'
+import { isFormationLegalDisclaimerPath } from '../lib/tarifs/formationLegalRoutes'
 
 export default function Footer() {
+  const router = useRouter()
+  const showFormationDisclaimer = isFormationLegalDisclaimerPath(router.pathname)
+
   return (
+    <>
+      {showFormationDisclaimer && (
+        <div className="bg-gray-50/80 border-t border-gray-100 py-3">
+          <div className="container mx-auto px-4">
+            <FinancementDisclaimer variant="subtle" className="max-w-4xl mx-auto text-center" />
+          </div>
+        </div>
+      )}
     <footer className="text-white pt-8 pb-4 relative z-50" style={{backgroundColor: '#013F63'}}>
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
@@ -170,5 +184,6 @@ export default function Footer() {
         </div>
       </div>
     </footer>
+    </>
   )
 } 

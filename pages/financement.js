@@ -4,7 +4,6 @@ import Image from 'next/image'
 import { useState } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import FinancementDisclaimer from '../components/FinancementDisclaimer'
 import { ChevronDown, Users, CreditCard, FileText, UserCheck } from 'lucide-react'
 
 const cardGridWrapperClass = 'overflow-x-auto lg:overflow-visible -mx-4 sm:mx-0 px-4 py-8 snap-x snap-mandatory lg:snap-none'
@@ -509,8 +508,6 @@ export default function Financement() {
                   Questions <span className="text-orange-500 font-brittany text-3xl sm:text-4xl lg:text-5xl">fréquentes</span>
                 </h2>
               </div>
-
-              <FinancementDisclaimer variant="compact" className="mb-8" />
 
               <div className="space-y-4">
                 {faqData.map((faq, index) => (

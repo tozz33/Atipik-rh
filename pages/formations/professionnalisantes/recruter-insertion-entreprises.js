@@ -26,10 +26,10 @@ import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import FormationProfessionnelleSeoHead from '../../../components/FormationProfessionnelleSeoHead'
 import FormationTarifSection from '../../../components/FormationTarifSection'
-import FinancementDisclaimer from '../../../components/FinancementDisclaimer'
 import {
   getFormationContactHref,
   getProfessionnelleConfigBySlug,
+  PROFESSIONNALISANTE_PRICE_SUFFIX,
 } from '../../../lib/seo/professionnalisantesConfig'
 
 const SEO_SLUG = 'recruter-insertion-entreprises'
@@ -652,7 +652,7 @@ export default function RecruterInsertionEntreprises() {
 
           <FormationTarifSection
             publicPrice={seoFormation.price}
-            priceSuffix="/ stagiaire"
+            priceSuffix={PROFESSIONNALISANTE_PRICE_SUFFIX}
             variant="professionnalisante"
             contactHref={getFormationContactHref(SEO_SLUG)}
           />
@@ -670,8 +670,6 @@ export default function RecruterInsertionEntreprises() {
                     Plusieurs solutions s'offrent à vous
                   </p>
                 </div>
-
-                <FinancementDisclaimer className="mb-8 max-w-4xl mx-auto" />
 
                 {/* Solutions de financement */}
                 <div className="grid md:grid-cols-2 gap-6 mb-6">

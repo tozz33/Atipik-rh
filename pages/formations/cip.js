@@ -4,7 +4,6 @@ import FormationGeoSummary from '../../components/FormationGeoSummary'
 import FormationFaqSection from '../../components/FormationFaqSection'
 import FormationStickyCta from '../../components/FormationStickyCta'
 import FormationTarifSection from '../../components/FormationTarifSection'
-import FinancementDisclaimer from '../../components/FinancementDisclaimer'
 import { getCertifianteContactHref } from '../../lib/seo/certifiantesConfig'
 import { useState, useEffect, useRef } from 'react'
 import Header from '../../components/Header'
@@ -1470,8 +1469,6 @@ export default function FormationCIP() {
                       Comment <span className="text-orange-500 font-brittany text-3xl lg:text-4xl">financer</span> votre formation CIP ?
                     </h3>
                   </div>
-
-                  <FinancementDisclaimer className="mb-8 max-w-4xl mx-auto" />
 
                   <div className="relative">
                     

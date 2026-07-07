@@ -26,10 +26,10 @@ import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import FormationProfessionnelleSeoHead from '../../../components/FormationProfessionnelleSeoHead'
 import FormationTarifSection from '../../../components/FormationTarifSection'
-import FinancementDisclaimer from '../../../components/FinancementDisclaimer'
 import {
   getFormationContactHref,
   getProfessionnelleConfigBySlug,
+  PROFESSIONNALISANTE_PRICE_SUFFIX,
 } from '../../../lib/seo/professionnalisantesConfig'
 
 const SEO_SLUG = 'developper-relation-entreprise'
@@ -516,7 +516,7 @@ export default function DevelopperRelationEntreprise() {
 
           <FormationTarifSection
             publicPrice={seoFormation.price}
-            priceSuffix="/ stagiaire"
+            priceSuffix={PROFESSIONNALISANTE_PRICE_SUFFIX}
             variant="professionnalisante"
             contactHref={getFormationContactHref(SEO_SLUG)}
           />
@@ -534,8 +534,6 @@ export default function DevelopperRelationEntreprise() {
                     Plusieurs solutions s'offrent à vous
                   </p>
                 </div>
-
-                <FinancementDisclaimer className="mb-8 max-w-4xl mx-auto" />
 
                 {/* Solutions de financement */}
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
@@ -609,7 +607,7 @@ export default function DevelopperRelationEntreprise() {
 
                 <div className="grid md:grid-cols-2 gap-8 mb-12">
                   
-                  {/* Session Janvier 2026 */}
+                  {/* Session d'Hiver */}
                   <div className="bg-white rounded-3xl p-8 shadow-xl border border-muted-blue-200 text-center">
                     <div className="bg-accent-300 text-[#013F63] rounded-t-2xl -mx-8 -mt-8 p-4 mb-6">
                       <h3 className="text-2xl font-bold mb-2 text-accent-500">Session d'Hiver</h3>
@@ -631,7 +629,7 @@ export default function DevelopperRelationEntreprise() {
                     </div>
                   </div>
 
-                  {/* Session Octobre 2025 */}
+                  {/* Session de Printemps */}
                   <div className="bg-white rounded-3xl p-8 shadow-xl border border-muted-blue-200 text-center">
                     <div className="bg-accent-300 text-[#013F63] rounded-t-2xl -mx-8 -mt-8 p-4 mb-6">
                       <h3 className="text-2xl font-bold mb-2 text-accent-500">Session de Printemps</h3>

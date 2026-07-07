@@ -5,7 +5,6 @@ import Link from 'next/link';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ServicePageSeoHead from '../components/ServicePageSeoHead';
-import FinancementDisclaimer from '../components/FinancementDisclaimer';
 import { TARIF_SELON_PROFIL_COMPLET } from '../lib/tarifs/tarifsCopy';
 import { getBriefById } from '../lib/seo/content-briefs';
 
@@ -781,8 +780,6 @@ export default function BilanCompetences() {
                 Plusieurs solutions s'offrent à vous
               </p>
             </div>
-
-            <FinancementDisclaimer className="mb-8 max-w-4xl mx-auto" />
 
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               
