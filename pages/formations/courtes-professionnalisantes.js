@@ -28,6 +28,7 @@ function libelleDureeDepuisTimeRequired(timeRequired) {
   if (!m) return ''
   const h = parseInt(m[1], 10)
   if (h === 11) return '11 heures (mixed learning)'
+  if (h === 14) return '14 heures (présentiel)'
   if (h === 21) return '21 heures (mixed learning)'
   return `${h} heures`
 }
@@ -60,7 +61,7 @@ export default function FormationsCourtesProfessionnalisantes() {
   }))
 
   const metaDescription =
-    "Formations courtes professionnalisantes à Lormont (Bordeaux) : relation entreprise, insertion, recrutement, prévention des discriminations. Durées 11 h à 21 h ; tarifs sur chaque fiche. Qualiopi."
+    "Formations courtes professionnalisantes à Lormont (Bordeaux) : relation entreprise, insertion, recrutement, numérique, IA et prévention des discriminations. Durées 11 h à 21 h ; tarifs sur chaque fiche. Qualiopi."
   const metaTitle = 'Formations courtes professionnalisantes | Atipik RH — Lormont (33)'
   const twitterTitle = 'Formations courtes professionnalisantes | Atipik RH'
   const canonicalUrl = `${BASE_URL}/formations/courtes-professionnalisantes`
@@ -122,9 +123,13 @@ export default function FormationsCourtesProfessionnalisantes() {
                   <span className="text-orange-500 font-medium">pour les acteurs de l&apos;accompagnement et de l&apos;insertion</span>
                 </p>
                 <p className="mt-6 text-sm text-[#013F63]">
-                  Montée en compétences pour les professionnels du CIP —{' '}
+                  Montée en compétences pour les professionnels — découvrir la formation certifiante{' '}
                   <Link href="/formations/cip" className="font-semibold text-orange-500 hover:underline">
-                    découvrir la formation certifiante CIP
+                    CIP
+                  </Link>
+                  {', '}
+                  <Link href="/formations/fpa" className="font-semibold text-orange-500 hover:underline">
+                    FPA
                   </Link>
                 </p>
               </div>
@@ -193,7 +198,7 @@ export default function FormationsCourtesProfessionnalisantes() {
               <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-12">
                   <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight">
-                    Nos <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">5 formations</span>
+                    Nos <span className="text-orange-500 font-brittany text-5xl lg:text-6xl">7 formations</span>
                   </h2>
                   <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
                     Chaque formation peut être suivie indépendamment. Le détail du programme figure sur la fiche dédiée.

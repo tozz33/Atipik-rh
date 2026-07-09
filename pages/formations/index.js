@@ -282,6 +282,51 @@ export default function FormationsIndex() {
                       </div>
                     </div>
                   ))}
+
+                  {/* Titre de section - Transformation numérique */}
+                  <div className="lg:col-span-2 mt-8 mb-4">
+                    <h3 className="text-3xl lg:text-4xl font-bold text-[#013F63] text-center mb-4">
+                      <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Transformation</span>{' '}
+                      numérique des pratiques professionnelles
+                    </h3>
+                  </div>
+
+                  {FORMATION_PRO_LIST.slice(5, 7).map((f) => (
+                    <div key={f.slug} className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:scale-105 flex flex-col">
+                      <div className="text-center flex-1 flex flex-col">
+                        <div className="h-24 flex flex-col justify-center mb-6">
+                          <h3 className="text-lg font-bold text-[#013F63] mb-2 leading-tight">
+                            {f.titreCarte}
+                          </h3>
+                          <p className="text-base text-[#013F63] font-medium">
+                            {f.sousTitreCarte}
+                          </p>
+                        </div>
+
+                        <div className="space-y-3 mb-8 text-sm text-[#013F63] flex-1">
+                          <div className="flex items-center justify-center gap-2">
+                            <Clock className="w-4 h-4" />
+                            <span>14 heures</span>
+                          </div>
+                          <div className="flex items-center justify-center gap-2">
+                            <Users className="w-4 h-4" />
+                            <span>4 à 12 personnes par session</span>
+                          </div>
+                          <div className="flex items-center justify-center gap-2">
+                            <Award className="w-4 h-4" />
+                            <span>Attestation de formation</span>
+                          </div>
+                        </div>
+
+                        <div className="mt-auto">
+                          <Link href={f.path} className="block w-full text-center px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition group">
+                            Découvrir
+                            <ArrowRight className="w-4 h-4 inline ml-2 group-hover:translate-x-1 transition-transform" />
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
