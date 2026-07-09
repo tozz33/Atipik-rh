@@ -159,6 +159,44 @@ export default function VAE() {
     }
   }, [isClient])
 
+  const statistiques = [
+    {
+      id: 1,
+      valeur: "2",
+      description: "Nombre de VAE réalisées"
+    },
+    {
+      id: 2,
+      valeur: "100%",
+      description: "Taux de présentation à l'entretien"
+    },
+    {
+      id: 3,
+      valeur: "2",
+      description: "Validation partielle ou totale"
+    },
+    {
+      id: 4,
+      valeur: "100%",
+      description: "Taux de satisfaction"
+    },
+    {
+      id: 5,
+      valeur: "À venir",
+      description: "Taux d'insertion globale à 6 mois"
+    },
+    {
+      id: 6,
+      valeur: "À venir",
+      description: "Taux d'insertion dans le métier visé à 6 mois"
+    },
+    {
+      id: 7,
+      valeur: "À venir",
+      description: "Taux d'insertion dans le métier visé à 2 ans"
+    }
+  ]
+
   // Fonction pour animer les compteurs
   const animateCounter = (start, end, duration, callback) => {
     const startTime = performance.now()
@@ -253,44 +291,6 @@ export default function VAE() {
   const prevStat = () => {
     setCurrentStatIndex((prev) => Math.max(prev - 1, 0))
   }
-
-  const statistiques = [
-    {
-      id: 1,
-      valeur: "2",
-      description: "Nombre de VAE réalisées"
-    },
-    {
-      id: 2,
-      valeur: "100%",
-      description: "Taux de présentation à l'entretien"
-    },
-    {
-      id: 3,
-      valeur: "2",
-      description: "Validation partielle ou totale"
-    },
-    {
-      id: 4,
-      valeur: "100%",
-      description: "Taux de satisfaction"
-    },
-    {
-      id: 5,
-      valeur: "À venir",
-      description: "Taux d'insertion globale à 6 mois"
-    },
-    {
-      id: 6,
-      valeur: "À venir",
-      description: "Taux d'insertion dans le métier visé à 6 mois"
-    },
-    {
-      id: 7,
-      valeur: "À venir",
-      description: "Taux d'insertion dans le métier visé à 2 ans"
-    }
-  ]
 
   const etapesAccompagnement = [
     {

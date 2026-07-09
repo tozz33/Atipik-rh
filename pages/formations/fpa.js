@@ -264,6 +264,23 @@ export default function FormationFPA() {
     }
   }, [isClient, openModules])
 
+  const stats = [
+    { label: "Nombre de stagiaires formés", value: "À venir" },
+    { label: "Taux de satisfaction", value: "À venir" },
+    { label: "Taux de présentation au titre préparé", value: "À venir" },
+    { label: "Taux d'obtention du titre", value: "À venir" },
+    { label: "Taux d'insertion dans le métier visé à 6 mois", value: "À venir" },
+    { label: "Taux d'insertion globale à 6 mois", value: "À venir" }
+  ]
+
+  const franceCompetencesStats = [
+    { label: "Nombre de certifiés", value: "2516" },
+    { label: "Nombre de certifiés à la suite d'un parcours VAE", value: "133" },
+    { label: "Taux d'insertion global à 6 mois", value: "78%" },
+    { label: "Taux d'insertion dans le métier visé à 6 mois", value: "68%" },
+    { label: "Taux d'insertion dans le métier visé à 2 ans", value: "56%" }
+  ]
+
   // Fonction pour animer les compteurs
   const animateCounter = (start, end, duration, callback) => {
     const startTime = performance.now()
@@ -406,23 +423,6 @@ export default function FormationFPA() {
         "Analyser ses pratiques professionnelles"
       ]
     }
-  ]
-
-  const stats = [
-    { label: "Nombre de stagiaires formés", value: "À venir" },
-    { label: "Taux de satisfaction", value: "À venir" },
-    { label: "Taux de présentation au titre préparé", value: "À venir" },
-    { label: "Taux d'obtention du titre", value: "À venir" },
-    { label: "Taux d'insertion dans le métier visé à 6 mois", value: "À venir" },
-    { label: "Taux d'insertion globale à 6 mois", value: "À venir" }
-  ]
-
-  const franceCompetencesStats = [
-    { label: "Nombre de certifiés", value: "2516" },
-    { label: "Nombre de certifiés à la suite d'un parcours VAE", value: "133" },
-    { label: "Taux d'insertion global à 6 mois", value: "78%" },
-    { label: "Taux d'insertion dans le métier visé à 6 mois", value: "68%" },
-    { label: "Taux d'insertion dans le métier visé à 2 ans", value: "56%" }
   ]
 
   return (

@@ -1,5 +1,8 @@
 import Link from 'next/link'
 import {
+  TARIF_INTER_LABEL,
+  TARIF_INTRA_LABEL,
+  TARIF_INTRA_TEXTE,
   TARIF_SELON_PROFIL_COMPLET,
   TARIF_SELON_PROFIL_COURT,
   formatTarifPublicDisplay,
@@ -38,6 +41,27 @@ const VARIANT_STYLES = {
   },
 }
 
+const VARIANT_LABELS = {
+  certifiante: {
+    publicTitle: 'Tarif public',
+    profilTitle: 'Tarif selon profil',
+    profilTextWithPublic: TARIF_SELON_PROFIL_COMPLET,
+    profilTextOnly: TARIF_SELON_PROFIL_COURT,
+  },
+  professionnalisante: {
+    publicTitle: TARIF_INTER_LABEL,
+    profilTitle: TARIF_INTRA_LABEL,
+    profilTextWithPublic: TARIF_INTRA_TEXTE,
+    profilTextOnly: TARIF_INTRA_TEXTE,
+  },
+  service: {
+    publicTitle: 'Tarif public',
+    profilTitle: 'Tarif selon profil',
+    profilTextWithPublic: TARIF_SELON_PROFIL_COMPLET,
+    profilTextOnly: TARIF_SELON_PROFIL_COURT,
+  },
+}
+
 /**
  * Section tarifs harmonisée ATIPIK RH.
  * @param {object} props
@@ -60,7 +84,8 @@ export default function FormationTarifSection({
   sectionClassName = 'py-12',
 }) {
   const styles = VARIANT_STYLES[variant] ?? VARIANT_STYLES.certifiante
-  const profilText = publicPrice ? TARIF_SELON_PROFIL_COMPLET : TARIF_SELON_PROFIL_COURT
+  const labels = VARIANT_LABELS[variant] ?? VARIANT_LABELS.certifiante
+  const profilText = publicPrice ? labels.profilTextWithPublic : labels.profilTextOnly
   const display = publicPrice ? formatTarifPublicDisplay(publicPrice, { suffix: priceSuffix }) : null
 
   const publicCard = publicPrice ? (
@@ -70,7 +95,7 @@ export default function FormationTarifSection({
       <div
         className={`${styles.publicHeader} rounded-t-2xl -mx-6 -mt-6 p-4 mb-4 h-20 flex items-center justify-center`}
       >
-        <h3 className={`text-2xl font-bold ${styles.publicTitle}`}>Tarif public</h3>
+        <h3 className={`text-2xl font-bold ${styles.publicTitle}`}>{labels.publicTitle}</h3>
       </div>
       {formulaLabel ? (
         <p className="text-sm font-semibold text-[#013F63] mb-2">{formulaLabel}</p>
@@ -103,7 +128,7 @@ export default function FormationTarifSection({
         className={`${styles.profilHeader} rounded-t-2xl -mx-6 -mt-6 p-4 mb-4 min-h-20 flex items-center justify-center`}
       >
         <h3 className={`text-xl md:text-2xl font-bold ${styles.profilTitle}`}>
-          Tarif selon profil
+          {labels.profilTitle}
         </h3>
       </div>
       <div className="mb-6 px-2">

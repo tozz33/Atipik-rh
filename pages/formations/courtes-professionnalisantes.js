@@ -10,7 +10,7 @@ import {
   buildFormationProHubKeywords,
   buildJsonLdFormationProHub,
 } from '../../lib/seo/professionnalisantesConfig'
-import { TARIF_SELON_PROFIL_COMPLET } from '../../lib/tarifs/tarifsCopy'
+import { TARIF_INTRA_TEXTE, TARIF_INTER_LABEL } from '../../lib/tarifs/tarifsCopy'
 import {
   MapPin,
   Euro,
@@ -240,7 +240,7 @@ export default function FormationsCourtesProfessionnalisantes() {
                               <span className="inline-flex items-center gap-2">
                                 <Euro className="w-4 h-4 text-[#013F63] flex-shrink-0" />
                                 <span>
-                                  <strong className="text-[#013F63]">Tarif public :</strong> {formation.tarifLabel} TTC / stagiaire
+                                  <strong className="text-[#013F63]">{TARIF_INTER_LABEL} :</strong> {formation.tarifLabel} TTC / stagiaire
                                 </span>
                               </span>
                             </div>
@@ -275,11 +275,11 @@ export default function FormationsCourtesProfessionnalisantes() {
                     <Euro className="w-12 h-12 text-[#013F63] mx-auto mb-4" />
                     <h3 className="font-bold text-gray-800 mb-2">Tarifs</h3>
                     <p className="text-sm text-gray-600 leading-relaxed">
-                      Tarif public : de {formatPrixStagiaire('715')} à {formatPrixStagiaire('1365')} TTC / stagiaire selon la formation.
+                      {TARIF_INTER_LABEL} : de {formatPrixStagiaire('715')} à {formatPrixStagiaire('1365')} TTC / stagiaire selon la formation.
                       Détail sur chaque fiche programme.
                     </p>
                     <p className="text-sm text-gray-600 leading-relaxed mt-2">
-                      {TARIF_SELON_PROFIL_COMPLET}
+                      {TARIF_INTRA_TEXTE}
                     </p>
                   </div>
 

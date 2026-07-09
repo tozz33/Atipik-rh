@@ -14,7 +14,7 @@ const WP_CONTENT_REDIRECTS: Record<string, string> = {
   '/wp-content/uploads/2022/02/Programme-de-formation-VAE-ATIPIK-RH.pdf': '/vae',
 }
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const url = request.nextUrl.clone()
   const { pathname } = url
 

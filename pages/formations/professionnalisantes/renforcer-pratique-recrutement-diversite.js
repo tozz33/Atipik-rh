@@ -699,13 +699,13 @@ export default function RenforcerPratiqueRecrutementDiversite() {
                         <div className="w-auto h-8 bg-muted-blue-200 rounded-full flex items-center justify-center px-3">
                           <span className="text-[#013F63] font-bold text-sm">Présentiel</span>
                         </div>
-                        <span className="text-[#013F63] font-medium">10 septembre 2026</span>
+                        <span className="text-[#013F63] font-medium">18 septembre 2026</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <div className="w-auto h-8 bg-muted-blue-200 rounded-full flex items-center justify-center px-3">
                           <span className="text-[#013F63] font-bold text-sm">Distanciel</span>
                         </div>
-                        <span className="text-[#013F63] font-medium">17 septembre 2026 matin</span>
+                        <span className="text-[#013F63] font-medium">25 septembre 2026 matin</span>
                       </div>
                     </div>
                   </div>

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import Header from '../../components/Header'
@@ -14,12 +14,7 @@ export default function QuizBilanCompetences() {
   const [userInfo, setUserInfo] = useState({ name: '', email: '', phone: '' })
   const [showResults, setShowResults] = useState(false)
   const [honeypot, setHoneypot] = useState('')
-  const [formTimestamp, setFormTimestamp] = useState(null)
-
-  useEffect(() => {
-    // Enregistrer le timestamp de chargement du formulaire
-    setFormTimestamp(Date.now())
-  }, [])
+  const [formTimestamp] = useState(() => Date.now())
 
   const questions = [
     {

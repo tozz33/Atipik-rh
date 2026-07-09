@@ -9,7 +9,7 @@
     "build": "next build",
     "prebuild": "npm run check:logos",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "dev-stable": "next dev",
     "dev-webpack": "next dev --webpack",
     "schema-test": "echo 'Schema validation placeholder'",
@@ -41,5 +41,8 @@
   },
   "engines": {
     "node": "20.x"
+  },
+  "optionalDependencies": {
+    "@next/swc-win32-x64-msvc": "^16.1.6"
   }
 }

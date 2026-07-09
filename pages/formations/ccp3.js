@@ -179,6 +179,22 @@ export default function FormationCCP3() {
     }
   }, [isClient, openModules])
 
+  const stats = [
+    { label: "Nombre de stagiaires formés", value: "19" },
+    { label: "Taux de satisfaction", value: "9,7/10" },
+    { label: "Taux de présentation au titre préparé", value: "100%" },
+    { label: "Taux d'obtention du titre", value: "95%" },
+    { label: "Taux d'insertion dans le métier visé à 6 mois", value: "67%" },
+    { label: "Taux d'insertion globale à 6 mois", value: "78%" }
+  ]
+
+  const franceCompetencesStats = [
+    { label: "Nombre de certifiés", value: "2303" },
+    { label: "Nombre de certifiés à la suite d'un parcours VAE", value: "39" },
+    { label: "Taux d'insertion global à 6 mois", value: "88%" },
+    { label: "Taux d'insertion dans le métier visé à 6 mois", value: "72%" },
+    { label: "Taux d'insertion dans le métier visé à 2 ans", value: "85%" }
+  ]
 
   // Fonction pour animer les compteurs
   const animateCounter = (start, end, duration, callback) => {
@@ -331,23 +347,6 @@ export default function FormationCCP3() {
         "Inscrire ses actes professionnels dans une démarche inclusive et de développement durable"
       ]
     }
-  ]
-
-  const stats = [
-    { label: "Nombre de stagiaires formés", value: "19" },
-    { label: "Taux de satisfaction", value: "9,7/10" },
-    { label: "Taux de présentation au titre préparé", value: "100%" },
-    { label: "Taux d'obtention du titre", value: "95%" },
-    { label: "Taux d'insertion dans le métier visé à 6 mois", value: "67%" },
-    { label: "Taux d'insertion globale à 6 mois", value: "78%" }
-  ]
-
-  const franceCompetencesStats = [
-    { label: "Nombre de certifiés", value: "2303" },
-    { label: "Nombre de certifiés à la suite d'un parcours VAE", value: "39" },
-    { label: "Taux d'insertion global à 6 mois", value: "88%" },
-    { label: "Taux d'insertion dans le métier visé à 6 mois", value: "72%" },
-    { label: "Taux d'insertion dans le métier visé à 2 ans", value: "85%" }
   ]
 
   const documentationItems = [
