@@ -3,6 +3,7 @@ import type { RegistryEntry } from './types'
 
 /** Slugs blog indexables (alignés sur pages/blog/[slug].js). */
 export const BLOG_SLUGS = [
+  'formation-ia-accompagnement-professionnels-bordeaux-2026',
   'formation-essentiels-numerique-professionnels-accompagnement-bordeaux-2026',
   'formation-cip-bordeaux-session-septembre-2026',
   'reconversion-professionnelle-juin-2026-financement-cpf',

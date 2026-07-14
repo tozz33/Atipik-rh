@@ -41,10 +41,39 @@ import {
   formationEssentielsNumeriqueBordeaux2026InternalLinks,
   formationEssentielsNumeriqueBordeaux2026SecondaryKeywords,
 } from '../../lib/blog/formationEssentielsNumeriqueBordeaux2026Content';
+import {
+  formationIaAccompagnementBordeaux2026Content,
+  formationIaAccompagnementBordeaux2026FaqItems,
+  formationIaAccompagnementBordeaux2026InternalLinks,
+  formationIaAccompagnementBordeaux2026SecondaryKeywords,
+} from '../../lib/blog/formationIaAccompagnementBordeaux2026Content';
 import { getAllArticles, getArticleBySlug } from '../../lib/blog/articleRepository';
 import { buildArticleSeo } from '../../lib/blog/articleSeoMapper';
 
 const BLOG_ARTICLES = [
+    {
+      id: 42,
+      slug: "formation-ia-accompagnement-professionnels-bordeaux-2026",
+      title: "L'IA au service de l'Accompagnement : intégrer l'intelligence artificielle avec responsabilité — Sessions septembre 2026 à Bordeaux",
+      excerpt: "Intégrez l'IA dans votre pratique d'accompagnement en 2 jours (14h) à Lormont. Sessions 21-22 et 28-29 sept. 2026. 1 090 € TTC. Financement OPCO. Organisme Qualiopi.",
+      image: "/images/blog/formation-ia-accompagnement-bordeaux-septembre-2026.png",
+      imageAlt: "Formation IA au service de l'Accompagnement — Campagne septembre 2026 — ATIPIK RH Lormont Bordeaux",
+      date: "20 juillet 2026",
+      readTime: "12 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords: "formation IA insertion professionnelle, intelligence artificielle accompagnement emploi, formation courte présentiel Bordeaux, financement OPCO formation numérique, ATIPIK RH Lormont",
+      seo: {
+        metaTitle: "Formation IA pour professionnels de l'accompagnement à Bordeaux | ATIPIK RH",
+        metaDescription:
+          "Intégrez l'IA dans votre pratique d'accompagnement en 2 jours (14h) à Lormont. Sessions 21-22 et 28-29 sept. 2026. 1 090 € TTC. Financement OPCO.",
+        canonicalPath: "/blog/formation-ia-accompagnement-professionnels-bordeaux-2026",
+        secondaryKeywords: formationIaAccompagnementBordeaux2026SecondaryKeywords,
+      },
+      faqItems: formationIaAccompagnementBordeaux2026FaqItems,
+      internalLinks: formationIaAccompagnementBordeaux2026InternalLinks,
+      content: formationIaAccompagnementBordeaux2026Content,
+    },
     {
       id: 41,
       slug: "formation-essentiels-numerique-professionnels-accompagnement-bordeaux-2026",
