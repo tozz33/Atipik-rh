@@ -15,6 +15,52 @@ export default function Blog() {
     // Articles exemples - pourront être remplacés par une base de données ou CMS plus tard
   const articles = [
     {
+      id: 42,
+      slug: "formation-ia-accompagnement-professionnels-bordeaux-2026",
+      title: "L'IA au service de l'Accompagnement : intégrer l'intelligence artificielle avec responsabilité — Sessions septembre 2026 à Bordeaux",
+      excerpt: "Intégrez l'IA dans votre pratique d'accompagnement en 2 jours (14h) à Lormont. Sessions 21-22 et 28-29 sept. 2026. 1 090 € TTC. Financement OPCO. Organisme Qualiopi.",
+      image: "/images/blog/formation-ia-accompagnement-bordeaux-septembre-2026.png",
+      imageAlt: "Formation IA au service de l'Accompagnement — Campagne septembre 2026 — ATIPIK RH Lormont Bordeaux",
+      date: "20 juillet 2026",
+      readTime: "12 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords: "formation IA insertion professionnelle, intelligence artificielle accompagnement emploi, formation courte présentiel Bordeaux, financement OPCO formation numérique, ATIPIK RH Lormont",
+      seo: {
+        metaTitle: "Formation IA pour professionnels de l'accompagnement à Bordeaux | ATIPIK RH",
+        metaDescription:
+          "Intégrez l'IA dans votre pratique d'accompagnement en 2 jours (14h) à Lormont. Sessions 21-22 et 28-29 sept. 2026. 1 090 € TTC. Financement OPCO.",
+        canonicalPath: "/blog/formation-ia-accompagnement-professionnels-bordeaux-2026",
+        secondaryKeywords: [
+          "formation IA insertion professionnelle",
+          "intelligence artificielle accompagnement emploi",
+          "formation courte présentiel Bordeaux",
+          "financement OPCO formation numérique",
+          "ATIPIK RH Lormont",
+        ],
+      },
+      faqItems: [
+        {
+          question: "Quel est le tarif de la formation IA au service de l'Accompagnement ?",
+          answer: "Le tarif inter-entreprises est de 1 090 € TTC par stagiaire. Le tarif intra-entreprise est disponible sur devis.",
+        },
+        {
+          question: "Quelles sont les dates des sessions IA de septembre 2026 ?",
+          answer: "Deux sessions sont programmées : du 21 au 22 septembre 2026 et du 28 au 29 septembre 2026, à Lormont.",
+        },
+        {
+          question: "Faut-il des prérequis techniques pour suivre la formation IA ?",
+          answer: "Non. La formation est conçue pour des professionnels de terrain sans compétences IT avancées.",
+        },
+      ],
+      internalLinks: [
+        { label: "Formation IA au service de l'Accompagnement", href: "/formations/professionnalisantes/intelligence-artificielle-accompagnement", type: "formation" },
+        { label: "Formation Les Essentiels du Numérique", href: "/blog/formation-essentiels-numerique-professionnels-accompagnement-bordeaux-2026", type: "article" },
+        { label: "Financement 2026", href: "/financement", type: "financement" },
+        { label: "Page contact", href: "/contact", type: "contact" },
+      ],
+    },
+    {
       id: 41,
       slug: "formation-essentiels-numerique-professionnels-accompagnement-bordeaux-2026",
       title: "Les Essentiels du Numérique : structurer votre pratique d'accompagnement — Sessions septembre 2026 à Bordeaux",
