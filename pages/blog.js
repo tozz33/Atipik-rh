@@ -15,6 +15,51 @@ export default function Blog() {
     // Articles exemples - pourront être remplacés par une base de données ou CMS plus tard
   const articles = [
     {
+      id: 41,
+      slug: "formation-essentiels-numerique-professionnels-accompagnement-bordeaux-2026",
+      title: "Les Essentiels du Numérique : structurer votre pratique d'accompagnement — Sessions septembre 2026 à Bordeaux",
+      excerpt: "Structurez votre environnement numérique en 2 jours (14h) à Lormont. Sessions 7-8 et 14-15 sept. 2026. 970 € TTC. Financement OPCO. Organisme Qualiopi.",
+      image: "/images/blog/formation-essentiels-numerique-bordeaux-septembre-2026.png",
+      imageAlt: "Formation Les Essentiels du Numérique — Campagne septembre 2026 — ATIPIK RH Lormont Bordeaux",
+      date: "16 juillet 2026",
+      readTime: "12 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords: "formation numérique professionnels accompagnement Bordeaux, outils numériques CIP FPA, ATIPIK RH Lormont, essentiels du numérique professionnel, formation courte présentiel Bordeaux, financement OPCO formation numérique",
+      seo: {
+        metaTitle: "Formation numérique pour professionnels de l'accompagnement à Bordeaux | ATIPIK RH",
+        metaDescription:
+          "Structurez votre environnement numérique en 2 jours (14h) à Lormont. Sessions 7-8 et 14-15 sept. 2026. 970 € TTC. Financement OPCO. Organisme Qualiopi.",
+        canonicalPath: "/blog/formation-essentiels-numerique-professionnels-accompagnement-bordeaux-2026",
+        secondaryKeywords: [
+          "formation numérique professionnels accompagnement Bordeaux",
+          "outils numériques CIP FPA",
+          "ATIPIK RH Lormont",
+          "essentiels du numérique professionnel",
+        ],
+      },
+      faqItems: [
+        {
+          question: "Quelle est la durée de la formation Les Essentiels du Numérique chez ATIPIK RH ?",
+          answer: "La formation dure 14 heures en présentiel, soit 2 jours, au centre ATIPIK RH à Lormont (33310).",
+        },
+        {
+          question: "Quel est le tarif de la formation Les Essentiels du Numérique ?",
+          answer: "Le tarif inter-entreprises est de 970 € TTC par stagiaire. Le tarif intra-entreprise est disponible sur devis.",
+        },
+        {
+          question: "Quelles sont les dates des sessions de septembre 2026 ?",
+          answer: "Deux sessions sont programmées : du 7 au 8 septembre 2026 et du 14 au 15 septembre 2026, à Lormont.",
+        },
+      ],
+      internalLinks: [
+        { label: "Formation Les Essentiels du Numérique", href: "/formations/professionnalisantes/essentiels-du-numerique", type: "formation" },
+        { label: "Formation IA au service de l'Accompagnement", href: "/blog/formation-ia-accompagnement-professionnels-bordeaux-2026", type: "article" },
+        { label: "Financement 2026", href: "/financement", type: "financement" },
+        { label: "Page contact", href: "/contact", type: "contact" },
+      ],
+    },
+    {
       id: 40,
       slug: "formation-cip-bordeaux-session-septembre-2026",
       title: "Devenir Conseiller en Insertion Professionnelle à Bordeaux : tout savoir sur la session CIP d'Atipik RH (septembre 2026)",

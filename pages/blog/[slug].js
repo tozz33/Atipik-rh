@@ -35,10 +35,39 @@ import {
   formationCipBordeauxSessionSeptembre2026InternalLinks,
   formationCipBordeauxSessionSeptembre2026SecondaryKeywords,
 } from '../../lib/blog/formationCipBordeauxSessionSeptembre2026Content';
+import {
+  formationEssentielsNumeriqueBordeaux2026Content,
+  formationEssentielsNumeriqueBordeaux2026FaqItems,
+  formationEssentielsNumeriqueBordeaux2026InternalLinks,
+  formationEssentielsNumeriqueBordeaux2026SecondaryKeywords,
+} from '../../lib/blog/formationEssentielsNumeriqueBordeaux2026Content';
 import { getAllArticles, getArticleBySlug } from '../../lib/blog/articleRepository';
 import { buildArticleSeo } from '../../lib/blog/articleSeoMapper';
 
 const BLOG_ARTICLES = [
+    {
+      id: 41,
+      slug: "formation-essentiels-numerique-professionnels-accompagnement-bordeaux-2026",
+      title: "Les Essentiels du Numérique : structurer votre pratique d'accompagnement — Sessions septembre 2026 à Bordeaux",
+      excerpt: "Structurez votre environnement numérique en 2 jours (14h) à Lormont. Sessions 7-8 et 14-15 sept. 2026. 970 € TTC. Financement OPCO. Organisme Qualiopi.",
+      image: "/images/blog/formation-essentiels-numerique-bordeaux-septembre-2026.png",
+      imageAlt: "Formation Les Essentiels du Numérique — Campagne septembre 2026 — ATIPIK RH Lormont Bordeaux",
+      date: "16 juillet 2026",
+      readTime: "12 min",
+      author: "Vanessa NOAH EWODO",
+      category: "Formations",
+      keywords: "formation numérique professionnels accompagnement Bordeaux, outils numériques CIP FPA, ATIPIK RH Lormont, essentiels du numérique professionnel, formation courte présentiel Bordeaux, financement OPCO formation numérique",
+      seo: {
+        metaTitle: "Formation numérique pour professionnels de l'accompagnement à Bordeaux | ATIPIK RH",
+        metaDescription:
+          "Structurez votre environnement numérique en 2 jours (14h) à Lormont. Sessions 7-8 et 14-15 sept. 2026. 970 € TTC. Financement OPCO. Organisme Qualiopi.",
+        canonicalPath: "/blog/formation-essentiels-numerique-professionnels-accompagnement-bordeaux-2026",
+        secondaryKeywords: formationEssentielsNumeriqueBordeaux2026SecondaryKeywords,
+      },
+      faqItems: formationEssentielsNumeriqueBordeaux2026FaqItems,
+      internalLinks: formationEssentielsNumeriqueBordeaux2026InternalLinks,
+      content: formationEssentielsNumeriqueBordeaux2026Content,
+    },
     {
       id: 40,
       slug: "formation-cip-bordeaux-session-septembre-2026",
