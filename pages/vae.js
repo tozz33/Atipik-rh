@@ -385,6 +385,7 @@ export default function VAE() {
     {
       id: 'fpa',
       titreCertif: 'Titre Professionnel FPA',
+      prix: '2 650',
       headerWrapperClass: 'bg-accent-300 text-[#013F63]',
       niveauClass: 'text-accent-500',
       niveauLigneClass: 'text-[#013F63]',
@@ -395,6 +396,7 @@ export default function VAE() {
     {
       id: 'cip',
       titreCertif: 'Titre Professionnel CIP',
+      prix: '2 750',
       headerWrapperClass: 'bg-[#013F63]',
       niveauClass: 'text-white',
       niveauLigneClass: 'text-accent-500',
@@ -1022,7 +1024,7 @@ export default function VAE() {
                     <div className="mb-4">
                       <p className="text-sm font-semibold text-[#013F63] mb-1">Tarif public</p>
                       <div className={`text-4xl font-bold mb-2 ${formule.priceClass}`}>
-                        2 750<span className="text-2xl"> € TTC</span>
+                        {formule.prix}<span className="text-2xl"> € TTC</span>
                       </div>
                       <p className="text-sm text-[#013F63] mt-2">
                         (sans frais d&apos;acte formatif, frais de certificateur et frais de jurys)
