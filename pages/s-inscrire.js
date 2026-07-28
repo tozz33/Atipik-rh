@@ -85,7 +85,17 @@ export default function SInscrire() {
     { date: '2026-06-20', jour: 'Samedi 20 Juin 2026', heure: '10h30 - 12h30', modalite: 'présentiel' },
     { date: '2026-07-06', jour: 'Lundi 6 Juillet 2026', heure: '12h30 - 14h30', modalite: 'distanciel' },
     { date: '2026-07-18', jour: 'Samedi 18 Juillet 2026', heure: '10h30 - 12h30', modalite: 'présentiel' },
-    { date: '2026-08-22', jour: 'Samedi 22 Août 2026', heure: '12h30 - 14h30', modalite: 'distanciel' }
+    { date: '2026-08-22', jour: 'Samedi 22 Août 2026', heure: '12h30 - 14h30', modalite: 'distanciel' },
+    { date: '2026-08-24', jour: 'Lundi 24 Août 2026', heure: '12h30 - 14h30', modalite: 'distanciel' },
+    { date: '2026-09-12', jour: 'Samedi 12 Septembre 2026', heure: '10h30 - 12h30', modalite: 'présentiel' },
+    { date: '2026-09-24', jour: 'Jeudi 24 Septembre 2026', heure: '12h30 - 14h30', modalite: 'distanciel' },
+    { date: '2026-10-10', jour: 'Samedi 10 Octobre 2026', heure: '10h30 - 12h30', modalite: 'présentiel' },
+    { date: '2026-10-27', jour: 'Mardi 27 Octobre 2026', heure: '12h30 - 14h30', modalite: 'distanciel' },
+    { date: '2026-11-07', jour: 'Samedi 7 Novembre 2026', heure: '10h30 - 12h30', modalite: 'présentiel' },
+    { date: '2026-11-26', jour: 'Jeudi 26 Novembre 2026', heure: '12h30 - 14h30', modalite: 'distanciel' },
+    { date: '2026-12-05', jour: 'Samedi 5 Décembre 2026', heure: '10h30 - 12h30', modalite: 'présentiel' },
+    { date: '2026-12-17', jour: 'Jeudi 17 Décembre 2026', heure: '12h30 - 14h30', modalite: 'distanciel' },
+    { date: '2027-01-09', jour: 'Samedi 9 Janvier 2027', heure: '10h30 - 12h30', modalite: 'présentiel' }
   ]
 
   // Dates à afficher selon la formation sélectionnée (filtrées automatiquement)

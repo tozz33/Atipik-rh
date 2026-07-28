@@ -23,13 +23,14 @@ export default function QuizPopup({ quizSectionRef }) {
       { threshold: 0.1 } // Seuil de 10% de visibilité
     )
 
-    if (quizSectionRef?.current) {
-      observer.observe(quizSectionRef.current)
+    const quizNode = quizSectionRef?.current
+    if (quizNode) {
+      observer.observe(quizNode)
     }
 
     return () => {
-      if (quizSectionRef?.current) {
-        observer.unobserve(quizSectionRef.current)
+      if (quizNode) {
+        observer.unobserve(quizNode)
       }
     }
   }, [quizSectionRef, isVisible])

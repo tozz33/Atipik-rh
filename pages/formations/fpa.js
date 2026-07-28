@@ -8,6 +8,7 @@ import { getCertifianteContactHref } from '../../lib/seo/certifiantesConfig'
 
 const CONTACT_HREF = getCertifianteContactHref('formation-fpa')
 import { useState, useEffect, useRef } from 'react'
+import { useIsClient, useIsMobile } from '../../hooks/useClientViewport'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import ReunionInfoModal from '../../components/ReunionInfoModal'
@@ -36,6 +37,23 @@ import {
 } from 'lucide-react'
 import Image from 'next/image'
 
+const STATS = [
+  { label: "Nombre de stagiaires formés", value: "À venir" },
+  { label: "Taux de satisfaction", value: "À venir" },
+  { label: "Taux de présentation au titre préparé", value: "À venir" },
+  { label: "Taux d'obtention du titre", value: "À venir" },
+  { label: "Taux d'insertion dans le métier visé à 6 mois", value: "À venir" },
+  { label: "Taux d'insertion globale à 6 mois", value: "À venir" }
+]
+
+const FRANCE_COMPETENCES_STATS = [
+  { label: "Nombre de certifiés", value: "2516" },
+  { label: "Nombre de certifiés à la suite d'un parcours VAE", value: "133" },
+  { label: "Taux d'insertion global à 6 mois", value: "78%" },
+  { label: "Taux d'insertion dans le métier visé à 6 mois", value: "68%" },
+  { label: "Taux d'insertion dans le métier visé à 2 ans", value: "56%" }
+]
+
 export default function FormationFPA() {
   const [openFaq, setOpenFaq] = useState(null)
   const [openModules, setOpenModules] = useState({})
@@ -49,8 +67,8 @@ export default function FormationFPA() {
   const [currentFranceStatIndex, setCurrentFranceStatIndex] = useState(0)
   const [currentDocIndex, setCurrentDocIndex] = useState(0)
   const [currentFinancementIndex, setCurrentFinancementIndex] = useState(0)
-  const [isMobile, setIsMobile] = useState(false)
-  const [isClient, setIsClient] = useState(false)
+  const isClient = useIsClient()
+  const isMobile = useIsMobile()
   const statsRef = useRef(null)
   const franceStatsRef = useRef(null)
   const accordeonsRef = useRef(null)
@@ -155,19 +173,6 @@ export default function FormationFPA() {
     }))
   }
 
-  // Détecter la taille d'écran après l'hydratation pour éviter les erreurs SSR
-  useEffect(() => {
-    setIsClient(true)
-    const checkIsMobile = () => {
-      setIsMobile(window.innerWidth < 768)
-    }
-    
-    checkIsMobile()
-    window.addEventListener('resize', checkIsMobile)
-    
-    return () => window.removeEventListener('resize', checkIsMobile)
-  }, [])
-
   // Synchroniser la hauteur de la carte bleue avec les accordéons fermés (structure identique à CIP)
   useEffect(() => {
     const updateHeight = () => {
@@ -264,23 +269,6 @@ export default function FormationFPA() {
     }
   }, [isClient, openModules])
 
-  const stats = [
-    { label: "Nombre de stagiaires formés", value: "À venir" },
-    { label: "Taux de satisfaction", value: "À venir" },
-    { label: "Taux de présentation au titre préparé", value: "À venir" },
-    { label: "Taux d'obtention du titre", value: "À venir" },
-    { label: "Taux d'insertion dans le métier visé à 6 mois", value: "À venir" },
-    { label: "Taux d'insertion globale à 6 mois", value: "À venir" }
-  ]
-
-  const franceCompetencesStats = [
-    { label: "Nombre de certifiés", value: "2516" },
-    { label: "Nombre de certifiés à la suite d'un parcours VAE", value: "133" },
-    { label: "Taux d'insertion global à 6 mois", value: "78%" },
-    { label: "Taux d'insertion dans le métier visé à 6 mois", value: "68%" },
-    { label: "Taux d'insertion dans le métier visé à 2 ans", value: "56%" }
-  ]
-
   // Fonction pour animer les compteurs
   const animateCounter = (start, end, duration, callback) => {
     const startTime = performance.now()
@@ -310,7 +298,7 @@ export default function FormationFPA() {
           setHasAnimatedStats(true)
           
           // Animer les statistiques Atipik RH
-          stats.forEach((stat, index) => {
+          STATS.forEach((stat, index) => {
             setTimeout(() => {
               if (stat.value === "À venir") {
                 setAnimatedStats(prev => ({
@@ -345,7 +333,7 @@ export default function FormationFPA() {
           setHasAnimatedFranceStats(true)
           
           // Animer les statistiques France Compétences
-          franceCompetencesStats.forEach((stat, index) => {
+          FRANCE_COMPETENCES_STATS.forEach((stat, index) => {
             setTimeout(() => {
               const numericValue = parseInt(stat.value.replace(/[^\d]/g, ''))
               if (!isNaN(numericValue)) {
@@ -1471,8 +1459,8 @@ export default function FormationFPA() {
                   <button
                     onClick={() => {
                       const maxIndex = isClient && isMobile 
-                        ? stats.length - 1 
-                        : Math.max(0, stats.length - 3);
+                        ? STATS.length - 1 
+                        : Math.max(0, STATS.length - 3);
                       const newIndex = currentStatIndex > 0 ? currentStatIndex - 1 : maxIndex;
                       setCurrentStatIndex(newIndex);
                     }}
@@ -1486,8 +1474,8 @@ export default function FormationFPA() {
                   <button
                     onClick={() => {
                       const maxIndex = isClient && isMobile 
-                        ? stats.length - 1 
-                        : stats.length - 3;
+                        ? STATS.length - 1 
+                        : STATS.length - 3;
                       const newIndex = currentStatIndex < maxIndex ? currentStatIndex + 1 : 0;
                       setCurrentStatIndex(newIndex);
                     }}
@@ -1503,7 +1491,7 @@ export default function FormationFPA() {
                       className="flex transition-transform duration-300 ease-in-out"
                       style={{ transform: `translateX(-${currentStatIndex * (isClient && isMobile ? 100 : 33.333)}%)` }}
                     >
-                      {stats.map((stat, index) => (
+                      {STATS.map((stat, index) => (
                         <div key={index} className="w-full md:w-1/3 flex-shrink-0 px-3">
                           <div className="bg-white rounded-2xl p-4 text-center shadow-lg border border-gray-100 h-28 flex flex-col justify-center">
                             <div className="text-2xl lg:text-3xl font-bold text-[#013F63] mb-2">
@@ -1522,8 +1510,8 @@ export default function FormationFPA() {
                   <div className="flex justify-center mt-6 space-x-2">
                     {Array.from({ 
                       length: isClient && isMobile 
-                        ? stats.length 
-                        : Math.max(1, stats.length - 2) 
+                        ? STATS.length 
+                        : Math.max(1, STATS.length - 2) 
                     }).map((_, index) => (
                       <button
                         key={index}
@@ -1567,8 +1555,8 @@ export default function FormationFPA() {
                   <button
                     onClick={() => {
                       const maxIndex = isClient && isMobile 
-                        ? franceCompetencesStats.length - 1 
-                        : Math.max(0, franceCompetencesStats.length - 3);
+                        ? FRANCE_COMPETENCES_STATS.length - 1 
+                        : Math.max(0, FRANCE_COMPETENCES_STATS.length - 3);
                       const newIndex = currentFranceStatIndex > 0 ? currentFranceStatIndex - 1 : maxIndex;
                       setCurrentFranceStatIndex(newIndex);
                     }}
@@ -1582,8 +1570,8 @@ export default function FormationFPA() {
                   <button
                     onClick={() => {
                       const maxIndex = isClient && isMobile 
-                        ? franceCompetencesStats.length - 1 
-                        : franceCompetencesStats.length - 3;
+                        ? FRANCE_COMPETENCES_STATS.length - 1 
+                        : FRANCE_COMPETENCES_STATS.length - 3;
                       const newIndex = currentFranceStatIndex < maxIndex ? currentFranceStatIndex + 1 : 0;
                       setCurrentFranceStatIndex(newIndex);
                     }}
@@ -1599,7 +1587,7 @@ export default function FormationFPA() {
                       className="flex transition-transform duration-300 ease-in-out md:hidden"
                       style={{ transform: `translateX(-${currentFranceStatIndex * 100}%)` }}
                     >
-                      {franceCompetencesStats.map((stat, index) => (
+                      {FRANCE_COMPETENCES_STATS.map((stat, index) => (
                         <div key={index} className="w-full flex-shrink-0 px-2">
                           <div className="bg-white rounded-2xl p-6 text-center shadow-lg border border-gray-100 h-32 flex flex-col justify-center">
                             <div className="text-3xl font-bold text-[#013F63] mb-2">
@@ -1618,7 +1606,7 @@ export default function FormationFPA() {
                       className="hidden md:flex transition-transform duration-300 ease-in-out"
                       style={{ transform: `translateX(-${currentFranceStatIndex * 33.333}%)` }}
                     >
-                      {franceCompetencesStats.map((stat, index) => (
+                      {FRANCE_COMPETENCES_STATS.map((stat, index) => (
                         <div key={index} className="w-1/3 flex-shrink-0 px-3">
                           <div className="bg-white rounded-2xl p-4 text-center shadow-lg border border-gray-100 h-28 flex flex-col justify-center">
                             <div className="text-2xl lg:text-3xl font-bold text-[#013F63] mb-2">
@@ -1637,8 +1625,8 @@ export default function FormationFPA() {
                   <div className="flex justify-center mt-6 space-x-2">
                     {Array.from({ 
                       length: isClient && isMobile 
-                        ? franceCompetencesStats.length 
-                        : Math.max(1, franceCompetencesStats.length - 2) 
+                        ? FRANCE_COMPETENCES_STATS.length 
+                        : Math.max(1, FRANCE_COMPETENCES_STATS.length - 2) 
                     }).map((_, index) => (
                       <button
                         key={index}

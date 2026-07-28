@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState, useEffect, useRef } from 'react'
+import { useIsClient, useIsMobile } from '../hooks/useClientViewport'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { TARIF_SELON_PROFIL_COMPLET } from '../lib/tarifs/tarifsCopy'
@@ -24,6 +25,44 @@ import {
   ChevronLeft,
   ChevronRight
 } from 'lucide-react'
+
+const statistiques = [
+  {
+    id: 1,
+    valeur: "2",
+    description: "Nombre de VAE réalisées"
+  },
+  {
+    id: 2,
+    valeur: "100%",
+    description: "Taux de présentation à l'entretien"
+  },
+  {
+    id: 3,
+    valeur: "2",
+    description: "Validation partielle ou totale"
+  },
+  {
+    id: 4,
+    valeur: "100%",
+    description: "Taux de satisfaction"
+  },
+  {
+    id: 5,
+    valeur: "À venir",
+    description: "Taux d'insertion globale à 6 mois"
+  },
+  {
+    id: 6,
+    valeur: "À venir",
+    description: "Taux d'insertion dans le métier visé à 6 mois"
+  },
+  {
+    id: 7,
+    valeur: "À venir",
+    description: "Taux d'insertion dans le métier visé à 2 ans"
+  }
+]
 
 export default function VAE() {
   const [openEtapes, setOpenEtapes] = useState({})
@@ -94,8 +133,8 @@ export default function VAE() {
   const [animatedStats, setAnimatedStats] = useState({})
   const [hasAnimatedStats, setHasAnimatedStats] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
-  const [isMobile, setIsMobile] = useState(false)
-  const [isClient, setIsClient] = useState(false)
+  const isClient = useIsClient()
+  const isMobile = useIsMobile()
   const statsRef = useRef(null)
   const accordeonsRef = useRef(null)
   const carteBleueRef = useRef(null)
@@ -106,19 +145,6 @@ export default function VAE() {
       [etapeId]: !prev[etapeId]
     }))
   }
-
-  // Détecter la taille d'écran après l'hydratation pour éviter les erreurs SSR
-  useEffect(() => {
-    setIsClient(true)
-    const checkIsMobile = () => {
-      setIsMobile(window.innerWidth < 768)
-    }
-    
-    checkIsMobile()
-    window.addEventListener('resize', checkIsMobile)
-    
-    return () => window.removeEventListener('resize', checkIsMobile)
-  }, [])
 
   // Synchroniser la hauteur de la carte bleue avec les accordéons fermés
   useEffect(() => {
@@ -158,44 +184,6 @@ export default function VAE() {
       window.removeEventListener('resize', handleResize)
     }
   }, [isClient])
-
-  const statistiques = [
-    {
-      id: 1,
-      valeur: "2",
-      description: "Nombre de VAE réalisées"
-    },
-    {
-      id: 2,
-      valeur: "100%",
-      description: "Taux de présentation à l'entretien"
-    },
-    {
-      id: 3,
-      valeur: "2",
-      description: "Validation partielle ou totale"
-    },
-    {
-      id: 4,
-      valeur: "100%",
-      description: "Taux de satisfaction"
-    },
-    {
-      id: 5,
-      valeur: "À venir",
-      description: "Taux d'insertion globale à 6 mois"
-    },
-    {
-      id: 6,
-      valeur: "À venir",
-      description: "Taux d'insertion dans le métier visé à 6 mois"
-    },
-    {
-      id: 7,
-      valeur: "À venir",
-      description: "Taux d'insertion dans le métier visé à 2 ans"
-    }
-  ]
 
   // Fonction pour animer les compteurs
   const animateCounter = (start, end, duration, callback) => {

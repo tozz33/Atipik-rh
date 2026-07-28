@@ -63,13 +63,14 @@ export default function RecruterInsertionEntreprises() {
       }
     )
 
-    if (programmeRef.current) {
-      observer.observe(programmeRef.current)
+    const programmeNode = programmeRef.current
+    if (programmeNode) {
+      observer.observe(programmeNode)
     }
 
     return () => {
-      if (programmeRef.current) {
-        observer.unobserve(programmeRef.current)
+      if (programmeNode) {
+        observer.unobserve(programmeNode)
       }
     }
   }, [cardsVisible])
