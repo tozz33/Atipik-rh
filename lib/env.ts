@@ -185,6 +185,18 @@ export function assertEnvForBuild(): void {
     )
   }
 
+  if (isVercelProduction && !isRecaptchaActive()) {
+    console.warn(
+      '[Env] reCAPTCHA v3 inactif en production — les formulaires contact et quiz sont moins protégés'
+    )
+  }
+
+  if (isVercelProduction && !isAkismetActive()) {
+    console.warn(
+      '[Env] Akismet inactif en production — couche anti-spam réduite (honeypot + rate limit uniquement)'
+    )
+  }
+
   if (!isVercelProduction && !env.brevoApiKey) {
     console.warn(
       '[Env] BREVO_API_KEY absente — build autorisé ; les envois email échoueront sans cette clé'

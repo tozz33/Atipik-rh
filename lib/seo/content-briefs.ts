@@ -23,7 +23,7 @@ const BRIEFS: ContentBrief[] = [
     h1: 'Formation CIP à Lormont — Conseiller en Insertion Professionnelle',
     metaTitle: 'Formation CIP Bordeaux & Lormont | Titre niveau 5 | Atipik RH',
     metaDescription:
-      'Devenez conseiller en insertion professionnelle à Lormont (Bordeaux) : titre CIP RNCP 37274, 8 mois, 948 h, stages 11 sem. CPF, AIF France Travail, OPCO. Qualiopi.',
+      'Devenez conseiller en insertion à Lormont (Bordeaux) : titre CIP RNCP 37274, 8 mois, 948 h. CPF, AIF France Travail, OPCO. Centre Qualiopi, Atipik RH.',
     recommendedSlug: '/formations/cip',
     primaryKeywords: ['formation CIP Bordeaux', 'formation CIP Lormont', 'conseiller insertion professionnelle'],
     longTailKeywords: [],

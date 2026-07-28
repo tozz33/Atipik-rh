@@ -6,6 +6,7 @@ import { useRouter } from 'next/router'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import HoneypotField from '../components/HoneypotField'
+import FormAlert from '../components/FormAlert'
 import RecaptchaV3Script from '../components/RecaptchaV3Script'
 import { MapPin, Phone, Mail, Clock, Send, MessageCircle, Calendar, Facebook, Instagram, Linkedin } from 'lucide-react'
 import { getRecaptchaToken } from '../lib/recaptcha'
@@ -81,6 +82,7 @@ export default function Contact() {
 
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [submitError, setSubmitError] = useState('')
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -92,6 +94,7 @@ export default function Contact() {
     }
     
     setIsSubmitting(true)
+    setSubmitError('')
 
     try {
       // reCAPTCHA v3 (optionnel, dégradé silencieux si non configuré)
@@ -119,7 +122,9 @@ export default function Contact() {
       }
     } catch (error) {
       console.error('Erreur lors de l\'envoi:', error)
-      alert(`Erreur lors de l'envoi du message: ${error.message}. Veuillez réessayer ou nous contacter directement.`)
+      setSubmitError(
+        `Erreur lors de l'envoi du message : ${error.message}. Veuillez réessayer ou nous contacter directement.`
+      )
     } finally {
       setIsSubmitting(false)
     }
@@ -247,6 +252,7 @@ export default function Contact() {
                   
                   <form onSubmit={handleSubmit}>
                   <HoneypotField value={honeypot} onChange={(e) => setHoneypot(e.target.value)} />
+                  <FormAlert message={submitError} onDismiss={() => setSubmitError('')} />
                   <div className="space-y-5">
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>

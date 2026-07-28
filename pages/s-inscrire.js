@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import HoneypotField from '../components/HoneypotField'
+import FormAlert from '../components/FormAlert'
 import FinancementDisclaimer from '../components/FinancementDisclaimer'
 import RecaptchaV2Invisible from '../components/RecaptchaV2Invisible'
 
@@ -24,6 +25,7 @@ export default function SInscrire() {
 
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [submitError, setSubmitError] = useState('')
   const [showAllDates, setShowAllDates] = useState(false)
   const [honeypot, setHoneypot] = useState('')
   const [formTimestamp, setFormTimestamp] = useState(null)
@@ -155,6 +157,7 @@ export default function SInscrire() {
     }
     
     setIsSubmitting(true)
+    setSubmitError('')
 
     try {
       const recaptchaToken = recaptchaRef.current
@@ -189,7 +192,9 @@ export default function SInscrire() {
     } catch (error) {
       recaptchaRef.current?.reset()
       console.error('Erreur lors de l\'envoi:', error)
-      alert(`Erreur lors de l'inscription: ${error.message}. Veuillez réessayer ou nous contacter directement.`)
+      setSubmitError(
+        `Erreur lors de l'inscription : ${error.message}. Veuillez réessayer ou nous contacter directement.`
+      )
     } finally {
       setIsSubmitting(false)
     }
@@ -383,6 +388,7 @@ export default function SInscrire() {
                     
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <HoneypotField value={honeypot} onChange={(e) => setHoneypot(e.target.value)} />
+                      <FormAlert message={submitError} onDismiss={() => setSubmitError('')} />
                       <div>
                         <label htmlFor="formation" className="block text-sm font-medium text-[#013F63] mb-2">
                           Formation qui vous intéresse <span className="text-red-500">*</span>

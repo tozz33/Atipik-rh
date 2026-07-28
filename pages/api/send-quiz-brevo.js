@@ -7,7 +7,7 @@ import {
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ message: 'Method not allowed' })
+    return res.status(405).json({ message: 'Méthode non autorisée' })
   }
 
   // Vérification anti-spam
@@ -36,11 +36,11 @@ export default async function handler(req, res) {
 
   // Validation des données requises
   if (!userInfo || !userInfo.name || !userInfo.email) {
-    return res.status(400).json({ error: 'Informations utilisateur manquantes' })
+    return res.status(400).json({ message: 'Informations utilisateur manquantes' })
   }
 
   if (!answers || !questions) {
-    return res.status(400).json({ error: 'Données du quiz manquantes' })
+    return res.status(400).json({ message: 'Données du quiz manquantes' })
   }
 
   try {

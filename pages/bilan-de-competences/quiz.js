@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import HoneypotField from '../../components/HoneypotField'
+import FormAlert from '../../components/FormAlert'
 import RecaptchaV3Script from '../../components/RecaptchaV3Script'
 import { CheckCircle, ArrowRight, ArrowLeft, Mail, Phone } from 'lucide-react'
 import { getRecaptchaToken } from '../../lib/recaptcha'
@@ -15,6 +16,7 @@ export default function QuizBilanCompetences() {
   const [showResults, setShowResults] = useState(false)
   const [honeypot, setHoneypot] = useState('')
   const [formTimestamp] = useState(() => Date.now())
+  const [submitError, setSubmitError] = useState('')
 
   const questions = [
     {
@@ -121,6 +123,8 @@ export default function QuizBilanCompetences() {
       console.log('Honeypot déclenché')
       return
     }
+
+    setSubmitError('')
     
     try {
       // reCAPTCHA v3 (optionnel, dégradé silencieux si non configuré)
@@ -148,12 +152,14 @@ export default function QuizBilanCompetences() {
       } else {
         const errorData = await response.json()
         console.error('Erreur lors de l\'envoi:', errorData)
-        // Afficher l'erreur pour débogage
-        alert(`Erreur d'envoi: ${errorData.error} - ${errorData.details || ''}`)
+        const detail = errorData.message || errorData.error || 'Erreur inconnue'
+        setSubmitError(
+          `Erreur d'envoi : ${detail}${errorData.details ? ` — ${errorData.details}` : ''}`
+        )
       }
     } catch (error) {
       console.error('Erreur réseau:', error)
-      alert(`Erreur réseau: ${error.message}`)
+      setSubmitError(`Erreur réseau : ${error.message}`)
     }
     
     // Afficher les résultats même en cas d'erreur email
@@ -255,6 +261,7 @@ export default function QuizBilanCompetences() {
 
                       <form onSubmit={handleUserInfoSubmit} className="max-w-md mx-auto space-y-6">
                         <HoneypotField value={honeypot} onChange={(e) => setHoneypot(e.target.value)} />
+                        <FormAlert message={submitError} onDismiss={() => setSubmitError('')} />
                         <div>
                           <label htmlFor="name" className="block text-sm font-medium text-[#013F63] mb-2">
                             Votre prénom *

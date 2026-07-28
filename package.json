@@ -12,7 +12,9 @@
     "lint": "eslint .",
     "dev-stable": "next dev",
     "dev-webpack": "next dev --webpack",
-    "schema-test": "echo 'Schema validation placeholder'",
+    "schema-test": "tsx scripts/schema-test.ts",
+    "test": "node --test tests/**/*.test.mjs",
+    "check:all": "npm run lint && npx tsc --noEmit && npm run test && npm run schema-test && npm run check:logos",
     "check:logos": "node scripts/verify-logos.mjs",
     "check:seo": "node scripts/validate-seo-indexing.mjs",
     "check:seo:prod": "node scripts/validate-rich-results.mjs && node scripts/validate-seo-indexing.mjs"
@@ -37,6 +39,7 @@
     "eslint-config-next": "^16.1.1",
     "postcss": "^8.4.32",
     "tailwindcss": "^3.3.6",
+    "tsx": "^4.21.0",
     "typescript": "^5.3.3"
   },
   "engines": {
