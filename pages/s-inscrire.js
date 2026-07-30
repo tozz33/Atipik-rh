@@ -87,7 +87,7 @@ export default function SInscrire() {
     { date: '2026-06-20', jour: 'Samedi 20 Juin 2026', heure: '10h30 - 12h30', modalite: 'présentiel' },
     { date: '2026-07-06', jour: 'Lundi 6 Juillet 2026', heure: '12h30 - 14h30', modalite: 'distanciel' },
     { date: '2026-07-18', jour: 'Samedi 18 Juillet 2026', heure: '10h30 - 12h30', modalite: 'présentiel' },
-    { date: '2026-08-22', jour: 'Samedi 22 Août 2026', heure: '12h30 - 14h30', modalite: 'distanciel' },
+    { date: '2026-08-22', jour: 'Samedi 22 Août 2026', heure: '12h30 - 14h30', modalite: 'présentiel' },
     { date: '2026-08-24', jour: 'Lundi 24 Août 2026', heure: '12h30 - 14h30', modalite: 'distanciel' },
     { date: '2026-09-12', jour: 'Samedi 12 Septembre 2026', heure: '10h30 - 12h30', modalite: 'présentiel' },
     { date: '2026-09-24', jour: 'Jeudi 24 Septembre 2026', heure: '12h30 - 14h30', modalite: 'distanciel' },
