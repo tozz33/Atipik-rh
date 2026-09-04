@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1012" height="329" viewBox="0 0 1012 329" role="img" aria-labelledby="title desc">
+  <title id="title">Atipik RH</title>
+  <desc id="desc">Logo Atipik RH avec couleurs de marque</desc>
+
+  <g fill="none" stroke="#FE6400" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M30 294 L132 43 L258 294" stroke-width="16" />
+    <path d="M64 268 L102 166" stroke-width="16" />
+    <path d="M126 129 L176 263" stroke-width="16" />
+    <path d="M126 194 L214 194" stroke-width="16" />
+    <path d="M126 230 L222 230" stroke-width="16" />
+  </g>
+
+  <circle cx="57" cy="288" r="9" fill="#013F63" />
+  <circle cx="225" cy="286" r="9" fill="#013F63" />
+  <circle cx="174" cy="58" r="8" fill="#013F63" />
+  <circle cx="244" cy="190" r="9" fill="#013F63" />
+
+  <g fill="#013F63" font-family="Montserrat, Arial, sans-serif" font-weight="700">
+    <text x="265" y="296" font-size="196" letter-spacing="2">ATIPIK RH</text>
+  </g>
+</svg>

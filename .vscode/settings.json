@@ -2,5 +2,11 @@
     "git.ignoreLimitWarning": true,
     "terminal.integrated.commandsToSkipShell": [
         ""
+    ],
+    "editor.fontSize": 12,
+    "locale": "fr",
+    "cursor.cpp.disabledLanguages": [
+        "markdown",
+        "plaintext"
     ]
 }

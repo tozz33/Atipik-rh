@@ -102,9 +102,10 @@ export default function NotreHistoire() {
   return (
     <>
       <Head>
-        <title>Notre Histoire - Test | Atipik RH - L'aventure d'un organisme pas comme les autres</title>
+        <title>Notre Histoire | Atipik RH - L&apos;aventure d&apos;un organisme pas comme les autres</title>
         <meta name="description" content="Découvrez l'histoire d'Atipik RH : de 2018 à aujourd'hui, le parcours d'une équipe passionnée qui révolutionne l'accompagnement professionnel en Nouvelle-Aquitaine." />
         <meta name="keywords" content="histoire Atipik RH, création organisme formation, Bordeaux, équipe, évolution, chronologie" />
+        <link rel="canonical" href="https://www.atipikrh.com/notre-histoire" />
       </Head>
 
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">
@@ -152,7 +153,7 @@ export default function NotreHistoire() {
                     <p className="text-lg text-[#013F63] leading-relaxed mb-8">
                       C'est le grand jour ! Vanessa crée Atipik RH dans un élan de passion et de détermination. 
                       Au commencement, elle se concentre uniquement sur les bilans de compétences, mais déjà avec une vision claire : 
-                      créer un centre de formation prenant des valeurs de proximité et d'inclusion. 
+                      créer un centre de formation prônant des valeurs de proximité et d'inclusion. 
                       L'accompagnement humain et personnalisé est au cœur de cette belle aventure qui commence.
                     </p>
 

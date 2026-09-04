@@ -1,12 +1,37 @@
-import Head from 'next/head'
 import Link from 'next/link'
+import ServicePageSeoHead from '../../components/ServicePageSeoHead'
+import FormationGeoSummary from '../../components/FormationGeoSummary'
+import FormationFaqSection from '../../components/FormationFaqSection'
+import FormationStickyCta from '../../components/FormationStickyCta'
+import FormationTarifSection from '../../components/FormationTarifSection'
+import { getCertifianteContactHref } from '../../lib/seo/certifiantesConfig'
+
+const CONTACT_HREF = getCertifianteContactHref('formation-ccp3')
 import { useState, useEffect, useRef } from 'react'
+import { useIsClient, useIsMobile } from '../../hooks/useClientViewport'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import ReunionInfoModal from '../../components/ReunionInfoModal'
 
 import { Clock, Users, MapPin, Calendar, GraduationCap, CheckCircle, ArrowRight, CreditCard, BookOpen, Target, Award, Phone, Mail, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, UserCheck } from 'lucide-react'
 import Image from 'next/image'
+
+const STATS = [
+  { label: "Nombre de stagiaires formés", value: "19" },
+  { label: "Taux de satisfaction", value: "9,7/10" },
+  { label: "Taux de présentation au titre préparé", value: "100%" },
+  { label: "Taux d'obtention du titre", value: "95%" },
+  { label: "Taux d'insertion dans le métier visé à 6 mois", value: "67%" },
+  { label: "Taux d'insertion globale à 6 mois", value: "78%" }
+]
+
+const FRANCE_COMPETENCES_STATS = [
+  { label: "Nombre de certifiés", value: "2303" },
+  { label: "Nombre de certifiés à la suite d'un parcours VAE", value: "39" },
+  { label: "Taux d'insertion global à 6 mois", value: "88%" },
+  { label: "Taux d'insertion dans le métier visé à 6 mois", value: "72%" },
+  { label: "Taux d'insertion dans le métier visé à 2 ans", value: "85%" }
+]
 
 export default function FormationCCP3() {
   const [openModules, setOpenModules] = useState({})
@@ -20,8 +45,8 @@ export default function FormationCCP3() {
   const [currentFranceStatIndex, setCurrentFranceStatIndex] = useState(0)
   const [currentDocIndex, setCurrentDocIndex] = useState(0)
   const [currentFinancementIndex, setCurrentFinancementIndex] = useState(0)
-  const [isMobile, setIsMobile] = useState(false)
-  const [isClient, setIsClient] = useState(false)
+  const isClient = useIsClient()
+  const isMobile = useIsMobile()
 
   // Données des financements
   const financements = [
@@ -121,19 +146,6 @@ export default function FormationCCP3() {
   }
 
 
-  // Détecter la taille d'écran après l'hydratation pour éviter les erreurs SSR
-  useEffect(() => {
-    setIsClient(true)
-    const checkIsMobile = () => {
-      setIsMobile(window.innerWidth < 768)
-    }
-    
-    checkIsMobile()
-    window.addEventListener('resize', checkIsMobile)
-    
-    return () => window.removeEventListener('resize', checkIsMobile)
-  }, [])
-
   // Calculer la hauteur de la ligne de la timeline jusqu'au centre du cercle 3
   useEffect(() => {
     const updateTimelineHeight = () => {
@@ -172,7 +184,6 @@ export default function FormationCCP3() {
     }
   }, [isClient, openModules])
 
-
   // Fonction pour animer les compteurs
   const animateCounter = (start, end, duration, callback) => {
     const startTime = performance.now()
@@ -192,6 +203,9 @@ export default function FormationCCP3() {
 
   // Observer pour les statistiques Atipik RH
   useEffect(() => {
+    const node = statsRef.current
+    if (!node) return
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !hasAnimatedStats) {
@@ -199,7 +213,7 @@ export default function FormationCCP3() {
           setHasAnimatedStats(true)
           
           // Animer les statistiques Atipik RH
-          stats.forEach((stat, index) => {
+          STATS.forEach((stat, index) => {
             setTimeout(() => {
               if (stat.value === "9,7/10") {
                 // Cas spécial pour le taux de satisfaction
@@ -232,26 +246,27 @@ export default function FormationCCP3() {
       { threshold: 0.3 }
     )
 
-    if (statsRef.current) {
-      observer.observe(statsRef.current)
-    }
+    observer.observe(node)
 
     return () => {
-      if (statsRef.current) {
-        observer.unobserve(statsRef.current)
+      if (node) {
+        observer.unobserve(node)
       }
     }
   }, [hasAnimatedStats])
 
   // Observer pour les statistiques France Compétences
   useEffect(() => {
+    const node = franceStatsRef.current
+    if (!node) return
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !hasAnimatedFranceStats) {
           setHasAnimatedFranceStats(true)
           
           // Animer les statistiques France Compétences
-          franceCompetencesStats.forEach((stat, index) => {
+          FRANCE_COMPETENCES_STATS.forEach((stat, index) => {
             setTimeout(() => {
               const numericValue = parseInt(stat.value.replace(/[^\d]/g, ''))
               if (!isNaN(numericValue)) {
@@ -274,13 +289,11 @@ export default function FormationCCP3() {
       { threshold: 0.3 }
     )
 
-    if (franceStatsRef.current) {
-      observer.observe(franceStatsRef.current)
-    }
+    observer.observe(node)
 
     return () => {
-      if (franceStatsRef.current) {
-        observer.unobserve(franceStatsRef.current)
+      if (node) {
+        observer.unobserve(node)
       }
     }
   }, [hasAnimatedFranceStats])
@@ -324,23 +337,6 @@ export default function FormationCCP3() {
     }
   ]
 
-  const stats = [
-    { label: "Nombre de stagiaires formés", value: "19" },
-    { label: "Taux de satisfaction", value: "9,7/10" },
-    { label: "Taux de présentation au titre préparé", value: "100%" },
-    { label: "Taux d'obtention du titre", value: "95%" },
-    { label: "Taux d'insertion dans le métier visé à 6 mois", value: "67%" },
-    { label: "Taux d'insertion globale à 6 mois", value: "78%" }
-  ]
-
-  const franceCompetencesStats = [
-    { label: "Nombre de certifiés", value: "2303" },
-    { label: "Nombre de certifiés à la suite d'un parcours VAE", value: "39" },
-    { label: "Taux d'insertion global à 6 mois", value: "88%" },
-    { label: "Taux d'insertion dans le métier visé à 6 mois", value: "72%" },
-    { label: "Taux d'insertion dans le métier visé à 2 ans", value: "85%" }
-  ]
-
   const documentationItems = [
     {
       title: "Livres",
@@ -378,18 +374,13 @@ export default function FormationCCP3() {
 
   return (
     <>
-      <Head>
-        <title>Formation CCP3 - Conseiller en Insertion Professionnelle (C.C.P 3) | Atipik RH</title>
-        <meta name="description" content="Formation certifiante CCP3 - Conseiller en Insertion Professionnelle niveau 5. Titre professionnel RNCP, financement CPF possible. Durée 1186h dont 385h en entreprise." />
-        <meta name="keywords" content="formation CCP3, conseiller insertion professionnelle, formation certifiante, CPF, Bordeaux, Lormont" />
-        <link rel="canonical" href="https://atipikrh.fr/formations/ccp3" />
-      </Head>
+      <ServicePageSeoHead briefId="formation-ccp3" />
 
-      <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">
+      <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50 pb-20 md:pb-0">
         {/* Background animé global */}
-        <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
-        <div className="absolute top-40 right-1/4 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-1000"></div>
-        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-orange-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-2000"></div>
+        <div className="absolute top-20 left-1/4 w-96 h-96 bg-muted-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+        <div className="absolute top-40 right-1/4 w-96 h-96 bg-muted-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-1000"></div>
+        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-accent-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-2000"></div>
         <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-purple-100 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-pulse animation-delay-3000"></div>
         
         <div className="relative z-10">
@@ -405,12 +396,27 @@ export default function FormationCCP3() {
               {/* Titre principal */}
               <div className="text-center max-w-4xl mx-auto">
                 <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] mb-3 leading-tight tracking-tight">
-                  Conseiller en <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Insertion Professionnelle (C.C.P 3)</span>
+                  Conseiller en <span className="text-accent-500 font-brittany text-4xl lg:text-5xl">Insertion Professionnelle (C.C.P 3)</span>
                 </h1>
                 <p className="text-lg text-[#013F63] leading-relaxed font-light">
                   Devenez expert de l'<strong>accompagnement vers l'emploi</strong>
                 </p>
               </div>
+              <FormationGeoSummary briefId="formation-ccp3" />
+              <p className="mt-4 text-center text-sm text-[#013F63]/80 max-w-2xl mx-auto">
+                Vous visez le titre CIP complet ?{' '}
+                <Link href="/formations/cip" className="font-semibold text-orange-500 hover:underline">
+                  Voir le parcours CIP (8 mois, 948 h)
+                </Link>
+                {' · '}
+                <Link href="/formations/ccp1" className="font-semibold text-orange-500 hover:underline">
+                  CCP1
+                </Link>
+                {' · '}
+                <Link href="/formations/ccp2" className="font-semibold text-orange-500 hover:underline">
+                  CCP2
+                </Link>
+              </p>
             </div>
           </section>
 
@@ -434,7 +440,7 @@ export default function FormationCCP3() {
                     <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-orange-400 to-transparent"></div>
                   </div>
                   
-                  <div className="text-orange-500 font-bold text-xl leading-relaxed text-center">
+                  <div className="text-accent-500 font-bold text-xl leading-relaxed text-center">
                     <p>
                       Devenez un partenaire incontournable des employeurs avec une certification reconnue !
                     </p>
@@ -470,7 +476,7 @@ export default function FormationCCP3() {
                       <UserCheck className="w-4 h-4 mt-0.5 flex-shrink-0" />
                       <div>
                         <p className="font-semibold mb-0.5 text-sm">Prérequis :</p>
-                        <p className="text-blue-100 text-xs">Niveau terminal et/ou expérience professionnelle</p>
+                        <p className="text-neutral-100 text-xs">Niveau terminal et/ou expérience professionnelle</p>
                     </div>
                 </div>
 
@@ -478,7 +484,7 @@ export default function FormationCCP3() {
                       <Target className="w-4 h-4 mt-0.5 flex-shrink-0" />
                       <div>
                         <p className="font-semibold mb-0.5 text-sm">Niveau de sortie :</p>
-                        <p className="text-blue-100 text-xs">Niveau 5 - titre <a href="https://www.francecompetences.fr/recherche/rncp/37274/" target="_blank" rel="noopener noreferrer" className="text-blue-200 hover:text-white underline transition-colors">RNCP37274</a></p>
+                        <p className="text-neutral-100 text-xs">Niveau 5 - titre <a href="https://www.francecompetences.fr/recherche/rncp/37274/" target="_blank" rel="noopener noreferrer" className="text-blue-200 hover:text-white underline transition-colors">RNCP37274</a></p>
               </div>
             </div>
 
@@ -486,7 +492,7 @@ export default function FormationCCP3() {
                       <Clock className="w-4 h-4 mt-0.5 flex-shrink-0" />
                       <div>
                         <p className="font-semibold mb-0.5 text-sm">Horaire :</p>
-                        <p className="text-blue-100 text-xs">Du lundi au vendredi, de 9h00 à 12h30 et de 13h30 à 17h00</p>
+                        <p className="text-neutral-100 text-xs">Du lundi au vendredi, de 9h00 à 12h30 et de 13h30 à 17h00</p>
                       </div>
                     </div>
 
@@ -494,7 +500,7 @@ export default function FormationCCP3() {
                       <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
                       <div>
                         <p className="font-semibold mb-0.5 text-sm">Lieu :</p>
-                        <p className="text-blue-100 text-xs">8 rue du Courant, 33310 Lormont</p>
+                        <p className="text-neutral-100 text-xs">8 rue du Courant, 33310 Lormont</p>
                       </div>
                     </div>
 
@@ -502,7 +508,7 @@ export default function FormationCCP3() {
                       <Users className="w-4 h-4 mt-0.5 flex-shrink-0" />
                       <div>
                         <p className="font-semibold mb-0.5 text-sm">Taille du groupe :</p>
-                        <p className="text-blue-100 text-xs">Entre 10 et 15 personnes</p>
+                        <p className="text-neutral-100 text-xs">Entre 10 et 15 personnes</p>
                       </div>
                     </div>
 
@@ -510,7 +516,7 @@ export default function FormationCCP3() {
                       <BookOpen className="w-4 h-4 mt-0.5 flex-shrink-0" />
                       <div>
                         <p className="font-semibold mb-0.5 text-sm">Modalité :</p>
-                        <p className="text-blue-100 text-xs">En présentiel</p>
+                        <p className="text-neutral-100 text-xs">En présentiel</p>
                       </div>
                     </div>
                   </div>
@@ -535,7 +541,7 @@ export default function FormationCCP3() {
                       )}
                     </button>
                     {openModules['public'] && (
-                      <div className="p-3 border-t border-gray-100">
+                      <div className="p-3 border-t border-muted-blue-200">
                         <p className="text-[#013F63] text-sm leading-relaxed">
                           Cette formation s'adresse aux personnes qui disposent d'un goût prononcé pour l'accompagnement, l'échange et un sens de l'écoute développé, avec une expérience professionnelle dans l'accompagnement social.
                         </p>
@@ -572,8 +578,8 @@ export default function FormationCCP3() {
                             style={{height: timelineHeight, maxHeight: timelineHeight}}
                           >
                             {/* Ligne orange verticale avec effet de défilement - s'arrête au centre du cercle 3 */}
-                            <div className="w-full h-full bg-gray-200"></div>
-                            <div className="w-full h-full bg-orange-500 timeline-scroll-line"></div>
+                            <div className="w-full h-full bg-muted-blue-200"></div>
+                            <div className="w-full h-full bg-accent-500 timeline-scroll-line"></div>
                           </div>
                           
                           {/* Étapes */}
@@ -581,11 +587,11 @@ export default function FormationCCP3() {
                             
                             {/* Étape 1 */}
                             <div className="flex items-start gap-5">
-                              <div className="relative z-10 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
+                              <div className="relative z-10 w-12 h-12 bg-accent-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
                                 <span className="text-white text-base font-bold">1</span>
                               </div>
                               <div className="flex-grow pt-0.5">
-                                <h4 className="text-orange-500 font-bold text-base mb-4 uppercase tracking-tight">
+                                <h4 className="text-accent-500 font-bold text-base mb-4 uppercase tracking-tight">
                                   Dossier de candidature
                                 </h4>
                                 <ul className="text-[#013F63] text-sm space-y-1.5 mb-4 leading-relaxed">
@@ -599,11 +605,11 @@ export default function FormationCCP3() {
                                   href="/documents/dossier-candidature/dossier-candidature-CIP.pdf"
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="inline-flex items-center px-3 py-1.5 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-md transition-colors text-xs mb-4"
+                                  className="inline-flex items-center px-3 py-1.5 bg-accent-500 hover:bg-accent-600 text-white font-medium rounded-md transition-colors text-xs mb-4"
                                 >
                                   Télécharger le dossier de candidature
                                 </a>
-                                <p className="text-orange-500 text-sm leading-relaxed">
+                                <p className="text-accent-500 text-sm leading-relaxed">
                                   La sélection des candidats s'effectue après l'étude du dossier d'inscription et l'émission d'un premier avis favorable.
                                 </p>
                               </div>
@@ -611,7 +617,7 @@ export default function FormationCCP3() {
 
                             {/* Étape 2 */}
                             <div className="flex items-center gap-5">
-                              <div className="relative z-10 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
+                              <div className="relative z-10 w-12 h-12 bg-accent-500 rounded-full flex items-center justify-center flex-shrink-0 -ml-6 shadow-sm">
                                 <span className="text-white text-base font-bold">2</span>
                               </div>
                               <div className="flex-grow">
@@ -641,11 +647,11 @@ export default function FormationCCP3() {
                         </p>
                         
                         <div className="mt-8 text-center">
-                          <p className="text-orange-500 font-bold text-sm mb-3">
+                          <p className="text-accent-500 font-bold text-sm mb-3">
                             Il est fortement recommandé de participer à une réunion d'information collective.
                           </p>
                           <Link href="/s-inscrire">
-                            <button className="inline-flex items-center px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-md transition-colors text-xs">
+                            <button className="inline-flex items-center px-4 py-2 bg-accent-500 hover:bg-accent-600 text-white font-medium rounded-md transition-colors text-xs">
                               S'inscrire à une réunion d'information
                             </button>
                           </Link>
@@ -670,7 +676,7 @@ export default function FormationCCP3() {
                       )}
                     </button>
                     {openModules['methodes'] && (
-                      <div className="p-3 border-t border-gray-100">
+                      <div className="p-3 border-t border-muted-blue-200">
                         <div className="space-y-3 text-[#013F63] text-sm">
                           <p className="font-semibold text-[#013F63]">UNE FORMATION ACTION BASÉE SUR UNE PÉDAGOGIE INNOVANTE</p>
                           <p>• Formation action basée sur des temps d'acquisition de connaissances, de cas pratique, et d'échanges d'expériences</p>
@@ -697,7 +703,7 @@ export default function FormationCCP3() {
                       )}
                     </button>
                     {openModules['deroulement'] && (
-                      <div className="p-3 border-t border-gray-100">
+                      <div className="p-3 border-t border-muted-blue-200">
                         <div className="space-y-3 text-[#013F63] text-sm">
                           <p>• <strong>Durée : 371 heures</strong></p>
                           <div className="ml-4 space-y-1">
@@ -726,7 +732,7 @@ export default function FormationCCP3() {
                       )}
                     </button>
                     {openModules['evaluation'] && (
-                      <div className="p-3 border-t border-gray-100">
+                      <div className="p-3 border-t border-muted-blue-200">
                         <div className="space-y-2 text-[#013F63] text-sm">
                           <p>◦ Feuilles de présence.</p>
                           <p>◦ Une évaluation en cours de formation</p>
@@ -744,14 +750,14 @@ export default function FormationCCP3() {
           </section>
 
           {/* Méthodologie d'intervention */}
-          <section className="py-16">
+          <section className="pt-6 pb-16">
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto">
                 
                 {/* Titre de section */}
                 <div className="text-center mb-4">
                   <h2 className="text-lg lg:text-xl font-bold text-[#013F63] mb-3">
-                    <span className="text-orange-500 font-brittany text-xl lg:text-2xl">Une méthodologie</span> D'INTERVENTION AU PLUS PRÈS DU RÉEL
+                    <span className="text-accent-500 font-brittany text-xl lg:text-2xl">Une méthodologie</span> D'INTERVENTION AU PLUS PRÈS DU RÉEL
                   </h2>
                 </div>
 
@@ -857,7 +863,7 @@ export default function FormationCCP3() {
           </section>
 
           {/* Le Module CCP3 */}
-          <section className="py-16">
+          <section className="py-8">
             <div className="container mx-auto px-4">
               <div className="max-w-7xl mx-auto">
                 
@@ -1297,45 +1303,22 @@ export default function FormationCCP3() {
             </div>
           </section>
 
-          {/* Section Tarif et Financement */}
-          <section className="py-16">
+          <FormationTarifSection
+            publicPrice="3075"
+            variant="certifiante"
+            contactHref={CONTACT_HREF}
+          />
+
+          {/* Section Financement */}
+          <section className="pt-2 pb-8">
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto">
-                
-                <div className="text-center mb-12">
-                  <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight">
-<span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Tarif</span>
-                  </h2>
-                </div>
-
-                {/* Section Tarif */}
-                <div className="flex justify-center mb-12">
-                  
-                  {/* Tarif unique */}
-                  <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 text-center max-w-md w-full">
-                    <div className="bg-orange-100 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4 h-20 flex items-center justify-center">
-                      <h3 className="text-2xl font-bold text-orange-500">CCP3</h3>
-                    </div>
-                    
-                    <div className="mb-6">
-                      <div className="text-4xl font-bold text-orange-500 mb-2">3 075<span className="text-2xl">€</span></div>
-                      <p className="text-sm text-[#013F63]">TTC</p>
-                    </div>
-                    
-                    <Link
-                      href="/contact"
-                      className="inline-block px-8 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-full transition-colors"
-                    >
-                      En savoir plus
-                    </Link>
-                  </div>
-                </div>
 
                 {/* Section Solutions de financement */}
                 <div className="mb-8">
                   <div className="text-center mb-8">
                     <h3 className="text-2xl lg:text-3xl font-bold text-[#013F63] mb-4 leading-tight">
-                      Comment <span className="text-orange-500 font-brittany text-3xl lg:text-4xl">financer</span> votre formation CIP ?
+                      Comment <span className="text-orange-500 font-brittany text-3xl lg:text-4xl">financer</span> votre formation CCP3 ?
                     </h3>
                   </div>
 
@@ -1449,7 +1432,7 @@ export default function FormationCCP3() {
                   </div>
                 </div>
 
-                <div className="text-center mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="text-center mt-6 mb-8 flex flex-col sm:flex-row gap-4 justify-center">
                   <Link href="/financement" className="inline-flex items-center gap-2 px-6 py-3 bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold rounded-full transition-all duration-300 hover:shadow-lg transform hover:scale-105">
                     En savoir plus sur les financements
                     <ArrowRight className="w-4 h-4" />
@@ -1470,23 +1453,19 @@ export default function FormationCCP3() {
           </section>
 
           {/* Prochaines sessions */}
-          <section className="py-16">
+          <section className="pt-2 pb-8">
             <div className="container mx-auto px-4">
               <div className="max-w-5xl mx-auto">
 
-                <div className="max-w-md mx-auto mb-12">
-                  {/* Session CIP 2026 */}
-                  <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 text-center">
-                    <div className="bg-orange-100 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4">
-                      <h3 className="text-2xl font-bold mb-2 text-orange-500">Prochaine session</h3>
-                      <p className="text-orange-600">Du 9 février au 23 octobre 2026</p>
-                    </div>
-                    
-                    <div className="mb-4">
-                      <p className="text-lg font-bold text-[#013F63]">Ouverture des candidatures</p>
-                      <p className="text-2xl font-bold text-orange-500 mt-2">30 juin 2025</p>
-                    </div>
-                  </div>
+                <div className="max-w-md mx-auto mb-6">
+                  <Image
+                    src="/images/formations/prochaine-session-ccp3.png"
+                    alt="Prochaine session CCP3"
+                    width={1200}
+                    height={733}
+                    className="w-full h-auto"
+                    priority
+                  />
                 </div>
 
                 {/* Réunions d'information */}
@@ -1508,7 +1487,7 @@ export default function FormationCCP3() {
                         S'inscrire à une réunion
                       </Link>
                       <Link
-                        href="/contact"
+                        href={CONTACT_HREF}
                         className="inline-flex items-center gap-2 px-8 py-4 border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold rounded-full transition-colors text-lg"
                       >
                         <Phone className="w-5 h-5" />
@@ -1522,7 +1501,7 @@ export default function FormationCCP3() {
           </section>
 
           {/* Section Statistiques Atipik RH */}
-          <section ref={statsRef} className="py-16 overflow-hidden">
+          <section ref={statsRef} className="pt-8 pb-16 overflow-hidden">
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto">
                 
@@ -1541,8 +1520,8 @@ export default function FormationCCP3() {
                   <button
                     onClick={() => {
                       const maxIndex = isClient && isMobile 
-                        ? stats.length - 1 
-                        : Math.max(0, stats.length - 3);
+                        ? STATS.length - 1 
+                        : Math.max(0, STATS.length - 3);
                       const newIndex = currentStatIndex > 0 ? currentStatIndex - 1 : maxIndex;
                       setCurrentStatIndex(newIndex);
                     }}
@@ -1556,8 +1535,8 @@ export default function FormationCCP3() {
                   <button
                     onClick={() => {
                       const maxIndex = isClient && isMobile 
-                        ? stats.length - 1 
-                        : stats.length - 3;
+                        ? STATS.length - 1 
+                        : STATS.length - 3;
                       const newIndex = currentStatIndex < maxIndex ? currentStatIndex + 1 : 0;
                       setCurrentStatIndex(newIndex);
                     }}
@@ -1573,7 +1552,7 @@ export default function FormationCCP3() {
                       className="flex transition-transform duration-300 ease-in-out"
                       style={{ transform: `translateX(-${currentStatIndex * (isClient && isMobile ? 100 : 33.333)}%)` }}
                     >
-                      {stats.map((stat, index) => (
+                      {STATS.map((stat, index) => (
                         <div key={index} className="w-full md:w-1/3 flex-shrink-0 px-3">
                           <div className="bg-white rounded-2xl p-4 text-center shadow-lg border border-gray-100 h-28 flex flex-col justify-center">
                             <div className="text-2xl lg:text-3xl font-bold text-[#013F63] mb-2">
@@ -1590,7 +1569,7 @@ export default function FormationCCP3() {
 
                   {/* Indicateurs de position */}
                   <div className="flex justify-center mt-6 space-x-2">
-                    {Array.from({ length: Math.max(1, stats.length - 2) }).map((_, index) => (
+                    {Array.from({ length: Math.max(1, STATS.length - 2) }).map((_, index) => (
                       <button
                         key={index}
                         onClick={() => setCurrentStatIndex(index)}
@@ -1633,8 +1612,8 @@ export default function FormationCCP3() {
                   <button
                     onClick={() => {
                       const maxIndex = isClient && isMobile 
-                        ? franceCompetencesStats.length - 1 
-                        : Math.max(0, franceCompetencesStats.length - 3);
+                        ? FRANCE_COMPETENCES_STATS.length - 1 
+                        : Math.max(0, FRANCE_COMPETENCES_STATS.length - 3);
                       const newIndex = currentFranceStatIndex > 0 ? currentFranceStatIndex - 1 : maxIndex;
                       setCurrentFranceStatIndex(newIndex);
                     }}
@@ -1648,8 +1627,8 @@ export default function FormationCCP3() {
                   <button
                     onClick={() => {
                       const maxIndex = isClient && isMobile 
-                        ? franceCompetencesStats.length - 1 
-                        : franceCompetencesStats.length - 3;
+                        ? FRANCE_COMPETENCES_STATS.length - 1 
+                        : FRANCE_COMPETENCES_STATS.length - 3;
                       const newIndex = currentFranceStatIndex < maxIndex ? currentFranceStatIndex + 1 : 0;
                       setCurrentFranceStatIndex(newIndex);
                     }}
@@ -1665,7 +1644,7 @@ export default function FormationCCP3() {
                       className="flex transition-transform duration-300 ease-in-out md:hidden"
                       style={{ transform: `translateX(-${currentFranceStatIndex * 100}%)` }}
                     >
-                      {franceCompetencesStats.map((stat, index) => (
+                      {FRANCE_COMPETENCES_STATS.map((stat, index) => (
                         <div key={index} className="w-full flex-shrink-0 px-2">
                           <div className="bg-white rounded-2xl p-6 text-center shadow-lg border border-gray-100 h-32 flex flex-col justify-center">
                             <div className="text-3xl font-bold text-[#013F63] mb-2">
@@ -1684,7 +1663,7 @@ export default function FormationCCP3() {
                       className="hidden md:flex transition-transform duration-300 ease-in-out"
                       style={{ transform: `translateX(-${currentFranceStatIndex * 33.333}%)` }}
                     >
-                      {franceCompetencesStats.map((stat, index) => (
+                      {FRANCE_COMPETENCES_STATS.map((stat, index) => (
                         <div key={index} className="w-1/3 flex-shrink-0 px-3">
                           <div className="bg-white rounded-2xl p-4 text-center shadow-lg border border-gray-100 h-28 flex flex-col justify-center">
                             <div className="text-2xl lg:text-3xl font-bold text-[#013F63] mb-2">
@@ -1703,8 +1682,8 @@ export default function FormationCCP3() {
                   <div className="flex justify-center mt-6 space-x-2">
                     {Array.from({ 
                       length: isClient && isMobile 
-                        ? franceCompetencesStats.length 
-                        : Math.max(1, franceCompetencesStats.length - 2) 
+                        ? FRANCE_COMPETENCES_STATS.length 
+                        : Math.max(1, FRANCE_COMPETENCES_STATS.length - 2) 
                     }).map((_, index) => (
                       <button
                         key={index}
@@ -1923,7 +1902,8 @@ export default function FormationCCP3() {
 
         </div>
 
-
+        <FormationFaqSection briefId="formation-ccp3" />
+        <FormationStickyCta href="/s-inscrire" label="Réunion d'information" />
 
         <Footer />
 

@@ -1,9 +1,23 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { Phone, Mail } from 'lucide-react'
+import FinancementDisclaimer from './FinancementDisclaimer'
+import { isFormationLegalDisclaimerPath } from '../lib/tarifs/formationLegalRoutes'
 
 export default function Footer() {
+  const router = useRouter()
+  const showFormationDisclaimer = isFormationLegalDisclaimerPath(router.pathname)
+
   return (
+    <>
+      {showFormationDisclaimer && (
+        <div className="bg-gray-50/80 border-t border-gray-100 py-3">
+          <div className="container mx-auto px-4">
+            <FinancementDisclaimer variant="subtle" className="max-w-4xl mx-auto text-center" />
+          </div>
+        </div>
+      )}
     <footer className="text-white pt-8 pb-4 relative z-50" style={{backgroundColor: '#013F63'}}>
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
@@ -19,18 +33,18 @@ export default function Footer() {
                 className="h-12 w-auto mb-6 brightness-0 invert hover:opacity-80 transition-opacity cursor-pointer"
               />
             </Link>
-            <p className="text-gray-300 mb-6 leading-relaxed">
+            <p className="text-neutral-100 mb-6 leading-relaxed">
               Votre centre de formation à Lormont. 
               Bilan de compétences, VAE et formations certifiantes.
             </p>
-            <div className="flex items-center gap-6">
+            <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-4 sm:gap-6">
               {/* Réseaux sociaux */}
               <div className="flex space-x-4">
                 <a 
                   href="https://www.linkedin.com/company/atipik-rh33/posts/?feedView=all" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-neutral-100 hover:text-white transition-colors"
                 >
                   <span className="sr-only">LinkedIn</span>
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -41,7 +55,7 @@ export default function Footer() {
                   href="https://www.facebook.com/atipikrh33/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-neutral-100 hover:text-white transition-colors"
                 >
                   <span className="sr-only">Facebook</span>
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -52,7 +66,7 @@ export default function Footer() {
                   href="https://www.instagram.com/atipikrh33?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-neutral-100 hover:text-white transition-colors"
                 >
                   <span className="sr-only">Instagram</span>
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -62,7 +76,7 @@ export default function Footer() {
               </div>
               
               {/* Ligne de séparation */}
-              <div className="w-px h-8 bg-gray-500"></div>
+              <div className="hidden sm:block w-px h-8 bg-muted-blue-200 shrink-0"></div>
               
               {/* Logos certifications */}
               <div className="flex space-x-4 items-center">
@@ -71,14 +85,14 @@ export default function Footer() {
                   alt="Certification Qualiopi - Atipik RH" 
                   width={80} 
                   height={80}
-                  className="object-contain"
+                  className="object-contain w-20 h-20"
                 />
                 <Image 
                   src="/images/certifications/formation-handicap.png" 
                   alt="Formation Handicap - Atipik RH" 
                   width={50} 
                   height={50}
-                  className="object-contain"
+                  className="object-contain w-[50px] h-[50px]"
                 />
               </div>
             </div>
@@ -87,7 +101,7 @@ export default function Footer() {
           {/* Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Nos accompagnements</h3>
-            <ul className="space-y-2 text-gray-300">
+            <ul className="space-y-2 text-neutral-100">
               <li>
                 <Link href="/vae" className="hover:text-white transition-colors cursor-pointer">
                   VAE
@@ -124,7 +138,7 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
-            <div className="space-y-2 text-gray-300">
+            <div className="space-y-2 text-neutral-100">
               <p className="flex items-center">
                 <Phone className="w-4 h-4 mr-2" />
                 <a href="tel:+33783019955" className="hover:text-white transition-colors">
@@ -138,7 +152,7 @@ export default function Footer() {
                 </a>
               </p>
               <p>8 Rue du Courant, 33310 Lormont</p>
-              <div className="mt-3 pt-2 border-t border-gray-700">
+              <div className="mt-3 pt-2 border-t border-muted-blue-200">
                 <h3 className="text-lg font-semibold mb-4 text-white">Horaires</h3>
                 <p className="text-sm">Lun-Ven : 9h-18h</p>
                 <p className="text-sm">Sam : 09h00 à 12h00 (sur rendez-vous)</p>
@@ -151,8 +165,8 @@ export default function Footer() {
 
         
         {/* Copyright condensé */}
-        <div className="border-t border-gray-600 mt-6 pt-4 text-center">
-          <div className="flex flex-wrap justify-center items-center gap-3 text-sm text-gray-400">
+        <div className="border-t border-muted-blue-200 mt-6 pt-4 text-center">
+          <div className="flex flex-wrap justify-center items-center gap-3 text-sm text-neutral-100">
             <Link href="/mentions-legales" className="hover:text-white transition-colors">
               Mentions légales
             </Link>
@@ -170,5 +184,6 @@ export default function Footer() {
         </div>
       </div>
     </footer>
+    </>
   )
 } 

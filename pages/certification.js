@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import FinancementDisclaimer from '../components/FinancementDisclaimer'
 import { CheckCircle } from 'lucide-react'
 
 export default function Certification() {
@@ -12,7 +13,7 @@ export default function Certification() {
         <title>Certification | Atipik RH - Qualité et Accessibilité</title>
         <meta name="description" content="Découvrez nos certifications : Qualiopi et Formation & Handicap. Une formation inclusive et de qualité reconnue par l'État." />
         <meta name="keywords" content="certification Atipik RH, Qualiopi, Formation Handicap, inclusion, organisme formation agréé" />
-        <link rel="canonical" href="https://atipikrh.fr/certification" />
+        <link rel="canonical" href="https://www.atipikrh.com/certification" />
       </Head>
 
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">
@@ -249,6 +250,7 @@ export default function Certification() {
           <section className="py-12">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center">
+                <FinancementDisclaimer className="mb-8 text-left" />
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link href="/contact" className="inline-flex px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold shadow-lg transition text-base hover:scale-105">
                     Démarrer ma formation

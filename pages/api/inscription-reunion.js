@@ -1,6 +1,35 @@
+import { antiSpamMiddleware } from '../../lib/antiSpam'
+import {
+  sendDualBrevoEmails,
+  upsertBrevoContact,
+  SERVER_CONFIG_ERROR,
+  SEND_EMAIL_ERROR,
+} from '../../lib/brevo'
+
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Méthode non autorisée' })
+  }
+
+  // Vérification anti-spam
+  const spamCheck = await antiSpamMiddleware(req, {
+    recaptcha: {
+      enabled: true,
+      version: 'v2',
+    },
+    akismet: {
+      enabled: true,
+      type: 'inscription-reunion'
+    }
+  })
+  if (!spamCheck.success) {
+    if (spamCheck.statusCode === 429) {
+      res.setHeader('Retry-After', spamCheck.retryAfter)
+    }
+    return res.status(spamCheck.statusCode).json({ 
+      message: spamCheck.message,
+      error: spamCheck.error
+    })
   }
 
   const { 
@@ -24,14 +53,13 @@ export default async function handler(req, res) {
   }
 
   try {
-    // Configuration Brevo depuis les variables d'environnement
-    const BREVO_API_KEY = process.env.BREVO_API_KEY
-    const BREVO_SENDER_EMAIL = process.env.BREVO_SENDER_EMAIL || 'contact@atipikrh.com'
-    const BREVO_RECIPIENT_EMAIL = process.env.BREVO_RECIPIENT_EMAIL || 'contact@atipikrh.com'
-
-    if (!BREVO_API_KEY) {
-      console.error('BREVO_API_KEY n\'est pas configurée')
-      return res.status(500).json({ error: 'Configuration serveur manquante' })
+    const maskEmail = (value) => {
+      if (!value || typeof value !== 'string') return 'inconnu'
+      const [localPart = '', domainPart = ''] = value.split('@')
+      const maskedLocal = localPart.length > 2
+        ? `${localPart.slice(0, 2)}***`
+        : '***'
+      return domainPart ? `${maskedLocal}@${domainPart}` : maskedLocal
     }
 
     // Formatage de la date pour l'affichage
@@ -250,100 +278,51 @@ Date : ${new Date().toLocaleString('fr-FR')}`
     // Obtenir le contenu de l'email de confirmation selon la formation et la modalité
     const confirmationEmail = getConfirmationContent(formation, modalite, prenom, dateReunion)
 
-    // Envoyer l'email de notification interne
-    const notificationResponse = await fetch('https://api.brevo.com/v3/smtp/email', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-        'api-key': BREVO_API_KEY
-      },
-      body: JSON.stringify({
-        sender: {
-          name: 'Site Web Atipik RH',
-          email: BREVO_SENDER_EMAIL
-        },
-        to: [{
-          email: BREVO_RECIPIENT_EMAIL,
-          name: 'Équipe Atipik RH'
-        }],
-        subject: `Nouvelle inscription à une réunion d'information collective`,
-        textContent: emailContent
-      })
+    const result = await sendDualBrevoEmails({
+      notificationSubject:
+        "Nouvelle inscription à une réunion d'information collective",
+      notificationContent: emailContent,
+      confirmationToEmail: email,
+      confirmationToName: `${prenom} ${nom}`,
+      confirmationSubject: confirmationEmail.subject,
+      confirmationContent: confirmationEmail.content,
     })
 
-    // Envoyer l'email de confirmation au candidat
-    const confirmationResponse = await fetch('https://api.brevo.com/v3/smtp/email', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-        'api-key': BREVO_API_KEY
-      },
-      body: JSON.stringify({
-        sender: {
-          name: 'Atipik RH',
-          email: BREVO_SENDER_EMAIL
-        },
-        to: [{
-          email: email,
-          name: `${prenom} ${nom}`
-        }],
-        subject: confirmationEmail.subject,
-        textContent: confirmationEmail.content
-      })
-    })
+    if (result.missingConfig) {
+      return res.status(500).json(SERVER_CONFIG_ERROR)
+    }
 
-    // Vérifier que les deux emails ont été envoyés avec succès
-    if (notificationResponse.ok && confirmationResponse.ok) {
-      const notificationResult = await notificationResponse.json()
-      const confirmationResult = await confirmationResponse.json()
-      console.log('Emails envoyés avec succès via Brevo:', {
-        notification: notificationResult.messageId,
-        confirmation: confirmationResult.messageId
+    if (result.ok) {
+      const contactSync = await upsertBrevoContact({
+        email,
+        nom,
+        prenom,
+        telephone,
+        statut: getStatutLabel(),
+        formation,
       })
-      return res.status(200).json({ 
+
+      if (!contactSync.ok && !contactSync.missingConfig) {
+        console.error('[Inscription] Contact non synchronisé dans Brevo', {
+          email: maskEmail(email),
+          formation,
+          statusCode: contactSync.statusCode || 'inconnu',
+        })
+      }
+
+      return res.status(200).json({
         message: 'Inscription enregistrée avec succès',
         success: true,
-        messageIds: {
-          notification: notificationResult.messageId,
-          confirmation: confirmationResult.messageId
-        }
-      })
-    } else {
-      // Gérer les erreurs
-      let errorMessage = 'Erreur lors de l\'envoi des emails'
-      let errorDetails = {}
-
-      if (!notificationResponse.ok) {
-        const notificationError = await notificationResponse.text()
-        console.error('Erreur notification Brevo:', notificationResponse.status, notificationError)
-        errorDetails.notification = notificationError
-      }
-
-      if (!confirmationResponse.ok) {
-        const confirmationError = await confirmationResponse.text()
-        console.error('Erreur confirmation Brevo:', confirmationResponse.status, confirmationError)
-        errorDetails.confirmation = confirmationError
-      }
-
-      return res.status(500).json({ 
-        error: errorMessage,
-        details: errorDetails 
+        messageIds: result.messageIds,
       })
     }
 
+    return res.status(500).json(SEND_EMAIL_ERROR)
   } catch (error) {
-    console.error('Erreur lors de l\'envoi de l\'email:', error)
-    console.error('Stack trace:', error.stack)
-    console.error('BREVO_API_KEY présente:', !!process.env.BREVO_API_KEY)
-    console.error('IP du serveur:', req.headers['x-forwarded-for'] || req.connection.remoteAddress)
-    console.error('Données reçues:', { formation, modalite, nom, prenom, email, telephone, dateReunion })
-    res.status(500).json({ 
-      message: 'Erreur lors de l\'enregistrement de l\'inscription',
+    console.error("[Inscription] Erreur lors de l'envoi:", error)
+    return res.status(500).json({
+      message: "Erreur lors de l'enregistrement de l'inscription",
       success: false,
-      details: error.message,
-      error: error.toString()
     })
   }
 }

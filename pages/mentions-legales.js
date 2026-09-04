@@ -10,7 +10,7 @@ export default function MentionsLegales() {
         <title>Mentions Légales | Atipik RH</title>
         <meta name="description" content="Mentions légales du site Atipik RH - Informations légales, conditions d'utilisation et propriété intellectuelle." />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://atipikrh.fr/mentions-legales" />
+        <link rel="canonical" href="https://www.atipikrh.com/mentions-legales" />
       </Head>
 
       <div className="min-h-screen bg-white">
@@ -282,6 +282,39 @@ export default function MentionsLegales() {
                       <p className="text-gray-700">
                         « les informations qui permettent, sous quelque forme que ce soit, directement ou non, l'identification des personnes physiques 
                         auxquelles elles s'appliquent » (article 4 de la loi n° 78-17 du 6 janvier 1978).
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                                 {/* 12. Médiation de la consommation */}
+                 <div>
+                  <h2 className="text-2xl font-bold text-[#013F63] mb-6">12. Médiation de la consommation</h2>
+                  <p className="text-gray-700 mb-4">
+                    Conformément aux articles L.616-1 et R.616-1 du Code de la consommation, le client a la possibilité de recourir gratuitement à un médiateur de la consommation en vue de la résolution amiable d'un litige qui l'opposerait à <strong>ATIPIK RH</strong>.
+                  </p>
+                  <p className="text-gray-700 mb-4">
+                    Après avoir adressé une réclamation écrite préalable à <strong>ATIPIK RH</strong> (courrier ou courriel) et en l'absence de réponse satisfaisante dans un délai de deux mois, le client peut saisir le médiateur de la consommation suivant :
+                  </p>
+                  <div className="bg-gray-50 rounded-lg p-6">
+                    <h3 className="text-lg font-semibold text-[#013F63] mb-4 flex items-center gap-2">
+                      <ExternalLink className="w-5 h-5" />
+                      MÉDIATION CONSOMMATION DÉVELOPPEMENT (MED CONSO DEV)
+                    </h3>
+                    <div className="space-y-2 text-gray-700">
+                      <p>Centre d'Affaires Stéphanois – Immeuble l'Horizon</p>
+                      <p>Esplanade de France – 3 rue J. Constant Milleret</p>
+                      <p>42000 Saint-Étienne</p>
+                      <p className="mt-4">
+                        <a 
+                          href="https://www.medconsodev.eu/" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-[#013F63] hover:text-blue-700 underline flex items-center gap-2"
+                        >
+                          https://www.medconsodev.eu/
+                          <ExternalLink className="w-4 h-4" />
+                        </a>
                       </p>
                     </div>
                   </div>

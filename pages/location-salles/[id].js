@@ -2,9 +2,9 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
-import { useRouter } from 'next/router'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
+import { SALLES_DATA } from '../../lib/location-salles/sallesData'
 import { 
   Users, 
   Wifi, 
@@ -24,162 +24,10 @@ import {
   Mail
 } from 'lucide-react'
 
-export default function SalleDetail() {
-  const router = useRouter()
-  const { id } = router.query
+export default function SalleDetail({ id, salle }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [modalImageIndex, setModalImageIndex] = useState(0)
-
-  // Données des salles (même structure que la landing page)
-  const sallesData = {
-    'grande-salle-formation': {
-      nom: 'Nouvelle donne',
-      capacite: '20 personnes',
-      surface: '30m²',
-      images: [
-        '/images/salles/grande-salle-1.jpg',
-        '/images/salles/grande-salle-2.jpg',
-        '/images/salles/grande-salle-3.jpg'
-      ],
-      demiJournee: 170,
-      journee: 250,
-      weekend: 265,
-      description: 'Notre plus grande salle, spacieuse et lumineuse, parfaitement adaptée pour vos formations, séminaires et conférences. Avec ses 30m² et sa capacité d\'accueil de 20 personnes, elle offre un environnement professionnel optimal pour tous vos événements.',
-      equipements: [
-        'Vidéoprojecteur HD 1080p',
-        'Tables modulables',
-        'Climatisation réversible',
-        'Prises électriques multiples',
-        'Connexion HDMI/USB',
-        'Wi-Fi haut débit',
-        'Thé et café'
-      ],
-      amenagements: [
-        'Configuration théâtre (20 personnes)',
-        'Configuration U (16 personnes)',
-        'Configuration îlots (16 personnes)',
-        'Configuration cocktail (20 personnes max)'
-      ],
-    },
-    'salle-reunion-moyenne': {
-      nom: 'Mission possible',
-      capacite: '15 personnes',
-      surface: '25m²',
-      images: [
-        '/images/salles/salle-moyenne-1.jpg',
-        '/images/salles/salle-moyenne-2.jpg',
-        '/images/salles/salle-moyenne-3.jpg'
-      ],
-      demiJournee: 120,
-      journee: 195,
-      weekend: 210,
-      description: 'Salle polyvalente idéale pour réunions d\'équipe, ateliers collaboratifs et sessions de brainstorming. Son aménagement flexible et ses équipements modernes favorisent l\'interaction et la créativité.',
-      equipements: [
-        'Vidéoprojecteur HD 1080p',
-        'Tables modulables',
-        'Prises électriques multiples',
-        'Wi-Fi haut débit',
-        'Thé et café'
-      ],
-      amenagements: [
-        'Table de réunion ovale (15 personnes)',
-        'Espaces détente',
-        'Coin présentation',
-        'Configuration workshop'
-      ],
-    },
-    'petite-salle-reunion': {
-      nom: 'La passerelle',
-      capacite: '10 personnes',
-      surface: '20m²',
-      images: [
-        '/images/salles/petite-salle-1.jpg',
-        '/images/salles/petite-salle-2.jpg',
-        '/images/salles/petite-salle-3.jpg'
-      ],
-      demiJournee: 80,
-      journee: 130,
-      weekend: 145,
-      description: 'Espace chaleureux et feutré, parfait pour réunions restreintes, entretiens confidentiels et sessions de coaching. L\'ambiance cosy favorise les échanges privilégiés et la concentration.',
-      equipements: [
-        'Vidéoprojecteur HD 1080p',
-        'Tables modulables',
-        'Prises électriques multiples',
-        'Wi-Fi haut débit',
-        'Thé et café'
-      ],
-      amenagements: [
-        'Configuration ronde (10 personnes)',
-        'Espace cocooning'
-      ],
-    },
-    'bureau-individuel-1': {
-      nom: 'Leboncoin à idée',
-      capacite: '1 personne',
-      surface: '7m²',
-      images: [
-        '/images/salles/bureau-individuel-1.jpg'
-      ],
-      demiJournee: 40,
-      journee: 70,
-      weekend: 85,
-      description: 'Bureau individuel parfaitement équipé pour le travail en autonomie. Espace calme et fonctionnel avec tout le nécessaire pour une productivité optimale.',
-      equipements: [
-        'Bureau meublé (table, chaise, rangement)',
-        'Wi-Fi haut débit',
-        'Accès imprimante',
-        'Thé et café',
-        'Parking privé gratuit',
-        'Prises électriques multiples'
-      ],
-      amenagements: [
-        'Espace de travail individuel',
-        'Configuration bureau',
-        'Coin détente'
-      ],
-    },
-    'bureau-individuel-2': {
-      nom: 'La tour de contrôle',
-      capacite: '1 personne',
-      surface: '8m²',
-      images: [
-        '/images/salles/bureau-individuel-2.jpg'
-      ],
-      demiJournee: 40,
-      journee: 70,
-      weekend: 85,
-      description: 'Bureau individuel spacieux avec vue dégagée. Parfait pour les sessions de travail intensif, la préparation de formations ou les entretiens individuels.',
-      equipements: [
-        'Bureau meublé (table, chaise, rangement)',
-        'Wi-Fi haut débit',
-        'Accès imprimante',
-        'Thé et café',
-        'Parking privé gratuit',
-        'Prises électriques multiples'
-      ],
-      amenagements: [
-        'Espace de travail individuel',
-        'Configuration bureau',
-        'Coin détente'
-      ],
-    }
-  }
-
-  const salle = sallesData[id]
-
-  if (!salle) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold text-[#013F63] mb-4">Salle non trouvée</h1>
-          <Link href="/location-salles-lormont" className="text-[#013F63] hover:text-orange-500">
-            Retour aux salles disponibles
-          </Link>
-        </div>
-      </div>
-    )
-  }
 
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % salle.images.length)
@@ -211,6 +59,13 @@ export default function SalleDetail() {
       <Head>
         <title>{salle.nom} - Location Salle Formation Lormont | Atipik RH</title>
         <meta name="description" content={`Louez ${salle.nom} à Lormont. ${salle.capacite}, ${salle.surface}. À partir de ${salle.demiJournee}€. Équipée, parking gratuit.`} />
+        <link rel="canonical" href={`https://www.atipikrh.com/location-salles/${id}`} />
+        <meta property="og:title" content={`${salle.nom} - Location Salle Formation Lormont | Atipik RH`} />
+        <meta property="og:description" content={`Louez ${salle.nom} à Lormont. ${salle.capacite}, ${salle.surface}. À partir de ${salle.demiJournee}€. Équipée, parking gratuit.`} />
+        <meta property="og:url" content={`https://www.atipikrh.com/location-salles/${id}`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${salle.nom} - Location salle | Atipik RH`} />
+        <meta name="twitter:description" content={`Louez ${salle.nom} à Lormont. ${salle.capacite}, ${salle.surface}.`} />
       </Head>
 
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">
@@ -583,4 +438,15 @@ export default function SalleDetail() {
       </div>
     </>
   )
+}
+
+export async function getStaticPaths() {
+  const paths = Object.keys(SALLES_DATA).map((id) => ({ params: { id } }))
+  return { paths, fallback: false }
+}
+
+export async function getStaticProps({ params }) {
+  const salle = SALLES_DATA[params.id]
+  if (!salle) return { notFound: true }
+  return { props: { id: params.id, salle } }
 }

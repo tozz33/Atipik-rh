@@ -5,6 +5,8 @@ import CookieBanner from './CookieBanner'
 import { Phone, Mail, MapPin } from 'lucide-react'
 
 export default function Layout({ children, title, description, canonical }) {
+  const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+
   return (
     <>
       <Head>
@@ -13,6 +15,12 @@ export default function Layout({ children, title, description, canonical }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         {canonical && <link rel="canonical" href={canonical} />}
+        {googleSiteVerification && (
+          <meta
+            name="google-site-verification"
+            content={googleSiteVerification}
+          />
+        )}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
@@ -36,7 +44,7 @@ export default function Layout({ children, title, description, canonical }) {
             <div className="grid md:grid-cols-4 gap-8">
               <div>
                 <h3 className="text-xl font-brand mb-4">Atipik RH</h3>
-                <p className="text-gray-300 mb-4">
+                <p className="text-neutral-100 mb-4">
                   Votre partenaire formation et évolution professionnelle à Lormont.
                 </p>
                 <div className="flex items-center gap-2 mb-2">
@@ -56,7 +64,7 @@ export default function Layout({ children, title, description, canonical }) {
                     href="https://www.linkedin.com/company/atipik-rh33/posts/?feedView=all" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-gray-300 hover:text-white transition-colors"
+                    className="text-neutral-100 hover:text-white transition-colors"
                   >
                     <span className="sr-only">LinkedIn</span>
                     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -67,7 +75,7 @@ export default function Layout({ children, title, description, canonical }) {
                     href="https://www.facebook.com/AtipikRH" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-gray-300 hover:text-white transition-colors"
+                    className="text-neutral-100 hover:text-white transition-colors"
                   >
                     <span className="sr-only">Facebook</span>
                     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -78,7 +86,7 @@ export default function Layout({ children, title, description, canonical }) {
                     href="https://www.instagram.com/atipikrh" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-gray-300 hover:text-white transition-colors"
+                    className="text-neutral-100 hover:text-white transition-colors"
                   >
                     <span className="sr-only">Instagram</span>
                     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -90,9 +98,9 @@ export default function Layout({ children, title, description, canonical }) {
 
               <div>
                 <h4 className="font-semibold mb-4">Nos services</h4>
-                <ul className="space-y-2 text-gray-300">
+                <ul className="space-y-2 text-neutral-100">
                   <li><Link href="/bilan-de-competences" className="hover:text-white transition-colors">Bilan de compétences</Link></li>
-                  <li><Link href="/bilan-de-competences/cpf" className="hover:text-white transition-colors">Bilan CPF</Link></li>
+                  <li><Link href="/financement" className="hover:text-white transition-colors">Financement CPF</Link></li>
                   <li><Link href="/vae" className="hover:text-white transition-colors">VAE</Link></li>
                   <li><Link href="/formations" className="hover:text-white transition-colors">Formations</Link></li>
                 </ul>
@@ -100,16 +108,16 @@ export default function Layout({ children, title, description, canonical }) {
 
               <div>
                 <h4 className="font-semibold mb-4">Formations</h4>
-                <ul className="space-y-2 text-gray-300">
-                  <li><Link href="/formations/certifiantes" className="hover:text-white transition-colors">Formations certifiantes</Link></li>
+                <ul className="space-y-2 text-neutral-100">
+                  <li><Link href="/formations" className="hover:text-white transition-colors">Formations certifiantes</Link></li>
                   <li><Link href="/formations/courtes-professionnalisantes" className="hover:text-white transition-colors">Formations courtes professionnalisantes</Link></li>
-                  <li><Link href="/formations/certifiantes/cpf" className="hover:text-white transition-colors">Financement CPF</Link></li>
+                  <li><Link href="/financement" className="hover:text-white transition-colors">Financement CPF</Link></li>
                 </ul>
               </div>
 
               <div>
                 <h4 className="font-semibold mb-4">Informations</h4>
-                <ul className="space-y-2 text-gray-300">
+                <ul className="space-y-2 text-neutral-100">
                   <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
                   <li><Link href="/mentions-legales" className="hover:text-white transition-colors">Mentions légales</Link></li>
                   <li><Link href="/politique-confidentialite" className="hover:text-white transition-colors">Politique de confidentialité</Link></li>
@@ -117,7 +125,7 @@ export default function Layout({ children, title, description, canonical }) {
               </div>
             </div>
 
-            <div className="border-t border-gray-500 mt-12 pt-8 text-center text-gray-300">
+            <div className="border-t border-muted-blue-200 mt-12 pt-8 text-center text-neutral-100">
               <p>&copy; 2025 Atipik RH. Tous droits réservés.</p>
             </div>
           </div>

@@ -11,7 +11,7 @@ export default function PolitiqueConfidentialite() {
         <title>Politique de Confidentialité | Atipik RH</title>
         <meta name="description" content="Politique de confidentialité d'Atipik RH - Comment nous collectons, utilisons et protégeons vos données personnelles." />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://atipikrh.fr/politique-confidentialite" />
+        <link rel="canonical" href="https://www.atipikrh.com/politique-confidentialite" />
       </Head>
 
       <div className="min-h-screen bg-white">

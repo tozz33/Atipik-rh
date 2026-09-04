@@ -2,6 +2,7 @@
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    '!./pages/api/**',
     './components/**/*.{js,ts,jsx,tsx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
@@ -30,6 +31,7 @@ module.exports = {
         dancing: ['Dancing Script', 'cursive'],
         signatura: ['Signatura Monoline', 'cursive'],
         sans: ['Montserrat', 'sans-serif'],
+        playfair: ['Playfair Display', 'serif'],
       },
       spacing: {
         'section': '96px',

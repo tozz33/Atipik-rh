@@ -1,0 +1,17 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "atipikrh.com"
+        }
+      ],
+      "destination": "https://www.atipikrh.com/$1",
+      "permanent": true
+    }
+  ],
+  "installCommand": "npm install",
+  "buildCommand": "npm run build"
+}

@@ -12,7 +12,7 @@ export default function Partenariat() {
         <title>Partenariat | ATIPIK RH - Réseau d'entreprises engagées</title>
         <meta name="description" content="Découvrez nos partenariats : Les Entreprises s'Engagent et Club d'Entreprise Bassens. Un réseau d'entreprises dynamique et inclusif." />
         <meta name="keywords" content="partenariat ATIPIK RH, les entreprises engagent, club entreprise bassens, réseau entreprises" />
-        <link rel="canonical" href="https://atipikrh.fr/partenariat" />
+        <link rel="canonical" href="https://www.atipikrh.com/partenariat" />
       </Head>
 
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">
@@ -77,7 +77,7 @@ export default function Partenariat() {
                   </div>
 
                   <div className="text-center">
-                    <div className="rounded-2xl p-12 shadow-lg">
+                    <div className="p-12">
                       <Image
                         src="/images/certifications/les-entreprises-engagent.png"
                         alt="Logo Les Entreprises s'Engagent"
@@ -96,40 +96,75 @@ export default function Partenariat() {
           <section className="py-16">
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto">
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
-                  <div className="text-center">
-                    <div className="rounded-2xl p-12 shadow-lg">
-                      <Image
-                        src="/images/certifications/Club entreprise de bassens.jpg"
-                        alt="Logo Club d'Entreprise Bassens"
-                        width={300}
-                        height={200}
-                        className="object-contain w-full h-40 mx-auto"
-                      />
+                <div className="space-y-12">
+                  <div className="grid lg:grid-cols-2 gap-12 items-center">
+                    <div className="text-center">
+                      <div className="p-12">
+                        <Image
+                          src="/images/certifications/Club entreprise de bassens.jpg"
+                          alt="Logo Club d'Entreprise Bassens"
+                          width={300}
+                          height={200}
+                          className="object-contain w-full h-40 mx-auto"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="text-center lg:text-left">
+                      <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-3 leading-tight">
+                        Club d'entreprise <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Bassens</span>
+                      </h2>
+                      <p className="text-lg text-[#013F63] leading-relaxed font-light mb-6">
+                        ATIPIK RH est fier de faire partie du Club d'Entreprise de Bassens,
+                        un réseau dynamique qui favorise les échanges et les collaborations
+                        entre les entreprises locales.
+                      </p>
+                      <div className="space-y-4 text-[#013F63]">
+                        <div className="flex items-start">
+                          <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                          <span>Réseau d'entrepreneurs engagés</span>
+                        </div>
+                        <div className="flex items-start">
+                          <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                          <span>Développement économique local</span>
+                        </div>
+                        <div className="flex items-start">
+                          <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                          <span>Partenariats et collaborations</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
 
-                  <div className="text-center lg:text-left">
-                    <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-3 leading-tight">
-                      Club d'entreprise <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Bassens</span>
-                    </h2>
-                    <p className="text-lg text-[#013F63] leading-relaxed font-light mb-6">
-                      ATIPIK RH est fier de faire partie du Club d'Entreprise de Bassens, 
-                      un réseau dynamique qui favorise les échanges et les collaborations 
-                      entre les entreprises locales.
-                    </p>
-                    <div className="space-y-4 text-[#013F63]">
-                      <div className="flex items-start">
-                        <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                        <span>Réseau d'entrepreneurs engagés</span>
+                  <div className="grid lg:grid-cols-2 gap-12 items-center">
+                    <div className="text-center">
+                      <div className="p-12">
+                        <Image
+                          src="/images/certifications/club-entreprises-cenon.png"
+                          alt="Logo du Club d'entreprise de Cenon, réseau d'entreprises locales"
+                          width={520}
+                          height={220}
+                          className="object-contain w-full h-40 mx-auto"
+                        />
                       </div>
-                      <div className="flex items-start">
-                        <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                        <span>Développement économique local</span>
-                      </div>
-                      <div className="flex items-start">
-                        <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                        <span>Partenariats et collaborations</span>
+                    </div>
+
+                    <div className="text-center lg:text-left">
+                      <h3 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-3 leading-tight">
+                        Club d'entreprise <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Cenon</span>
+                      </h3>
+                      <p className="text-lg text-[#013F63] leading-relaxed font-light mb-6">
+                        Le <strong>Club d'entreprise de Cenon</strong> fédère les entreprises du territoire, encourage les échanges professionnels et dynamise les partenariats locaux.
+                      </p>
+                      <div className="space-y-4 text-[#013F63]">
+                        <div className="flex items-start">
+                          <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                          <span>Réseau d'entreprises locales actives</span>
+                        </div>
+                        <div className="flex items-start">
+                          <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                          <span>Opportunités de collaboration sur le territoire</span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -149,9 +184,8 @@ export default function Partenariat() {
                       Les <span className="text-orange-500 font-brittany text-3xl lg:text-4xl">Acteurs de la Compétence</span>
                     </h3>
                     <p className="text-lg text-[#013F63] leading-relaxed font-light mb-6">
-                      Nos partenariats avec les acteurs de la compétence nous permettent 
-                      d'offrir des formations de qualité, certifiantes et adaptées aux 
-                      besoins du marché du travail.
+                      ATIPIK RH est fier d'être adhérent de la fédération professionnelle "Les Acteurs de la Compétence", 
+                      un réseau qui promeut la qualité des formations professionnelles et l'adaptation aux besoins du marché du travail.
                     </p>
                     <div className="space-y-4 text-[#013F63]">
                       <div className="flex items-start">
@@ -168,13 +202,13 @@ export default function Partenariat() {
                       </div>
                       <div className="flex items-start">
                         <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                        <span>Réseau d'entreprises partenaires</span>
+                        <span>Réseau d'entreprises adhérentes</span>
                       </div>
                     </div>
                   </div>
 
                   <div className="text-center">
-                    <div className="rounded-2xl p-12 shadow-lg">
+                    <div className="p-12">
                       <Image
                         src="/images/certifications/les-acteurs-de-la-competence.png"
                         alt="Logo Les Acteurs de la Compétence"

@@ -1,8 +1,12 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import HoneypotField from '../components/HoneypotField'
+import FormAlert from '../components/FormAlert'
+import FinancementDisclaimer from '../components/FinancementDisclaimer'
+import RecaptchaV2Invisible from '../components/RecaptchaV2Invisible'
 
 export default function SInscrire() {
   const [formData, setFormData] = useState({
@@ -21,7 +25,16 @@ export default function SInscrire() {
 
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [submitError, setSubmitError] = useState('')
   const [showAllDates, setShowAllDates] = useState(false)
+  const [honeypot, setHoneypot] = useState('')
+  const [formTimestamp, setFormTimestamp] = useState(null)
+  const recaptchaRef = useRef(null)
+
+  useEffect(() => {
+    // Enregistrer le timestamp de chargement du formulaire
+    setFormTimestamp(Date.now())
+  }, [])
 
   // Prochaines dates de réunions par formation
   const datesFPA = [
@@ -35,7 +48,21 @@ export default function SInscrire() {
     { date: '2026-01-17', jour: 'Samedi 17 Janvier 2026', heure: '10h30 - 12h30', modalite: 'présentiel' },
     { date: '2026-02-07', jour: 'Samedi 7 Février 2026', heure: '10h30 - 12h30', modalite: 'présentiel' },
     { date: '2026-02-19', jour: 'Jeudi 19 Février 2026', heure: '12h30 - 14h30', modalite: 'distanciel' },
-    { date: '2026-03-05', jour: 'Jeudi 5 Mars 2026', heure: '12h30 - 14h30', modalite: 'distanciel' }
+    { date: '2026-03-05', jour: 'Jeudi 5 Mars 2026', heure: '12h30 - 14h30', modalite: 'distanciel' },
+    { date: '2026-05-22', jour: 'Vendredi 22 Mai 2026', heure: '12h30 - 14h30', modalite: 'distanciel' },
+    { date: '2026-06-13', jour: 'Samedi 13 Juin 2026', heure: '10h30 - 12h30', modalite: 'présentiel' },
+    { date: '2026-06-22', jour: 'Lundi 22 Juin 2026', heure: '12h30 - 14h30', modalite: 'distanciel' },
+    { date: '2026-07-11', jour: 'Samedi 11 Juillet 2026', heure: '10h30 - 12h30', modalite: 'présentiel' },
+    { date: '2026-09-03', jour: 'Jeudi 3 Septembre 2026', heure: '12h30 - 14h30', modalite: 'distanciel' },
+    { date: '2026-09-26', jour: 'Samedi 26 Septembre 2026', heure: '10h30 - 12h30', modalite: 'présentiel' },
+    { date: '2026-10-05', jour: 'Lundi 5 Octobre 2026', heure: '12h30 - 14h30', modalite: 'distanciel' },
+    { date: '2026-10-24', jour: 'Samedi 24 Octobre 2026', heure: '10h30 - 12h30', modalite: 'présentiel' },
+    { date: '2026-11-05', jour: 'Jeudi 5 Novembre 2026', heure: '12h30 - 14h30', modalite: 'distanciel' },
+    { date: '2026-11-21', jour: 'Samedi 21 Novembre 2026', heure: '10h30 - 12h30', modalite: 'présentiel' },
+    { date: '2026-12-11', jour: 'Vendredi 11 Décembre 2026', heure: '12h30 - 14h30', modalite: 'distanciel' },
+    { date: '2027-01-30', jour: 'Samedi 30 Janvier 2027', heure: '10h30 - 12h30', modalite: 'présentiel' },
+    { date: '2027-02-15', jour: 'Lundi 15 Février 2027', heure: '12h30 - 14h30', modalite: 'distanciel' },
+    { date: '2027-03-06', jour: 'Samedi 6 Mars 2027', heure: '10h30 - 12h30', modalite: 'présentiel' }
   ]
 
   const datesCIP = [
@@ -47,7 +74,30 @@ export default function SInscrire() {
     { date: '2025-11-20', jour: 'Jeudi 20 Novembre 2025', heure: '12h30 - 14h30', modalite: 'distanciel' },
     { date: '2025-12-06', jour: 'Samedi 6 Décembre 2025', heure: '10h00 - 12h00', modalite: 'présentiel' },
     { date: '2025-12-11', jour: 'Jeudi 11 Décembre 2025', heure: '12h30 - 14h30', modalite: 'distanciel' },
-    { date: '2026-01-05', jour: 'Lundi 5 Janvier 2026', heure: '12h30 - 14h30', modalite: 'distanciel' }
+    { date: '2026-01-05', jour: 'Lundi 5 Janvier 2026', heure: '12h30 - 14h30', modalite: 'distanciel' },
+    { date: '2026-02-02', jour: 'Lundi 2 Février 2026', heure: '12h30 - 14h30', modalite: 'distanciel' },
+    { date: '2026-02-21', jour: 'Samedi 21 Février 2026', heure: '10h30 - 12h30', modalite: 'présentiel' },
+    { date: '2026-03-14', jour: 'Samedi 14 Mars 2026', heure: '10h30 - 12h30', modalite: 'présentiel' },
+    { date: '2026-03-23', jour: 'Lundi 23 Mars 2026', heure: '12h30 - 14h30', modalite: 'distanciel' },
+    { date: '2026-04-11', jour: 'Samedi 11 Avril 2026', heure: '10h30 - 12h30', modalite: 'présentiel' },
+    { date: '2026-04-24', jour: 'Vendredi 24 Avril 2026', heure: '12h30 - 14h30', modalite: 'distanciel' },
+    { date: '2026-05-11', jour: 'Lundi 11 Mai 2026', heure: '12h30 - 14h30', modalite: 'distanciel' },
+    { date: '2026-05-30', jour: 'Samedi 30 Mai 2026', heure: '10h30 - 12h30', modalite: 'présentiel' },
+    { date: '2026-06-04', jour: 'Jeudi 4 Juin 2026', heure: '12h30 - 14h30', modalite: 'distanciel' },
+    { date: '2026-06-20', jour: 'Samedi 20 Juin 2026', heure: '10h30 - 12h30', modalite: 'présentiel' },
+    { date: '2026-07-06', jour: 'Lundi 6 Juillet 2026', heure: '12h30 - 14h30', modalite: 'distanciel' },
+    { date: '2026-07-18', jour: 'Samedi 18 Juillet 2026', heure: '10h30 - 12h30', modalite: 'présentiel' },
+    { date: '2026-08-22', jour: 'Samedi 22 Août 2026', heure: '12h30 - 14h30', modalite: 'présentiel' },
+    { date: '2026-08-24', jour: 'Lundi 24 Août 2026', heure: '12h30 - 14h30', modalite: 'distanciel' },
+    { date: '2026-09-12', jour: 'Samedi 12 Septembre 2026', heure: '10h30 - 12h30', modalite: 'présentiel' },
+    { date: '2026-09-24', jour: 'Jeudi 24 Septembre 2026', heure: '12h30 - 14h30', modalite: 'distanciel' },
+    { date: '2026-10-10', jour: 'Samedi 10 Octobre 2026', heure: '10h30 - 12h30', modalite: 'présentiel' },
+    { date: '2026-10-27', jour: 'Mardi 27 Octobre 2026', heure: '12h30 - 14h30', modalite: 'distanciel' },
+    { date: '2026-11-07', jour: 'Samedi 7 Novembre 2026', heure: '10h30 - 12h30', modalite: 'présentiel' },
+    { date: '2026-11-26', jour: 'Jeudi 26 Novembre 2026', heure: '12h30 - 14h30', modalite: 'distanciel' },
+    { date: '2026-12-05', jour: 'Samedi 5 Décembre 2026', heure: '10h30 - 12h30', modalite: 'présentiel' },
+    { date: '2026-12-17', jour: 'Jeudi 17 Décembre 2026', heure: '12h30 - 14h30', modalite: 'distanciel' },
+    { date: '2027-01-09', jour: 'Samedi 9 Janvier 2027', heure: '10h30 - 12h30', modalite: 'présentiel' }
   ]
 
   // Dates à afficher selon la formation sélectionnée (filtrées automatiquement)
@@ -99,15 +149,29 @@ export default function SInscrire() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    
+    // Vérification honeypot côté client
+    if (honeypot) {
+      console.log('Honeypot déclenché')
+      return
+    }
+    
     setIsSubmitting(true)
+    setSubmitError('')
 
     try {
-      // Ajouter la modalité aux données envoyées
+      const recaptchaToken = recaptchaRef.current
+        ? await recaptchaRef.current.execute()
+        : null
+
       const dataToSend = {
         ...formData,
-        modalite: modaliteSelectionnee
+        modalite: modaliteSelectionnee,
+        honeypot,
+        timestamp: formTimestamp,
+        recaptchaToken,
       }
-      
+
       const response = await fetch('/api/inscription-reunion', {
         method: 'POST',
         headers: {
@@ -119,16 +183,18 @@ export default function SInscrire() {
       const data = await response.json()
 
       if (response.ok && data.success) {
+        recaptchaRef.current?.reset()
         setIsSubmitted(true)
       } else {
+        recaptchaRef.current?.reset()
         throw new Error(data.message || 'Erreur lors de l\'inscription')
       }
     } catch (error) {
+      recaptchaRef.current?.reset()
       console.error('Erreur lors de l\'envoi:', error)
-      console.error('Données envoyées:', dataToSend)
-      console.error('Response status:', response?.status)
-      console.error('Response data:', data)
-      alert(`Erreur lors de l'inscription: ${error.message}. Veuillez réessayer ou nous contacter directement.`)
+      setSubmitError(
+        `Erreur lors de l'inscription : ${error.message}. Veuillez réessayer ou nous contacter directement.`
+      )
     } finally {
       setIsSubmitting(false)
     }
@@ -209,7 +275,7 @@ export default function SInscrire() {
         <title>S'inscrire aux réunions d'information collective | Atipik RH</title>
         <meta name="description" content="Inscrivez-vous à nos réunions d'information pour découvrir nos formations. Réunions organisées 2 fois par mois, le samedi matin à Lormont." />
         <meta name="keywords" content="inscription, réunion information, formation, Atipik RH, Lormont, samedi" />
-        <link rel="canonical" href="https://atipikrh.fr/s-inscrire" />
+        <link rel="canonical" href="https://www.atipikrh.com/s-inscrire" />
       </Head>
 
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">
@@ -310,6 +376,7 @@ export default function SInscrire() {
                             <div>Questions / Réponses personnalisées</div>
                             <div>Informations sur les financements</div>
                           </div>
+                          <FinancementDisclaimer className="mt-4 text-left" />
                         </div>
                       </div>
                     </div>
@@ -320,6 +387,8 @@ export default function SInscrire() {
                     <h2 className="text-2xl font-bold text-[#013F63] mb-6">Formulaire d'inscription</h2>
                     
                     <form onSubmit={handleSubmit} className="space-y-6">
+                      <HoneypotField value={honeypot} onChange={(e) => setHoneypot(e.target.value)} />
+                      <FormAlert message={submitError} onDismiss={() => setSubmitError('')} />
                       <div>
                         <label htmlFor="formation" className="block text-sm font-medium text-[#013F63] mb-2">
                           Formation qui vous intéresse <span className="text-red-500">*</span>
@@ -525,6 +594,8 @@ export default function SInscrire() {
                       </div>
 
 
+                      <RecaptchaV2Invisible ref={recaptchaRef} />
+
                       <button
                         type="submit"
                         disabled={isSubmitting}
@@ -542,6 +613,28 @@ export default function SInscrire() {
                           'S\'inscrire à la réunion'
                         )}
                       </button>
+
+                      <p className="text-xs text-gray-500 text-center leading-relaxed">
+                        Ce site est protégé par reCAPTCHA.{' '}
+                        <a
+                          href="https://policies.google.com/privacy"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline hover:text-[#013F63]"
+                        >
+                          Politique de confidentialité
+                        </a>{' '}
+                        et{' '}
+                        <a
+                          href="https://policies.google.com/terms"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="underline hover:text-[#013F63]"
+                        >
+                          Conditions d&apos;utilisation
+                        </a>{' '}
+                        de Google.
+                      </p>
                     </form>
                   </div>
                 </div>

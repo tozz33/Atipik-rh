@@ -4,34 +4,48 @@
   "description": "Site web Atipik RH - Formation, Bilan de compétences & VAE à Lormont",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --webpack",
     "dev-no-hmr": "node dev-no-hmr.js",
     "build": "next build",
+    "prebuild": "npm run check:logos",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "dev-stable": "next dev",
-    "schema-test": "echo 'Schema validation placeholder'"
+    "dev-webpack": "next dev --webpack",
+    "schema-test": "tsx scripts/schema-test.ts",
+    "test": "node --test tests/**/*.test.mjs",
+    "check:all": "npm run lint && npx tsc --noEmit && npm run test && npm run schema-test && npm run check:logos",
+    "check:logos": "node scripts/verify-logos.mjs",
+    "check:seo": "node scripts/validate-seo-indexing.mjs",
+    "check:seo:prod": "node scripts/validate-rich-results.mjs && node scripts/validate-seo-indexing.mjs"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.16",
+    "browserslist": "^4.28.1",
     "clsx": "^2.0.0",
-    "lucide-react": "^0.294.0",
-    "next": "^14.0.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "lucide-react": "^0.562.0",
+    "next": "^16.1.1",
+    "node-releases": "^2.0.27",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "zod": "^3.24.2"
   },
   "devDependencies": {
-    "@types/node": "^20.10.5",
+    "@types/node": "^24.0.0",
     "@types/react": "^18.2.45",
     "@types/react-dom": "^18.2.18",
-    "autoprefixer": "^10.4.16",
-    "eslint": "^8.56.0",
-    "eslint-config-next": "^14.0.4",
+    "autoprefixer": "^10.4.24",
+    "eslint": "^9.39.2",
+    "eslint-config-next": "^16.1.1",
     "postcss": "^8.4.32",
     "tailwindcss": "^3.3.6",
+    "tsx": "^4.21.0",
     "typescript": "^5.3.3"
   },
   "engines": {
     "node": "24.x"
+  },
+  "optionalDependencies": {
+    "@next/swc-win32-x64-msvc": "^16.1.6"
   }
 }

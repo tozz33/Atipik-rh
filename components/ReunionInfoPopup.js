@@ -7,12 +7,12 @@ export default function ReunionInfoPopup() {
 
   return (
     <div className="fixed bottom-6 left-6 z-[9998]">
-      <div className="bg-white border-2 border-orange-500 rounded-2xl shadow-2xl transition-all duration-500 ease-in-out overflow-hidden w-80">
+      <div className="bg-white border-2 border-accent-500 rounded-2xl shadow-2xl transition-all duration-500 ease-in-out overflow-hidden w-80">
         {/* Header compact sur une ligne */}
-        <div className="bg-orange-500 text-white p-3 flex items-center justify-between">
+        <div className="bg-accent-500 text-white p-3 flex items-center justify-between">
           <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="flex items-center gap-2 hover:bg-orange-600 rounded px-2 py-1 transition-colors flex-1"
+            className="flex items-center gap-2 hover:bg-accent-600 rounded px-2 py-1 transition-colors flex-1"
           >
             <FileText className="w-5 h-5" />
             <span className="font-semibold text-sm whitespace-nowrap">Réunions d'information collective</span>
@@ -20,7 +20,7 @@ export default function ReunionInfoPopup() {
           <div className="flex items-center gap-1">
             <button
               onClick={() => setIsExpanded(!isExpanded)}
-              className="p-1 hover:bg-orange-600 rounded transition-colors"
+              className="p-1 hover:bg-accent-600 rounded transition-colors"
               title={isExpanded ? "Réduire" : "Agrandir"}
             >
               <ChevronRight className={`w-4 h-4 transition-transform duration-300 ${isExpanded ? 'rotate-90' : ''}`} />
@@ -29,7 +29,7 @@ export default function ReunionInfoPopup() {
             {isExpanded && (
               <button
                 onClick={() => setIsExpanded(false)}
-                className="p-1 hover:bg-orange-600 rounded transition-colors"
+                className="p-1 hover:bg-accent-600 rounded transition-colors"
                 title="Fermer"
               >
                 <X className="w-4 h-4" />
@@ -52,23 +52,23 @@ export default function ReunionInfoPopup() {
 
             <div className="space-y-3 mb-4">
               <div className="flex items-center gap-3 text-sm">
-                <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                <div className="w-2 h-2 bg-accent-500 rounded-full"></div>
                 <span className="text-[#013F63]">Formation FPA</span>
               </div>
               <div className="flex items-center gap-3 text-sm">
-                <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                <div className="w-2 h-2 bg-accent-500 rounded-full"></div>
                 <span className="text-[#013F63]">Formation CIP</span>
               </div>
             </div>
 
             <Link 
               href="/s-inscrire"
-              className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center"
+              className="w-full bg-accent-500 hover:bg-accent-600 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center"
             >
               <span>S'inscrire</span>
             </Link>
 
-            <p className="text-xs text-gray-500 text-center mt-3">
+            <p className="text-xs text-neutral-900 text-center mt-3">
               Réunions gratuites • Sans engagement
             </p>
           </div>

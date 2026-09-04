@@ -4,11 +4,12 @@ export default function Document() {
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": "https://atipikrh.fr/#organization",
+    "@id": "https://www.atipikrh.com/#organization",
     "name": "Atipik RH",
-    "url": "https://atipikrh.fr",
+    "url": "https://www.atipikrh.com",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "8 Rue du Courant",
       "addressLocality": "Lormont",
       "postalCode": "33310",
       "addressRegion": "Nouvelle-Aquitaine",
@@ -31,18 +32,12 @@ export default function Document() {
         {/* Preconnect pour optimiser le chargement des fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-T45Z2XRQ');`
-          }}
-        />
         
         {/* Préchargement de la police Brittany */}
         <link rel="preload" href="/Fonts/BrittanySignature.ttf" as="font" type="font/ttf" crossOrigin="" />
         
         {/* Meta tags génériques */}
         <meta charSet="utf-8" />
-        <meta name="robots" content="index, follow" />
         <meta name="author" content="Atipik RH" />
         
         {/* Favicon Atipik RH */}

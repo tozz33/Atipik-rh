@@ -3,13 +3,20 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
+import HoneypotField from '../../components/HoneypotField'
+import FormAlert from '../../components/FormAlert'
+import RecaptchaV3Script from '../../components/RecaptchaV3Script'
 import { CheckCircle, ArrowRight, ArrowLeft, Mail, Phone } from 'lucide-react'
+import { getRecaptchaToken } from '../../lib/recaptcha'
 
 export default function QuizBilanCompetences() {
   const [currentStep, setCurrentStep] = useState(0)
   const [answers, setAnswers] = useState({})
   const [userInfo, setUserInfo] = useState({ name: '', email: '', phone: '' })
   const [showResults, setShowResults] = useState(false)
+  const [honeypot, setHoneypot] = useState('')
+  const [formTimestamp] = useState(() => Date.now())
+  const [submitError, setSubmitError] = useState('')
 
   const questions = [
     {
@@ -111,7 +118,18 @@ export default function QuizBilanCompetences() {
   const handleUserInfoSubmit = async (e) => {
     e.preventDefault()
     
+    // Vérification honeypot côté client
+    if (honeypot) {
+      console.log('Honeypot déclenché')
+      return
+    }
+
+    setSubmitError('')
+    
     try {
+      // reCAPTCHA v3 (optionnel, dégradé silencieux si non configuré)
+      const recaptchaToken = await getRecaptchaToken('quiz_bilan')
+
       // Envoyer les données à notre API route côté serveur (plus fiable)
       const response = await fetch('/api/send-quiz-brevo', {
         method: 'POST',
@@ -121,7 +139,10 @@ export default function QuizBilanCompetences() {
         body: JSON.stringify({
           userInfo,
           answers,
-          questions
+          questions,
+          honeypot,
+          timestamp: formTimestamp,
+          recaptchaToken
         }),
       })
 
@@ -131,12 +152,14 @@ export default function QuizBilanCompetences() {
       } else {
         const errorData = await response.json()
         console.error('Erreur lors de l\'envoi:', errorData)
-        // Afficher l'erreur pour débogage
-        alert(`Erreur d'envoi: ${errorData.error} - ${errorData.details || ''}`)
+        const detail = errorData.message || errorData.error || 'Erreur inconnue'
+        setSubmitError(
+          `Erreur d'envoi : ${detail}${errorData.details ? ` — ${errorData.details}` : ''}`
+        )
       }
     } catch (error) {
       console.error('Erreur réseau:', error)
-      alert(`Erreur réseau: ${error.message}`)
+      setSubmitError(`Erreur réseau : ${error.message}`)
     }
     
     // Afficher les résultats même en cas d'erreur email
@@ -147,11 +170,12 @@ export default function QuizBilanCompetences() {
 
   return (
     <>
+      <RecaptchaV3Script />
       <Head>
         <title>Quiz : Avez-vous besoin d'un bilan de compétences ? | Atipik RH</title>
         <meta name="description" content="Découvrez en 8 questions si un bilan de compétences peut vous aider dans votre évolution professionnelle. Quiz gratuit et personnalisé." />
         <meta name="keywords" content="quiz bilan compétences, test orientation professionnelle, évaluation carrière, Bordeaux" />
-        <link rel="canonical" href="https://atipikrh.fr/bilan-de-competences/quiz" />
+        <link rel="canonical" href="https://www.atipikrh.com/bilan-de-competences/quiz" />
       </Head>
 
       <div className="min-h-screen bg-white">
@@ -236,6 +260,8 @@ export default function QuizBilanCompetences() {
                       </div>
 
                       <form onSubmit={handleUserInfoSubmit} className="max-w-md mx-auto space-y-6">
+                        <HoneypotField value={honeypot} onChange={(e) => setHoneypot(e.target.value)} />
+                        <FormAlert message={submitError} onDismiss={() => setSubmitError('')} />
                         <div>
                           <label htmlFor="name" className="block text-sm font-medium text-[#013F63] mb-2">
                             Votre prénom *

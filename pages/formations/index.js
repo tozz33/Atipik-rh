@@ -1,8 +1,10 @@
-import Head from 'next/head'
 import Link from 'next/link'
+import ServicePageSeoHead from '../../components/ServicePageSeoHead'
+import FormationFaqSection from '../../components/FormationFaqSection'
 import Image from 'next/image'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
+import { FORMATION_PRO_LIST } from '../../lib/seo/professionnalisantesConfig'
 import { 
   Clock, 
   Users, 
@@ -14,12 +16,7 @@ import {
 export default function FormationsIndex() {
   return (
     <>
-      <Head>
-        <title>Formations professionnelles à Bordeaux - Certifiantes & Professionnalisantes | Atipik RH</title>
-        <meta name="description" content="Formations certifiantes (CIP, FPA) et formations courtes professionnalisantes à Bordeaux. Toutes nos formations sont éligibles au CPF. Centre de formation à Lormont." />
-        <meta name="keywords" content="formations Bordeaux, CIP, FPA, formations courtes professionnalisantes, CPF, Lormont, formation professionnelle" />
-        <link rel="canonical" href="https://atipikrh.fr/formations" />
-      </Head>
+      <ServicePageSeoHead briefId="formations-hub" />
 
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">
         {/* Background animé global */}
@@ -34,7 +31,20 @@ export default function FormationsIndex() {
           {/* Spacer for fixed header */}
           <div className="h-20"></div>
 
-
+          <section className="py-8">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto text-center">
+                <h1 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4">
+                  Formations professionnelles à{' '}
+                  <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Bordeaux</span>{' '}
+                  et Lormont
+                </h1>
+                <p className="text-lg text-[#013F63] max-w-2xl mx-auto">
+                  Titres certifiants CIP, FPA, modules CCP (CIP et FPA) et formations courtes professionnalisantes — centre Qualiopi à Lormont.
+                </p>
+              </div>
+            </div>
+          </section>
 
           {/* Formations Certifiantes */}
           <section className="py-12">
@@ -75,15 +85,22 @@ export default function FormationsIndex() {
                         </div>
                       </div>
                       
-                      <div className="flex gap-3">
-                        <Link href="/formations/cip" className="flex-1 text-center px-4 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition group text-sm">
+                      <div className="flex flex-col gap-3">
+                        <Link href="/formations/cip" className="text-center px-4 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition group text-sm">
                           Formation complète CIP
                           <ArrowRight className="w-4 h-4 inline ml-2 group-hover:translate-x-1 transition-transform" />
                         </Link>
-                        <Link href="/formations/ccp3" className="flex-1 text-center px-4 py-3 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition group text-sm">
-                          Module CCP3 uniquement
-                          <ArrowRight className="w-4 h-4 inline ml-2 group-hover:translate-x-1 transition-transform" />
-                        </Link>
+                        <div className="grid grid-cols-3 gap-2">
+                          <Link href="/formations/ccp1" className="text-center px-2 py-2.5 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition text-xs">
+                            CCP1
+                          </Link>
+                          <Link href="/formations/ccp2" className="text-center px-2 py-2.5 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition text-xs">
+                            CCP2
+                          </Link>
+                          <Link href="/formations/ccp3" className="text-center px-2 py-2.5 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition text-xs">
+                            CCP3
+                          </Link>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -110,10 +127,26 @@ export default function FormationsIndex() {
                         </div>
                       </div>
                       
-                      <Link href="/formations/fpa" className="block w-full text-center px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition group">
-                        Découvrir
-                        <ArrowRight className="w-4 h-4 inline ml-2 group-hover:translate-x-1 transition-transform" />
-                      </Link>
+                      <div className="flex flex-col gap-3">
+                        <Link href="/formations/fpa" className="text-center px-4 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition group text-sm">
+                          Formation complète FPA
+                          <ArrowRight className="w-4 h-4 inline ml-2 group-hover:translate-x-1 transition-transform" />
+                        </Link>
+                        <div className="grid grid-cols-4 gap-2">
+                          <Link href="/formations/fpa/ccp1" className="text-center px-2 py-2.5 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition text-xs">
+                            CCP1
+                          </Link>
+                          <Link href="/formations/fpa/ccp2" className="text-center px-2 py-2.5 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition text-xs">
+                            CCP2
+                          </Link>
+                          <Link href="/formations/fpa/ccp3" className="text-center px-2 py-2.5 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition text-xs">
+                            CCP3
+                          </Link>
+                          <Link href="/formations/fpa/ccp4" className="text-center px-2 py-2.5 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition text-xs">
+                            CCP4
+                          </Link>
+                        </div>
+                      </div>
                     </div>
                   </div>
 
@@ -142,149 +175,181 @@ export default function FormationsIndex() {
                 
                 <div className="grid lg:grid-cols-2 gap-8 justify-center">
                   
-                  {/* Formation 1 - Développer la relation entreprise */}
-                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:scale-105 flex flex-col">
-                    <div className="text-center flex-1 flex flex-col">
-                      <div className="h-24 flex flex-col justify-center mb-6">
-                        <h3 className="text-lg font-bold text-[#013F63] mb-2 leading-tight">
-                          DÉVELOPPER LA RELATION ENTREPRISE
-                        </h3>
-                        <p className="text-base text-[#013F63] font-medium">
-                          De l'accompagnement à la relation entreprise
-                        </p>
-                      </div>
-                      
-                      <div className="space-y-3 mb-8 text-sm text-[#013F63] flex-1">
-                        <div className="flex items-center justify-center gap-2">
-                          <Clock className="w-4 h-4" />
-                          <span>3 jours</span>
-                        </div>
-                        <div className="flex items-center justify-center gap-2">
-                          <Users className="w-4 h-4" />
-                          <span>10-12 personnes</span>
-                        </div>
-                        <div className="flex items-center justify-center gap-2">
-                          <Award className="w-4 h-4" />
-                          <span>Attestation de formation</span>
-                        </div>
-                      </div>
-                      
-                      <div className="mt-auto">
-                        <Link href="/formations/professionnalisantes/developper-relation-entreprise" className="block w-full text-center px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition group">
-                          Découvrir
-                          <ArrowRight className="w-4 h-4 inline ml-2 group-hover:translate-x-1 transition-transform" />
-                        </Link>
-                      </div>
-                    </div>
+                  {/* Titre de section - Professionels de l'insertion */}
+                  <div className="lg:col-span-2 mb-4">
+                    <h3 className="text-3xl lg:text-4xl font-bold text-[#013F63] text-center mb-4">
+                      <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Professionnels</span> de l'insertion
+                    </h3>
                   </div>
 
-                  {/* Formation 2 - Renforcer la relation avec l'entreprise */}
-                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:scale-105 flex flex-col">
-                    <div className="text-center flex-1 flex flex-col">
-                      <div className="h-24 flex flex-col justify-center mb-6">
-                        <h3 className="text-lg font-bold text-[#013F63] mb-2 leading-tight">
-                          RENFORCER LA RELATION AVEC L'ENTREPRISE
-                        </h3>
-                        <p className="text-base text-[#013F63] font-medium">
-                          De la prospection à la valorisation de votre offre
-                        </p>
-                      </div>
-                      
-                      <div className="space-y-3 mb-8 text-sm text-[#013F63] flex-1">
-                        <div className="flex items-center justify-center gap-2">
-                          <Clock className="w-4 h-4" />
-                          <span>3 jours</span>
+                  {/* Formations 1 à 3 — config centralisée */}
+                  {FORMATION_PRO_LIST.slice(0, 3).map((f) => (
+                    <div key={f.slug} className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:scale-105 flex flex-col">
+                      <div className="text-center flex-1 flex flex-col">
+                        <div className="h-24 flex flex-col justify-center mb-6">
+                          <h3 className="text-lg font-bold text-[#013F63] mb-2 leading-tight">
+                            {f.titreCarte}
+                          </h3>
+                          <p className="text-base text-[#013F63] font-medium">
+                            {f.sousTitreCarte}
+                          </p>
                         </div>
-                        <div className="flex items-center justify-center gap-2">
-                          <Users className="w-4 h-4" />
-                          <span>10-12 personnes</span>
+
+                        <div className="space-y-3 mb-8 text-sm text-[#013F63] flex-1">
+                          <div className="flex items-center justify-center gap-2">
+                            <Clock className="w-4 h-4" />
+                            <span>21 heures</span>
+                          </div>
+                          <div className="flex items-center justify-center gap-2">
+                            <Users className="w-4 h-4" />
+                            <span>4 à 12 personnes par session</span>
+                          </div>
+                          <div className="flex items-center justify-center gap-2">
+                            <Award className="w-4 h-4" />
+                            <span>Attestation de formation</span>
+                          </div>
                         </div>
-                        <div className="flex items-center justify-center gap-2">
-                          <Award className="w-4 h-4" />
-                          <span>Attestation de formation</span>
+
+                        <div className="mt-auto">
+                          <Link href={f.path} className="block w-full text-center px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition group">
+                            Découvrir
+                            <ArrowRight className="w-4 h-4 inline ml-2 group-hover:translate-x-1 transition-transform" />
+                          </Link>
                         </div>
-                      </div>
-                      
-                      <div className="mt-auto">
-                        <Link href="/formations/professionnalisantes/renforcer-relation-entreprise" className="block w-full text-center px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition group">
-                          Découvrir
-                          <ArrowRight className="w-4 h-4 inline ml-2 group-hover:translate-x-1 transition-transform" />
-                        </Link>
                       </div>
                     </div>
+                  ))}
+
+                  {/* Titre de section - Professionels des RH et du recrutement */}
+                  <div className="lg:col-span-2 mt-8 mb-4">
+                    <h3 className="text-3xl lg:text-4xl font-bold text-[#013F63] text-center mb-4">
+                      <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Professionnels</span> des RH et du recrutement
+                    </h3>
                   </div>
 
-                  {/* Formation 3 - Recruter en insertion avec les entreprises */}
-                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:scale-105 flex flex-col">
-                    <div className="text-center flex-1 flex flex-col">
-                      <div className="h-24 flex flex-col justify-center mb-6">
-                        <h3 className="text-lg font-bold text-[#013F63] mb-2 leading-tight">
-                          RECRUTER EN INSERTION AVEC LES ENTREPRISES
-                        </h3>
-                        <p className="text-base text-[#013F63] font-medium">
-                          De la co-construction à l'accompagnement stratégique RH
-                        </p>
-                      </div>
-                      
-                      <div className="space-y-3 mb-8 text-sm text-[#013F63] flex-1">
-                        <div className="flex items-center justify-center gap-2">
-                          <Clock className="w-4 h-4" />
-                          <span>3 jours</span>
+                  {FORMATION_PRO_LIST.slice(3, 4).map((f) => (
+                    <div key={f.slug} className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:scale-105 flex flex-col">
+                      <div className="text-center flex-1 flex flex-col">
+                        <div className="h-32 flex flex-col justify-center mb-6">
+                          <h3 className="text-lg font-bold text-[#013F63] mb-2 leading-tight">
+                            {f.titreCarte}
+                          </h3>
+                          {f.carteBadge && (
+                            <p className="text-base text-orange-500 font-medium">
+                              {f.carteBadge}
+                            </p>
+                          )}
+                          <p className="text-base text-[#013F63] font-medium">
+                            {f.sousTitreCarte}
+                          </p>
                         </div>
-                        <div className="flex items-center justify-center gap-2">
-                          <Users className="w-4 h-4" />
-                          <span>10-12 personnes</span>
+
+                        <div className="space-y-3 mb-8 text-sm text-[#013F63] flex-1">
+                          <div className="flex items-center justify-center gap-2">
+                            <Clock className="w-4 h-4" />
+                            <span>11 heures</span>
+                          </div>
+                          <div className="flex items-center justify-center gap-2">
+                            <Users className="w-4 h-4" />
+                            <span>4 à 12 personnes par session</span>
+                          </div>
+                          <div className="flex items-center justify-center gap-2">
+                            <Award className="w-4 h-4" />
+                            <span>Attestation de formation</span>
+                          </div>
                         </div>
-                        <div className="flex items-center justify-center gap-2">
-                          <Award className="w-4 h-4" />
-                          <span>Attestation de formation</span>
+
+                        <div className="mt-auto">
+                          <Link href={f.path} className="block w-full text-center px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition group">
+                            Découvrir
+                            <ArrowRight className="w-4 h-4 inline ml-2 group-hover:translate-x-1 transition-transform" />
+                          </Link>
                         </div>
-                      </div>
-                      
-                      <div className="mt-auto">
-                        <Link href="/formations/professionnalisantes/recruter-insertion-entreprises" className="block w-full text-center px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition group">
-                          Découvrir
-                          <ArrowRight className="w-4 h-4 inline ml-2 group-hover:translate-x-1 transition-transform" />
-                        </Link>
                       </div>
                     </div>
+                  ))}
+
+                  {FORMATION_PRO_LIST.slice(4, 5).map((f) => (
+                    <div key={f.slug} className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:scale-105 flex flex-col">
+                      <div className="text-center flex-1 flex flex-col">
+                        <div className="h-24 flex flex-col justify-center mb-6">
+                          <h3 className="text-lg font-bold text-[#013F63] mb-2 leading-tight">
+                            {f.titreCarte}
+                          </h3>
+                          <p className="text-base text-[#013F63] font-medium">
+                            {f.sousTitreCarte}
+                          </p>
+                        </div>
+
+                        <div className="space-y-3 mb-8 text-sm text-[#013F63] flex-1">
+                          <div className="flex items-center justify-center gap-2">
+                            <Clock className="w-4 h-4" />
+                            <span>11 heures</span>
+                          </div>
+                          <div className="flex items-center justify-center gap-2">
+                            <Users className="w-4 h-4" />
+                            <span>4 à 12 personnes par session</span>
+                          </div>
+                          <div className="flex items-center justify-center gap-2">
+                            <Award className="w-4 h-4" />
+                            <span>Attestation de formation</span>
+                          </div>
+                        </div>
+
+                        <div className="mt-auto">
+                          <Link href={f.path} className="block w-full text-center px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition group">
+                            Découvrir
+                            <ArrowRight className="w-4 h-4 inline ml-2 group-hover:translate-x-1 transition-transform" />
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+
+                  {/* Titre de section - Transformation numérique */}
+                  <div className="lg:col-span-2 mt-8 mb-4">
+                    <h3 className="text-3xl lg:text-4xl font-bold text-[#013F63] text-center mb-4">
+                      <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Transformation</span>{' '}
+                      numérique des pratiques professionnelles
+                    </h3>
                   </div>
 
-                  {/* Formation 4 - Renforcer sa pratique des recrutement inclusif */}
-                  <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:scale-105 flex flex-col">
-                    <div className="text-center flex-1 flex flex-col">
-                      <div className="h-24 flex flex-col justify-center mb-6">
-                        <h3 className="text-lg font-bold text-[#013F63] mb-2 leading-tight">
-                          RENFORCER SA PRATIQUE DU RECRUTEMENT INCLUSIF
-                        </h3>
-                        <p className="text-base text-[#013F63] font-medium">
-                          De la diversité à la performance RH
-                        </p>
-                      </div>
-                      
-                      <div className="space-y-3 mb-8 text-sm text-[#013F63] flex-1">
-                        <div className="flex items-center justify-center gap-2">
-                          <Clock className="w-4 h-4" />
-                          <span>3 jours</span>
+                  {FORMATION_PRO_LIST.slice(5, 7).map((f) => (
+                    <div key={f.slug} className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:scale-105 flex flex-col">
+                      <div className="text-center flex-1 flex flex-col">
+                        <div className="h-24 flex flex-col justify-center mb-6">
+                          <h3 className="text-lg font-bold text-[#013F63] mb-2 leading-tight">
+                            {f.titreCarte}
+                          </h3>
+                          <p className="text-base text-[#013F63] font-medium">
+                            {f.sousTitreCarte}
+                          </p>
                         </div>
-                        <div className="flex items-center justify-center gap-2">
-                          <Users className="w-4 h-4" />
-                          <span>10-12 personnes</span>
+
+                        <div className="space-y-3 mb-8 text-sm text-[#013F63] flex-1">
+                          <div className="flex items-center justify-center gap-2">
+                            <Clock className="w-4 h-4" />
+                            <span>14 heures</span>
+                          </div>
+                          <div className="flex items-center justify-center gap-2">
+                            <Users className="w-4 h-4" />
+                            <span>4 à 12 personnes par session</span>
+                          </div>
+                          <div className="flex items-center justify-center gap-2">
+                            <Award className="w-4 h-4" />
+                            <span>Attestation de formation</span>
+                          </div>
                         </div>
-                        <div className="flex items-center justify-center gap-2">
-                          <Award className="w-4 h-4" />
-                          <span>Attestation de formation</span>
+
+                        <div className="mt-auto">
+                          <Link href={f.path} className="block w-full text-center px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition group">
+                            Découvrir
+                            <ArrowRight className="w-4 h-4 inline ml-2 group-hover:translate-x-1 transition-transform" />
+                          </Link>
                         </div>
-                      </div>
-                      
-                      <div className="mt-auto">
-                        <Link href="/formations/professionnalisantes/renforcer-pratique-recrutement-inclusif" className="block w-full text-center px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition group">
-                          Découvrir
-                          <ArrowRight className="w-4 h-4 inline ml-2 group-hover:translate-x-1 transition-transform" />
-                        </Link>
                       </div>
                     </div>
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -360,6 +425,21 @@ export default function FormationsIndex() {
             </div>
           </section>
 
+          <section className="py-8">
+            <div className="container mx-auto px-4 max-w-3xl text-center">
+              <p className="text-[#013F63] text-sm">
+                <Link href="/reconversion-professionnelle-bordeaux" className="font-semibold text-orange-500 hover:underline">
+                  Reconversion professionnelle à Bordeaux
+                </Link>
+                {' · '}
+                <Link href="/organisme-formation-insertion-professionnelle" className="font-semibold text-orange-500 hover:underline">
+                  Organisme de formation insertion
+                </Link>
+              </p>
+            </div>
+          </section>
+
+          <FormationFaqSection briefId="formations-hub" />
           <Footer />
         </div>
 

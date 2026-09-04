@@ -15,7 +15,7 @@ export default function NotreEquipe() {
         <title>Notre équipe | Atipik RH - Les spécialistes qui vous accompagnent</title>
         <meta name="description" content="Découvrez l'équipe d'Atipik RH : formatrices expertes, consultantes insertion professionnelle qui vous accompagnent dans votre projet." />
         <meta name="keywords" content="équipe Atipik RH, formatrices expertes, consultantes emploi, formation professionnelle Lormont" />
-        <link rel="canonical" href="https://atipikrh.fr/notre-equipe" />
+        <link rel="canonical" href="https://www.atipikrh.com/notre-equipe" />
       </Head>
 
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50">
@@ -116,16 +116,16 @@ export default function NotreEquipe() {
                     <p className="text-orange-500 text-base mb-3">FONDATRICE ET DIRECTRICE</p>
                   </div>
 
-                  {/* Liliana - Communication */}
+                  {/* Mathilde - Administrative */}
                   <div className="text-center">
-                    <Link href="/equipe/liliana-almeida" className="inline-block mb-4">
+                    <Link href="/equipe/mathilde-bastian" className="inline-block mb-4">
                       <div className="w-40 h-40 mx-auto group [perspective:1000px]">
                         <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                           {/* Face avant - Photo */}
                           <div className="absolute inset-0 [backface-visibility:hidden] rounded-full">
                             <Image
-                              src="/images/equipe/liliana.jpeg"
-                              alt="Liliana ALMEIDA"
+                              src="/images/equipe/mathilde.jpeg"
+                              alt="Mathilde BASTIAN"
                               width={160}
                               height={160}
                               className="w-full h-full rounded-full object-cover cursor-pointer"
@@ -139,9 +139,9 @@ export default function NotreEquipe() {
                       </div>
                     </Link>
                     <h3 className="text-lg text-[#013F63] mb-1">
-                      <span className="text-lg">Liliana</span> <span className="font-semibold">ALMEIDA</span>
+                      <span className="text-lg">Mathilde</span> <span className="font-semibold">BASTIAN</span>
                     </h3>
-                    <p className="text-orange-500 text-base mb-3">CHARGÉE DE COMMUNICATION</p>
+                    <p className="text-orange-500 text-base mb-3">ASSISTANTE ADMINISTRATIVE</p>
                   </div>
                 </div>
               </div>

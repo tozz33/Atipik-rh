@@ -38,7 +38,7 @@ export default function ReunionInfoModal() {
       <div 
         className={`
           fixed z-[10000] w-full max-w-md
-          inset-x-0 bottom-0 md:bottom-6 md:left-6 md:inset-x-auto md:w-auto
+          inset-x-0 bottom-20 md:bottom-6 md:left-6 md:inset-x-auto md:w-auto
           flex items-center justify-center md:items-end md:justify-start
           p-4 md:p-0
           ${isClosing ? 'pointer-events-none' : 'pointer-events-auto'}
@@ -62,7 +62,7 @@ export default function ReunionInfoModal() {
           {/* Bouton fermer */}
           <button
             onClick={handleClose}
-            className="absolute top-3 right-3 p-1.5 bg-white/90 hover:bg-white text-gray-500 hover:text-[#013F63] rounded-full transition-all duration-300 shadow-md hover:shadow-lg hover:scale-110 z-10"
+            className="absolute top-3 right-3 p-1.5 bg-white/90 hover:bg-white text-neutral-900 hover:text-[#013F63] rounded-full transition-all duration-300 shadow-md hover:shadow-lg hover:scale-110 z-10"
             aria-label="Fermer"
           >
             <X className="w-4 h-4" />
@@ -72,11 +72,11 @@ export default function ReunionInfoModal() {
           <div className="p-6 md:p-6">
             {/* En-tête avec police Brittany */}
             <div className="text-center mb-6 md:mb-5">
-              <h3 className="font-brittany text-3xl md:text-2xl text-[#013F63] mb-3 md:mb-2 leading-tight whitespace-nowrap">
+              <h3 className="font-brittany text-3xl md:text-2xl text-[#013F63] mb-3 md:mb-2 leading-tight text-balance">
                 Découvrez notre formation
               </h3>
               <div className="w-24 md:w-20 h-1 bg-[#FE6400] mx-auto mb-3 md:mb-2 rounded-full"></div>
-              <p className="text-sm md:text-xs text-gray-600 font-medium font-sans">
+              <p className="text-sm md:text-xs text-neutral-900 font-medium font-sans">
                 Réunion d'information collective
               </p>
               <p className="text-xs text-[#FE6400] mt-2 md:mt-1 font-medium font-sans">
@@ -86,7 +86,7 @@ export default function ReunionInfoModal() {
 
             {/* Introduction */}
             <div className="mb-5 md:mb-4">
-              <p className="text-sm md:text-xs text-gray-700 leading-relaxed text-center font-sans">
+              <p className="text-sm md:text-xs text-neutral-900 leading-relaxed text-center font-sans">
                 <span className="font-semibold text-[#013F63]">Vanessa</span>, notre directrice, vous présente :
               </p>
             </div>
@@ -97,35 +97,35 @@ export default function ReunionInfoModal() {
                 <div className="flex-shrink-0">
                   <div className="w-2 h-2 md:w-1.5 md:h-1.5 rounded-full bg-[#FE6400]"></div>
                 </div>
-                <span className="text-sm md:text-xs text-gray-700 leading-relaxed font-sans">Notre équipe pédagogique</span>
+                <span className="text-sm md:text-xs text-neutral-900 leading-relaxed font-sans">Notre équipe pédagogique</span>
               </div>
               
               <div className="flex items-center gap-3 md:gap-2">
                 <div className="flex-shrink-0">
                   <div className="w-2 h-2 md:w-1.5 md:h-1.5 rounded-full bg-[#FE6400]"></div>
                 </div>
-                <span className="text-sm md:text-xs text-gray-700 leading-relaxed font-sans">Le contenu détaillé de la formation</span>
+                <span className="text-sm md:text-xs text-neutral-900 leading-relaxed font-sans">Le contenu détaillé de la formation</span>
               </div>
               
               <div className="flex items-center gap-3 md:gap-2">
                 <div className="flex-shrink-0">
                   <div className="w-2 h-2 md:w-1.5 md:h-1.5 rounded-full bg-[#FE6400]"></div>
                 </div>
-                <span className="text-sm md:text-xs text-gray-700 leading-relaxed font-sans">Notre approche pédagogique au plus près du réel</span>
+                <span className="text-sm md:text-xs text-neutral-900 leading-relaxed font-sans">Notre approche pédagogique au plus près du réel</span>
               </div>
               
               <div className="flex items-center gap-3 md:gap-2">
                 <div className="flex-shrink-0">
                   <div className="w-2 h-2 md:w-1.5 md:h-1.5 rounded-full bg-[#FE6400]"></div>
                 </div>
-                <span className="text-sm md:text-xs text-gray-700 leading-relaxed font-sans">Les débouchés professionnels</span>
+                <span className="text-sm md:text-xs text-neutral-900 leading-relaxed font-sans">Les débouchés professionnels</span>
               </div>
               
               <div className="flex items-center gap-3 md:gap-2">
                 <div className="flex-shrink-0">
                   <div className="w-2 h-2 md:w-1.5 md:h-1.5 rounded-full bg-[#FE6400]"></div>
                 </div>
-                <span className="text-sm md:text-xs text-gray-700 leading-relaxed font-sans">Les possibilités de financement</span>
+                <span className="text-sm md:text-xs text-neutral-900 leading-relaxed font-sans">Les possibilités de financement</span>
               </div>
             </div>
 
@@ -142,7 +142,7 @@ export default function ReunionInfoModal() {
             </Link>
 
             {/* Footer */}
-            <p className="text-xs text-gray-400 text-center mt-4 md:mt-3 font-sans">
+            <p className="text-xs text-neutral-900 text-center mt-4 md:mt-3 font-sans">
               Durée : 2h
             </p>
           </div>

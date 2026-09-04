@@ -5,7 +5,11 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import HoneypotField from '../components/HoneypotField'
+import FormAlert from '../components/FormAlert'
+import RecaptchaV3Script from '../components/RecaptchaV3Script'
 import { MapPin, Phone, Mail, Clock, Send, MessageCircle, Calendar, Facebook, Instagram, Linkedin } from 'lucide-react'
+import { getRecaptchaToken } from '../lib/recaptcha'
 
 export default function Contact() {
   const router = useRouter()
@@ -17,31 +21,56 @@ export default function Contact() {
     sujet: '',
     message: ''
   })
+  const [honeypot, setHoneypot] = useState('')
+  const [formTimestamp, setFormTimestamp] = useState(null)
+
+  useEffect(() => {
+    // Enregistrer le timestamp de chargement du formulaire
+    setFormTimestamp(Date.now())
+  }, [])
 
   useEffect(() => {
     // Pré-remplir le formulaire en fonction des paramètres d'URL
     if (router.isReady) {
       const { sujet, formule, message } = router.query
-      
-      console.log('Paramètres d\'URL reçus:', { sujet, formule, message })
-      
-      if (sujet) {
-        setFormData(prev => ({ ...prev, sujet: sujet }))
+
+      const sujetStr = Array.isArray(sujet) ? sujet[0] : sujet
+      if (sujetStr) {
+        setFormData((prev) => ({ ...prev, sujet: sujetStr }))
       }
-      
-      if (formule) {
-        const formuleMessage = `Formule : ${formule}\n\n`
-        setFormData(prev => ({ 
-          ...prev, 
-          message: formuleMessage + (message || '') 
+
+      const formuleStr = Array.isArray(formule) ? formule[0] : formule
+      const messageStr = Array.isArray(message) ? message[0] : message
+      if (formuleStr) {
+        const formuleMessage = `Formule : ${formuleStr}\n\n`
+        setFormData((prev) => ({
+          ...prev,
+          message: formuleMessage + (messageStr || ''),
         }))
       }
-      
-      if (message && !formule) {
-        setFormData(prev => ({ ...prev, message: message }))
+
+      if (messageStr && !formuleStr) {
+        setFormData((prev) => ({ ...prev, message: messageStr }))
       }
     }
   }, [router.isReady, router.query])
+
+  useEffect(() => {
+    if (!router.isReady || typeof window === 'undefined') return
+    const q = router.query
+    const utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term']
+    const payload = { event: 'contact_page_context', page_path: router.asPath.split('?')[0] }
+    let hasUtm = false
+    utmKeys.forEach((k) => {
+      const v = q[k]
+      if (v == null) return
+      hasUtm = true
+      payload[k] = Array.isArray(v) ? v[0] : v
+    })
+    if (!hasUtm) return
+    window.dataLayer = window.dataLayer || []
+    window.dataLayer.push(payload)
+  }, [router.isReady, router.asPath, router.query])
 
   const handleInputChange = (e) => {
     const { name, value } = e.target
@@ -53,18 +82,35 @@ export default function Contact() {
 
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [submitError, setSubmitError] = useState('')
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    
+    // Vérification honeypot côté client
+    if (honeypot) {
+      console.log('Honeypot déclenché')
+      return
+    }
+    
     setIsSubmitting(true)
+    setSubmitError('')
 
     try {
+      // reCAPTCHA v3 (optionnel, dégradé silencieux si non configuré)
+      const recaptchaToken = await getRecaptchaToken('contact_form')
+
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          honeypot,
+          timestamp: formTimestamp,
+          recaptchaToken
+        }),
       })
 
       const data = await response.json()
@@ -76,7 +122,9 @@ export default function Contact() {
       }
     } catch (error) {
       console.error('Erreur lors de l\'envoi:', error)
-      alert(`Erreur lors de l'envoi du message: ${error.message}. Veuillez réessayer ou nous contacter directement.`)
+      setSubmitError(
+        `Erreur lors de l'envoi du message : ${error.message}. Veuillez réessayer ou nous contacter directement.`
+      )
     } finally {
       setIsSubmitting(false)
     }
@@ -154,11 +202,12 @@ export default function Contact() {
 
     return (
     <>
+      <RecaptchaV3Script />
       <Head>
         <title>Contact - Atipik RH | Centre de formation à Lormont</title>
         <meta name="description" content="Contactez Atipik RH pour vos projets de formation, bilan de compétences et VAE à Lormont. Échangeons sur vos objectifs professionnels." />
         <meta name="keywords" content="contact Atipik RH, formation Lormont, rendez-vous bilan compétences, contact VAE Bordeaux" />
-        <link rel="canonical" href="https://atipikrh.fr/contact" />
+        <link rel="canonical" href="https://www.atipikrh.com/contact" />
       </Head>
 
       <div className="min-h-screen bg-white">
@@ -202,6 +251,8 @@ export default function Contact() {
                   </div>
                   
                   <form onSubmit={handleSubmit}>
+                  <HoneypotField value={honeypot} onChange={(e) => setHoneypot(e.target.value)} />
+                  <FormAlert message={submitError} onDismiss={() => setSubmitError('')} />
                   <div className="space-y-5">
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>

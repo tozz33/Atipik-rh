@@ -1,0 +1,62 @@
+===========================================
+  GUIDE DE DEMARRAGE RAPIDE - ATIPIK RH
+===========================================
+
+ETAPE 1 : INSTALLER NODE.JS
+----------------------------
+1. Allez sur : https://nodejs.org/
+2. Cliquez sur le bouton vert "LTS" (version recommandee)
+3. Installez le fichier telecharge
+4. IMPORTANT : Cochez "Add to PATH" pendant l'installation
+5. Redemarrez PowerShell apres l'installation
+
+ETAPE 2 : VERIFIER L'INSTALLATION
+----------------------------------
+Ouvrez un NOUVEAU PowerShell et tapez :
+    node --version
+    npm --version
+
+Vous devriez voir des numeros de version (ex: v20.x.x et 10.x.x)
+
+ETAPE 3 : INSTALLER LES DEPENDANCES
+------------------------------------
+Dans le dossier du projet, tapez :
+    npm install
+
+Cette etape peut prendre quelques minutes la premiere fois.
+
+ETAPE 4 : DEMARRER LE SERVEUR
+------------------------------
+Tapez :
+    npm run dev
+
+Ou double-cliquez sur : demarrer-serveur.
+bat
+ETAPE 5 : OUVRIR LE SITE
+-------------------------
+Une fois le message "Ready" apparu, ouvrez votre navigateur et allez sur :
+    http://localhost:3000
+
+ARRETER LE SERVEUR
+-------------------
+Appuyez sur Ctrl+C dans le terminal PowerShell
+
+===========================================
+  PROBLEMES COURANTS
+===========================================
+
+"node n'est pas reconnu"
+-> Node.js n'est pas installe OU pas dans le PATH
+-> Redemarrez PowerShell apres l'installation
+-> Verifiez avec : where node
+
+"npm install echoue"
+-> Verifiez votre connexion Internet
+-> Essayez : npm install --verbose
+
+"Le port 3000 est deja utilise"
+-> Fermez les autres applications qui utilisent ce port
+-> Ou changez le port : npm run dev -- -p 3001
+
+===========================================
+
