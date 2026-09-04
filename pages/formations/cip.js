@@ -1160,14 +1160,14 @@ export default function FormationCIP() {
                                 ))}
                               </div>
                               
-                              {/* Note spéciale pour le CCP 3 */}
-                              {module.id === 3 && (
+                              {/* Note spéciale pour les CCP disponibles séparément */}
+                              {(module.id === 1 || module.id === 2 || module.id === 3) && (
                                 <div className="mt-4 p-3 bg-orange-50 border-l-4 border-orange-400 rounded-r-lg">
                                   <p className="text-sm text-orange-700 font-medium mb-3">
                                     <strong>Formation disponible séparément</strong>
                                   </p>
                                   <Link 
-                                    href="/formations/ccp3"
+                                    href={`/formations/ccp${module.id}`}
                                     className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition-colors text-sm"
                                   >
                                     En savoir plus

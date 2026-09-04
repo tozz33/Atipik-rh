@@ -385,6 +385,12 @@ export function getSecondaryKeywords(clusterId: string): string[] {
 export const BRIEF_CLUSTER_MAP: Record<string, string> = {
   'formation-cip': 'formation-cip-bordeaux',
   'formation-fpa': 'formation-fpa-nouvelle-aquitaine',
+  'formation-fpa-ccp1': 'formation-fpa-nouvelle-aquitaine',
+  'formation-fpa-ccp2': 'formation-fpa-nouvelle-aquitaine',
+  'formation-fpa-ccp3': 'formation-fpa-nouvelle-aquitaine',
+  'formation-fpa-ccp4': 'formation-fpa-nouvelle-aquitaine',
+  'formation-ccp1': 'formation-cip-bordeaux',
+  'formation-ccp2': 'formation-cip-bordeaux',
   'formation-ccp3': 'formation-cip-bordeaux',
   'formations-hub': 'organisme-insertion',
   'bilan-competences-local': 'bilan-competences-lormont',

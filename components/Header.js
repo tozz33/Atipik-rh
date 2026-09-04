@@ -6,6 +6,7 @@ import { FORMATION_PRO_LIST } from '../lib/seo/professionnalisantesConfig'
 export default function Header({ isFixed = false, isHomePage = false }) {
   const [isFormationsOpen, setIsFormationsOpen] = useState(false)
   const [isCIPSubMenuOpen, setIsCIPSubMenuOpen] = useState(false)
+  const [isFPASubMenuOpen, setIsFPASubMenuOpen] = useState(false)
   const [isCourtesSubMenuOpen, setIsCourtesSubMenuOpen] = useState(false)
   const [isQuiSommesNousOpen, setIsQuiSommesNousOpen] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -13,6 +14,7 @@ export default function Header({ isFixed = false, isHomePage = false }) {
   // États pour le menu mobile
   const [isMobileFormationsOpen, setIsMobileFormationsOpen] = useState(false)
   const [isMobileCIPOpen, setIsMobileCIPOpen] = useState(false)
+  const [isMobileFPAOpen, setIsMobileFPAOpen] = useState(false)
   const [isMobileCourtesOpen, setIsMobileCourtesOpen] = useState(false)
   const [isMobileQuiSommesNousOpen, setIsMobileQuiSommesNousOpen] = useState(false)
   
@@ -144,22 +146,84 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                           Formation complète
                         </Link>
                         <Link 
+                          href="/formations/ccp1" 
+                          className="block px-4 py-3 text-sm text-[#013F63] hover:bg-muted-blue-200 hover:text-[#012a4a] transition-colors border-t border-muted-blue-200 font-medium"
+                        >
+                          CCP1
+                        </Link>
+                        <Link 
+                          href="/formations/ccp2" 
+                          className="block px-4 py-3 text-sm text-[#013F63] hover:bg-muted-blue-200 hover:text-[#012a4a] transition-colors border-t border-muted-blue-200 font-medium"
+                        >
+                          CCP2
+                        </Link>
+                        <Link 
                           href="/formations/ccp3" 
                           className="block px-4 py-3 text-sm text-[#013F63] hover:bg-muted-blue-200 hover:text-[#012a4a] transition-colors border-t border-muted-blue-200 font-medium"
                         >
-                          CCP3 uniquement
+                          CCP3
                         </Link>
                       </div>
                     </div>
                   </div>
                   
-                  <Link 
-                    href="/formations/fpa" 
-                    className="block px-4 py-3 text-sm text-[#013F63] hover:bg-muted-blue-200 hover:text-[#012a4a] transition-colors border-t border-muted-blue-200"
+                  {/* Formation FPA avec sous-menu à droite */}
+                  <div 
+                    className="relative group/fpa border-t border-muted-blue-200"
+                    onMouseEnter={() => setIsFPASubMenuOpen(true)}
+                    onMouseLeave={() => setIsFPASubMenuOpen(false)}
                   >
-                    <div className="font-medium">Formation FPA</div>
-                    <div className="text-xs text-accent-500">Formateur Professionnel d'Adultes</div>
-                  </Link>
+                    <Link 
+                      href="/formations"
+                      className="block px-4 py-3 text-sm text-[#013F63] hover:bg-muted-blue-200 hover:text-[#012a4a] transition-colors"
+                    >
+                      <div className="font-medium flex items-center justify-between">
+                        Formation FPA
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </div>
+                      <div className="text-xs text-accent-500">Formateur Professionnel d'Adultes</div>
+                    </Link>
+                    
+                    {/* Sous-menu à droite */}
+                    <div className={`absolute left-full top-0 ml-2 w-56 bg-white rounded-lg shadow-lg border border-muted-blue-200 transition-all duration-200 z-[10000] ${
+                      isFPASubMenuOpen ? 'opacity-100 visible transform translate-x-0' : 'opacity-0 invisible transform -translate-x-2'
+                    }`}>
+                      <div className="py-2">
+                        <Link 
+                          href="/formations/fpa" 
+                          className="block px-4 py-3 text-sm text-[#013F63] hover:bg-muted-blue-200 hover:text-[#012a4a] transition-colors font-medium"
+                        >
+                          Formation complète
+                        </Link>
+                        <Link 
+                          href="/formations/fpa/ccp1" 
+                          className="block px-4 py-3 text-sm text-[#013F63] hover:bg-muted-blue-200 hover:text-[#012a4a] transition-colors border-t border-muted-blue-200 font-medium"
+                        >
+                          CCP1
+                        </Link>
+                        <Link 
+                          href="/formations/fpa/ccp2" 
+                          className="block px-4 py-3 text-sm text-[#013F63] hover:bg-muted-blue-200 hover:text-[#012a4a] transition-colors border-t border-muted-blue-200 font-medium"
+                        >
+                          CCP2
+                        </Link>
+                        <Link 
+                          href="/formations/fpa/ccp3" 
+                          className="block px-4 py-3 text-sm text-[#013F63] hover:bg-muted-blue-200 hover:text-[#012a4a] transition-colors border-t border-muted-blue-200 font-medium"
+                        >
+                          CCP3
+                        </Link>
+                        <Link 
+                          href="/formations/fpa/ccp4" 
+                          className="block px-4 py-3 text-sm text-[#013F63] hover:bg-muted-blue-200 hover:text-[#012a4a] transition-colors border-t border-muted-blue-200 font-medium"
+                        >
+                          CCP4
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
                   
                   {/* Formations courtes professionnalisantes avec sous-menu à droite */}
                   <div 
@@ -337,23 +401,85 @@ export default function Header({ isFixed = false, isHomePage = false }) {
                               Formation complète
                             </Link>
                             <Link 
+                              href="/formations/ccp1" 
+                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              CCP1
+                            </Link>
+                            <Link 
+                              href="/formations/ccp2" 
+                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              CCP2
+                            </Link>
+                            <Link 
                               href="/formations/ccp3" 
                               className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
                               onClick={() => setIsMobileMenuOpen(false)}
                             >
-                              CCP3 uniquement
+                              CCP3
                             </Link>
                           </div>
                         )}
                       </div>
                       
-                      <Link 
-                        href="/formations/fpa" 
-                        className="block text-sm text-[#013F63] hover:text-[#012a4a] py-2"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        Formation FPA
-                      </Link>
+                      <div>
+                        <button
+                          className="text-sm text-[#013F63] hover:text-[#012a4a] font-medium py-2 flex items-center justify-between w-full"
+                          onClick={() => setIsMobileFPAOpen(!isMobileFPAOpen)}
+                        >
+                          Formation FPA
+                          <svg 
+                            className={`w-3 h-3 transition-transform ${isMobileFPAOpen ? 'rotate-180' : ''}`} 
+                            fill="none" 
+                            stroke="currentColor" 
+                            viewBox="0 0 24 24"
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </button>
+                        {isMobileFPAOpen && (
+                          <div className="ml-4 space-y-1">
+                            <Link 
+                              href="/formations/fpa" 
+                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              Formation complète
+                            </Link>
+                            <Link 
+                              href="/formations/fpa/ccp1" 
+                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              CCP1
+                            </Link>
+                            <Link 
+                              href="/formations/fpa/ccp2" 
+                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              CCP2
+                            </Link>
+                            <Link 
+                              href="/formations/fpa/ccp3" 
+                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              CCP3
+                            </Link>
+                            <Link 
+                              href="/formations/fpa/ccp4" 
+                              className="block text-xs text-[#013F63] hover:text-[#012a4a] py-1"
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              CCP4
+                            </Link>
+                          </div>
+                        )}
+                      </div>
                       
                       <div>
                         <button

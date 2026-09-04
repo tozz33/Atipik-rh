@@ -467,6 +467,12 @@ const SERP_SNAPSHOTS: SerpSnapshot[] = [
 const BRIEF_SERP_MAP: Record<string, string> = {
   'formation-cip': 'serp-formation-cip-bordeaux',
   'formation-fpa': 'serp-fpa-na',
+  'formation-fpa-ccp1': 'serp-fpa-na',
+  'formation-fpa-ccp2': 'serp-fpa-na',
+  'formation-fpa-ccp3': 'serp-fpa-na',
+  'formation-fpa-ccp4': 'serp-fpa-na',
+  'formation-ccp1': 'serp-formation-cip-bordeaux',
+  'formation-ccp2': 'serp-formation-cip-bordeaux',
   'formation-ccp3': 'serp-formation-cip-bordeaux',
   'formations-hub': 'serp-organisme-insertion',
   'bilan-competences-local': 'serp-bilan-lormont',

@@ -40,7 +40,7 @@ export default function FormationsIndex() {
                   et Lormont
                 </h1>
                 <p className="text-lg text-[#013F63] max-w-2xl mx-auto">
-                  Titres certifiants CIP, FPA, module CCP3 et formations courtes professionnalisantes — centre Qualiopi à Lormont.
+                  Titres certifiants CIP, FPA, modules CCP (CIP et FPA) et formations courtes professionnalisantes — centre Qualiopi à Lormont.
                 </p>
               </div>
             </div>
@@ -85,15 +85,22 @@ export default function FormationsIndex() {
                         </div>
                       </div>
                       
-                      <div className="flex gap-3">
-                        <Link href="/formations/cip" className="flex-1 text-center px-4 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition group text-sm">
+                      <div className="flex flex-col gap-3">
+                        <Link href="/formations/cip" className="text-center px-4 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition group text-sm">
                           Formation complète CIP
                           <ArrowRight className="w-4 h-4 inline ml-2 group-hover:translate-x-1 transition-transform" />
                         </Link>
-                        <Link href="/formations/ccp3" className="flex-1 text-center px-4 py-3 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition group text-sm">
-                          Module CCP3 uniquement
-                          <ArrowRight className="w-4 h-4 inline ml-2 group-hover:translate-x-1 transition-transform" />
-                        </Link>
+                        <div className="grid grid-cols-3 gap-2">
+                          <Link href="/formations/ccp1" className="text-center px-2 py-2.5 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition text-xs">
+                            CCP1
+                          </Link>
+                          <Link href="/formations/ccp2" className="text-center px-2 py-2.5 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition text-xs">
+                            CCP2
+                          </Link>
+                          <Link href="/formations/ccp3" className="text-center px-2 py-2.5 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition text-xs">
+                            CCP3
+                          </Link>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -120,10 +127,26 @@ export default function FormationsIndex() {
                         </div>
                       </div>
                       
-                      <Link href="/formations/fpa" className="block w-full text-center px-6 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition group">
-                        Découvrir
-                        <ArrowRight className="w-4 h-4 inline ml-2 group-hover:translate-x-1 transition-transform" />
-                      </Link>
+                      <div className="flex flex-col gap-3">
+                        <Link href="/formations/fpa" className="text-center px-4 py-3 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold transition group text-sm">
+                          Formation complète FPA
+                          <ArrowRight className="w-4 h-4 inline ml-2 group-hover:translate-x-1 transition-transform" />
+                        </Link>
+                        <div className="grid grid-cols-4 gap-2">
+                          <Link href="/formations/fpa/ccp1" className="text-center px-2 py-2.5 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition text-xs">
+                            CCP1
+                          </Link>
+                          <Link href="/formations/fpa/ccp2" className="text-center px-2 py-2.5 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition text-xs">
+                            CCP2
+                          </Link>
+                          <Link href="/formations/fpa/ccp3" className="text-center px-2 py-2.5 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition text-xs">
+                            CCP3
+                          </Link>
+                          <Link href="/formations/fpa/ccp4" className="text-center px-2 py-2.5 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition text-xs">
+                            CCP4
+                          </Link>
+                        </div>
+                      </div>
                     </div>
                   </div>
 

@@ -116,6 +116,268 @@ const BRIEFS: ContentBrief[] = [
     existingPagePath: '/formations/fpa',
   },
   {
+    id: 'formation-fpa-ccp1',
+    clusterId: 'formation-fpa-nouvelle-aquitaine',
+    serpSnapshotId: 'serp-fpa-na',
+    pageType: 'cluster',
+    h1: 'Formation FPA CCP1 — Concevoir et Préparer une Formation',
+    metaTitle: 'Formation FPA CCP1 — concevoir une formation | Atipik RH Lormont',
+    metaDescription:
+      'Module certifiant CCP1 FPA (350 h : 245 h centre + 105 h stage) — concevoir et préparer une formation. Tarif 3 560 € TTC. Titre FPA niveau 5 (RNCP37275BC01). Atipik RH Lormont.',
+    recommendedSlug: '/formations/fpa/ccp1',
+    primaryKeywords: ['formation FPA CCP1', 'formateur adultes certifiant Nouvelle-Aquitaine'],
+    longTailKeywords: [],
+    intent: 'commercial',
+    personas: ['reconversion-40plus', 'professionnel-insertion'],
+    faq: [
+      {
+        question: 'Quelle différence entre le CCP1 FPA et le parcours FPA complet ?',
+        answer:
+          'Le CCP1 FPA dure 350 h (245 h centre + 105 h stage) et porte sur la conception et la préparation de formation. Le parcours FPA complet (934 h, 7 mois) couvre les quatre blocs CCP. Notre équipe vous oriente selon votre profil en réunion d’information.',
+      },
+      {
+        question: 'Quel est le tarif du CCP1 FPA ?',
+        answer: 'Le tarif public est de 3 560 € TTC. Des tarifs selon profil (salariés, demandeurs d’emploi, etc.) sont possibles — contactez Atipik RH.',
+      },
+      {
+        question: 'Où se déroule la formation ?',
+        answer: 'Au centre Atipik RH, 8 Rue du Courant, Lormont (Bordeaux Métropole).',
+      },
+      {
+        question: 'Comment financer le CCP1 FPA ?',
+        answer: faqFinancement('CPF et dispositifs selon profil — voir la page financement.'),
+      },
+    ],
+    internalLinks: [
+      { label: 'Parcours FPA complet', href: '/formations/fpa', anchorIntent: 'parcours alternatif' },
+      { label: 'CCP2 FPA', href: '/formations/fpa/ccp2', anchorIntent: 'module voisin' },
+      { label: 'CCP3 FPA', href: '/formations/fpa/ccp3', anchorIntent: 'module voisin' },
+      { label: 'CCP4 FPA', href: '/formations/fpa/ccp4', anchorIntent: 'module voisin' },
+      { label: 'Financement', href: '/financement', anchorIntent: 'financement' },
+    ],
+    schemaTypes: ['Course', 'FAQPage'],
+    eeatSignals: SHARED_EEAT,
+    existingPagePath: '/formations/fpa/ccp1',
+  },
+  {
+    id: 'formation-fpa-ccp2',
+    clusterId: 'formation-fpa-nouvelle-aquitaine',
+    serpSnapshotId: 'serp-fpa-na',
+    pageType: 'cluster',
+    h1: 'Formation FPA CCP2 — Animer une Formation et Évaluer les Acquis',
+    metaTitle: 'Formation FPA CCP2 — animer et évaluer | Atipik RH Lormont',
+    metaDescription:
+      'Module certifiant CCP2 FPA (280 h : 175 h centre + 105 h stage) — animer une formation et évaluer les acquis. Tarif 2 545 € TTC. Titre FPA niveau 5 (RNCP37275BC02). Atipik RH Lormont.',
+    recommendedSlug: '/formations/fpa/ccp2',
+    primaryKeywords: ['formation FPA CCP2', 'formateur adultes certifiant Nouvelle-Aquitaine'],
+    longTailKeywords: [],
+    intent: 'commercial',
+    personas: ['reconversion-40plus', 'professionnel-insertion'],
+    faq: [
+      {
+        question: 'Quelle différence entre le CCP2 FPA et le parcours FPA complet ?',
+        answer:
+          'Le CCP2 FPA dure 280 h (175 h centre + 105 h stage) et porte sur l’animation et l’évaluation des acquis. Le parcours FPA complet (934 h, 7 mois) couvre les quatre blocs CCP. Notre équipe vous oriente selon votre profil en réunion d’information.',
+      },
+      {
+        question: 'Quel est le tarif du CCP2 FPA ?',
+        answer: 'Le tarif public est de 2 545 € TTC. Des tarifs selon profil sont possibles — contactez Atipik RH.',
+      },
+      {
+        question: 'Où se déroule la formation ?',
+        answer: 'Au centre Atipik RH, 8 Rue du Courant, Lormont (Bordeaux Métropole).',
+      },
+      {
+        question: 'Comment financer le CCP2 FPA ?',
+        answer: faqFinancement('CPF et dispositifs selon profil — voir la page financement.'),
+      },
+    ],
+    internalLinks: [
+      { label: 'Parcours FPA complet', href: '/formations/fpa', anchorIntent: 'parcours alternatif' },
+      { label: 'CCP1 FPA', href: '/formations/fpa/ccp1', anchorIntent: 'module voisin' },
+      { label: 'CCP3 FPA', href: '/formations/fpa/ccp3', anchorIntent: 'module voisin' },
+      { label: 'CCP4 FPA', href: '/formations/fpa/ccp4', anchorIntent: 'module voisin' },
+      { label: 'Financement', href: '/financement', anchorIntent: 'financement' },
+    ],
+    schemaTypes: ['Course', 'FAQPage'],
+    eeatSignals: SHARED_EEAT,
+    existingPagePath: '/formations/fpa/ccp2',
+  },
+  {
+    id: 'formation-fpa-ccp3',
+    clusterId: 'formation-fpa-nouvelle-aquitaine',
+    serpSnapshotId: 'serp-fpa-na',
+    pageType: 'cluster',
+    h1: 'Formation FPA CCP3 — Accompagner les Apprenants en Formation',
+    metaTitle: 'Formation FPA CCP3 — accompagner les apprenants | Atipik RH Lormont',
+    metaDescription:
+      'Module certifiant CCP3 FPA (210 h : 105 h centre + 105 h stage) — accompagner les apprenants en formation. Tarif 2 228 € TTC. Titre FPA niveau 5 (RNCP37275BC03). Atipik RH Lormont.',
+    recommendedSlug: '/formations/fpa/ccp3',
+    primaryKeywords: ['formation FPA CCP3', 'formateur adultes certifiant Nouvelle-Aquitaine'],
+    longTailKeywords: [],
+    intent: 'commercial',
+    personas: ['reconversion-40plus', 'professionnel-insertion'],
+    faq: [
+      {
+        question: 'Quelle différence entre le CCP3 FPA et le parcours FPA complet ?',
+        answer:
+          'Le CCP3 FPA dure 210 h (105 h centre + 105 h stage) et porte sur l’accompagnement des apprenants. Le parcours FPA complet (934 h, 7 mois) couvre les quatre blocs CCP. Notre équipe vous oriente selon votre profil en réunion d’information.',
+      },
+      {
+        question: 'Quel est le tarif du CCP3 FPA ?',
+        answer: 'Le tarif public est de 2 228 € TTC. Des tarifs selon profil sont possibles — contactez Atipik RH.',
+      },
+      {
+        question: 'Où se déroule la formation ?',
+        answer: 'Au centre Atipik RH, 8 Rue du Courant, Lormont (Bordeaux Métropole).',
+      },
+      {
+        question: 'Comment financer le CCP3 FPA ?',
+        answer: faqFinancement('CPF et dispositifs selon profil — voir la page financement.'),
+      },
+    ],
+    internalLinks: [
+      { label: 'Parcours FPA complet', href: '/formations/fpa', anchorIntent: 'parcours alternatif' },
+      { label: 'CCP1 FPA', href: '/formations/fpa/ccp1', anchorIntent: 'module voisin' },
+      { label: 'CCP2 FPA', href: '/formations/fpa/ccp2', anchorIntent: 'module voisin' },
+      { label: 'CCP4 FPA', href: '/formations/fpa/ccp4', anchorIntent: 'module voisin' },
+      { label: 'Financement', href: '/financement', anchorIntent: 'financement' },
+    ],
+    schemaTypes: ['Course', 'FAQPage'],
+    eeatSignals: SHARED_EEAT,
+    existingPagePath: '/formations/fpa/ccp3',
+  },
+  {
+    id: 'formation-fpa-ccp4',
+    clusterId: 'formation-fpa-nouvelle-aquitaine',
+    serpSnapshotId: 'serp-fpa-na',
+    pageType: 'cluster',
+    h1: 'Formation FPA CCP4 — Qualité, Réglementation et RSE en Formation',
+    metaTitle: 'Formation FPA CCP4 — qualité et RSE | Atipik RH Lormont',
+    metaDescription:
+      'Module certifiant CCP4 FPA (161 h : 91 h centre + 70 h stage) — qualité, réglementation et RSE. Tarif 1 931 € TTC. Titre FPA niveau 5 (RNCP37275BC04). Atipik RH Lormont.',
+    recommendedSlug: '/formations/fpa/ccp4',
+    primaryKeywords: ['formation FPA CCP4', 'formateur adultes certifiant Nouvelle-Aquitaine'],
+    longTailKeywords: [],
+    intent: 'commercial',
+    personas: ['reconversion-40plus', 'professionnel-insertion'],
+    faq: [
+      {
+        question: 'Quelle différence entre le CCP4 FPA et le parcours FPA complet ?',
+        answer:
+          'Le CCP4 FPA dure 161 h (91 h centre + 70 h stage) et porte sur la qualité, la réglementation et la RSE. Le parcours FPA complet (934 h, 7 mois) couvre les quatre blocs CCP. Notre équipe vous oriente selon votre profil en réunion d’information.',
+      },
+      {
+        question: 'Quel est le tarif du CCP4 FPA ?',
+        answer: 'Le tarif public est de 1 931 € TTC. Des tarifs selon profil sont possibles — contactez Atipik RH.',
+      },
+      {
+        question: 'Où se déroule la formation ?',
+        answer: 'Au centre Atipik RH, 8 Rue du Courant, Lormont (Bordeaux Métropole).',
+      },
+      {
+        question: 'Comment financer le CCP4 FPA ?',
+        answer: faqFinancement('CPF et dispositifs selon profil — voir la page financement.'),
+      },
+    ],
+    internalLinks: [
+      { label: 'Parcours FPA complet', href: '/formations/fpa', anchorIntent: 'parcours alternatif' },
+      { label: 'CCP1 FPA', href: '/formations/fpa/ccp1', anchorIntent: 'module voisin' },
+      { label: 'CCP2 FPA', href: '/formations/fpa/ccp2', anchorIntent: 'module voisin' },
+      { label: 'CCP3 FPA', href: '/formations/fpa/ccp3', anchorIntent: 'module voisin' },
+      { label: 'Financement', href: '/financement', anchorIntent: 'financement' },
+    ],
+    schemaTypes: ['Course', 'FAQPage'],
+    eeatSignals: SHARED_EEAT,
+    existingPagePath: '/formations/fpa/ccp4',
+  },
+  {
+    id: 'formation-ccp1',
+    clusterId: 'formation-cip-bordeaux',
+    serpSnapshotId: 'serp-formation-cip-bordeaux',
+    pageType: 'cluster',
+    h1: 'Formation CCP1 — Conseiller en Insertion Professionnelle',
+    metaTitle: 'Formation CCP1 — accueil et diagnostic CIP | Atipik RH Lormont',
+    metaDescription:
+      'Module certifiant CCP1 (220 h) : accueil, analyse de la demande et diagnostic partagé, titre CIP niveau 5. Atipik RH à Lormont. Financement CPF possible.',
+    recommendedSlug: '/formations/ccp1',
+    primaryKeywords: ['formation CCP1', 'conseiller insertion professionnelle certifiant'],
+    longTailKeywords: [],
+    intent: 'commercial',
+    personas: ['professionnel-insertion', 'demandeur-emploi'],
+    faq: [
+      {
+        question: 'Quelle différence entre CCP1 et le parcours CIP complet ?',
+        answer:
+          'Le CCP1 est un module de 220 h (150 h centre + 70 h stage) orienté accueil et diagnostic partagé. Le parcours CIP complet (948 h, 8 mois) couvre l’ensemble des blocs du titre. Notre équipe vous oriente selon votre profil en réunion d’information.',
+      },
+      {
+        question: 'La formation inclut-elle du temps en structure ?',
+        answer: 'Oui, le parcours prévoit 70 heures de stage en entreprise ou en structure d’accueil.',
+      },
+      {
+        question: 'Où se déroule la formation ?',
+        answer: 'Au centre Atipik RH, 8 Rue du Courant, Lormont.',
+      },
+      {
+        question: 'Comment candidater ?',
+        answer: 'Via la page contact ou les réunions d’information sur s-inscrire.',
+      },
+    ],
+    internalLinks: [
+      { label: 'Formation CIP', href: '/formations/cip', anchorIntent: 'parcours alternatif' },
+      { label: 'CCP2', href: '/formations/ccp2', anchorIntent: 'module voisin' },
+      { label: 'CCP3', href: '/formations/ccp3', anchorIntent: 'module voisin' },
+      { label: 'Financement', href: '/financement', anchorIntent: 'financement' },
+    ],
+    schemaTypes: ['Course', 'FAQPage'],
+    eeatSignals: SHARED_EEAT,
+    existingPagePath: '/formations/ccp1',
+  },
+  {
+    id: 'formation-ccp2',
+    clusterId: 'formation-cip-bordeaux',
+    serpSnapshotId: 'serp-formation-cip-bordeaux',
+    pageType: 'cluster',
+    h1: 'Formation CCP2 — Conseiller en Insertion Professionnelle',
+    metaTitle: 'Formation CCP2 — accompagnement de parcours CIP | Atipik RH Lormont',
+    metaDescription:
+      'Module certifiant CCP2 (435 h) : accompagnement des parcours d’insertion, ateliers et analyse de pratique, titre CIP niveau 5. Atipik RH à Lormont.',
+    recommendedSlug: '/formations/ccp2',
+    primaryKeywords: ['formation CCP2', 'conseiller insertion professionnelle certifiant'],
+    longTailKeywords: [],
+    intent: 'commercial',
+    personas: ['professionnel-insertion', 'demandeur-emploi'],
+    faq: [
+      {
+        question: 'Quelle différence entre CCP2 et le parcours CIP complet ?',
+        answer:
+          'Le CCP2 est un module de 435 h (175 h centre + 260 h stage) orienté accompagnement de parcours. Le parcours CIP complet (948 h, 8 mois) couvre l’ensemble des blocs du titre. Notre équipe vous oriente selon votre profil en réunion d’information.',
+      },
+      {
+        question: 'La formation inclut-elle du temps en structure ?',
+        answer: 'Oui, le parcours prévoit 260 heures de stage en entreprise ou en structure d’accueil.',
+      },
+      {
+        question: 'Où se déroule la formation ?',
+        answer: 'Au centre Atipik RH, 8 Rue du Courant, Lormont.',
+      },
+      {
+        question: 'Comment candidater ?',
+        answer: 'Via la page contact ou les réunions d’information sur s-inscrire.',
+      },
+    ],
+    internalLinks: [
+      { label: 'Formation CIP', href: '/formations/cip', anchorIntent: 'parcours alternatif' },
+      { label: 'CCP1', href: '/formations/ccp1', anchorIntent: 'module voisin' },
+      { label: 'CCP3', href: '/formations/ccp3', anchorIntent: 'module voisin' },
+      { label: 'Financement', href: '/financement', anchorIntent: 'financement' },
+    ],
+    schemaTypes: ['Course', 'FAQPage'],
+    eeatSignals: SHARED_EEAT,
+    existingPagePath: '/formations/ccp2',
+  },
+  {
     id: 'formation-ccp3',
     clusterId: 'formation-cip-bordeaux',
     serpSnapshotId: 'serp-formation-cip-bordeaux',
@@ -150,6 +412,8 @@ const BRIEFS: ContentBrief[] = [
     ],
     internalLinks: [
       { label: 'Formation CIP', href: '/formations/cip', anchorIntent: 'parcours alternatif' },
+      { label: 'CCP1', href: '/formations/ccp1', anchorIntent: 'module voisin' },
+      { label: 'CCP2', href: '/formations/ccp2', anchorIntent: 'module voisin' },
       { label: 'Financement', href: '/financement', anchorIntent: 'financement' },
     ],
     schemaTypes: ['Course', 'FAQPage'],
@@ -164,7 +428,7 @@ const BRIEFS: ContentBrief[] = [
     h1: 'Formations professionnelles à Bordeaux et Lormont',
     metaTitle: 'Formations certifiantes & professionnalisantes | Atipik RH',
     metaDescription:
-      'CIP, FPA, CCP3 et formations professionnalisantes à Lormont, près de Bordeaux. Titres certifiants CPF ; cours selon financeur. Qualiopi.',
+      'CIP, FPA, CCP1, CCP2, CCP3 et formations professionnalisantes à Lormont, près de Bordeaux. Titres certifiants CPF ; cours selon financeur. Qualiopi.',
     recommendedSlug: '/formations',
     primaryKeywords: ['formations professionnelles Bordeaux', 'organisme formation Lormont'],
     longTailKeywords: [],
@@ -173,7 +437,7 @@ const BRIEFS: ContentBrief[] = [
     faq: [
       {
         question: 'Quelles formations certifiantes propose Atipik RH ?',
-        answer: 'CIP, FPA, CCP3 et bilans de compétences — voir chaque fiche dédiée.',
+        answer: 'CIP, FPA, CCP1, CCP2, CCP3 et bilans de compétences — voir chaque fiche dédiée.',
       },
       {
         question: 'Où est situé le centre de formation ?',

@@ -6,56 +6,34 @@ import FormationStickyCta from '../../components/FormationStickyCta'
 import FormationTarifSection from '../../components/FormationTarifSection'
 import { getCertifianteContactHref } from '../../lib/seo/certifiantesConfig'
 
-const CONTACT_HREF = getCertifianteContactHref('formation-fpa')
+const CONTACT_HREF = getCertifianteContactHref('formation-ccp1')
 import { useState, useEffect, useRef } from 'react'
 import { useIsClient, useIsMobile } from '../../hooks/useClientViewport'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import ReunionInfoModal from '../../components/ReunionInfoModal'
 
-import { 
-  Award, 
-  Clock, 
-  Shield, 
-  CheckCircle, 
-  ArrowRight,
-  Star,
-  ChevronDown,
-  MapPin,
-  Heart,
-  Lightbulb,
-  UserCheck,
-  Users,
-  BookOpen,
-  Target,
-  Phone,
-  Mail,
-  ChevronUp,
-  ChevronLeft,
-  ChevronRight,
-  GraduationCap
-} from 'lucide-react'
+import { Clock, Users, MapPin, Calendar, GraduationCap, CheckCircle, ArrowRight, CreditCard, BookOpen, Target, Award, Phone, Mail, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, UserCheck } from 'lucide-react'
 import Image from 'next/image'
 
 const STATS = [
-  { label: "Nombre de stagiaires formés", value: "À venir" },
-  { label: "Taux de satisfaction", value: "À venir" },
-  { label: "Taux de présentation au titre préparé", value: "À venir" },
-  { label: "Taux d'obtention du titre", value: "À venir" },
-  { label: "Taux d'insertion dans le métier visé à 6 mois", value: "À venir" },
-  { label: "Taux d'insertion globale à 6 mois", value: "À venir" }
+  { label: "Nombre de stagiaires formés", value: "19" },
+  { label: "Taux de satisfaction", value: "9,7/10" },
+  { label: "Taux de présentation au titre préparé", value: "100%" },
+  { label: "Taux d'obtention du titre", value: "95%" },
+  { label: "Taux d'insertion dans le métier visé à 6 mois", value: "67%" },
+  { label: "Taux d'insertion globale à 6 mois", value: "78%" }
 ]
 
 const FRANCE_COMPETENCES_STATS = [
-  { label: "Nombre de certifiés", value: "2516" },
-  { label: "Nombre de certifiés à la suite d'un parcours VAE", value: "133" },
-  { label: "Taux d'insertion global à 6 mois", value: "78%" },
-  { label: "Taux d'insertion dans le métier visé à 6 mois", value: "68%" },
-  { label: "Taux d'insertion dans le métier visé à 2 ans", value: "56%" }
+  { label: "Nombre de certifiés", value: "2303" },
+  { label: "Nombre de certifiés à la suite d'un parcours VAE", value: "39" },
+  { label: "Taux d'insertion global à 6 mois", value: "88%" },
+  { label: "Taux d'insertion dans le métier visé à 6 mois", value: "72%" },
+  { label: "Taux d'insertion dans le métier visé à 2 ans", value: "85%" }
 ]
 
-export default function FormationFPA() {
-  const [openFaq, setOpenFaq] = useState(null)
+export default function FormationCCP1() {
   const [openModules, setOpenModules] = useState({})
   const [openSections, setOpenSections] = useState({})
   const [isVisible, setIsVisible] = useState(false)
@@ -69,13 +47,6 @@ export default function FormationFPA() {
   const [currentFinancementIndex, setCurrentFinancementIndex] = useState(0)
   const isClient = useIsClient()
   const isMobile = useIsMobile()
-  const statsRef = useRef(null)
-  const franceStatsRef = useRef(null)
-  const accordeonsRef = useRef(null)
-  const carteBleueRef = useRef(null)
-  const timelineRef = useRef(null)
-  const circle3Ref = useRef(null)
-  const [timelineHeight, setTimelineHeight] = useState('calc(100% - 72px)')
 
   // Données des financements
   const financements = [
@@ -130,7 +101,7 @@ export default function FormationFPA() {
     },
     {
       id: 'faf',
-      logo: '/images/financements/Logo-FAFCEA.jpg',
+      logo: '/images/financements/logo-faf.jpeg',
       titre: 'FAF',
       description: 'Indépendants',
       logoWidth: 60,
@@ -154,10 +125,11 @@ export default function FormationFPA() {
     }
     return result
   }
-
-  const toggleFaq = (index) => {
-    setOpenFaq(openFaq === index ? null : index);
-  };
+  const statsRef = useRef(null)
+  const franceStatsRef = useRef(null)
+  const timelineRef = useRef(null)
+  const circle3Ref = useRef(null)
+  const [timelineHeight, setTimelineHeight] = useState('calc(100% - 72px)')
 
   const toggleModule = (moduleId) => {
     setOpenModules(prev => ({
@@ -173,63 +145,6 @@ export default function FormationFPA() {
     }))
   }
 
-  // Synchroniser la hauteur de la carte bleue avec les accordéons fermés (structure identique à CIP)
-  useEffect(() => {
-    const updateHeight = () => {
-      if (accordeonsRef.current && carteBleueRef.current) {
-        // Calculer la hauteur uniquement des boutons fermés (sans le contenu déroulé)
-        let totalHeight = 0
-        const accordeons = accordeonsRef.current.querySelectorAll('div.bg-white.rounded-xl')
-        
-        accordeons.forEach((accordeon) => {
-          const button = accordeon.querySelector('button')
-          if (button) {
-            totalHeight += button.offsetHeight
-          }
-        })
-        
-        // Ajouter les espaces entre les accordéons (space-y-4 = 16px)
-        const spaces = (accordeons.length - 1) * 16
-        totalHeight += spaces
-        
-        carteBleueRef.current.style.height = `${totalHeight}px`
-      }
-    }
-
-    // Mettre à jour au montage
-    if (isClient) {
-      setTimeout(updateHeight, 100)
-    }
-    
-    // Observer les changements de taille de la fenêtre
-    const handleResize = () => {
-      setTimeout(updateHeight, 100)
-    }
-    window.addEventListener('resize', handleResize)
-
-    // Observer les changements de taille des accordéons
-    let resizeObserver = null
-    if (isClient && accordeonsRef.current) {
-      resizeObserver = new ResizeObserver(() => {
-        setTimeout(updateHeight, 50)
-      })
-      
-      const accordeons = accordeonsRef.current.querySelectorAll('div.bg-white.rounded-xl')
-      accordeons.forEach((accordeon) => {
-        const button = accordeon.querySelector('button')
-        if (button) {
-          resizeObserver.observe(button)
-        }
-      })
-    }
-
-    return () => {
-      window.removeEventListener('resize', handleResize)
-      if (resizeObserver) {
-        resizeObserver.disconnect()
-      }
-    }
-  }, [isClient])
 
   // Calculer la hauteur de la ligne de la timeline jusqu'au centre du cercle 3
   useEffect(() => {
@@ -276,7 +191,7 @@ export default function FormationFPA() {
       const elapsed = currentTime - startTime
       const progress = Math.min(elapsed / duration, 1)
       
-      const current = Math.max(0, Math.floor(start + (end - start) * progress))
+      const current = Math.floor(start + (end - start) * progress)
       callback(current)
       
       if (progress < 1) {
@@ -300,11 +215,29 @@ export default function FormationFPA() {
           // Animer les statistiques Atipik RH
           STATS.forEach((stat, index) => {
             setTimeout(() => {
-              if (stat.value === "À venir") {
-                setAnimatedStats(prev => ({
-                  ...prev,
-                  [index]: "À venir"
-                }))
+              if (stat.value === "9,7/10") {
+                // Cas spécial pour le taux de satisfaction
+                animateCounter(0, 97, 2000, (current) => {
+                  setAnimatedStats(prev => ({
+                    ...prev,
+                    [index]: `${(current / 10).toFixed(1)}/10`
+                  }))
+                })
+              } else {
+                const numericValue = parseInt(stat.value.replace(/[^\d]/g, ''))
+                if (!isNaN(numericValue)) {
+                  animateCounter(0, numericValue, 2000, (current) => {
+                    setAnimatedStats(prev => ({
+                      ...prev,
+                      [index]: stat.value.includes('%') ? `${current}%` : current.toString()
+                    }))
+                  })
+                } else {
+                  setAnimatedStats(prev => ({
+                    ...prev,
+                    [index]: stat.value
+                  }))
+                }
               }
             }, index * 200)
           })
@@ -338,13 +271,9 @@ export default function FormationFPA() {
               const numericValue = parseInt(stat.value.replace(/[^\d]/g, ''))
               if (!isNaN(numericValue)) {
                 animateCounter(0, numericValue, 2000, (current) => {
-                  const safe = Math.max(0, current)
-                  const formatted = stat.value.includes('%')
-                    ? `${safe}%`
-                    : safe.toLocaleString('fr-FR')
                   setAnimatedFranceStats(prev => ({
                     ...prev,
-                    [index]: formatted
+                    [index]: stat.value.includes('%') ? `${current}%` : current.toString()
                   }))
                 })
               } else {
@@ -372,50 +301,80 @@ export default function FormationFPA() {
   const modules = [
     {
       id: 1,
-      titre: "Concevoir et préparer la formation",
+      titre: "Accueillir pour analyser la demande des personnes et poser les bases d'un diagnostic",
       sousTitre: "C.C.P 1",
       contenu: [
-        "Élaborer la progression pédagogique d'une formation multimodale à partir d'une demande",
-        "Concevoir un scénario pédagogique et d'accompagnement en intégrant la multimodalité",
-        "Concevoir des activités d'apprentissage et d'évaluation en intégrant la multimodalité"
+        "Informer une personne ou un groupe sur les ressources en matière d'insertion et services dématérialisés",
+        "Analyser la demande de la personne et poser les bases d'un diagnostic partagé",
+        "Exercer une veille pour adapter son activité au public et au contexte",
+        "Travailler en équipe et en réseau, dans un cadre partenarial pour optimiser la réponse aux besoins des personnes accueillies",
+        "Réaliser le traitement administratif et les écrits professionnels liés à l'activité dans un environnement numérique"
       ]
     },
     {
       id: 2,
-      titre: "Animer une formation et évaluer les acquis des apprenants",
+      titre: "Accompagner les personnes dans leur parcours d'insertion sociale et professionnelle",
       sousTitre: "C.C.P 2",
       contenu: [
-        "Animer une formation et faciliter les apprentissages selon différentes modalités",
-        "Évaluer les acquis de formation des apprenants",
-        "Remédier aux difficultés individuelles d'apprentissage"
+        "Contractualiser et suivre une personne dans son parcours d'insertion professionnelle",
+        "Accompagner une personne à l'élaboration de son projet professionnel",
+        "Accompagner la réalisation d'un projet professionnel",
+        "Concevoir des ateliers thématiques favorisant l'insertion professionnelle des publics",
+        "Préparer et animer des ateliers thématiques favorisant l'insertion",
+        "Analyser sa pratique professionnelle"
       ]
     },
     {
       id: 3,
-      titre: "Accompagner les apprenants en formation",
-      sousTitre: "C.C.P 3",
+      titre: "Mettre en œuvre une offre de services auprès des employeurs pour favoriser l'insertion professionnelle",
+      sousTitre: "C.C.P 1",
       contenu: [
-        "Accompagner les apprenants dans leur parcours de formation",
-        "Accueillir un apprenant en formation et co-construire son parcours",
-        "Tutorer les apprenants à distance",
-        "Accompagner le développement professionnel des apprenants"
+        "Déployer une démarche de projet, des actions de prospection avec les employeurs du territoire pour favoriser l'insertion professionnelle",
+        "Apporter un appui technique aux employeurs en matière de recrutement",
+        "Faciliter l'intégration et le maintien du salarié dans son environnement professionnel",
+        "Inscrire ses actes professionnels dans une démarche inclusive et de développement durable"
+      ]
+    }
+  ]
+
+  const documentationItems = [
+    {
+      title: "Livres",
+      icon: "BookOpen",
+      items: [
+        "La recherche d'emploi, BD de Joris Chamblain",
+        "Le travail de conseiller en insertion professionnelle, Léa Lima et Christophe Trombert, ESF législative",
+        "Le monde des CIP - conseiller en insertion professionnelle, Catherine Mancel"
       ]
     },
     {
-      id: 4,
-      titre: "Inscrire sa pratique professionnelle dans une démarche de qualité et de responsabilité sociale des entreprises",
-      sousTitre: "C.C.P 4",
-      contenu: [
-        "Respecter et faire respecter la règlementation en vigueur en formation et dans sa spécialité",
-        "Réaliser une veille pour maintenir son expertise de formateur et de professionnel dans sa spécialité",
-        "Analyser ses pratiques professionnelles"
+      title: "MOOC",
+      icon: "GraduationCap", 
+      items: [
+        "Découvrez le métier de conseiller en évolution professionnelle, My Mooc"
+      ]
+    },
+    {
+      title: "Podcast",
+      icon: "Podcast",
+      items: [
+        "CIP – Conseiller en Insertion professionnelle, Podcastics"
+      ]
+    },
+    {
+      title: "Documentaires",
+      icon: "Play",
+      items: [
+        "Ecoles de la « Nouvelle chance », un espoir pour la jeunesse méditerranéenne, Les Hauts Parleurs",
+        "Projets d.insertion, David Desramé",
+        "Compétences comportementales : quels profils s.épanouissent dans le métier de CIP ? - Webinar Monkey tie"
       ]
     }
   ]
 
   return (
     <>
-      <ServicePageSeoHead briefId="formation-fpa" />
+      <ServicePageSeoHead briefId="formation-ccp1" />
 
       <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50 pb-20 md:pb-0">
         {/* Background animé global */}
@@ -431,20 +390,33 @@ export default function FormationFPA() {
           <div className="h-20"></div>
 
           {/* Hero Section */}
-          <section className="py-20">
+          <section className="pt-20 pb-8">
             <div className="container mx-auto px-4">
               
               {/* Titre principal */}
               <div className="text-center max-w-4xl mx-auto">
-                <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] mb-6 leading-tight tracking-tight">
-                  Formation<br/>
-                  <span className="text-accent-500 font-brittany text-4xl lg:text-5xl">Formateur Professionnel d'Adultes</span>
+                <h1 className="text-2xl lg:text-4xl font-bold text-[#013F63] mb-3 leading-tight tracking-tight">
+                  Conseiller en <span className="text-accent-500 font-brittany text-4xl lg:text-5xl">Insertion Professionnelle (C.C.P 1)</span>
                 </h1>
-                <p className="text-lg lg:text-xl text-[#013F63] leading-relaxed font-light">
-                  Devenez <strong>formateur certifié</strong> et accompagnez la montée en compétences
+                <p className="text-lg text-[#013F63] leading-relaxed font-light">
+                  Devenez expert de l'<strong>accueil et du diagnostic partagé</strong>
                 </p>
               </div>
-              <FormationGeoSummary briefId="formation-fpa" />
+              <FormationGeoSummary briefId="formation-ccp1" />
+              <p className="mt-4 text-center text-sm text-[#013F63]/80 max-w-2xl mx-auto">
+                Vous visez le titre CIP complet ?{' '}
+                <Link href="/formations/cip" className="font-semibold text-orange-500 hover:underline">
+                  Voir le parcours CIP (8 mois, 948 h)
+                </Link>
+                {' · '}
+                <Link href="/formations/ccp2" className="font-semibold text-orange-500 hover:underline">
+                  CCP2
+                </Link>
+                {' · '}
+                <Link href="/formations/ccp3" className="font-semibold text-orange-500 hover:underline">
+                  CCP3
+                </Link>
+              </p>
             </div>
           </section>
 
@@ -456,7 +428,10 @@ export default function FormationFPA() {
                 <div className="bg-white rounded-3xl p-8 shadow-xl border-2 border-[#013F63]">
                   <div className="space-y-4 text-[#013F63] text-lg leading-relaxed text-center">
                     <p>
-                      Dans un contexte de transformation digitale et d'évolution des compétences, le besoin en formateurs qualifiés ne cesse de croître. Les entreprises et organismes de formation recherchent des professionnels capables de concevoir et d'animer des formations adaptées aux enjeux actuels du marché du travail et aux nouvelles modalités d'apprentissage.
+                      Accueillir une personne, analyser sa demande et poser les bases d&apos;un diagnostic partagé : le CCP1 est le premier bloc du titre CIP, centré sur l&apos;accueil, l&apos;information et le travail en réseau.
+                    </p>
+                    <p>
+                      Ce module certifiant vous prépare à orienter les publics, exercer une veille et produire les écrits professionnels liés à l&apos;activité.
                     </p>
                   </div>
                   
@@ -467,7 +442,7 @@ export default function FormationFPA() {
                   
                   <div className="text-accent-500 font-bold text-xl leading-relaxed text-center">
                     <p>
-                      Devenez un formateur expert avec une certification reconnue et développez vos compétences pédagogiques !
+                      Validez le CCP1 et capitalisez vers le titre CIP complet !
                     </p>
                   </div>
                 </div>
@@ -487,83 +462,68 @@ export default function FormationFPA() {
                   </h2>
                 </div>
 
-              <div className="flex flex-col lg:flex-row gap-8 justify-center items-start">
+              <div className={`flex flex-col lg:flex-row gap-8 justify-center ${
+                Object.values(openModules).some(isOpen => isOpen) 
+                  ? 'items-start' 
+                  : 'items-start lg:items-center'
+              }`}>
                 
                 {/* Carte bleue à gauche */}
-                <div ref={carteBleueRef} className="w-full lg:w-96 flex-shrink-0 rounded-xl p-6 text-white flex flex-col" style={{backgroundColor: '#013F63'}}>
-                  <div className="space-y-3 flex-grow flex flex-col justify-between">
+                <div className="w-full lg:w-96 flex-shrink-0 rounded-xl p-6 text-white min-h-[320px] flex flex-col justify-center" style={{backgroundColor: '#013F63'}}>
+                  <div className="space-y-2">
                     
                     <div className="flex items-start gap-2">
-                      <Target className="w-5 h-5 mt-0.5 flex-shrink-0" />
+                      <UserCheck className="w-4 h-4 mt-0.5 flex-shrink-0" />
                       <div>
-                        <p className="font-semibold mb-0.5 text-base">Niveau de sortie :</p>
-                        <p className="text-blue-100 text-sm mb-1">Niveau 5 - titre <a href="https://www.francecompetences.fr/recherche/rncp/37275/" target="_blank" rel="noopener noreferrer" className="text-blue-200 hover:text-white underline transition-colors">RNCP37275</a></p>
-                        <p className="text-blue-100 text-xs">Date de début des parcours certifiants : 29-04-2023 Date d'échéance de l'enregistrement : 29-04-2028</p>
+                        <p className="font-semibold mb-0.5 text-sm">Prérequis :</p>
+                        <p className="text-neutral-100 text-xs">Niveau terminal et/ou expérience professionnelle</p>
                     </div>
                 </div>
 
                     <div className="flex items-start gap-2">
-                      <Clock className="w-5 h-5 mt-0.5 flex-shrink-0" />
+                      <Target className="w-4 h-4 mt-0.5 flex-shrink-0" />
                       <div>
-                        <p className="font-semibold mb-0.5 text-base">Horaire :</p>
-                        <p className="text-neutral-100 text-sm">Du lundi au vendredi, de 9h00 à 12h30 et de 13h30 à 17h00</p>
+                        <p className="font-semibold mb-0.5 text-sm">Niveau de sortie :</p>
+                        <p className="text-neutral-100 text-xs">Niveau 5 - titre <a href="https://www.francecompetences.fr/recherche/rncp/37274/" target="_blank" rel="noopener noreferrer" className="text-blue-200 hover:text-white underline transition-colors">RNCP37274</a></p>
+              </div>
+            </div>
+
+                    <div className="flex items-start gap-2">
+                      <Clock className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                      <div>
+                        <p className="font-semibold mb-0.5 text-sm">Horaire :</p>
+                        <p className="text-neutral-100 text-xs">Du lundi au vendredi, de 9h00 à 12h30 et de 13h30 à 17h00</p>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-2">
-                      <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0" />
+                      <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
                       <div>
-                        <p className="font-semibold mb-0.5 text-base">Lieu :</p>
-                        <p className="text-neutral-100 text-sm">8 rue du Courant, 33310 Lormont</p>
+                        <p className="font-semibold mb-0.5 text-sm">Lieu :</p>
+                        <p className="text-neutral-100 text-xs">8 rue du Courant, 33310 Lormont</p>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-2">
-                      <Users className="w-5 h-5 mt-0.5 flex-shrink-0" />
+                      <Users className="w-4 h-4 mt-0.5 flex-shrink-0" />
                       <div>
-                        <p className="font-semibold mb-0.5 text-base">Taille du groupe :</p>
-                        <p className="text-neutral-100 text-sm">Entre 6 et 12 personnes</p>
+                        <p className="font-semibold mb-0.5 text-sm">Taille du groupe :</p>
+                        <p className="text-neutral-100 text-xs">Entre 10 et 15 personnes</p>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-2">
-                      <BookOpen className="w-5 h-5 mt-0.5 flex-shrink-0" />
+                      <BookOpen className="w-4 h-4 mt-0.5 flex-shrink-0" />
                       <div>
-                        <p className="font-semibold mb-0.5 text-base">Modalité :</p>
-                        <p className="text-neutral-100 text-sm">En présentiel</p>
+                        <p className="font-semibold mb-0.5 text-sm">Modalité :</p>
+                        <p className="text-neutral-100 text-xs">En présentiel</p>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 {/* Accordéons à droite */}
-                <div ref={accordeonsRef} className="w-full lg:w-96 flex-shrink-0 space-y-4">
-                  
-                  {/* Prérequis */}
-                  <div className="bg-white rounded-xl shadow-lg border border-gray-100">
-                    <button
-                      className="w-full py-3.5 px-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors rounded-xl"
-                      onClick={() => toggleModule('prerequis')}
-                    >
-                      <div className="flex items-center gap-3">
-                        <h3 className="text-base font-bold text-[#013F63]">PRÉREQUIS</h3>
-                      </div>
-                      {openModules['prerequis'] ? (
-                        <ChevronUp className="w-5 h-5 text-gray-600" />
-                      ) : (
-                        <ChevronDown className="w-5 h-5 text-gray-600" />
-                      )}
-                    </button>
-                    {openModules['prerequis'] && (
-                      <div className="p-3 border-t border-muted-blue-200">
-                        <ul className="text-[#013F63] text-sm leading-relaxed space-y-2 list-disc list-inside">
-                          <li>Une expertise technique dans un domaine spécifique est essentielle</li>
-                          <li>Un projet de formation validé par au minimum deux enquêtes métiers et/ou une immersion</li>
-                          <li>Une connaissance des outils informatiques et des techniques rédactionnelles</li>
-                        </ul>
-                      </div>
-                    )}
-                  </div>
+                <div className="w-full lg:w-96 flex-shrink-0 space-y-4">
                   
                   {/* Public visé */}
                   <div className="bg-white rounded-xl shadow-lg border border-gray-100">
@@ -583,7 +543,7 @@ export default function FormationFPA() {
                     {openModules['public'] && (
                       <div className="p-3 border-t border-muted-blue-200">
                         <p className="text-[#013F63] text-sm leading-relaxed">
-                          Cette formation s'adresse aux personnes souhaitant exercer le métier de formateur professionnel d'adultes dans différents contextes : organismes de formation, entreprises, associations, institutions publiques.
+                          Cette formation s'adresse aux personnes qui disposent d'un goût prononcé pour l'accompagnement, l'échange et un sens de l'écoute développé, avec une expérience professionnelle dans l'accompagnement social.
                         </p>
                       </div>
                     )}
@@ -642,7 +602,7 @@ export default function FormationFPA() {
                                   <li>• ET/OU 1 journée d'immersion professionnelle</li>
                                 </ul>
                                 <a
-                                  href="/documents/dossier-candidature/dossier-candidature-FPA.pdf"
+                                  href="/documents/dossier-candidature/dossier-candidature-CIP.pdf"
                                   target="_blank"
                                   rel="noopener noreferrer"
                                   className="inline-flex items-center px-3 py-1.5 bg-accent-500 hover:bg-accent-600 text-white font-medium rounded-md transition-colors text-xs mb-4"
@@ -718,11 +678,10 @@ export default function FormationFPA() {
                     {openModules['methodes'] && (
                       <div className="p-3 border-t border-muted-blue-200">
                         <div className="space-y-3 text-[#013F63] text-sm">
-                          <p className="font-semibold text-[#013F63]">UNE FORMATION BASÉE SUR LA PRATIQUE PÉDAGOGIQUE</p>
-                          <p>• Alternance entre apports théoriques et mises en situation pratiques</p>
-                          <p>• Ateliers de conception pédagogique et d'animation</p>
-                          <p>• Analyse de pratiques et retours d'expérience</p>
-                          <p>• Utilisation d'outils numériques et de ressources pédagogiques innovantes</p>
+                          <p className="font-semibold text-[#013F63]">UNE FORMATION ACTION BASÉE SUR UNE PÉDAGOGIE INNOVANTE</p>
+                          <p>• Formation action basée sur des temps d'acquisition de connaissances, de cas pratique, et d'échanges d'expériences</p>
+                          <p>• Des projets collaboratifs et des mises en situation au plus près du réel avec les publics accompagnés par les structures de l'emploi et de l'insertion du territoire</p>
+                          <p>• Pédagogie active basée sur des outils du théâtre</p>
                         </div>
                       </div>
                     )}
@@ -745,18 +704,18 @@ export default function FormationFPA() {
                     </button>
                     {openModules['deroulement'] && (
                       <div className="p-3 border-t border-muted-blue-200">
-                        <div className="space-y-2 text-[#013F63] text-sm">
-                          <p>• <strong>Durée : 934 heures</strong></p>
-                          <ul className="list-none ml-4 space-y-1">
-                            <li>◦ 616 heures en centre</li>
-                            <li>◦ 315 heures en entreprise</li>
-                            <li>◦ 3 heures de session de certification</li>
-                          </ul>
+                        <div className="space-y-3 text-[#013F63] text-sm">
+                          <p>• <strong>Durée : 220 heures</strong></p>
+                          <div className="ml-4 space-y-1">
+                            <p>◦ <strong>150 heures de formation en centre</strong></p>
+                            <p>◦ <strong>70 heures de stage en entreprise</strong></p>
+                            <p>◦ <strong>1h de session d'examen</strong></p>
+                          </div>
                         </div>
                       </div>
                     )}
                   </div>
-                  
+
                   {/* Modalité d'évaluation */}
                   <div className="bg-white rounded-xl shadow-lg border border-gray-100">
                     <button
@@ -774,19 +733,16 @@ export default function FormationFPA() {
                     </button>
                     {openModules['evaluation'] && (
                       <div className="p-3 border-t border-muted-blue-200">
-                        <div className="space-y-3 text-[#013F63] text-sm">
-                          <p>Des évaluations formatives sont réalisées tout au long de la formation. Pour obtenir votre titre professionnel de Formateur professionnel d'adultes, vous devrez réaliser 4 épreuves. Elles ont pour but de prouver au jury que vous avez acquis les compétences nécessaires pour devenir formateur.</p>
-                          <p className="font-semibold">La durée totale de l'épreuve est de 3h :</p>
-                          <div className="ml-4 space-y-1">
-                            <p>• 55 minutes de mise en situation professionnelle</p>
-                            <p>• 20 minutes d'entretien technique</p>
-                            <p>• 1h35 de questionnement à partir de productions : présentation orale par le candidat et questionnement par le jury. Le questionnement est organisé en 4 parties correspondant aux quatre activités types.</p>
-                            <p>• 10 minutes d'entretien final</p>
-                          </div>
+                        <div className="space-y-2 text-[#013F63] text-sm">
+                          <p>◦ Feuilles de présence.</p>
+                          <p>◦ Une évaluation en cours de formation</p>
+                          <p>◦ Bilan de stage à la fin du stage</p>
+                          <p>◦ Session de certification (durée 1 heure)</p>
                         </div>
                       </div>
                     )}
                   </div>
+
                   </div>
                 </div>
               </div>
@@ -794,14 +750,14 @@ export default function FormationFPA() {
           </section>
 
           {/* Méthodologie d'intervention */}
-          <section className="py-16">
+          <section className="pt-6 pb-16">
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto">
                 
                 {/* Titre de section */}
                 <div className="text-center mb-4">
                   <h2 className="text-lg lg:text-xl font-bold text-[#013F63] mb-3">
-                    <span className="text-orange-500 font-brittany text-xl lg:text-2xl">Une méthodologie</span> D'INTERVENTION AU PLUS PRÈS DU RÉEL
+                    <span className="text-accent-500 font-brittany text-xl lg:text-2xl">Une méthodologie</span> D'INTERVENTION AU PLUS PRÈS DU RÉEL
                   </h2>
                 </div>
 
@@ -823,7 +779,7 @@ export default function FormationFPA() {
                             Une équipe de formateurs issue du terrain du milieu de la formation et de la transmission, avec une expertise reconnue dans l'accompagnement professionnel et l'insertion.
                           </p>
                         </div>
-                        </div>
+                      </div>
                       </a>
                     </div>
 
@@ -841,7 +797,7 @@ export default function FormationFPA() {
                             Des intervenants théâtre spécialisés dans l'insertion professionnelle et dans le handicap pour des mises en situation innovantes.
                           </p>
                         </div>
-                        </div>
+                      </div>
                       </a>
                     </div>
 
@@ -859,7 +815,7 @@ export default function FormationFPA() {
                             Des projets collaboratifs et des mises en situation auprès des publics accompagnés par les structures de l'emploi et de l'insertion du territoire.
                           </p>
                         </div>
-                        </div>
+                      </div>
                       </a>
                     </div>
 
@@ -877,7 +833,7 @@ export default function FormationFPA() {
                             Des rencontres avec des professionnels du secteur pour enrichir la formation et créer un réseau professionnel.
                           </p>
                         </div>
-                        </div>
+                      </div>
                       </a>
                     </div>
 
@@ -895,7 +851,7 @@ export default function FormationFPA() {
                             Des thématiques adaptées aux enjeux actuels de la profession : Risques psychosociaux, handicap, le droit des étrangers, inclusion numérique...
                           </p>
                         </div>
-                        </div>
+                      </div>
                       </a>
                     </div>
 
@@ -906,88 +862,182 @@ export default function FormationFPA() {
             </div>
           </section>
 
-          {/* Les 3 Modules FPA */}
-          <section className="py-16">
+          {/* Le Module CCP1 */}
+          <section className="py-8">
             <div className="container mx-auto px-4">
               <div className="max-w-7xl mx-auto">
                 
                 <div className="text-center mb-12">
                   <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-3 leading-tight">
-                    Les <span className="text-[#013F63]">4</span> <span className="text-orange-500 font-brittany text-3xl lg:text-4xl">C.C.P</span>
+                    Le <span className="text-orange-500 font-brittany text-3xl lg:text-4xl">programme</span> du CCP 1
                   </h2>
                   <p className="text-lg text-[#013F63] leading-relaxed font-light max-w-3xl mx-auto">
-                    Un parcours complet pour maîtriser tous les aspects du métier de formateur
+                    Formation certifiante pour devenir Conseiller en Insertion Professionnelle
                   </p>
                 </div>
 
                 <div className="space-y-4 max-w-4xl mx-auto">
-                  {modules.map((module, index) => {
-                    const isOpen = openModules[module.id]
-                    const gradientFrom = "from-[#013F63]"
-                    const gradientTo = "to-[#012a4a]"
-                    
-                    return (
-                      <div key={module.id} className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
-                        
-                        {/* En-tête cliquable */}
-                        <button
-                          onClick={() => toggleModule(module.id)}
-                          className={`w-full bg-gradient-to-r ${gradientFrom} ${gradientTo} text-white p-4 flex items-center justify-between hover:opacity-90 transition-opacity`}
-                        >
-                          <div className="flex items-center gap-4">
-                            <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                              <span className="text-white font-bold text-sm">{module.id}</span>
-                            </div>
-                            <div className="text-left">
-                              <h3 className="text-base lg:text-lg font-bold">{module.titre}</h3>
-                              <p className="text-white/90 text-sm">{module.sousTitre}</p>
-                            </div>
-                          </div>
-                          <div className="flex-shrink-0">
-                            {isOpen ? (
-                              <ChevronUp className="w-6 h-6 text-white" />
-                            ) : (
-                              <ChevronDown className="w-6 h-6 text-white" />
-                            )}
-                          </div>
-                        </button>
 
-                        {/* Contenu déroulant */}
-                        {isOpen && (
-                          <div className="p-6 border-t border-gray-200 animate-in slide-in-from-top-4 duration-300">
-                            
-                            {/* Contenu du module */}
-                            <div className="mb-6">
-                              <h4 className="text-sm font-bold text-[#013F63] mb-3 flex items-center gap-2">
-                                <Target className="w-4 h-4" />
-                                Compétences développées
-                              </h4>
-                              <div className="grid md:grid-cols-2 gap-2">
-                                {module.contenu.map((item, i) => (
-                                  <div key={i} className="flex items-start gap-2 text-sm">
-                                    <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
-                                    <span className="text-[#013F63]">{item}</span>
-                                  </div>
-                                ))}
-                              </div>
-                            </div>
-                          </div>
+                  <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
+                    <button
+                      onClick={() => toggleModule('ccp1_informer')}
+                      className="w-full bg-gradient-to-r from-[#013F63] to-[#012a4a] text-white p-4 flex items-center justify-between hover:opacity-90 transition-opacity"
+                    >
+                      <div className="flex items-center gap-4">
+                        <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                          <span className="text-white font-bold text-sm">1</span>
+                        </div>
+                        <div className="text-left">
+                          <h3 className="text-base lg:text-lg font-bold">Informer sur les ressources en insertion et services dématérialisés</h3>
+                        </div>
+                      </div>
+                      <div className="flex-shrink-0">
+                        {openModules['ccp1_informer'] ? (
+                          <ChevronUp className="w-6 h-6 text-white" />
+                        ) : (
+                          <ChevronDown className="w-6 h-6 text-white" />
                         )}
                       </div>
-                    )
-                  })}
-                </div>
-              </div>
-            </div>
-          </section>
+                    </button>
+                    {openModules['ccp1_informer'] && (
+                      <div className="p-6 border-t border-gray-200 animate-in slide-in-from-top-4 duration-300">
+                        <div className="flex items-start gap-2 text-sm">
+                          <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                          <span className="text-gray-600">Informer une personne ou un groupe sur les ressources en matière d'insertion et services dématérialisés</span>
+                        </div>
+                      </div>
+                    )}
+                  </div>
 
-          {/* Bouton Plaquette Informative */}
-          <section className="py-8">
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto">
-                <div className="text-center">
+                  <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
+                    <button
+                      onClick={() => toggleModule('ccp1_diagnostic')}
+                      className="w-full bg-gradient-to-r from-[#013F63] to-[#012a4a] text-white p-4 flex items-center justify-between hover:opacity-90 transition-opacity"
+                    >
+                      <div className="flex items-center gap-4">
+                        <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                          <span className="text-white font-bold text-sm">2</span>
+                        </div>
+                        <div className="text-left">
+                          <h3 className="text-base lg:text-lg font-bold">Analyser la demande et poser les bases d'un diagnostic partagé</h3>
+                        </div>
+                      </div>
+                      <div className="flex-shrink-0">
+                        {openModules['ccp1_diagnostic'] ? (
+                          <ChevronUp className="w-6 h-6 text-white" />
+                        ) : (
+                          <ChevronDown className="w-6 h-6 text-white" />
+                        )}
+                      </div>
+                    </button>
+                    {openModules['ccp1_diagnostic'] && (
+                      <div className="p-6 border-t border-gray-200 animate-in slide-in-from-top-4 duration-300">
+                        <div className="flex items-start gap-2 text-sm">
+                          <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                          <span className="text-gray-600">Analyser la demande de la personne et poser les bases d'un diagnostic partagé</span>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
+                    <button
+                      onClick={() => toggleModule('ccp1_veille')}
+                      className="w-full bg-gradient-to-r from-[#013F63] to-[#012a4a] text-white p-4 flex items-center justify-between hover:opacity-90 transition-opacity"
+                    >
+                      <div className="flex items-center gap-4">
+                        <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                          <span className="text-white font-bold text-sm">3</span>
+                        </div>
+                        <div className="text-left">
+                          <h3 className="text-base lg:text-lg font-bold">Exercer une veille pour adapter son activité</h3>
+                        </div>
+                      </div>
+                      <div className="flex-shrink-0">
+                        {openModules['ccp1_veille'] ? (
+                          <ChevronUp className="w-6 h-6 text-white" />
+                        ) : (
+                          <ChevronDown className="w-6 h-6 text-white" />
+                        )}
+                      </div>
+                    </button>
+                    {openModules['ccp1_veille'] && (
+                      <div className="p-6 border-t border-gray-200 animate-in slide-in-from-top-4 duration-300">
+                        <div className="flex items-start gap-2 text-sm">
+                          <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                          <span className="text-gray-600">Exercer une veille pour adapter son activité au public et au contexte</span>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
+                    <button
+                      onClick={() => toggleModule('ccp1_reseau')}
+                      className="w-full bg-gradient-to-r from-[#013F63] to-[#012a4a] text-white p-4 flex items-center justify-between hover:opacity-90 transition-opacity"
+                    >
+                      <div className="flex items-center gap-4">
+                        <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                          <span className="text-white font-bold text-sm">4</span>
+                        </div>
+                        <div className="text-left">
+                          <h3 className="text-base lg:text-lg font-bold">Travailler en équipe et en réseau partenarial</h3>
+                        </div>
+                      </div>
+                      <div className="flex-shrink-0">
+                        {openModules['ccp1_reseau'] ? (
+                          <ChevronUp className="w-6 h-6 text-white" />
+                        ) : (
+                          <ChevronDown className="w-6 h-6 text-white" />
+                        )}
+                      </div>
+                    </button>
+                    {openModules['ccp1_reseau'] && (
+                      <div className="p-6 border-t border-gray-200 animate-in slide-in-from-top-4 duration-300">
+                        <div className="flex items-start gap-2 text-sm">
+                          <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                          <span className="text-gray-600">Travailler en équipe et en réseau, dans un cadre partenarial pour optimiser la réponse aux besoins des personnes accueillies</span>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
+                    <button
+                      onClick={() => toggleModule('ccp1_ecrits')}
+                      className="w-full bg-gradient-to-r from-[#013F63] to-[#012a4a] text-white p-4 flex items-center justify-between hover:opacity-90 transition-opacity"
+                    >
+                      <div className="flex items-center gap-4">
+                        <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                          <span className="text-white font-bold text-sm">5</span>
+                        </div>
+                        <div className="text-left">
+                          <h3 className="text-base lg:text-lg font-bold">Traitement administratif et écrits professionnels</h3>
+                        </div>
+                      </div>
+                      <div className="flex-shrink-0">
+                        {openModules['ccp1_ecrits'] ? (
+                          <ChevronUp className="w-6 h-6 text-white" />
+                        ) : (
+                          <ChevronDown className="w-6 h-6 text-white" />
+                        )}
+                      </div>
+                    </button>
+                    {openModules['ccp1_ecrits'] && (
+                      <div className="p-6 border-t border-gray-200 animate-in slide-in-from-top-4 duration-300">
+                        <div className="flex items-start gap-2 text-sm">
+                          <CheckCircle className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
+                          <span className="text-gray-600">Réaliser le traitement administratif et les écrits professionnels liés à l'activité dans un environnement numérique</span>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+
+                {/* Bouton Plaquette Informative */}
+                <div className="text-center mt-12">
                   <a 
-                    href="/documents/plaquettes/plaquette-fpa.pdf" 
+                    href="/documents/plaquettes/Formation-CIP-Plaquette.pdf" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center px-8 py-4 bg-white border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl group"
@@ -998,30 +1048,13 @@ export default function FormationFPA() {
                     Télécharger la plaquette informative
                   </a>
                   <p className="text-sm text-gray-500 mt-2">
-                    Format PDF - Toutes les informations détaillées sur la formation FPA
-                  </p>
-                </div>
-
-                {/* Bouton Dossier de Candidature */}
-                <div className="text-center mt-6">
-                  <a 
-                    href="/documents/dossier-candidature/dossier-candidature-FPA.pdf" 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center px-8 py-4 bg-orange-500 border-2 border-orange-500 text-white hover:bg-orange-600 hover:border-orange-600 font-semibold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl group"
-                  >
-                    <svg className="w-5 h-5 mr-3 group-hover:animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                    </svg>
-                    Télécharger le dossier de candidature
-                  </a>
-                  <p className="text-sm text-gray-500 mt-2">
-                    Format PDF - Dossier de candidature pour la formation FPA
+                    Format PDF - Toutes les informations détaillées sur la formation CIP
                   </p>
                 </div>
               </div>
             </div>
           </section>
+
 
           {/* Suite du parcours et débouchés */}
           <section className="py-12">
@@ -1033,7 +1066,7 @@ export default function FormationFPA() {
                     Vos <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">opportunités</span> professionnelles
                   </h2>
                   <p className="text-lg text-[#013F63] leading-relaxed font-light max-w-3xl mx-auto">
-                    Découvrez les secteurs et métiers accessibles après votre certification FPA
+                    Découvrez les secteurs et métiers accessibles après votre certification CIP
                   </p>
                 </div>
 
@@ -1049,56 +1082,6 @@ export default function FormationFPA() {
                       
                       <div className="space-y-3 flex-grow">
                         
-                        {/* Organismes de formation */}
-                        <div className="bg-blue-50 rounded-lg border border-blue-200 overflow-hidden">
-                          <button
-                            onClick={() => toggleSection('organismes-formation')}
-                            className="w-full p-3 text-left flex items-center justify-between hover:bg-blue-100 transition-colors"
-                          >
-                            <div className="flex items-center gap-3">
-                              <div className="w-2 h-2 bg-blue-500 rounded-full flex-shrink-0"></div>
-                              <span className="text-[#013F63] font-medium text-sm">Organismes de formation</span>
-                            </div>
-                            {openSections['organismes-formation'] ? (
-                              <ChevronUp className="w-4 h-4 text-blue-600" />
-                            ) : (
-                              <ChevronDown className="w-4 h-4 text-blue-600" />
-                            )}
-                          </button>
-                          {openSections['organismes-formation'] && (
-                            <div className="px-3 pb-3 border-t border-blue-200 bg-white">
-                              <p className="text-xs text-[#013F63] leading-relaxed mt-2">
-                                Centres de formation professionnelle, organismes de formation continue, centres de formation d'apprentis (CFA), organismes de formation à distance, centres de formation spécialisés par secteur d'activité
-                              </p>
-                            </div>
-                          )}
-                        </div>
-
-                        {/* Entreprises */}
-                        <div className="bg-blue-50 rounded-lg border border-blue-200 overflow-hidden">
-                          <button
-                            onClick={() => toggleSection('entreprises')}
-                            className="w-full p-3 text-left flex items-center justify-between hover:bg-blue-100 transition-colors"
-                          >
-                            <div className="flex items-center gap-3">
-                              <div className="w-2 h-2 bg-blue-500 rounded-full flex-shrink-0"></div>
-                              <span className="text-[#013F63] font-medium text-sm">Entreprises</span>
-                            </div>
-                            {openSections['entreprises'] ? (
-                              <ChevronUp className="w-4 h-4 text-blue-600" />
-                            ) : (
-                              <ChevronDown className="w-4 h-4 text-blue-600" />
-                            )}
-                          </button>
-                          {openSections['entreprises'] && (
-                            <div className="px-3 pb-3 border-t border-blue-200 bg-white">
-                              <p className="text-xs text-[#013F63] leading-relaxed mt-2">
-                                Services formation internes, départements RH, cabinets de conseil en formation, entreprises de tous secteurs ayant des besoins en formation de leurs salariés
-                              </p>
-                            </div>
-                          )}
-                        </div>
-
                         {/* Secteur public */}
                         <div className="bg-blue-50 rounded-lg border border-blue-200 overflow-hidden">
                           <button
@@ -1107,7 +1090,7 @@ export default function FormationFPA() {
                           >
                             <div className="flex items-center gap-3">
                               <div className="w-2 h-2 bg-blue-500 rounded-full flex-shrink-0"></div>
-                              <span className="text-[#013F63] font-medium text-sm">Secteur public</span>
+                              <span className="text-[#013F63] font-medium text-sm">Secteur public & service public</span>
                             </div>
                             {openSections['secteur-public'] ? (
                               <ChevronUp className="w-4 h-4 text-blue-600" />
@@ -1118,32 +1101,82 @@ export default function FormationFPA() {
                           {openSections['secteur-public'] && (
                             <div className="px-3 pb-3 border-t border-blue-200 bg-white">
                               <p className="text-xs text-[#013F63] leading-relaxed mt-2">
-                                Collectivités territoriales, administrations publiques, établissements publics, services de formation des agents publics, centres de formation de la fonction publique
+                                France Travail, collectivités locales ou territoriales, Maisons de l'emploi, plans locaux pour l'insertion et l'emploi, Missions Locales, Cap Emploi, centres d'information sur les droits des femmes et des familles...
                               </p>
                             </div>
                           )}
                         </div>
 
-                        {/* Associations et ONG */}
+                        {/* Économie sociale et solidaire */}
                         <div className="bg-blue-50 rounded-lg border border-blue-200 overflow-hidden">
                           <button
-                            onClick={() => toggleSection('associations')}
+                            onClick={() => toggleSection('secteur-ess')}
                             className="w-full p-3 text-left flex items-center justify-between hover:bg-blue-100 transition-colors"
                           >
                             <div className="flex items-center gap-3">
                               <div className="w-2 h-2 bg-blue-500 rounded-full flex-shrink-0"></div>
-                              <span className="text-[#013F63] font-medium text-sm">Associations et ONG</span>
+                              <span className="text-[#013F63] font-medium text-sm">Économie sociale et solidaire</span>
                             </div>
-                            {openSections['associations'] ? (
+                            {openSections['secteur-ess'] ? (
                               <ChevronUp className="w-4 h-4 text-blue-600" />
                             ) : (
                               <ChevronDown className="w-4 h-4 text-blue-600" />
                             )}
                           </button>
-                          {openSections['associations'] && (
+                          {openSections['secteur-ess'] && (
                             <div className="px-3 pb-3 border-t border-blue-200 bg-white">
                               <p className="text-xs text-[#013F63] leading-relaxed mt-2">
-                                Associations de formation, organisations non gouvernementales, structures d'insertion, associations d'éducation populaire, centres sociaux
+                                Structures d'insertion par l'activité économique (associations intermédiaires, ateliers et chantiers d'insertion, entreprises d'insertion, entreprises de travail temporaire d'insertion, régies de quartiers), groupement d'employeurs par l'insertion et la qualification, associations à finalité d'insertion sociale et professionnelle
+                              </p>
+                            </div>
+                          )}
+                        </div>
+
+                        {/* Secteur privé */}
+                        <div className="bg-blue-50 rounded-lg border border-blue-200 overflow-hidden">
+                          <button
+                            onClick={() => toggleSection('secteur-prive')}
+                            className="w-full p-3 text-left flex items-center justify-between hover:bg-blue-100 transition-colors"
+                          >
+                            <div className="flex items-center gap-3">
+                              <div className="w-2 h-2 bg-blue-500 rounded-full flex-shrink-0"></div>
+                              <span className="text-[#013F63] font-medium text-sm">Secteur privé</span>
+                            </div>
+                            {openSections['secteur-prive'] ? (
+                              <ChevronUp className="w-4 h-4 text-blue-600" />
+                            ) : (
+                              <ChevronDown className="w-4 h-4 text-blue-600" />
+                            )}
+                          </button>
+                          {openSections['secteur-prive'] && (
+                            <div className="px-3 pb-3 border-t border-blue-200 bg-white">
+                              <p className="text-xs text-[#013F63] leading-relaxed mt-2">
+                                Entreprises de travail temporaire, organismes de formation, cabinets en ressources humaines
+                              </p>
+                            </div>
+                          )}
+                        </div>
+
+                        {/* Social & médico-social */}
+                        <div className="bg-blue-50 rounded-lg border border-blue-200 overflow-hidden">
+                          <button
+                            onClick={() => toggleSection('secteur-social')}
+                            className="w-full p-3 text-left flex items-center justify-between hover:bg-blue-100 transition-colors"
+                          >
+                            <div className="flex items-center gap-3">
+                              <div className="w-2 h-2 bg-blue-500 rounded-full flex-shrink-0"></div>
+                              <span className="text-[#013F63] font-medium text-sm">Social & médico-social</span>
+                            </div>
+                            {openSections['secteur-social'] ? (
+                              <ChevronUp className="w-4 h-4 text-blue-600" />
+                            ) : (
+                              <ChevronDown className="w-4 h-4 text-blue-600" />
+                            )}
+                          </button>
+                          {openSections['secteur-social'] && (
+                            <div className="px-3 pb-3 border-t border-blue-200 bg-white">
+                              <p className="text-xs text-[#013F63] leading-relaxed mt-2">
+                                Centres d'Hébergement et de Réinsertion Sociale, résidences à caractère social, Centres d'Accueil de Demandeurs d'Asile, Établissements et services d'aide par le travail, Entreprises Adaptées
                               </p>
                             </div>
                           )}
@@ -1164,27 +1197,27 @@ export default function FormationFPA() {
                         {/* 6 premiers métiers toujours visibles */}
                         <div className="flex items-center gap-3 p-3 bg-orange-50 rounded-lg border-l-4 border-orange-400">
                           <div className="w-2 h-2 bg-orange-500 rounded-full flex-shrink-0"></div>
-                          <span className="text-[#013F63] font-medium text-sm">formateur professionnel d'adultes</span>
+                          <span className="text-[#013F63] font-medium text-sm">conseiller en insertion professionnelle</span>
                         </div>
                         <div className="flex items-center gap-3 p-3 bg-orange-50 rounded-lg border-l-4 border-orange-400">
                           <div className="w-2 h-2 bg-orange-500 rounded-full flex-shrink-0"></div>
-                          <span className="text-[#013F63] font-medium text-sm">concepteur de formation</span>
+                          <span className="text-[#013F63] font-medium text-sm">conseiller en insertion sociale et professionnelle</span>
                         </div>
                         <div className="flex items-center gap-3 p-3 bg-orange-50 rounded-lg border-l-4 border-orange-400">
                           <div className="w-2 h-2 bg-orange-500 rounded-full flex-shrink-0"></div>
-                          <span className="text-[#013F63] font-medium text-sm">animateur de formation</span>
+                          <span className="text-[#013F63] font-medium text-sm">conseiller en évolution professionnelle</span>
                         </div>
                         <div className="flex items-center gap-3 p-3 bg-orange-50 rounded-lg border-l-4 border-orange-400">
                           <div className="w-2 h-2 bg-orange-500 rounded-full flex-shrink-0"></div>
-                          <span className="text-[#013F63] font-medium text-sm">coordinateur pédagogique</span>
+                          <span className="text-[#013F63] font-medium text-sm">conseiller emploi formation</span>
                         </div>
                         <div className="flex items-center gap-3 p-3 bg-orange-50 rounded-lg border-l-4 border-orange-400">
                           <div className="w-2 h-2 bg-orange-500 rounded-full flex-shrink-0"></div>
-                          <span className="text-[#013F63] font-medium text-sm">responsable formation</span>
+                          <span className="text-[#013F63] font-medium text-sm">conseiller à l'emploi</span>
                         </div>
                         <div className="flex items-center gap-3 p-3 bg-orange-50 rounded-lg border-l-4 border-orange-400">
                           <div className="w-2 h-2 bg-orange-500 rounded-full flex-shrink-0"></div>
-                          <span className="text-[#013F63] font-medium text-sm">consultant en formation</span>
+                          <span className="text-[#013F63] font-medium text-sm">chargé relation entreprise</span>
                         </div>
                         
                         {/* Métiers supplémentaires avec état déroulé */}
@@ -1192,15 +1225,15 @@ export default function FormationFPA() {
                           <div className="space-y-4">
                             <div className="flex items-center gap-3 p-3 bg-orange-50 rounded-lg border-l-4 border-orange-400">
                               <div className="w-2 h-2 bg-orange-500 rounded-full flex-shrink-0"></div>
-                              <span className="text-[#013F63] font-medium text-sm">ingénieur pédagogique</span>
+                              <span className="text-[#013F63] font-medium text-sm">chargé d'accompagnement social et professionnel</span>
                             </div>
                             <div className="flex items-center gap-3 p-3 bg-orange-50 rounded-lg border-l-4 border-orange-400">
                               <div className="w-2 h-2 bg-orange-500 rounded-full flex-shrink-0"></div>
-                              <span className="text-[#013F63] font-medium text-sm">formateur digital</span>
+                              <span className="text-[#013F63] font-medium text-sm">chargé de projet d'insertion professionnelle</span>
                             </div>
                             <div className="flex items-center gap-3 p-3 bg-orange-50 rounded-lg border-l-4 border-orange-400">
                               <div className="w-2 h-2 bg-orange-500 rounded-full flex-shrink-0"></div>
-                              <span className="text-[#013F63] font-medium text-sm">expert en e-learning</span>
+                              <span className="text-[#013F63] font-medium text-sm">accompagnateur socioprofessionnel</span>
                             </div>
                           </div>
                         )}
@@ -1239,13 +1272,13 @@ export default function FormationFPA() {
           </section>
 
           <FormationTarifSection
-            publicPrice="8950"
+            publicPrice={null}
             variant="certifiante"
             contactHref={CONTACT_HREF}
           />
 
           {/* Section Financement */}
-          <section className="py-8">
+          <section className="pt-2 pb-8">
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto">
 
@@ -1253,7 +1286,7 @@ export default function FormationFPA() {
                 <div className="mb-8">
                   <div className="text-center mb-8">
                     <h3 className="text-2xl lg:text-3xl font-bold text-[#013F63] mb-4 leading-tight">
-                      Comment <span className="text-orange-500 font-brittany text-3xl lg:text-4xl">financer</span> votre formation FPA ?
+                      Comment <span className="text-orange-500 font-brittany text-3xl lg:text-4xl">financer</span> votre formation CCP1 ?
                     </h3>
                   </div>
 
@@ -1367,7 +1400,7 @@ export default function FormationFPA() {
                   </div>
                 </div>
 
-                <div className="text-center mt-8 mb-8 flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="text-center mt-6 mb-8 flex flex-col sm:flex-row gap-4 justify-center">
                   <Link href="/financement" className="inline-flex items-center gap-2 px-6 py-3 bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold rounded-full transition-all duration-300 hover:shadow-lg transform hover:scale-105">
                     En savoir plus sur les financements
                     <ArrowRight className="w-4 h-4" />
@@ -1376,7 +1409,7 @@ export default function FormationFPA() {
                     href="https://www.moncompteformation.gouv.fr/espace-prive/html/#/droits" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-white hover:bg-[#013F63] text-[#013F63] hover:text-white font-semibold rounded-full transition-all duration-300 hover:shadow-lg transform hover:scale-105 border-2 border-[#013F63]"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-full transition-all duration-300 hover:shadow-lg transform hover:scale-105"
                   >
                     J'utilise mon CPF
                     <ArrowRight className="w-4 h-4" />
@@ -1387,24 +1420,20 @@ export default function FormationFPA() {
             </div>
           </section>
 
-          {/* Section Prochaine session et Réunions d'information */}
-          <section className="py-16">
+          {/* Prochaines sessions */}
+          <section className="pt-2 pb-8">
             <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto">
+              <div className="max-w-5xl mx-auto">
 
-                <div className="max-w-md mx-auto mb-12">
-                  {/* Prochaine session FPA */}
-                  <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 text-center">
-                    <div className="bg-orange-100 text-[#013F63] rounded-t-2xl -mx-6 -mt-6 p-4 mb-4">
-                      <h3 className="text-2xl font-bold mb-2 text-orange-500">Prochaine session</h3>
-                      <p className="text-orange-600">avril 2027</p>
-                    </div>
-                    
-                    <div className="mb-4">
-                      <p className="text-lg font-bold text-[#013F63]">Ouverture des candidatures</p>
-                      <p className="text-2xl font-bold text-orange-500 mt-2">septembre 2026</p>
-                    </div>
-                  </div>
+                <div className="max-w-md mx-auto mb-6">
+                  <Image
+                    src="/images/formations/prochaine-session-2026-2027.png"
+                    alt="Prochaine session CCP1"
+                    width={1200}
+                    height={733}
+                    className="w-full h-auto"
+                    priority
+                  />
                 </div>
 
                 {/* Réunions d'information */}
@@ -1440,7 +1469,7 @@ export default function FormationFPA() {
           </section>
 
           {/* Section Statistiques Atipik RH */}
-          <section ref={statsRef} className="py-16 overflow-hidden">
+          <section ref={statsRef} className="pt-8 pb-16 overflow-hidden">
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto">
                 
@@ -1449,7 +1478,7 @@ export default function FormationFPA() {
                     Nos <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">Résultats</span>
                   </h2>
                   <p className="text-lg text-[#013F63] leading-relaxed font-light max-w-3xl mx-auto">
-                    Les performances d'Atipik RH en formation FPA
+                    Les performances d'Atipik RH en formation CIP
                   </p>
                 </div>
 
@@ -1495,7 +1524,7 @@ export default function FormationFPA() {
                         <div key={index} className="w-full md:w-1/3 flex-shrink-0 px-3">
                           <div className="bg-white rounded-2xl p-4 text-center shadow-lg border border-gray-100 h-28 flex flex-col justify-center">
                             <div className="text-2xl lg:text-3xl font-bold text-[#013F63] mb-2">
-                        {animatedStats[index] || 'À venir'}
+                        {animatedStats[index] || '0'}
                       </div>
                             <p className="text-[#013F63] text-xs lg:text-sm font-medium">
                         {stat.label}
@@ -1508,11 +1537,7 @@ export default function FormationFPA() {
 
                   {/* Indicateurs de position */}
                   <div className="flex justify-center mt-6 space-x-2">
-                    {Array.from({ 
-                      length: isClient && isMobile 
-                        ? STATS.length 
-                        : Math.max(1, STATS.length - 2) 
-                    }).map((_, index) => (
+                    {Array.from({ length: Math.max(1, STATS.length - 2) }).map((_, index) => (
                       <button
                         key={index}
                         onClick={() => setCurrentStatIndex(index)}
@@ -1545,7 +1570,7 @@ export default function FormationFPA() {
                     Données <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">France Compétences</span>
                   </h2>
                   <p className="text-lg text-[#013F63] leading-relaxed font-light max-w-3xl mx-auto">
-                    Statistiques officielles nationales pour la formation FPA (données 2021)
+                    Statistiques officielles nationales pour la formation CIP (données 2021)
                   </p>
                 </div>
 
@@ -1591,7 +1616,7 @@ export default function FormationFPA() {
                         <div key={index} className="w-full flex-shrink-0 px-2">
                           <div className="bg-white rounded-2xl p-6 text-center shadow-lg border border-gray-100 h-32 flex flex-col justify-center">
                             <div className="text-3xl font-bold text-[#013F63] mb-2">
-                              {animatedFranceStats[index] ?? stat.value}
+                              {animatedFranceStats[index] || '0'}
                             </div>
                             <p className="text-[#013F63] text-sm font-medium">
                               {stat.label}
@@ -1610,7 +1635,7 @@ export default function FormationFPA() {
                         <div key={index} className="w-1/3 flex-shrink-0 px-3">
                           <div className="bg-white rounded-2xl p-4 text-center shadow-lg border border-gray-100 h-28 flex flex-col justify-center">
                             <div className="text-2xl lg:text-3xl font-bold text-[#013F63] mb-2">
-                        {animatedFranceStats[index] ?? stat.value}
+                        {animatedFranceStats[index] || '0'}
                       </div>
                             <p className="text-[#013F63] text-xs lg:text-sm font-medium">
                         {stat.label}
@@ -1642,7 +1667,7 @@ export default function FormationFPA() {
                 {/* Source */}
                 <div className="text-center mt-8">
                   <p className="text-gray-500 text-sm">
-                    Source : <a href="https://www.francecompetences.fr/recherche/rncp/37275/" target="_blank" rel="noopener noreferrer" className="text-[#013F63] hover:text-orange-500 underline transition-colors duration-300">France Compétences - RNCP37275</a>
+                    Source : <a href="https://www.francecompetences.fr/recherche/rncp/37274/" target="_blank" rel="noopener noreferrer" className="text-[#013F63] hover:text-orange-500 underline transition-colors duration-300">France Compétences - RNCP37274</a>
                   </p>
                 </div>
 
@@ -1657,30 +1682,116 @@ export default function FormationFPA() {
             </div>
           </section>
 
-
-          {/* Section Contact */}
-          <section className="py-24">
+          {/* Section Se documenter - Carousel */}
+          <section className="py-16">
             <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto text-center">
+              <div className="max-w-6xl mx-auto">
                 
-                <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-6">
-                  Prêt(e) à devenir <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">formateur ?</span>
-                </h2>
-                
-                <p className="text-xl text-[#013F63] mb-12 max-w-2xl mx-auto">
-                  Rejoignez notre prochaine promotion et devenez expert de la formation professionnelle
-                </p>
+                <div className="text-center mb-12">
+                  <h2 className="text-3xl lg:text-4xl font-bold text-[#013F63] mb-4 leading-tight">
+                    Se <span className="text-orange-500 font-brittany text-4xl lg:text-5xl">documenter</span>
+                  </h2>
+                  <p className="text-lg text-[#013F63] leading-relaxed font-light max-w-3xl mx-auto">
+                    Voici quelques références pour vous permettre d'en découvrir plus sur le métier de CIP
+                  </p>
+                </div>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href={CONTACT_HREF} className="inline-flex px-8 py-4 rounded-full bg-[#013F63] hover:bg-[#012a4a] text-white font-semibold shadow-lg transition text-lg hover:scale-105">
-                    Candidater maintenant
-                  </Link>
-                  <a 
-                    href="tel:0783019955"
-                    className="inline-flex px-8 py-4 rounded-full border-2 border-[#013F63] text-[#013F63] hover:bg-[#013F63] hover:text-white font-semibold transition text-lg"
+                {/* Documentation - Carousel */}
+                <div className="relative">
+                  {/* Flèche gauche */}
+                  <button
+                    onClick={() => {
+                      const newIndex = currentDocIndex > 0 ? currentDocIndex - 1 : Math.max(0, documentationItems.length - 2);
+                      setCurrentDocIndex(newIndex);
+                    }}
+                    className="absolute left-0 -translate-x-8 z-10 bg-white rounded-full p-2 shadow-lg border border-gray-200 hover:bg-gray-50 transition-colors"
+                    style={{ top: 'calc(50% - 40px)' }}
                   >
-                    07 83 01 99 55
-                  </a>
+                    <ChevronLeft className="w-6 h-6 text-[#013F63]" />
+                  </button>
+
+                  {/* Flèche droite */}
+                  <button
+                    onClick={() => {
+                      const newIndex = currentDocIndex < documentationItems.length - 2 ? currentDocIndex + 1 : 0;
+                      setCurrentDocIndex(newIndex);
+                    }}
+                    className="absolute right-0 translate-x-8 z-10 bg-white rounded-full p-2 shadow-lg border border-gray-200 hover:bg-gray-50 transition-colors"
+                    style={{ top: 'calc(50% - 40px)' }}
+                  >
+                    <ChevronRight className="w-6 h-6 text-[#013F63]" />
+                  </button>
+
+                  {/* Conteneur du carousel */}
+                  <div className="overflow-hidden pb-4">
+                    <div 
+                      className="flex transition-transform duration-300 ease-in-out"
+                      style={{ transform: `translateX(-${currentDocIndex * (isClient && isMobile ? 100 : 50)}%)` }}
+                    >
+                      {documentationItems.map((doc, index) => (
+                        <div key={index} className="w-full md:w-1/2 flex-shrink-0 px-3">
+                          <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 h-full">
+                            <div className="flex items-center gap-3 mb-6">
+                              <div className={`w-12 h-12 ${index % 2 === 0 ? 'bg-blue-100' : 'bg-orange-100'} rounded-full flex items-center justify-center`}>
+                                {doc.icon === 'BookOpen' && <BookOpen className="w-6 h-6 text-[#013F63]" />}
+                                {doc.icon === 'GraduationCap' && <GraduationCap className={`w-6 h-6 ${index % 2 === 0 ? 'text-[#013F63]' : 'text-orange-600'}`} />}
+                                {doc.icon === 'Podcast' && (
+                                  <svg className="w-6 h-6 text-[#013F63]" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/>
+                                    <path d="M12 6a6 6 0 0 0-6 6 1 1 0 0 0 2 0 4 4 0 0 1 8 0v4.83a3 3 0 1 0 2 0V12a6 6 0 0 0-6-6z"/>
+                                  </svg>
+                                )}
+                                {doc.icon === 'Play' && (
+                                  <svg className="w-6 h-6 text-orange-600" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z"/>
+                                  </svg>
+                                )}
+                              </div>
+                              <h3 className="text-xl font-bold text-[#013F63]">{doc.title} :</h3>
+                            </div>
+                            
+                            <div className="space-y-4">
+                              {doc.items.map((item, itemIndex) => (
+                                <div key={itemIndex} className="flex items-start gap-3">
+                                  <div className="w-1.5 h-1.5 bg-[#013F63] rounded-full mt-2 flex-shrink-0"></div>
+                                  <div className="text-[#013F63] text-sm leading-relaxed">
+                                    {item.includes("Webinar Monkey tie") ? (
+                                      <>
+                                        {item.replace(" - Webinar Monkey tie", "")}{" - "}
+                                        <a 
+                                          href="https://webikeo.fr/webinar/competences-comportementales-quels-profils-s-epanouissent-dans-le-metier-de-conseiller-en-insertion-professionnelle"
+                                          target="_blank"
+                                          rel="noopener noreferrer"
+                                          className="text-orange-500 hover:text-orange-600 underline transition-colors"
+                                        >
+                                          Webinar Monkey tie
+                                        </a>
+                                      </>
+                                    ) : (
+                                      item
+                                    )}
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Indicateurs de position */}
+                  <div className="flex justify-center mt-6 space-x-2">
+                    {Array.from({ length: Math.max(1, documentationItems.length - 1) }).map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setCurrentDocIndex(index)}
+                        className={`w-2 h-2 rounded-full transition-colors ${
+                          currentDocIndex === index ? 'bg-orange-500' : 'bg-gray-300'
+                        }`}
+                      />
+                    ))}
+                  </div>
                 </div>
 
               </div>
@@ -1759,8 +1870,8 @@ export default function FormationFPA() {
 
         </div>
 
-        <FormationFaqSection briefId="formation-fpa" />
-        <FormationStickyCta />
+        <FormationFaqSection briefId="formation-ccp1" />
+        <FormationStickyCta href="/s-inscrire" label="Réunion d'information" />
 
         <Footer />
 
